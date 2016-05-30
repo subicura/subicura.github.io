@@ -278,7 +278,7 @@ comments: yes
     - http/tcp/websocket reverse proxy용도
     - [nginx pagespeed module](https://developers.google.com/speed/pagespeed/module/) 적용하여 정적 파일 최적화
         - 단순히 `pagespeed on;`만 해주면 이미지를 알아서 압축해서 내려보내줌
-        - chrome은 webp로 jpeg보다 더 좋은 압축률에 좋은화질임
+        - chrome은 [webp](https://developers.google.com/speed/webp/)로 jpeg보다 더 좋은 압축률에 좋은화질임
         - 그외에 최적화에 대한 많은 기능들 포함
 - [cloudflare](https://www.cloudflare.com/)
     - 앞단에 적용하여 cdn과 방화벽 용도로 사용
