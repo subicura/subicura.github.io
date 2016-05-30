@@ -299,6 +299,10 @@ comments: yes
     - 빌드 / 테스트 / 도커라이징 / 배포
 - [docker compose](https://docs.docker.com/compose/)
     - 서버쪽은 전부 도커! docker compose를 적극 활용함 도커 만세
+- [blue green deployment](http://martinfowler.com/bliki/BlueGreenDeployment.html) 방식사용
+    - 한서버에 8090, 8091 포트를 사용중
+    - 8090이 떠있을때 배포를 하면 8091로 배포를 하고 nginx가 8091을 바라보게 한 후 8090을 죽임 => 8090, 8091 왔다갔다 하는 방식임
+    - 덕분에, 하루에도 수십번 이상없이 배포중
 - [fabric](https://fabric.io/home)
     - 아이폰/안드로이드 앱 테스트 배포
     - 사용법이 쉽고 오류로깅도 해줌
