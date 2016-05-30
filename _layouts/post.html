@@ -88,6 +88,12 @@
             </footer>
           </div>
         </div>
+
+        {% if page.comments %} 
+        <hr/>
+        <div class="fb-comments" data-href="{{ site.url " }}{{ page.url }}" data-num-posts="4" data-width="100%"></div>
+        {% endif %}
+
         {%if site.disqus %}
         <div id="disqus_thread"></div>
         <script type="text/javascript">

@@ -2,6 +2,7 @@
 published: true
 title: hello
 layout: post
+comments: yes
 ---
 blog 시작하기 좋은날입니다. ghost설치했다가 실수로 서버를 지우는 바람에 이전 블로그가 사라졌습니다. 글이 별로 많지는 않았지만.. 아쉽네요 ㅠ
 
