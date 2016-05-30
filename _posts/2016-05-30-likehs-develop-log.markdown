@@ -59,6 +59,11 @@ comments: yes
 	- 비지니스용 앱에는 적합해 보이나 고객용 앱으로는 적용이 어렵다고 판단
     - 개발자들이 기본 언어에 기본 SDK 선호
     - 고려해봤지만 결국 안쓰는것으로
+- [cocoapods](https://cocoapods.org/)
+    - iOS 라이브러리는 cocoapod 사용중
+    - 내부 private 라이브러리가 있어 따로 pod 리파지터리 구성
+    - pod 리파지터리는 [podpsec](https://guides.cocoapods.org/syntax/podspec.html)만 구현하면 손쉽게 구현가능함
+        - 버전과 라이브러리 정보를 xxx.podspec으로 해서 git 저장소에 저장하면 끝
 
 **WEB / Backend**
     
