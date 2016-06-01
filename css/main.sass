@@ -33,11 +33,6 @@ body
   padding: 0
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
-  -moz-font-feature-settings: "liga=1, dlig=1"
-  -ms-font-feature-settings: "liga", "dlig"
-  -webkit-font-feature-settings: "liga", "dlig"
-  -o-font-feature-settings: "liga", "dlig"
-  font-feature-settings: "liga", "dlig"
 
 .logo-readium
   position: fixed
@@ -133,6 +128,7 @@ body
   max-width: 640px
   margin: 0 auto
   word-wrap: break-word
+  word-break: break-all
   @include box-sizing(border-box)
   @include respond-to(800)
     padding: 0 $rs*1.5
@@ -389,9 +385,6 @@ body
       margin: 0
       padding-bottom: 20px
       color: #333
-      -webkit-hyphens: auto
-      -moz-hyphens: auto
-      hyphens: auto
     a
       color: #333
       text-decoration: underline
