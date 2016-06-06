@@ -38,12 +38,12 @@ social:
     share_title: ?text=
     share_link: "&amp;url="
 
-  # - icon:	facebook
-  #   url:	https://facebook.com/subicura
-  #   desc: Connect with me facebook
-  #   share_url: https://www.facebook.com/sharer.php
-  #   share_title: ?t=
-  #   share_link: "&amp;u="
+# - icon:	facebook
+#   url:	https://facebook.com/subicura
+#   desc: Connect with me facebook
+#   share_url: https://www.facebook.com/sharer.php
+#   share_title: ?t=
+#   share_link: "&amp;u="
 
   - icon:	github
     url:	https://github.com/subicura
