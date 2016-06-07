@@ -90,8 +90,16 @@
           </div>
         </div>
 
+        <div class="page-navigation">
+          {% if page.previous.url %}
+            <a class="prev" href="{{page.previous.url}}">이전글: {{page.previous.title}}</a>
+          {% endif %}
+          {% if page.next.url %}
+            <a class="next" href="{{page.next.url}}">다음글: {{page.next.title}}</a>
+          {% endif %}
+        </div>
+
         {% if page.comments %} 
-        <hr/>
         <div class="fb-comments-wrapper">
           <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-num-posts="5" data-order-by="social" data-width="100%"></div>
         </div>
