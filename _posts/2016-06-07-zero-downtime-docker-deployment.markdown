@@ -287,7 +287,9 @@ nginx를 이용해 2개의 포트를 바라보고 둘중에 동작하는 포트�
 홈쇼핑처럼의 웹서비스는 컨테이너 앞단에 nginx를 두고 docker-gen을 이용하여 nginx의 설정파일을 변경하고 프로세스를 재시작하고 있습니다.
 
 `blue 컨테이너 실행` > `docker-gen 이벤트 수신` > `nginx 설정파일에 blue container 정보 추가` > `nginx 재시작`
+
 이어서,
+
 `green 컨테이너 중지` > `docker-gen 이벤트 수신` > `nginx 설정파일에 green container 정보 제거` > `nginx 재시작`
 
 ## 자동화
