@@ -256,9 +256,9 @@ nginx를 이용해 2개의 포트를 바라보고 둘중에 동작하는 포트�
 
 ![service discovery]({{ site.url }}/assets/article_images/2016-06-07-zero-downtime-docker-deployment/service-discovery.png)
 
-1. 새로운 서버가 추가되면 서버 정보를 `key/value storage`에 추가함
-2. `key/value storage`는 directory 형태로 값을 저장함. /services/web 하위를 읽으면 전체 web 서버 정보를 읽을 수 있음
-3. `key/value storage`를 watch하고 있던 `configuration manager`가 값이 추가되었다는 이벤트를 받음
+1. 새로운 서버가 추가되면 서버 정보를 `key/value store`에 추가함
+2. `key/value store`는 directory 형태로 값을 저장함. /services/web 하위를 읽으면 전체 web 서버 정보를 읽을 수 있음
+3. `key/value store`를 watch하고 있던 `configuration manager`가 값이 추가되었다는 이벤트를 받음
 4. 이벤트를 받으면 템플릿 파일을 기반으로 새로운 설정파일을 생성
 5. 새로운 설정파일을 만들어 기존파일을 대체하고 서비스를 재시작함
 
@@ -268,7 +268,7 @@ nginx를 이용해 2개의 포트를 바라보고 둘중에 동작하는 포트�
 
 [docker-gen](https://github.com/jwilder/docker-gen)은 docker의 기본 기능을 적극 활용한 service discovery 툴입니다. docker외에 디펜던시는 없기 때문에 구성이 간단하고 편리하지만 하나의 서버에 속한 컨테이너끼리만 동작한다는 단점이 있습니다. 홈쇼핑처럼은 아직 작은 서비스이기 때문에 적합하다고 할 수 있습니다.
 
-- key/value storage
+- key/value store
   - 도커 데몬이 가지고 있는 컨테이너의 정보를 그대로 이용
   - 컨테이너를 실행할때 입력한 환경변수를 읽음
   - `VIRTUAL_HOST=www.likehs.com`과 같이 환경변수를 지정하면 이를 보고 nginx의 virtual host 설정파일들을 구성함
