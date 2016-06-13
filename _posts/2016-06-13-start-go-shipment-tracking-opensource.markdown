@@ -110,7 +110,7 @@ Go는 다른 언어와 마찬가지로 다양한 웹프레임워크/미들웨어
 
 배송조회 서비스에서 선택한 웹서버 미들웨어는 [negroni](https://github.com/urfave/negroni)입니다. negroni는 스스로 할 수 있는게 거의 없는 굉장히 라이트한 미들웨어입니다. 라우팅도 다른 라이브러리를 조합해야 하고 응답 렌더링도 여러 라이브러리중에 하나를 선택해야 합니다. 당연히 디비접속관련이나 ORM도 포함하고 있지 않습니다. 하지만 굉장히 유연하게 **조합**할 수 있도록 설계되어 있습니다. 
 
-물론, Go언어도 토탈 웹프레임워크가 존재합니다. [martini](https://github.com/go-martini/martini)(8,521 stars)라던가 [revel](https://github.com/revel/revel)(6,895 stars)이 엄청난 인기를 끌고 있습니다. 그런데, negroni는 martini를 개발했던 [codegangsta](github.com/codegangsta)가 [martini 디자인 설계는 잘못](https://codegangsta.io/blog/2014/05/19/my-thoughts-on-martini/)이라고 말하고 개발한 미들웨어입니다. 풀 프레임워크는 Go언어에 맞는 디자인 설계가 아니라고 생각한겁니다.
+물론, Go언어도 토탈 웹프레임워크가 존재합니다. [martini](https://github.com/go-martini/martini)(8,521 stars)라던가 [revel](https://github.com/revel/revel)(6,895 stars)이 엄청난 인기를 끌고 있습니다. 그런데, negroni는 martini를 개발했던 [codegangsta](https://github.com/codegangsta)가 [martini 디자인 설계는 잘못](https://codegangsta.io/blog/2014/05/19/my-thoughts-on-martini/)이라고 말하고 개발한 미들웨어입니다. 풀 프레임워크는 Go언어에 맞는 디자인 설계가 아니라고 생각한겁니다.
 
 실제로 지금도 다양한 형태의 라우팅 라이브러리가 개발되고 있습니다. 서로 이런기능이 좋고 속도가 좋다고 주장하고 있는데 negroni를 사용하면 이를 적용하기가 굉장히 간단합니다. 이번 프로젝트는 아이디도 간지나고 star 8,000개 프로젝트 따위 맘에 안들면 버릴수도 있고 실력도 고오급인 codegangsta가 주장하는데로 negroni를 선택합니다. 라우팅은 [gorilla/mux](https://github.com/gorilla/mux), 렌더링은 [unrolled/render](https://github.com/unrolled/render)를 선택했습니다.
 
