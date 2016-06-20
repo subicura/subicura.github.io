@@ -77,7 +77,7 @@ comments: yes
   - 생성자가 없고
   - final이 없고
   - exception이 없고
-  - anootation이 없고
+  - annotation이 없고
   - generic이 없음
 - 쉽고 훌륭한 동시성 처리
 - code style을 강제하여 협업과 유지보수에 유리함
