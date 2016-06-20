@@ -191,7 +191,7 @@ AngularJS는 좋지만, 웹앱용에 한정이고 성능이 크게 중요치 않
 
 React는 서버 사이드 렌더링을 염두에 두고 설계되었습니다.
 
-[`ReactDOMServer.renderToString`](https://facebook.github.io/react/docs/top-level-api.html#reactdomserver.rendertostring) 함수는 서버 사이드에서 사용하는 렌더링 함수입니다. 이 함수는 HTML을 생성하는데 클라이언트에서 동적으로 생성하는 것과 동일한 HTML을 생성합니다. 다른점은 `data-reactid`와 `data-react-checksum`과 같은 attribute가 추가되었다는 점입니다.
+[`ReactDOMServer.renderToString`](https://facebook.github.io/react/docs/top-level-api.html#reactdomserver.rendertostring) 함수는 서버 사이드에서 사용하는 렌더링 함수입니다. 이 함수는 HTML을 생성하는데 클라이언트에서 동적으로 생성하는 것과 동일한 HTML을 생성합니다. 다른점은 `data-react-checksum`과 같은 attribute가 추가되었다는 점입니다.
 
 서버 사이드에서 생성된 HTML에는 이벤트 속성이 없기 때문에 반드시 `ReactDOM.render()`과 같은 클라이언트 사이드 렌더링을 다시 한번 수행해야 합니다.
 
