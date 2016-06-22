@@ -134,10 +134,9 @@ AngularJS의 장점을 구체적으로 살펴봅니다.
   - 기존 1버전은 곧 지원 중단?!
   - 호환이 안된다? 업데이트가 안된다?!
   - [TypeScript](https://www.typescriptlang.org/)만 지원한다? 그게 뭔데 ㅠ
-- 구글도 자기 서비스에 안씀
-  - 사실 구글도 프로덕션에 사용하지 않음
-  - 지메일, 캘린더 다 이걸로 안만듬ㅋ
-  - 원래 만든다는 얘기 없었는데 왠지 낚인 느낌
+- <del>구글도 자기 서비스에 안씀</del>
+  - 안쓰는 줄 알았는데 사용하고 있었네요 (강규현님 감사합니다) 
+  - [https://www.madewithangular.com/#/categories/google](https://www.madewithangular.com/#/categories/google)
 
 엄청난 장점만큼 단점을 같이 보았는데 사실 대부분의 단점은 AngularJS의 단점이라기 보다는 **웹앱**의 단점입니다. AngularJS는 앱용 웹에 적합한 프레임워크입니다. 가만보니 공식사이트 메인에 *HTML enhanced for web apps!* 라고 적혀있습니다.
 
