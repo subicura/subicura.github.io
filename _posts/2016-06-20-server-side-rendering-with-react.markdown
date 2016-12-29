@@ -5,6 +5,15 @@ excerpt: 홈쇼핑처럼 4번째 상품인 튀김을 기름에 튀기면서 Reac
 layout: post
 comments: yes
 ---
+### 2016/12/29 수정
+
+- AngularJS의 단점으로 적었던 IE8지원은 React 또한 15.0.0에서 지원 중단되었습니다. ;ㅁ;
+- AngularJS의 단점으로 적었던 비표준 태그는 data-* 형태로 대체 가능합니다.
+- Angular v2 등장에 따른 v1 지원 중단 우려는 큰 문제는 없어보입니다. (최근 12/23일 업데이트)
+- Angular2는 TypeScript가 메인이긴 하나 자바스크립트 또는 Dart로 작성가능합니다.
+
+----
+
 ![튀김과불맛쌀떡볶이x홈쇼핑처럼]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/fried_things.jpg)
 
 [홈쇼핑처럼](https://www.likehs.com) 4번째 상품인 [튀김](https://www.likehs.com/tvprogram/index/view/id/25/)을 기름에 튀기면서 [React](https://facebook.github.io/react/)를 적용하느라 고생했던 순간이 떠올라 React와 서버 사이드 렌더링 적용과정을 정리해봅니다. 여기서는 **어떻게**보다는 **왜**에 대해 설명합니다.
@@ -135,7 +144,7 @@ AngularJS의 장점을 구체적으로 살펴봅니다.
   - 호환이 안된다? 업데이트가 안된다?!
   - [TypeScript](https://www.typescriptlang.org/)만 지원한다? 그게 뭔데 ㅠ
 - <del>구글도 자기 서비스에 안씀</del>
-  - 안쓰는 줄 알았는데 사용하고 있었네요 (강규현님 감사합니다) 
+  - 안쓰는 줄 알았는데 사용하고 있었네요 (강규현님 감사합니다)
   - [https://www.madewithangular.com/#/categories/google](https://www.madewithangular.com/#/categories/google)
 
 엄청난 장점만큼 단점을 같이 보았는데 사실 대부분의 단점은 AngularJS의 단점이라기 보다는 **웹앱**의 단점입니다. AngularJS는 앱용 웹에 적합한 프레임워크입니다. 가만보니 공식사이트 메인에 *HTML enhanced for web apps!* 라고 적혀있습니다.
@@ -216,9 +225,9 @@ React는 서버 사이드 렌더링을 염두에 두고 설계되었습니다.
 
 ![Use V8 engine]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-v8.png)
 
-서버가 Node.js가 아닐 경우 각 언어에서 제공하는 V8 engine을 사용할 수 있습니다. 
+서버가 Node.js가 아닐 경우 각 언어에서 제공하는 V8 engine을 사용할 수 있습니다.
 
-1. V8 engine을 만들고 
+1. V8 engine을 만들고
 2. React와 Component 소스를 전부 입력하여 컴파일을 한 뒤
 3. Data를 인자로 실행하여 HTML 얻음
 
@@ -228,10 +237,10 @@ React는 서버 사이드 렌더링을 염두에 두고 설계되었습니다.
 
 ![Node.js render server]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-backend.png)
 
-React 코드만 실행하고 렌더링하는 별도의 Node.js 서버를 띄우는 방법입니다. 
+React 코드만 실행하고 렌더링하는 별도의 Node.js 서버를 띄우는 방법입니다.
 
-1. 원래 웹서버로 요청이 들어오면 
-2. 다시 Node.js 서버로 렌더링을 위한 정보(module, props JSON)를 HTTP request하고 
+1. 원래 웹서버로 요청이 들어오면
+2. 다시 Node.js 서버로 렌더링을 위한 정보(module, props JSON)를 HTTP request하고
 3. Node.js 서버에서는 renderToString한 결과 string을 HTTP response
 
 서버를 하나 더 관리해야 하는 번거로움과 HTTP 통신으로 인한 overhead가 발생하여 좋지 않은 방법이라고 생각하는데 의외로 사용하는 곳이 많은 것 같습니다. Airbnb에서 만든 [hypernova](https://github.com/airbnb/hypernova)를 이용하면  Express.js등을 사용할 필요 없이 렌더링 전용 서버를 구축할 수 있습니다.
