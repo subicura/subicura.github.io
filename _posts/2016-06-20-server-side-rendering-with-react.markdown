@@ -12,7 +12,7 @@ comments: yes
 - Angular v2 등장에 따른 v1 지원 중단 우려는 큰 문제는 없어보입니다. (최근 12/23일 업데이트)
 - Angular2는 TypeScript가 메인이긴 하나 자바스크립트 또는 Dart로 작성가능합니다.
 
-----
+---
 
 ![튀김과불맛쌀떡볶이x홈쇼핑처럼]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/fried_things.jpg)
 

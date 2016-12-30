@@ -18,7 +18,7 @@ name: 'subicura'
 author: 'subicura'
 author_image: "/assets/images/author.jpg"
 
-paginate:	5
+paginate:	10
 
 timezone: "Asia/Seoul"
 

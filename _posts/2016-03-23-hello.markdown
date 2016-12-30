@@ -4,6 +4,12 @@ title: hello
 layout: post
 comments: yes
 ---
+### 2016/12/31 수정
+
+- tinypress.co는 더이상 사용하지 않습니다.
+
+---
+
 blog 시작하기 좋은날입니다. ghost설치했다가 실수로 서버를 지우는 바람에 이전 블로그가 사라졌습니다. 글이 별로 많지는 않았지만.. 아쉽네요 ㅠ
 
 역시 설치형보다는 서비스형이 나은것 같습니다. [jekyll](https://jekyllrb.com/) 명령어가 너무 어려웠는데 [tinypress.co](http://tinypress.co)라는 웹 에디터를 발견했습니다. 단순한게 맘에 드네요.
