@@ -12,5 +12,5 @@ by jekyll
 (source)$ git checkout -b master
 (master)$ git filter-branch --subdirectory-filter _site/ -f
 (master)$ git push --all
-(source)$ git checkout -b source
+(source)$ git checkout source
 ```
