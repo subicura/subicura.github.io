@@ -1,0 +1,998 @@
+{
+  "width": 80,
+  "version": 1,
+  "title": null,
+  "height": 25,
+  "duration": 39.191215,
+  "stdout": [
+    [
+      0.090215,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r\u001b]2;ubuntu@ubuntu: ~\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.004039,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32m➜  \u001b[36m~\u001b[00m \u001b[K"
+    ],
+    [
+      2.1e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000149,
+      "\u001b[?2004h"
+    ],
+    [
+      0.961464,
+      "c"
+    ],
+    [
+      0.070797,
+      "\bcu"
+    ],
+    [
+      0.15175,
+      "r"
+    ],
+    [
+      0.048471,
+      "l"
+    ],
+    [
+      0.080977,
+      " "
+    ],
+    [
+      0.184012,
+      "-"
+    ],
+    [
+      0.086931,
+      "s"
+    ],
+    [
+      0.080931,
+      " "
+    ],
+    [
+      0.143945,
+      "h"
+    ],
+    [
+      0.095432,
+      "t"
+    ],
+    [
+      0.152494,
+      "t"
+    ],
+    [
+      0.064106,
+      "p"
+    ],
+    [
+      0.103722,
+      "s"
+    ],
+    [
+      0.29626,
+      ":"
+    ],
+    [
+      0.224065,
+      "/"
+    ],
+    [
+      0.135983,
+      "/"
+    ],
+    [
+      0.766714,
+      "g"
+    ],
+    [
+      0.072945,
+      "e"
+    ],
+    [
+      0.104315,
+      "t"
+    ],
+    [
+      0.088125,
+      "."
+    ],
+    [
+      0.119779,
+      "d"
+    ],
+    [
+      0.073948,
+      "o"
+    ],
+    [
+      0.064702,
+      "c"
+    ],
+    [
+      0.084165,
+      "k"
+    ],
+    [
+      0.083206,
+      "e"
+    ],
+    [
+      0.053402,
+      "r"
+    ],
+    [
+      0.071741,
+      "."
+    ],
+    [
+      0.103472,
+      "c"
+    ],
+    [
+      0.089306,
+      "o"
+    ],
+    [
+      0.07208,
+      "m"
+    ],
+    [
+      0.654341,
+      "/"
+    ],
+    [
+      0.200503,
+      " "
+    ],
+    [
+      0.19317,
+      "|"
+    ],
+    [
+      0.158369,
+      " "
+    ],
+    [
+      0.274091,
+      "s"
+    ],
+    [
+      0.071442,
+      "u"
+    ],
+    [
+      0.118716,
+      "d"
+    ],
+    [
+      0.057213,
+      "o"
+    ],
+    [
+      0.046588,
+      " "
+    ],
+    [
+      0.097165,
+      "s"
+    ],
+    [
+      0.080168,
+      "h"
+    ],
+    [
+      0.070727,
+      "\u001b[?1l\u001b>\u001b[?2004l"
+    ],
+    [
+      9.1e-05,
+      "\r\r\n"
+    ],
+    [
+      0.000274,
+      "\u001b]2;curl -s https://get.docker.com/ | sudo sh\u0007\u001b]1;curl\u0007"
+    ],
+    [
+      0.004581,
+      "[sudo] password for ubuntu: "
+    ],
+    [
+      1.868256,
+      "\r\n"
+    ],
+    [
+      9.164572,
+      "apparmor is enabled in the kernel and apparmor utils were already installed"
+    ],
+    [
+      0.000154,
+      "\r\n"
+    ],
+    [
+      0.000149,
+      "+ "
+    ],
+    [
+      8e-05,
+      "sh"
+    ],
+    [
+      5.4e-05,
+      " -c"
+    ],
+    [
+      8.9e-05,
+      " apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D"
+    ],
+    [
+      7.2e-05,
+      "\r\n"
+    ],
+    [
+      0.04794,
+      "Executing: /tmp/tmp.gbqgevAxMh/gpg.1.sh --keyserver\r\nhkp://ha.pool.sks-keyservers.net:80\r\n--recv-keys\r\n58118E89F3A912897C070ADBF76221572C52609D\r\n"
+    ],
+    [
+      0.001913,
+      "gpg: requesting key 2C52609D from hkp server ha.pool.sks-keyservers.net\r\n"
+    ],
+    [
+      0.846659,
+      "gpg: key 2C52609D: public key \"Docker Release Tool (releasedocker) <docker@docker.com>\" imported\r\ngpg: Total number processed: 1\r\ngpg:               imported: 1  (RSA: 1)\r\n"
+    ],
+    [
+      0.065334,
+      "+ break\r\n+ sh -c apt-key adv -k 58118E89F3A912897C070ADBF76221572C52609D >/dev/null\r\n"
+    ],
+    [
+      0.092334,
+      "+ sh -c mkdir -p /etc/apt/sources.list.d\r\n"
+    ],
+    [
+      0.001655,
+      "+ dpkg --print-architecture\r\n"
+    ],
+    [
+      0.00127,
+      "+ sh -c echo deb \\[arch=amd64\\] https://apt.dockerproject.org/repo ubuntu-xenial main > /etc/apt/sources.list.d/docker.list\r\n"
+    ],
+    [
+      0.000612,
+      "+ sh -c sleep 3; apt-get update; apt-get install -y -q docker-engine\r\n"
+    ],
+    [
+      3.032339,
+      "\r0% [Working]"
+    ],
+    [
+      0.218856,
+      "\r            \rGet:1 https://apt.dockerproject.org/repo ubuntu-xenial InRelease [30.2 kB]\r\n"
+    ],
+    [
+      3.3e-05,
+      "\r0% [Connecting to us.archive.ubuntu.com (91.189.91.26)] [Connecting to security"
+    ],
+    [
+      0.016004,
+      "\r0% [Connecting to us.archive.ubuntu.com (91.189.91.26)] [Connecting to security"
+    ],
+    [
+      0.000356,
+      "\r0% [1 InRelease gpgv 30.2 kB] [Connecting to us.archive.ubuntu.com (91.189.91.2"
+    ],
+    [
+      0.046121,
+      "\r0% [Connecting to us.archive.ubuntu.com (91.189.91.26)] [Connecting to security"
+    ],
+    [
+      0.109523,
+      "\r                                                                               \rGet:2 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages [3,102 B]\r\n\r0% [Connecting to us.archive.ubuntu.com (91.189.91.26)] [Connecting to security"
+    ],
+    [
+      0.006465,
+      "\r0% [Connecting to us.archive.ubuntu.com (91.189.91.26)] [Connecting to security"
+    ],
+    [
+      0.000641,
+      "\r0% [2 Packages store 0 B] [Connecting to us.archive.ubuntu.com (91.189.91.26)] "
+    ],
+    [
+      0.001155,
+      "\r0% [Connecting to us.archive.ubuntu.com (91.189.91.26)] [Connecting to security"
+    ],
+    [
+      0.269021,
+      "\r                                                                               \rHit:3 http://us.archive.ubuntu.com/ubuntu xenial InRelease\r\n\r                                                                               \r0% [Waiting for headers] [Waiting for headers]"
+    ],
+    [
+      0.000586,
+      "\r0% [3 InRelease gpgv 247 kB] [Waiting for headers] [Waiting for headers] [Waiti"
+    ],
+    [
+      0.063416,
+      "\r                                                                               \r0% [Waiting for headers] [Waiting for headers] [Waiting for headers]"
+    ],
+    [
+      0.275424,
+      "\r                                                                    \rHit:4 http://ppa.launchpad.net/zanchey/asciinema/ubuntu xenial InRelease\r\n\r                                                                    \r0% [Waiting for headers] [Waiting for headers]"
+    ],
+    [
+      0.000334,
+      "\r0% [4 InRelease gpgv 17.5 kB] [Waiting for headers] [Waiting for headers]"
+    ],
+    [
+      0.005033,
+      "\r                                                                         \rGet:5 http://us.archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]\r\n\r                                                                         \rGet:6 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]\r\n"
+    ],
+    [
+      0.000205,
+      "\r0% [4 InRelease gpgv 17.5 kB] [5 InRelease 14.2 kB/102 kB 14%] [6 InRelease 14."
+    ],
+    [
+      0.045181,
+      "\r                                                                               \r0% [5 InRelease 14.2 kB/102 kB 14%] [6 InRelease 14.2 kB/102 kB 14%]"
+    ],
+    [
+      0.501673,
+      "\r0% [5 InRelease 93.8 kB/102 kB 92%] [6 InRelease 43.1 kB/102 kB 42%]"
+    ],
+    [
+      0.197386,
+      "\r                                                                    \r0% [Waiting for headers] [6 InRelease 98.2 kB/102 kB 96%]"
+    ],
+    [
+      0.00023,
+      "\r0% [5 InRelease gpgv 102 kB] [Waiting for headers] [6 InRelease 98.2 kB/102 kB "
+    ],
+    [
+      0.059125,
+      "\r                                                                               \r0% [Waiting for headers] [6 InRelease 98.2 kB/102 kB 96%]"
+    ],
+    [
+      0.233353,
+      "\r                                                         \rGet:7 http://us.archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]\r\n"
+    ],
+    [
+      4.8e-05,
+      "\r0% [7 InRelease 28.1 kB/102 kB 28%] [6 InRelease 98.2 kB/102 kB 96%]"
+    ],
+    [
+      0.004467,
+      "\r                                                                    \r0% [7 InRelease 102 kB/102 kB 100%]"
+    ],
+    [
+      0.002135,
+      "\r                                   \r"
+    ],
+    [
+      5.3e-05,
+      "0% [Working]"
+    ],
+    [
+      7.2e-05,
+      "\r0% [6 InRelease gpgv 102 kB]"
+    ],
+    [
+      0.056327,
+      "\r                            \r0% [Working]"
+    ],
+    [
+      0.000204,
+      "\r0% [7 InRelease gpgv 102 kB]"
+    ],
+    [
+      0.053482,
+      "\r                            \r100% [Working]\r              \rFetched 340 kB in 2s (157 kB/s)\r\n"
+    ],
+    [
+      0.040617,
+      "\rReading package lists... 0%\r"
+    ],
+    [
+      0.00671,
+      "\rReading package lists... 0%\r"
+    ],
+    [
+      0.012737,
+      "\rReading package lists... 1%\r"
+    ],
+    [
+      0.044825,
+      "\rReading package lists... 4%\r\rReading package lists... 4%\r"
+    ],
+    [
+      0.053195,
+      "\rReading package lists... 9%\r\rReading package lists... 9%\r"
+    ],
+    [
+      0.016627,
+      "\rReading package lists... 12%\r\rReading package lists... 12%\r"
+    ],
+    [
+      0.000546,
+      "\rReading package lists... 12%\r\rReading package lists... 12%\r"
+    ],
+    [
+      0.000508,
+      "\rReading package lists... 12%\r\rReading package lists... 12%\r"
+    ],
+    [
+      0.00014,
+      "\rReading package lists... 12%\r"
+    ],
+    [
+      0.000111,
+      "\rReading package lists... 12%\r"
+    ],
+    [
+      0.432469,
+      "\rReading package lists... 41%\r\rReading package lists... 41%\r"
+    ],
+    [
+      0.152909,
+      "\rReading package lists... 54%\r"
+    ],
+    [
+      0.183174,
+      "\rReading package lists... 69%\r\rReading package lists... 69%\r"
+    ],
+    [
+      0.10676,
+      "\rReading package lists... 85%\r\rReading package lists... 85%\r"
+    ],
+    [
+      0.00958,
+      "\rReading package lists... 86%\r\rReading package lists... 86%\r"
+    ],
+    [
+      0.005547,
+      "\rReading package lists... 86%\r\rReading package lists... 86%\r"
+    ],
+    [
+      0.002372,
+      "\rReading package lists... 87%\r"
+    ],
+    [
+      5.9e-05,
+      "\rReading package lists... 87%\r"
+    ],
+    [
+      0.030487,
+      "\rReading package lists... 89%\r\rReading package lists... 89%\r"
+    ],
+    [
+      0.02412,
+      "\rReading package lists... 90%\r\rReading package lists... 90%\r"
+    ],
+    [
+      0.009115,
+      "\rReading package lists... 92%\r\rReading package lists... 92%\r"
+    ],
+    [
+      0.000483,
+      "\rReading package lists... 92%\r\rReading package lists... 92%\r"
+    ],
+    [
+      0.000525,
+      "\rReading package lists... 92%\r\rReading package lists... 92%\r"
+    ],
+    [
+      0.000162,
+      "\rReading package lists... 92%\r"
+    ],
+    [
+      8.1e-05,
+      "\rReading package lists... 92%\r"
+    ],
+    [
+      0.026616,
+      "\rReading package lists... 94%\r\rReading package lists... 94%\r"
+    ],
+    [
+      0.020291,
+      "\rReading package lists... 95%\r\rReading package lists... 95%\r"
+    ],
+    [
+      0.005625,
+      "\rReading package lists... 96%\r\rReading package lists... 96%\r"
+    ],
+    [
+      0.000677,
+      "\rReading package lists... 96%\r\rReading package lists... 96%\r"
+    ],
+    [
+      0.00045,
+      "\rReading package lists... 96%\r\rReading package lists... 96%\r"
+    ],
+    [
+      0.000592,
+      "\rReading package lists... 96%\r\rReading package lists... 96%\r"
+    ],
+    [
+      0.000361,
+      "\rReading package lists... 96%\r\rReading package lists... 96%\r"
+    ],
+    [
+      0.000323,
+      "\rReading package lists... 96%\r\rReading package lists... 96%\r"
+    ],
+    [
+      0.000249,
+      "\rReading package lists... 96%\r"
+    ],
+    [
+      6.6e-05,
+      "\rReading package lists... 96%\r"
+    ],
+    [
+      0.000181,
+      "\rReading package lists... 96%\r"
+    ],
+    [
+      4.5e-05,
+      "\rReading package lists... 96%\r"
+    ],
+    [
+      0.000206,
+      "\rReading package lists... 96%\r\rReading package lists... 96%\r"
+    ],
+    [
+      0.00051,
+      "\rReading package lists... 96%\r\rReading package lists... 96%\r"
+    ],
+    [
+      0.00466,
+      "\rReading package lists... 97%\r\rReading package lists... 97%\r"
+    ],
+    [
+      0.004297,
+      "\rReading package lists... 98%\r\rReading package lists... 98%\r"
+    ],
+    [
+      0.004281,
+      "\rReading package lists... 98%\r\rReading package lists... 98%\r"
+    ],
+    [
+      0.000195,
+      "\rReading package lists... 98%\r"
+    ],
+    [
+      0.000121,
+      "\rReading package lists... 98%\r"
+    ],
+    [
+      0.000251,
+      "\rReading package lists... 99%\r\rReading package lists... 99%\r"
+    ],
+    [
+      0.000213,
+      "\rReading package lists... 99%\r"
+    ],
+    [
+      4.3e-05,
+      "\rReading package lists... 99%\r"
+    ],
+    [
+      0.00136,
+      "\rReading package lists... 99%\r\rReading package lists... 99%\r"
+    ],
+    [
+      0.001297,
+      "\rReading package lists... 99%\r\rReading package lists... 99%\r"
+    ],
+    [
+      0.000943,
+      "\rReading package lists... 99%\r\rReading package lists... 99%\r"
+    ],
+    [
+      5.6e-05,
+      "\rReading package lists... 99%\r"
+    ],
+    [
+      5.4e-05,
+      "\rReading package lists... 99%\r"
+    ],
+    [
+      0.00024,
+      "\rReading package lists... 99%\r\rReading package lists... 99%\r"
+    ],
+    [
+      0.000325,
+      "\rReading package lists... 99%\r\rReading package lists... 99%\r"
+    ],
+    [
+      0.000439,
+      "\rReading package lists... 99%\r\rReading package lists... 99%\r"
+    ],
+    [
+      6e-05,
+      "\rReading package lists... 99%\r\rReading package lists... 99%\r"
+    ],
+    [
+      9.8e-05,
+      "\rReading package lists... 99%\r"
+    ],
+    [
+      5.4e-05,
+      "\rReading package lists... 99%\r"
+    ],
+    [
+      0.043882,
+      "\rReading package lists... 99%\r\rReading package lists... 99%\r"
+    ],
+    [
+      0.073767,
+      "\rReading package lists... Done\r\r\n"
+    ],
+    [
+      0.037013,
+      "Reading package lists..."
+    ],
+    [
+      0.023669,
+      "\r\n"
+    ],
+    [
+      0.00544,
+      "Building dependency tree..."
+    ],
+    [
+      0.22704,
+      "\r\nReading state information..."
+    ],
+    [
+      0.000218,
+      "\r\n"
+    ],
+    [
+      0.163199,
+      "The following additional packages will be installed:\r\n"
+    ],
+    [
+      0.001122,
+      "  aufs-tools cgroupfs-mount libltdl7\r\n"
+    ],
+    [
+      0.001359,
+      "Suggested packages:\r\n  mountall\r\n"
+    ],
+    [
+      0.001083,
+      "The following NEW packages will be installed:\r\n"
+    ],
+    [
+      0.001053,
+      "  aufs-tools cgroupfs-mount docker-engine libltdl7\r\n"
+    ],
+    [
+      0.007656,
+      "0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.\r\n"
+    ],
+    [
+      0.017817,
+      "Need to get 19.5 MB of archives.\r\nAfter this operation, 102 MB of additional disk space will be used.\r\n"
+    ],
+    [
+      0.64157,
+      "Get:1 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 docker-engine amd64 1.12.5-0~ubuntu-xenial [19.4 MB]\r\n"
+    ],
+    [
+      0.223908,
+      "Get:2 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 aufs-tools amd64 1:3.2+20130722-1.1ubuntu1 [92.9 kB]\r\n"
+    ],
+    [
+      0.826931,
+      "Get:3 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 cgroupfs-mount all 1.2 [4,970 B]\r\n"
+    ],
+    [
+      0.001006,
+      "Get:4 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libltdl7 amd64 2.4.6-0.1 [38.3 kB]\r\n"
+    ],
+    [
+      0.001222,
+      "Fetched 19.5 MB in 1s (11.6 MB/s)\r\n"
+    ],
+    [
+      0.298646,
+      "Selecting previously unselected package aufs-tools.\r"
+    ],
+    [
+      2.9e-05,
+      "\r\n"
+    ],
+    [
+      1.5e-05,
+      "(Reading database ... \r"
+    ],
+    [
+      0.001206,
+      "(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r"
+    ],
+    [
+      0.014678,
+      "(Reading database ... 65%\r"
+    ],
+    [
+      0.003086,
+      "(Reading database ... 70%\r"
+    ],
+    [
+      0.000531,
+      "(Reading database ... 75%\r"
+    ],
+    [
+      0.001416,
+      "(Reading database ... 80%\r"
+    ],
+    [
+      0.001141,
+      "(Reading database ... 85%\r"
+    ],
+    [
+      0.001304,
+      "(Reading database ... 90%\r"
+    ],
+    [
+      0.002275,
+      "(Reading database ... 95%\r"
+    ],
+    [
+      0.001605,
+      "(Reading database ... 100%\r(Reading database ... 93166 files and directories currently installed.)\r\r\n"
+    ],
+    [
+      0.003122,
+      "Preparing to unpack .../aufs-tools_1%3a3.2+20130722-1.1ubuntu1_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.003939,
+      "Unpacking aufs-tools (1:3.2+20130722-1.1ubuntu1) ...\r"
+    ],
+    [
+      2.5e-05,
+      "\r\n"
+    ],
+    [
+      0.042578,
+      "Selecting previously unselected package cgroupfs-mount.\r\r\n"
+    ],
+    [
+      0.000904,
+      "Preparing to unpack .../cgroupfs-mount_1.2_all.deb ...\r\r\n"
+    ],
+    [
+      0.003319,
+      "Unpacking cgroupfs-mount (1.2) ...\r\r\n"
+    ],
+    [
+      0.02268,
+      "Selecting previously unselected package libltdl7:amd64.\r"
+    ],
+    [
+      3.2e-05,
+      "\r\n"
+    ],
+    [
+      0.004622,
+      "Preparing to unpack .../libltdl7_2.4.6-0.1_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.006633,
+      "Unpacking libltdl7:amd64 (2.4.6-0.1) ...\r"
+    ],
+    [
+      2.4e-05,
+      "\r\n"
+    ],
+    [
+      0.028054,
+      "Selecting previously unselected package docker-engine.\r"
+    ],
+    [
+      8.1e-05,
+      "\r\nPreparing to unpack .../docker-engine_1.12.5-0~ubuntu-xenial_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.003028,
+      "Unpacking docker-engine (1.12.5-0~ubuntu-xenial) ...\r\r\n"
+    ],
+    [
+      1.977505,
+      "Processing triggers for libc-bin (2.23-0ubuntu5) ...\r\r\n"
+    ],
+    [
+      0.010385,
+      "Processing triggers for man-db (2.7.5-1) ...\r\r\n"
+    ],
+    [
+      0.345424,
+      "Processing triggers for ureadahead (0.100.0-19) ...\r\r\n"
+    ],
+    [
+      0.123003,
+      "Processing triggers for systemd (229-4ubuntu13) ...\r"
+    ],
+    [
+      0.000246,
+      "\r\n"
+    ],
+    [
+      0.079499,
+      "Setting up aufs-tools (1:3.2+20130722-1.1ubuntu1) ...\r\r\n"
+    ],
+    [
+      0.007873,
+      "Setting up cgroupfs-mount (1.2) ...\r"
+    ],
+    [
+      0.000131,
+      "\r\n"
+    ],
+    [
+      0.212822,
+      "Setting up libltdl7:amd64 (2.4.6-0.1) ...\r\r\n"
+    ],
+    [
+      0.0037,
+      "Setting up docker-engine (1.12.5-0~ubuntu-xenial) ...\r\r\n"
+    ],
+    [
+      1.682445,
+      "Processing triggers for libc-bin (2.23-0ubuntu5) ...\r\r\n"
+    ],
+    [
+      0.01661,
+      "Processing triggers for systemd (229-4ubuntu13) ...\r\r\n"
+    ],
+    [
+      0.045873,
+      "Processing triggers for ureadahead (0.100.0-19) ...\r\r\n"
+    ],
+    [
+      1.274486,
+      "+ sh -c docker version\r\n"
+    ],
+    [
+      0.007908,
+      "Client:\r\n Version:      1.12.5\r\n API version:  1.24\r\n Go version:   go1.6.4\r\n Git commit:   7392c3b\r\n Built:        "
+    ],
+    [
+      2.9e-05,
+      "Fri Dec 16 02:42:17 2016\r\n OS/Arch:      linux/amd64\r\n\r\nServer:\r\n Version:      1.12.5\r\n API version:  1.24\r\n Go version:   go1.6.4\r\n Git commit:   7392c3b\r\n Built:        Fri Dec 16 02:42:17 2016\r\n OS/Arch:      linux/amd64\r\n"
+    ],
+    [
+      0.001281,
+      "\r\nIf you would like to use Docker as a non-root user, you should now consider\r\nadding your user to the \"docker\" group with something like:\r\n\r\n  sudo usermod -aG docker your-user\r\n\r\nRemember that you will have to log out and back in for this to take effect!\r\n\r\n"
+    ],
+    [
+      0.000997,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      2e-05,
+      "\u001b]2;ubuntu@ubuntu: ~\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.004094,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32m➜  \u001b[36m~\u001b[00m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      2.4e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      2.030833,
+      "s"
+    ],
+    [
+      0.062672,
+      "\bsu"
+    ],
+    [
+      0.111932,
+      "d"
+    ],
+    [
+      0.040262,
+      "o"
+    ],
+    [
+      0.111893,
+      " "
+    ],
+    [
+      0.247833,
+      "d"
+    ],
+    [
+      0.072054,
+      "o"
+    ],
+    [
+      0.070721,
+      "c"
+    ],
+    [
+      0.081283,
+      "k"
+    ],
+    [
+      0.079942,
+      "e"
+    ],
+    [
+      0.071918,
+      "r"
+    ],
+    [
+      0.06461,
+      " "
+    ],
+    [
+      0.175622,
+      "v"
+    ],
+    [
+      0.135879,
+      "e"
+    ],
+    [
+      0.095054,
+      "r"
+    ],
+    [
+      0.120498,
+      "s"
+    ],
+    [
+      0.112294,
+      "i"
+    ],
+    [
+      0.078934,
+      "o"
+    ],
+    [
+      0.056792,
+      "n"
+    ],
+    [
+      0.193178,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000636,
+      "\u001b]2;sudo docker version\u0007\u001b]1;docker\u0007"
+    ],
+    [
+      0.012747,
+      "Client:\r\n Version:      "
+    ],
+    [
+      0.000748,
+      "1.12.5\r\n API version:  1.24\r\n Go version:   go1.6.4\r\n Git commit:   7392c3b\r\n Built:        Fri Dec 16 02:42:17 2016\r\n OS/Arch:      linux/amd64\r\n\r\nServer:\r\n Version:      1.12.5\r\n API version:  1.24\r\n Go version:   go1.6.4\r\n Git commit:   7392c3b\r\n Built:        Fri Dec 16 02:42:17 2016\r\n OS/Arch:      linux/amd64\r\n"
+    ],
+    [
+      0.000698,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r\u001b]2;ubuntu@ubuntu: ~\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.003904,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[01;32m➜  \u001b[36m~\u001b[00m \u001b[K\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.268336,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ],
+  "env": {
+    "SHELL": "/usr/bin/zsh",
+    "TERM": "xterm-256color"
+  },
+  "command": null
+}
