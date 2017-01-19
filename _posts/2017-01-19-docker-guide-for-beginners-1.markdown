@@ -6,7 +6,7 @@ excerpt: 도커를 처음 접하는 시스템 관리자나 서버 개발자를 �
 comments: yes
 ---
 
-![docker logo]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
+![docker logo](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
 
 어느날 친구한테 메시지를 받았습니다.
 
@@ -26,7 +26,7 @@ comments: yes
 
 ## 서버를 관리한다는 것
 
-![복잡하고 어려운 서버관리]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration.jpg)
+![복잡하고 어려운 서버관리](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration.jpg)
 
 일반적으로 서버를 관리한다는 건 복잡하고 어려우며 고오급 개발자들의 섬세한 작업이 필요한 영역입니다.
 
@@ -42,19 +42,19 @@ comments: yes
 
 ## 도커의 역사
 
-![The future of Linux Containers]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers.png)
+![The future of Linux Containers](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers.png)
 
 도커는 2013년 3월 산타클라라에서 열린 Pycon Conference에서 dotCloud의 창업자인 Solomon Hykes가 [The future of Linux Containers](https://youtu.be/wW9CAH9nSLs) 라는 세션을 발표하면서 처음 세상에 알려졌습니다.
 
 이 발표 이후 도커가 인기를 얻으면서 2013년 10월 아예 회사이름을 도커(Docker Inc.)로 바꾸고 2014년 6월 도커 1.0을 발표합니다. 2014년 8월 도커에 집중하기 위해 dotCloud 플랫폼을 매각하고 2015년 4월 $95M(약 1,100억원) 투자를 유치한 후 계속해서 빠르게 성장하고 있습니다. (현재까지 총 투자액은 $180M이며 2016년 6월 MS에서 $4B/₩4조에 인수하려 했다는 [기사](https://www.sdxcentral.com/articles/news/sources-microsoft-tried-to-buy-docker-for-4b/2016/06/)가 있습니다.) <del>누가 오픈소스는 돈이 되지 않는다고 했는가?!</del>
 
-![The Evolution of the Modern Software Supply Chain - The Docker Survey, 2016]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey.png)
+![The Evolution of the Modern Software Supply Chain - The Docker Survey, 2016](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey.png)
 
 <del>도커에서한</del> 2016년 설문조사에서 90%가 개발에 사용중이고 80%가 DevOps에 사용할 예정이며 58%가 운영환경에서 사용중이라고 합니다. 2014년 도커 서울 밋업을 시작할 때만 해도 대부분의 사람들이 도커를 잘 모르고 개념도 이해하지 못했는데 이제는 거의 모르는 사람이 없을 정도로 널리 쓰이고 있습니다.
 
 ## 도커란?
 
-![도커는 컨테이너를 관리하는 플랫폼]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works.png)
+![도커는 컨테이너를 관리하는 플랫폼](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works.png)
 
 도커는 **컨테이너 기반의 오픈소스 가상화 플랫폼**입니다.
 
@@ -66,7 +66,7 @@ comments: yes
 
 **컨테이너(Container)**
 
-![docker container]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container.png)
+![docker container](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container.png)
 
 컨테이너는 격리된 공간에서 프로세스가 동작하는 기술입니다. 가상화 기술의 하나지만 기존방식과는 차이가 있습니다.
 
@@ -76,7 +76,7 @@ comments: yes
 
 이러한 상황을 개선하기 위해 CPU에 가상화 기술이 들어가고 [KVM](http://www.linux-kvm.org/)<sub>Kernel-based Virtual Machine</sub>과 [Xen](https://www.xenproject.org/)이라는 [반가상화](https://en.wikipedia.org/wiki/Paravirtualization) <sub>Paravirtualization</sub>방식이 등장합니다. 게스트 OS가 필요하긴 하지만 전체OS를 가상화하는 방식이 아니였기 때문에 전가상화 방식에 비해 성능이 향상되었습니다. 이러한 기술들은 AWS나 [Rackspace](https://www.rackspace.com/)같은 클라우드 서비스에서 가상 컴퓨팅 기술의 기반이 되었습니다.
 
-![가상머신과 도커]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png)
+![가상머신과 도커](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png)
 
 전가상화든 반가상화든 추가적인 OS를 설치하여 가상화하는 방법은 어쨋든 성능문제가 있었고 이를 개선하기 위해 **프로세스를 격리** 하는 방식이 등장합니다.
 
@@ -94,7 +94,7 @@ comments: yes
 
 **이미지(Image)**
 
-![Docker image]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image.png)
+![Docker image](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image.png)
 
 도커에서 가장 중요한 개념은 컨테이너와 함께 이미지라는 개념입니다.
 
@@ -104,7 +104,7 @@ ubuntu이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있�
 
 말그대로 이미지는 컨테이너를 실행하기 위한 모오오오오든 정보를 가지고 있기 때문에 더 이상 의존성 파일을 컴파일하고 이것저것 설치할 필요가 없습니다. 이제 새로운 서버가 추가되면 미리 만들어 놓은 이미지를 다운받고 컨테이너를 생성만 하면 됩니다. 한 서버에 여러개의 컨테이너를 실행할 수 있고, 수십, 수백, 수천대의 서버도 문제없습니다.
 
-![Docker Store]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store.png)
+![Docker Store](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store.png)
 
 도커 이미지는 [Docker hub](https://hub.docker.com/)에 등록하거나 [Docker Registry](https://docs.docker.com/registry/) 저장소를 직접 만들어 관리할 수 있습니다. 현재 공개된 도커 이미지는 50만개가 넘고 Docker hub의 이미지 다운로드 수는 80억회에 이릅니다. 누구나 쉽게 이미지를 만들고 배포할 수 있습니다.
 
@@ -116,7 +116,7 @@ ubuntu이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있�
 
 ### 레이어 저장방식
 
-![Docker Layer]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer.png)
+![Docker Layer](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer.png)
 
 도커 이미지는 컨테이너를 실행하기 위한 모든 정보를 가지고 있기 때문에 보통 용량이 수백메가<sub>MB</sub>에 이릅니다. 처음 이미지를 다운받을 땐 크게 부담이 안되지만 기존 이미지에 파일 하나 추가했다고 수백메가를 다시 다운받는다면 매우 비효율적일 수 밖에 없습니다.
 
@@ -128,7 +128,7 @@ ubuntu이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있�
 
 ### 이미지 경로
 
-![Docker image url]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url.png)
+![Docker image url](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url.png)
 
 이미지는 url 방식으로 관리하며 태그를 붙일 수 있습니다. ubuntu 14.04 이미지는 `docker.io/library/ubuntu:14.04` 또는 `docker.io/library/ubuntu:trusty` 이고 `docker.io/library`는 생략가능하여 `ubuntu:14.04` 로 사용할 수 있습니다. 이러한 방식은 이해하기 쉽고 편리하게 사용할 수 있으며 태그 기능을 잘 이용하면 테스트나 롤백도 쉽게 할 수 있습니다.
 
@@ -142,7 +142,7 @@ ubuntu이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있�
 
 ### Docker Hub
 
-![Docker Hub Hits 5 Billion Pulls(2016/08)]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull.png)
+![Docker Hub Hits 5 Billion Pulls(2016/08)](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull.png)
 
 도커 이미지의 용량은 보통 수백메가로 수기가가 넘는 경우도 흔합니다. 이렇게 큰 용량의 이미지를 서버에 저장하고 관리하는 것은 쉽지 않은데 도커는 Docker hub를 통해 공개 이미지를 무료로 관리해 줍니다. 하루에도 엄청난 용량의 이미지가 전세계에서 다운로드 되고 트래픽 비용만 해도 어마어마 할 것 같은데 그것이 다 무료!입니다.
 
@@ -168,13 +168,13 @@ ubuntu이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있�
 
 도커는 기술기업답지 않게 홍보와 커뮤니티 관리에 굉장히 신경쓰고 있습니다. 커뮤니티를 위한 스티커나 티셔츠를 무료로 제공하고 필요하면 연사요청도 할 수 있습니다. 홈페이지에서는 전세계에서 열리는 밋업 상황을 볼 수 있고 일주일마다 발송되는 [뉴스레터](https://blog.docker.com/docker-weekly-archives/)에는 다양한 개발자들의 글이 실려있습니다.
 
-![Docker office에서 만난 Jérôme Petazzoni]({{ site.url }}/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg)
+![Docker office에서 만난 Jérôme Petazzoni](/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg)
 
 운이 좋았지만 도커 오피스에 방문해서 사무실을 구경할 수도 있었고 고오오오급 개발자 [Jérôme Petazzoni](https://twitter.com/jpetazzo)와 직접 이야기를 나눌수 있었습니다! <del>아 또 가고 싶다</del>
 
 ### moby dock
 
-![Tux(linux) - Moby Dock(docker) - Gopher (golang)]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals.jpg)
+![Tux(linux) - Moby Dock(docker) - Gopher (golang)](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals.jpg)
 
 도커는 넘나 귀여운 고래를 로고로 하고 있습니다. 로고 스티커는 항상 인기가 넘치고 로고가 그려진 티셔츠는 입고 돌아다녀도 개발자처럼 보이지 않습니다. 도커가 성공한 가장 큰 이유는 귀여운 고래 덕분이라고 생각합니다.(엄근진) <del>오픈소스가 성공하려면 귀여운 동물 캐릭터를 사용하세요!</del>
 

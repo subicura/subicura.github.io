@@ -5,7 +5,7 @@ excerpt: 홈쇼핑처럼 6번째 상품인 까르보돈까스는 부먹과 찍�
 layout: post
 comments: yes
 ---
-![돈까스먹는용만이x까르보돈까스]({{ site.url }}/assets/article_images/2016-07-11-coding-convention/carbo.jpg)
+![돈까스먹는용만이x까르보돈까스](/assets/article_images/2016-07-11-coding-convention/carbo.jpg)
 
 [홈쇼핑처럼](https://www.likehs.com) 6번째 상품인 [까르보돈까스](https://www.likehs.com/tvprogram/index/view/id/27/)는 부먹과 찍먹을 선택해야 합니다. 코딩도 둘중에 하나를 선택해야 하는 경우가 많은데 협업을 위해 코딩 스타일을 설정하고 규칙에 어긋난 코드를 한땀한땀 수정했던 순간이 떠올라 linter에 대해 이야기합니다.
 
@@ -237,7 +237,7 @@ SublimeText3에 lint를 적용하려면 [SublimeLinter](http://www.sublimelinter
 3. SublimeLinter와 SublimeLinter-contrib-eslint를 설치합니다.
 4. 설치가 끝나면 재시작합니다.
 
-![sublime text3]({{ site.url }}/assets/article_images/2016-07-11-coding-convention/sublimetext3.png)
+![sublime text3](/assets/article_images/2016-07-11-coding-convention/sublimetext3.png)
 
 왼쪽에 빨간색점이 보이고 하단에 에러문구가 보입니다.
 
@@ -245,11 +245,11 @@ SublimeText3에 lint를 적용하려면 [SublimeLinter](http://www.sublimelinter
 
 IntelliJ의 WebStorm IDE에는 ESLint가 이미 내장되어 있습니다. 설정에서 활성화하면 바로 적용됩니다.
 
-![WebStorm ESLint]({{ site.url }}/assets/article_images/2016-07-11-coding-convention/webstorm_eslint.png)
+![WebStorm ESLint](/assets/article_images/2016-07-11-coding-convention/webstorm_eslint.png)
 
 `Languages & Frameworks > Javascript > Code Quality Tools > ESLint`
 
-![WebStorm ESLint Check]({{ site.url }}/assets/article_images/2016-07-11-coding-convention/webstorm_eslint_view.png)
+![WebStorm ESLint Check](/assets/article_images/2016-07-11-coding-convention/webstorm_eslint_view.png)
 
 활성화하면 editor 오른쪽에 빨간색 라인이 보이고 마우스 오버하면 에러문구가 보입니다.
 
@@ -263,7 +263,7 @@ $ eslint -f checkstyle *.js > checkstyle.xml
 
 eslint에서는 -f 옵션을 통해 output 포멧을 지정할 수 있는데 checkstyle을 내장하고 있습니다. Jenkins에서 checkstyle을 설정하면 다음과 같은 화면을 볼 수 있습니다.
 
-![Jenkins Checkstyle]({{ site.url }}/assets/article_images/2016-07-11-coding-convention/checkstyle.png)
+![Jenkins Checkstyle](/assets/article_images/2016-07-11-coding-convention/checkstyle.png)
 
 ## 그래서
 

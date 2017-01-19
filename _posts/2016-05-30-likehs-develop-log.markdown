@@ -5,7 +5,7 @@ excerpt: 홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 "홈
 layout: post
 comments: yes
 ---
-![서울스낵x불맛쌀떡볶이]({{ site.url }}/assets/article_images/2016-05-30-likehs-develop-log/dduk.png)
+![서울스낵x불맛쌀떡볶이](/assets/article_images/2016-05-30-likehs-develop-log/dduk.png)
 
 홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 "[홈쇼핑처럼](https://www.likehs.com/)"을 개발했던 내용이 떠올라 후기로 정리합니다.
 
@@ -184,7 +184,7 @@ comments: yes
 
 **API Gateway**
 
-![API Gateway란?]({{ site.url }}/assets/article_images/2016-05-30-likehs-develop-log/api-gateway.png)
+![API Gateway란?](/assets/article_images/2016-05-30-likehs-develop-log/api-gateway.png)
 
 - 배송조회 및 우편번호검색에서 사용
 - 배송조회와 우편번호검색이 따로 인증 기능이 없기 때문에 앞단에 gateway를 둠

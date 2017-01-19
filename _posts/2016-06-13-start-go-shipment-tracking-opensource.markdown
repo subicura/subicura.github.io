@@ -5,7 +5,7 @@ excerpt: 홈쇼핑처럼에서 세번째로 런칭한 돈까스를 구매해 주
 layout: post
 comments: yes
 ---
-![돈까스먹는용만이x칠리등심돈까스]({{ site.url }}/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/yongman-pork.jpg)
+![돈까스먹는용만이x칠리등심돈까스](/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/yongman-pork.jpg)
 
 [홈쇼핑처럼](https://www.likehs.com)에서 세번째로 런칭한 [돈까스](https://www.likehs.com/tvprogram/index/view/id/24/)를 구매해 주시는 분들을 보면서 *아.. 받은 만큼 나도 뭔가 베풀어야겠구나* 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다.
 
@@ -28,7 +28,7 @@ comments: yes
 
 **왜 [마이크로서비스](http://martinfowler.com/articles/microservices.html)인가?**
 
-![monoliths / microservices]({{ site.url }}/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/monolith-microservice.png)
+![monoliths / microservices](/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/monolith-microservice.png)
 
 마이크로서비스와 비교되는 방식으로 모놀리식이라는 서비스 개발 방법이 있습니다.
 
@@ -61,7 +61,7 @@ comments: yes
 
 **왜 [Go](https://golang.org/)인가**
 
-![languages]({{ site.url }}/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/languages.png)
+![languages](/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/languages.png)
 
 - 구글이 개발한 가장 핫한 언어
 - [Go를 사용중인 회사들](https://github.com/golang/go/wiki/GoUsers)
@@ -200,7 +200,7 @@ github은 다양한 외부 서비스와 연동이 가능합니다. 보통 github
 
 **뱃지**
 
-![github badge]({{ site.url }}/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/github-badge.png)
+![github badge](/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/github-badge.png)
 
 github은 상단에 각종 상태를 뱃지아이콘으로 보여주는 특별한 문화(?)가 있습니다. 라이센스라던가 문서링크, 코드 품질이나 커버리지, 빌드결과(테스트) 여부등이 있습니다. 이외에도 커뮤니티 게시판 링크라던가 채팅링크등 다양한 뱃지가 있습니다. [shields.io](http://shields.io/)에서는 다양한 뱃지아이콘을 제공하고 있고 각 서비스마다 자체적으로 뱃지 링크를 제공하기도 합니다.
 

@@ -65,7 +65,7 @@ layout: default
               <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
             </section>
             <div class="post-meta">
-              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time> ∙ <span class="fb-comments-count" data-href="{{ site.url }}{{ post.url }}"></span> comments 
             </div>
           </div>
         </article>

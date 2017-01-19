@@ -5,7 +5,7 @@ excerpt: 어느덧 2016년 마지막 날입니다. 올 한해 역시 정신없�
 layout: post
 comments: yes
 ---
-![김우주(19개월)]({{ site.url }}/assets/article_images/2016-12-31-remember-2016/woozoo_read_the_book.jpg)
+![김우주(19개월)](/assets/article_images/2016-12-31-remember-2016/woozoo_read_the_book.jpg)
 
 어느덧 2016년 마지막 날입니다. 올 한해 역시 정신없이 지나갔고 작년에 태어난 딸도 돌을 지나고 어느새 python 개발 서적을 읽을 정도의 나이가 되었습니다(<del>위 사진 참조</del>). 회사는 6주년을 맞이했고 올해 처음으로 일반 고객을 대상으로한 서비스를 오픈했습니다. 서비스를 운영하면서 느낀 점도 많지만 일단은 블로그에 대해 한해를 마무리하는 회고를 하려고 합니다.
 
@@ -21,13 +21,13 @@ jekyll skin은 [mediator](https://github.com/dirkfabisch/mediator)를 fork한 �
 
 ## 올 해 쓴글
 
-![2016년 쓴 글]({{ site.url }}/assets/article_images/2016-12-31-remember-2016/pageview.png)
+![2016년 쓴 글](/assets/article_images/2016-12-31-remember-2016/pageview.png)
 
 처음 글을 쓸때는 1주일에 한개를 목표로 하였으나 최종적으로 5개밖에 쓰지 못했습니다. (...) 첫번째 글인 [홈쇼핑처럼 개발후기]({% post_url 2016-05-30-likehs-develop-log %})는 하루만에 페이지뷰가 10,000을 돌파하는 예상외의 폭발적인 반응<del>과 우려</del>을 얻었고 파워블로거를 해볼까..라는 <del>헛된</del> 생각과 블로그의 주제에 대해 많은 고민을 하게 해주었습니다.
 
 이후에 작성한 [도커를 이용한 웹서비스 무중단 배포하기]({% post_url 2016-06-07-zero-downtime-docker-deployment %})도 반응이 좋아 7월경에 "홈쇼핑처럼x개발자처럼_첫번째이야기"라는 오프라인 모임도 갖게 되었습니다.
 
-![홈쇼핑처럼x개발자처럼_첫번째이야기]({{ site.url }}/assets/article_images/2016-12-31-remember-2016/1st_off.jpg)
+![홈쇼핑처럼x개발자처럼_첫번째이야기](/assets/article_images/2016-12-31-remember-2016/1st_off.jpg)
 
 이 때 후기를 정리하여 6번째 글을 작성할 예정이였으나 결국 올해를 넘기게 되었습니다. ㅠㅠ 이부분은 아마 내년 초에 작성할 것 같습니다. 그 때 참여해 주셨던 분들 모두 감사드리고 좋은 말씀 나누어서 뜻깊은 시간이였습니다.
 
