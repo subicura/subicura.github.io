@@ -5,6 +5,8 @@
     background: #fff;
     @extend %vertical-rhythm;
 
+    pre { margin: 0; }
+
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
     .k     { font-weight: bold } // Keyword
@@ -64,4 +66,70 @@
     .vg    { color: #008080 } // Name.Variable.Global
     .vi    { color: #008080 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
+}
+
+// so that the line numbers are not selectable
+@mixin unselectable() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// having a lineno-container made it easier to style line number
+// code blocks without impacting normal code blocks
+.lineno-container > figure > pre {
+  padding: 0px;
+}
+
+.highlight {
+  &.usage {
+    text-align: center;
+    code, pre {
+      font-size: 14px;
+    }
+
+    > pre {
+      padding: 8px 12px;
+    }
+  }
+
+  > pre {
+    padding: 0;
+    word-wrap: normal;
+  }
+
+  pre.lineno {
+    border: none;
+    @include opacity(0.5);
+    min-width: 16px;
+    background-color: #f0f0f0;
+  }
+
+  .lineno {
+    @include unselectable();
+  }
+
+  .gutter {
+    // border-right: 1px solid #ccc;
+  }
+
+  code, pre {
+    font-size: 13px;
+    line-height: 160%;
+  }
+
+  pre {
+    pre {
+      border: none;
+      margin-bottom: 0px;
+    }
+  }
 }
