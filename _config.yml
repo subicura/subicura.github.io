@@ -5,9 +5,9 @@ gems:
   - jekyll-gist
 
 # Site settings
-title: "subicura"
+title: "Subicura's Blog"
 description: > # this means to ignore newlines until "email:"
-   subicura's blog
+   서비큐라의 개발 블로그입니다.
 
 email: subicura@subicura.com
 #blog logo
