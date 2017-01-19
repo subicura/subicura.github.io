@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@subicura" />
     <meta name="twitter:title" content="초보를 위한 도커 안내서 - 설치부터 배포까지 1/3" />
-    <meta name="twitter:image" content="http://subicura.com/assets/images/df_logo.png" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/df_logo.png" />
     
     <meta name="twitter:description"  content="이 글은 도커에 대해 1도 모르는 시스템 관리자나 서버 개발자를 대상으로 도커 전반에 대해 얕고 넓은 지식을 담고 있습니다. 도커가 등장한 배경과 도커의 역사, 그리고 도커의 핵심개념인 컨테이너와 이미지에 대해 알아보고 실제로 도커를 설치하고 컨테이너를 실행해 보도록 하겠습니다." />
     
@@ -29,19 +29,19 @@
   
   <meta property="og:description" content="이 글은 도커에 대해 1도 모르는 시스템 관리자나 서버 개발자를 대상으로 도커 전반에 대해 얕고 넓은 지식을 담고 있습니다. 도커가 등장한 배경과 도커의 역사, 그리고 도커의 핵심개념인 컨테이너와 이미지에 대해 알아보고 실제로 도커를 설치하고 컨테이너를 실행해 보도록 하겠습니다." />
   
-  <meta property="og:image" content="http://subicura.com/assets/images/df_logo.png" />
-  <meta property="og:url" content="http://subicura.com/2017/01/19/docker-guide-for-beginners-1.html" />
+  <meta property="og:image" content="http://localhost:4000/assets/images/df_logo.png" />
+  <meta property="og:url" content="http://localhost:4000/2017/01/19/docker-guide-for-beginners-1.html" />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2017-01-19T00:00:00+09:00">
 
   <meta property="fb:app_id" content="1611862309129685" />
 
-  <link rel="canonical" href="http://subicura.com/2017/01/19/docker-guide-for-beginners-1.html"/>
+  <link rel="canonical" href="http://localhost:4000/2017/01/19/docker-guide-for-beginners-1.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1484850049876366000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1484850936248685000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -78,7 +78,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<a href="http://subicura.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.png)"></span></a>
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.png)"></span></a>
 
 <!-- header end -->
 
@@ -105,7 +105,7 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png" alt="docker logo" /></p>
+          <p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png" alt="docker logo" /></p>
 
 <p>어느날 친구한테 메시지를 받았습니다.</p>
 
@@ -129,7 +129,7 @@
 
 <h2 id="section">서버를 관리한다는 것</h2>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration.jpg" alt="복잡하고 어려운 서버관리" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration.jpg" alt="복잡하고 어려운 서버관리" /></p>
 
 <p>일반적으로 서버를 관리한다는 건 복잡하고 어려우며 고오급 개발자들의 섬세한 작업이 필요한 영역입니다.</p>
 
@@ -145,19 +145,19 @@
 
 <h2 id="section-1">도커의 역사</h2>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers.png" alt="The future of Linux Containers" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers.png" alt="The future of Linux Containers" /></p>
 
 <p>도커는 2013년 3월 산타클라라에서 열린 Pycon Conference에서 dotCloud의 창업자인 Solomon Hykes가 <a href="https://youtu.be/wW9CAH9nSLs">The future of Linux Containers</a> 라는 세션을 발표하면서 처음 세상에 알려졌습니다.</p>
 
 <p>이 발표 이후 도커가 인기를 얻으면서 2013년 10월 아예 회사이름을 도커(Docker Inc.)로 바꾸고 2014년 6월 도커 1.0을 발표합니다. 2014년 8월 도커에 집중하기 위해 dotCloud 플랫폼을 매각하고 2015년 4월 $95M(약 1,100억원) 투자를 유치한 후 계속해서 빠르게 성장하고 있습니다. (현재까지 총 투자액은 $180M이며 2016년 6월 MS에서 $4B/₩4조에 인수하려 했다는 <a href="https://www.sdxcentral.com/articles/news/sources-microsoft-tried-to-buy-docker-for-4b/2016/06/">기사</a>가 있습니다.) <del>누가 오픈소스는 돈이 되지 않는다고 했는가?!</del></p>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey.png" alt="The Evolution of the Modern Software Supply Chain - The Docker Survey, 2016" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey.png" alt="The Evolution of the Modern Software Supply Chain - The Docker Survey, 2016" /></p>
 
 <p><del>도커에서한</del> 2016년 설문조사에서 90%가 개발에 사용중이고 80%가 DevOps에 사용할 예정이며 58%가 운영환경에서 사용중이라고 합니다. 2014년 도커 서울 밋업을 시작할 때만 해도 대부분의 사람들이 도커를 잘 모르고 개념도 이해하지 못했는데 이제는 거의 모르는 사람이 없을 정도로 널리 쓰이고 있습니다.</p>
 
 <h2 id="section-2">도커란?</h2>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works.png" alt="도커는 컨테이너를 관리하는 플랫폼" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works.png" alt="도커는 컨테이너를 관리하는 플랫폼" /></p>
 
 <p>도커는 <strong>컨테이너 기반의 오픈소스 가상화 플랫폼</strong>입니다.</p>
 
@@ -169,7 +169,7 @@
 
 <p><strong>컨테이너(Container)</strong></p>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container.png" alt="docker container" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container.png" alt="docker container" /></p>
 
 <p>컨테이너는 격리된 공간에서 프로세스가 동작하는 기술입니다. 가상화 기술의 하나지만 기존방식과는 차이가 있습니다.</p>
 
@@ -179,7 +179,7 @@
 
 <p>이러한 상황을 개선하기 위해 CPU에 가상화 기술이 들어가고 <a href="http://www.linux-kvm.org/">KVM</a><sub>Kernel-based Virtual Machine</sub>과 <a href="https://www.xenproject.org/">Xen</a>이라는 <a href="https://en.wikipedia.org/wiki/Paravirtualization">반가상화</a> <sub>Paravirtualization</sub>방식이 등장합니다. 게스트 OS가 필요하긴 하지만 전체OS를 가상화하는 방식이 아니였기 때문에 전가상화 방식에 비해 성능이 향상되었습니다. 이러한 기술들은 AWS나 <a href="https://www.rackspace.com/">Rackspace</a>같은 클라우드 서비스에서 가상 컴퓨팅 기술의 기반이 되었습니다.</p>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png" alt="가상머신과 도커" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png" alt="가상머신과 도커" /></p>
 
 <p>전가상화든 반가상화든 추가적인 OS를 설치하여 가상화하는 방법은 어쨋든 성능문제가 있었고 이를 개선하기 위해 <strong>프로세스를 격리</strong> 하는 방식이 등장합니다.</p>
 
@@ -199,7 +199,7 @@
 
 <p><strong>이미지(Image)</strong></p>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image.png" alt="Docker image" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image.png" alt="Docker image" /></p>
 
 <p>도커에서 가장 중요한 개념은 컨테이너와 함께 이미지라는 개념입니다.</p>
 
@@ -209,7 +209,7 @@
 
 <p>말그대로 이미지는 컨테이너를 실행하기 위한 모오오오오든 정보를 가지고 있기 때문에 더 이상 의존성 파일을 컴파일하고 이것저것 설치할 필요가 없습니다. 이제 새로운 서버가 추가되면 미리 만들어 놓은 이미지를 다운받고 컨테이너를 생성만 하면 됩니다. 한 서버에 여러개의 컨테이너를 실행할 수 있고, 수십, 수백, 수천대의 서버도 문제없습니다.</p>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store.png" alt="Docker Store" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store.png" alt="Docker Store" /></p>
 
 <p>도커 이미지는 <a href="https://hub.docker.com/">Docker hub</a>에 등록하거나 <a href="https://docs.docker.com/registry/">Docker Registry</a> 저장소를 직접 만들어 관리할 수 있습니다. 현재 공개된 도커 이미지는 50만개가 넘고 Docker hub의 이미지 다운로드 수는 80억회에 이릅니다. 누구나 쉽게 이미지를 만들고 배포할 수 있습니다.</p>
 
@@ -221,7 +221,7 @@
 
 <h3 id="section-4">레이어 저장방식</h3>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer.png" alt="Docker Layer" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer.png" alt="Docker Layer" /></p>
 
 <p>도커 이미지는 컨테이너를 실행하기 위한 모든 정보를 가지고 있기 때문에 보통 용량이 수백메가<sub>MB</sub>에 이릅니다. 처음 이미지를 다운받을 땐 크게 부담이 안되지만 기존 이미지에 파일 하나 추가했다고 수백메가를 다시 다운받는다면 매우 비효율적일 수 밖에 없습니다.</p>
 
@@ -233,7 +233,7 @@
 
 <h3 id="section-5">이미지 경로</h3>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url.png" alt="Docker image url" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url.png" alt="Docker image url" /></p>
 
 <p>이미지는 url 방식으로 관리하며 태그를 붙일 수 있습니다. ubuntu 14.04 이미지는 <code class="highlighter-rouge">docker.io/library/ubuntu:14.04</code> 또는 <code class="highlighter-rouge">docker.io/library/ubuntu:trusty</code> 이고 <code class="highlighter-rouge">docker.io/library</code>는 생략가능하여 <code class="highlighter-rouge">ubuntu:14.04</code> 로 사용할 수 있습니다. 이러한 방식은 이해하기 쉽고 편리하게 사용할 수 있으며 태그 기능을 잘 이용하면 테스트나 롤백도 쉽게 할 수 있습니다.</p>
 
@@ -260,7 +260,7 @@ CMD [&quot;start.sh&quot;]</pre></noscript>
 
 <h3 id="docker-hub">Docker Hub</h3>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull.png" alt="Docker Hub Hits 5 Billion Pulls(2016/08)" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull.png" alt="Docker Hub Hits 5 Billion Pulls(2016/08)" /></p>
 
 <p>도커 이미지의 용량은 보통 수백메가로 수기가가 넘는 경우도 흔합니다. 이렇게 큰 용량의 이미지를 서버에 저장하고 관리하는 것은 쉽지 않은데 도커는 Docker hub를 통해 공개 이미지를 무료로 관리해 줍니다. 하루에도 엄청난 용량의 이미지가 전세계에서 다운로드 되고 트래픽 비용만 해도 어마어마 할 것 같은데 그것이 다 무료!입니다.</p>
 
@@ -286,13 +286,13 @@ CMD [&quot;start.sh&quot;]</pre></noscript>
 
 <p>도커는 기술기업답지 않게 홍보와 커뮤니티 관리에 굉장히 신경쓰고 있습니다. 커뮤니티를 위한 스티커나 티셔츠를 무료로 제공하고 필요하면 연사요청도 할 수 있습니다. 홈페이지에서는 전세계에서 열리는 밋업 상황을 볼 수 있고 일주일마다 발송되는 <a href="https://blog.docker.com/docker-weekly-archives/">뉴스레터</a>에는 다양한 개발자들의 글이 실려있습니다.</p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg" alt="Docker office에서 만난 Jérôme Petazzoni" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg" alt="Docker office에서 만난 Jérôme Petazzoni" /></p>
 
 <p>운이 좋았지만 도커 오피스에 방문해서 사무실을 구경할 수도 있었고 고오오오급 개발자 <a href="https://twitter.com/jpetazzo">Jérôme Petazzoni</a>와 직접 이야기를 나눌수 있었습니다! <del>아 또 가고 싶다</del></p>
 
 <h3 id="moby-dock">moby dock</h3>
 
-<p><img src="http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals.jpg" alt="Tux(linux) - Moby Dock(docker) - Gopher (golang)" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals.jpg" alt="Tux(linux) - Moby Dock(docker) - Gopher (golang)" /></p>
 
 <p>도커는 넘나 귀여운 고래를 로고로 하고 있습니다. 로고 스티커는 항상 인기가 넘치고 로고가 그려진 티셔츠는 입고 돌아다녀도 개발자처럼 보이지 않습니다. 도커가 성공한 가장 큰 이유는 귀여운 고래 덕분이라고 생각합니다.(엄근진) <del>오픈소스가 성공하려면 귀여운 동물 캐릭터를 사용하세요!</del></p>
 
@@ -312,10 +312,10 @@ CMD [&quot;start.sh&quot;]</pre></noscript>
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://subicura.com/2017/01/19/docker-guide-for-beginners-1.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://localhost:4000/2017/01/19/docker-guide-for-beginners-1.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=%EC%B4%88%EB%B3%B4%EB%A5%BC+%EC%9C%84%ED%95%9C+%EB%8F%84%EC%BB%A4+%EC%95%88%EB%82%B4%EC%84%9C+-+%EC%84%A4%EC%B9%98%EB%B6%80%ED%84%B0+%EB%B0%B0%ED%8F%AC%EA%B9%8C%EC%A7%80+1%2F3&amp;url=http://subicura.com/2017/01/19/docker-guide-for-beginners-1"
+                <a class="icon-twitter" href="http://twitter.com/share?text=%EC%B4%88%EB%B3%B4%EB%A5%BC+%EC%9C%84%ED%95%9C+%EB%8F%84%EC%BB%A4+%EC%95%88%EB%82%B4%EC%84%9C+-+%EC%84%A4%EC%B9%98%EB%B6%80%ED%84%B0+%EB%B0%B0%ED%8F%AC%EA%B9%8C%EC%A7%80+1%2F3&amp;url=http://localhost:4000/2017/01/19/docker-guide-for-beginners-1"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -351,7 +351,7 @@ CMD [&quot;start.sh&quot;]</pre></noscript>
 
          
         <div class="fb-comments-wrapper">
-          <div class="fb-comments" data-href="http://subicura.com/2017/01/19/docker-guide-for-beginners-1.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          <div class="fb-comments" data-href="http://localhost:4000/2017/01/19/docker-guide-for-beginners-1.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
         </div>
         
 

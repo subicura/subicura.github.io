@@ -9,15 +9,11 @@ $ bundle exec jekyll serve
 $ bundle exec jekyll serve --incremental
 ```
 
-## build & deploy
+## asciinema player
 
 ```
-(source)$ bundle exec jekyll build
-(source)$ git add .
-(source)$ git commit -a
-(source)$ git branch -D master
-(source)$ git checkout -b master
-(master)$ git filter-branch --subdirectory-filter _site/ -f
-(master)$ git push --all
-(source)$ git checkout source
+<div class="asciinema-player-section">
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json" poster="data:text/plain,$ # Docker Install (ubuntu)" speed="2"></asciinema-player>
+  <figcaption>Docker Install (ubuntu)</figcaption>
+</div>
 ```

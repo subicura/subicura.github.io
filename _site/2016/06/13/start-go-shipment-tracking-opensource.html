@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@subicura" />
     <meta name="twitter:title" content="Go언어로 오픈소스 배송조회 서비스 만들기" />
-    <meta name="twitter:image" content="http://subicura.com/assets/images/df_logo.png" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/df_logo.png" />
     
     <meta name="twitter:description"  content="홈쇼핑처럼에서 세번째로 런칭한 돈까스를 구매해 주시는 분들을 보면서 *아.. 받은 만큼 나도 뭔가 베풀어야겠구나* 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다. github이라는 소셜코딩 플랫폼이 등장하면서 오픈소스에 참여할 수 있는 장벽이 많이 낮아졌습니다. 사용하던 오픈소스에서 버그를 발견하면 이슈를 살펴보고 수정한 소스를..." />
     
@@ -29,19 +29,19 @@
   
   <meta property="og:description" content="홈쇼핑처럼에서 세번째로 런칭한 돈까스를 구매해 주시는 분들을 보면서 *아.. 받은 만큼 나도 뭔가 베풀어야겠구나* 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다. github이라는 소셜코딩 플랫폼이 등장하면서 오픈소스에 참여할 수 있는 장벽이 많이 낮아졌습니다. 사용하던 오픈소스에서 버그를 발견하면 이슈를 살펴보고 수정한 소스를..." />
   
-  <meta property="og:image" content="http://subicura.com/assets/images/df_logo.png" />
-  <meta property="og:url" content="http://subicura.com/2016/06/13/start-go-shipment-tracking-opensource.html" />
+  <meta property="og:image" content="http://localhost:4000/assets/images/df_logo.png" />
+  <meta property="og:url" content="http://localhost:4000/2016/06/13/start-go-shipment-tracking-opensource.html" />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2016-06-13T00:00:00+09:00">
 
   <meta property="fb:app_id" content="1611862309129685" />
 
-  <link rel="canonical" href="http://subicura.com/2016/06/13/start-go-shipment-tracking-opensource.html"/>
+  <link rel="canonical" href="http://localhost:4000/2016/06/13/start-go-shipment-tracking-opensource.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1484850049876366000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1484850936248685000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -78,7 +78,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<a href="http://subicura.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.png)"></span></a>
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.png)"></span></a>
 
 <!-- header end -->
 
@@ -105,7 +105,7 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p><img src="http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/yongman-pork.jpg" alt="돈까스먹는용만이x칠리등심돈까스" /></p>
+          <p><img src="http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/yongman-pork.jpg" alt="돈까스먹는용만이x칠리등심돈까스" /></p>
 
 <p><a href="https://www.likehs.com">홈쇼핑처럼</a>에서 세번째로 런칭한 <a href="https://www.likehs.com/tvprogram/index/view/id/24/">돈까스</a>를 구매해 주시는 분들을 보면서 <em>아.. 받은 만큼 나도 뭔가 베풀어야겠구나</em> 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다.</p>
 
@@ -128,7 +128,7 @@
 
 <p><strong>왜 <a href="http://martinfowler.com/articles/microservices.html">마이크로서비스</a>인가?</strong></p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/monolith-microservice.png" alt="monoliths / microservices" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/monolith-microservice.png" alt="monoliths / microservices" /></p>
 
 <p>마이크로서비스와 비교되는 방식으로 모놀리식이라는 서비스 개발 방법이 있습니다.</p>
 
@@ -166,7 +166,7 @@
 
 <p><strong>왜 <a href="https://golang.org/">Go</a>인가</strong></p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/languages.png" alt="languages" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/languages.png" alt="languages" /></p>
 
 <ul>
   <li>구글이 개발한 가장 핫한 언어</li>
@@ -261,7 +261,7 @@
 <p>이제 이름을 지었으니 로고를 만듭니다. 직접 그릴순 없으니 심플한 무료 아이콘이 많은 <a href="https://icons8.com/#/ios">icons8.com</a>에서 새 아이콘을 하나 고르고 이쁘장한 색샘플을 모아놓은 <a href="http://flatuicolors.com/">flatuicolors.com</a>에서 보라색계열을 하나 선택합니다. 폰트도 밋밋하지 않게 <a href="https://www.google.com/fonts">구글웹폰트</a>에서 하나 고릅니다.</p>
 
 <p align="center">
-<img src="http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/delibird.logo.png" alt="Delibird Logo" title="Delibird Logo" />
+<img src="http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/delibird.logo.png" alt="Delibird Logo" title="Delibird Logo" />
 </p>
 
 <p>짠, 포샵을 쓱싹하여 그럴싸한 이름에 로고가 만들어졌습니다.</p>
@@ -341,7 +341,7 @@ rm &#39;.gitignore&#39;</pre></noscript>
 
 <p><strong>뱃지</strong></p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/github-badge.png" alt="github badge" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/github-badge.png" alt="github badge" /></p>
 
 <p>github은 상단에 각종 상태를 뱃지아이콘으로 보여주는 특별한 문화(?)가 있습니다. 라이센스라던가 문서링크, 코드 품질이나 커버리지, 빌드결과(테스트) 여부등이 있습니다. 이외에도 커뮤니티 게시판 링크라던가 채팅링크등 다양한 뱃지가 있습니다. <a href="http://shields.io/">shields.io</a>에서는 다양한 뱃지아이콘을 제공하고 있고 각 서비스마다 자체적으로 뱃지 링크를 제공하기도 합니다.</p>
 
@@ -387,7 +387,7 @@ rm &#39;.gitignore&#39;</pre></noscript>
 <p><a href="https://www.heroku.com/">heroku</a>는 소스빌드/배포/스케일이 자유로운 클라우드 서비스입니다. 다른 웹호스팅 서비스와 차별점은 소스를 업로드만 하면 알아서 웹서버를 띄워준다는 점입니다. 이게 무슨 말이냐면 Rails, Django, Express등은 고유한 파일 구조가 있습니다. 이러한 디렉토리구조나 파일의 확장자를 보고 <a href="https://devcenter.heroku.com/articles/buildpacks">알아서</a> 서버를 띄운다는 신박한 서비스입니다.</p>
 
 <p align="center">
-<img src="http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/heroku.png" alt="heroku free plan" title="heroku free plan" />
+<img src="http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/heroku.png" alt="heroku free plan" title="heroku free plan" />
 </p>
 
 <p>더 놀라운건 무료 플렌입니다. 30분간 요청이 없으면 자동으로 서버가 중지되고 그 이후 요청이 들어오면 다시 서버를 시작합니다. 예전에는 시간제한이 없었는데 이제 시간제한이 생겨서 아쉽긴 하지만 테스트로 배송조회 서비스를 켜놓기에는 부족함이 없습니다. heroku에 로그인을 하고 서버를 만든 후 github 소스를 연동하니 바로 서버가 뜹니다. 정말 뜹니다.</p>
@@ -426,10 +426,10 @@ rm &#39;.gitignore&#39;</pre></noscript>
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://subicura.com/2016/06/13/start-go-shipment-tracking-opensource.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://localhost:4000/2016/06/13/start-go-shipment-tracking-opensource.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Go%EC%96%B8%EC%96%B4%EB%A1%9C+%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4+%EB%B0%B0%EC%86%A1%EC%A1%B0%ED%9A%8C+%EC%84%9C%EB%B9%84%EC%8A%A4+%EB%A7%8C%EB%93%A4%EA%B8%B0&amp;url=http://subicura.com/2016/06/13/start-go-shipment-tracking-opensource"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Go%EC%96%B8%EC%96%B4%EB%A1%9C+%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4+%EB%B0%B0%EC%86%A1%EC%A1%B0%ED%9A%8C+%EC%84%9C%EB%B9%84%EC%8A%A4+%EB%A7%8C%EB%93%A4%EA%B8%B0&amp;url=http://localhost:4000/2016/06/13/start-go-shipment-tracking-opensource"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -465,7 +465,7 @@ rm &#39;.gitignore&#39;</pre></noscript>
 
          
         <div class="fb-comments-wrapper">
-          <div class="fb-comments" data-href="http://subicura.com/2016/06/13/start-go-shipment-tracking-opensource.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          <div class="fb-comments" data-href="http://localhost:4000/2016/06/13/start-go-shipment-tracking-opensource.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
         </div>
         
 

@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@subicura" />
     <meta name="twitter:title" content="왜 React와 서버 사이드 렌더링인가?" />
-    <meta name="twitter:image" content="http://subicura.com/assets/images/df_logo.png" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/df_logo.png" />
     
     <meta name="twitter:description"  content="홈쇼핑처럼 4번째 상품인 튀김을 기름에 튀기면서 React를 적용하느라 고생했던 순간이 떠올라 React와 서버 사이드 렌더링 적용과정을 정리해봅니다. 여기서는 어떻게보다는 왜에 대해 설명합니다." />
     
@@ -29,19 +29,19 @@
   
   <meta property="og:description" content="홈쇼핑처럼 4번째 상품인 튀김을 기름에 튀기면서 React를 적용하느라 고생했던 순간이 떠올라 React와 서버 사이드 렌더링 적용과정을 정리해봅니다. 여기서는 어떻게보다는 왜에 대해 설명합니다." />
   
-  <meta property="og:image" content="http://subicura.com/assets/images/df_logo.png" />
-  <meta property="og:url" content="http://subicura.com/2016/06/20/server-side-rendering-with-react.html" />
+  <meta property="og:image" content="http://localhost:4000/assets/images/df_logo.png" />
+  <meta property="og:url" content="http://localhost:4000/2016/06/20/server-side-rendering-with-react.html" />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2016-06-20T00:00:00+09:00">
 
   <meta property="fb:app_id" content="1611862309129685" />
 
-  <link rel="canonical" href="http://subicura.com/2016/06/20/server-side-rendering-with-react.html"/>
+  <link rel="canonical" href="http://localhost:4000/2016/06/20/server-side-rendering-with-react.html"/>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1484850049876366000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1484850936248685000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -78,7 +78,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<a href="http://subicura.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.png)"></span></a>
+<a href="http://localhost:4000" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.png)"></span></a>
 
 <!-- header end -->
 
@@ -116,7 +116,7 @@
 
 <hr />
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/fried_things.jpg" alt="튀김과불맛쌀떡볶이x홈쇼핑처럼" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/fried_things.jpg" alt="튀김과불맛쌀떡볶이x홈쇼핑처럼" /></p>
 
 <p><a href="https://www.likehs.com">홈쇼핑처럼</a> 4번째 상품인 <a href="https://www.likehs.com/tvprogram/index/view/id/25/">튀김</a>을 기름에 튀기면서 <a href="https://facebook.github.io/react/">React</a>를 적용하느라 고생했던 순간이 떠올라 React와 서버 사이드 렌더링 적용과정을 정리해봅니다. 여기서는 <strong>어떻게</strong>보다는 <strong>왜</strong>에 대해 설명합니다.</p>
 
@@ -163,7 +163,7 @@ $conn-&gt;close();
 <h2 id="ajax-">ajax의 등장</h2>
 
 <p align="center">
-<img src="http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/google-auto-complete.png" alt="Google 추천검색어" title="Google 추천검색어" />
+<img src="http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/google-auto-complete.png" alt="Google 추천검색어" title="Google 추천검색어" />
 </p>
 
 <p>처음 ajax가 등장했을때 충격은 정말 엄청났습니다. Google의 추천 검색어 따라하기가 유행했는데 검색어 입력란에 <code class="highlighter-rouge">web</code>을 입력하면 추천 검색어가 실시간으로 보였습니다. 이게 정말 웹에서 가능하다니?!</p>
@@ -202,7 +202,7 @@ $(&#39;#profile&#39;).append(htmlString);</pre></noscript>
 
 <p>이러한 상황을 해결하기 위해 각종 템플릿 엔진이 등장하기 시작합니다. 제가 가장 오랜시간 애용했던 <a href="http://olado.github.io/doT/index.html">doT.js</a>를 비롯해 twitter에서 만든 <a href="http://twitter.github.io/hogan.js/">hogan.js</a>, <a href="https://mustache.github.io/">mustach</a>, <a href="http://handlebarsjs.com/">handlebars</a>등등등등 너무너무너무 다양한 템플릿 엔진이 (지금도 계속해서) 등장합니다.</p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/template-engine.png" alt="template engine compile" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/template-engine.png" alt="template engine compile" /></p>
 
 <p>각각 라이브러리마다 파일 사이즈, 성능, 부가기능등의 차이가 있지만 하는 일은 동일합니다. 중괄호(<code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="err">콧수염</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="err">mustach</span></code>)를 이용하여 반복문, 조건문 등을 넣은 템플릿파일을 만들고 Data를 연동하여 HTML을 생성합니다. 이러한 방법은 string을 붙이고 붙이고 붙이는 방법보다 훨씬 나은 환경을 보여줍니다.</p>
 
@@ -224,7 +224,7 @@ $(&#39;#profile&#39;).append(htmlString);</pre></noscript>
 
 <p>AngularJS는 React를 돋보이게 하기 위함이니 좀더 상세하게 설명합니다.</p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/google-trend-angularjs.png" alt="Google Trends" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/google-trend-angularjs.png" alt="Google Trends" /></p>
 
 <p>AngularJS는 기존의 라이브러리나 프레임워크들과는 다르게 DOM을 조작하거나 제어하는 방식에 초점을 맞추지 않고 데이터의 변화에 초점을 맞추는 완전히 새로운 접근법을 사용합니다. 데이터에 초점을 맞추는 이러한 방식자체는 완전히 새로운게 아니였으나 정말 <strong>잘</strong> 구현하여 사용하기 쉽게 공개한 겁니다. HTML에 작성해야 하는 코드는 조금 늘었지만 Javascript쪽 코드는 정말 놀라울정도로 단순해지고 저를 포함한 웹 프론트엔드 개발자들은 열광합니다.</p>
 
@@ -371,11 +371,11 @@ foreach($talks as $talk) {
 
 <h2 id="isomorphic-javascript">Isomorphic Javascript</h2>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-javascript.png" alt="Isomorphic Javascript" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-javascript.png" alt="Isomorphic Javascript" /></p>
 
 <p>동형 자바스크립트라는 어색한 말로 해석되는 Isomorphic Javascript는 서버와 클라이언트가 같은 코드를 사용한다는 뜻입니다. 웹브라우져에서만 동작할 것 같았던 Javascript가 <a href="https://developers.google.com/v8/">V8엔진</a>이 등장하고 <a href="https://nodejs.org/">Node.js</a>가 나타나면서 서버에서도 Javascript를 사용하기 시작합니다. 클라이언트에서 동작하던 라이브러리를 서버에서 똑같이 돌릴수 있게 됩니다.</p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/client-side-vs-server-side.png" alt="Client vs Server rendering from airbnb" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/client-side-vs-server-side.png" alt="Client vs Server rendering from airbnb" /></p>
 
 <p><strong>서버 사이드 렌더링의 장점</strong></p>
 
@@ -419,13 +419,13 @@ foreach($talks as $talk) {
 
 <p><strong>1. 서버가 Node.js일때</strong></p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-only.png" alt="Node.js server" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-only.png" alt="Node.js server" /></p>
 
 <p>서버가 Node.js일 경우 바로 React 코드를 실행할 수 있습니다. 그냥 <code class="highlighter-rouge">renderToString</code> method를 실행하여 view에 그리면 됩니다. 와우!</p>
 
 <p><strong>2. V8엔진 라이브러리를 사용</strong></p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-v8.png" alt="Use V8 engine" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-v8.png" alt="Use V8 engine" /></p>
 
 <p>서버가 Node.js가 아닐 경우 각 언어에서 제공하는 V8 engine을 사용할 수 있습니다.</p>
 
@@ -439,7 +439,7 @@ foreach($talks as $talk) {
 
 <p><strong>3. 별도의 Node.js 서버 구축</strong></p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-backend.png" alt="Node.js render server" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-backend.png" alt="Node.js render server" /></p>
 
 <p>React 코드만 실행하고 렌더링하는 별도의 Node.js 서버를 띄우는 방법입니다.</p>
 
@@ -453,7 +453,7 @@ foreach($talks as $talk) {
 
 <p><strong>4. 기존 서버가 API 구성하기 용이할때</strong></p>
 
-<p><img src="http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-front.png" alt="Node.js frontend server" /></p>
+<p><img src="http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-front.png" alt="Node.js frontend server" /></p>
 
 <p>기존 서버가 API를 잘 제공하고 있다면 앞단에 Node.js를 두고 기존 서버를 API서버로 사용하는 방법이 있습니다. 이럴 경우 쿠키라던가 인증 토큰등을 추가로 관리하고 라우팅을 다시 셋팅해야 합니다.</p>
 
@@ -492,10 +492,10 @@ foreach($talks as $talk) {
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="http://subicura.com/2016/06/20/server-side-rendering-with-react.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="http://localhost:4000/2016/06/20/server-side-rendering-with-react.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=%EC%99%9C+React%EC%99%80+%EC%84%9C%EB%B2%84+%EC%82%AC%EC%9D%B4%EB%93%9C+%EB%A0%8C%EB%8D%94%EB%A7%81%EC%9D%B8%EA%B0%80%3F&amp;url=http://subicura.com/2016/06/20/server-side-rendering-with-react"
+                <a class="icon-twitter" href="http://twitter.com/share?text=%EC%99%9C+React%EC%99%80+%EC%84%9C%EB%B2%84+%EC%82%AC%EC%9D%B4%EB%93%9C+%EB%A0%8C%EB%8D%94%EB%A7%81%EC%9D%B8%EA%B0%80%3F&amp;url=http://localhost:4000/2016/06/20/server-side-rendering-with-react"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -531,7 +531,7 @@ foreach($talks as $talk) {
 
          
         <div class="fb-comments-wrapper">
-          <div class="fb-comments" data-href="http://subicura.com/2016/06/20/server-side-rendering-with-react.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          <div class="fb-comments" data-href="http://localhost:4000/2016/06/20/server-side-rendering-with-react.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
         </div>
         
 

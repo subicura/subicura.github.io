@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>subicura</title>
- <link href="http://subicura.com/atom.xml" rel="self"/>
- <link href="http://subicura.com/"/>
- <updated>2017-01-20T03:20:49+09:00</updated>
- <id>http://subicura.com</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2017-01-20T03:35:36+09:00</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name></name>
    <email></email>
@@ -14,10 +14,10 @@
  
  <entry>
    <title>초보를 위한 도커 안내서 - 설치부터 배포까지 2/3</title>
-   <link href="http://subicura.com/2017/01/19/docker-guide-for-beginners-2.html"/>
+   <link href="http://localhost:4000/2017/01/19/docker-guide-for-beginners-2.html"/>
    <updated>2017-01-19T00:00:00+09:00</updated>
-   <id>http://subicura.com/2017/01/19/docker-guide-for-beginners-2</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png&quot; alt=&quot;docker logo&quot; /&gt;&lt;/p&gt;
+   <id>http://localhost:4000/2017/01/19/docker-guide-for-beginners-2</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png&quot; alt=&quot;docker logo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;이 글은 &lt;code class=&quot;highlighter-rouge&quot;&gt;초보를 위한 도커 안내서 - 설치부터 배포까지&lt;/code&gt; 2번째 글입니다. 이번엔 도커 설치부터 컨테이너를 실행하고 컨테이너를 둘러보는 방법에 대해 설명합니다. 도커에 대해 1도 모르는 분들을 위해 아주 가볍게 자주 쓰는 명령어만 다루었기 때문에 모든 명령어가 궁금하신 분은 &lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/&quot;&gt;여기&lt;/a&gt;를 참고해주세요.&lt;/p&gt;
 
@@ -42,7 +42,10 @@
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;curl -s https://get.docker.com/ | sudo sh&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;http://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json&quot; poster=&quot;data:text/plain,$ # Docker Install (ubuntu)&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;Docker Install (ubuntu)&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;
+  &lt;asciinema-player src=&quot;http://localhost:4000/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json&quot; poster=&quot;data:text/plain,$ # Docker Install (ubuntu)&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
+  &lt;figcaption&gt;Docker Install (ubuntu)&lt;/figcaption&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;sudo 없이 사용하기&lt;/strong&gt;&lt;/p&gt;
 
@@ -66,7 +69,7 @@ sudo usermod -aG docker your-user &lt;span class=&quot;c&quot;&gt;# your-user �
 
 &lt;p&gt;도커를 맥이나 윈도우즈에 설치하려면 &lt;a href=&quot;https://docs.docker.com/docker-for-mac&quot;&gt;Docker for mac&lt;/a&gt; 또는 &lt;a href=&quot;https://docs.docker.com/docker-for-windows&quot;&gt;Docker for windows&lt;/a&gt;를 설치하면 됩니다. 파일을 다운받고 설치하고 재부팅하면 대부분 문제없이 완료됩니다. 소소한 옵션들이 있는데 특별히 건드릴 부분은 없으나 한번 살펴보고 적절하게 설정하시면 됩니다. (windows는 공유 드라이브를 선택해주세요)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac.png&quot; alt=&quot;Docker for Mac&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac.png&quot; alt=&quot;Docker for Mac&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;마치 네이티브스럽게 설치된 것 같지만 도커는 리눅스 컨테이너이므로 실제로는 가상머신에 설치가 되었습니다. 사용자는 가상머신을 사용한다는 느낌이 전혀 안드는데 그런부분을 굉장히 신경써서 설계하였습니다. 예를 들면, 포트를 연결하기 위해 도커 컨테이너의 특정 포트를 가상머신에 연결하고 다시 mac이나 windows의 포트와 연결해야 합니다. 디렉토리를 연결한다면 디렉토리를 가상머신과 공유하고 그 디렉토리를 다시 컨테이너와 연결해야 합니다. 이런 한단계 추가적으로 거쳐야하는 부분을 자연스럽게 처리해줍니다.&lt;/p&gt;
 
@@ -124,7 +127,7 @@ Server:
 
 &lt;p&gt;혹시, 특이한 부분을 찾으셨나요? 버전정보가 클라이언트와 서버로 나뉘어져 있습니다. 도커는 하나의 실행파일이지만 실제로 클라이언트와 서버역할을 각각 할 수 있습니다. 도커 커맨드를 입력하면 도커 클라이언트가 도커 서버로 명령을 전송하고 결과를 받아 터미널에 출력해 줍니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host.png&quot; alt=&quot;docker client-host&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host.png&quot; alt=&quot;docker client-host&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;기본값이 도커 서버의 소켓을 바라보고 있기 때문에 사용자는 의식하지 않고 마치 바로 명령을 내리는 것 같은 느낌을 받습니다. 이러한 설계가 mac이나 windows의 터미널에서 명령어를 입력했을때 가상 서버에 설치된 도커가 동작하는 이유입니다.&lt;/p&gt;
 
@@ -189,7 +192,10 @@ Server:
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker run ubuntu:16.04&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;http://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json&quot; poster=&quot;data:text/plain,$ # run ubuntu 16.04 container&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run ubuntu 16.04 container&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;
+  &lt;asciinema-player src=&quot;http://localhost:4000/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json&quot; poster=&quot;data:text/plain,$ # run ubuntu 16.04 container&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
+  &lt;figcaption&gt;run ubuntu 16.04 container&lt;/figcaption&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt;명령어를 사용하면 사용할 이미지가 저장되어 있는지 확인하고 없다면 다운로드(&lt;code class=&quot;highlighter-rouge&quot;&gt;pull&lt;/code&gt;)를 한 후 컨테이너를 생성(&lt;code class=&quot;highlighter-rouge&quot;&gt;create&lt;/code&gt;)하고 시작(&lt;code class=&quot;highlighter-rouge&quot;&gt;start&lt;/code&gt;) 합니다.&lt;/p&gt;
 
@@ -216,7 +222,10 @@ bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
 boot  etc  lib   media  opt  root  sbin  sys  usr&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;http://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json&quot; poster=&quot;data:text/plain,$ # run ubuntu 16.04 container with /bin/bash&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run ubuntu 16.04 container with /bin/bash&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;
+  &lt;asciinema-player src=&quot;http://localhost:4000/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json&quot; poster=&quot;data:text/plain,$ # run ubuntu 16.04 container with /bin/bash&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
+  &lt;figcaption&gt;run ubuntu 16.04 container with /bin/bash&lt;/figcaption&gt;
+&lt;/div&gt;
 
 &lt;p&gt;컨테이너 내부에 들어가기 위해 bash 쉘을 실행하고 키보드 입력을 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;-it&lt;/code&gt; 옵션을 줍니다. 추가적으로 프로세스가 종료되면 컨테이너가 자동으로 삭제되도록 &lt;code class=&quot;highlighter-rouge&quot;&gt;--rm&lt;/code&gt; 옵션도 추가하였습니다.&lt;/p&gt;
 
@@ -253,7 +262,10 @@ get mykey
 hello&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;http://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json&quot; poster=&quot;data:text/plain,$ # run redis container&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run redis container&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;
+  &lt;asciinema-player src=&quot;http://localhost:4000/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json&quot; poster=&quot;data:text/plain,$ # run redis container&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
+  &lt;figcaption&gt;run redis container&lt;/figcaption&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-d&lt;/code&gt; 옵션을 주었기 때문에 컨테이너를 실행하자마자 컨테이너의 ID(5dff91d2…)를 보여주고 바로 쉘로 돌아왔습니다. 컨테이너는 종료된 것이 아니라 백그라운드 모드로 동작하고 있고 컨테이너 ID를 이용하여 컨테이너를 제어할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;-p&lt;/code&gt; 옵션을 이용하여 호스트의 &lt;code class=&quot;highlighter-rouge&quot;&gt;1234포트&lt;/code&gt;를 컨테이너의 &lt;code class=&quot;highlighter-rouge&quot;&gt;6379포트&lt;/code&gt;로 연결하였고 localhost의 1234포트로 접속하면 하면 redis를 사용할 수 있습니다.&lt;/p&gt;
 
@@ -310,7 +322,10 @@ hello&lt;span class=&quot;w&quot;&gt;
 &lt;span class=&quot;gp&quot;&gt;mysql&amp;gt; &lt;/span&gt;quit&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;http://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-mysql.json&quot; poster=&quot;data:text/plain,$ # run mysql 5.7 container&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run mysql 5.7 container&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;
+  &lt;asciinema-player src=&quot;http://localhost:4000/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-mysql.json&quot; poster=&quot;data:text/plain,$ # run mysql 5.7 container&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
+  &lt;figcaption&gt;run mysql 5.7 container&lt;/figcaption&gt;
+&lt;/div&gt;
 
 &lt;p&gt;와우, 순식간에 MySQL서버가 실행되었습니다. 이번 테스트는 호스트 OS에 MySQL 클라이언트가 설치되어 있어야 합니다. 추후에 실행중인 MySQL 도커 컨테이너에 접속하여 클라이언트를 실행해 보도록 하겠습니다.&lt;/p&gt;
 
@@ -355,11 +370,14 @@ docker run -d -p 8080:80 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   wordpress&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;http://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-wp.json&quot; poster=&quot;data:text/plain,$ # run wordpress container&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run wordpress container&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;
+  &lt;asciinema-player src=&quot;http://localhost:4000/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-wp.json&quot; poster=&quot;data:text/plain,$ # run wordpress container&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
+  &lt;figcaption&gt;run wordpress container&lt;/figcaption&gt;
+&lt;/div&gt;
 
 &lt;p&gt;컨테이너가 제대로 실행되었는지 웹 브라우저로 확인해봅니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp.png&quot; alt=&quot;wordpress setup&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp.png&quot; alt=&quot;wordpress setup&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;워드프레스가 실행되었습니다! 단지 이미지를 다운받고 적절한 환경변수를 입력하여 컨테이너를 실행했을 뿐입니다. 워드프레스 컨테이너 내부는 apache2와 php가 설치되어 있지만 추상화되어 있어 실행과정에선 드러나지 않습니다.&lt;/p&gt;
 
@@ -382,7 +400,7 @@ docker run -d -p 8080:80 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 
 &lt;p&gt;설치된 파일이 많아 다운로드 하는데 시간이 좀 걸립니다. 컨테이너가 실행되면 웹 브라우저에서 jupyter에 접속하여 머신러닝을 시작해 봅시다!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow.png&quot; alt=&quot;Hello, Tensorflow!&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow.png&quot; alt=&quot;Hello, Tensorflow!&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;와우! 성공적으로 tensorflow 테스트를 마쳤습니다. 이제 조금 있으면 A.I를 만들 수 있을 것 같습니다.(?!)&lt;/p&gt;
 
@@ -726,7 +744,10 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker logs -f &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WORDPRESS_CONTAINER_ID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;http://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json&quot; poster=&quot;data:text/plain,$ # docker logs -f&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker logs -f&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;
+  &lt;asciinema-player src=&quot;http://localhost:4000/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json&quot; poster=&quot;data:text/plain,$ # docker logs -f&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
+  &lt;figcaption&gt;docker logs -f&lt;/figcaption&gt;
+&lt;/div&gt;
 
 &lt;p&gt;로그를 켜 놓은 상태에서 워드프레스 페이지를 새로고침하면 브라우저 접속 로그가 실시간으로 보입니다. 가장 흔하게 사용하는 옵션이고 로그 보기를 중지하려면 &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt;를 입력하면 됩니다.&lt;/p&gt;
 
@@ -787,7 +808,10 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;http://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json&quot; poster=&quot;data:text/plain,$ # docker exec bash&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker exec bash&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;
+  &lt;asciinema-player src=&quot;http://localhost:4000/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json&quot; poster=&quot;data:text/plain,$ # docker exec bash&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
+  &lt;figcaption&gt;docker exec bash&lt;/figcaption&gt;
+&lt;/div&gt;
 
 &lt;p&gt;키보드 입력이 필요하니 run 명령어와 마찬가지로 &lt;code class=&quot;highlighter-rouge&quot;&gt;-it&lt;/code&gt; 옵션을 주었고 bash 쉘로 접속하여 마치 가상머신에 들어온 것 같은 느낌이 듭니다. 접속한 이후에는 어떤 작업도 할 수 있고 컨테이너를 마음껏 건드릴 수 있습니다.&lt;/p&gt;
 
@@ -830,7 +854,10 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 &lt;span class=&quot;gp&quot;&gt;mysql&amp;gt; &lt;/span&gt;quit&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;http://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json&quot; poster=&quot;data:text/plain,$ # docker exec mysql&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker exec mysql&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;
+  &lt;asciinema-player src=&quot;http://localhost:4000/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json&quot; poster=&quot;data:text/plain,$ # docker exec mysql&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
+  &lt;figcaption&gt;docker exec mysql&lt;/figcaption&gt;
+&lt;/div&gt;
 
 &lt;p&gt;이제, 호스트 OS에 mysql을 설치하지 않아도 mysql 클라이언트를 사용할 수 있습니다. 굳이 복잡한 작업이 필요 없는 경우는 &lt;code class=&quot;highlighter-rouge&quot;&gt;-it&lt;/code&gt; 옵션없이 단순하게 명령을 실행하고 종료할 수도 있습니다.&lt;/p&gt;
 
@@ -838,7 +865,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 
 &lt;p&gt;이제 지금까지 배운 모든걸 정리해서 컨테이너를 새로운 버전으로 업데이트 하는 과정을 살펴보겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update.png&quot; alt=&quot;도커 컨테이너 업데이트&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update.png&quot; alt=&quot;도커 컨테이너 업데이트&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;도커에서 컨테이너를 업데이트 하려면 새 버전의 이미지를 다운(&lt;code class=&quot;highlighter-rouge&quot;&gt;pull&lt;/code&gt;)받고 기존 컨테이너를 삭제(&lt;code class=&quot;highlighter-rouge&quot;&gt;stop&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;rm&lt;/code&gt;) 한 후 새 이미지를 기반으로 새 컨테이너를 실행(&lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt;)하면 됩니다. 배포와 관련된 자세한 사항은 다음글에서 이야기하고 여기선 그냥 그렇구나 하고 이해합시다.&lt;/p&gt;
 
@@ -936,7 +963,10 @@ volumes:
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker-compose up&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;http://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-compose.json&quot; poster=&quot;data:text/plain,$ # docker-compose&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker-compose&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;
+  &lt;asciinema-player src=&quot;http://localhost:4000/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-compose.json&quot; poster=&quot;data:text/plain,$ # docker-compose&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
+  &lt;figcaption&gt;docker-compose&lt;/figcaption&gt;
+&lt;/div&gt;
 
 &lt;p&gt;와우, 아주 손쉽게 워드프레스가 만들어 졌습니다. 단지 명령어를 설정파일로 바꾼거에 불과하지만 가독성과 편리성은 훨씬 향상되었습니다.&lt;/p&gt;
 
@@ -960,10 +990,10 @@ volumes:
  
  <entry>
    <title>초보를 위한 도커 안내서 - 설치부터 배포까지 1/3</title>
-   <link href="http://subicura.com/2017/01/19/docker-guide-for-beginners-1.html"/>
+   <link href="http://localhost:4000/2017/01/19/docker-guide-for-beginners-1.html"/>
    <updated>2017-01-19T00:00:00+09:00</updated>
-   <id>http://subicura.com/2017/01/19/docker-guide-for-beginners-1</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png&quot; alt=&quot;docker logo&quot; /&gt;&lt;/p&gt;
+   <id>http://localhost:4000/2017/01/19/docker-guide-for-beginners-1</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png&quot; alt=&quot;docker logo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;어느날 친구한테 메시지를 받았습니다.&lt;/p&gt;
 
@@ -987,7 +1017,7 @@ volumes:
 
 &lt;h2 id=&quot;section&quot;&gt;서버를 관리한다는 것&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration.jpg&quot; alt=&quot;복잡하고 어려운 서버관리&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration.jpg&quot; alt=&quot;복잡하고 어려운 서버관리&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;일반적으로 서버를 관리한다는 건 복잡하고 어려우며 고오급 개발자들의 섬세한 작업이 필요한 영역입니다.&lt;/p&gt;
 
@@ -1003,19 +1033,19 @@ volumes:
 
 &lt;h2 id=&quot;section-1&quot;&gt;도커의 역사&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers.png&quot; alt=&quot;The future of Linux Containers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers.png&quot; alt=&quot;The future of Linux Containers&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;도커는 2013년 3월 산타클라라에서 열린 Pycon Conference에서 dotCloud의 창업자인 Solomon Hykes가 &lt;a href=&quot;https://youtu.be/wW9CAH9nSLs&quot;&gt;The future of Linux Containers&lt;/a&gt; 라는 세션을 발표하면서 처음 세상에 알려졌습니다.&lt;/p&gt;
 
 &lt;p&gt;이 발표 이후 도커가 인기를 얻으면서 2013년 10월 아예 회사이름을 도커(Docker Inc.)로 바꾸고 2014년 6월 도커 1.0을 발표합니다. 2014년 8월 도커에 집중하기 위해 dotCloud 플랫폼을 매각하고 2015년 4월 $95M(약 1,100억원) 투자를 유치한 후 계속해서 빠르게 성장하고 있습니다. (현재까지 총 투자액은 $180M이며 2016년 6월 MS에서 $4B/₩4조에 인수하려 했다는 &lt;a href=&quot;https://www.sdxcentral.com/articles/news/sources-microsoft-tried-to-buy-docker-for-4b/2016/06/&quot;&gt;기사&lt;/a&gt;가 있습니다.) &lt;del&gt;누가 오픈소스는 돈이 되지 않는다고 했는가?!&lt;/del&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey.png&quot; alt=&quot;The Evolution of the Modern Software Supply Chain - The Docker Survey, 2016&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey.png&quot; alt=&quot;The Evolution of the Modern Software Supply Chain - The Docker Survey, 2016&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;del&gt;도커에서한&lt;/del&gt; 2016년 설문조사에서 90%가 개발에 사용중이고 80%가 DevOps에 사용할 예정이며 58%가 운영환경에서 사용중이라고 합니다. 2014년 도커 서울 밋업을 시작할 때만 해도 대부분의 사람들이 도커를 잘 모르고 개념도 이해하지 못했는데 이제는 거의 모르는 사람이 없을 정도로 널리 쓰이고 있습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;section-2&quot;&gt;도커란?&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works.png&quot; alt=&quot;도커는 컨테이너를 관리하는 플랫폼&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works.png&quot; alt=&quot;도커는 컨테이너를 관리하는 플랫폼&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;도커는 &lt;strong&gt;컨테이너 기반의 오픈소스 가상화 플랫폼&lt;/strong&gt;입니다.&lt;/p&gt;
 
@@ -1027,7 +1057,7 @@ volumes:
 
 &lt;p&gt;&lt;strong&gt;컨테이너(Container)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container.png&quot; alt=&quot;docker container&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container.png&quot; alt=&quot;docker container&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;컨테이너는 격리된 공간에서 프로세스가 동작하는 기술입니다. 가상화 기술의 하나지만 기존방식과는 차이가 있습니다.&lt;/p&gt;
 
@@ -1037,7 +1067,7 @@ volumes:
 
 &lt;p&gt;이러한 상황을 개선하기 위해 CPU에 가상화 기술이 들어가고 &lt;a href=&quot;http://www.linux-kvm.org/&quot;&gt;KVM&lt;/a&gt;&lt;sub&gt;Kernel-based Virtual Machine&lt;/sub&gt;과 &lt;a href=&quot;https://www.xenproject.org/&quot;&gt;Xen&lt;/a&gt;이라는 &lt;a href=&quot;https://en.wikipedia.org/wiki/Paravirtualization&quot;&gt;반가상화&lt;/a&gt; &lt;sub&gt;Paravirtualization&lt;/sub&gt;방식이 등장합니다. 게스트 OS가 필요하긴 하지만 전체OS를 가상화하는 방식이 아니였기 때문에 전가상화 방식에 비해 성능이 향상되었습니다. 이러한 기술들은 AWS나 &lt;a href=&quot;https://www.rackspace.com/&quot;&gt;Rackspace&lt;/a&gt;같은 클라우드 서비스에서 가상 컴퓨팅 기술의 기반이 되었습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png&quot; alt=&quot;가상머신과 도커&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png&quot; alt=&quot;가상머신과 도커&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;전가상화든 반가상화든 추가적인 OS를 설치하여 가상화하는 방법은 어쨋든 성능문제가 있었고 이를 개선하기 위해 &lt;strong&gt;프로세스를 격리&lt;/strong&gt; 하는 방식이 등장합니다.&lt;/p&gt;
 
@@ -1057,7 +1087,7 @@ volumes:
 
 &lt;p&gt;&lt;strong&gt;이미지(Image)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image.png&quot; alt=&quot;Docker image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image.png&quot; alt=&quot;Docker image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;도커에서 가장 중요한 개념은 컨테이너와 함께 이미지라는 개념입니다.&lt;/p&gt;
 
@@ -1067,7 +1097,7 @@ volumes:
 
 &lt;p&gt;말그대로 이미지는 컨테이너를 실행하기 위한 모오오오오든 정보를 가지고 있기 때문에 더 이상 의존성 파일을 컴파일하고 이것저것 설치할 필요가 없습니다. 이제 새로운 서버가 추가되면 미리 만들어 놓은 이미지를 다운받고 컨테이너를 생성만 하면 됩니다. 한 서버에 여러개의 컨테이너를 실행할 수 있고, 수십, 수백, 수천대의 서버도 문제없습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store.png&quot; alt=&quot;Docker Store&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store.png&quot; alt=&quot;Docker Store&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;도커 이미지는 &lt;a href=&quot;https://hub.docker.com/&quot;&gt;Docker hub&lt;/a&gt;에 등록하거나 &lt;a href=&quot;https://docs.docker.com/registry/&quot;&gt;Docker Registry&lt;/a&gt; 저장소를 직접 만들어 관리할 수 있습니다. 현재 공개된 도커 이미지는 50만개가 넘고 Docker hub의 이미지 다운로드 수는 80억회에 이릅니다. 누구나 쉽게 이미지를 만들고 배포할 수 있습니다.&lt;/p&gt;
 
@@ -1079,7 +1109,7 @@ volumes:
 
 &lt;h3 id=&quot;section-4&quot;&gt;레이어 저장방식&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer.png&quot; alt=&quot;Docker Layer&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer.png&quot; alt=&quot;Docker Layer&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;도커 이미지는 컨테이너를 실행하기 위한 모든 정보를 가지고 있기 때문에 보통 용량이 수백메가&lt;sub&gt;MB&lt;/sub&gt;에 이릅니다. 처음 이미지를 다운받을 땐 크게 부담이 안되지만 기존 이미지에 파일 하나 추가했다고 수백메가를 다시 다운받는다면 매우 비효율적일 수 밖에 없습니다.&lt;/p&gt;
 
@@ -1091,7 +1121,7 @@ volumes:
 
 &lt;h3 id=&quot;section-5&quot;&gt;이미지 경로&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url.png&quot; alt=&quot;Docker image url&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url.png&quot; alt=&quot;Docker image url&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;이미지는 url 방식으로 관리하며 태그를 붙일 수 있습니다. ubuntu 14.04 이미지는 &lt;code class=&quot;highlighter-rouge&quot;&gt;docker.io/library/ubuntu:14.04&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;docker.io/library/ubuntu:trusty&lt;/code&gt; 이고 &lt;code class=&quot;highlighter-rouge&quot;&gt;docker.io/library&lt;/code&gt;는 생략가능하여 &lt;code class=&quot;highlighter-rouge&quot;&gt;ubuntu:14.04&lt;/code&gt; 로 사용할 수 있습니다. 이러한 방식은 이해하기 쉽고 편리하게 사용할 수 있으며 태그 기능을 잘 이용하면 테스트나 롤백도 쉽게 할 수 있습니다.&lt;/p&gt;
 
@@ -1118,7 +1148,7 @@ CMD [&amp;quot;start.sh&amp;quot;]&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;h3 id=&quot;docker-hub&quot;&gt;Docker Hub&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull.png&quot; alt=&quot;Docker Hub Hits 5 Billion Pulls(2016/08)&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull.png&quot; alt=&quot;Docker Hub Hits 5 Billion Pulls(2016/08)&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;도커 이미지의 용량은 보통 수백메가로 수기가가 넘는 경우도 흔합니다. 이렇게 큰 용량의 이미지를 서버에 저장하고 관리하는 것은 쉽지 않은데 도커는 Docker hub를 통해 공개 이미지를 무료로 관리해 줍니다. 하루에도 엄청난 용량의 이미지가 전세계에서 다운로드 되고 트래픽 비용만 해도 어마어마 할 것 같은데 그것이 다 무료!입니다.&lt;/p&gt;
 
@@ -1144,13 +1174,13 @@ CMD [&amp;quot;start.sh&amp;quot;]&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;도커는 기술기업답지 않게 홍보와 커뮤니티 관리에 굉장히 신경쓰고 있습니다. 커뮤니티를 위한 스티커나 티셔츠를 무료로 제공하고 필요하면 연사요청도 할 수 있습니다. 홈페이지에서는 전세계에서 열리는 밋업 상황을 볼 수 있고 일주일마다 발송되는 &lt;a href=&quot;https://blog.docker.com/docker-weekly-archives/&quot;&gt;뉴스레터&lt;/a&gt;에는 다양한 개발자들의 글이 실려있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg&quot; alt=&quot;Docker office에서 만난 Jérôme Petazzoni&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg&quot; alt=&quot;Docker office에서 만난 Jérôme Petazzoni&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;운이 좋았지만 도커 오피스에 방문해서 사무실을 구경할 수도 있었고 고오오오급 개발자 &lt;a href=&quot;https://twitter.com/jpetazzo&quot;&gt;Jérôme Petazzoni&lt;/a&gt;와 직접 이야기를 나눌수 있었습니다! &lt;del&gt;아 또 가고 싶다&lt;/del&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;moby-dock&quot;&gt;moby dock&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals.jpg&quot; alt=&quot;Tux(linux) - Moby Dock(docker) - Gopher (golang)&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals.jpg&quot; alt=&quot;Tux(linux) - Moby Dock(docker) - Gopher (golang)&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;도커는 넘나 귀여운 고래를 로고로 하고 있습니다. 로고 스티커는 항상 인기가 넘치고 로고가 그려진 티셔츠는 입고 돌아다녀도 개발자처럼 보이지 않습니다. 도커가 성공한 가장 큰 이유는 귀여운 고래 덕분이라고 생각합니다.(엄근진) &lt;del&gt;오픈소스가 성공하려면 귀여운 동물 캐릭터를 사용하세요!&lt;/del&gt;&lt;/p&gt;
 
@@ -1171,10 +1201,10 @@ CMD [&amp;quot;start.sh&amp;quot;]&lt;/pre&gt;&lt;/noscript&gt;
  
  <entry>
    <title>2016년 블로그 회고</title>
-   <link href="http://subicura.com/2016/12/31/remember-2016.html"/>
+   <link href="http://localhost:4000/2016/12/31/remember-2016.html"/>
    <updated>2016-12-31T00:00:00+09:00</updated>
-   <id>http://subicura.com/2016/12/31/remember-2016</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-12-31-remember-2016/woozoo_read_the_book.jpg&quot; alt=&quot;김우주(19개월)&quot; /&gt;&lt;/p&gt;
+   <id>http://localhost:4000/2016/12/31/remember-2016</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-12-31-remember-2016/woozoo_read_the_book.jpg&quot; alt=&quot;김우주(19개월)&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;어느덧 2016년 마지막 날입니다. 올 한해 역시 정신없이 지나갔고 작년에 태어난 딸도 돌을 지나고 어느새 python 개발 서적을 읽을 정도의 나이가 되었습니다(&lt;del&gt;위 사진 참조&lt;/del&gt;). 회사는 6주년을 맞이했고 올해 처음으로 일반 고객을 대상으로한 서비스를 오픈했습니다. 서비스를 운영하면서 느낀 점도 많지만 일단은 블로그에 대해 한해를 마무리하는 회고를 하려고 합니다.&lt;/p&gt;
 
@@ -1190,13 +1220,13 @@ CMD [&amp;quot;start.sh&amp;quot;]&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;올 해 쓴글&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-12-31-remember-2016/pageview.png&quot; alt=&quot;2016년 쓴 글&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-12-31-remember-2016/pageview.png&quot; alt=&quot;2016년 쓴 글&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;처음 글을 쓸때는 1주일에 한개를 목표로 하였으나 최종적으로 5개밖에 쓰지 못했습니다. (…) 첫번째 글인 &lt;a href=&quot;/2016/05/30/likehs-develop-log.html&quot;&gt;홈쇼핑처럼 개발후기&lt;/a&gt;는 하루만에 페이지뷰가 10,000을 돌파하는 예상외의 폭발적인 반응&lt;del&gt;과 우려&lt;/del&gt;을 얻었고 파워블로거를 해볼까..라는 &lt;del&gt;헛된&lt;/del&gt; 생각과 블로그의 주제에 대해 많은 고민을 하게 해주었습니다.&lt;/p&gt;
 
 &lt;p&gt;이후에 작성한 &lt;a href=&quot;/2016/06/07/zero-downtime-docker-deployment.html&quot;&gt;도커를 이용한 웹서비스 무중단 배포하기&lt;/a&gt;도 반응이 좋아 7월경에 “홈쇼핑처럼x개발자처럼_첫번째이야기”라는 오프라인 모임도 갖게 되었습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-12-31-remember-2016/1st_off.jpg&quot; alt=&quot;홈쇼핑처럼x개발자처럼_첫번째이야기&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-12-31-remember-2016/1st_off.jpg&quot; alt=&quot;홈쇼핑처럼x개발자처럼_첫번째이야기&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;이 때 후기를 정리하여 6번째 글을 작성할 예정이였으나 결국 올해를 넘기게 되었습니다. ㅠㅠ 이부분은 아마 내년 초에 작성할 것 같습니다. 그 때 참여해 주셨던 분들 모두 감사드리고 좋은 말씀 나누어서 뜻깊은 시간이였습니다.&lt;/p&gt;
 
@@ -1228,15 +1258,15 @@ CMD [&amp;quot;start.sh&amp;quot;]&lt;/pre&gt;&lt;/noscript&gt;
  
  <entry>
    <title>linter를 이용한 코딩스타일과 에러 체크하기</title>
-   <link href="http://subicura.com/2016/07/11/coding-convention.html"/>
+   <link href="http://localhost:4000/2016/07/11/coding-convention.html"/>
    <updated>2016-07-11T00:00:00+09:00</updated>
-   <id>http://subicura.com/2016/07/11/coding-convention</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-07-11-coding-convention/carbo.jpg&quot; alt=&quot;돈까스먹는용만이x까르보돈까스&quot; /&gt;&lt;/p&gt;
+   <id>http://localhost:4000/2016/07/11/coding-convention</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-07-11-coding-convention/carbo.jpg&quot; alt=&quot;돈까스먹는용만이x까르보돈까스&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.likehs.com&quot;&gt;홈쇼핑처럼&lt;/a&gt; 6번째 상품인 &lt;a href=&quot;https://www.likehs.com/tvprogram/index/view/id/27/&quot;&gt;까르보돈까스&lt;/a&gt;는 부먹과 찍먹을 선택해야 합니다. 코딩도 둘중에 하나를 선택해야 하는 경우가 많은데 협업을 위해 코딩 스타일을 설정하고 규칙에 어긋난 코드를 한땀한땀 수정했던 순간이 떠올라 linter에 대해 이야기합니다.&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;http://subicura.com/assets/article_images/2016-07-11-coding-convention/civil_war.jpg&quot; alt=&quot;시빌워&quot; title=&quot;시빌워&quot; /&gt;
+&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-07-11-coding-convention/civil_war.jpg&quot; alt=&quot;시빌워&quot; title=&quot;시빌워&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Programming_style&quot;&gt;코딩스타일&lt;/a&gt;, 코딩 표준이라고도 불리는 &lt;a href=&quot;https://en.wikipedia.org/wiki/Coding_conventions&quot;&gt;코딩 컨벤션&lt;/a&gt;은 코드를 작성할 때 추천하는 코딩 스타일, 괜찮은 사례등을 모아 놓은 가이드라인입니다.&lt;/p&gt;
@@ -1631,7 +1661,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;watch&amp;#39;], function () {
   &lt;li&gt;설치가 끝나면 재시작합니다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-07-11-coding-convention/sublimetext3.png&quot; alt=&quot;sublime text3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-07-11-coding-convention/sublimetext3.png&quot; alt=&quot;sublime text3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;왼쪽에 빨간색점이 보이고 하단에 에러문구가 보입니다.&lt;/p&gt;
 
@@ -1639,11 +1669,11 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;watch&amp;#39;], function () {
 
 &lt;p&gt;IntelliJ의 WebStorm IDE에는 ESLint가 이미 내장되어 있습니다. 설정에서 활성화하면 바로 적용됩니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-07-11-coding-convention/webstorm_eslint.png&quot; alt=&quot;WebStorm ESLint&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-07-11-coding-convention/webstorm_eslint.png&quot; alt=&quot;WebStorm ESLint&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Languages &amp;amp; Frameworks &amp;gt; Javascript &amp;gt; Code Quality Tools &amp;gt; ESLint&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-07-11-coding-convention/webstorm_eslint_view.png&quot; alt=&quot;WebStorm ESLint Check&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-07-11-coding-convention/webstorm_eslint_view.png&quot; alt=&quot;WebStorm ESLint Check&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;활성화하면 editor 오른쪽에 빨간색 라인이 보이고 마우스 오버하면 에러문구가 보입니다.&lt;/p&gt;
 
@@ -1655,7 +1685,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;watch&amp;#39;], function () {
 
 &lt;p&gt;eslint에서는 -f 옵션을 통해 output 포멧을 지정할 수 있는데 checkstyle을 내장하고 있습니다. Jenkins에서 checkstyle을 설정하면 다음과 같은 화면을 볼 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-07-11-coding-convention/checkstyle.png&quot; alt=&quot;Jenkins Checkstyle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-07-11-coding-convention/checkstyle.png&quot; alt=&quot;Jenkins Checkstyle&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;그래서&lt;/h2&gt;
 
@@ -1673,9 +1703,9 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;watch&amp;#39;], function () {
  
  <entry>
    <title>왜 React와 서버 사이드 렌더링인가?</title>
-   <link href="http://subicura.com/2016/06/20/server-side-rendering-with-react.html"/>
+   <link href="http://localhost:4000/2016/06/20/server-side-rendering-with-react.html"/>
    <updated>2016-06-20T00:00:00+09:00</updated>
-   <id>http://subicura.com/2016/06/20/server-side-rendering-with-react</id>
+   <id>http://localhost:4000/2016/06/20/server-side-rendering-with-react</id>
    <content type="html">&lt;h3 id=&quot;section&quot;&gt;2016/12/29 수정&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -1687,7 +1717,7 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;watch&amp;#39;], function () {
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/fried_things.jpg&quot; alt=&quot;튀김과불맛쌀떡볶이x홈쇼핑처럼&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/fried_things.jpg&quot; alt=&quot;튀김과불맛쌀떡볶이x홈쇼핑처럼&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.likehs.com&quot;&gt;홈쇼핑처럼&lt;/a&gt; 4번째 상품인 &lt;a href=&quot;https://www.likehs.com/tvprogram/index/view/id/25/&quot;&gt;튀김&lt;/a&gt;을 기름에 튀기면서 &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;를 적용하느라 고생했던 순간이 떠올라 React와 서버 사이드 렌더링 적용과정을 정리해봅니다. 여기서는 &lt;strong&gt;어떻게&lt;/strong&gt;보다는 &lt;strong&gt;왜&lt;/strong&gt;에 대해 설명합니다.&lt;/p&gt;
 
@@ -1734,7 +1764,7 @@ $conn-&amp;gt;close();
 &lt;h2 id=&quot;ajax-&quot;&gt;ajax의 등장&lt;/h2&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/google-auto-complete.png&quot; alt=&quot;Google 추천검색어&quot; title=&quot;Google 추천검색어&quot; /&gt;
+&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/google-auto-complete.png&quot; alt=&quot;Google 추천검색어&quot; title=&quot;Google 추천검색어&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;처음 ajax가 등장했을때 충격은 정말 엄청났습니다. Google의 추천 검색어 따라하기가 유행했는데 검색어 입력란에 &lt;code class=&quot;highlighter-rouge&quot;&gt;web&lt;/code&gt;을 입력하면 추천 검색어가 실시간으로 보였습니다. 이게 정말 웹에서 가능하다니?!&lt;/p&gt;
@@ -1773,7 +1803,7 @@ $(&amp;#39;#profile&amp;#39;).append(htmlString);&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;이러한 상황을 해결하기 위해 각종 템플릿 엔진이 등장하기 시작합니다. 제가 가장 오랜시간 애용했던 &lt;a href=&quot;http://olado.github.io/doT/index.html&quot;&gt;doT.js&lt;/a&gt;를 비롯해 twitter에서 만든 &lt;a href=&quot;http://twitter.github.io/hogan.js/&quot;&gt;hogan.js&lt;/a&gt;, &lt;a href=&quot;https://mustache.github.io/&quot;&gt;mustach&lt;/a&gt;, &lt;a href=&quot;http://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt;등등등등 너무너무너무 다양한 템플릿 엔진이 (지금도 계속해서) 등장합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/template-engine.png&quot; alt=&quot;template engine compile&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/template-engine.png&quot; alt=&quot;template engine compile&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;각각 라이브러리마다 파일 사이즈, 성능, 부가기능등의 차이가 있지만 하는 일은 동일합니다. 중괄호(&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;콧수염&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;mustach&lt;/span&gt;&lt;/code&gt;)를 이용하여 반복문, 조건문 등을 넣은 템플릿파일을 만들고 Data를 연동하여 HTML을 생성합니다. 이러한 방법은 string을 붙이고 붙이고 붙이는 방법보다 훨씬 나은 환경을 보여줍니다.&lt;/p&gt;
 
@@ -1795,7 +1825,7 @@ $(&amp;#39;#profile&amp;#39;).append(htmlString);&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;AngularJS는 React를 돋보이게 하기 위함이니 좀더 상세하게 설명합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/google-trend-angularjs.png&quot; alt=&quot;Google Trends&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/google-trend-angularjs.png&quot; alt=&quot;Google Trends&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;AngularJS는 기존의 라이브러리나 프레임워크들과는 다르게 DOM을 조작하거나 제어하는 방식에 초점을 맞추지 않고 데이터의 변화에 초점을 맞추는 완전히 새로운 접근법을 사용합니다. 데이터에 초점을 맞추는 이러한 방식자체는 완전히 새로운게 아니였으나 정말 &lt;strong&gt;잘&lt;/strong&gt; 구현하여 사용하기 쉽게 공개한 겁니다. HTML에 작성해야 하는 코드는 조금 늘었지만 Javascript쪽 코드는 정말 놀라울정도로 단순해지고 저를 포함한 웹 프론트엔드 개발자들은 열광합니다.&lt;/p&gt;
 
@@ -1942,11 +1972,11 @@ foreach($talks as $talk) {
 
 &lt;h2 id=&quot;isomorphic-javascript&quot;&gt;Isomorphic Javascript&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-javascript.png&quot; alt=&quot;Isomorphic Javascript&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-javascript.png&quot; alt=&quot;Isomorphic Javascript&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;동형 자바스크립트라는 어색한 말로 해석되는 Isomorphic Javascript는 서버와 클라이언트가 같은 코드를 사용한다는 뜻입니다. 웹브라우져에서만 동작할 것 같았던 Javascript가 &lt;a href=&quot;https://developers.google.com/v8/&quot;&gt;V8엔진&lt;/a&gt;이 등장하고 &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;가 나타나면서 서버에서도 Javascript를 사용하기 시작합니다. 클라이언트에서 동작하던 라이브러리를 서버에서 똑같이 돌릴수 있게 됩니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/client-side-vs-server-side.png&quot; alt=&quot;Client vs Server rendering from airbnb&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/client-side-vs-server-side.png&quot; alt=&quot;Client vs Server rendering from airbnb&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;서버 사이드 렌더링의 장점&lt;/strong&gt;&lt;/p&gt;
 
@@ -1990,13 +2020,13 @@ foreach($talks as $talk) {
 
 &lt;p&gt;&lt;strong&gt;1. 서버가 Node.js일때&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-only.png&quot; alt=&quot;Node.js server&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-only.png&quot; alt=&quot;Node.js server&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;서버가 Node.js일 경우 바로 React 코드를 실행할 수 있습니다. 그냥 &lt;code class=&quot;highlighter-rouge&quot;&gt;renderToString&lt;/code&gt; method를 실행하여 view에 그리면 됩니다. 와우!&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2. V8엔진 라이브러리를 사용&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-v8.png&quot; alt=&quot;Use V8 engine&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-v8.png&quot; alt=&quot;Use V8 engine&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;서버가 Node.js가 아닐 경우 각 언어에서 제공하는 V8 engine을 사용할 수 있습니다.&lt;/p&gt;
 
@@ -2010,7 +2040,7 @@ foreach($talks as $talk) {
 
 &lt;p&gt;&lt;strong&gt;3. 별도의 Node.js 서버 구축&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-backend.png&quot; alt=&quot;Node.js render server&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-backend.png&quot; alt=&quot;Node.js render server&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;React 코드만 실행하고 렌더링하는 별도의 Node.js 서버를 띄우는 방법입니다.&lt;/p&gt;
 
@@ -2024,7 +2054,7 @@ foreach($talks as $talk) {
 
 &lt;p&gt;&lt;strong&gt;4. 기존 서버가 API 구성하기 용이할때&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-front.png&quot; alt=&quot;Node.js frontend server&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-front.png&quot; alt=&quot;Node.js frontend server&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;기존 서버가 API를 잘 제공하고 있다면 앞단에 Node.js를 두고 기존 서버를 API서버로 사용하는 방법이 있습니다. 이럴 경우 쿠키라던가 인증 토큰등을 추가로 관리하고 라우팅을 다시 셋팅해야 합니다.&lt;/p&gt;
 
@@ -2064,10 +2094,10 @@ foreach($talks as $talk) {
  
  <entry>
    <title>Go언어로 오픈소스 배송조회 서비스 만들기</title>
-   <link href="http://subicura.com/2016/06/13/start-go-shipment-tracking-opensource.html"/>
+   <link href="http://localhost:4000/2016/06/13/start-go-shipment-tracking-opensource.html"/>
    <updated>2016-06-13T00:00:00+09:00</updated>
-   <id>http://subicura.com/2016/06/13/start-go-shipment-tracking-opensource</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/yongman-pork.jpg&quot; alt=&quot;돈까스먹는용만이x칠리등심돈까스&quot; /&gt;&lt;/p&gt;
+   <id>http://localhost:4000/2016/06/13/start-go-shipment-tracking-opensource</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/yongman-pork.jpg&quot; alt=&quot;돈까스먹는용만이x칠리등심돈까스&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.likehs.com&quot;&gt;홈쇼핑처럼&lt;/a&gt;에서 세번째로 런칭한 &lt;a href=&quot;https://www.likehs.com/tvprogram/index/view/id/24/&quot;&gt;돈까스&lt;/a&gt;를 구매해 주시는 분들을 보면서 &lt;em&gt;아.. 받은 만큼 나도 뭔가 베풀어야겠구나&lt;/em&gt; 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다.&lt;/p&gt;
 
@@ -2090,7 +2120,7 @@ foreach($talks as $talk) {
 
 &lt;p&gt;&lt;strong&gt;왜 &lt;a href=&quot;http://martinfowler.com/articles/microservices.html&quot;&gt;마이크로서비스&lt;/a&gt;인가?&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/monolith-microservice.png&quot; alt=&quot;monoliths / microservices&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/monolith-microservice.png&quot; alt=&quot;monoliths / microservices&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;마이크로서비스와 비교되는 방식으로 모놀리식이라는 서비스 개발 방법이 있습니다.&lt;/p&gt;
 
@@ -2128,7 +2158,7 @@ foreach($talks as $talk) {
 
 &lt;p&gt;&lt;strong&gt;왜 &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt;인가&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/languages.png&quot; alt=&quot;languages&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/languages.png&quot; alt=&quot;languages&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;구글이 개발한 가장 핫한 언어&lt;/li&gt;
@@ -2223,7 +2253,7 @@ foreach($talks as $talk) {
 &lt;p&gt;이제 이름을 지었으니 로고를 만듭니다. 직접 그릴순 없으니 심플한 무료 아이콘이 많은 &lt;a href=&quot;https://icons8.com/#/ios&quot;&gt;icons8.com&lt;/a&gt;에서 새 아이콘을 하나 고르고 이쁘장한 색샘플을 모아놓은 &lt;a href=&quot;http://flatuicolors.com/&quot;&gt;flatuicolors.com&lt;/a&gt;에서 보라색계열을 하나 선택합니다. 폰트도 밋밋하지 않게 &lt;a href=&quot;https://www.google.com/fonts&quot;&gt;구글웹폰트&lt;/a&gt;에서 하나 고릅니다.&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/delibird.logo.png&quot; alt=&quot;Delibird Logo&quot; title=&quot;Delibird Logo&quot; /&gt;
+&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/delibird.logo.png&quot; alt=&quot;Delibird Logo&quot; title=&quot;Delibird Logo&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;짠, 포샵을 쓱싹하여 그럴싸한 이름에 로고가 만들어졌습니다.&lt;/p&gt;
@@ -2303,7 +2333,7 @@ rm &amp;#39;.gitignore&amp;#39;&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;&lt;strong&gt;뱃지&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/github-badge.png&quot; alt=&quot;github badge&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/github-badge.png&quot; alt=&quot;github badge&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;github은 상단에 각종 상태를 뱃지아이콘으로 보여주는 특별한 문화(?)가 있습니다. 라이센스라던가 문서링크, 코드 품질이나 커버리지, 빌드결과(테스트) 여부등이 있습니다. 이외에도 커뮤니티 게시판 링크라던가 채팅링크등 다양한 뱃지가 있습니다. &lt;a href=&quot;http://shields.io/&quot;&gt;shields.io&lt;/a&gt;에서는 다양한 뱃지아이콘을 제공하고 있고 각 서비스마다 자체적으로 뱃지 링크를 제공하기도 합니다.&lt;/p&gt;
 
@@ -2349,7 +2379,7 @@ rm &amp;#39;.gitignore&amp;#39;&lt;/pre&gt;&lt;/noscript&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.heroku.com/&quot;&gt;heroku&lt;/a&gt;는 소스빌드/배포/스케일이 자유로운 클라우드 서비스입니다. 다른 웹호스팅 서비스와 차별점은 소스를 업로드만 하면 알아서 웹서버를 띄워준다는 점입니다. 이게 무슨 말이냐면 Rails, Django, Express등은 고유한 파일 구조가 있습니다. 이러한 디렉토리구조나 파일의 확장자를 보고 &lt;a href=&quot;https://devcenter.heroku.com/articles/buildpacks&quot;&gt;알아서&lt;/a&gt; 서버를 띄운다는 신박한 서비스입니다.&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/heroku.png&quot; alt=&quot;heroku free plan&quot; title=&quot;heroku free plan&quot; /&gt;
+&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/heroku.png&quot; alt=&quot;heroku free plan&quot; title=&quot;heroku free plan&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;더 놀라운건 무료 플렌입니다. 30분간 요청이 없으면 자동으로 서버가 중지되고 그 이후 요청이 들어오면 다시 서버를 시작합니다. 예전에는 시간제한이 없었는데 이제 시간제한이 생겨서 아쉽긴 하지만 테스트로 배송조회 서비스를 켜놓기에는 부족함이 없습니다. heroku에 로그인을 하고 서버를 만든 후 github 소스를 연동하니 바로 서버가 뜹니다. 정말 뜹니다.&lt;/p&gt;
@@ -2389,10 +2419,10 @@ rm &amp;#39;.gitignore&amp;#39;&lt;/pre&gt;&lt;/noscript&gt;
  
  <entry>
    <title>도커를 이용한 웹서비스 무중단 배포하기</title>
-   <link href="http://subicura.com/2016/06/07/zero-downtime-docker-deployment.html"/>
+   <link href="http://localhost:4000/2016/06/07/zero-downtime-docker-deployment.html"/>
    <updated>2016-06-07T00:00:00+09:00</updated>
-   <id>http://subicura.com/2016/06/07/zero-downtime-docker-deployment</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/milbon.jpg&quot; alt=&quot;밀본x고기덮밥&quot; /&gt;&lt;/p&gt;
+   <id>http://localhost:4000/2016/06/07/zero-downtime-docker-deployment</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-07-zero-downtime-docker-deployment/milbon.jpg&quot; alt=&quot;밀본x고기덮밥&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.likehs.com/tvprogram/index/view/id/22/&quot;&gt;홈쇼핑처럼x밀본고기덮밥&lt;/a&gt;이 팔리는걸 관리자화면에서 보면서 하루에도 여러번 소스를 업데이트 하고 운영서버로 배포했던 내용이 떠올라 후기로 정리합니다.&lt;/p&gt;
 
@@ -2442,7 +2472,7 @@ rm &amp;#39;.gitignore&amp;#39;&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;하지만, 도커라면?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/container-docker-blue-whale.jpg&quot; alt=&quot;Docker Container&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-07-zero-downtime-docker-deployment/container-docker-blue-whale.jpg&quot; alt=&quot;Docker Container&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;도커 컨테이너는 가상의 공간을 만들어서 호스트OS와는 전혀 별개의 환경에서 프로세스들이 동작하는 기술입니다.&lt;/p&gt;
 
@@ -2467,7 +2497,7 @@ rm &amp;#39;.gitignore&amp;#39;&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;도커는 프로세스 격리라는 개념을 적극 도입하여 성능 이슈를 줄이고, 일반 개발자들도 굉장히 사용하기 쉽게 개발하였습니다. 그리고 큰 용량의 이미지를 쉽게 다운받고 저장할 수 있게 &lt;a href=&quot;https://hub.docker.com/&quot;&gt;docker hub&lt;/a&gt;와 같은 서비스도 같이 오픈하였고 전세계적으로 커뮤니티 또한 적극적으로 지원하였습니다.(티셔츠랑 스티커!) 한국에서 온 처음만나는 개발자에게 회사의 &lt;a href=&quot;https://twitter.com/jpetazzo&quot;&gt;고오오오급 개발자&lt;/a&gt;가 직접 궁금증을 풀어주는 경우가 흔치는 않겠죠.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg&quot; alt=&quot;Docker office에서 만난 Jérôme Petazzoni&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg&quot; alt=&quot;Docker office에서 만난 Jérôme Petazzoni&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;단점&lt;/strong&gt;&lt;/p&gt;
 
@@ -2535,7 +2565,7 @@ rm &amp;#39;.gitignore&amp;#39;&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;이제 본격적으로 이미지를 만들어 봅니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/likehs-docker-image.png&quot; alt=&quot;홈쇼핑처럼 도커 이미지&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-07-zero-downtime-docker-deployment/likehs-docker-image.png&quot; alt=&quot;홈쇼핑처럼 도커 이미지&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;likehs-nginx&lt;/strong&gt;&lt;/p&gt;
 
@@ -2596,7 +2626,7 @@ CMD [&amp;quot;start.sh&amp;quot;]&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;이미지를 만들었으니 사실상 90% 작업은 완료되었습니다. 이제 생성된 이미지를 컨테이너로 실행만 하면 됩니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/likehs-docker-container.png&quot; alt=&quot;홈쇼핑처럼 도커 컨테이너 구성&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-07-zero-downtime-docker-deployment/likehs-docker-container.png&quot; alt=&quot;홈쇼핑처럼 도커 컨테이너 구성&quot; /&gt;&lt;/p&gt;
 
 &lt;noscript&gt;&lt;pre&gt;version: &amp;#39;2&amp;#39;
 services:
@@ -2730,7 +2760,7 @@ DOCKER_HOST=${TARGET_DEPLOY_TCP} docker-compose -p ${DOCKER_APP_NAME} -f docker-
 
 &lt;p&gt;&lt;strong&gt;nginx load balance 기능 이용하기&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/nginx-load-balance.png&quot; alt=&quot;nginx&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-07-zero-downtime-docker-deployment/nginx-load-balance.png&quot; alt=&quot;nginx&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;nginx는 무료면서 훌륭한 성능을 자랑하는 로드밸런서입니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;80포트&lt;/code&gt;로 들어온 요청을 &lt;code class=&quot;highlighter-rouge&quot;&gt;8080포트&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;8081포트&lt;/code&gt;로 분산할 수 있고 health check를 통해 포트가 죽어있다면 살아있는 포트로 요청을 보내게 됩니다.&lt;/p&gt;
 
@@ -2777,7 +2807,7 @@ fi
 
 &lt;p&gt;이런 문제를 해결하기 위해 Service Discovery라는 개념이 있습니다. 서버들의 정보(IP, Port등등)를 포함한 다양한 정보를 저장하고 가져오고 값의 변화가 일어날때 이벤트를 받아 자동으로 서비스의 설정 정보를 수정하고 재시작하는 개념입니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/service-discovery.png&quot; alt=&quot;service discovery&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-06-07-zero-downtime-docker-deployment/service-discovery.png&quot; alt=&quot;service discovery&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;새로운 서버가 추가되면 서버 정보를 &lt;code class=&quot;highlighter-rouge&quot;&gt;key/value store&lt;/code&gt;에 추가함&lt;/li&gt;
@@ -2894,10 +2924,10 @@ docker tag -f ${DOCKER_REGISTRY_NAME}-app:$COMMIT_HASH ${DOCKER_REGISTRY_NAME}-a
  
  <entry>
    <title>홈쇼핑처럼 개발후기</title>
-   <link href="http://subicura.com/2016/05/30/likehs-develop-log.html"/>
+   <link href="http://localhost:4000/2016/05/30/likehs-develop-log.html"/>
    <updated>2016-05-30T00:00:00+09:00</updated>
-   <id>http://subicura.com/2016/05/30/likehs-develop-log</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-05-30-likehs-develop-log/dduk.png&quot; alt=&quot;서울스낵x불맛쌀떡볶이&quot; /&gt;&lt;/p&gt;
+   <id>http://localhost:4000/2016/05/30/likehs-develop-log</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-05-30-likehs-develop-log/dduk.png&quot; alt=&quot;서울스낵x불맛쌀떡볶이&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 “&lt;a href=&quot;https://www.likehs.com/&quot;&gt;홈쇼핑처럼&lt;/a&gt;“을 개발했던 내용이 떠올라 후기로 정리합니다.&lt;/p&gt;
 
@@ -3177,7 +3207,7 @@ docker tag -f ${DOCKER_REGISTRY_NAME}-app:$COMMIT_HASH ${DOCKER_REGISTRY_NAME}-a
 
 &lt;p&gt;&lt;strong&gt;API Gateway&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://subicura.com/assets/article_images/2016-05-30-likehs-develop-log/api-gateway.png&quot; alt=&quot;API Gateway란?&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/article_images/2016-05-30-likehs-develop-log/api-gateway.png&quot; alt=&quot;API Gateway란?&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;배송조회 및 우편번호검색에서 사용&lt;/li&gt;
@@ -3467,9 +3497,9 @@ docker tag -f ${DOCKER_REGISTRY_NAME}-app:$COMMIT_HASH ${DOCKER_REGISTRY_NAME}-a
  
  <entry>
    <title>hello</title>
-   <link href="http://subicura.com/2016/03/23/hello.html"/>
+   <link href="http://localhost:4000/2016/03/23/hello.html"/>
    <updated>2016-03-23T00:00:00+09:00</updated>
-   <id>http://subicura.com/2016/03/23/hello</id>
+   <id>http://localhost:4000/2016/03/23/hello</id>
    <content type="html">&lt;h3 id=&quot;section&quot;&gt;2016/12/31 수정&lt;/h3&gt;
 
 &lt;ul&gt;
