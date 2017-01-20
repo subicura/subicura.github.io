@@ -3,6 +3,7 @@ gems:
   - jemoji
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-sitemap
 
 # Site settings
 title: "Subicura's Blog"
