@@ -154,9 +154,9 @@ ubuntu이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있�
 
 도커는 발전속도가 아주 빠른 오픈소스입니다. 사용하면서 부족하다고 느꼈던 부분은 빠르게 개선되고 새로운 버전이 나오면 유용한 기능이 대폭 추가됩니다. 어떻게 보면 프로그램을 작은 조각으로 나누고 여러개의 프로그램을 조합하여 동작시키는 유닉스의 철학에는 맞지 않지만.. 너무 잘합니다. ㅠㅠ
 
-이번 1.13버전에서는 [Docker stacks](https://github.com/docker/docker/blob/master/experimental/docker-stacks-and-bundles.md)이라는 여러개의 컨테이너를 한번에 관리하는 기능이 정식으로 릴리즈 되었고 [Secrets Management](https://github.com/docker/docker/pull/27794)라는 비밀정보를 관리하는 기능이 추가됩니다.
+이번 [1.13버전](https://blog.docker.com/2017/01/whats-new-in-docker-1-13/)에서는 [Docker stacks](https://github.com/docker/docker/blob/master/experimental/docker-stacks-and-bundles.md)이라는 여러개의 컨테이너를 한번에 관리하는 기능이 정식으로 릴리즈 되었고 [system](https://docs.docker.com/engine/reference/commandline/system/) 커맨드가 추가되어 이미지, 컨테이너 관리가 더 편해졌습니다. [Secrets Management](https://github.com/docker/docker/pull/27794)라는 비밀정보를 관리하는 기능도 추가됩니다.
 
-기능은 계속 추가되고 있고 점점 사용하기 편해집니다.
+새로운 기능이 계속 추가되고 있고 다음 릴리즈가 기대됩니다.
 
 ### 훌륭한 생태계
 
