@@ -2,9 +2,12 @@
 published: true
 title: 홈쇼핑처럼 개발후기
 excerpt: 홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 "홈쇼핑처럼"을 개발했던 내용이 떠올라 후기로 정리합니다. 기술적으로 고민했던 것과 어떤 기술들을 사용했는지를 중점으로 정리해 보았습니다. "아, 이 스타트업은 이렇게 일을 하고 이런식으로 서비스를 개발했구나" 하고 봐주시면 감사할 것 같습니다. 더 나은 대안이 있다면 추천해주셔도 좋습니다.
+tags: [TechStack, Startup, Likehs]
 layout: post
 comments: yes
+last_modified_at: 2017-01-21T10:00:00+09:00
 ---
+
 ![서울스낵x불맛쌀떡볶이](/assets/article_images/2016-05-30-likehs-develop-log/dduk.png)
 
 홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 "[홈쇼핑처럼](https://www.likehs.com/)"을 개발했던 내용이 떠올라 후기로 정리합니다.

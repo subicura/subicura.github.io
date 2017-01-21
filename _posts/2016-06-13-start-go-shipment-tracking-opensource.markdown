@@ -2,9 +2,12 @@
 published: true
 title: Go언어로 오픈소스 배송조회 서비스 만들기
 excerpt: 홈쇼핑처럼에서 세번째로 런칭한 돈까스를 구매해 주시는 분들을 보면서 *아.. 받은 만큼 나도 뭔가 베풀어야겠구나* 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다. github이라는 소셜코딩 플랫폼이 등장하면서 오픈소스에 참여할 수 있는 장벽이 많이 낮아졌습니다. 사용하던 오픈소스에서 버그를 발견하면 이슈를 살펴보고 수정한 소스를 슬쩍 풀 리퀘스트 하면 됩니다. 내가 작성한 소스가 커미터 마음에 들면 머지가 될 것이고 그렇게 우리는 오픈소스 컨트리뷰터가 되고 인류에 조금이라도 공헌한 사람이 됩니다.
+tags: [BackEnd, Go, OpenSource]
 layout: post
 comments: yes
+last_modified_at: 2017-01-21T10:00:00+09:00
 ---
+
 ![돈까스먹는용만이x칠리등심돈까스](/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/yongman-pork.jpg)
 
 [홈쇼핑처럼](https://www.likehs.com)에서 세번째로 런칭한 [돈까스](https://www.likehs.com/tvprogram/index/view/id/24/)를 구매해 주시는 분들을 보면서 *아.. 받은 만큼 나도 뭔가 베풀어야겠구나* 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다.

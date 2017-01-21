@@ -472,6 +472,25 @@ body
       &.table-key-value-60
         th:first-child
           min-width: 60px
+    .tags
+      line-height: 200%
+      a
+        padding: 5px 10px
+        border-radius: 2px
+        font-size: 13px
+        color: rgba(0,0,0,.6)
+        background: rgba(0,0,0,.05)
+        margin-right: 8px
+        text-decoration: none
+        word-break: keep-all
+        &:hover
+          background: rgba(0,0,0,.1)
+          color: rgba(0,0,0,.6)
+        &:last-child
+          margin-right: 0
+    .tag-page
+      a
+        text-decoration: none
   .bottom-teaser
     padding: 50px 0
     font-family: $font-sans
@@ -799,3 +818,9 @@ pre
   padding-bottom: 20px
 .highlight
   margin: 0 0 16px
+.badge-success
+  padding: 3px 5px
+  margin: 2px 3px
+  background-color: #efefef
+  font-size: 14px
+  border-radius: 3px

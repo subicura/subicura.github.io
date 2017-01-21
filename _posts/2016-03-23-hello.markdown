@@ -1,9 +1,12 @@
 ---
 published: true
 title: hello
+tags: [Blog]
 layout: post
 comments: yes
+last_modified_at: 2017-01-21T10:00:00+09:00
 ---
+
 ### 2016/12/31 수정
 
 - tinypress.co는 더이상 사용하지 않습니다.

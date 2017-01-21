@@ -62,6 +62,11 @@
           </div>
           <a name="topofpage"></a>
           {{content}}
+          <p class="tags">
+            {% for tag in page.tags %}
+              <a href="/tags#{{ tag | slugify }}-ref">{{ tag }}</a>
+            {% endfor %}
+          </p>
         </section>
         <footer class="post-footer">
           <section class="share">

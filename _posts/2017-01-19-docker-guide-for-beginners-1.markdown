@@ -1,10 +1,11 @@
 ---
 published: true
 title: 초보를 위한 도커 안내서 - 설치부터 배포까지 1/3
+tags: [Docker, DevOps, Server]
 layout: post
 excerpt: 도커를 처음 접하는 시스템 관리자나 서버 개발자를 대상으로 도커 전반에 대해 얕고 넓은 지식을 담고 있습니다. 도커가 등장한 배경과 도커의 역사, 그리고 도커의 핵심 개념인 컨테이너와 이미지에 대해 알아보고 왜 이렇게 도커가 인기 인지 하나하나 살펴보겠습니다.
 comments: yes
-last_modified_at: 2017-01-20T18:35:00+09:00
+last_modified_at: 2017-01-21T10:00:00+09:00
 ---
 
 ![docker logo](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
