@@ -8,7 +8,7 @@ comments: yes
 last_modified_at: 2017-01-21T10:00:00+09:00
 ---
 
-![docker logo](/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
+![docker logo]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
 
 이 글은 `초보를 위한 도커 안내서 - 설치부터 배포까지` 2번째 글입니다. 이번엔 도커 설치부터 컨테이너를 실행하고 컨테이너를 둘러보는 방법에 대해 설명합니다. 도커에 대해 1도 모르는 분들을 위해 아주 가볍게 자주 쓰는 명령어만 다루었기 때문에 모든 명령어가 궁금하신 분은 [여기](https://docs.docker.com/engine/reference/commandline/)를 참고해주세요.
 
@@ -57,7 +57,7 @@ sudo usermod -aG docker your-user # your-user 사용자에게 권한주기
 
 도커를 맥이나 윈도우즈에 설치하려면 [Docker for mac](https://docs.docker.com/docker-for-mac) 또는 [Docker for windows](https://docs.docker.com/docker-for-windows)를 설치하면 됩니다. 파일을 다운받고 설치하고 재부팅하면 대부분 문제없이 완료됩니다. 소소한 옵션들이 있는데 특별히 건드릴 부분은 없으나 한번 살펴보고 적절하게 설정하시면 됩니다. (windows는 공유 드라이브를 선택해주세요)
 
-![Docker for Mac](/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac.png)
+![Docker for Mac]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac.png)
 
 마치 네이티브스럽게 설치된 것 같지만 도커는 리눅스 컨테이너이므로 실제로는 가상머신에 설치가 되었습니다. 사용자는 가상머신을 사용한다는 느낌이 전혀 안드는데 그런부분을 굉장히 신경써서 설계하였습니다. 예를 들면, 포트를 연결하기 위해 도커 컨테이너의 특정 포트를 가상머신에 연결하고 다시 mac이나 windows의 포트와 연결해야 합니다. 디렉토리를 연결한다면 디렉토리를 가상머신과 공유하고 그 디렉토리를 다시 컨테이너와 연결해야 합니다. 이런 한단계 추가적으로 거쳐야하는 부분을 자연스럽게 처리해줍니다.
 
@@ -101,7 +101,7 @@ Client와 Server 정보가 정상적으로 출력되었다면 설치가 완료�
 
 혹시, 특이한 부분을 찾으셨나요? 버전정보가 클라이언트와 서버로 나뉘어져 있습니다. 도커는 하나의 실행파일이지만 실제로 클라이언트와 서버역할을 각각 할 수 있습니다. 도커 커맨드를 입력하면 도커 클라이언트가 도커 서버로 명령을 전송하고 결과를 받아 터미널에 출력해 줍니다.
 
-![docker client-host](/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host.png)
+![docker client-host]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host.png)
 
 기본값이 도커 서버의 소켓을 바라보고 있기 때문에 사용자는 의식하지 않고 마치 바로 명령을 내리는 것 같은 느낌을 받습니다. 이러한 설계가 mac이나 windows의 터미널에서 명령어를 입력했을때 가상 서버에 설치된 도커가 동작하는 이유입니다.
 
@@ -275,7 +275,7 @@ docker run -d -p 8080:80 \
 
 컨테이너가 제대로 실행되었는지 웹 브라우저로 확인해봅니다.
 
-![wordpress setup](/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp.png)
+![wordpress setup]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp.png)
 
 워드프레스가 실행되었습니다! 단지 이미지를 다운받고 적절한 환경변수를 입력하여 컨테이너를 실행했을 뿐입니다. 워드프레스 컨테이너 내부는 apache2와 php가 설치되어 있지만 추상화되어 있어 실행과정에선 드러나지 않습니다.
 
@@ -295,7 +295,7 @@ docker run -d -p 8888:8888 -p 6006:6006 teamlab/pydata-tensorflow:0.1
 
 설치된 파일이 많아 다운로드 하는데 시간이 좀 걸립니다. 컨테이너가 실행되면 웹 브라우저에서 jupyter에 접속하여 머신러닝을 시작해 봅시다!
 
-![Hello, Tensorflow!](/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow.png)
+![Hello, Tensorflow!]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow.png)
 
 와우! 성공적으로 tensorflow 테스트를 마쳤습니다. 이제 조금 있으면 A.I를 만들 수 있을 것 같습니다.(?!)
 
@@ -673,7 +673,7 @@ mysql> quit
 
 이제 지금까지 배운 모든걸 정리해서 컨테이너를 새로운 버전으로 업데이트 하는 과정을 살펴보겠습니다.
 
-![도커 컨테이너 업데이트](/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update.png)
+![도커 컨테이너 업데이트]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update.png)
 
 도커에서 컨테이너를 업데이트 하려면 새 버전의 이미지를 다운(`pull`)받고 기존 컨테이너를 삭제(`stop`, `rm`) 한 후 새 이미지를 기반으로 새 컨테이너를 실행(`run`)하면 됩니다. 배포와 관련된 자세한 사항은 다음글에서 이야기하고 여기선 그냥 그렇구나 하고 이해합시다.
 

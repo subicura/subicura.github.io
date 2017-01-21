@@ -8,7 +8,7 @@ comments: yes
 last_modified_at: 2017-01-21T10:00:00+09:00
 ---
 
-![밀본x고기덮밥](/assets/article_images/2016-06-07-zero-downtime-docker-deployment/milbon.jpg)
+![밀본x고기덮밥]({{ site.url }}/assets/article_images/2016-06-07-zero-downtime-docker-deployment/milbon.jpg)
 
 [홈쇼핑처럼x밀본고기덮밥](https://www.likehs.com/tvprogram/index/view/id/22/)이 팔리는걸 관리자화면에서 보면서 하루에도 여러번 소스를 업데이트 하고 운영서버로 배포했던 내용이 떠올라 후기로 정리합니다.
 
@@ -56,7 +56,7 @@ php를 예로 들었지만, ruby on rails나 nodejs, java기반의 프로젝트�
 
 하지만, 도커라면?
 
-![Docker Container](/assets/article_images/2016-06-07-zero-downtime-docker-deployment/container-docker-blue-whale.jpg)
+![Docker Container]({{ site.url }}/assets/article_images/2016-06-07-zero-downtime-docker-deployment/container-docker-blue-whale.jpg)
 
 도커 컨테이너는 가상의 공간을 만들어서 호스트OS와는 전혀 별개의 환경에서 프로세스들이 동작하는 기술입니다.
 
@@ -79,7 +79,7 @@ php를 예로 들었지만, ruby on rails나 nodejs, java기반의 프로젝트�
 
 도커는 프로세스 격리라는 개념을 적극 도입하여 성능 이슈를 줄이고, 일반 개발자들도 굉장히 사용하기 쉽게 개발하였습니다. 그리고 큰 용량의 이미지를 쉽게 다운받고 저장할 수 있게 [docker hub](https://hub.docker.com/)와 같은 서비스도 같이 오픈하였고 전세계적으로 커뮤니티 또한 적극적으로 지원하였습니다.(티셔츠랑 스티커!) 한국에서 온 처음만나는 개발자에게 회사의 [고오오오급 개발자](https://twitter.com/jpetazzo)가 직접 궁금증을 풀어주는 경우가 흔치는 않겠죠.
 
-![Docker office에서 만난 Jérôme Petazzoni](/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg)
+![Docker office에서 만난 Jérôme Petazzoni]({{ site.url }}/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg)
 
 **단점**
 
@@ -133,7 +133,7 @@ php를 예로 들었지만, ruby on rails나 nodejs, java기반의 프로젝트�
 
 이제 본격적으로 이미지를 만들어 봅니다.
 
-![홈쇼핑처럼 도커 이미지](/assets/article_images/2016-06-07-zero-downtime-docker-deployment/likehs-docker-image.png)
+![홈쇼핑처럼 도커 이미지]({{ site.url }}/assets/article_images/2016-06-07-zero-downtime-docker-deployment/likehs-docker-image.png)
 
 **likehs-nginx**
 
@@ -163,7 +163,7 @@ php를 예로 들었지만, ruby on rails나 nodejs, java기반의 프로젝트�
 
 이미지를 만들었으니 사실상 90% 작업은 완료되었습니다. 이제 생성된 이미지를 컨테이너로 실행만 하면 됩니다.
 
-![홈쇼핑처럼 도커 컨테이너 구성](/assets/article_images/2016-06-07-zero-downtime-docker-deployment/likehs-docker-container.png)
+![홈쇼핑처럼 도커 컨테이너 구성]({{ site.url }}/assets/article_images/2016-06-07-zero-downtime-docker-deployment/likehs-docker-container.png)
 
 {% gist subicura/d888929d311a680e7d64a51b03e569ff %}
 
@@ -237,7 +237,7 @@ php를 예로 들었지만, ruby on rails나 nodejs, java기반의 프로젝트�
 
 **nginx load balance 기능 이용하기**
 
-![nginx](/assets/article_images/2016-06-07-zero-downtime-docker-deployment/nginx-load-balance.png)
+![nginx]({{ site.url }}/assets/article_images/2016-06-07-zero-downtime-docker-deployment/nginx-load-balance.png)
 
 nginx는 무료면서 훌륭한 성능을 자랑하는 로드밸런서입니다. `80포트`로 들어온 요청을 `8080포트`, `8081포트`로 분산할 수 있고 health check를 통해 포트가 죽어있다면 살아있는 포트로 요청을 보내게 됩니다.
 
@@ -259,7 +259,7 @@ nginx를 이용해 2개의 포트를 바라보고 둘중에 동작하는 포트�
 
 이런 문제를 해결하기 위해 Service Discovery라는 개념이 있습니다. 서버들의 정보(IP, Port등등)를 포함한 다양한 정보를 저장하고 가져오고 값의 변화가 일어날때 이벤트를 받아 자동으로 서비스의 설정 정보를 수정하고 재시작하는 개념입니다.
 
-![service discovery](/assets/article_images/2016-06-07-zero-downtime-docker-deployment/service-discovery.png)
+![service discovery]({{ site.url }}/assets/article_images/2016-06-07-zero-downtime-docker-deployment/service-discovery.png)
 
 1. 새로운 서버가 추가되면 서버 정보를 `key/value store`에 추가함
 2. `key/value store`는 directory 형태로 값을 저장함. /services/web 하위를 읽으면 전체 web 서버 정보를 읽을 수 있음

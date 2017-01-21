@@ -17,7 +17,7 @@ last_modified_at: 2017-01-21T10:00:00+09:00
 
 ---
 
-![튀김과불맛쌀떡볶이x홈쇼핑처럼](/assets/article_images/2016-06-20-server-side-rendering-with-react/fried_things.jpg)
+![튀김과불맛쌀떡볶이x홈쇼핑처럼]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/fried_things.jpg)
 
 [홈쇼핑처럼](https://www.likehs.com) 4번째 상품인 [튀김](https://www.likehs.com/tvprogram/index/view/id/25/)을 기름에 튀기면서 [React](https://facebook.github.io/react/)를 적용하느라 고생했던 순간이 떠올라 React와 서버 사이드 렌더링 적용과정을 정리해봅니다. 여기서는 **어떻게**보다는 **왜**에 대해 설명합니다.
 
@@ -65,7 +65,7 @@ Javascript 라이브러리를 안쓰는 페이지는 없었고 ajax를 이용한
 
 이러한 상황을 해결하기 위해 각종 템플릿 엔진이 등장하기 시작합니다. 제가 가장 오랜시간 애용했던 [doT.js](http://olado.github.io/doT/index.html)를 비롯해 twitter에서 만든 [hogan.js](http://twitter.github.io/hogan.js/), [mustach](https://mustache.github.io/), [handlebars](http://handlebarsjs.com/)등등등등 너무너무너무 다양한 템플릿 엔진이 (지금도 계속해서) 등장합니다.
 
-![template engine compile](/assets/article_images/2016-06-20-server-side-rendering-with-react/template-engine.png)
+![template engine compile]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/template-engine.png)
 
 각각 라이브러리마다 파일 사이즈, 성능, 부가기능등의 차이가 있지만 하는 일은 동일합니다. 중괄호(`{ > 콧수염 > mustach`)를 이용하여 반복문, 조건문 등을 넣은 템플릿파일을 만들고 Data를 연동하여 HTML을 생성합니다. 이러한 방법은 string을 붙이고 붙이고 붙이는 방법보다 훨씬 나은 환경을 보여줍니다.
 
@@ -87,7 +87,7 @@ Backbone.js가 인기를 끌기 시작할때 **제대로 된** 프론트엔드 �
 
 AngularJS는 React를 돋보이게 하기 위함이니 좀더 상세하게 설명합니다.
 
-![Google Trends](/assets/article_images/2016-06-20-server-side-rendering-with-react/google-trend-angularjs.png)
+![Google Trends]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/google-trend-angularjs.png)
 
 AngularJS는 기존의 라이브러리나 프레임워크들과는 다르게 DOM을 조작하거나 제어하는 방식에 초점을 맞추지 않고 데이터의 변화에 초점을 맞추는 완전히 새로운 접근법을 사용합니다. 데이터에 초점을 맞추는 이러한 방식자체는 완전히 새로운게 아니였으나 정말 **잘** 구현하여 사용하기 쉽게 공개한 겁니다. HTML에 작성해야 하는 코드는 조금 늘었지만 Javascript쪽 코드는 정말 놀라울정도로 단순해지고 저를 포함한 웹 프론트엔드 개발자들은 열광합니다.
 
@@ -185,11 +185,11 @@ AngularJS는 좋지만, 웹앱용에 한정이고 성능이 크게 중요치 않
 
 ## Isomorphic Javascript
 
-![Isomorphic Javascript](/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-javascript.png)
+![Isomorphic Javascript]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-javascript.png)
 
 동형 자바스크립트라는 어색한 말로 해석되는 Isomorphic Javascript는 서버와 클라이언트가 같은 코드를 사용한다는 뜻입니다. 웹브라우져에서만 동작할 것 같았던 Javascript가 [V8엔진](https://developers.google.com/v8/)이 등장하고 [Node.js](https://nodejs.org/)가 나타나면서 서버에서도 Javascript를 사용하기 시작합니다. 클라이언트에서 동작하던 라이브러리를 서버에서 똑같이 돌릴수 있게 됩니다.
 
-![Client vs Server rendering from airbnb](/assets/article_images/2016-06-20-server-side-rendering-with-react/client-side-vs-server-side.png)
+![Client vs Server rendering from airbnb]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/client-side-vs-server-side.png)
 
 **서버 사이드 렌더링의 장점**
 
@@ -220,13 +220,13 @@ React는 서버 사이드 렌더링을 염두에 두고 설계되었습니다.
 
 **1. 서버가 Node.js일때**
 
-![Node.js server](/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-only.png)
+![Node.js server]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-only.png)
 
 서버가 Node.js일 경우 바로 React 코드를 실행할 수 있습니다. 그냥 `renderToString` method를 실행하여 view에 그리면 됩니다. 와우!
 
 **2. V8엔진 라이브러리를 사용**
 
-![Use V8 engine](/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-v8.png)
+![Use V8 engine]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-v8.png)
 
 서버가 Node.js가 아닐 경우 각 언어에서 제공하는 V8 engine을 사용할 수 있습니다.
 
@@ -238,7 +238,7 @@ React는 서버 사이드 렌더링을 염두에 두고 설계되었습니다.
 
 **3. 별도의 Node.js 서버 구축**
 
-![Node.js render server](/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-backend.png)
+![Node.js render server]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-backend.png)
 
 React 코드만 실행하고 렌더링하는 별도의 Node.js 서버를 띄우는 방법입니다.
 
@@ -250,7 +250,7 @@ React 코드만 실행하고 렌더링하는 별도의 Node.js 서버를 띄우�
 
 **4. 기존 서버가 API 구성하기 용이할때**
 
-![Node.js frontend server](/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-front.png)
+![Node.js frontend server]({{ site.url }}/assets/article_images/2016-06-20-server-side-rendering-with-react/isomorphic-js-node-front.png)
 
 기존 서버가 API를 잘 제공하고 있다면 앞단에 Node.js를 두고 기존 서버를 API서버로 사용하는 방법이 있습니다. 이럴 경우 쿠키라던가 인증 토큰등을 추가로 관리하고 라우팅을 다시 셋팅해야 합니다.
 

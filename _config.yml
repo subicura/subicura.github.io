@@ -8,8 +8,7 @@ gems:
 # Site settings
 title: "Subicura's Blog"
 description: > # this means to ignore newlines until "email:"
-   서비큐라의 기술 블로그
-
+   서비큐라 기술 블로그
 email: subicura@subicura.com
 #blog logo
 logo: "/assets/images/df_logo.png"
