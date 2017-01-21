@@ -139,7 +139,7 @@ ReactJS 샘플 코드입니다. 최신 es6 문법도 적용하고 최선을 다�
 
 eslint는 [Node.js](https://nodejs.org/)로 작성된 프로그램입니다. 먼저, nodejs를 설치후에 eslint를 설치합니다.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 $ npm install -g eslint
 {% endhighlight %}
 
@@ -147,7 +147,7 @@ $ npm install -g eslint
 
 설치후엔 eslint 초기 설정을 진행합니다.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 $ npm init
 $ eslint --init
 
@@ -175,7 +175,7 @@ $ eslint --init
 
 기본적인 옵션은 범용적으로 설정되기 때문에 회사마다 특성에 맞게 조금씩 규칙을 고쳐서 사용합니다. Airbnb 또한 자체적인 규칙을 설정하여 사용중인데 이를 [오픈소스](https://github.com/airbnb/javascript)로 공개하였고 React와 ES6를 사용하는 프로젝트에 적절한 규칙을 제공합니다. Airbnb룰을 적용해봅니다.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 $ npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint
 {% endhighlight %}
 
@@ -199,7 +199,7 @@ Airbnb규칙중에 [react/jsx-no-bind](https://github.com/yannickcr/eslint-plugi
 
 이제 설정은 거의 끝났으니 실제로 lint를 돌려봅니다.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 $ eslint **/*.jsx
 {% endhighlight %}
 
@@ -211,7 +211,7 @@ linter를 단독으로 사용하는 경우는 이런 샘플을 보여줄 때 빼
 
 **설치**
 
-{% highlight sh %}
+{% highlight sh linenos %}
 $ npm install --global gulp-cli
 $ npm install --save-dev gulp
 $ npm install --save-dev gulp-eslint
@@ -223,7 +223,7 @@ $ npm install --save-dev gulp-eslint
 
 **실행**
 
-{% highlight sh %}
+{% highlight sh linenos %}
 $ gulp
 {% endhighlight %}
 
@@ -260,7 +260,7 @@ IntelliJ의 WebStorm IDE에는 ESLint가 이미 내장되어 있습니다. 설�
 
 linter를 사용하는 법은 거의 끝났고, 이제 CI에 적용할때입니다. 소스를 배포하고 빌드할 때마다 자동으로 lint를 체크하고 잘못된 점을 알려서 개발자를 압박해야겠죠. [Jenkins](https://jenkins.io/)를 사용한다면 [checkstyle plugin](https://github.com/jenkinsci/checkstyle-plugin)을 사용할 수 있습니다. [Checkstyle](http://checkstyle.sourceforge.net/)은 원래 java파일을 체크할때 사용하던 포멧인데 다른 툴에서도 보통 같은 포멧을 제공합니다.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 $ eslint -f checkstyle *.js > checkstyle.xml
 {% endhighlight %}
 
