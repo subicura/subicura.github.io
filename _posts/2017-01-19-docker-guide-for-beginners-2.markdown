@@ -5,6 +5,7 @@ tags: [Docker, DevOps, Server, Container]
 layout: post
 excerpt: 초보를 위한 도커 안내서 2번째 글입니다. 도커의 기본적인 내용을 이야기 했던 첫번째 글에 이어 실제로 도커를 설치하고 컨테이너를 실행하면서 도커 명령어를 알아봅니다. 도커를 처음 접하는 분들을 위해 아주 가볍게 자주 쓰는 명령어를 다루었습니다.
 comments: yes
+fb_social_baseurl: http://subicura.com
 last_modified_at: 2017-01-21T10:00:00+09:00
 ---
 

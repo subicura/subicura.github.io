@@ -5,6 +5,7 @@ excerpt: 어느덧 2016년 마지막 날입니다. 올 한해 역시 정신없�
 tags: [Blog]
 layout: post
 comments: yes
+fb_social_baseurl: http://subicura.com
 last_modified_at: 2017-01-21T10:00:00+09:00
 ---
 

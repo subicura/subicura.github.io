@@ -5,6 +5,7 @@ excerpt: 홈쇼핑처럼x밀본고기덮밥이 팔리는걸 관리자화면에�
 tags: [Docker, DevOps, Server, Deployment]
 layout: post
 comments: yes
+fb_social_baseurl: http://subicura.com
 last_modified_at: 2017-01-21T10:00:00+09:00
 ---
 

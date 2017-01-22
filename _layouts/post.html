@@ -105,7 +105,11 @@
 
         {% if page.comments %} 
         <div class="fb-comments-wrapper">
-          <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          {% if page.fb_social_baseurl %} 
+            <div class="fb-comments" data-href="{{ page.fb_social_baseurl }}{{ page.url }}" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          {% else %}
+            <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          {% endif %}
         </div>
         {% endif %}
 

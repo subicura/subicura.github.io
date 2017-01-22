@@ -5,6 +5,7 @@ excerpt: 홈쇼핑처럼에서 세번째로 런칭한 돈까스를 구매해 주
 tags: [BackEnd, Go, OpenSource]
 layout: post
 comments: yes
+fb_social_baseurl: http://subicura.com
 last_modified_at: 2017-01-21T10:00:00+09:00
 ---
 
