@@ -16,7 +16,12 @@
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">{{ page.title }}</h1>
+            <h1 class="post-title">
+              {{ page.title }}
+              {% if page.series %}
+                <span class="series">SERIES {{ page.series }}</span>
+              {% endif %}
+            </h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ site.author }}</h4>
@@ -31,7 +36,12 @@
         {% else %}
         <div class="noarticleimage">
           <div class="post-meta">
-            <h1 class="post-title">{{ page.title }}</h1>
+            <h1 class="post-title">
+              {{ page.title }}
+              {% if page.series %}
+                <span class="series">SERIES {{ page.series }}</span>
+              {% endif %}
+            </h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
                 <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>

@@ -61,7 +61,14 @@ layout: default
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+              <h2 class="post-title" itemprop="name">
+                <a href="{{ post.url }}" itemprop="url">
+                  {{ post.title }}
+                  {% if post.series %}
+                    <span class="series">SERIES {{ post.series }}</span>
+                  {% endif %}
+                </a>
+              </h2>
             </header>
             <section class="post-excerpt" itemprop="description">
               <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
