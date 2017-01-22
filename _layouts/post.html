@@ -34,7 +34,11 @@
             <h1 class="post-title">{{ page.title }}</h1>
             <div class="cf post-meta-text">
               <section class="share pull-right">
-                <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                {% if page.fb_social_baseurl %} 
+                  <div class="fb-like" data-href="{{ page.fb_social_baseurl }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                {% else %}
+                  <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                {% endif %}
                 {% for social in site.social %}
                   {% if social.share_url != null %}
                     <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}"
@@ -70,7 +74,11 @@
         </section>
         <footer class="post-footer">
           <section class="share">
-            <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            {% if page.fb_social_baseurl %} 
+              <div class="fb-like" data-href="{{ page.fb_social_baseurl }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            {% else %}
+              <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            {% endif %}
             {% for social in site.social %}
               {% if social.share_url != null %}
                 <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}"
