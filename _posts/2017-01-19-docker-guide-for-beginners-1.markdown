@@ -7,7 +7,7 @@ layout: post
 excerpt: 도커를 처음 접하는 시스템 관리자나 서버 개발자를 대상으로 도커 전반에 대해 얕고 넓은 지식을 담고 있습니다. 도커가 등장한 배경과 도커의 역사, 그리고 도커의 핵심 개념인 컨테이너와 이미지에 대해 알아보고 왜 이렇게 도커가 인기 인지 하나하나 살펴보겠습니다.
 comments: yes
 fb_social_baseurl: http://subicura.com
-last_modified_at: 2017-01-22T13:00:00+09:00
+last_modified_at: 2017-01-23T23:00:00+09:00
 ---
 
 ![docker logo]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
@@ -78,7 +78,7 @@ last_modified_at: 2017-01-22T13:00:00+09:00
 
 우리에게 익숙한 [VMware](http://www.vmware.com/)나  [VirtualBox](https://www.virtualbox.org)같은 가상머신은 [전가상화](https://en.wikipedia.org/wiki/Full_virtualization)<sub>Full virtualization</sub>방식이라고 하는데 호스트OS위에 게스트 OS 전체를 가상화하여 사용하는 방식입니다. 이 방식은 여러가지 OS를 가상화(리눅스에서 윈도우를 돌린다던가) 할 수 있고 비교적 사용법이 간단하지만 무겁고 느려서 운영환경에선 사용할 수 없었습니다.
 
-이러한 상황을 개선하기 위해 CPU에 가상화 기술이 들어가고 [KVM](http://www.linux-kvm.org/)<sub>Kernel-based Virtual Machine</sub>과 [Xen](https://www.xenproject.org/)이라는 [반가상화](https://en.wikipedia.org/wiki/Paravirtualization) <sub>Paravirtualization</sub>방식이 등장합니다. 게스트 OS가 필요하긴 하지만 전체OS를 가상화하는 방식이 아니였기 때문에 전가상화 방식에 비해 성능이 향상되었습니다. 이러한 기술들은 AWS나 [Rackspace](https://www.rackspace.com/)같은 클라우드 서비스에서 가상 컴퓨팅 기술의 기반이 되었습니다.
+이러한 상황을 개선하기 위해 CPU의 가상화 기술([HVM](https://en.wikipedia.org/wiki/Hardware-assisted_virtualization))을 이용한 [KVM](http://www.linux-kvm.org/)<sub>Kernel-based Virtual Machine</sub>과 [반가상화](https://en.wikipedia.org/wiki/Paravirtualization) <sub>Paravirtualization</sub>방식의 [Xen](https://www.xenproject.org/)이 등장합니다. 반가상화 방식은 게스트 OS가 필요하긴 하지만 전체OS를 가상화하는 방식이 아니였기 때문에 전가상화 방식에 비해 성능이 향상되었습니다. 이러한 기술들은 [OpenStack](https://www.openstack.org/)이나 AWS, [Rackspace](https://www.rackspace.com/)같은 클라우드 서비스에서 가상 컴퓨팅 기술의 기반이 되었습니다.
 
 ![가상머신과 도커]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png)
 
