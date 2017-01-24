@@ -34,7 +34,7 @@ curl -s https://get.docker.com/ | sudo sh
 {% endhighlight %}
 
 <div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json" poster="data:text/plain,$ # Docker Install (ubuntu)" speed="2"></asciinema-player>
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json" poster="npt:99:99" speed="2"></asciinema-player>
   <figcaption>Docker Install (ubuntu)</figcaption>
 </div>
 
@@ -141,7 +141,7 @@ docker run ubuntu:16.04
 {% endhighlight %}
 
 <div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json" poster="data:text/plain,$ # run ubuntu 16.04 container" speed="2"></asciinema-player>
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json" poster="npt:99:99" speed="2"></asciinema-player>
   <figcaption>run ubuntu 16.04 container</figcaption>
 </div>
 
@@ -164,7 +164,7 @@ boot  etc  lib   media  opt  root  sbin  sys  usr
 {% endhighlight %}
 
 <div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json" poster="data:text/plain,$ # run ubuntu 16.04 container with /bin/bash" speed="2"></asciinema-player>
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json" poster="npt:99:99" speed="2"></asciinema-player>
   <figcaption>run ubuntu 16.04 container with /bin/bash</figcaption>
 </div>
 
@@ -195,7 +195,7 @@ hello
 {% endhighlight %}
 
 <div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json" poster="data:text/plain,$ # run redis container" speed="2"></asciinema-player>
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json" poster="npt:99:99" speed="2"></asciinema-player>
   <figcaption>run redis container</figcaption>
 </div>
 
@@ -235,7 +235,7 @@ mysql> quit
 {% endhighlight %}
 
 <div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-mysql.json" poster="data:text/plain,$ # run mysql 5.7 container" speed="2"></asciinema-player>
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-mysql.json" poster="npt:99:99" speed="2"></asciinema-player>
   <figcaption>run mysql 5.7 container</figcaption>
 </div>
 
@@ -270,7 +270,7 @@ docker run -d -p 8080:80 \
 {% endhighlight %}
 
 <div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-wp.json" poster="data:text/plain,$ # run wordpress container" speed="2"></asciinema-player>
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-wp.json" poster="npt:99:99" speed="2"></asciinema-player>
   <figcaption>run wordpress container</figcaption>
 </div>
 
@@ -584,7 +584,7 @@ docker logs -f ${WORDPRESS_CONTAINER_ID}
 {% endhighlight %}
 
 <div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json" poster="data:text/plain,$ # docker logs -f" speed="2"></asciinema-player>
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json" poster="npt:99:99" speed="2"></asciinema-player>
   <figcaption>docker logs -f</figcaption>
 </div>
 
@@ -634,7 +634,7 @@ exit
 {% endhighlight %}
 
 <div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json" poster="data:text/plain,$ # docker exec bash" speed="2"></asciinema-player>
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json" poster="npt:99:99" speed="2"></asciinema-player>
   <figcaption>docker exec bash</figcaption>
 </div>
 
@@ -664,7 +664,7 @@ mysql> quit
 {% endhighlight %}
 
 <div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json" poster="data:text/plain,$ # docker exec mysql" speed="2"></asciinema-player>
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json" poster="npt:99:99" speed="2"></asciinema-player>
   <figcaption>docker exec mysql</figcaption>
 </div>
 
@@ -733,7 +733,7 @@ docker-compose up
 {% endhighlight %}
 
 <div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-compose.json" poster="data:text/plain,$ # docker-compose" speed="2"></asciinema-player>
+  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-compose.json" poster="npt:99:99" speed="2"></asciinema-player>
   <figcaption>docker-compose</figcaption>
 </div>
 
