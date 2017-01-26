@@ -17,7 +17,7 @@ last_modified_at: 2017-01-22T13:00:00+09:00
 
 * [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
 * **초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기 ✓** <span class="series">SERIES 2/3</span>
-* 초보를 위한 도커 안내서 - 이미지 만들고 배포하기 (작성중) <span class="series">SERIES 3/3</span>
+* <a class="waiting-post">초보를 위한 도커 안내서 - 이미지 만들고 배포하기 (작성중)</a> <span class="series">SERIES 3/3</span>
 
 ---
 
@@ -749,6 +749,6 @@ Docker Compose의 다른 기능과 생소한 설정내용은 숙제로 남겨드
 
 * [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
 * **초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기 ✓** <span class="series">SERIES 2/3</span>
-* 초보를 위한 도커 안내서 - 이미지 만들고 배포하기 (작성중) <span class="series">SERIES 3/3</span>
+* <a class="waiting-post">초보를 위한 도커 안내서 - 이미지 만들고 배포하기 (작성중)</a> <span class="series">SERIES 3/3</span>
 
 ---

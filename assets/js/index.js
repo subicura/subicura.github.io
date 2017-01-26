@@ -26,6 +26,12 @@
               .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
         });
 
+        // waiting
+        $('.waiting-post').click(function() {
+            if(confirm('작성중인 글입니다. 이메일 구독을 신청하시겠습니까? 새로운 글이 올라오면 알려드려요!')) {
+                location.href = _mailChimpUrl;
+            }
+        });
     });
 
 }(jQuery));

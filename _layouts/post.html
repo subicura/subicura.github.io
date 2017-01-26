@@ -108,7 +108,9 @@
             <footer class="site-footer">
               <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
               <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> RSS 구독하기</span></a><br />
-              <a class="subscribe" href="{{ site.mailchimp }}" target="_blank"> <span class="tooltip"> <i class="fa fa-rss"></i> Email 구독하기</span></a>
+              {% if site.mailchimp %} 
+                <a class="subscribe" href="{{ site.mailchimp }}" target="_blank"> <span class="tooltip"> <i class="fa fa-rss"></i> Email 구독하기</span></a>
+              {% endif %}
             </footer>
           </div>
         </div>
