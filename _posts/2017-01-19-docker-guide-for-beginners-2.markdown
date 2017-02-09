@@ -6,7 +6,7 @@ tags: [Docker, DevOps, Server, Container]
 layout: post
 excerpt: 초보를 위한 도커 안내서 2번째 글입니다. 도커의 기본적인 내용을 이야기 했던 첫번째 글에 이어 실제로 도커를 설치하고 컨테이너를 실행하면서 도커 명령어를 알아봅니다. 도커를 처음 접하는 분들을 위해 아주 가볍게 자주 쓰는 명령어를 다루었습니다.
 comments: yes
-last_modified_at: 2017-01-22T13:00:00+09:00
+last_modified_at: 2017-02-10T01:00:00+09:00
 ---
 
 ![docker logo]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
@@ -17,7 +17,7 @@ last_modified_at: 2017-01-22T13:00:00+09:00
 
 * [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
 * **초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기 ✓** <span class="series">SERIES 2/3</span>
-* <a class="waiting-post">초보를 위한 도커 안내서 - 이미지 만들고 배포하기 (작성중)</a> <span class="series">SERIES 3/3</span>
+* [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
 
 ---
 
@@ -749,6 +749,6 @@ Docker Compose의 다른 기능과 생소한 설정내용은 숙제로 남겨드
 
 * [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
 * **초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기 ✓** <span class="series">SERIES 2/3</span>
-* <a class="waiting-post">초보를 위한 도커 안내서 - 이미지 만들고 배포하기 (작성중)</a> <span class="series">SERIES 3/3</span>
+* [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
 
 ---

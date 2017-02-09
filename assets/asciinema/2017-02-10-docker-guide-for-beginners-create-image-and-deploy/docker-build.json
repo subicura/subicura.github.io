@@ -1,0 +1,1062 @@
+{
+  "version": 1,
+  "width": 80,
+  "height": 25,
+  "duration": 115.76934,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.377547,
+      "\u001b]0;~/Workspace/project/github.com/subicura/sinatra\u0007"
+    ],
+    [
+      0.013553,
+      "\r\n\u001b[34m~/Workspace/project/github.com/subicura/sinatra\u001b[39m\u001b[38;5;242m\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      9.7e-05,
+      "\u001b]2;subicura@subicuraui-MacBook-Pro: ~/Workspace/project/github.com/subicura/sinatra\u0007\u001b]1;..icura/sinatra\u0007"
+    ],
+    [
+      0.000403,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.6e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      1.1e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.244955,
+      "d"
+    ],
+    [
+      0.086944,
+      "\bdo"
+    ],
+    [
+      0.071807,
+      "c"
+    ],
+    [
+      0.087563,
+      "k"
+    ],
+    [
+      0.080487,
+      "e"
+    ],
+    [
+      0.064137,
+      "r"
+    ],
+    [
+      0.064032,
+      " "
+    ],
+    [
+      0.151905,
+      "b"
+    ],
+    [
+      0.071993,
+      "u"
+    ],
+    [
+      0.04878,
+      "i"
+    ],
+    [
+      0.055124,
+      "l"
+    ],
+    [
+      0.095926,
+      "d"
+    ],
+    [
+      0.095929,
+      " "
+    ],
+    [
+      0.128469,
+      "-"
+    ],
+    [
+      0.10345,
+      "t"
+    ],
+    [
+      0.104116,
+      " "
+    ],
+    [
+      0.352139,
+      "a"
+    ],
+    [
+      0.071976,
+      "p"
+    ],
+    [
+      0.151402,
+      "p"
+    ],
+    [
+      0.072378,
+      " "
+    ],
+    [
+      0.176287,
+      "."
+    ],
+    [
+      0.758639,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      6.6e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.003233,
+      "\u001b]0;sinatra: docker build -t app .\u0007"
+    ],
+    [
+      0.000107,
+      "\u001b]2;docker build -t app .\u0007\u001b]1;docker\u0007"
+    ],
+    [
+      0.019117,
+      "Sending build context to Docker daemon 22.02 kB\r\r\r\n"
+    ],
+    [
+      0.123233,
+      "Step 1/10 : FROM ubuntu:16.04\r\n"
+    ],
+    [
+      0.000166,
+      " ---> f49eec89601e\r\n"
+    ],
+    [
+      0.000113,
+      "Step 2/10 : MAINTAINER subicura@subicura.com\r\n"
+    ],
+    [
+      0.271242,
+      " ---> Running in 06f20ac1017d\r\n"
+    ],
+    [
+      0.251875,
+      " ---> fc41cd8ac52d\r\n"
+    ],
+    [
+      0.023643,
+      "Removing intermediate container 06f20ac1017d\r\nStep 3/10 : RUN apt-get -y update\r\n"
+    ],
+    [
+      0.202659,
+      " ---> Running in c35738e75a51\r\n"
+    ],
+    [
+      1.276531,
+      "Get:1 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]\r\n"
+    ],
+    [
+      1.73635,
+      "Get:2 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]\r\n"
+    ],
+    [
+      0.422229,
+      "Get:3 http://archive.ubuntu.com/ubuntu xenial-security InRelease [102 kB]\r\n"
+    ],
+    [
+      0.124636,
+      "Get:4 http://archive.ubuntu.com/ubuntu xenial/main Sources [1103 kB]\r\n"
+    ],
+    [
+      2.580316,
+      "Get:5 http://archive.ubuntu.com/ubuntu xenial/restricted Sources [5179 B]\r\n"
+    ],
+    [
+      0.000586,
+      "Get:6 http://archive.ubuntu.com/ubuntu xenial/universe Sources [9802 kB]\r\n"
+    ],
+    [
+      17.91371,
+      "Get:7 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]\r\n"
+    ],
+    [
+      2.475098,
+      "Get:8 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]\r\n"
+    ],
+    [
+      0.011259,
+      "Get:9 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]\r\n"
+    ],
+    [
+      16.345719,
+      "Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main Sources [279 kB]\r\n"
+    ],
+    [
+      0.403577,
+      "Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/restricted Sources [2392 B]\r\n"
+    ],
+    [
+      0.000853,
+      "Get:12 http://archive.ubuntu.com/ubuntu xenial-updates/universe Sources [153 kB]\r\n"
+    ],
+    [
+      0.319768,
+      "Get:13 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [591 kB]\r\n"
+    ],
+    [
+      0.989723,
+      "Get:14 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [12.0 kB]\r\n"
+    ],
+    [
+      0.009322,
+      "Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [489 kB]\r\n"
+    ],
+    [
+      1.333479,
+      "Get:16 http://archive.ubuntu.com/ubuntu xenial-security/main Sources [69.1 kB]\r\n"
+    ],
+    [
+      1.045463,
+      "Get:17 http://archive.ubuntu.com/ubuntu xenial-security/restricted Sources [2392 B]\r\n"
+    ],
+    [
+      0.396738,
+      "Get:18 http://archive.ubuntu.com/ubuntu xenial-security/universe Sources [21.0 kB]\r\n"
+    ],
+    [
+      0.318413,
+      "Get:19 http://archive.ubuntu.com/ubuntu xenial-security/main amd64 Packages [258 kB]\r\n"
+    ],
+    [
+      1.029696,
+      "Get:20 http://archive.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.0 kB]\r\n"
+    ],
+    [
+      0.356705,
+      "Get:21 http://archive.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [88.6 kB]\r\n"
+    ],
+    [
+      0.078264,
+      "Fetched 24.7 MB in 48s (507 kB/s)\r\nReading package lists..."
+    ],
+    [
+      0.624138,
+      "\r\n"
+    ],
+    [
+      1.023437,
+      " ---> 61d45ce11dc6\r\n"
+    ],
+    [
+      0.030563,
+      "Removing intermediate container c35738e75a51\r\nStep 4/10 : RUN apt-get -y install ruby\r\n"
+    ],
+    [
+      0.147999,
+      " ---> Running in d927382027db\r\n"
+    ],
+    [
+      0.381595,
+      "Reading package lists..."
+    ],
+    [
+      0.632183,
+      "\r\n"
+    ],
+    [
+      0.025065,
+      "Building dependency tree..."
+    ],
+    [
+      0.121522,
+      "\r\nReading state information..."
+    ],
+    [
+      9.7e-05,
+      "\r\n"
+    ],
+    [
+      0.096541,
+      "The following additional packages will be installed:\r\n  ca-certificates fonts-lato javascript-common libffi6 libgdbm3 libgmp10\r\n  libjs-jquery libruby2.3 libssl1.0.0 libyaml-0-2 openssl rake\r\n  ruby-did-you-mean ruby-minitest ruby-net-telnet ruby-power-assert\r\n  ruby-test-unit ruby2.3 rubygems-integration unzip zip\r\n"
+    ],
+    [
+      0.000242,
+      "Suggested packages:\r\n  apache2 | lighttpd | httpd ri ruby-dev bundler\r\n"
+    ],
+    [
+      0.000806,
+      "The following NEW packages will be installed:\r\n"
+    ],
+    [
+      0.000179,
+      "  ca-certificates fonts-lato javascript-common libffi6 libgdbm3 libgmp10\r\n"
+    ],
+    [
+      0.000474,
+      "  libjs-jquery libruby2.3 libssl1.0.0 libyaml-0-2 openssl rake ruby\r\n  ruby-did-you-mean ruby-minitest ruby-net-telnet ruby-power-assert\r\n"
+    ],
+    [
+      0.000339,
+      "  ruby-test-unit ruby2.3 rubygems-integration unzip zip\r\n"
+    ],
+    [
+      0.650569,
+      "0 upgraded, 22 newly installed, 0 to remove and 6 not upgraded.\r\nNeed to get 8446 kB of archives.\r\nAfter this operation, 34.4 MB of additional disk space will be used.\r\nGet:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgdbm3 amd64 1.8.3-13.1 [16.9 kB]\r\n"
+    ],
+    [
+      0.783282,
+      "Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 fonts-lato all 2.0-1 [2693 kB]\r\n"
+    ],
+    [
+      3.790116,
+      "Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 libyaml-0-2 amd64 0.1.6-3 [47.6 kB]\r\n"
+    ],
+    [
+      1.046359,
+      "Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi6 amd64 3.2.1-4 [17.8 kB]\r\n"
+    ],
+    [
+      0.294538,
+      "Get:5 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgmp10 amd64 2:6.1.0+dfsg-2 [240 kB]\r\n"
+    ],
+    [
+      1.146574,
+      "Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl1.0.0 amd64 1.0.2g-1ubuntu4.6 [1082 kB]\r\n"
+    ],
+    [
+      1.327428,
+      "Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssl amd64 1.0.2g-1ubuntu4.6 [492 kB]\r\n"
+    ],
+    [
+      3.521605,
+      "Get:8 http://archive.ubuntu.com/ubuntu xenial/main amd64 ca-certificates all 20160104ubuntu1 [191 kB]\r\n"
+    ],
+    [
+      1.049208,
+      "Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 javascript-common all 11 [6066 B]\r\n"
+    ],
+    [
+      0.392627,
+      "Get:10 http://archive.ubuntu.com/ubuntu xenial/main amd64 libjs-jquery all 1.11.3+dfsg-4 [161 kB]\r\n"
+    ],
+    [
+      0.655392,
+      "Get:11 http://archive.ubuntu.com/ubuntu xenial/main amd64 rubygems-integration all 1.10 [4966 B]\r\n"
+    ],
+    [
+      0.482288,
+      "Get:12 http://archive.ubuntu.com/ubuntu xenial/main amd64 ruby-did-you-mean all 1.0.0-2 [8390 B]\r\n"
+    ],
+    [
+      0.326296,
+      "Get:13 http://archive.ubuntu.com/ubuntu xenial/main amd64 ruby-minitest all 5.8.4-2 [36.6 kB]\r\n"
+    ],
+    [
+      0.290205,
+      "Get:14 http://archive.ubuntu.com/ubuntu xenial/main amd64 ruby-net-telnet all 0.1.1-2 [12.6 kB]\r\n"
+    ],
+    [
+      0.408045,
+      "Get:15 http://archive.ubuntu.com/ubuntu xenial/main amd64 ruby-power-assert all 0.2.7-1 [7668 B]\r\n"
+    ],
+    [
+      0.284739,
+      "Get:16 http://archive.ubuntu.com/ubuntu xenial/main amd64 ruby-test-unit all 3.1.7-2 [60.3 kB]\r\n"
+    ],
+    [
+      0.311083,
+      "Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libruby2.3 amd64 2.3.1-2~16.04 [2957 kB]\r\n"
+    ],
+    [
+      5.964545,
+      "Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ruby2.3 amd64 2.3.1-2~16.04 [40.9 kB]\r\n"
+    ],
+    [
+      0.321133,
+      "Get:19 http://archive.ubuntu.com/ubuntu xenial/main amd64 ruby all 1:2.3.0+1 [5530 B]\r\n"
+    ],
+    [
+      0.299436,
+      "Get:20 http://archive.ubuntu.com/ubuntu xenial/main amd64 rake all 10.5.0-2 [48.2 kB]\r\n"
+    ],
+    [
+      0.396617,
+      "Get:21 http://archive.ubuntu.com/ubuntu xenial/main amd64 unzip amd64 6.0-20ubuntu1 [158 kB]\r\n"
+    ],
+    [
+      0.387268,
+      "Get:22 http://archive.ubuntu.com/ubuntu xenial/main amd64 zip amd64 3.0-11 [158 kB]\r\n"
+    ],
+    [
+      0.232405,
+      "\u001b[91mdebconf: delaying package configuration, since apt-utils is not installed\r\n\u001b[0m"
+    ],
+    [
+      0.017752,
+      "Fetched 8446 kB in 24s (350 kB/s)\r\n"
+    ],
+    [
+      0.108842,
+      "Selecting previously unselected package libgdbm3:amd64.\r\r\n(Reading database ... \r"
+    ],
+    [
+      0.011663,
+      "(Reading database ... 5%\r"
+    ],
+    [
+      0.011927,
+      "(Reading database ... 10%\r"
+    ],
+    [
+      0.008963,
+      "(Reading database ... 15%\r"
+    ],
+    [
+      0.008994,
+      "(Reading database ... 20%\r"
+    ],
+    [
+      0.00028,
+      "(Reading database ... 25%\r"
+    ],
+    [
+      0.00022,
+      "(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r"
+    ],
+    [
+      0.00087,
+      "(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 7256 files and directories currently installed.)\r\r\n"
+    ],
+    [
+      0.000174,
+      "Preparing to unpack .../libgdbm3_1.8.3-13.1_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.024579,
+      "Unpacking libgdbm3:amd64 (1.8.3-13.1) ...\r\r\n"
+    ],
+    [
+      0.123842,
+      "Selecting previously unselected package fonts-lato.\r\r\n"
+    ],
+    [
+      0.001397,
+      "Preparing to unpack .../fonts-lato_2.0-1_all.deb ..."
+    ],
+    [
+      0.000163,
+      "\r\r\n"
+    ],
+    [
+      0.023574,
+      "Unpacking fonts-lato (2.0-1) ...\r\r\n"
+    ],
+    [
+      0.409111,
+      "Selecting previously unselected package libyaml-0-2:amd64.\r\r\n"
+    ],
+    [
+      0.001387,
+      "Preparing to unpack .../libyaml-0-2_0.1.6-3_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.021979,
+      "Unpacking libyaml-0-2:amd64 (0.1.6-3) ...\r\r\n"
+    ],
+    [
+      0.168428,
+      "Selecting previously unselected package libffi6:amd64.\r\r\n"
+    ],
+    [
+      0.001438,
+      "Preparing to unpack .../libffi6_3.2.1-4_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.049805,
+      "Unpacking libffi6:amd64 (3.2.1-4) ...\r\r\n"
+    ],
+    [
+      0.173587,
+      "Selecting previously unselected package libgmp10:amd64.\r\r\n"
+    ],
+    [
+      0.001374,
+      "Preparing to unpack .../libgmp10_2%3a6.1.0+dfsg-2_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.023165,
+      "Unpacking libgmp10:amd64 (2:6.1.0+dfsg-2) ...\r\r\n"
+    ],
+    [
+      0.234681,
+      "Selecting previously unselected package libssl1.0.0:amd64.\r\r\n"
+    ],
+    [
+      0.001379,
+      "Preparing to unpack .../libssl1.0.0_1.0.2g-1ubuntu4.6_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.022327,
+      "Unpacking libssl1.0.0:amd64 (1.0.2g-1ubuntu4.6) ...\r\r\n"
+    ],
+    [
+      0.23245,
+      "Selecting previously unselected package openssl.\r\r\n"
+    ],
+    [
+      0.001474,
+      "Preparing to unpack .../openssl_1.0.2g-1ubuntu4.6_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.020661,
+      "Unpacking openssl (1.0.2g-1ubuntu4.6) ...\r\r\n"
+    ],
+    [
+      0.222684,
+      "Selecting previously unselected package ca-certificates.\r\r\n"
+    ],
+    [
+      0.001055,
+      "Preparing to unpack .../ca-certificates_20160104ubuntu1_all.deb ...\r\r\n"
+    ],
+    [
+      0.02036,
+      "Unpacking ca-certificates (20160104ubuntu1) ...\r\r\n"
+    ],
+    [
+      0.280326,
+      "Selecting previously unselected package javascript-common.\r\r\n"
+    ],
+    [
+      0.001532,
+      "Preparing to unpack .../javascript-common_11_all.deb ...\r\r\n"
+    ],
+    [
+      0.033079,
+      "Unpacking javascript-common (11) ...\r\r\n"
+    ],
+    [
+      0.118403,
+      "Selecting previously unselected package libjs-jquery.\r\r\n"
+    ],
+    [
+      0.001906,
+      "Preparing to unpack .../libjs-jquery_1.11.3+dfsg-4_all.deb ..."
+    ],
+    [
+      0.000361,
+      "\r\r\n"
+    ],
+    [
+      0.019791,
+      "Unpacking libjs-jquery (1.11.3+dfsg-4) ...\r\r\n"
+    ],
+    [
+      0.126448,
+      "Selecting previously unselected package rubygems-integration.\r\r\n"
+    ],
+    [
+      0.001143,
+      "Preparing to unpack .../rubygems-integration_1.10_all.deb ...\r\r\n"
+    ],
+    [
+      0.025194,
+      "Unpacking rubygems-integration (1.10) ...\r\r\n"
+    ],
+    [
+      0.120558,
+      "Selecting previously unselected package ruby-did-you-mean.\r\r\n"
+    ],
+    [
+      0.001343,
+      "Preparing to unpack .../ruby-did-you-mean_1.0.0-2_all.deb ...\r\r\n"
+    ],
+    [
+      0.024026,
+      "Unpacking ruby-did-you-mean (1.0.0-2) ...\r\r\n"
+    ],
+    [
+      0.130184,
+      "Selecting previously unselected package ruby-minitest.\r\r\n"
+    ],
+    [
+      0.001028,
+      "Preparing to unpack .../ruby-minitest_5.8.4-2_all.deb ...\r\r\n"
+    ],
+    [
+      0.022966,
+      "Unpacking ruby-minitest (5.8.4-2) ...\r\r\n"
+    ],
+    [
+      0.135074,
+      "Selecting previously unselected package ruby-net-telnet.\r\r\n"
+    ],
+    [
+      0.001614,
+      "Preparing to unpack .../ruby-net-telnet_0.1.1-2_all.deb ..."
+    ],
+    [
+      0.000343,
+      "\r\r\n"
+    ],
+    [
+      0.024341,
+      "Unpacking ruby-net-telnet (0.1.1-2) ...\r\r\n"
+    ],
+    [
+      0.128445,
+      "Selecting previously unselected package ruby-power-assert.\r\r\n"
+    ],
+    [
+      0.001475,
+      "Preparing to unpack .../ruby-power-assert_0.2.7-1_all.deb ...\r\r\n"
+    ],
+    [
+      0.022252,
+      "Unpacking ruby-power-assert (0.2.7-1) ...\r\r\n"
+    ],
+    [
+      0.123631,
+      "Selecting previously unselected package ruby-test-unit.\r\r\n"
+    ],
+    [
+      0.001491,
+      "Preparing to unpack .../ruby-test-unit_3.1.7-2_all.deb ...\r\r\n"
+    ],
+    [
+      0.026512,
+      "Unpacking ruby-test-unit (3.1.7-2) ...\r\r\n"
+    ],
+    [
+      0.181133,
+      "Selecting previously unselected package libruby2.3:amd64.\r\r\n"
+    ],
+    [
+      0.001091,
+      "Preparing to unpack .../libruby2.3_2.3.1-2~16.04_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.023455,
+      "Unpacking libruby2.3:amd64 (2.3.1-2~16.04) ...\r\r\n"
+    ],
+    [
+      0.484922,
+      "Selecting previously unselected package ruby2.3.\r\r\n"
+    ],
+    [
+      0.001376,
+      "Preparing to unpack .../ruby2.3_2.3.1-2~16.04_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.024322,
+      "Unpacking ruby2.3 (2.3.1-2~16.04) ...\r\r\n"
+    ],
+    [
+      0.162888,
+      "Selecting previously unselected package ruby.\r\r\n"
+    ],
+    [
+      0.001328,
+      "Preparing to unpack .../ruby_1%3a2.3.0+1_all.deb ...\r\r\n"
+    ],
+    [
+      0.028341,
+      "Unpacking ruby (1:2.3.0+1) ...\r\r\n"
+    ],
+    [
+      0.154197,
+      "Selecting previously unselected package rake.\r\r\n"
+    ],
+    [
+      0.001516,
+      "Preparing to unpack .../archives/rake_10.5.0-2_all.deb ...\r\r\n"
+    ],
+    [
+      0.021458,
+      "Unpacking rake (10.5.0-2) ...\r\r\n"
+    ],
+    [
+      0.168009,
+      "Selecting previously unselected package unzip.\r\r\n"
+    ],
+    [
+      0.001578,
+      "Preparing to unpack .../unzip_6.0-20ubuntu1_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.023319,
+      "Unpacking unzip (6.0-20ubuntu1) ...\r\r\n"
+    ],
+    [
+      0.142081,
+      "Selecting previously unselected package zip.\r\r\n"
+    ],
+    [
+      0.001189,
+      "Preparing to unpack .../archives/zip_3.0-11_amd64.deb ...\r\r\n"
+    ],
+    [
+      0.021192,
+      "Unpacking zip (3.0-11) ...\r\r\n"
+    ],
+    [
+      0.106302,
+      "Processing triggers for libc-bin (2.23-0ubuntu5) ...\r\r\n"
+    ],
+    [
+      0.214529,
+      "Setting up libgdbm3:amd64 (1.8.3-13.1) ...\r\r\n"
+    ],
+    [
+      0.127616,
+      "Setting up fonts-lato (2.0-1) ...\r\r\n"
+    ],
+    [
+      0.073496,
+      "Setting up libyaml-0-2:amd64 (0.1.6-3) ...\r\r\n"
+    ],
+    [
+      0.110129,
+      "Setting up libffi6:amd64 (3.2.1-4) ...\r\r\n"
+    ],
+    [
+      0.075141,
+      "Setting up libgmp10:amd64 (2:6.1.0+dfsg-2) ...\r\r\n"
+    ],
+    [
+      0.073075,
+      "Setting up libssl1.0.0:amd64 (1.0.2g-1ubuntu4.6) ...\r\r\n"
+    ],
+    [
+      0.114167,
+      "debconf: unable to initialize frontend: Dialog\r\r\ndebconf: (TERM is not set, so the dialog frontend is not usable.)\r\r\ndebconf: falling back to frontend: Readline\r\r\n"
+    ],
+    [
+      0.000877,
+      "debconf: unable to initialize frontend: Readline\r\r\n"
+    ],
+    [
+      0.000259,
+      "debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)\r\r\ndebconf: falling back to frontend: Teletype\r\r\n"
+    ],
+    [
+      0.076451,
+      "Setting up openssl (1.0.2g-1ubuntu4.6) ...\r\r\n"
+    ],
+    [
+      0.101803,
+      "Setting up ca-certificates (20160104ubuntu1) ...\r\r\n"
+    ],
+    [
+      0.10891,
+      "debconf: unable to initialize frontend: Dialog\r\r\ndebconf: (TERM is not set, so the dialog frontend is not usable.)\r\r\ndebconf: falling back to frontend: Readline\r\r\n"
+    ],
+    [
+      0.000241,
+      "debconf: unable to initialize frontend: Readline\r\r\ndebconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)\r\r\ndebconf: falling back to frontend: Teletype\r\r\n"
+    ],
+    [
+      0.563704,
+      "Setting up javascript-common (11) ...\r\r\n"
+    ],
+    [
+      0.13757,
+      "Setting up libjs-jquery (1.11.3+dfsg-4) ...\r\r\n"
+    ],
+    [
+      0.072763,
+      "Setting up rubygems-integration (1.10) ...\r\r\n"
+    ],
+    [
+      0.070936,
+      "Setting up ruby-did-you-mean (1.0.0-2) ...\r\r\n"
+    ],
+    [
+      0.071908,
+      "Setting up ruby-minitest (5.8.4-2) ...\r\r\n"
+    ],
+    [
+      0.115094,
+      "Setting up ruby-net-telnet (0.1.1-2) ...\r\r\n"
+    ],
+    [
+      0.156109,
+      "Setting up ruby-power-assert (0.2.7-1) ...\r\r\n"
+    ],
+    [
+      0.151926,
+      "Setting up ruby-test-unit (3.1.7-2) ...\r\r\n"
+    ],
+    [
+      0.149011,
+      "Setting up unzip (6.0-20ubuntu1) ...\r\r\n"
+    ],
+    [
+      0.158281,
+      "Setting up zip (3.0-11) ...\r\r\n"
+    ],
+    [
+      0.147307,
+      "Setting up libruby2.3:amd64 (2.3.1-2~16.04) ...\r\r\n"
+    ],
+    [
+      0.127311,
+      "Setting up ruby2.3 (2.3.1-2~16.04) ...\r\r\n"
+    ],
+    [
+      0.067102,
+      "Setting up ruby (1:2.3.0+1) ...\r\r\n"
+    ],
+    [
+      0.07552,
+      "Setting up rake (10.5.0-2) ...\r\r\n"
+    ],
+    [
+      0.06672,
+      "Processing triggers for libc-bin (2.23-0ubuntu5) ...\r\r\n"
+    ],
+    [
+      0.227134,
+      "Processing triggers for ca-certificates (20160104ubuntu1) ...\r\r\n"
+    ],
+    [
+      0.026237,
+      "Updating certificates in /etc/ssl/certs...\r\r\n"
+    ],
+    [
+      1.57775,
+      "173 added, 0 removed; done.\r\r\n"
+    ],
+    [
+      0.000146,
+      "Running hooks in /etc/ca-certificates/update.d...\r\r\n"
+    ],
+    [
+      0.002152,
+      "done."
+    ],
+    [
+      0.000161,
+      "\r\r\n"
+    ],
+    [
+      1.785024,
+      " ---> 94c679e9a8bd\r\n"
+    ],
+    [
+      0.06721,
+      "Removing intermediate container d927382027db\r\nStep 5/10 : RUN gem install bundler\r\n"
+    ],
+    [
+      0.177407,
+      " ---> Running in 1465fc1faa63\r\n"
+    ],
+    [
+      6.506135,
+      "Bundler and RubyGems.org are free for anyone to use, but maintaining them costs more than $25,000 USD every month. Help us cover those costs so that we can keep the gem ecosystem free for everyone: https://ruby.to/support-bundler\r\nSuccessfully installed bundler-1.14.3\r\nParsing documentation for bundler-1.14.3\r\nInstalling ri documentation for bundler-1.14.3\r\nDone installing documentation for bundler after 3 seconds\r\n1 gem installed\r\n"
+    ],
+    [
+      1.289113,
+      " ---> 88fef2f893b9\r\n"
+    ],
+    [
+      0.057743,
+      "Removing intermediate container 1465fc1faa63\r\n"
+    ],
+    [
+      2.5e-05,
+      "Step 6/10 : COPY . /usr/src/app\r\n"
+    ],
+    [
+      0.560584,
+      " ---> 2eb4beca4e71\r\n"
+    ],
+    [
+      0.024839,
+      "Removing intermediate container ddc35d44cdd3\r\n"
+    ],
+    [
+      9.5e-05,
+      "Step 7/10 : WORKDIR /usr/src/app\r\n"
+    ],
+    [
+      0.479605,
+      " ---> dee72e03cd84\r\n"
+    ],
+    [
+      0.022635,
+      "Removing intermediate container d30bac07440f\r\nStep 8/10 : RUN bundle install\r\n"
+    ],
+    [
+      0.189359,
+      " ---> Running in ec717c9537fc\r\n"
+    ],
+    [
+      0.530811,
+      "Don't run Bundler as root. Bundler can ask for sudo if it is needed, and\r\ninstalling your bundle as root will break this application for all non-root\r\nusers on this machine.\r\n"
+    ],
+    [
+      0.595243,
+      "Fetching gem metadata from https://rubygems.org/"
+    ],
+    [
+      0.17919,
+      "."
+    ],
+    [
+      0.230409,
+      "."
+    ],
+    [
+      0.38433,
+      "."
+    ],
+    [
+      0.226382,
+      "."
+    ],
+    [
+      0.198858,
+      "."
+    ],
+    [
+      0.266433,
+      "."
+    ],
+    [
+      0.366216,
+      "."
+    ],
+    [
+      0.24094,
+      "."
+    ],
+    [
+      0.243753,
+      "."
+    ],
+    [
+      0.360206,
+      "."
+    ],
+    [
+      0.070377,
+      "\r\nFetching version metadata from https://rubygems.org/"
+    ],
+    [
+      0.194682,
+      "."
+    ],
+    [
+      1.048286,
+      "."
+    ],
+    [
+      0.047044,
+      "\r\n"
+    ],
+    [
+      1.329547,
+      "Installing rack 1.6.4\r\n"
+    ],
+    [
+      0.762408,
+      "Installing tilt 2.0.6\r\n"
+    ],
+    [
+      0.043949,
+      "Using bundler 1.14.3\r\n"
+    ],
+    [
+      0.786778,
+      "Installing rack-protection 1.5.3\r\n"
+    ],
+    [
+      1.503656,
+      "Installing sinatra 1.4.7\r\n"
+    ],
+    [
+      0.066275,
+      "Bundle complete! 1 Gemfile dependency, 5 gems now installed.\r\nUse `bundle show [gemname]` to see where a bundled gem is installed.\r\n"
+    ],
+    [
+      0.821051,
+      " ---> a3c005bd1ccb\r\n"
+    ],
+    [
+      0.036492,
+      "Removing intermediate container ec717c9537fc\r\nStep 9/10 : EXPOSE 4567\r\n"
+    ],
+    [
+      0.144984,
+      " ---> Running in 9c514a1f0c8e\r\n"
+    ],
+    [
+      0.237168,
+      " ---> c5ce4376282e\r\n"
+    ],
+    [
+      0.023128,
+      "Removing intermediate container 9c514a1f0c8e\r\nStep 10/10 : CMD bundle exec ruby app.rb -o 0.0.0.0\r\n"
+    ],
+    [
+      0.17859,
+      " ---> Running in 1f7a9ba8d63c\r\n"
+    ],
+    [
+      0.231461,
+      " ---> 54d239c00f11\r\n"
+    ],
+    [
+      0.024048,
+      "Removing intermediate container 1f7a9ba8d63c\r\n"
+    ],
+    [
+      0.012406,
+      "Successfully built 54d239c00f11\r\n"
+    ],
+    [
+      0.003214,
+      "\u001b]0;~/Workspace/project/github.com/subicura/sinatra\u0007"
+    ],
+    [
+      0.004654,
+      "\r\n\u001b[34m~/Workspace/project/github.com/subicura/sinatra\u001b[39m\u001b[38;5;242m\u001b[39m\u001b[36m\u001b[39m\u001b[33m 1m 50s\u001b[39m\r\n"
+    ],
+    [
+      7.6e-05,
+      "\u001b]2;subicura@subicuraui-MacBook-Pro: ~/Workspace/project/github.com/subicura/sinatra\u0007\u001b]1;..icura/sinatra\u0007"
+    ],
+    [
+      0.000115,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      1.6e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      1e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.170214,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

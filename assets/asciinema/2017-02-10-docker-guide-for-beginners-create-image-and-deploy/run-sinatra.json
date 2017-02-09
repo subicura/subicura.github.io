@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "width": 80,
+  "height": 25,
+  "duration": 20.792436,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.366381,
+      "\u001b]0;~/Workspace/project/github.com/subicura/sinatra\u0007"
+    ],
+    [
+      0.013253,
+      "\r\n\u001b[34m~/Workspace/project/github.com/subicura/sinatra\u001b[39m\u001b[38;5;242m\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      0.000139,
+      "\u001b]2;subicura@subicuraui-MacBook-Pro: ~/Workspace/project/github.com/subicura/sinatra\u0007\u001b]1;..icura/sinatra\u0007"
+    ],
+    [
+      0.000422,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.6e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      6e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.22535,
+      "b"
+    ],
+    [
+      0.088517,
+      "\bbu"
+    ],
+    [
+      0.167786,
+      "n"
+    ],
+    [
+      0.128078,
+      "d"
+    ],
+    [
+      0.103918,
+      "l"
+    ],
+    [
+      0.064088,
+      "e"
+    ],
+    [
+      0.14337,
+      " "
+    ],
+    [
+      0.176432,
+      "i"
+    ],
+    [
+      0.144077,
+      "n"
+    ],
+    [
+      0.104145,
+      "s"
+    ],
+    [
+      0.095865,
+      "t"
+    ],
+    [
+      0.104103,
+      "a"
+    ],
+    [
+      0.087748,
+      "l"
+    ],
+    [
+      0.152208,
+      "l"
+    ],
+    [
+      0.783967,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      3.5e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.002705,
+      "\u001b]0;sinatra: bundle install\u0007"
+    ],
+    [
+      0.000159,
+      "\u001b]2;bundle install\u0007\u001b]1;bundle\u0007"
+    ],
+    [
+      0.701105,
+      "Using rack 1.6.4\r\n"
+    ],
+    [
+      0.000526,
+      "Using tilt 2.0.6\r\n"
+    ],
+    [
+      7.5e-05,
+      "Using bundler 1.14.3\r\n"
+    ],
+    [
+      0.000175,
+      "Using rack-protection 1.5.3\r\n"
+    ],
+    [
+      0.0001,
+      "Using sinatra 1.4.7\r\n"
+    ],
+    [
+      0.000661,
+      "\u001b[32mBundle complete! 1 Gemfile dependency, 5 gems now installed.\u001b[0m\r\n"
+    ],
+    [
+      1.8e-05,
+      "\u001b[32mUse `bundle show [gemname]` to see where a bundled gem is installed.\u001b[0m\r\n"
+    ],
+    [
+      0.012401,
+      "\u001b]0;~/Workspace/project/github.com/subicura/sinatra\u0007"
+    ],
+    [
+      0.004588,
+      "\r\n\u001b[34m~/Workspace/project/github.com/subicura/sinatra\u001b[39m\u001b[38;5;242m\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      0.000115,
+      "\u001b]2;subicura@subicuraui-MacBook-Pro: ~/Workspace/project/github.com/subicura/sinatra\u0007\u001b]1;..icura/sinatra\u0007"
+    ],
+    [
+      3.5e-05,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      9.5e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.381287,
+      "b"
+    ],
+    [
+      0.0867,
+      "\bbu"
+    ],
+    [
+      0.1851,
+      "n"
+    ],
+    [
+      0.103986,
+      "d"
+    ],
+    [
+      0.112155,
+      "l"
+    ],
+    [
+      0.087583,
+      "e"
+    ],
+    [
+      0.135365,
+      " "
+    ],
+    [
+      0.088977,
+      "e"
+    ],
+    [
+      0.25605,
+      "x"
+    ],
+    [
+      0.255831,
+      "e"
+    ],
+    [
+      0.119895,
+      "c"
+    ],
+    [
+      0.207999,
+      " "
+    ],
+    [
+      0.119393,
+      "r"
+    ],
+    [
+      0.064243,
+      "u"
+    ],
+    [
+      0.13626,
+      "b"
+    ],
+    [
+      0.088157,
+      "y"
+    ],
+    [
+      0.063102,
+      " "
+    ],
+    [
+      0.111705,
+      "a"
+    ],
+    [
+      0.088239,
+      "p"
+    ],
+    [
+      0.160943,
+      "p"
+    ],
+    [
+      0.175828,
+      "."
+    ],
+    [
+      0.104202,
+      "r"
+    ],
+    [
+      0.207734,
+      "b"
+    ],
+    [
+      0.264264,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      3.5e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.001875,
+      "\u001b]0;sinatra: bundle exec ruby app.rb\u0007"
+    ],
+    [
+      0.000136,
+      "\u001b]2;bundle exec ruby app.rb\u0007\u001b]1;bundle\u0007"
+    ],
+    [
+      0.923966,
+      "[2017-02-08 02:43:13] INFO  WEBrick 1.3.1\r\n[2017-02-08 02:43:13] INFO  ruby 2.3.0 (2015-12-25) [x86_64-darwin15]\r\n"
+    ],
+    [
+      0.000999,
+      "== Sinatra (v1.4.7) has taken the stage on 4567 for development with backup from WEBrick\r\n"
+    ],
+    [
+      0.000156,
+      "[2017-02-08 02:43:13] INFO  WEBrick::HTTPServer#start: pid=1593 port=4567\r\n"
+    ],
+    [
+      6.437278,
+      "::1 - - [08/Feb/2017:02:43:20 +0900] \"GET / HTTP/1.1\" 200 28 0.0036\r\n"
+    ],
+    [
+      0.000237,
+      "::1 - - [08/Feb/2017:02:43:20 KST] \"GET / HTTP/1.1\" 200 28\r\n- -> /\r\n"
+    ],
+    [
+      2.803272,
+      "^C"
+    ],
+    [
+      0.000234,
+      "== Sinatra has ended his set (crowd applauds)\r\n"
+    ],
+    [
+      0.000589,
+      "[2017-02-08 02:43:23] INFO  going to shutdown ...\r\n"
+    ],
+    [
+      0.215951,
+      "[2017-02-08 02:43:23] INFO  WEBrick::HTTPServer#start done.\r\n"
+    ],
+    [
+      0.015786,
+      "\u001b]0;~/Workspace/project/github.com/subicura/sinatra\u0007"
+    ],
+    [
+      0.004638,
+      "\r\n\u001b[34m~/Workspace/project/github.com/subicura/sinatra\u001b[39m\u001b[38;5;242m\u001b[39m\u001b[36m\u001b[39m\u001b[33m 11s\u001b[39m\r\n"
+    ],
+    [
+      0.000113,
+      "\u001b]2;subicura@subicuraui-MacBook-Pro: ~/Workspace/project/github.com/subicura/sinatra\u0007\u001b]1;..icura/sinatra\u0007"
+    ],
+    [
+      2.7e-05,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      3.3e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      5.1e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.009931,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

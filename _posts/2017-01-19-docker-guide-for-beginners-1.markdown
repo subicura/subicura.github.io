@@ -7,7 +7,7 @@ layout: post
 excerpt: 도커를 처음 접하는 시스템 관리자나 서버 개발자를 대상으로 도커 전반에 대해 얕고 넓은 지식을 담고 있습니다. 도커가 등장한 배경과 도커의 역사, 그리고 도커의 핵심 개념인 컨테이너와 이미지에 대해 알아보고 왜 이렇게 도커가 인기 인지 하나하나 살펴보겠습니다.
 comments: yes
 fb_social_baseurl: http://subicura.com
-last_modified_at: 2017-01-23T23:00:00+09:00
+last_modified_at: 2017-02-10T01:00:00+09:00
 ---
 
 ![docker logo]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
@@ -24,7 +24,7 @@ last_modified_at: 2017-01-23T23:00:00+09:00
 
 * **초보를 위한 도커 안내서 - 도커란 무엇인가? ✓** <span class="series">SERIES 1/3</span>
 * [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기]({% post_url 2017-01-19-docker-guide-for-beginners-2 %}) <span class="series">SERIES 2/3</span>
-* <a class="waiting-post">초보를 위한 도커 안내서 - 이미지 만들고 배포하기 (작성중)<a> <span class="series">SERIES 3/3</span>
+* [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
 
 ---
 
@@ -189,6 +189,6 @@ ubuntu이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있�
 
 * **초보를 위한 도커 안내서 - 도커란 무엇인가? ✓** <span class="series">SERIES 1/3</span>
 * [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기]({% post_url 2017-01-19-docker-guide-for-beginners-2 %}) <span class="series">SERIES 2/3</span>
-* <a class="waiting-post">초보를 위한 도커 안내서 - 이미지 만들고 배포하기 (작성중)</a> <span class="series">SERIES 3/3</span>
+* [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
 
 ---
