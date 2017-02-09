@@ -487,7 +487,7 @@ RUN bundle install --no-rdoc --no-ri
 
 **이쁘게**
 
-명령어는 비슷한 것끼리 묶어 주는 게 보기도 좋고 레이어 수를 줄이는데 도움이 됩니다. 도커 이미지는 스토리지 엔진에 따라 레이어의 개수가 127개로 제한되어 있는 경우도 있어 너무 많은 명령어는 기본적으로 좋지 않습니다.
+명령어는 비슷한 것끼리 묶어 주는 게 보기도 좋고 레이어 수를 줄이는데 도움이 됩니다. 도커 이미지는 스토리지 엔진에 따라 레이어의 개수가 127개로 제한되어 있는 경우도 있어 너무 많은 명령어는 좋지 않습니다.
 
 {% highlight bash linenos %}
 # before
@@ -516,7 +516,7 @@ RUN apt-get -y -qq update && \
 
 도커는 빌드한 이미지를 서버에 배포하기 위해 직접 파일을 복사하는 방법 대신 [도커 레지스트리](https://docs.docker.com/registry/)<sub>Docker Registry</sub>라는 이미지 저장소를 사용합니다. 도커 명령어를 이용하여 이미지를 레지스트리에 푸시<sub>push</sub>하고 다른 서버에서 풀<sub>pull</sub>받아 사용하는 구조입니다. ~~git을 사용하는 느낌?~~
 
-도커 레지스트리는  [오픈소스](https://github.com/docker/distribution)로 무료로 설치하여 사용할 수 있고 설치형이 싫다면 도커(Docker Inc.)에서 서비스 중인 [도커 허브](https://hub.docker.com/)<sub>Docker Hub</sub>를 사용할 수 있습니다.
+도커 레지스트리는  [오픈소스](https://github.com/docker/distribution)로 무료로 설치할 수 있고 설치형이 싫다면 도커(Docker Inc.)에서 서비스 중인 [도커 허브](https://hub.docker.com/)<sub>Docker Hub</sub>를 사용할 수 있습니다.
 
 ### Docker Hub
 
@@ -553,7 +553,7 @@ ID와 패스워드를 입력하면 로그인이 되고 `~/.docker/config.json`�
 
 **이미지 태그**
 
-도커 이미지 이름은 다음과 같은 형태로 구성되어 있습니다.
+도커 이미지 이름은 다음과 같은 형태로 구성됩니다.
 
 {:.usage}
 {% highlight txt %}
@@ -575,7 +575,7 @@ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 docker tag app subicura/sinatra-app:1
 {% endhighlight %}
 
-`subicura`라는 ID를 사용하고 이미지 이름을 `sinatra-app`으로 변경했습니다. 첫 번째 버전이므로 태그로 `1`을 사용합니다. 이제  `push`명령을 이용해 도커 허브에 이미지를 전송해 봅니다.
+`subicura`라는 ID를 사용하고 이미지 이름을 `sinatra-app`으로 변경했습니다. 첫 번째 버전이므로 태그는 `1`을 사용합니다. 이제  `push`명령을 이용해 도커 허브에 이미지를 전송해 봅니다.
 
 {% highlight bash linenos %}
 docker push subicura/sinatra-app:1
@@ -598,7 +598,7 @@ af605e724c5a: Mounted from library/ubuntu
 1: digest: sha256:af83aca920982c1fb17f08b4aa300439470349d58d63c921f67261054a0c9467 size: 2409
 {% endhighlight %}
 
-성공적으로 이미지를 도커 허브에 저장하였습니다. 도커 허브에 저장된 50만 개의 이미지에 새로운 이미지가 하나 추가되었습니다!
+성공적으로 이미지를 도커 허브에 푸시하였습니다. 도커 허브에 저장된 50만 개의 이미지에 새로운 이미지가 하나 추가되었습니다!
 
 이제 어디서든 `subicura/sinatra-app:1`이미지를 사용할 수 있습니다.
 
@@ -722,7 +722,7 @@ registry
 
 **보안**
 
-도커 레지스트리는 일반적인 HTTP 프로토콜을 사용합니다. 따라서 SSL(HTTPS)을 사용하지 않으면 이미지 내용이 유출될 수 있습니다. 이런 보안 이슈 때문에 도커는 기본적으로 로컬(localhost) 서버를 제외하곤 HTTP 사용을 금지하고 있으며 이런 보안위험을 무시하려면 도커 엔진을 실행할 때 허용 옵션을 넣어야 합니다.
+도커 레지스트리는 일반적인 HTTP 프로토콜을 사용하여 이미지를 전송합니다. 따라서 SSL(HTTPS)을 사용하지 않으면 이미지 내용이 유출될 수 있습니다. 이런 보안 이슈 때문에 도커는 기본적으로 로컬(localhost) 서버를 제외하곤 HTTP 사용을 금지하고 있으며 이런 보안위험을 무시하려면 도커 엔진을 실행할 때 허용 옵션을 넣어야 합니다.
 
 관련 설정은 [문서](https://docs.docker.com/registry/insecure/)를 참고하시기 바랍니다.
 
@@ -753,15 +753,15 @@ ftp, rsync, ant, gradle, caistrano, fabric, chef, puppet, ansible등 다양한 �
 
 도커를 사용하면 업데이트하는 방식도 배포와 큰 차이가 없습니다.
 
-최신 이미지를 기반으로 새 컨테이너를 실행하고 이전 컨테이너를 중지(삭제)하면 됩니다. 최신 소스를 어떻게 복사할지 서버 프로세스는 어떻게 재시작할지 고민할 필요가 없습니다. 그냥 통째로 바꿔버리는 겁니다.
+최신 이미지를 기반으로 새 컨테이너를 만들고 이전 컨테이너를 중지(삭제)하면 됩니다. 최신 소스를 어떻게 복사할지 서버 프로세스는 어떻게 재시작할지 고민할 필요가 없습니다. 그냥 통째로 바꿔버리는 겁니다.
 
-단, 컨테이너를 중지하지 않고 graceful~~스무스~~하게 샤샤샥 교체하는 방법 같은 건 존재하지 않습니다.
+단, 컨테이너를 중지하지 않고 graceful~~스무스~~하게 샤샤샥 교체하는 방법은 아쉽지만 존재하지 않습니다.
 
 > 컨테이너를 중지하지 않고 컨테이너 내부에 접속하여 소스를 업데이트하는 방법도 "가능"은 하지만 컨테이너의 장점을 살릴 수 없는 "잘못된 패턴"입니다.  
 
 이런 방식은 매우 단순하지만, 컨테이너가 멈추는 순간 실행 중인 프로세스가 **종료**되고 프로세스가 종료되면 고객들은 접속이 안 되고 접속이 안 되면 매출이 떨어지고 매출이 떨어지면 월급이 안나오기 때문에 무중단을 고려한 [nginx](http://nginx.org/)나 [HAProxy](http://www.haproxy.org/)같은 로드 발란서<sub>Load Balancer</sub>와 2대 이상의 컨테이너를 사용해야 합니다.
 
-여기서는 개념만 소개하고 실제로 컨테이너를 업데이트하는 구체적인 방법은 [도커를 이용한 웹서비스 무중단 배포하기]({% post_url 2016-06-07-zero-downtime-docker-deployment %})~~막간 홍보~~링크로 대신합니다.
+여기서는 개념만 소개하고 실제로 컨테이너를 업데이트하는 구체적인 방법은 [도커를 이용한 웹서비스 무중단 배포하기]({% post_url 2016-06-07-zero-downtime-docker-deployment %})~~막간 홍보~~글로 대신합니다.
 
 ### 배포에 대해 더 알아보기
 
@@ -778,9 +778,9 @@ ftp, rsync, ant, gradle, caistrano, fabric, chef, puppet, ansible등 다양한 �
 
 초보를 위한 도커 안내서는 오늘도 서버운영으로 고통받고 있는 개발자분께 도커를 소개하고 전반적인 내용을 전달하기 위해 작성하였습니다. 길다면 길고 짧다면 짧은 글을 통해 아무쪼록 초보분들에게 많은 도움이 되었으면 좋겠습니다. 
 
-도커에 대해 궁금한 점이 있으면 [오픈컨테이너 슬랙](http://slack.opencontainer.co.kr)으로 오시면 많은 도움을 받을 수 있습니다. 내용에 대한 다양한 피드백도 환영합니다. 읽어주셔서 감사합니다~
+도커에 대해 궁금한 점은 [오픈컨테이너 슬랙](http://slack.opencontainer.co.kr)으로 오시면 많은 도움을 받을 수 있습니다. 내용에 대한 다양한 피드백도 환영합니다. 읽어주셔서 감사합니다~
 
-마지막으로 좋아하는 슬라이드를 소개하며 글을 마칩니다.
+마지막으로 "Future of Everything(모든것의 미래)"라는 슬라이드를 소개하며 글을 마칩니다.
 
 <div style="text-align: center; margin-bottom: 20px">
   <iframe src="//www.slideshare.net/slideshow/embed_code/key/IylipWTfVGtdaY" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
