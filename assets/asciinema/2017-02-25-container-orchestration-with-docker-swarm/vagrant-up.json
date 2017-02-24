@@ -1,0 +1,718 @@
+{
+  "version": 1,
+  "width": 80,
+  "height": 25,
+  "duration": 144.733183,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.424796,
+      "\u001b]0;~/Workspace/project/github.com/subicura/docker-swarm-demo\u0007"
+    ],
+    [
+      0.032044,
+      "\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[39m\u001b[38;5;242m master\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      2.6e-05,
+      "\u001b]2;subicura@subicuraui-MacBook-Pro: ~/Workspace/project/github.com/subicura/docker-swarm-demo\u0007\u001b]1;..er-swarm-demo\u0007"
+    ],
+    [
+      0.000356,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      3.1e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.013567,
+      "\u001b[1A\u001b[80D\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[39m\u001b[38;5;242m master*\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\u001b[K\r\n"
+    ],
+    [
+      0.00019,
+      "\r\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      1.023732,
+      "v"
+    ],
+    [
+      0.158217,
+      "\bva"
+    ],
+    [
+      0.135758,
+      "g"
+    ],
+    [
+      0.184472,
+      "r"
+    ],
+    [
+      0.064383,
+      "a"
+    ],
+    [
+      0.064425,
+      "n"
+    ],
+    [
+      0.11184,
+      "t"
+    ],
+    [
+      0.104123,
+      " "
+    ],
+    [
+      0.151842,
+      "u"
+    ],
+    [
+      0.087575,
+      "p"
+    ],
+    [
+      0.28823,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      3.6e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.00277,
+      "\u001b]0;docker-swarm-demo: vagrant up\u0007"
+    ],
+    [
+      0.000158,
+      "\u001b]2;vagrant up\u0007\u001b]1;vagrant\u0007"
+    ],
+    [
+      4.230755,
+      "\u001b[0mBringing machine 'core-01' up with 'virtualbox' provider...\u001b[0m\r\n"
+    ],
+    [
+      0.000938,
+      "\u001b[0mBringing machine 'core-02' up with 'virtualbox' provider...\u001b[0m\r\n"
+    ],
+    [
+      0.000888,
+      "\u001b[0mBringing machine 'core-03' up with 'virtualbox' provider...\u001b[0m\r\n"
+    ],
+    [
+      0.504571,
+      "\u001b[1m==> core-01: Importing base box 'coreos-alpha'...\u001b[0m\r\n"
+    ],
+    [
+      2.916236,
+      "\u001b[0m\r\u001b[K\u001b[0m"
+    ],
+    [
+      0.000144,
+      "\u001b[0mProgress: 10%\u001b[0m"
+    ],
+    [
+      0.303981,
+      "\u001b[0m\r\u001b[K\u001b[0m"
+    ],
+    [
+      0.000153,
+      "\u001b[0mProgress: 90%\u001b[0m"
+    ],
+    [
+      0.833689,
+      "\u001b[0m\r\u001b[K\u001b[0m"
+    ],
+    [
+      0.073019,
+      "\u001b[1m==> core-01: Matching MAC address for NAT networking...\u001b[0m\r\n"
+    ],
+    [
+      0.147746,
+      "\u001b[1m==> core-01: Checking if box 'coreos-alpha' is up to date...\u001b[0m\r\n"
+    ],
+    [
+      2.707958,
+      "\u001b[1m==> core-01: Setting the name of the VM: docker-swarm-demo_core-01_1487951210498_92188\u001b[0m\r\n"
+    ],
+    [
+      0.394102,
+      "\u001b[1m==> core-01: Clearing any previously set network interfaces...\u001b[0m\r\n"
+    ],
+    [
+      0.205327,
+      "\u001b[1m==> core-01: Preparing network interfaces based on configuration...\u001b[0m\r\n"
+    ],
+    [
+      0.000385,
+      "\u001b[0m    core-01: Adapter 1: nat\u001b[0m\r\n"
+    ],
+    [
+      0.000381,
+      "\u001b[0m    core-01: Adapter 2: hostonly\u001b[0m\r\n"
+    ],
+    [
+      0.053831,
+      "\u001b[1m==> core-01: Forwarding ports...\u001b[0m\r\n"
+    ],
+    [
+      0.072423,
+      "\u001b[0m    core-01: 22 (guest) => 2222 (host) (adapter 1)\u001b[0m\r\n"
+    ],
+    [
+      0.152865,
+      "\u001b[1m==> core-01: Running 'pre-boot' VM customizations...\u001b[0m\r\n"
+    ],
+    [
+      0.255199,
+      "\u001b[1m==> core-01: Booting VM...\u001b[0m\r\n"
+    ],
+    [
+      0.326373,
+      "\u001b[1m==> core-01: Waiting for machine to boot. This may take a few minutes...\u001b[0m\r\n"
+    ],
+    [
+      0.307221,
+      "\u001b[0m    core-01: SSH address: 127.0.0.1:2222\u001b[0m\r\n"
+    ],
+    [
+      0.000271,
+      "\u001b[0m    core-01: SSH username: core\u001b[0m\r\n"
+    ],
+    [
+      0.000278,
+      "\u001b[0m    core-01: SSH auth method: private key\u001b[0m\r\n"
+    ],
+    [
+      6.874193,
+      "\u001b[0m    core-01: Warning: Remote connection disconnect. Retrying...\u001b[0m\r\n"
+    ],
+    [
+      8.866894,
+      "\u001b[1m==> core-01: Machine booted and ready!\u001b[0m\r\n"
+    ],
+    [
+      0.000664,
+      "\u001b[1m==> core-01: [vagrant-hostsupdater] Checking for host entries\u001b[0m\r\n"
+    ],
+    [
+      0.000798,
+      "\u001b[1m==> core-01: [vagrant-hostsupdater] Writing the following entries to (/etc/hosts)\u001b[0m\r\n"
+    ],
+    [
+      0.000582,
+      "\u001b[1m==> core-01: [vagrant-hostsupdater]   172.17.8.101  core-01  # VAGRANT: 7f0ee1d563ab6ceaa15bb00141ad17f7 (core-01) / 0627b979-2faa-4d91-8cc2-c0b417c0d96c\u001b[0m\r\n"
+    ],
+    [
+      0.000351,
+      "\u001b[1m==> core-01: [vagrant-hostsupdater] This operation requires administrative access. You may skip it by manually adding equivalent entries to the hosts file.\u001b[0m\r\n"
+    ],
+    [
+      0.063953,
+      "Password:"
+    ],
+    [
+      2.328721,
+      "\r\n"
+    ],
+    [
+      0.096156,
+      "\u001b[1m==> core-01: Setting hostname...\u001b[0m\r\n"
+    ],
+    [
+      0.369502,
+      "\u001b[1m==> core-01: Configuring and enabling network interfaces...\u001b[0m\r\n"
+    ],
+    [
+      15.314467,
+      "\u001b[1m==> core-01: Exporting NFS shared folders...\u001b[0m\r\n"
+    ],
+    [
+      0.029891,
+      "\u001b[1m==> core-01: Preparing to edit /etc/exports. Administrator privileges will be required...\u001b[0m\r\n"
+    ],
+    [
+      0.633513,
+      "\u001b[1m==> core-01: Mounting NFS shared folders...\u001b[0m\r\n"
+    ],
+    [
+      5.221797,
+      "\u001b[1m==> core-01: Running provisioner: file...\u001b[0m\r\n"
+    ],
+    [
+      0.076937,
+      "\u001b[1m==> core-01: Running provisioner: shell...\u001b[0m\r\n"
+    ],
+    [
+      0.220054,
+      "\u001b[0m    core-01: Running: inline script\u001b[0m\r\n"
+    ],
+    [
+      0.040064,
+      "\u001b[1m==> core-01: Running provisioner: shell...\u001b[0m\r\n"
+    ],
+    [
+      0.245231,
+      "\u001b[0m    core-01: Running: inline script\u001b[0m\r\n"
+    ],
+    [
+      0.097996,
+      "\u001b[1;32m==> core-01: vm.max_map_count = 262144\u001b[0m\r\n"
+    ],
+    [
+      0.145441,
+      "\u001b[1m==> core-02: Importing base box 'coreos-alpha'...\u001b[0m\r\n"
+    ],
+    [
+      1.798553,
+      "\u001b[0m\r\u001b[K\u001b[0m"
+    ],
+    [
+      0.000223,
+      "\u001b[0mProgress: 10%\u001b[0m"
+    ],
+    [
+      0.201192,
+      "\u001b[0m\r\u001b[K\u001b[0m"
+    ],
+    [
+      0.000217,
+      "\u001b[0mProgress: 90%\u001b[0m"
+    ],
+    [
+      0.685731,
+      "\u001b[0m\r\u001b[K\u001b[0m"
+    ],
+    [
+      0.075385,
+      "\u001b[1m==> core-02: Matching MAC address for NAT networking...\u001b[0m\r\n"
+    ],
+    [
+      0.134271,
+      "\u001b[1m==> core-02: Checking if box 'coreos-alpha' is up to date...\u001b[0m\r\n"
+    ],
+    [
+      1.869648,
+      "\u001b[1m==> core-02: Setting the name of the VM: docker-swarm-demo_core-02_1487951257658_19970\u001b[0m\r\n"
+    ],
+    [
+      0.382833,
+      "\u001b[1m==> core-02: Fixed port collision for 22 => 2222. Now on port 2200.\u001b[0m\r\n"
+    ],
+    [
+      0.078787,
+      "\u001b[1m==> core-02: Clearing any previously set network interfaces...\u001b[0m\r\n"
+    ],
+    [
+      0.202113,
+      "\u001b[1m==> core-02: Preparing network interfaces based on configuration...\u001b[0m\r\n"
+    ],
+    [
+      0.000392,
+      "\u001b[0m    core-02: Adapter 1: nat\u001b[0m\r\n"
+    ],
+    [
+      0.000458,
+      "\u001b[0m    core-02: Adapter 2: hostonly\u001b[0m\r\n"
+    ],
+    [
+      0.052014,
+      "\u001b[1m==> core-02: Forwarding ports...\u001b[0m\r\n"
+    ],
+    [
+      0.069678,
+      "\u001b[0m    core-02: 22 (guest) => 2200 (host) (adapter 1)\u001b[0m\r\n"
+    ],
+    [
+      0.15353,
+      "\u001b[1m==> core-02: Running 'pre-boot' VM customizations...\u001b[0m\r\n"
+    ],
+    [
+      0.247118,
+      "\u001b[1m==> core-02: Booting VM...\u001b[0m\r\n"
+    ],
+    [
+      0.227559,
+      "\u001b[1m==> core-02: Waiting for machine to boot. This may take a few minutes...\u001b[0m\r\n"
+    ],
+    [
+      0.162536,
+      "\u001b[0m    core-02: SSH address: 127.0.0.1:2200\u001b[0m\r\n"
+    ],
+    [
+      0.000482,
+      "\u001b[0m    core-02: SSH username: core\u001b[0m\r\n"
+    ],
+    [
+      0.000225,
+      "\u001b[0m    core-02: SSH auth method: private key\u001b[0m\r\n"
+    ],
+    [
+      15.899562,
+      "\u001b[1m==> core-02: Machine booted and ready!\u001b[0m\r\n"
+    ],
+    [
+      0.00061,
+      "\u001b[1m==> core-02: [vagrant-hostsupdater] Checking for host entries\u001b[0m\r\n"
+    ],
+    [
+      0.00078,
+      "\u001b[1m==> core-02: [vagrant-hostsupdater] Writing the following entries to (/etc/hosts)\u001b[0m\r\n"
+    ],
+    [
+      0.000334,
+      "\u001b[1m==> core-02: [vagrant-hostsupdater]   172.17.8.102  core-02  # VAGRANT: 937b7bf8cc5a1c1958270b1101d57b6a (core-02) / e05df6a4-828f-4612-a7af-f9d8cd7f972c\u001b[0m\r\n"
+    ],
+    [
+      0.000288,
+      "\u001b[1m==> core-02: [vagrant-hostsupdater] This operation requires administrative access. You may skip it by manually adding equivalent entries to the hosts file.\u001b[0m\r\n"
+    ],
+    [
+      0.038199,
+      "\u001b[1m==> core-02: Setting hostname...\u001b[0m\r\n"
+    ],
+    [
+      0.336349,
+      "\u001b[1m==> core-02: Configuring and enabling network interfaces...\u001b[0m\r\n"
+    ],
+    [
+      15.343705,
+      "\u001b[1m==> core-02: Exporting NFS shared folders...\u001b[0m\r\n"
+    ],
+    [
+      0.026854,
+      "\u001b[1m==> core-02: Preparing to edit /etc/exports. Administrator privileges will be required...\u001b[0m\r\n"
+    ],
+    [
+      0.637585,
+      "\u001b[1m==> core-02: Mounting NFS shared folders...\u001b[0m\r\n"
+    ],
+    [
+      0.18419,
+      "\u001b[1m==> core-02: Running provisioner: file...\u001b[0m\r\n"
+    ],
+    [
+      0.076806,
+      "\u001b[1m==> core-02: Running provisioner: shell...\u001b[0m\r\n"
+    ],
+    [
+      0.20271,
+      "\u001b[0m    core-02: Running: inline script\u001b[0m\r\n"
+    ],
+    [
+      0.042337,
+      "\u001b[1m==> core-02: Running provisioner: shell...\u001b[0m\r\n"
+    ],
+    [
+      0.238438,
+      "\u001b[0m    core-02: Running: inline script\u001b[0m\r\n"
+    ],
+    [
+      0.130846,
+      "\u001b[1;32m==> core-02: vm.max_map_count = 262144\u001b[0m\r\n"
+    ],
+    [
+      0.15195,
+      "\u001b[1m==> core-03: Importing base box 'coreos-alpha'...\u001b[0m\r\n"
+    ],
+    [
+      1.900852,
+      "\u001b[0m\r\u001b[K\u001b[0m"
+    ],
+    [
+      0.000225,
+      "\u001b[0mProgress: 10%\u001b[0m"
+    ],
+    [
+      0.101323,
+      "\u001b[0m\r\u001b[K\u001b[0m"
+    ],
+    [
+      0.000347,
+      "\u001b[0mProgress: 40%\u001b[0m"
+    ],
+    [
+      0.10786,
+      "\u001b[0m\r\u001b[K\u001b[0m"
+    ],
+    [
+      0.000126,
+      "\u001b[0mProgress: 90%\u001b[0m"
+    ],
+    [
+      0.579805,
+      "\u001b[0m\r\u001b[K\u001b[0m"
+    ],
+    [
+      0.076541,
+      "\u001b[1m==> core-03: Matching MAC address for NAT networking...\u001b[0m\r\n"
+    ],
+    [
+      0.133769,
+      "\u001b[1m==> core-03: Checking if box 'coreos-alpha' is up to date...\u001b[0m\r\n"
+    ],
+    [
+      1.86931,
+      "\u001b[1m==> core-03: Setting the name of the VM: docker-swarm-demo_core-03_1487951297316_12421\u001b[0m\r\n"
+    ],
+    [
+      0.48941,
+      "\u001b[1m==> core-03: Fixed port collision for 22 => 2222. Now on port 2201.\u001b[0m\r\n"
+    ],
+    [
+      0.088308,
+      "\u001b[1m==> core-03: Clearing any previously set network interfaces...\u001b[0m\r\n"
+    ],
+    [
+      0.202002,
+      "\u001b[1m==> core-03: Preparing network interfaces based on configuration...\u001b[0m\r\n"
+    ],
+    [
+      0.000498,
+      "\u001b[0m    core-03: Adapter 1: nat\u001b[0m\r\n"
+    ],
+    [
+      0.000306,
+      "\u001b[0m    core-03: Adapter 2: hostonly\u001b[0m\r\n"
+    ],
+    [
+      0.05325,
+      "\u001b[1m==> core-03: Forwarding ports...\u001b[0m\r\n"
+    ],
+    [
+      0.071296,
+      "\u001b[0m    core-03: 22 (guest) => 2201 (host) (adapter 1)\u001b[0m\r\n"
+    ],
+    [
+      0.151419,
+      "\u001b[1m==> core-03: Running 'pre-boot' VM customizations...\u001b[0m\r\n"
+    ],
+    [
+      0.262794,
+      "\u001b[1m==> core-03: Booting VM...\u001b[0m\r\n"
+    ],
+    [
+      0.240278,
+      "\u001b[1m==> core-03: Waiting for machine to boot. This may take a few minutes...\u001b[0m\r\n"
+    ],
+    [
+      0.168125,
+      "\u001b[0m    core-03: SSH address: 127.0.0.1:2201\u001b[0m\r\n"
+    ],
+    [
+      0.000195,
+      "\u001b[0m    core-03: SSH username: core\u001b[0m\r\n"
+    ],
+    [
+      0.000158,
+      "\u001b[0m    core-03: SSH auth method: private key\u001b[0m\r\n"
+    ],
+    [
+      15.893359,
+      "\u001b[1m==> core-03: Machine booted and ready!\u001b[0m\r\n"
+    ],
+    [
+      0.000501,
+      "\u001b[1m==> core-03: [vagrant-hostsupdater] Checking for host entries\u001b[0m\r\n"
+    ],
+    [
+      0.000786,
+      "\u001b[1m==> core-03: [vagrant-hostsupdater] Writing the following entries to (/etc/hosts)\u001b[0m\r\n"
+    ],
+    [
+      0.000259,
+      "\u001b[1m==> core-03: [vagrant-hostsupdater]   172.17.8.103  core-03  # VAGRANT: be36659ac4562f76582a9adf9b255088 (core-03) / 674f37eb-0dc0-4208-8400-fc0ee293f871\u001b[0m\r\n"
+    ],
+    [
+      0.000198,
+      "\u001b[1m==> core-03: [vagrant-hostsupdater] This operation requires administrative access. You may skip it by manually adding equivalent entries to the hosts file.\u001b[0m\r\n"
+    ],
+    [
+      0.035712,
+      "\u001b[1m==> core-03: Setting hostname...\u001b[0m\r\n"
+    ],
+    [
+      0.327794,
+      "\u001b[1m==> core-03: Configuring and enabling network interfaces...\u001b[0m\r\n"
+    ],
+    [
+      15.321243,
+      "\u001b[1m==> core-03: Exporting NFS shared folders...\u001b[0m\r\n"
+    ],
+    [
+      0.031486,
+      "\u001b[1m==> core-03: Preparing to edit /etc/exports. Administrator privileges will be required...\u001b[0m\r\n"
+    ],
+    [
+      0.632837,
+      "\u001b[1m==> core-03: Mounting NFS shared folders...\u001b[0m\r\n"
+    ],
+    [
+      0.176393,
+      "\u001b[1m==> core-03: Running provisioner: file...\u001b[0m\r\n"
+    ],
+    [
+      0.074786,
+      "\u001b[1m==> core-03: Running provisioner: shell...\u001b[0m\r\n"
+    ],
+    [
+      0.203802,
+      "\u001b[0m    core-03: Running: inline script\u001b[0m\r\n"
+    ],
+    [
+      0.054562,
+      "\u001b[1m==> core-03: Running provisioner: shell...\u001b[0m\r\n"
+    ],
+    [
+      0.245017,
+      "\u001b[0m    core-03: Running: inline script\u001b[0m\r\n"
+    ],
+    [
+      0.086306,
+      "\u001b[1;32m==> core-03: vm.max_map_count = 262144\u001b[0m\r\n"
+    ],
+    [
+      0.074343,
+      "\u001b]0;~/Workspace/project/github.com/subicura/docker-swarm-demo"
+    ],
+    [
+      5.5e-05,
+      "\u0007"
+    ],
+    [
+      0.024853,
+      "\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[39m\u001b[38;5;242m master*\u001b[39m\u001b[36m\u001b[39m\u001b[33m 2m 14s\u001b[39m\r\n"
+    ],
+    [
+      0.000104,
+      "\u001b]2;subicura@subicuraui-MacBook-Pro: ~/Workspace/project/github.com/subicura/docker-swarm-demo\u0007\u001b]1;..er-swarm-demo\u0007"
+    ],
+    [
+      0.000136,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      1.8e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      3.4e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.020461,
+      "v"
+    ],
+    [
+      0.191951,
+      "\bva"
+    ],
+    [
+      0.216062,
+      "g"
+    ],
+    [
+      0.215214,
+      "r"
+    ],
+    [
+      0.06438,
+      "a"
+    ],
+    [
+      0.079959,
+      "n"
+    ],
+    [
+      0.096881,
+      "t"
+    ],
+    [
+      0.127185,
+      " "
+    ],
+    [
+      0.224923,
+      "s"
+    ],
+    [
+      0.279403,
+      "t"
+    ],
+    [
+      0.088467,
+      "a"
+    ],
+    [
+      0.103075,
+      "t"
+    ],
+    [
+      0.112239,
+      "u"
+    ],
+    [
+      0.095612,
+      "s"
+    ],
+    [
+      0.121183,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      2.8e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.011899,
+      "\u001b]0;docker-swarm-demo: vagrant status\u0007"
+    ],
+    [
+      0.000134,
+      "\u001b]2;vagrant status\u0007\u001b]1;vagrant\u0007"
+    ],
+    [
+      3.665422,
+      "\u001b[0mCurrent machine states:\r\n\r\ncore-01                   running (virtualbox)\r\ncore-02                   running (virtualbox)\r\ncore-03                   running (virtualbox)\r\n\r\nThis environment represents multiple VMs. The VMs are all listed\r\nabove with their current state. For more information about a specific\r\nVM, run `vagrant status NAME`.\u001b[0m\r\n"
+    ],
+    [
+      0.062844,
+      "\u001b]0;~/Workspace/project/github.com/subicura/docker-swarm-demo\u0007"
+    ],
+    [
+      0.022485,
+      "\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[39m\u001b[38;5;242m master*\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      4.6e-05,
+      "\u001b]2;subicura@subicuraui-MacBook-Pro: ~/Workspace/project/github.com/subicura/docker-swarm-demo\u0007"
+    ],
+    [
+      1.3e-05,
+      "\u001b]1;..er-swarm-demo\u0007"
+    ],
+    [
+      7.7e-05,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.7e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      5.8e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.494593,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

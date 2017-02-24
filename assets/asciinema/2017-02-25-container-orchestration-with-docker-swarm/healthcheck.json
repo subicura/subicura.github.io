@@ -1,0 +1,1702 @@
+{
+  "version": 1,
+  "width": 80,
+  "height": 25,
+  "duration": 117.009027,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.607909,
+      "\u001b]0;~/Workspace/project/github.com/subicura/docker-swarm-demo\u0007"
+    ],
+    [
+      0.039212,
+      "\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[39m\u001b[38;5;242m master\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      8.1e-05,
+      "\u001b]2;subicura@subicuraui-MacBook-Pro: ~/Workspace/project/github.com/subicura/docker-swarm-demo\u0007\u001b]1;..er-swarm-demo\u0007"
+    ],
+    [
+      0.000449,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      3.5e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.012665,
+      "\u001b[1A\u001b[80D\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[39m\u001b[38;5;242m master*\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\u001b[K\r\n"
+    ],
+    [
+      0.00028,
+      "\r\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      0.586422,
+      "t"
+    ],
+    [
+      0.150271,
+      "\btm"
+    ],
+    [
+      0.215718,
+      "u"
+    ],
+    [
+      0.080124,
+      "x"
+    ],
+    [
+      0.247941,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      2.8e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.002453,
+      "\u001b]0;docker-swarm-demo: _zsh_tmux_plugin_run\u0007"
+    ],
+    [
+      0.000156,
+      "\u001b]2;_zsh_tmux_plugin_run\u0007\u001b]1;tmux\u0007"
+    ],
+    [
+      0.062823,
+      "\u001b[?1049h\u001b(B\u001b[m\u001b[?1l\u001b>\u001b[H\u001b[2J\u001b[?12l\u001b[?25h\u001b[?1000l\u001b[?1002l\u001b[?1006l\u001b[?1005l\u001b]112\u0007\u001b[?25l\u001b[1;1H\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[38;5;81m\u001b[48;5;238m\u001b[1m 0\u001b[38;5;250m:\u001b[38;5;255mcore@core-01:~\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;138m\u001b[48;5;235m 1\u001b[38;5;237m:\u001b[38;5;250m..er-swarm-demo\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[25;1H\u001b[1;25r\u001b[H\u001b[17C\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.550736,
+      "\u001b[1;24r\u001b[H\u001b[17Cd\u001b[1;25r\u001b[H\u001b[18C"
+    ],
+    [
+      0.104436,
+      "\u001b[1;24r\u001b[H\u001b[18Co\u001b[1;25r\u001b[H\u001b[19C"
+    ],
+    [
+      0.088006,
+      "\u001b[1;24r\u001b[H\u001b[19Cc\u001b[1;25r\u001b[H\u001b[20C"
+    ],
+    [
+      0.088109,
+      "\u001b[1;24r\u001b[H\u001b[20Ck\u001b[1;25r\u001b[H\u001b[21C"
+    ],
+    [
+      0.10412,
+      "\u001b[1;24r\u001b[H\u001b[21Ce\u001b[1;25r\u001b[H\u001b[22C"
+    ],
+    [
+      0.087834,
+      "\u001b[1;24r\u001b[H\u001b[22Cr\u001b[1;25r\u001b[H\u001b[23C"
+    ],
+    [
+      0.087907,
+      "\u001b[1;24r\u001b[H\u001b[23C \u001b[1;25r\u001b[H\u001b[24C"
+    ],
+    [
+      0.208797,
+      "\u001b[1;24r\u001b[H\u001b[24Cs\u001b[1;25r\u001b[H\u001b[25C"
+    ],
+    [
+      0.078864,
+      "\u001b[1;24r\u001b[H\u001b[25Ce\u001b[1;25r\u001b[H\u001b[26C"
+    ],
+    [
+      0.088028,
+      "\u001b[1;24r\u001b[H\u001b[26Cr\u001b[1;25r\u001b[H\u001b[27C"
+    ],
+    [
+      0.21633,
+      "\u001b[1;24r\u001b[H\u001b[27Cv\u001b[1;25r\u001b[H\u001b[28C"
+    ],
+    [
+      0.127307,
+      "\u001b[1;24r\u001b[H\u001b[28Ci\u001b[1;25r\u001b[H\u001b[29C"
+    ],
+    [
+      0.080817,
+      "\u001b[1;24r\u001b[H\u001b[29Cc\u001b[1;25r\u001b[H\u001b[30C"
+    ],
+    [
+      0.080059,
+      "\u001b[1;24r\u001b[H\u001b[30Ce\u001b[1;25r\u001b[H\u001b[31C"
+    ],
+    [
+      0.095854,
+      "\u001b[1;24r\u001b[H\u001b[31C \u001b[1;25r\u001b[H\u001b[32C"
+    ],
+    [
+      0.199641,
+      "\u001b[1;24r\u001b[H\u001b[32Cu\u001b[1;25r\u001b[H\u001b[33C"
+    ],
+    [
+      0.080463,
+      "\u001b[1;24r\u001b[H\u001b[33Cp\u001b[1;25r\u001b[H\u001b[34C"
+    ],
+    [
+      0.0639,
+      "\u001b[1;24r\u001b[H\u001b[34Cd\u001b[1;25r\u001b[H\u001b[35C"
+    ],
+    [
+      0.112014,
+      "\u001b[1;24r\u001b[H\u001b[35Ca\u001b[1;25r\u001b[H\u001b[36C"
+    ],
+    [
+      0.096718,
+      "\u001b[1;24r\u001b[H\u001b[36Ct\u001b[1;25r\u001b[H\u001b[37C"
+    ],
+    [
+      0.071254,
+      "\u001b[1;24r\u001b[H\u001b[37Ce\u001b[1;25r\u001b[H\u001b[38C"
+    ],
+    [
+      0.096878,
+      "\u001b[1;24r\u001b[H\u001b[38C \u001b[1;25r\u001b[H\u001b[39C"
+    ],
+    [
+      0.150569,
+      "\u001b[1;24r\u001b[H\u001b[39C-\u001b[1;25r\u001b[H\u001b[40C"
+    ],
+    [
+      0.136547,
+      "\u001b[1;24r\u001b[H\u001b[40C-\u001b[1;25r\u001b[H\u001b[41C"
+    ],
+    [
+      0.175822,
+      "\u001b[1;24r\u001b[H\u001b[41Ci\u001b[1;25r\u001b[H\u001b[42C"
+    ],
+    [
+      0.144016,
+      "\u001b[1;24r\u001b[H\u001b[42Cm\u001b[1;25r\u001b[H\u001b[43C"
+    ],
+    [
+      0.096084,
+      "\u001b[1;24r\u001b[H\u001b[43Ca\u001b[1;25r\u001b[H\u001b[44C"
+    ],
+    [
+      0.080267,
+      "\u001b[1;24r\u001b[H\u001b[44Cg\u001b[1;25r\u001b[H\u001b[45C"
+    ],
+    [
+      0.087896,
+      "\u001b[1;24r\u001b[H\u001b[45Ce\u001b[1;25r\u001b[H\u001b[46C"
+    ],
+    [
+      0.207766,
+      "\u001b[1;24r\u001b[H\u001b[46C \u001b[1;25r\u001b[H\u001b[47C"
+    ],
+    [
+      0.168079,
+      "\u001b[1;24r\u001b[H\u001b[47C\\\u001b[1;25r\u001b[H\u001b[48C"
+    ],
+    [
+      0.287978,
+      "\u001b[1;24r\u001b[H\r\n> \u001b[1;25r\u001b[H\u001b[2;3H"
+    ],
+    [
+      0.311949,
+      "\u001b[1;24r\u001b[H\u001b[2;3Hs\u001b[1;25r\u001b[H\u001b[2;4H"
+    ],
+    [
+      0.087723,
+      "\u001b[1;24r\u001b[H\u001b[2;4Hu\u001b[1;25r\u001b[H\u001b[2;5H"
+    ],
+    [
+      0.112804,
+      "\u001b[1;24r\u001b[H\u001b[2;5Hb\u001b[1;25r\u001b[H\u001b[2;6H"
+    ],
+    [
+      0.09536,
+      "\u001b[1;24r\u001b[H\u001b[2;6Hi\u001b[1;25r\u001b[H\u001b[2;7H"
+    ],
+    [
+      0.104273,
+      "\u001b[1;24r\u001b[H\u001b[2;7Hc\u001b[1;25r\u001b[H\u001b[2;8H"
+    ],
+    [
+      0.079864,
+      "\u001b[1;24r\u001b[H\u001b[2;8Hu\u001b[1;25r\u001b[H\u001b[2;9H"
+    ],
+    [
+      0.143354,
+      "\u001b[1;24r\u001b[H\u001b[2;9Hr\u001b[1;25r\u001b[H\u001b[2;10H"
+    ],
+    [
+      0.088664,
+      "\u001b[1;24r\u001b[H\u001b[2;10Ha\u001b[1;25r\u001b[H\u001b[2;11H"
+    ],
+    [
+      0.160697,
+      "\u001b[1;24r\u001b[H\u001b[2;11H/\u001b[1;25r\u001b[H\u001b[2;12H"
+    ],
+    [
+      0.255115,
+      "\u001b[1;24r\u001b[H\u001b[2;12Hw\u001b[1;25r\u001b[H\u001b[2;13H"
+    ],
+    [
+      0.087724,
+      "\u001b[1;24r\u001b[H\u001b[2;13Hh\u001b[1;25r\u001b[H\u001b[2;14H"
+    ],
+    [
+      0.080467,
+      "\u001b[1;24r\u001b[H\u001b[2;14Ho\u001b[1;25r\u001b[H\u001b[2;15H"
+    ],
+    [
+      0.112035,
+      "\u001b[1;24r\u001b[H\u001b[2;15Ha\u001b[1;25r\u001b[H\u001b[2;16H"
+    ],
+    [
+      0.10545,
+      "\u001b[1;24r\u001b[H\u001b[2;16Hm\u001b[1;25r\u001b[H\u001b[2;17H"
+    ],
+    [
+      0.102125,
+      "\u001b[1;24r\u001b[H\u001b[2;17Hi\u001b[1;25r\u001b[H\u001b[2;18H"
+    ],
+    [
+      0.280137,
+      "\u001b[1;24r\u001b[H\u001b[2;18H:\u001b[1;25r\u001b[H\u001b[2;19H"
+    ],
+    [
+      0.192053,
+      "\u001b[1;24r\u001b[H\u001b[2;19H2\u001b[1;25r\u001b[H\u001b[2;20H"
+    ],
+    [
+      0.120092,
+      "\u001b[1;24r\u001b[H\u001b[2;20H \u001b[1;25r\u001b[H\u001b[2;21H"
+    ],
+    [
+      1.360723,
+      "\u001b[1;24r\u001b[H\u001b[2;21H\\\u001b[1;25r\u001b[H\u001b[2;22H"
+    ],
+    [
+      0.175684,
+      "\u001b[1;24r\u001b[H\u001b[2B> \u001b[1;25r\u001b[H\u001b[3;3H"
+    ],
+    [
+      0.143525,
+      "\u001b[1;24r\u001b[H\u001b[3;3Hw\u001b[1;25r\u001b[H\u001b[3;4H"
+    ],
+    [
+      0.095553,
+      "\u001b[1;24r\u001b[H\u001b[3;4Hh\u001b[1;25r\u001b[H\u001b[3;5H"
+    ],
+    [
+      0.096654,
+      "\u001b[1;24r\u001b[H\u001b[3;5Ho\u001b[1;25r\u001b[H\u001b[3;6H"
+    ],
+    [
+      0.13576,
+      "\u001b[1;24r\u001b[H\u001b[3;6Ha\u001b[1;25r\u001b[H\u001b[3;7H"
+    ],
+    [
+      0.096203,
+      "\u001b[1;24r\u001b[H\u001b[3;7Hm\u001b[1;25r\u001b[H\u001b[3;8H"
+    ],
+    [
+      0.135695,
+      "\u001b[1;24r\u001b[H\u001b[3;8Hi\u001b[1;25r\u001b[H\u001b[3;9H"
+    ],
+    [
+      0.378302,
+      "\r\n"
+    ],
+    [
+      8.381165,
+      "\u001b[1;24r\u001b[H\u001b[3Bwhoami\r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[5;18H"
+    ],
+    [
+      1.461352,
+      "\u001b[1;24r\u001b[H\u001b[5;18Hd\u001b[1;25r\u001b[H\u001b[5;19H"
+    ],
+    [
+      0.071845,
+      "\u001b[1;24r\u001b[H\u001b[5;19Ho\u001b[1;25r\u001b[H\u001b[5;20H"
+    ],
+    [
+      0.104177,
+      "\u001b[1;24r\u001b[H\u001b[5;20Hc\u001b[1;25r\u001b[H\u001b[5;21H"
+    ],
+    [
+      0.079444,
+      "\u001b[1;24r\u001b[H\u001b[5;21Hk\u001b[1;25r\u001b[H\u001b[5;22H"
+    ],
+    [
+      0.104537,
+      "\u001b[1;24r\u001b[H\u001b[5;22He\u001b[1;25r\u001b[H\u001b[5;23H"
+    ],
+    [
+      0.096022,
+      "\u001b[1;24r\u001b[H\u001b[5;23Hr\u001b[1;25r\u001b[H\u001b[5;24H"
+    ],
+    [
+      0.064064,
+      "\u001b[1;24r\u001b[H\u001b[5;24H \u001b[1;25r\u001b[H\u001b[5;25H"
+    ],
+    [
+      1.223856,
+      "\u001b[1;24r\u001b[H\u001b[5;25Hs\u001b[1;25r\u001b[H\u001b[5;26H"
+    ],
+    [
+      0.087796,
+      "\u001b[1;24r\u001b[H\u001b[5;26He\u001b[1;25r\u001b[H\u001b[5;27H"
+    ],
+    [
+      0.120939,
+      "\u001b[1;24r\u001b[H\u001b[5;27Hr\u001b[1;25r\u001b[H\u001b[5;28H"
+    ],
+    [
+      0.223225,
+      "\u001b[1;24r\u001b[H\u001b[5;28Hv\u001b[1;25r\u001b[H\u001b[5;29H"
+    ],
+    [
+      0.080424,
+      "\u001b[1;24r\u001b[H\u001b[5;29Hi\u001b[1;25r\u001b[H\u001b[5;30H"
+    ],
+    [
+      0.103375,
+      "\u001b[1;24r\u001b[H\u001b[5;30Hc\u001b[1;25r\u001b[H\u001b[5;31H"
+    ],
+    [
+      0.047866,
+      "\u001b[1;24r\u001b[H\u001b[5;31He\u001b[1;25r\u001b[H\u001b[5;32H"
+    ],
+    [
+      0.104686,
+      "\u001b[1;24r\u001b[H\u001b[5;32H \u001b[1;25r\u001b[H\u001b[5;33H"
+    ],
+    [
+      0.175481,
+      "\u001b[1;24r\u001b[H\u001b[5;33Hp\u001b[1;25r\u001b[H\u001b[5;34H"
+    ],
+    [
+      0.080004,
+      "\u001b[1;24r\u001b[H\u001b[5;34Hs\u001b[1;25r\u001b[H\u001b[5;35H"
+    ],
+    [
+      0.12011,
+      "\u001b[1;24r\u001b[H\u001b[5;35H \u001b[1;25r\u001b[H\u001b[5;36H"
+    ],
+    [
+      0.128446,
+      "\u001b[1;24r\u001b[H\u001b[5;36Hw\u001b[1;25r\u001b[H\u001b[5;37H"
+    ],
+    [
+      0.079761,
+      "\u001b[1;24r\u001b[H\u001b[5;37Hh\u001b[1;25r\u001b[H\u001b[5;38H"
+    ],
+    [
+      0.071843,
+      "\u001b[1;24r\u001b[H\u001b[5;38Ho\u001b[1;25r\u001b[H\u001b[5;39H"
+    ],
+    [
+      0.135859,
+      "\u001b[1;24r\u001b[H\u001b[5;39Ha\u001b[1;25r\u001b[H\u001b[5;40H"
+    ],
+    [
+      0.103534,
+      "\u001b[1;24r\u001b[H\u001b[5;40Hm\u001b[1;25r\u001b[H\u001b[5;41H"
+    ],
+    [
+      0.136435,
+      "\u001b[1;24r\u001b[H\u001b[5;41Hi\u001b[1;25r\u001b[H\u001b[5;42H"
+    ],
+    [
+      0.28211,
+      "\r\n"
+    ],
+    [
+      0.012891,
+      "\u001b[1;24r\u001b[H\u001b[5BID            NAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[6;52H"
+    ],
+    [
+      0.001348,
+      "\u001b[1;24r\u001b[H\u001b[6;52H     DESIRED STATE  CURRENT STATE            ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Ready          Preparing 5 seconds ago         \r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Running 5 seconds ago           \r\nnwkduapf1kvk  whoami.2      subicura/whoami:1  core-03  Running        Running 9 minutes ago           \r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 9 minutes ago           \r\nmntns383mnhz  whoami.4      subicura/whoami:1  core-01  Running        Running 11 minutes ago          \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9 minutes ago           \u001b[1;25r\u001b[H\u001b[20d"
+    ],
+    [
+      0.001296,
+      "\u001b[1;24r\u001b[H\u001b[20d\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[20;18H"
+    ],
+    [
+      5.137516,
+      "\u001b[1;24r\u001b[H\u001b[20;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[20;42H"
+    ],
+    [
+      0.771965,
+      "\r\n"
+    ],
+    [
+      0.0221,
+      "\u001b[1;24r\u001b[H\u001b[21dID            NAME          IMAGE              NODE     DESIRED STATE  CURRENT STATE           ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Ready          Ready 2 seconds ago            \r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Running 11 seconds ago         \r\nnwkduapf1kvk  whoami.2      subicura/whoami:1  core-03  Running        Running 9 minutes ago          \r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 9 minutes ago          \r\nmntns383mnhz  whoami.4      subicura/whoami:1  core-01  Running        Running 11 minutes ago         \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9 minutes ago          \r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      4.625324,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.945266,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.015029,
+      "\u001b[1;24r\u001b[H\u001b[24dID            \u001b[1;25r\u001b[H\u001b[24;15H"
+    ],
+    [
+      3.7e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;15HNAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[24;52H"
+    ],
+    [
+      0.001026,
+      "\u001b[1;24r\u001b[H\u001b[24;52H     DESIRED STATE  CURRENT STATE           ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Starting 5 seconds ago         \u001b[1;25r\u001b[H\u001b[24;23H"
+    ],
+    [
+      0.000102,
+      "\u001b[1;24r\u001b[H\u001b[24d\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown 5 seconds ago         \r\nnwkduapf1kvk  whoami.2      \u001b[1;25r\u001b[H\u001b[24;29H"
+    ],
+    [
+      0.00081,
+      "\u001b[1;24r\u001b[H\u001b[24;29Hsubicura/whoami:1  core-03  Running        \u001b[1;25r\u001b[H\u001b[24;72H"
+    ],
+    [
+      0.000189,
+      "\u001b[1;24r\u001b[H\u001b[24;72HRunning 9 minutes ago          \r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 9 minutes ago          \r\nmntns383mnhz  whoami.4\u001b[1;25r\u001b[H\u001b[24;23H"
+    ],
+    [
+      0.000106,
+      "\u001b[1;24r\u001b[H\u001b[24;23H      subicura/whoami:1  core-01  Running\u001b[1;25r\u001b[H\u001b[24;64H\u001b[1;24r\u001b[H\u001b[24;64H        \u001b[1;25r\u001b[H\u001b[24;72H"
+    ],
+    [
+      0.000242,
+      "\u001b[1;24r\u001b[H\u001b[24;72HRunning 11 minutes ago\u001b[1;25r\u001b[H\u001b[24;14H"
+    ],
+    [
+      0.00055,
+      "\u001b[1;24r\u001b[H\u001b[24;14H         \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02\u001b[1;25r\u001b[H\u001b[24;55H"
+    ],
+    [
+      5.2e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;55H  Running        Running 9 minutes ago          \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.002656,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      3.551159,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.818233,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.011983,
+      "\u001b[1;24r\u001b[H\u001b[24dID            NAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[24;52H"
+    ],
+    [
+      0.001013,
+      "\u001b[1;24r\u001b[H\u001b[24;52H     DESIRED STATE  CURRENT STATE           ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Starting 9 seconds ago         \r\nz5mcfb0lcizi  \u001b[1;25r\u001b[H\u001b[24;15H"
+    ],
+    [
+      6.4e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;15H \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown 9 seconds ago         \r\nnwkduapf1kvk  whoami.2      subicura/whoami:1  \u001b[1;25r\u001b[H\u001b[24;48H"
+    ],
+    [
+      0.000699,
+      "\u001b[1;24r\u001b[H\u001b[24;48Hcore-03  Running        Running 10 minutes ago         \r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03\u001b[1;25r\u001b[H\u001b[24;55H"
+    ],
+    [
+      9.1e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;55H  Running        Running 10 minutes ago         \r\nmntns383mnhz  whoami.4      subicura/whoami:1  core-01\u001b[1;25r\u001b[H\u001b[24;55H"
+    ],
+    [
+      0.000125,
+      "\u001b[1;24r\u001b[H\u001b[24;55H  \u001b[1;25r\u001b[H\u001b[24;57H"
+    ],
+    [
+      0.000296,
+      "\u001b[1;24r\u001b[H\u001b[24;57HRunning\u001b[1;25r\u001b[H\u001b[24;64H"
+    ],
+    [
+      0.000354,
+      "\u001b[1;24r\u001b[H\u001b[24;64H        \u001b[1;25r\u001b[H\u001b[24;72H"
+    ],
+    [
+      0.000401,
+      "\u001b[1;24r\u001b[H\u001b[24;72HRunning 11 minutes ago\u001b[1;25r\u001b[H\u001b[24;14H"
+    ],
+    [
+      0.000644,
+      "\u001b[1;24r\u001b[H\u001b[24;14H  \u001b[1;25r\u001b[H\u001b[24;16H\u001b[1;24r\u001b[H\u001b[24;16H       \u001b[1;25r\u001b[H\u001b[24;23H\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      8.6e-05,
+      "\u001b[1;24r\u001b[H\u001b[24dxga086cubnj3\u001b[1;25r\u001b[H\u001b[24;13H"
+    ],
+    [
+      9.4e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;13H  \u001b[1;25r\u001b[H\u001b[24;15H"
+    ],
+    [
+      0.000122,
+      "\u001b[1;24r\u001b[H\u001b[24;15Hwhoami.5\u001b[1;25r\u001b[H\u001b[24;23H"
+    ],
+    [
+      0.000185,
+      "\u001b[1;24r\u001b[H\u001b[24;23H      \u001b[1;25r\u001b[H\u001b[24;29H"
+    ],
+    [
+      0.000154,
+      "\u001b[1;24r\u001b[H\u001b[24;29Hsubicura/whoami:1\u001b[1;25r\u001b[H\u001b[24;46H"
+    ],
+    [
+      4.7e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;46H  \u001b[1;25r\u001b[H\u001b[24;48H"
+    ],
+    [
+      0.000756,
+      "\u001b[1;24r\u001b[H\u001b[24;48Hcore-02\u001b[1;25r\u001b[H\u001b[24;55H"
+    ],
+    [
+      0.001685,
+      "\u001b[1;24r\u001b[H\u001b[24;55H  Running        Running 9 minutes ago          \r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      3.539909,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.963052,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.012887,
+      "\u001b[1;24r\u001b[H\u001b[24dID            NAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[24;52H"
+    ],
+    [
+      0.000454,
+      "\u001b[1;24r\u001b[H\u001b[24;52H     DESIRED STATE  CURRENT STATE            ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 4 seconds ago           \r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1\u001b[1;25r\u001b[H\u001b[24;46H"
+    ],
+    [
+      0.001268,
+      "\u001b[1;24r\u001b[H\u001b[24;46H  core-01  Shutdown       Shutdown 14 seconds ago\u001b[1;25r\u001b[H\u001b[24;15H\u001b[1;24r\u001b[H\u001b[24;15H         \r\nnwkduapf1kvk  whoami.2      subicura/whoami:1  core-03  Running        Running 10 minutes ago\u001b[1;25r\u001b[H\u001b[24;14H"
+    ],
+    [
+      0.002305,
+      "\u001b[1;24r\u001b[H\u001b[24;14H          \r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 10 minutes ago          \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Ready          Ready 3 seconds ago             \r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Running 3 seconds ago           \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001521,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      3.281766,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      1.077731,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.039936,
+      "\u001b[1;24r\u001b[H\u001b[24dID            \u001b[1;25r\u001b[H\u001b[24;15H"
+    ],
+    [
+      0.001064,
+      "\u001b[1;24r\u001b[H\u001b[24;15HNAME\u001b[1;25r\u001b[H\u001b[24;19H\u001b[1;24r\u001b[H\u001b[24;19H          IMAGE              NODE     DESIRED STATE  \u001b[1;25r\u001b[H\u001b[24;72H"
+    ],
+    [
+      0.001311,
+      "\u001b[1;24r\u001b[H\u001b[24;72HCURRENT STATE            ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 8 seconds ago           \r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown 18 seconds ago         \r\nnwkduapf1kvk  whoami.2      subicura/whoami:1\u001b[1;25r\u001b[H\u001b[24;46H"
+    ],
+    [
+      0.00024,
+      "\u001b[1;24r\u001b[H\u001b[24;46H  core-03  Running        Running 10 minutes ago          \r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 10 minutes ago          \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Ready          Ready 8 seconds ago             \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.000128,
+      "\u001b[1;24r\u001b[H\u001b[24dmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Running 8 seconds ago           \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001678,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      2.382733,
+      "\u001b[?25l\u001b[H\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[3;3H\u001b[?12l\u001b[?25h\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.718485,
+      "\u001b[1;24r\u001b[H\u001b[3;3Hc\u001b[1;25r\u001b[H\u001b[3;4H"
+    ],
+    [
+      0.104073,
+      "\u001b[1;24r\u001b[H\u001b[3;3Hcu\u001b[1;25r\u001b[H\u001b[3;5H"
+    ],
+    [
+      0.152002,
+      "\u001b[1;24r\u001b[H\u001b[3;5Hr\u001b[1;25r\u001b[H\u001b[3;6H"
+    ],
+    [
+      0.072307,
+      "\u001b[1;24r\u001b[H\u001b[3;6Hl\u001b[1;25r\u001b[H\u001b[3;7H"
+    ],
+    [
+      0.135249,
+      "\u001b[1;24r\u001b[H\u001b[3;7H \u001b[1;25r\u001b[H\u001b[3;8H"
+    ],
+    [
+      0.280715,
+      "\u001b[1;24r\u001b[H\u001b[3;8Hc\u001b[1;25r\u001b[H\u001b[3;9H"
+    ],
+    [
+      0.11925,
+      "\u001b[1;24r\u001b[H\u001b[3;9Ho\u001b[1;25r\u001b[H\u001b[3;10H"
+    ],
+    [
+      0.104479,
+      "\u001b[1;24r\u001b[H\u001b[3;10Hr\u001b[1;25r\u001b[H\u001b[3;11H"
+    ],
+    [
+      0.104378,
+      "\u001b[1;24r\u001b[H\u001b[3;11He\u001b[1;25r\u001b[H\u001b[3;12H"
+    ],
+    [
+      0.79208,
+      "\u001b[1;24r\u001b[H\u001b[3;12H-\u001b[1;25r\u001b[H\u001b[3;13H"
+    ],
+    [
+      0.21559,
+      "\u001b[1;24r\u001b[H\u001b[3;13H0\u001b[1;25r\u001b[H\u001b[3;14H"
+    ],
+    [
+      0.055626,
+      "\u001b[1;24r\u001b[H\u001b[3;14H1\u001b[1;25r\u001b[H\u001b[3;15H"
+    ],
+    [
+      0.431959,
+      "\u001b[1;24r\u001b[H\u001b[3;15H:\u001b[1;25r\u001b[H\u001b[3;16H"
+    ],
+    [
+      0.705019,
+      "\u001b[1;24r\u001b[H\u001b[3;16H4\u001b[1;25r\u001b[H\u001b[3;17H"
+    ],
+    [
+      0.263685,
+      "\u001b[1;24r\u001b[H\u001b[3;17H5\u001b[1;25r\u001b[H\u001b[3;18H"
+    ],
+    [
+      0.263552,
+      "\u001b[1;24r\u001b[H\u001b[3;18H6\u001b[1;25r\u001b[H\u001b[3;19H"
+    ],
+    [
+      0.239962,
+      "\u001b[1;24r\u001b[H\u001b[3;19H7\u001b[1;25r\u001b[H\u001b[3;20H"
+    ],
+    [
+      0.168326,
+      "\u001b[?1l\u001b>\r\n\u001b[?2004l"
+    ],
+    [
+      0.024909,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[4;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.090611,
+      "\u001b[1;24r\u001b[H\u001b[3B7d5e26679eb8\u001b[1;25r\u001b[H\u001b[4;13H"
+    ],
+    [
+      0.041097,
+      "\u001b[1;24r\u001b[H\u001b[4B\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[1;25r\u001b[H\u001b[5B\u001b(B\u001b[m"
+    ],
+    [
+      0.001388,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[6;1H\u001b[?12l\u001b[?25h\u001b[1;24r\u001b[H\u001b[5B\u001b[K\r\n\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[6d\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.2e-05,
+      "\u001b[1;25r\u001b[H\u001b[6;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.817596,
+      "\u001b[1;24r\u001b[H\u001b[6;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[6;20H"
+    ],
+    [
+      0.680291,
+      "\u001b[?1l\u001b>\r\n\u001b[?2004l"
+    ],
+    [
+      0.004782,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[7;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.067208,
+      "\u001b[1;24r\u001b[H\u001b[6Bv2 - 5db9a35afc6f\u001b[1;25r\u001b[H\u001b[7;18H"
+    ],
+    [
+      0.024374,
+      "\u001b[1;24r\u001b[H\u001b[7B\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[1;25r\u001b[H\u001b[8B\u001b(B\u001b[m"
+    ],
+    [
+      0.001389,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[9;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      4.4e-05,
+      "\u001b[1;24r\u001b[H\u001b[8B\u001b[K\r\n\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[9d\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[H\u001b[9;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.830169,
+      "\u001b[1;24r\u001b[H\u001b[9;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[9;20H"
+    ],
+    [
+      0.384081,
+      "\u001b[?1l\u001b>\r\n\u001b[?2004l"
+    ],
+    [
+      0.006228,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[10;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.069042,
+      "\u001b[1;24r\u001b[H\u001b[9Be970ff9ed9c6\u001b[1;25r\u001b[H\u001b[10;13H"
+    ],
+    [
+      0.02603,
+      "\u001b[1;24r\u001b[H\u001b[10B\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[1;25r\u001b[H\u001b[11B\u001b(B\u001b[m"
+    ],
+    [
+      0.001844,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[12;1H\u001b[?12l\u001b[?25h\u001b[1;24r\u001b[H\u001b[11B\u001b[K\r\n\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[12d\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      3.8e-05,
+      "\u001b[1;25r\u001b[H\u001b[12;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.682398,
+      "\u001b[?25l\u001b[Hosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Ready          Ready 3 seconds ago             \u001b[K\r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Running 3 seconds ago           \u001b[K\r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \u001b[K\r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m docker service ps whoami\u001b[K\r\nID            NAME          IMAGE              NODE     DESIRED STATE  CURRENT STATE            ERROR  PORTS\u001b[K\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 8 seconds ago           \u001b[K\r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown 18 seconds ago         \u001b[K\r\nnwkduapf1kvk  whoami.2      subicura/whoami:1  core-03  Running        Running 10 minutes ago          \u001b[K\r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 10 minutes ago          \u001b[K\r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Ready          Ready 8 s"
+    ],
+    [
+      3e-05,
+      "econds ago             \u001b[K\r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Running 8 seconds ago           \u001b[K\r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \u001b[K\r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[K\r\n\u001b[38;5;81m\u001b[48;5;238m\u001b[1m 0\u001b[38;5;250m:\u001b[38;5;255mcore@core-01:~\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;138m\u001b[48;5;235m 1\u001b[38;5;237m:\u001b[38;5;250m..er-swarm-demo\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;18H\u001b[?12l\u001b[?25h\u001b[?1l\u001b>\u001b[?2004l"
+    ],
+    [
+      0.518472,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.747035,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.012328,
+      "\u001b[1;24r\u001b[H\u001b[24dID            NAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[24;52H"
+    ],
+    [
+      0.000395,
+      "\u001b[1;24r\u001b[H\u001b[24;52H     DESIRED STATE  CURRENT STATE                     ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 22 seconds ago                   \r\nz5mcfb0lcizi  \u001b[1;25r\u001b[H\u001b[24;15H"
+    ],
+    [
+      0.000342,
+      "\u001b[1;24r\u001b[H\u001b[24;15H \\_ whoami.1\u001b[1;25r\u001b[H\u001b[24;27H"
+    ],
+    [
+      5.4e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;27H  subicura/whoami:1  core-01\u001b[1;25r\u001b[H\u001b[24;55H"
+    ],
+    [
+      0.000292,
+      "\u001b[1;24r\u001b[H\u001b[24;55H  \u001b[1;25r\u001b[H\u001b[24;57H\u001b[1;24r\u001b[H\u001b[24;57HShutdown       \u001b[1;25r\u001b[H\u001b[24;72H"
+    ],
+    [
+      0.00087,
+      "\u001b[1;24r\u001b[H\u001b[24;72HShutdown 33 seconds ago           \u001b[1;25r\u001b[H\u001b[24;26H"
+    ],
+    [
+      5.2e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;26H       \r\nwlzgnyfz7u51  whoami.2      subicura/whoami:2  \u001b[1;25r\u001b[H\u001b[24;48H"
+    ],
+    [
+      2.5e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;48Hcore-02\u001b[1;25r\u001b[H\u001b[24;55H"
+    ],
+    [
+      2.1e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;55H  \u001b[1;25r\u001b[H\u001b[24;57H"
+    ],
+    [
+      0.000357,
+      "\u001b[1;24r\u001b[H\u001b[24;57HReady\u001b[1;25r\u001b[H\u001b[24;62H"
+    ],
+    [
+      0.000218,
+      "\u001b[1;24r\u001b[H\u001b[24;62H        \u001b[1;25r\u001b[H\u001b[24;70H"
+    ],
+    [
+      0.000159,
+      "\u001b[1;24r\u001b[H\u001b[24;70H  \u001b[1;25r\u001b[H\u001b[24;72H"
+    ],
+    [
+      0.000206,
+      "\u001b[1;24r\u001b[H\u001b[24;72HPreparing less than a second ago  \u001b[1;25r\u001b[H\u001b[24;26H"
+    ],
+    [
+      0.000104,
+      "\u001b[1;24r\u001b[H\u001b[24;26H       \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001078,
+      "\u001b[1;24r\u001b[H\u001b[24dnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown       Running less than a second ago           \r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running\u001b[1;25r\u001b[H\u001b[24;64H"
+    ],
+    [
+      0.000171,
+      "\u001b[1;24r\u001b[H\u001b[24;64H        Running 10 minutes ago                   \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running less than a second ago           \u001b[1;25r\u001b[H\u001b[24;33H"
+    ],
+    [
+      0.000457,
+      "\u001b[1;24r\u001b[H\u001b[24d\nmntns383mnhz   \\_ whoami.4\u001b[1;25r\u001b[H\u001b[24;27H"
+    ],
+    [
+      2.5e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;27H  \u001b[1;25r\u001b[H\u001b[24;29H"
+    ],
+    [
+      0.000267,
+      "\u001b[1;24r\u001b[H\u001b[24;29Hsubicura/whoami:1\u001b[1;25r\u001b[H\u001b[24;46H"
+    ],
+    [
+      0.000774,
+      "\u001b[1;24r\u001b[H\u001b[24;46H  \u001b[1;25r\u001b[H\u001b[24;48H"
+    ],
+    [
+      0.000131,
+      "\u001b[1;24r\u001b[H\u001b[24;48Hcore-01  Shutdown       Shutdown 11 seconds ago                  \r\nxga086cubnj3\u001b[1;25r\u001b[H\u001b[24;13H\u001b[1;24r\u001b[H\u001b[24;13H  whoami.5      subicura/whoami:1  core-02"
+    ],
+    [
+      2.6e-05,
+      "\u001b[1;25r\u001b[H\u001b[24;55H"
+    ],
+    [
+      1.8e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;55H  \u001b[1;25r\u001b[H\u001b[24;57H"
+    ],
+    [
+      0.000361,
+      "\u001b[1;24r\u001b[H\u001b[24;57HRunning        Running 10 minutes ago\u001b[1;25r\u001b[H\u001b[24;14H"
+    ],
+    [
+      0.00015,
+      "\u001b[1;24r\u001b[H\u001b[24;14H                   \u001b[1;25r\u001b[H\u001b[24;33H"
+    ],
+    [
+      2.3e-05,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.00255,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      2.591591,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.642133,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.011697,
+      "\u001b[1;24r\u001b[H\u001b[24dID            NAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[24;52H"
+    ],
+    [
+      0.001148,
+      "\u001b[1;24r\u001b[H\u001b[24;52H     DESIRED STATE  CURRENT STATE            ERROR  \u001b[1;25r\u001b[H\u001b[24;24H"
+    ],
+    [
+      0.000139,
+      "\u001b[1;24r\u001b[H\u001b[24;24HPORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  \u001b[1;25r\u001b[H\u001b[24;48H\u001b[1;24r\u001b[H\u001b[24;48Hcore-01  Running        Running 26 seconds ago          \r\nz5mcfb0lcizi\u001b[1;25r\u001b[H\u001b[24;13H"
+    ],
+    [
+      0.000291,
+      "\u001b[1;24r\u001b[H\u001b[24;13H   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown 36 seconds ago         \u001b[1;25r\u001b[H\u001b[24;24H"
+    ],
+    [
+      0.000675,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      5.6e-05,
+      "\u001b[1;24r\u001b[H\u001b[24dwlzgnyfz7u51\u001b[1;25r\u001b[H\u001b[24;13H"
+    ],
+    [
+      9.3e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;13H  whoami.2      subicura/whoami:2  core-02  Ready          Preparing 4 seconds ago         \r\nnwkduapf1kvk\u001b[1;25r\u001b[H\u001b[24;13H"
+    ],
+    [
+      2.4e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;13H  \u001b[1;25r\u001b[H\u001b[24;15H"
+    ],
+    [
+      0.000194,
+      "\u001b[1;24r\u001b[H\u001b[24;15H \\_ whoami.2\u001b[1;25r\u001b[H\u001b[24;27H"
+    ],
+    [
+      0.000417,
+      "\u001b[1;24r\u001b[H\u001b[24;27H  \u001b[1;25r\u001b[H\u001b[24;29H"
+    ],
+    [
+      0.000229,
+      "\u001b[1;24r\u001b[H\u001b[24;29Hsubicura/whoami:1\u001b[1;25r\u001b[H\u001b[24;46H\u001b[1;24r\u001b[H\u001b[24;46H  \u001b[1;25r\u001b[H\u001b[24;48H"
+    ],
+    [
+      0.000242,
+      "\u001b[1;24r\u001b[H\u001b[24;48Hcore-03\u001b[1;25r\u001b[H\u001b[24;55H"
+    ],
+    [
+      0.000113,
+      "\u001b[1;24r\u001b[H\u001b[24;55H  \u001b[1;25r\u001b[H\u001b[24;57H"
+    ],
+    [
+      0.000112,
+      "\u001b[1;24r\u001b[H\u001b[24;57HShutdown\u001b[1;25r\u001b[H\u001b[24;65H"
+    ],
+    [
+      0.000151,
+      "\u001b[1;24r\u001b[H\u001b[24;65H       \u001b[1;25r\u001b[H\u001b[24;72H"
+    ],
+    [
+      0.000203,
+      "\u001b[1;24r\u001b[H\u001b[24;72HRunning 4 seconds ago\u001b[1;25r\u001b[H\u001b[24;13H"
+    ],
+    [
+      0.000211,
+      "\u001b[1;24r\u001b[H\u001b[24;13H    \u001b[1;25r\u001b[H\u001b[24;17H"
+    ],
+    [
+      0.000306,
+      "\u001b[1;24r\u001b[H\u001b[24;17H       \u001b[1;25r\u001b[H\u001b[24;24H"
+    ],
+    [
+      0.000122,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.000247,
+      "\u001b[1;24r\u001b[H\u001b[24dvhxmipcdht6c\u001b[1;25r\u001b[H\u001b[24;13H"
+    ],
+    [
+      0.000346,
+      "\u001b[1;24r\u001b[H\u001b[24;13H  whoami.3      subicura/whoami:1\u001b[1;25r\u001b[H\u001b[24;46H"
+    ],
+    [
+      0.002382,
+      "\u001b[1;24r\u001b[H\u001b[24;46H  core-03  Running        Running 10 minutes ago          \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running 4 seconds ago           \r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 14 seconds ago         \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      2.050023,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.818459,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.013421,
+      "\u001b[1;24r\u001b[H\u001b[24dID            NAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[24;52H"
+    ],
+    [
+      0.000918,
+      "\u001b[1;24r\u001b[H\u001b[24;52H     DESIRED STATE  CURRENT STATE            ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 28 seconds ago          \r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown 39 seconds ago         \r\nwlzgnyfz7u51  \u001b[1;25r\u001b[H\u001b[24;15H"
+    ],
+    [
+      0.000128,
+      "\u001b[1;24r\u001b[H\u001b[24;15Hwhoami.2      subicura/whoami:2  core-02  Ready          Preparing 6 seconds ago         \r\nnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown       Running 6 seconds ago           \u001b[1;25r\u001b[H\u001b[24;24H"
+    ],
+    [
+      0.000861,
+      "\u001b[1;24r\u001b[H\u001b[24d\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 10 minutes ago          \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      8.5e-05,
+      "\u001b[1;24r\u001b[H\u001b[24dosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running\u001b[1;25r\u001b[H\u001b[24;64H"
+    ],
+    [
+      0.000125,
+      "\u001b[1;24r\u001b[H\u001b[24;64H        Running 7 seconds ago           \r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown\u001b[1;25r\u001b[H\u001b[24;65H"
+    ],
+    [
+      0.002599,
+      "\u001b[1;24r\u001b[H\u001b[24;65H       Shutdown 17 seconds ago         \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      1.412754,
+      "\u001b[?25l\u001b[H\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\n7d5e26679eb8\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\nv2 - 5db9a35afc6f\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\ne970ff9ed9c6\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[12;3H\u001b[?12l\u001b[?25h\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.542526,
+      "\u001b[1;24r\u001b[H\u001b[12;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[12;20H"
+    ],
+    [
+      0.600311,
+      "\u001b[?1l\u001b>\r\n\u001b[?2004l"
+    ],
+    [
+      0.005103,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[13;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.066904,
+      "\u001b[1;24r\u001b[H\u001b[13d7d5e26679eb8\u001b[1;25r\u001b[H\u001b[13;13H"
+    ],
+    [
+      0.025537,
+      "\u001b[1;24r\u001b[H\u001b[14d\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[1;25r\u001b[H\u001b[15d\u001b(B\u001b[m"
+    ],
+    [
+      0.001462,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[15;1H\u001b[?12l\u001b[?25h\u001b[1;24r\u001b[H\u001b[15d\u001b[K\r\n\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[9A\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.9e-05,
+      "\u001b[1;25r\u001b[H\u001b[15;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.796154,
+      "\u001b[1;24r\u001b[H\u001b[15;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[15;20H"
+    ],
+    [
+      0.552744,
+      "\u001b[?1l\u001b>\r\n\u001b[?2004l"
+    ],
+    [
+      0.005062,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[16;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.066528,
+      "\u001b[1;24r\u001b[H\u001b[16dv2 - 5f8a21419c85\u001b[1;25r\u001b[H\u001b[16;18H"
+    ],
+    [
+      0.023023,
+      "\u001b[1;24r\u001b[H\u001b[17d\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[1;25r\u001b[H\u001b[18d\u001b(B\u001b[m"
+    ],
+    [
+      0.001759,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[18;1H\u001b[?12l\u001b[?25h\u001b[1;24r\u001b[H\u001b[18d\u001b[K\r\n\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[6A\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      4.1e-05,
+      "\u001b[1;25r\u001b[H\u001b[18;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.718305,
+      "\u001b[1;24r\u001b[H\u001b[18;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[18;20H"
+    ],
+    [
+      0.480677,
+      "\u001b[?1l\u001b>\r\n\u001b[?2004l"
+    ],
+    [
+      0.004362,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[19;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.065794,
+      "\u001b[1;24r\u001b[H\u001b[19dv2 - 5db9a35afc6f\u001b[1;25r\u001b[H\u001b[19;18H"
+    ],
+    [
+      0.024173,
+      "\u001b[1;24r\u001b[H\u001b[20d\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[1;25r\u001b[H\u001b[21d\u001b(B\u001b[m"
+    ],
+    [
+      0.001393,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[21;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3e-05,
+      "\u001b[1;24r\u001b[H\u001b[21d\u001b[K\r\n\u001b[K\u001b[1B\u001b[K\u001b[1B\u001b[K\u001b[3A\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[H\u001b[21;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.744023,
+      "\u001b[1;24r\u001b[H\u001b[21;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[21;20H"
+    ],
+    [
+      0.417083,
+      "\u001b[?1l\u001b>\r\n\u001b[?2004l"
+    ],
+    [
+      0.00497,
+      "\u001b[?25l\u001b[25d\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[22;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.070562,
+      "\u001b[1;24r\u001b[H\u001b[22de970ff9ed9c6\u001b[1;25r\u001b[H\u001b[22;13H"
+    ],
+    [
+      0.025112,
+      "\u001b[1;24r\u001b[H\u001b[23d\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[1;25r\u001b[H\u001b[24d\u001b(B\u001b[m"
+    ],
+    [
+      0.001303,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3.4e-05,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[K\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[H\u001b[24;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.371111,
+      "\u001b[?25l\u001b[Hmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 14 seconds ago         \u001b[K\r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \u001b[K\r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m docker service ps whoami\u001b[K\r\nID            NAME          IMAGE              NODE     DESIRED STATE  CURRENT STATE            ERROR  PORTS\u001b[K\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 28 seconds ago          \u001b[K\r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown 39 seconds ago         \u001b[K\r\nwlzgnyfz7u51  whoami.2      subicura/whoami:2  core-02  Ready          Preparing 6 seconds ago         \u001b[K\r\nnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown       Running 6 seconds ago           \u001b[K\r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 10 minutes ago          \u001b[K\r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running 7"
+    ],
+    [
+      6.6e-05,
+      " seconds ago           \u001b[K\r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 17 seconds ago         \u001b[K\r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \u001b[K\r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[K\r\n\u001b[38;5;81m\u001b[48;5;238m\u001b[1m 0\u001b[38;5;250m:\u001b[38;5;255mcore@core-01:~\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;138m\u001b[48;5;235m 1\u001b[38;5;237m:\u001b[38;5;250m..er-swarm-demo\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;18H\u001b[?12l\u001b[?25h\u001b[?1l\u001b>\u001b[?2004l"
+    ],
+    [
+      0.598302,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.650841,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.014601,
+      "\u001b[1;24r\u001b[H\u001b[24dID            NAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[24;52H"
+    ],
+    [
+      0.001475,
+      "\u001b[1;24r\u001b[H\u001b[24;52H     DESIRED STATE  CURRENT STATE            ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 38 seconds ago          \r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01\u001b[1;25r\u001b[H\u001b[24;55H"
+    ],
+    [
+      0.000109,
+      "\u001b[1;24r\u001b[H\u001b[24;55H  Shutdown       Shutdown 48 seconds ago         \r\nwlzgnyfz7u51  whoami.2      subicura/whoami:2  core-02  Running        \u001b[1;25r\u001b[H\u001b[24;72H"
+    ],
+    [
+      4e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;72HStarting 4 seconds ago\u001b[1;25r\u001b[H\u001b[24;14H"
+    ],
+    [
+      0.000228,
+      "\u001b[1;24r\u001b[H\u001b[24;14H   \u001b[1;25r\u001b[H\u001b[24;17H"
+    ],
+    [
+      0.001666,
+      "\u001b[1;24r\u001b[H\u001b[24;17H       \r\nnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown       Shutdown 5 seconds ago          \r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 10 minutes ago          \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running 16 seconds ago          \r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 26 seconds ago         \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001467,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      2.873222,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.706805,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.029238,
+      "\u001b[1;24r\u001b[H\u001b[24dID            NAME          IMAGE              NODE     DESIRED STATE  CURRENT STATE            ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 41 seconds ago          \r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown 52 seconds ago         \r\nwlzgnyfz7u51  whoami.2      subicura/whoami:2  core-02  Running        Starting 8 seconds ago          \r\nnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown       Shutdown 8 seconds ago          \r\nvhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 10 minutes ago          \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running 20 seconds ago          \r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 30 seconds ago         \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      3.048432,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      1.041373,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.015771,
+      "\u001b[1;24r\u001b[H\u001b[24dID            NAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[24;52H"
+    ],
+    [
+      0.000787,
+      "\u001b[1;24r\u001b[H\u001b[24;52H     DESIRED STATE  CURRENT STATE            ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 45 seconds ago          \r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown 56 seconds ago         \r\nwlzgnyfz7u51  whoami.2      subicura/whoami:2  core-02  Running        Running 2 seconds ago           \r\nnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown       Shutdown 12 seconds ago         \r\nx5mkxkxyo2z4  whoami.3      subicura/whoami:2  core-03  Ready          Preparing 2 seconds ago         \u001b[1;25r\u001b[H\u001b[24;24H"
+    ],
+    [
+      0.001534,
+      "\u001b[1;24r\u001b[H\u001b[24d\nvhxmipcdht6c   \\_ whoami.3  subicura/whoami:1  core-03  Shutdown       Running 2 seconds ago           \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running 24 seconds ago          \r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 34 seconds ago         \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      3.681534,
+      "\u001b[?25l\u001b[H\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\n7d5e26679eb8\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\nv2 - 5db9a35afc6f\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\ne970ff9ed9c6\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\n7d5e26679eb8\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\nv2 - 5f8a21419c85\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\nv2 - 5db9a35afc6f\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\ne970"
+    ],
+    [
+      3.1e-05,
+      "ff9ed9c6\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[K\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;3H\u001b[?12l\u001b[?25h\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.461604,
+      "\u001b[1;24r\u001b[H\u001b[24;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[24;20H"
+    ],
+    [
+      0.38371,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      2.5e-05,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d\u001b[?2004l"
+    ],
+    [
+      0.005419,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.069783,
+      "\u001b[1;24r\u001b[H\u001b[24dv2 - 4ed441a097c6\u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      0.024899,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001674,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3e-05,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[K\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[H\u001b[24;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.690093,
+      "\u001b[1;24r\u001b[H\u001b[24;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[24;20H"
+    ],
+    [
+      0.352373,
+      "\u001b[?1l\u001b>\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d\u001b[?2004l"
+    ],
+    [
+      0.004594,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.066841,
+      "\u001b[1;24r\u001b[H\u001b[24dv2 - 5f8a21419c85\u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      0.024191,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001366,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.9e-05,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[K\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[H\u001b[24;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.471156,
+      "\u001b[1;24r\u001b[H\u001b[24;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[24;20H"
+    ],
+    [
+      0.335876,
+      "\u001b[?1l\u001b>\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d\u001b[?2004l"
+    ],
+    [
+      0.004094,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.066051,
+      "\u001b[1;24r\u001b[H\u001b[24dv2 - 5db9a35afc6f\u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      0.023984,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001646,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h\u001b[1;24r\u001b[H\u001b[24d\u001b[K\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      3.1e-05,
+      "\u001b[1;25r\u001b[H\u001b[24;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.447857,
+      "\u001b[1;24r\u001b[H\u001b[24;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[24;20H"
+    ],
+    [
+      0.432281,
+      "\u001b[?1l\u001b>\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d\u001b[?2004l"
+    ],
+    [
+      0.004633,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.070373,
+      "\u001b[1;24r\u001b[H\u001b[24de970ff9ed9c6\u001b[1;25r\u001b[H\u001b[24;13H"
+    ],
+    [
+      0.022899,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001298,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h\u001b[1;24r\u001b[H\u001b[24d\u001b[K\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.2e-05,
+      "\u001b[1;25r\u001b[H\u001b[24;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.948432,
+      "\u001b[1;24r\u001b[H\u001b[24;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[24;20H"
+    ],
+    [
+      0.264183,
+      "\u001b[?1l\u001b>\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d\u001b[?2004l"
+    ],
+    [
+      0.004029,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.066824,
+      "\u001b[1;24r\u001b[H\u001b[24dv2 - 4ed441a097c6\u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      0.024381,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001281,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.3e-05,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[K\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[H\u001b[24;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      2.137621,
+      "\u001b[?25l\u001b[Hxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \u001b[K\r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m docker service ps whoami\u001b[K\r\nID            NAME          IMAGE              NODE     DESIRED STATE  CURRENT STATE            ERROR  PORTS\u001b[K\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 45 seconds ago          \u001b[K\r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown 56 seconds ago         \u001b[K\r\nwlzgnyfz7u51  whoami.2      subicura/whoami:2  core-02  Running        Running 2 seconds ago           \u001b[K\r\nnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown       Shutdown 12 seconds ago         \u001b[K\r\nx5mkxkxyo2z4  whoami.3      subicura/whoami:2  core-03  Ready          Preparing 2 seconds ago         \u001b[K\r\nvhxmipcdht6c   \\_ whoami.3  subicura/whoami:1  core-03  Shutdown       Running 2 seconds ago           \u001b[K\r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running 2"
+    ],
+    [
+      4.2e-05,
+      "4 seconds ago          \u001b[K\r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 34 seconds ago         \u001b[K\r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago          \u001b[K\r\n\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[K\r\n\u001b[38;5;81m\u001b[48;5;238m\u001b[1m 0\u001b[38;5;250m:\u001b[38;5;255mcore@core-01:~\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;138m\u001b[48;5;235m 1\u001b[38;5;237m:\u001b[38;5;250m..er-swarm-demo\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;18H\u001b[?12l\u001b[?25h\u001b[?1l\u001b>\u001b[?2004l"
+    ],
+    [
+      0.502803,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.473614,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.011303,
+      "\u001b[1;24r\u001b[H\u001b[24dID            NAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[24;52H"
+    ],
+    [
+      0.000473,
+      "\u001b[1;24r\u001b[H\u001b[24;52H     DESIRED STATE  CURRENT STATE                ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running 58 seconds ago              \r\nz5mcfb0lcizi   \\_ whoami.1\u001b[1;25r\u001b[H\u001b[24;27H"
+    ],
+    [
+      0.001543,
+      "\u001b[1;24r\u001b[H\u001b[24;27H  subicura/whoami:1  \u001b[1;25r\u001b[H\u001b[24;48H"
+    ],
+    [
+      0.000111,
+      "\u001b[1;24r\u001b[H\u001b[24;48Hcore-01  Shutdown       Shutdown about a minute ago         \r\nwlzgnyfz7u51  whoami.2      subicura/whoami:2  core-02  \u001b[1;25r\u001b[H\u001b[24;57H"
+    ],
+    [
+      0.000253,
+      "\u001b[1;24r\u001b[H\u001b[24;57HRunning\u001b[1;25r\u001b[H\u001b[24;64H"
+    ],
+    [
+      0.001971,
+      "\u001b[1;24r\u001b[H\u001b[24;64H        Running 14 seconds ago              \r\nnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown       Shutdown 24 seconds ago             \r\nx5mkxkxyo2z4  whoami.3      subicura/whoami:2  core-03  Running        Starting 3 seconds ago              \r\nvhxmipcdht6c   \\_ whoami.3  subicura/whoami:1  core-03  Shutdown       Shutdown 3 seconds ago              \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running 36 seconds ago              \r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 46 seconds ago             \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 10 minutes ago              \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.00158,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      2.212454,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.796158,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.010486,
+      "\u001b[1;24r\u001b[H\u001b[24dID\u001b[1;25r\u001b[H\u001b[24;3H"
+    ],
+    [
+      0.000692,
+      "\u001b[1;24r\u001b[H\u001b[24;3H        \u001b[1;25r\u001b[H\u001b[24;11H\u001b[1;24r\u001b[H\u001b[24;11H    NAME          IMAGE              NODE     \u001b[1;25r\u001b[H\u001b[24;57H"
+    ],
+    [
+      0.000483,
+      "\u001b[1;24r\u001b[H\u001b[24;57HDESIRED STATE  CURRENT STATE                ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running about a minute ago          \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.002181,
+      "\u001b[1;24r\u001b[H\u001b[24dz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown about a minute ago\u001b[1;25r\u001b[H\u001b[24;19H"
+    ],
+    [
+      7.7e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;19H         \r\nwlzgnyfz7u51  whoami.2      subicura/whoami:2  \u001b[1;25r\u001b[H\u001b[24;48H"
+    ],
+    [
+      0.000819,
+      "\u001b[1;24r\u001b[H\u001b[24;48Hcore-02  Running        Running 17 seconds ago              \r\nnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown       Shutdown 27 seconds ago             \r\nx5mkxkxyo2z4  whoami.3      subicura/whoami:2  core-03  Running        Starting 6 seconds ago              \r\nvhxmipcdht6c   \\_ whoami.3  subicura/whoami:1  core-03  Shutdown       Shutdown 6 seconds ago              \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running 39 seconds ago              \r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 49 seconds ago             \r\nxga086cubnj3  whoami.5\u001b[1;25r\u001b[H\u001b[24;23H"
+    ],
+    [
+      5.4e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;23H      subicura/whoami:1  core-02  Running        Running 10 minutes ago              \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.002237,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      2.931323,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.401781,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.015599,
+      "\u001b[1;24r\u001b[H\u001b[24dID\u001b[1;25r\u001b[H\u001b[24;3H"
+    ],
+    [
+      2.9e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;3H            NAME          IMAGE              NODE\u001b[1;25r\u001b[H\u001b[24;52H"
+    ],
+    [
+      0.001148,
+      "\u001b[1;24r\u001b[H\u001b[24;52H     DESIRED STATE  CURRENT STATE                ERROR  PORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running about a minute ago          \r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown about a minute ago         \r\nwlzgnyfz7u51  whoami.2      subicura/whoami:2  core-02  Running        Running 20 seconds ago              \r\nnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown       Shutdown 31 seconds ago             \r\nx5mkxkxyo2z4  whoami.3      subicura/whoami:2  core-03  Running        Starting 9 seconds ago              \r\nvhxmipcdht6c\u001b[1;25r\u001b[H\u001b[24;13H"
+    ],
+    [
+      0.001667,
+      "\u001b[1;24r\u001b[H\u001b[24;13H   \\_ whoami.3  subicura/whoami:1  core-03  Shutdown       Shutdown 9 seconds ago              \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running 42 seconds ago              \r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 53 seconds ago             \r\nxga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 11 minutes ago              \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001426,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      2.617237,
+      "\u001b[1;24r\u001b[H\u001b[24;18Hdocker service ps whoami\u001b[1;25r\u001b[H\u001b[24;42H"
+    ],
+    [
+      0.843184,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.01122,
+      "\u001b[1;24r\u001b[H\u001b[24dID        \u001b[1;25r\u001b[H\u001b[24;11H\u001b[1;24r\u001b[H\u001b[24;11H    NAME          \u001b[1;25r\u001b[H\u001b[24;29H"
+    ],
+    [
+      0.001049,
+      "\u001b[1;24r\u001b[H\u001b[24;29HIMAGE\u001b[1;25r\u001b[H\u001b[24;34H"
+    ],
+    [
+      5.9e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;34H              NODE     DESIRED STATE  CURRENT STATE                ERROR  \u001b[1;25r\u001b[H\u001b[24;28H"
+    ],
+    [
+      0.002251,
+      "\u001b[1;24r\u001b[H\u001b[24;28HPORTS\r\nkv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Running        Running about a minute ago          \r\nz5mcfb0lcizi   \\_ whoami.1  subicura/whoami:1  core-01  Shutdown       Shutdown about a minute ago         \r\nwlzgnyfz7u51  whoami.2      \u001b[1;25r\u001b[H\u001b[24;29H"
+    ],
+    [
+      0.000131,
+      "\u001b[1;24r\u001b[H\u001b[24;29Hsubicura/whoami:2  core-02  Running        Running 24 seconds ago              \r\nnwkduapf1kvk   \\_ whoami.2  subicura/whoami:1  core-03  Shutdown\u001b[1;25r\u001b[H\u001b[24;65H\u001b[1;24r\u001b[H\u001b[24;65H       \u001b[1;25r\u001b[H\u001b[24;72H"
+    ],
+    [
+      0.000152,
+      "\u001b[1;24r\u001b[H\u001b[24;72HShutdown 34 seconds ago\u001b[1;25r\u001b[H\u001b[24;15H"
+    ],
+    [
+      1.8e-05,
+      "\u001b[1;24r\u001b[H\u001b[24;15H      \u001b[1;25r\u001b[H\u001b[24;21H"
+    ],
+    [
+      0.000259,
+      "\u001b[1;24r\u001b[H\u001b[24;21H       \u001b[1;25r\u001b[H\u001b[24;28H"
+    ],
+    [
+      0.001299,
+      "\u001b[1;24r\u001b[H\u001b[24d\nx5mkxkxyo2z4  whoami.3      subicura/whoami:2  core-03  Running        Running 2 seconds ago               \r\nvhxmipcdht6c   \\_ whoami.3  subicura/whoami:1  core-03  Shutdown       Shutdown 13 seconds ago             \r\nosekk4jxm1mc  whoami.4      subicura/whoami:2  core-01  Running        Running 46 seconds ago              \r\nmntns383mnhz   \\_ whoami.4  subicura/whoami:1  core-01  Shutdown       Shutdown 56 seconds ago             \r\n8l1z11a833j4  whoami.5      subicura/whoami:2  core-03  Ready          Ready 2 seconds ago                 \r\nxga086cubnj3   \\_ whoami.5  subicura/whoami:1  core-02  Shutdown       Running 2 seconds ago               \r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001385,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[32m\u001b[1mcore@core-01\u001b[34m ~ $\u001b(B\u001b[m \u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      1.421572,
+      "\u001b[?25l\u001b[Hv2 - 5f8a21419c85\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\nv2 - 5db9a35afc6f\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\ne970ff9ed9c6\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\nv2 - 4ed441a097c6\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\nv2 - 5f8a21419c85\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\nv2 - 5db9a35afc6f\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl core-01:4567\u001b[K\r\ne970ff9ed9c6\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m curl"
+    ],
+    [
+      5.3e-05,
+      " core-01:4567\u001b[K\r\nv2 - 4ed441a097c6\u001b[K\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[K\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;3H\u001b[?12l\u001b[?25h\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.397482,
+      "\u001b[1;24r\u001b[H\u001b[24;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[24;20H"
+    ],
+    [
+      0.272349,
+      "\u001b[?1l\u001b>\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d\u001b[?2004l"
+    ],
+    [
+      0.004696,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.067937,
+      "\u001b[1;24r\u001b[H\u001b[24dv2 - 5f8a21419c85\u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      0.024172,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001327,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.2e-05,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[K\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[H\u001b[24;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.532791,
+      "\u001b[1;24r\u001b[H\u001b[24;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[24;20H"
+    ],
+    [
+      0.304351,
+      "\u001b[?1l\u001b>\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d\u001b[?2004l"
+    ],
+    [
+      0.003652,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.064915,
+      "\u001b[1;24r\u001b[H\u001b[24dv2 - 5db9a35afc6f\u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      0.02314,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001509,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h\u001b[1;24r\u001b[H\u001b[24d\u001b[K\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.3e-05,
+      "\u001b[1;25r\u001b[H\u001b[24;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.427145,
+      "\u001b[1;24r\u001b[H\u001b[24;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[24;20H"
+    ],
+    [
+      0.327471,
+      "\u001b[?1l\u001b>\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d\u001b[?2004l"
+    ],
+    [
+      0.003826,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.066583,
+      "\u001b[1;24r\u001b[H\u001b[24dv2 - 8bba6d56a2a4\u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      0.023625,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001283,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      2.8e-05,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[K\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[H\u001b[24;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.384776,
+      "\u001b[1;24r\u001b[H\u001b[24;3Hcurl core-01:4567\u001b[1;25r\u001b[H\u001b[24;20H"
+    ],
+    [
+      0.352098,
+      "\u001b[?1l\u001b>\u001b[1;24r\u001b[H\u001b[24d\n\u001b[1;25r\u001b[H\u001b[24d\u001b[?2004l"
+    ],
+    [
+      0.004662,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255mcurl\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                                          subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.070958,
+      "\u001b[1;24r\u001b[H\u001b[24dv2 - 4ed441a097c6\u001b[1;25r\u001b[H\u001b[24;18H"
+    ],
+    [
+      0.023938,
+      "\u001b[1;24r\u001b[H\u001b[24d\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[38;5;242m master*\u001b[39m\r\n\u001b[1;25r\u001b[H\u001b[24d"
+    ],
+    [
+      0.001338,
+      "\u001b[?25l\r\n\u001b[38;5;138m\u001b[48;5;235m 0\u001b[38;5;237m:\u001b[38;5;250mcore@core-01:~\u001b[38;5;244m- \u001b[38;5;137m\u001b[48;5;234m \u001b[38;5;81m\u001b[48;5;238m\u001b[1m 1\u001b[38;5;250m:\u001b[38;5;255m..er-swarm-demo\u001b[38;5;50m* \u001b(B\u001b[m\u001b[38;5;137m\u001b[48;5;234m                               subicura \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      3e-05,
+      "\u001b[1;24r\u001b[H\u001b[24d\u001b[K\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[H\u001b[24;3H\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.980967,
+      "\u001b[1;25r\u001b(B\u001b[m\u001b[?1l\u001b>\u001b[H\u001b[2J\u001b[?2004l\u001b]112\u0007\u001b[?12l\u001b[?25h\u001b[?1000l\u001b[?1002l\u001b[?1006l\u001b[?1005l\u001b[?1049l"
+    ],
+    [
+      0.000197,
+      "[detached (from session 0)]\r\n"
+    ],
+    [
+      0.001241,
+      "\u001b]0;~/Workspace/project/github.com/subicura/docker-swarm-demo"
+    ],
+    [
+      6.7e-05,
+      "\u0007"
+    ],
+    [
+      0.020959,
+      "\r\n\u001b[34m~/Workspace/project/github.com/subicura/docker-swarm-demo\u001b[39m\u001b[38;5;242m master*\u001b[39m\u001b[36m\u001b[39m\u001b[33m 1m 53s\u001b[39m\r\n"
+    ],
+    [
+      5.1e-05,
+      "\u001b]2;subicura@subicuraui-MacBook-Pro: ~/Workspace/project/github.com/subicura/docker-swarm-demo\u0007\u001b]1;..er-swarm-demo\u0007"
+    ],
+    [
+      0.000127,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[31m❯\u001b[39m \u001b[K"
+    ],
+    [
+      3.1e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.623407,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

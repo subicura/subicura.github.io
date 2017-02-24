@@ -10,8 +10,8 @@
 
 $rs: 16px
 
-$font-serif: "Noto Sans KR", "Apple SD Gothic Neo", "Nanum Gothic", "나눔고딕", "Malgun Gothic"
-$font-sans: "Apple SD Gothic Neo", "Nanum Gothic", "나눔고딕", "Malgun Gothic"
+$font-serif: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "나눔고딕", "Malgun Gothic"
+$font-sans: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "나눔고딕", "Malgun Gothic"
 
 
 @mixin respond-to($breakpoint)
@@ -100,9 +100,9 @@ body
   .blog-title
     margin: 0
     padding: $rs*5.25 $rs $rs/2
-    font-size: 45px
+    font-size: 40px
     text-align: center
-    font-weight: 700
+    font-weight: 400
     letter-spacing: -2px
     outline: 0
     line-height: 50px
@@ -116,6 +116,7 @@ body
     color: #666
     text-align: center
     font-weight: 400
+    letter-spacing: -1px
   .custom-links
     margin: 0 0 50px
     text-align: center
@@ -141,11 +142,11 @@ body
     &:last-child
       border-bottom: 0px
     .post-title
-      letter-spacing: -0.02em
-      font-weight: 700
+      letter-spacing: -0.03em
+      font-weight: 400
       font-style: normal
       display: block
-      font-size: 28px
+      font-size: 25px
       line-height: 1.3
       margin: 0 0
       a
@@ -295,10 +296,10 @@ body
         left: $rs
         right: $rs
     .post-title
-      font-weight: 700
+      font-weight: 400
       font-style: normal
-      letter-spacing: -0.04em
-      font-size: 30px
+      letter-spacing: -0.05em
+      font-size: 27px
       line-height: 1.1
       color: #fff
       margin-bottom: 16px
@@ -344,7 +345,7 @@ body
       font-family: $font-sans
       padding-top: 60px
     .post-title
-      font-weight: 700
+      font-weight: 400
       font-style: normal
       letter-spacing: -0.04em
       font-size: 30px
@@ -382,21 +383,21 @@ body
       font-family: $font-sans
     h3, h4, h5, h6
       letter-spacing: -0.02em
-      font-weight: 700
+      font-weight: 400
       font-style: normal
       font-size: 18px
       line-height: 1.3
       margin: 0
       font-family: $font-sans
-      margin-bottom: 4px
+      margin-bottom: 10px
     h2, h1
       letter-spacing: -0.02em
-      font-weight: 700
+      font-weight: 400
       font-style: normal
       font-size: 24px
       line-height: 1.2
       padding-top: 31px
-      margin-bottom: 10px
+      margin-bottom: 15px
     p
       font-weight: 300
       font-style: normal
@@ -558,7 +559,7 @@ body
       h4
         font-size: 18px
         line-height: 1.1
-        font-weight: 700
+        font-weight: 400
         padding: 0
         margin: 0
         padding-left: 100px
@@ -595,7 +596,7 @@ body
         .poweredby
           display: block
           padding-bottom: 18px
-          font-weight: 700
+          font-weight: 400
           color: #333
   .page-navigation
     border-top: 1px solid #dededc
@@ -657,7 +658,7 @@ body
       padding: 0 0 10px
       font-size: 45px
       text-align: center
-      font-weight: 700
+      font-weight: 400
       letter-spacing: -2px
       outline: 0
       line-height: 50px
@@ -789,9 +790,13 @@ pre
     h2
       margin-top: 30px
       color: #fff
+      font-weight: 400
+      line-height: 1.3
     p
       margin: 0
       color: rgba(255,255,255,0.8)
+      line-height: 1.3
+      font-weight: 300
     &.no-cover
       background: #f5f8fa
     &.no-cover:before
