@@ -291,8 +291,8 @@ docker service ps whoami
 output:
 
 {% highlight bash linenos %}
-ID            NAME      IMAGE              NODE     DESIRED STATE  CURRENT STATE            ERROR  PORTS                                                        
-wnt5m97ci36t  whoami.1  subicura/whoami:1  core-01  Running        Preparing 7 seconds ago 
+ID            NAME      IMAGE              NODE     DESIRED STATE  CURRENT STATE            ERROR  PORTS
+wnt5m97ci36t  whoami.1  subicura/whoami:1  core-01  Running        Preparing 7 seconds ago
 {% endhighlight %}
 
 서비스의 상태와 어떤 노드에서 실행 중인지를 상세하게 확인할 수 있습니다. 현재 상태가 `Preparing`인걸 보니 이미지를 다운 받는 중인 것 같습니다. 조금만 기다리고 컨테이너가 실행되면 상태가 `Running`으로 바뀝니다.
@@ -334,9 +334,11 @@ cfb152786b87
 
 ![ingress network]({{ site.url }}/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/ingress-network.png)
 
-위의 예제에서는 4567 포트를 오픈했기 때문에 3개의 노드 전체에 4567 포트가 오픈되었고 어디에서 테스트를 하든 간에 core-01에 실행된 컨테이너로 요청이 전달됩니다. 컨테이너가 여러 개라면 내부 로드밸런서를 이용하여 여러 개의 컨테이너로 분산처리됩니다. 
+위의 예제에서는 4567 포트를 오픈했기 때문에 3개의 노드 전체에 4567 포트가 오픈되었고 어디에서 테스트를 하든 간에 core-01노드에 실행된 컨테이너로 요청이 전달됩니다. 컨테이너가 여러 개라면 내부 로드밸런서를 이용하여 여러 개의 컨테이너로 분산처리됩니다.
 
 뭔가 어색한 개념이라고 생각할 수 있지만, 어느 서버에 컨테이너가 실행 중인지 알 필요 없이 외부에서 그 어떤 방법보다 쉽게 접근할 수 있습니다.
+
+> 실제 운영시에는 외부에 nginx 또는 haproxy같은 로드발란서를 두고 전체 스웜 노드를 바라보게 설정할 수 있습니다. [관련링크](https://docs.docker.com/engine/swarm/ingress/#/configure-an-external-load-balancer)
 
 ### 서비스 복제 replication
 
@@ -365,12 +367,12 @@ docker service ps whoami
 output:
 
 {% highlight bash linenos %}
-ID            NAME      IMAGE              NODE     DESIRED STATE  CURRENT STATE            ERROR  PORTS                                                        
-z5mcfb0lcizi  whoami.1  subicura/whoami:1  core-01  Running        Running 11 minutes ago                                                                       
-nwkduapf1kvk  whoami.2  subicura/whoami:1  core-03  Running        Preparing 4 seconds ago                                                                      
-vhxmipcdht6c  whoami.3  subicura/whoami:1  core-03  Running        Preparing 4 seconds ago                                                                      
-mntns383mnhz  whoami.4  subicura/whoami:1  core-01  Running        Running 4 seconds ago                                                                        
-xga086cubnj3  whoami.5  subicura/whoami:1  core-02  Running        Preparing 4 seconds ago 
+ID            NAME      IMAGE              NODE     DESIRED STATE  CURRENT STATE            ERROR  PORTS
+z5mcfb0lcizi  whoami.1  subicura/whoami:1  core-01  Running        Running 11 minutes ago
+nwkduapf1kvk  whoami.2  subicura/whoami:1  core-03  Running        Preparing 4 seconds ago
+vhxmipcdht6c  whoami.3  subicura/whoami:1  core-03  Running        Preparing 4 seconds ago
+mntns383mnhz  whoami.4  subicura/whoami:1  core-01  Running        Running 4 seconds ago
+xga086cubnj3  whoami.5  subicura/whoami:1  core-02  Running        Preparing 4 seconds ago
 {% endhighlight %}
 
 처음 컨테이너를 생성하는 노드에서 이미지를 다운받는동안 Pending인 상태가 보이고 조금 기다리면 모두 실행됩니다. 이제 테스트해볼까요?
@@ -463,7 +465,9 @@ xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9
 `network create`명령어로 오버레이 네트워크를 생성합니다.
 
 {% highlight bash linenos %}
-docker network create --attachable --driver overlay backend
+docker network create --attachable \
+  --driver overlay \
+  backend
 {% endhighlight %}
 
 output:
@@ -481,16 +485,16 @@ docker network ls
 output:
 
 {% highlight bash linenos %}
-NETWORK ID          NAME                DRIVER              SCOPE               
-k7ayhk5hqbxn        backend             overlay             swarm               
-c420312e4c9b        bridge              bridge              local               
-c3ef285ed639        docker_gwbridge     bridge              local               
-244840dc44fd        host                host                local               
-4biz947vsmez        ingress             overlay             swarm               
-f41f0c773519        none                null                local   
+NETWORK ID          NAME                DRIVER              SCOPE
+k7ayhk5hqbxn        backend             overlay             swarm
+c420312e4c9b        bridge              bridge              local
+c3ef285ed639        docker_gwbridge     bridge              local
+244840dc44fd        host                host                local
+4biz947vsmez        ingress             overlay             swarm
+f41f0c773519        none                null                local
 {% endhighlight %}
 
-backend라는 이름의 오버레이 네트워크가 생성되었습니다. 이제 redis를 backend네트워크에 생성하겠습니다.
+backend라는 이름의 오버레이 네트워크가 생성되었습니다. 그 외에 네트워크는 기본으로 생성되는 네트워크들입니다. 이제 redis를 backend네트워크에 생성하겠습니다.
 
 ![redis with overlay network]({{ site.url }}/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/overlay-network-redis.png)
 
