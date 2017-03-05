@@ -1,0 +1,25 @@
+{
+  "name": "subicura.github.io",
+  "version": "1.0.0",
+  "description": "by jekyll",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "bundle exec jekyll build",
+    "deploy": "gulp deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subicura/subicura.github.io.git"
+  },
+  "author": "Chungsub Kim <subicura@subicura.com> (subicura@subicura.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subicura/subicura.github.io/issues"
+  },
+  "homepage": "https://github.com/subicura/subicura.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4"
+  }
+}

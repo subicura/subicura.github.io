@@ -1,30 +1,182 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Subicura's Blog</title>
+    <description>서비큐라 기술 블로그
+</description>
+    <link>https://subicura.com/</link>
+    <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 05 Mar 2017 23:46:43 +0900</pubDate>
+    <lastBuildDate>Sun, 05 Mar 2017 23:46:43 +0900</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.excerpt | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Docker Swarm을 이용한 쉽고 빠른 분산 서버 관리</title>
+        <description>도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다는 편견을 완전히 바꿔놓았습니다. 구축 비용이 거의 들지 않고 관리 또한 쉬우며 다양한 기능을 쉽게 제공하고 가볍게 사용할 수 있습니다. 도커 스웜의 핵심내용인 노드와 서비스에 대해 알아보고 ingress 네트워크와 자체 내장된 로드밸런서, DNS 서버를 살펴봅니다.</description>
+        <pubDate>Sat, 25 Feb 2017 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2017/02/25/container-orchestration-with-docker-swarm.html</link>
+        <guid isPermaLink="true">https://subicura.com/2017/02/25/container-orchestration-with-docker-swarm.html</guid>
+        
+        <category>Docker</category>
+        
+        <category>Swarm</category>
+        
+        <category>DevOps</category>
+        
+        <category>Server</category>
+        
+        <category>Container</category>
+        
+        <category>Cluster</category>
+        
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>초보를 위한 도커 안내서 - 이미지 만들고 배포하기</title>
+        <description>이 글은 초보를 위한 도커 안내서 - 설치부터 배포까지 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.</description>
+        <pubDate>Fri, 10 Feb 2017 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</link>
+        <guid isPermaLink="true">https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</guid>
+        
+        <category>Docker</category>
+        
+        <category>DevOps</category>
+        
+        <category>Server</category>
+        
+        <category>Container</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기</title>
+        <description>초보를 위한 도커 안내서 2번째 글입니다. 도커의 기본적인 내용을 이야기 했던 첫번째 글에 이어 실제로 도커를 설치하고 컨테이너를 실행하면서 도커 명령어를 알아봅니다. 도커를 처음 접하는 분들을 위해 아주 가볍게 자주 쓰는 명령어를 다루었습니다.</description>
+        <pubDate>Thu, 19 Jan 2017 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html</link>
+        <guid isPermaLink="true">https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html</guid>
+        
+        <category>Docker</category>
+        
+        <category>DevOps</category>
+        
+        <category>Server</category>
+        
+        <category>Container</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>초보를 위한 도커 안내서 - 도커란 무엇인가?</title>
+        <description>도커를 처음 접하는 시스템 관리자나 서버 개발자를 대상으로 도커 전반에 대해 얕고 넓은 지식을 담고 있습니다. 도커가 등장한 배경과 도커의 역사, 그리고 도커의 핵심 개념인 컨테이너와 이미지에 대해 알아보고 왜 이렇게 도커가 인기 인지 하나하나 살펴보겠습니다.</description>
+        <pubDate>Thu, 19 Jan 2017 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html</link>
+        <guid isPermaLink="true">https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html</guid>
+        
+        <category>Docker</category>
+        
+        <category>DevOps</category>
+        
+        <category>Server</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>2016년 블로그 회고</title>
+        <description>어느덧 2016년 마지막 날입니다. 올 한해 역시 정신없이 지나갔고 작년에 태어난 딸도 돌을 지나고 어느새 python 개발 서적을 읽을 정도의 나이가 되었습니다. 회사는 6주년을 맞이했고 올해 처음으로 일반 고객을 대상으로한 서비스를 오픈했습니다. 서비스를 운영하면서 느낀 점도 많지만 일단은 블로그에 대해 한해를 마무리하는 회고를 하려고 합니다.</description>
+        <pubDate>Sat, 31 Dec 2016 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2016/12/31/remember-2016.html</link>
+        <guid isPermaLink="true">https://subicura.com/2016/12/31/remember-2016.html</guid>
+        
+        <category>Blog</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>linter를 이용한 코딩스타일과 에러 체크하기</title>
+        <description>홈쇼핑처럼 6번째 상품인 까르보돈까스는 부먹과 찍먹을 선택해야 합니다. 코딩도 둘중에 하나를 선택해야 하는 경우가 많은데 협업을 위해 코딩 스타일을 설정하고 규칙에 어긋난 코드를 한땀한땀 수정했던 순간이 떠올라 linter에 대해 이야기합니다.</description>
+        <pubDate>Mon, 11 Jul 2016 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2016/07/11/coding-convention.html</link>
+        <guid isPermaLink="true">https://subicura.com/2016/07/11/coding-convention.html</guid>
+        
+        <category>Coding</category>
+        
+        <category>Lint</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>왜 React와 서버 사이드 렌더링인가?</title>
+        <description>홈쇼핑처럼 4번째 상품인 튀김을 기름에 튀기면서 React를 적용하느라 고생했던 순간이 떠올라 React와 서버 사이드 렌더링 적용과정을 정리해봅니다. 여기서는 어떻게보다는 왜에 대해 설명합니다.</description>
+        <pubDate>Mon, 20 Jun 2016 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2016/06/20/server-side-rendering-with-react.html</link>
+        <guid isPermaLink="true">https://subicura.com/2016/06/20/server-side-rendering-with-react.html</guid>
+        
+        <category>FrontEnd</category>
+        
+        <category>Javascript</category>
+        
+        <category>React</category>
+        
+        <category>Angular</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Go언어로 오픈소스 배송조회 서비스 만들기</title>
+        <description>홈쇼핑처럼에서 세번째로 런칭한 돈까스를 구매해 주시는 분들을 보면서 *아.. 받은 만큼 나도 뭔가 베풀어야겠구나* 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다. github이라는 소셜코딩 플랫폼이 등장하면서 오픈소스에 참여할 수 있는 장벽이 많이 낮아졌습니다. 사용하던 오픈소스에서 버그를 발견하면 이슈를 살펴보고 수정한 소스를 슬쩍 풀 리퀘스트 하면 됩니다. 내가 작성한 소스가 커미터 마음에 들면 머지가 될 것이고 그렇게 우리는 오픈소스 컨트리뷰터가 되고 인류에 조금이라도 공헌한 사람이 됩니다.</description>
+        <pubDate>Mon, 13 Jun 2016 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2016/06/13/start-go-shipment-tracking-opensource.html</link>
+        <guid isPermaLink="true">https://subicura.com/2016/06/13/start-go-shipment-tracking-opensource.html</guid>
+        
+        <category>BackEnd</category>
+        
+        <category>Go</category>
+        
+        <category>OpenSource</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>도커를 이용한 웹서비스 무중단 배포하기</title>
+        <description>홈쇼핑처럼x밀본고기덮밥이 팔리는걸 관리자화면에서 보면서 하루에도 여러번 소스를 업데이트 하고 운영서버로 배포했던 내용이 떠올라 후기로 정리합니다. 배포는 단순히 로컬의 소스를 운영 서버로 복사하는 것입니다. FTP로 파일을 복사하는 방식은 가장 기본이면서 그럭저럭 잘 동작합니다. 배포 중에 서비스가 잠깐 멈추는 문제가 있다면 새벽에 배포하면 되고 굳이 다른 개발할일도 많은데 배포에 신경을 써야 하는 생각도 듭니다. 하지만, 오히려 배포가 탄탄해지면 서비스 개발에 집중할 수 있고 하루에 몇번이라도 배포를 자주, 더 빨리 하는 것이 서비스의 경쟁력이 되는 세상입니다. 서비스가 빠르게 발전하고 있고 서버를 확장하려면 미리미리 신경쓰는 것이 맞다고 생각합니다.</description>
+        <pubDate>Tue, 07 Jun 2016 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html</link>
+        <guid isPermaLink="true">https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html</guid>
+        
+        <category>Docker</category>
+        
+        <category>DevOps</category>
+        
+        <category>Server</category>
+        
+        <category>Deployment</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>홈쇼핑처럼 개발후기</title>
+        <description>홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 &quot;홈쇼핑처럼&quot;을 개발했던 내용이 떠올라 후기로 정리합니다. 기술적으로 고민했던 것과 어떤 기술들을 사용했는지를 중점으로 정리해 보았습니다. &quot;아, 이 스타트업은 이렇게 일을 하고 이런식으로 서비스를 개발했구나&quot; 하고 봐주시면 감사할 것 같습니다. 더 나은 대안이 있다면 추천해주셔도 좋습니다.</description>
+        <pubDate>Mon, 30 May 2016 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2016/05/30/likehs-develop-log.html</link>
+        <guid isPermaLink="true">https://subicura.com/2016/05/30/likehs-develop-log.html</guid>
+        
+        <category>TechStack</category>
+        
+        <category>Startup</category>
+        
+        <category>Likehs</category>
+        
+        
+      </item>
+    
   </channel>
 </rss>
