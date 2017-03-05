@@ -183,10 +183,7 @@ Docker 1.13을 기준으로 어떤 기능을 제공하는지 하나하나 살펴
 
 가상머신이 정상적으로 생성되었는지 확인하려면 `vagrant status`, 가상머신을 삭제하려면 `vagrant destroy` 를 실행합니다. 가상머신에 접속하는 명령어는  `vagrant ssh [가상머신이름]`입니다.
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/vagrant-up.json" poster="npt:0:15" speed="2"></asciinema-player>
-  <figcaption>vagrant up</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-25-container-orchestration-with-docker-swarm/vagrant-up.json', title: 'vagrant up' %}
 
 ### 스웜 클러스터 만들기
 
@@ -247,10 +244,7 @@ q5pa26ik11g9surws03quvrsk    core-02   Ready   Active
 
 > 매니저 노드가 관리하는 정보는  `/var/lib/docker/swarm`에 저장됩니다.  
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/swarm-cluster.json" poster="npt:0:15" speed="2"></asciinema-player>
-  <figcaption>init swarm cluster</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-25-container-orchestration-with-docker-swarm/swarm-cluster.json', title: 'init swarm cluster' %}
 
 ### 기본 웹 애플리케이션
 
@@ -324,10 +318,7 @@ cfb152786b87
 
 분명 컨테이너는  `core-01`노드에서 실행중인데 모든 노드에서 정상적으로 응답하고 있습니다. 어떻게 된일일까요?
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/basic-web-application.json" poster="npt:0:15" speed="2"></asciinema-player>
-  <figcaption>basic web application</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-25-container-orchestration-with-docker-swarm/basic-web-application.json', title: 'basic web application' %}
 
 ### Ingress network
 
@@ -399,10 +390,7 @@ e970ff9ed9c6
 
 5개의 컨테이너에 아주 이쁘게 요청이 분산되었습니다. 아무런 설정 없이 ingress 네트워크가 알아서 로드 밸런서 역할을 해주고 있습니다. Nginx나 haproxy같은 설정이 필요 없습니다. 너무 편하지 않나요?
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/replication.json" poster="npt:0:15" speed="2"></asciinema-player>
-  <figcaption>replication</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-25-container-orchestration-with-docker-swarm/replication.json', title: 'replication' %}
 
 ### HEALTHCHECK
 
@@ -452,10 +440,7 @@ xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9
 
 하나씩 하나씩 이쁘게 업데이트되는 과정을 볼 수 있고 접속 테스트를 하면 문제 없이 업데이트되는걸 확인 할 수 있습니다.
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/healthcheck.json" poster="npt:0:15" speed="2"></asciinema-player>
-  <figcaption>service update</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-25-container-orchestration-with-docker-swarm/healthcheck.json', title: 'service update' %}
 
 ### 방문자수 체크 웹 애플리케이션
 
@@ -606,10 +591,7 @@ curl core-01:4568
 
 > 내부 DNS에서 counter의 IP는 10.0.0.4로 3개 컨테이너의 로드 벨런서용 IP를 가리키고 있습니다. 실제 각각의 IP는 tasks.counter의 A Record에 기록되어 있고 10.0.0.5~7을 가지고 있습니다.  
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/overlay.json" poster="npt:0:15" speed="2"></asciinema-player>
-  <figcaption>service with overlay</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-25-container-orchestration-with-docker-swarm/overlay.json', title: 'service with overlay' %}
 
 ### 비밀키 조회 애플리케이션
 
@@ -657,10 +639,7 @@ this is my password!
 
 아주 잘 동작합니다. 도커를 이용하여 서비스를 구축하면 패스워드 정보를 어떻게 할지 고민일 때가 있는데 아주 유용하게 사용할 수 있습니다.
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/secret.json" poster="npt:0:15" speed="2"></asciinema-player>
-  <figcaption>docker secret</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-25-container-orchestration-with-docker-swarm/secret.json', title: 'docker secre' %}
 
 ### Traefik 리버스 프록시 서버
 
@@ -757,10 +736,7 @@ curl counter.local.dev
 
 마법과 같은 일이 옵션 몇줄로 일어났습니다. 음.. 스웜 정말 좋지 않나요?
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/traefik.json" poster="npt:0:15" speed="2"></asciinema-player>
-  <figcaption>traefik</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-25-container-orchestration-with-docker-swarm/traefik.json', title: 'traefik' %}
 
 ### 스웜 서버 모니터링
 

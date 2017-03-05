@@ -33,10 +33,7 @@ last_modified_at: 2017-02-10T01:00:00+09:00
 curl -s https://get.docker.com/ | sudo sh
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>Docker Install (ubuntu)</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json', title: 'Docker Install (ubuntu)' %}
 
 **sudo 없이 사용하기**
 
@@ -140,10 +137,7 @@ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 docker run ubuntu:16.04
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>run ubuntu 16.04 container</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json', title: 'run ubuntu 16.04 container' %}
 
 `run`명령어를 사용하면 사용할 이미지가 저장되어 있는지 확인하고 없다면 다운로드(`pull`)를 한 후 컨테이너를 생성(`create`)하고 시작(`start`) 합니다.
 
@@ -163,10 +157,7 @@ bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
 boot  etc  lib   media  opt  root  sbin  sys  usr
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>run ubuntu 16.04 container with /bin/bash</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json', title: 'run ubuntu 16.04 container with /bin/bash' %}
 
 컨테이너 내부에 들어가기 위해 bash 쉘을 실행하고 키보드 입력을 위해 `-it` 옵션을 줍니다. 추가적으로 프로세스가 종료되면 컨테이너가 자동으로 삭제되도록 `--rm` 옵션도 추가하였습니다.
 
@@ -194,10 +185,7 @@ $5
 hello
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>run redis container</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json', title: 'run redis container' %}
 
 `-d` 옵션을 주었기 때문에 컨테이너를 실행하자마자 컨테이너의 ID(5dff91d2...)를 보여주고 바로 쉘로 돌아왔습니다. 컨테이너는 종료된 것이 아니라 백그라운드 모드로 동작하고 있고 컨테이너 ID를 이용하여 컨테이너를 제어할 수 있습니다. `-p` 옵션을 이용하여 호스트의 `1234포트`를 컨테이너의 `6379포트`로 연결하였고 localhost의 1234포트로 접속하면 하면 redis를 사용할 수 있습니다.
 
@@ -234,10 +222,7 @@ mysql> show databases;
 mysql> quit
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-mysql.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>run mysql 5.7 container</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-mysql.json', title: 'run mysql 5.7 container' %}
 
 와우, 순식간에 MySQL서버가 실행되었습니다. 이번 테스트는 호스트 OS에 MySQL 클라이언트가 설치되어 있어야 합니다. 추후에 실행중인 MySQL 도커 컨테이너에 접속하여 클라이언트를 실행해 보도록 하겠습니다.
 
@@ -269,10 +254,7 @@ docker run -d -p 8080:80 \
   wordpress
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-wp.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>run wordpress container</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-wp.json', title: 'run wordpress container' %}
 
 컨테이너가 제대로 실행되었는지 웹 브라우저로 확인해봅니다.
 
@@ -583,10 +565,7 @@ output:
 docker logs -f ${WORDPRESS_CONTAINER_ID}
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>docker logs -f</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json', title: 'docker logs -f' %}
 
 로그를 켜 놓은 상태에서 워드프레스 페이지를 새로고침하면 브라우저 접속 로그가 실시간으로 보입니다. 가장 흔하게 사용하는 옵션이고 로그 보기를 중지하려면 `ctrl` + `c`를 입력하면 됩니다.
 
@@ -633,10 +612,7 @@ mysql> quit
 exit
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>docker exec bash</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json', title: 'docker exec bash' %}
 
 키보드 입력이 필요하니 run 명령어와 마찬가지로 `-it` 옵션을 주었고 bash 쉘로 접속하여 마치 가상머신에 들어온 것 같은 느낌이 듭니다. 접속한 이후에는 어떤 작업도 할 수 있고 컨테이너를 마음껏 건드릴 수 있습니다.
 
@@ -663,10 +639,7 @@ mysql> show databases;
 mysql> quit
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>docker exec mysql</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json', title: 'docker exec mysql' %}
 
 이제, 호스트 OS에 mysql을 설치하지 않아도 mysql 클라이언트를 사용할 수 있습니다. 굳이 복잡한 작업이 필요 없는 경우는 `-it` 옵션없이 단순하게 명령을 실행하고 종료할 수도 있습니다.
 
@@ -732,10 +705,7 @@ docker-compose version
 docker-compose up
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-compose.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>docker-compose</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-compose.json', title: 'docker-compose' %}
 
 와우, 아주 손쉽게 워드프레스가 만들어 졌습니다. 단지 명령어를 설정파일로 바꾼거에 불과하지만 가독성과 편리성은 훨씬 향상되었습니다.
 

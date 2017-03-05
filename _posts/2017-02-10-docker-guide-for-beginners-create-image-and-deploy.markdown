@@ -65,10 +65,7 @@ bundle install            # install package
 bundle exec ruby app.rb   # Run sinatra
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>run-sinatra</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json', title: 'run-sinatra' %}
 
 ruby가 설치되어 있지 않다고요? 도커만 있으면 문제없습니다. 다음 명령어를 실행합니다.
 
@@ -81,10 +78,7 @@ ruby \
 bash -c "bundle install && bundle exec ruby app.rb -o 0.0.0.0"
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>run-docker-sinatra</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json', title: 'run-docker-sinatra' %}
 
 호스트의 디렉토리를 루비가 설치된 컨테이너의 디렉토리에 마운트한다음 그대로 명령어를 실행하면 로컬에 개발 환경을 구축하지 않고 도커 컨테이너를 개발환경으로 사용할 수 있습니다. ~~어으썸!~~ 
 
@@ -190,10 +184,7 @@ Removing intermediate container 1f7a9ba8d63c
 Successfully built 54d239c00f11
 {% endhighlight %}
 
-<div class="asciinema-player-section">
-  <asciinema-player src="{{ site.url }}/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>docker-build</figcaption>
-</div>
+{% asciinema path: 'asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json', title: 'docker-build' %}
 
 빌드 명령어를 실행하면 Dockerfile에 정의한 내용이 한 줄 한 줄 실행되는 걸 볼 수 있습니다. 실제로 명령어를 실행하기 때문에 빌드 시간이 꽤 걸리는 걸 알 수 있습니다. 최종적으로 `Successfully built xxxxxxxx` 메시지가 보이면 정상적으로 이미지를 생성한 것입니다.
 

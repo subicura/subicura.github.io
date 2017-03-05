@@ -15,7 +15,7 @@ module Jekyll
       end
 
       def render(context)
-        ret = %Q{<asciinema-player src="#{context.registers[:site].config['url']}/assets/#{@attributes['path']}" poster="data:text/plain,$ # #{@attributes['title']}" speed="2"></asciinema-player>}
+        ret = %Q{<asciinema-player src="#{context.registers[:site].config['url']}/assets/#{@attributes['path']}" poster="npt:0:15" speed="2"></asciinema-player>}
 
         if @attributes['title']
           ret += %Q{<figcaption>#{@attributes['title']}</figcaption>}
