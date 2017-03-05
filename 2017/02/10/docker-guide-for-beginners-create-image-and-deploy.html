@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1488725203675245000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1488726763764217000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -210,10 +210,7 @@ window['_fs_namespace'] = 'FS';
 bundle <span class="nb">exec </span>ruby app.rb   <span class="c"># Run sinatra</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<div class="asciinema-player-section">
-  <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>run-sinatra</figcaption>
-</div>
+<div class="asciinema-player-section"><asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>run-sinatra</figcaption></div>
 
 <p>ruby가 설치되어 있지 않다고요? 도커만 있으면 문제없습니다. 다음 명령어를 실행합니다.</p>
 
@@ -230,10 +227,7 @@ ruby <span class="se">\</span>
 bash -c <span class="s2">"bundle install &amp;&amp; bundle exec ruby app.rb -o 0.0.0.0"</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<div class="asciinema-player-section">
-  <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>run-docker-sinatra</figcaption>
-</div>
+<div class="asciinema-player-section"><asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>run-docker-sinatra</figcaption></div>
 
 <p>호스트의 디렉토리를 루비가 설치된 컨테이너의 디렉토리에 마운트한다음 그대로 명령어를 실행하면 로컬에 개발 환경을 구축하지 않고 도커 컨테이너를 개발환경으로 사용할 수 있습니다. <del>어으썸!</del></p>
 
@@ -416,10 +410,7 @@ Removing intermediate container 1f7a9ba8d63c
 Successfully built 54d239c00f11<span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<div class="asciinema-player-section">
-  <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json" poster="npt:99:99" speed="2"></asciinema-player>
-  <figcaption>docker-build</figcaption>
-</div>
+<div class="asciinema-player-section"><asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>docker-build</figcaption></div>
 
 <p>빌드 명령어를 실행하면 Dockerfile에 정의한 내용이 한 줄 한 줄 실행되는 걸 볼 수 있습니다. 실제로 명령어를 실행하기 때문에 빌드 시간이 꽤 걸리는 걸 알 수 있습니다. 최종적으로 <code class="highlighter-rouge">Successfully built xxxxxxxx</code> 메시지가 보이면 정상적으로 이미지를 생성한 것입니다.</p>
 
@@ -1237,7 +1228,7 @@ docker push localhost:5000/subicura/sinatra-app:1<span class="w">
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1488725203675245000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1488726763764217000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

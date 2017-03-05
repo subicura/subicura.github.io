@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 05 Mar 2017 23:46:43 +0900</pubDate>
-    <lastBuildDate>Sun, 05 Mar 2017 23:46:43 +0900</lastBuildDate>
+    <pubDate>Mon, 06 Mar 2017 00:12:43 +0900</pubDate>
+    <lastBuildDate>Mon, 06 Mar 2017 00:12:43 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -206,10 +206,7 @@
 
 &lt;p&gt;가상머신이 정상적으로 생성되었는지 확인하려면 &lt;code class=&quot;highlighter-rouge&quot;&gt;vagrant status&lt;/code&gt;, 가상머신을 삭제하려면 &lt;code class=&quot;highlighter-rouge&quot;&gt;vagrant destroy&lt;/code&gt; 를 실행합니다. 가상머신에 접속하는 명령어는  &lt;code class=&quot;highlighter-rouge&quot;&gt;vagrant ssh [가상머신이름]&lt;/code&gt;입니다.&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/vagrant-up.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;vagrant up&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/vagrant-up.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;vagrant up&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section-8&quot;&gt;스웜 클러스터 만들기&lt;/h3&gt;
 
@@ -281,10 +278,7 @@ q5pa26ik11g9surws03quvrsk    core-02   Ready   Active&lt;span class=&quot;w&quot
   &lt;p&gt;매니저 노드가 관리하는 정보는  &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/lib/docker/swarm&lt;/code&gt;에 저장됩니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/swarm-cluster.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;init swarm cluster&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/swarm-cluster.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;init swarm cluster&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section-9&quot;&gt;기본 웹 애플리케이션&lt;/h3&gt;
 
@@ -362,10 +356,7 @@ cfb152786b87&lt;span class=&quot;w&quot;&gt;
 
 &lt;p&gt;분명 컨테이너는  &lt;code class=&quot;highlighter-rouge&quot;&gt;core-01&lt;/code&gt;노드에서 실행중인데 모든 노드에서 정상적으로 응답하고 있습니다. 어떻게 된일일까요?&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/basic-web-application.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;basic web application&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/basic-web-application.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;basic web application&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;ingress-network&quot;&gt;Ingress network&lt;/h3&gt;
 
@@ -454,10 +445,7 @@ e970ff9ed9c6
 
 &lt;p&gt;5개의 컨테이너에 아주 이쁘게 요청이 분산되었습니다. 아무런 설정 없이 ingress 네트워크가 알아서 로드 밸런서 역할을 해주고 있습니다. Nginx나 haproxy같은 설정이 필요 없습니다. 너무 편하지 않나요?&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/replication.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;replication&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/replication.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;replication&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;healthcheck&quot;&gt;HEALTHCHECK&lt;/h3&gt;
 
@@ -520,10 +508,7 @@ xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9
 
 &lt;p&gt;하나씩 하나씩 이쁘게 업데이트되는 과정을 볼 수 있고 접속 테스트를 하면 문제 없이 업데이트되는걸 확인 할 수 있습니다.&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/healthcheck.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;service update&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/healthcheck.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;service update&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section-10&quot;&gt;방문자수 체크 웹 애플리케이션&lt;/h3&gt;
 
@@ -729,10 +714,7 @@ curl core-01:4568
   &lt;p&gt;내부 DNS에서 counter의 IP는 10.0.0.4로 3개 컨테이너의 로드 벨런서용 IP를 가리키고 있습니다. 실제 각각의 IP는 tasks.counter의 A Record에 기록되어 있고 10.0.0.5~7을 가지고 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/overlay.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;service with overlay&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/overlay.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;service with overlay&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section-11&quot;&gt;비밀키 조회 애플리케이션&lt;/h3&gt;
 
@@ -778,10 +760,7 @@ curl core-01:4568
 
 &lt;p&gt;아주 잘 동작합니다. 도커를 이용하여 서비스를 구축하면 패스워드 정보를 어떻게 할지 고민일 때가 있는데 아주 유용하게 사용할 수 있습니다.&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/secret.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;docker secret&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/secret.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker secre&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;traefik---&quot;&gt;Traefik 리버스 프록시 서버&lt;/h3&gt;
 
@@ -901,10 +880,7 @@ docker service create --name counter &lt;span class=&quot;se&quot;&gt;\&lt;/span
 
 &lt;p&gt;마법과 같은 일이 옵션 몇줄로 일어났습니다. 음.. 스웜 정말 좋지 않나요?&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/traefik.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;traefik&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/traefik.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;traefik&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section-12&quot;&gt;스웜 서버 모니터링&lt;/h3&gt;
 
@@ -1009,10 +985,7 @@ docker service create --name counter &lt;span class=&quot;se&quot;&gt;\&lt;/span
 bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;ruby app.rb   &lt;span class=&quot;c&quot;&gt;# Run sinatra&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;run-sinatra&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run-sinatra&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;ruby가 설치되어 있지 않다고요? 도커만 있으면 문제없습니다. 다음 명령어를 실행합니다.&lt;/p&gt;
 
@@ -1029,10 +1002,7 @@ ruby &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 bash -c &lt;span class=&quot;s2&quot;&gt;&quot;bundle install &amp;amp;&amp;amp; bundle exec ruby app.rb -o 0.0.0.0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;run-docker-sinatra&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run-docker-sinatra&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;호스트의 디렉토리를 루비가 설치된 컨테이너의 디렉토리에 마운트한다음 그대로 명령어를 실행하면 로컬에 개발 환경을 구축하지 않고 도커 컨테이너를 개발환경으로 사용할 수 있습니다. &lt;del&gt;어으썸!&lt;/del&gt;&lt;/p&gt;
 
@@ -1215,10 +1185,7 @@ Removing intermediate container 1f7a9ba8d63c
 Successfully built 54d239c00f11&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;docker-build&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker-build&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;빌드 명령어를 실행하면 Dockerfile에 정의한 내용이 한 줄 한 줄 실행되는 걸 볼 수 있습니다. 실제로 명령어를 실행하기 때문에 빌드 시간이 꽤 걸리는 걸 알 수 있습니다. 최종적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;Successfully built xxxxxxxx&lt;/code&gt; 메시지가 보이면 정상적으로 이미지를 생성한 것입니다.&lt;/p&gt;
 
@@ -1991,10 +1958,7 @@ docker push localhost:5000/subicura/sinatra-app:1&lt;span class=&quot;w&quot;&gt
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;curl -s https://get.docker.com/ | sudo sh&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;Docker Install (ubuntu)&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;Docker Install (ubuntu)&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;sudo 없이 사용하기&lt;/strong&gt;&lt;/p&gt;
 
@@ -2141,10 +2105,7 @@ Server:
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker run ubuntu:16.04&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;run ubuntu 16.04 container&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run ubuntu 16.04 container&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt;명령어를 사용하면 사용할 이미지가 저장되어 있는지 확인하고 없다면 다운로드(&lt;code class=&quot;highlighter-rouge&quot;&gt;pull&lt;/code&gt;)를 한 후 컨테이너를 생성(&lt;code class=&quot;highlighter-rouge&quot;&gt;create&lt;/code&gt;)하고 시작(&lt;code class=&quot;highlighter-rouge&quot;&gt;start&lt;/code&gt;) 합니다.&lt;/p&gt;
 
@@ -2171,10 +2132,7 @@ bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
 boot  etc  lib   media  opt  root  sbin  sys  usr&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;run ubuntu 16.04 container with /bin/bash&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run ubuntu 16.04 container with /bin/bash&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;컨테이너 내부에 들어가기 위해 bash 쉘을 실행하고 키보드 입력을 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;-it&lt;/code&gt; 옵션을 줍니다. 추가적으로 프로세스가 종료되면 컨테이너가 자동으로 삭제되도록 &lt;code class=&quot;highlighter-rouge&quot;&gt;--rm&lt;/code&gt; 옵션도 추가하였습니다.&lt;/p&gt;
 
@@ -2211,10 +2169,7 @@ get mykey
 hello&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;run redis container&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run redis container&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-d&lt;/code&gt; 옵션을 주었기 때문에 컨테이너를 실행하자마자 컨테이너의 ID(5dff91d2…)를 보여주고 바로 쉘로 돌아왔습니다. 컨테이너는 종료된 것이 아니라 백그라운드 모드로 동작하고 있고 컨테이너 ID를 이용하여 컨테이너를 제어할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;-p&lt;/code&gt; 옵션을 이용하여 호스트의 &lt;code class=&quot;highlighter-rouge&quot;&gt;1234포트&lt;/code&gt;를 컨테이너의 &lt;code class=&quot;highlighter-rouge&quot;&gt;6379포트&lt;/code&gt;로 연결하였고 localhost의 1234포트로 접속하면 하면 redis를 사용할 수 있습니다.&lt;/p&gt;
 
@@ -2271,10 +2226,7 @@ hello&lt;span class=&quot;w&quot;&gt;
 &lt;span class=&quot;gp&quot;&gt;mysql&amp;gt; &lt;/span&gt;quit&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-mysql.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;run mysql 5.7 container&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-mysql.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run mysql 5.7 container&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;와우, 순식간에 MySQL서버가 실행되었습니다. 이번 테스트는 호스트 OS에 MySQL 클라이언트가 설치되어 있어야 합니다. 추후에 실행중인 MySQL 도커 컨테이너에 접속하여 클라이언트를 실행해 보도록 하겠습니다.&lt;/p&gt;
 
@@ -2319,10 +2271,7 @@ docker run -d -p 8080:80 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   wordpress&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-wp.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;run wordpress container&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-wp.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run wordpress container&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;컨테이너가 제대로 실행되었는지 웹 브라우저로 확인해봅니다.&lt;/p&gt;
 
@@ -2693,10 +2642,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker logs -f &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WORDPRESS_CONTAINER_ID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;docker logs -f&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker logs -f&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;로그를 켜 놓은 상태에서 워드프레스 페이지를 새로고침하면 브라우저 접속 로그가 실시간으로 보입니다. 가장 흔하게 사용하는 옵션이고 로그 보기를 중지하려면 &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt;를 입력하면 됩니다.&lt;/p&gt;
 
@@ -2757,10 +2703,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;docker exec bash&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker exec bash&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;키보드 입력이 필요하니 run 명령어와 마찬가지로 &lt;code class=&quot;highlighter-rouge&quot;&gt;-it&lt;/code&gt; 옵션을 주었고 bash 쉘로 접속하여 마치 가상머신에 들어온 것 같은 느낌이 듭니다. 접속한 이후에는 어떤 작업도 할 수 있고 컨테이너를 마음껏 건드릴 수 있습니다.&lt;/p&gt;
 
@@ -2803,10 +2746,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 &lt;span class=&quot;gp&quot;&gt;mysql&amp;gt; &lt;/span&gt;quit&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;docker exec mysql&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker exec mysql&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;이제, 호스트 OS에 mysql을 설치하지 않아도 mysql 클라이언트를 사용할 수 있습니다. 굳이 복잡한 작업이 필요 없는 경우는 &lt;code class=&quot;highlighter-rouge&quot;&gt;-it&lt;/code&gt; 옵션없이 단순하게 명령을 실행하고 종료할 수도 있습니다.&lt;/p&gt;
 
@@ -2912,10 +2852,7 @@ volumes:
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker-compose up&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;
-  &lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-compose.json&quot; poster=&quot;npt:99:99&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;
-  &lt;figcaption&gt;docker-compose&lt;/figcaption&gt;
-&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-compose.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker-compose&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;와우, 아주 손쉽게 워드프레스가 만들어 졌습니다. 단지 명령어를 설정파일로 바꾼거에 불과하지만 가독성과 편리성은 훨씬 향상되었습니다.&lt;/p&gt;
 

@@ -9,6 +9,13 @@ $ bundle exec jekyll serve
 $ bundle exec jekyll serve --incremental
 ```
 
+## deploy
+
+```
+npm install
+npm run deploy
+```
+
 ## asciinema player
 
 ```
