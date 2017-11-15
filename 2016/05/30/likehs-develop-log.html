@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1489210669085620000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1510773113069980000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -128,7 +128,12 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p><img src="https://subicura.com/assets/article_images/2016-05-30-likehs-develop-log/dduk.png" alt="서울스낵x불맛쌀떡볶이" /></p>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#어떤걸-만들까">어떤걸 만들까?</a></li>
+<li class="toc-entry toc-h2"><a href="#어떻게-개발해야-할까">어떻게 개발해야 할까?</a></li>
+<li class="toc-entry toc-h2"><a href="#커뮤니케이션은-어떻게">커뮤니케이션은 어떻게?</a></li>
+<li class="toc-entry toc-h2"><a href="#그래서">그래서</a></li>
+</ul><p><img src="https://subicura.com/assets/article_images/2016-05-30-likehs-develop-log/dduk.png" alt="서울스낵x불맛쌀떡볶이"></p>
 
 <p>홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 “<a href="https://www.likehs.com/">홈쇼핑처럼</a>“을 개발했던 내용이 떠올라 후기로 정리합니다.</p>
 
@@ -136,7 +141,8 @@
 
 <p>밑에 내용은 서비스를 만들면서 기술적으로 고민했던 것과 어떤 기술들을 사용했는지를 중점으로 정리해 보았습니다. “아, 이 스타트업은 이렇게 일을 하고 이런식으로 서비스를 개발했구나” 하고 봐주시면 감사할 것 같습니다. 더 나은 대안이 있다면 추천해주셔도 좋습니다.</p>
 
-<h2 id="section">어떤걸 만들까?</h2>
+<h2 id="section">
+<a id="어떤걸-만들까" class="anchor" href="#%EC%96%B4%EB%96%A4%EA%B1%B8-%EB%A7%8C%EB%93%A4%EA%B9%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>어떤걸 만들까?</h2>
 
 <p>대략적인 서비스 개요입니다</p>
 
@@ -168,7 +174,8 @@
   <li>구매자가 최대한 편하고 짧은 시간에 구매할 수 있도록 하자</li>
 </ul>
 
-<h2 id="section-1">어떻게 개발해야 할까?</h2>
+<h2 id="section-1">
+<a id="어떻게-개발해야-할까" class="anchor" href="#%EC%96%B4%EB%96%BB%EA%B2%8C-%EA%B0%9C%EB%B0%9C%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>어떻게 개발해야 할까?</h2>
 
 <p>기술 스택 소개입니다</p>
 
@@ -177,7 +184,8 @@
 <ul>
   <li>안드로이드와 아이폰 - 한국은 안드로이드 사용자가 압도적이지만 아이폰 사용자를 포기할 수 없음. 우리 회사도 한명 빼곤 전부 아이폰이라.. 같이 런칭하기로 결정</li>
   <li>안드로이드는 Android Studio에 Java를 이용하고 아이폰은 Xcode에 swift를 이용</li>
-  <li><a href="http://reactivex.io/">RxAndroid</a>
+  <li>
+<a href="http://reactivex.io/">RxAndroid</a>
     <ul>
       <li>뭔가 좋아보이니 도입</li>
       <li>timeout, loading 상황이라던가 채팅 메시지를 받는 부분에 적용 =&gt; 생각보다 쓰기가 어려웠음</li>
@@ -186,13 +194,15 @@
       <li>조금 더 지나면 좋아질 것 같은데 아직 좀 이른느낌</li>
     </ul>
   </li>
-  <li><a href="https://developer.apple.com/swift/">swift</a>
+  <li>
+<a href="https://developer.apple.com/swift/">swift</a>
     <ul>
       <li>플러그인들 개발이 많이 되어서 몇년 전에 비해 실제 제품을 개발하는데 무리가 없어짐</li>
       <li>Objective-C 안녕</li>
     </ul>
   </li>
-  <li><a href="https://www.xamarin.com/">xamarin</a>, <a href="https://facebook.github.io/react-native/">react native</a>, <a href="http://ionicframework.com/">ionic</a>, <a href="http://www.rubymotion.com/">rubymotion</a>
+  <li>
+<a href="https://www.xamarin.com/">xamarin</a>, <a href="https://facebook.github.io/react-native/">react native</a>, <a href="http://ionicframework.com/">ionic</a>, <a href="http://www.rubymotion.com/">rubymotion</a>
     <ul>
       <li>한번 소스 작성으로 아이폰과 안드로이드 앱을 가능하게 하는 녀석들</li>
       <li>비지니스용 앱에는 적합해 보이나 고객용 앱으로는 적용이 어렵다고 판단</li>
@@ -200,7 +210,8 @@
       <li>고려해봤지만 결국 안쓰는것으로</li>
     </ul>
   </li>
-  <li><a href="https://cocoapods.org/">cocoapods</a>
+  <li>
+<a href="https://cocoapods.org/">cocoapods</a>
     <ul>
       <li>iOS 라이브러리는 cocoapod 사용중</li>
       <li>내부 private 라이브러리가 있어 따로 pod 리파지터리 구성</li>
@@ -248,11 +259,13 @@
   <li>magento
     <ul>
       <li>한국 페이먼트 솔루션이 잘 안되어 있어서 이니시스를 사용했는데 결제, 환불, 부분환불을 전부 구현해야했음. (플러그인으로 오픈하면 좀 팔릴까?)</li>
-      <li><a href="https://xdebug.org/">xdebug</a>, <a href="https://github.com/squizlabs/PHP_CodeSniffer">code sniffer</a>, <a href="https://phpunit.de/">phpunit</a>을 이용해서 잘 케어해줘야 오류가 안나고 신중하게 코드를 관리해야 유지보수가 수월함</li>
+      <li>
+<a href="https://xdebug.org/">xdebug</a>, <a href="https://github.com/squizlabs/PHP_CodeSniffer">code sniffer</a>, <a href="https://phpunit.de/">phpunit</a>을 이용해서 잘 케어해줘야 오류가 안나고 신중하게 코드를 관리해야 유지보수가 수월함</li>
       <li>개발환경 셋팅하는데 애먹음
         <ul>
           <li>magento는 왜 <a href="https://rubygems.org/">gem</a>이나 <a href="https://www.npmjs.com/">npm</a>같은 방식으로 제공하지 않는가?</li>
-          <li><a href="http://rubyonrails.org/">rails</a>나 <a href="http://expressjs.com/">express</a>같은 경우는 core소스가 개발소스와 완전히 분리되어 개발 가능한데 마젠토는 전체 소스를 가지고 있어야 했음</li>
+          <li>
+<a href="http://rubyonrails.org/">rails</a>나 <a href="http://expressjs.com/">express</a>같은 경우는 core소스가 개발소스와 완전히 분리되어 개발 가능한데 마젠토는 전체 소스를 가지고 있어야 했음</li>
           <li>결국 코어랑 커스터마이징을 분리하기는 했는데 맞는 방법인지 모르겠음</li>
         </ul>
       </li>
@@ -263,10 +276,14 @@
 <p><strong>Web / Frontend</strong></p>
 
 <ul>
-  <li><a href="http://gulpjs.com/">gulp</a>+<a href="https://webpack.github.io/">webpack</a>+<a href="http://babeljs.io/">babel</a>+<a href="http://facebook.github.io/react/">react</a>+<a href="https://github.com/reactjs/redux">redux</a>+<a href="https://jquery.com/">jquery</a></li>
-  <li><a href="https://github.com/phpv8/v8js">PHP v8js</a>를 설치하여 <a href="http://blog.remotty.com/blog/2015/08/30/react-server-rendering-on-rails/">react 서버 사이드 렌더링</a> 사용</li>
+  <li>
+<a href="http://gulpjs.com/">gulp</a>+<a href="https://webpack.github.io/">webpack</a>+<a href="http://babeljs.io/">babel</a>+<a href="http://facebook.github.io/react/">react</a>+<a href="https://github.com/reactjs/redux">redux</a>+<a href="https://jquery.com/">jquery</a>
+</li>
+  <li>
+<a href="https://github.com/phpv8/v8js">PHP v8js</a>를 설치하여 <a href="http://blog.remotty.com/blog/2015/08/30/react-server-rendering-on-rails/">react 서버 사이드 렌더링</a> 사용</li>
   <li>redux 생각보다 공부하기 어려웠음</li>
-  <li><a href="http://sass-lang.com/">SCSS</a> / <a href="http://getbootstrap.com/">bootstrap 3</a>
+  <li>
+<a href="http://sass-lang.com/">SCSS</a> / <a href="http://getbootstrap.com/">bootstrap 3</a>
     <ul>
       <li>bootstrap은 style중 base와 일부분만 사용</li>
       <li>javascript plugin은 제외함</li>
@@ -279,7 +296,8 @@
 <p><strong>개발환경</strong></p>
 
 <ul>
-  <li><a href="https://www.vagrantup.com/">vagrant</a>와 <a href="https://www.docker.com/">docker</a>를 이용하여 구성</li>
+  <li>
+<a href="https://www.vagrantup.com/">vagrant</a>와 <a href="https://www.docker.com/">docker</a>를 이용하여 구성</li>
   <li>vagrant안에 nginx, php7, mysql, redis docker container를 띄워서 개발</li>
   <li>배포도 도커를 사용하기때문에 배포환경이랑 99% 일치하는 장점</li>
   <li>매번 힘들게 개발환경 구성할 필요 없음 <code class="highlighter-rouge">vagrant up</code>하고 커피한잔 마시면 됨</li>
@@ -293,7 +311,8 @@
 <p><strong>채팅</strong></p>
 
 <ul>
-  <li><a href="https://www.google.co.kr/?#newwindow=1&amp;q=chat+sdk">여러가지 솔루션</a> 검토 후 최종결정은 자체 개발
+  <li>
+<a href="https://www.google.co.kr/?#newwindow=1&amp;q=chat+sdk">여러가지 솔루션</a> 검토 후 최종결정은 자체 개발
     <ul>
       <li>주문 상황을 채팅창에 공유하거나, 바로 구매하기 링크 버튼등 채팅창에 넣을 요소를 고려</li>
       <li>커스터마이징이 필요한데 기존 솔류션들은 자유도가 떨어져 보였음</li>
@@ -318,7 +337,8 @@
   </li>
   <li>메시지 파싱 및 큐, 디비 전송
     <ul>
-      <li><a href="https://golang.org/">go</a>로 구현한 워커</li>
+      <li>
+<a href="https://golang.org/">go</a>로 구현한 워커</li>
       <li>큐에서 메시지를 받고 검증 후 채팅창에 돌려주고 디비에 저장함</li>
       <li>처음 go를 써봤는데 굉장히 만족스러움</li>
       <li>개발속도도 빠르고 버그도 많이 없고 속도 빠른 ruby 쓰는 느낌</li>
@@ -327,13 +347,15 @@
   <li>디비
     <ul>
       <li><a href="https://www.mysql.com/">mysql</a></li>
-      <li><a href="https://www.mongodb.com/">mongo</a>나 nosql류를 쓰면 좋을것 같긴한데 익숙하지 않아 관리할 자신이 없어서 포기</li>
+      <li>
+<a href="https://www.mongodb.com/">mongo</a>나 nosql류를 쓰면 좋을것 같긴한데 익숙하지 않아 관리할 자신이 없어서 포기</li>
     </ul>
   </li>
   <li>큐
     <ul>
       <li><a href="http://kafka.apache.org/">kafka</a></li>
-      <li><a href="https://www.rabbitmq.com/">rabbitmq</a>를 썼다가 퍼포먼스 이슈가 발생해서 옮김</li>
+      <li>
+<a href="https://www.rabbitmq.com/">rabbitmq</a>를 썼다가 퍼포먼스 이슈가 발생해서 옮김</li>
       <li>kafka는 <a href="https://linkedin.com/">linkedin</a>에서 만들었고 메모리 방식이 아닌 하드 저장 방식임 =&gt; 메모리가 아니다! 메시지 유실걱정이 없음!</li>
       <li>하드를 백엔드로 하지만 캐시와 random access를 제한하여 굉장히 빠름</li>
       <li>기능은 굉장히 부실하지만 속도가 극강임</li>
@@ -351,30 +373,35 @@
 
 <ul>
   <li>실시간으로 영상을 전송하는게 우리 서비스의 핵심</li>
-  <li><a href="https://www.wowza.com/">wowza</a>
+  <li>
+<a href="https://www.wowza.com/">wowza</a>
     <ul>
       <li>적극 고려했으나 그냥 이쁜 UI에 유료로 <a href="https://www.ffmpeg.org/">ffmpeg</a> 쓰는 느낌</li>
       <li>결국 테스트할때만 사용하고 ffmpeg 사용함</li>
     </ul>
   </li>
-  <li><a href="https://en.wikipedia.org/wiki/Real_Time_Messaging_Protocol">RTMP</a>/<a href="https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol">RTSP</a>/<a href="https://developer.apple.com/streaming/">HLS</a> 프로토콜만 지원하면  대부분 문제 해결됨</li>
+  <li>
+<a href="https://en.wikipedia.org/wiki/Real_Time_Messaging_Protocol">RTMP</a>/<a href="https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol">RTSP</a>/<a href="https://developer.apple.com/streaming/">HLS</a> 프로토콜만 지원하면  대부분 문제 해결됨</li>
   <li>오리진 서버와 엣지 서버를 어떻게 구성하는지가 중요</li>
   <li>트래픽이 어마어마하여 속도와 비용을 고려하여 클라우드 선택. 아직도 여러 클라우드 테스트중
     <ul>
       <li>트래픽을 무제한으로 주는 어떤 클라우드의 경우 속도도 빨라서 최종결정했었으나 방송직전 속도가 떨어짐 =&gt; 트래픽이 많다는 이유로 강제로 제한당함</li>
     </ul>
   </li>
-  <li><a href="https://www.youtube.com/">유튜브</a>와 <a href="https://live.fb.com/">페이스북 라이브</a>, <a href="https://vimeo.com/">비메오</a> 사용중</li>
+  <li>
+<a href="https://www.youtube.com/">유튜브</a>와 <a href="https://live.fb.com/">페이스북 라이브</a>, <a href="https://vimeo.com/">비메오</a> 사용중</li>
   <li>비메오 유료계정은 광고 없이 자체 플레이어를 쓸수 있고 트래픽이 무제한임</li>
 </ul>
 
 <p><strong>배송조회</strong></p>
 
 <ul>
-  <li><a href="https://www.doortodoor.co.kr/main/">CJ대한통운</a> 이용
+  <li>
+<a href="https://www.doortodoor.co.kr/main/">CJ대한통운</a> 이용
     <ul>
       <li>api을 제공하지 않음</li>
-      <li><a href="http://sweettracker.github.io/">sweettracker</a>와 <a href="https://www.aftership.com/">aftership</a>은 유료</li>
+      <li>
+<a href="http://sweettracker.github.io/">sweettracker</a>와 <a href="https://www.aftership.com/">aftership</a>은 유료</li>
     </ul>
   </li>
   <li>오픈소스
@@ -389,13 +416,15 @@
 <p><strong>우편번호검색</strong></p>
 
 <ul>
-  <li><a href="http://postcode.map.daum.net/guide">daum API</a>가 최고
+  <li>
+<a href="http://postcode.map.daum.net/guide">daum API</a>가 최고
     <ul>
       <li>키 발급도 없고 무제한 트래픽에 속도도 빠름!</li>
       <li>하지만, 웹만 제공하고 커스터마이징이 어려운 단점</li>
     </ul>
   </li>
-  <li><a href="https://postcodify.poesis.kr/">postcodify</a>
+  <li>
+<a href="https://postcodify.poesis.kr/">postcodify</a>
     <ul>
       <li>php기반의 오픈소스 프로젝트</li>
       <li>구주소, 신주소 동시 검색 지원</li>
@@ -408,7 +437,7 @@
 
 <p><strong>API Gateway</strong></p>
 
-<p><img src="https://subicura.com/assets/article_images/2016-05-30-likehs-develop-log/api-gateway.png" alt="API Gateway란?" /></p>
+<p><img src="https://subicura.com/assets/article_images/2016-05-30-likehs-develop-log/api-gateway.png" alt="API Gateway란?"></p>
 
 <ul>
   <li>배송조회 및 우편번호검색에서 사용</li>
@@ -416,8 +445,10 @@
   <li>위 사진처럼, 호출개수 제한, 키등록, 캐싱, 로깅, 분석등을 해줌</li>
   <li>tyk
     <ul>
-      <li><a href="https://getkong.org/">kong</a>을 고려해봤으나 gui가 유료임</li>
-      <li><a href="https://tyk.io/">tyk</a>는 go 기반의 gateway로 전직 구글러들이 만듬</li>
+      <li>
+<a href="https://getkong.org/">kong</a>을 고려해봤으나 gui가 유료임</li>
+      <li>
+<a href="https://tyk.io/">tyk</a>는 go 기반의 gateway로 전직 구글러들이 만듬</li>
       <li>서버 한대까지 무료고 GUI도 제공</li>
       <li>설치가 간단하고 사용법도 쉬움</li>
       <li>tyk에 api를 호출하면 tyk가 다시 원래 api를 호출하는 방식임</li>
@@ -428,7 +459,8 @@
 <p><strong>푸시</strong></p>
 
 <ul>
-  <li><a href="https://pushbots.com/">pushbot</a>
+  <li>
+<a href="https://pushbots.com/">pushbot</a>
     <ul>
       <li>다른 솔루션들은 기기등록 제한이 있는 경우가 많은데, pushbot은 기기등록 수 제한없음</li>
       <li>무료 발송 건수가 엄청나게 많음</li>
@@ -441,13 +473,15 @@
 <p><strong>메일</strong></p>
 
 <ul>
-  <li><a href="https://www.mailgun.com/">mailgun</a>
+  <li>
+<a href="https://www.mailgun.com/">mailgun</a>
     <ul>
       <li>발송용으로 사용</li>
       <li>비슷한 서비스들 사이에 딱히 장점/단점은 모르겠음</li>
     </ul>
   </li>
-  <li><a href="https://www.worksmobile.com/kr/">네이버웍스</a>
+  <li>
+<a href="https://www.worksmobile.com/kr/">네이버웍스</a>
     <ul>
       <li>메일 수신/발송용으로 사용</li>
       <li>구글웍스가 유료화되어 아쉬움 ㅠ</li>
@@ -456,8 +490,10 @@
   <li>템플릿
     <ul>
       <li>데스크탑, 모바일, 앱에서 이메일이 깨지지 않는지 확인함</li>
-      <li><a href="https://litmus.com/">litmus</a> =&gt; 최대 테스트 개수가 제한되어 있긴 한데 쓸만함</li>
-      <li><a href="https://github.com/leemunroe/grunt-email-workflow">Grunt Email Design Workflow</a>
+      <li>
+<a href="https://litmus.com/">litmus</a> =&gt; 최대 테스트 개수가 제한되어 있긴 한데 쓸만함</li>
+      <li>
+<a href="https://github.com/leemunroe/grunt-email-workflow">Grunt Email Design Workflow</a>
         <ul>
           <li>이메일은 css class를 지원하지 않아 전부 inline으로 넣어야함 그런걸 자동으로 해줌</li>
           <li>class 지원과 scss지원, 미리보기등을 지원함</li>
@@ -471,7 +507,8 @@
 <p><strong>SMS</strong></p>
 
 <ul>
-  <li><a href="http://www.apistore.co.kr/api/apiView.do?service_seq=151">olleh API Store</a>
+  <li>
+<a href="http://www.apistore.co.kr/api/apiView.do?service_seq=151">olleh API Store</a>
     <ul>
       <li>타사 대비 저렴함
         <ul>
@@ -487,7 +524,8 @@
 <p><strong>CS</strong></p>
 
 <ul>
-  <li><a href="https://yellowid.kakao.com/">카카오톡 옐로우아이디</a>
+  <li>
+<a href="https://yellowid.kakao.com/">카카오톡 옐로우아이디</a>
     <ul>
       <li>상담은 채팅으로 유도</li>
       <li>한 아이디에 여려명 관리자 등록 가능하고 데스크탑에서도 잘 동작함</li>
@@ -503,7 +541,8 @@
 <p><strong>이슈관리/코드검수</strong></p>
 
 <ul>
-  <li><a href="http://phabricator.org/">phabricator</a>
+  <li>
+<a href="http://phabricator.org/">phabricator</a>
     <ul>
       <li>facebook의 오픈소스 코드리뷰, 테스크 관리, 프로젝트 관리툴</li>
       <li>기능은 짱짱 많고 좋은듯 하지만 세부적으로 꼭 필요한 몇몇 기능은 부족한 느낌임</li>
@@ -511,11 +550,13 @@
       <li>기능이 부족한 부분은 phabricator 방식에 맞춰야함</li>
     </ul>
   </li>
-  <li><a href="https://gitlab.com/">gitlab</a>
+  <li>
+<a href="https://gitlab.com/">gitlab</a>
     <ul>
       <li>gitlab에 <a href="https://guides.github.com/introduction/flow/">github flow</a> 방식을 사용
         <ul>
-          <li><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html">git flow</a>와는 다르고 <a href="https://code.google.com/p/gerrit/">gerrit</a>과는 다르다!</li>
+          <li>
+<a href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html">git flow</a>와는 다르고 <a href="https://code.google.com/p/gerrit/">gerrit</a>과는 다르다!</li>
           <li>gitlab이 master push를 제한할수 있기때문에 쉽게 적용가능</li>
         </ul>
       </li>
@@ -540,13 +581,15 @@
       </li>
     </ul>
   </li>
-  <li><a href="https://ucloudbiz.olleh.com/">KT 클라우드</a>
+  <li>
+<a href="https://ucloudbiz.olleh.com/">KT 클라우드</a>
     <ul>
       <li>클라우드는 아마존은 생각보다 너무 비쌌고 KT가 저렴하고 속도도 빨랐음</li>
       <li>커머스와 영상은 KT 클라우드에서 운영중</li>
     </ul>
   </li>
-  <li><a href="https://www.chef.io/chef/">chef</a>
+  <li>
+<a href="https://www.chef.io/chef/">chef</a>
     <ul>
       <li>ruby에 익숙하고 웹 GUI를 무료로 제공하여 선택했고 <a href="https://puppet.com/">puppet</a>이나 <a href="https://saltstack.com/">saltstack</a>, <a href="https://www.ansible.com/">ansible</a>같은 다른 툴들도 기능은 비슷비슷한듯함</li>
       <li>기본적인 방화벽 설정과 도커, sensu monitoring client를 설치하는게 주된 용도</li>
@@ -567,10 +610,12 @@
 <p><strong>웹서버</strong></p>
 
 <ul>
-  <li><a href="http://nginx.org/">nginx</a>
+  <li>
+<a href="http://nginx.org/">nginx</a>
     <ul>
       <li>http/tcp/websocket reverse proxy용도</li>
-      <li><a href="https://developers.google.com/speed/pagespeed/module/">nginx pagespeed module</a> 적용하여 정적 파일 최적화
+      <li>
+<a href="https://developers.google.com/speed/pagespeed/module/">nginx pagespeed module</a> 적용하여 정적 파일 최적화
         <ul>
           <li>단순히 <code class="highlighter-rouge">pagespeed on;</code>만 해주면 이미지를 알아서 압축해서 내려보내줌</li>
           <li>chrome은 <a href="https://developers.google.com/speed/webp/">webp</a>로 jpeg보다 더 좋은 압축률에 좋은화질임</li>
@@ -579,7 +624,8 @@
       </li>
     </ul>
   </li>
-  <li><a href="https://www.cloudflare.com/">cloudflare</a>
+  <li>
+<a href="https://www.cloudflare.com/">cloudflare</a>
     <ul>
       <li>앞단에 적용하여 cdn과 방화벽 용도로 사용</li>
       <li>단점을 모르겠음</li>
@@ -592,7 +638,8 @@
 <p><strong>모니터링</strong></p>
 
 <ul>
-  <li><a href="https://sensuapp.org/">sensu</a>
+  <li>
+<a href="https://sensuapp.org/">sensu</a>
     <ul>
       <li>한곳에서 서버상황과 자원을 모니터링함</li>
       <li>슬랙 플러그인을 사용하여 서버가 죽거나 자원을 많이 사용하면 경고메시지 날라옴</li>
@@ -600,7 +647,8 @@
       <li>rabbitmq 통신을 암호화하고 방화벽을 적용하면 설정 끝</li>
     </ul>
   </li>
-  <li><a href="http://grafana.org/">grafana</a>
+  <li>
+<a href="http://grafana.org/">grafana</a>
     <ul>
       <li>sensu가 influxdb에 서버 모니터링 정보를 저장</li>
       <li>데이터를 그래프로 보여주고 있음. 한눈에 보기 좋고 다양한 커스터마이징이 가능함</li>
@@ -612,31 +660,36 @@
 <p><strong>배포</strong></p>
 
 <ul>
-  <li><a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/web_hooks/web_hooks.md">gitlab</a>+<a href="https://jenkins.io/">jenkins</a>
+  <li>
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/web_hooks/web_hooks.md">gitlab</a>+<a href="https://jenkins.io/">jenkins</a>
     <ul>
       <li>gitlab에 push하면 webhook을 통해 jenkins 자동 배포</li>
       <li>빌드 / 테스트 / 도커라이징 / 배포</li>
     </ul>
   </li>
-  <li><a href="https://docs.docker.com/compose/">docker compose</a>
+  <li>
+<a href="https://docs.docker.com/compose/">docker compose</a>
     <ul>
       <li>서버쪽은 전부 도커! docker compose를 적극 활용함 도커 만세</li>
     </ul>
   </li>
-  <li><a href="http://martinfowler.com/bliki/BlueGreenDeployment.html">blue green deployment</a> 방식사용
+  <li>
+<a href="http://martinfowler.com/bliki/BlueGreenDeployment.html">blue green deployment</a> 방식사용
     <ul>
       <li>한서버에 8090, 8091 포트를 사용중</li>
       <li>8090이 떠있을때 배포를 하면 8091로 배포를 하고 nginx가 8091을 바라보게 한 후 8090을 죽임 =&gt; 8090, 8091 왔다갔다 하는 방식임</li>
       <li>덕분에, 하루에도 수십번 이상없이 배포중</li>
     </ul>
   </li>
-  <li><a href="https://fabric.io/home">fabric</a>
+  <li>
+<a href="https://fabric.io/home">fabric</a>
     <ul>
       <li>아이폰/안드로이드 앱 테스트 배포</li>
       <li>사용법이 쉽고 오류로깅도 해줌</li>
     </ul>
   </li>
-  <li><a href="http://seoulappcenter.co.kr/">서울앱비지니스센터</a>
+  <li>
+<a href="http://seoulappcenter.co.kr/">서울앱비지니스센터</a>
     <ul>
       <li>다양한 안드로이드 및 iOS 기기를 빌려줌</li>
       <li>이전한지 얼마 안되서 정식 오픈은 안했고 무료에 쾌적함</li>
@@ -647,19 +700,22 @@
 <p><strong>디자인</strong></p>
 
 <ul>
-  <li><a href="https://www.sketchapp.com/">sketch</a>
+  <li>
+<a href="https://www.sketchapp.com/">sketch</a>
     <ul>
       <li>디자인은 이제 거의다 sketch로 하고 포토샵은 일부만 사용함</li>
     </ul>
   </li>
-  <li><a href="https://zeplin.io/">zeplin</a>
+  <li>
+<a href="https://zeplin.io/">zeplin</a>
     <ul>
       <li>sketch와 찰떡 궁합인 zaplin을 사용하여 웹/앱 디자인 공유</li>
     </ul>
   </li>
 </ul>
 
-<h2 id="section-2">커뮤니케이션은 어떻게?</h2>
+<h2 id="section-2">
+<a id="커뮤니케이션은-어떻게" class="anchor" href="#%EC%BB%A4%EB%AE%A4%EB%8B%88%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>커뮤니케이션은 어떻게?</h2>
 
 <p>개발자와 기획자 / 디자이너</p>
 
@@ -682,7 +738,8 @@
   <li>자료성 정보 공유는 여기서 이루어짐</li>
 </ul>
 
-<h2 id="section-3">그래서</h2>
+<h2 id="section-3">
+<a id="그래서" class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
 
 <p>이번 프로젝트에서 기획/디자인/영업을 제외한 순수 개발파트는 4명이 풀로 투입되고 2명이 다른 일과 병행하면서 진행하였습니다. 다들 기술적인 부분을 좋아하다보니 여러가지 기술이 사용되면서 단순할 수 있는 부분도 복잡해진 느낌이 있습니다.</p>
 
@@ -779,7 +836,7 @@
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1489210669085620000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1510773113069980000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

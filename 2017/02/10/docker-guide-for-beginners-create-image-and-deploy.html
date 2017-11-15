@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1489210669085620000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1510773113069980000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -130,86 +130,135 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png" alt="docker logo" /></p>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#도커-이미지-만들기">도커 이미지 만들기</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#sinatra-웹-애플리케이션-샘플">Sinatra 웹 애플리케이션 샘플</a></li>
+<li class="toc-entry toc-h3"><a href="#ruby-application-dockerfile">Ruby Application Dockerfile</a></li>
+<li class="toc-entry toc-h3"><a href="#docker-build">Docker build</a></li>
+<li class="toc-entry toc-h3"><a href="#dockerfile-기본-명령어">Dockerfile 기본 명령어</a></li>
+<li class="toc-entry toc-h3"><a href="#build-분석">Build 분석</a></li>
+<li class="toc-entry toc-h3"><a href="#도커-이미지-리팩토링">도커 이미지 리팩토링</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#이미지-저장소">이미지 저장소</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#docker-hub">Docker Hub</a></li>
+<li class="toc-entry toc-h3"><a href="#private-docker-registry">Private Docker Registry</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#배포하기">배포하기</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#컨테이너-배포-방식으로">컨테이너 배포 방식으로</a></li>
+<li class="toc-entry toc-h3"><a href="#컨테이너-업데이트">컨테이너 업데이트</a></li>
+<li class="toc-entry toc-h3"><a href="#배포에-대해-더-알아보기">배포에 대해 더 알아보기</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#마무으리">마무으리</a></li>
+</ul><p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png" alt="docker logo"></p>
 
 <p>이 글은 <code class="highlighter-rouge">초보를 위한 도커 안내서 - 설치부터 배포까지</code> 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.</p>
 
-<hr />
+<hr>
 
 <ul>
-  <li><a href="/2017/01/19/docker-guide-for-beginners-1.html">초보를 위한 도커 안내서 - 도커란 무엇인가?</a> <span class="series">SERIES 1/3</span></li>
-  <li><a href="/2017/01/19/docker-guide-for-beginners-2.html">초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기</a> <span class="series">SERIES 2/3</span></li>
-  <li><strong>초보를 위한 도커 안내서 - 이미지 만들고 배포하기 ✓</strong> <span class="series">SERIES 3/3</span></li>
+  <li>
+<a href="/2017/01/19/docker-guide-for-beginners-1.html">초보를 위한 도커 안내서 - 도커란 무엇인가?</a> <span class="series">SERIES 1/3</span>
+</li>
+  <li>
+<a href="/2017/01/19/docker-guide-for-beginners-2.html">초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기</a> <span class="series">SERIES 2/3</span>
+</li>
+  <li>
+<strong>초보를 위한 도커 안내서 - 이미지 만들고 배포하기 ✓</strong> <span class="series">SERIES 3/3</span>
+</li>
 </ul>
 
-<hr />
+<hr>
 
-<h2 id="section">도커 이미지 만들기</h2>
+<h2 id="section">
+<a id="도커-이미지-만들기" class="anchor" href="#%EB%8F%84%EC%BB%A4-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커 이미지 만들기</h2>
 <p>도커는 이미지를 만들기 위해 <strong>컨테이너의 상태를 그대로 이미지로 저장</strong>하는 단순하고 무식(?)한 방법을 사용합니다.</p>
 
-<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image.png" alt="create docker image" /></p>
+<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image.png" alt="create docker image"></p>
 
 <p>예를 들어, 어떤 애플리케이션을 이미지로 만든다면 리눅스만 설치된 컨테이너에 애플리케이션을 설치하고 그 상태를 그대로 이미지로 저장합니다. 가상머신의 스냅샷과 비스므리한 방식입니다.</p>
 
-<p>이런 과정은 콘솔에서 명령어를 직접 입력하는 것과 별 차이가 없으므로 쉘 스크립트를 잘 알아야 하지만 좋은 샘플이 많이 <a href="https://github.com/search?utf8=%E2%9C%93&amp;q=dockerfile￼">공개</a>되어 있어 잘 몰라도 크게 걱정하지 않아도 됩니다. <del>복붙만세!</del> 또한 컨테이너의 가벼운 특성과 레이어 개념을 이용하여 생성과 테스트를 빠르게 수행할 수 있습니다.</p>
+<p>이런 과정은 콘솔에서 명령어를 직접 입력하는 것과 별 차이가 없으므로 쉘 스크립트를 잘 알아야 하지만 좋은 샘플이 많이 <a href="https://github.com/search?utf8=%E2%9C%93&amp;q=dockerfile%EF%BF%BC">공개</a>되어 있어 잘 몰라도 크게 걱정하지 않아도 됩니다. <del>복붙만세!</del> 또한 컨테이너의 가벼운 특성과 레이어 개념을 이용하여 생성과 테스트를 빠르게 수행할 수 있습니다.</p>
 
 <p>이제 <a href="https://www.ruby-lang.org/ko">Ruby</a>로 만들어진 간단한 웹 애플리케이션을 도커라이징<sub>Dockerizing</sub>(=도커 이미지를 만듦)해보겠습니다.</p>
 
-<h3 id="sinatra---">Sinatra 웹 애플리케이션 샘플</h3>
+<h3 id="sinatra---">
+<a id="sinatra-웹-애플리케이션-샘플" class="anchor" href="#sinatra-%EC%9B%B9-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%83%98%ED%94%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sinatra 웹 애플리케이션 샘플</h3>
 
-<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra.png" alt="Sinatra" /></p>
+<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra.png" alt="Sinatra"></p>
 
 <p>일단 웹 애플리케이션 소스코드를 작성해야겠죠. <a href="http://www.sinatrarb.com/">Sinatra</a>라는 가벼운 웹 프레임워크를 사용하기 위해 새로운 폴더를 만들고 <code class="highlighter-rouge">Gemfile</code>과 <code class="highlighter-rouge">app.rb</code>를 만듭니다.</p>
 
 <p><strong>Gemfile</strong></p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">source</span> <span class="s1">'https://rubygems.org'</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td>
+<td class="code"><pre><span class="n">source</span> <span class="s1">'https://rubygems.org'</span>
 <span class="n">gem</span> <span class="s1">'sinatra'</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p><strong>app.rb</strong></p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td><td class="code"><pre><span class="nb">require</span> <span class="s1">'sinatra'</span>
+6</pre></td>
+<td class="code"><pre><span class="nb">require</span> <span class="s1">'sinatra'</span>
 <span class="nb">require</span> <span class="s1">'socket'</span>
 
 <span class="n">get</span> <span class="s1">'/'</span> <span class="k">do</span>
   <span class="no">Socket</span><span class="p">.</span><span class="nf">gethostname</span>
 <span class="k">end</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>ruby와 sinatra에 대해 전혀 모르더라도 <code class="highlighter-rouge">Gemfile</code>은 패키지를 관리하고 <code class="highlighter-rouge">app.rb</code>는 호스트명을 출력하는 웹 서버를 만들었다는 걸 예상할 수 있습니다.</p>
 
 <p>이제 패키지를 설치하고 서버를 실행해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre>bundle install            <span class="c"># install package</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td>
+<td class="code"><pre>bundle install            <span class="c"># install package</span>
 bundle <span class="nb">exec </span>ruby app.rb   <span class="c"># Run sinatra</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<div class="asciinema-player-section"><asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>run-sinatra</figcaption></div>
+<div class="asciinema-player-section">
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>run-sinatra</figcaption>
+</div>
 
 <p>ruby가 설치되어 있지 않다고요? 도커만 있으면 문제없습니다. 다음 명령어를 실행합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td><td class="code"><pre>docker run --rm <span class="se">\</span>
+6</pre></td>
+<td class="code"><pre>docker run --rm <span class="se">\</span>
 -p 4567:4567 <span class="se">\</span>
 -v <span class="nv">$PWD</span>:/usr/src/app <span class="se">\</span>
 -w /usr/src/app <span class="se">\</span>
 ruby <span class="se">\</span>
 bash -c <span class="s2">"bundle install &amp;&amp; bundle exec ruby app.rb -o 0.0.0.0"</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<div class="asciinema-player-section"><asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>run-docker-sinatra</figcaption></div>
+<div class="asciinema-player-section">
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>run-docker-sinatra</figcaption>
+</div>
 
 <p>호스트의 디렉토리를 루비가 설치된 컨테이너의 디렉토리에 마운트한다음 그대로 명령어를 실행하면 로컬에 개발 환경을 구축하지 않고 도커 컨테이너를 개발환경으로 사용할 수 있습니다. <del>어으썸!</del></p>
 
@@ -219,13 +268,14 @@ bash -c <span class="s2">"bundle install &amp;&amp; bundle exec ruby app.rb -o 0
 
 <p>서버가 정상적으로 실행됐으면 웹 브라우저에서 테스트해봅니다. <code class="highlighter-rouge">http://localhost:4567</code></p>
 
-<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test.png" alt="Browser test" /></p>
+<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test.png" alt="Browser test"></p>
 
 <p>도커 컨테이너의 호스트명이 보입니다. 소스는 잘 작성한 것 같네요! 이제 도커 이미지를 만들 준비가 완료됐습니다.</p>
 
-<h3 id="ruby-application-dockerfile">Ruby Application Dockerfile</h3>
+<h3 id="ruby-application-dockerfile">
+<a id="ruby-application-dockerfile" class="anchor" href="#ruby-application-dockerfile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ruby Application Dockerfile</h3>
 
-<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile.png" alt="Dockerfile" /></p>
+<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile.png" alt="Dockerfile"></p>
 
 <p>도커는 이미지를 만들기 위해 <code class="highlighter-rouge">Dockerfile</code>이라는 이미지 빌드용 DSL<sub>Domain Specific Language</sub> 파일을 사용합니다. 단순 텍스트 파일로 일반적으로 소스와 함께 관리합니다.</p>
 
@@ -264,7 +314,8 @@ bash -c <span class="s2">"bundle install &amp;&amp; bundle exec ruby app.rb -o 0
 
 <p>이 과정을 그대로 쉘 스크립트로 옮겨봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -279,7 +330,8 @@ bash -c <span class="s2">"bundle install &amp;&amp; bundle exec ruby app.rb -o 0
 13
 14
 15
-16</pre></td><td class="code"><pre><span class="c"># 1. ubuntu 설치 (패키지 업데이트)</span>
+16</pre></td>
+<td class="code"><pre><span class="c"># 1. ubuntu 설치 (패키지 업데이트)</span>
 apt-get update
 
 <span class="c"># 2. ruby 설치</span>
@@ -295,7 +347,8 @@ bundle install
 
 <span class="c"># 5. Sinatra 서버 실행</span>
 bundle <span class="nb">exec </span>ruby app.rb<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>ubuntu 컨테이너를 실행하고 위 명령어를 그대로 실행하면 웹 서버를 실행할 수 있습니다. 리눅스에서 테스트가 끝났으니 이 과정을 Dockerfile로 만들면 됩니다. 아직 자세한 명령어를 배우진 않았지만 일단 만들어 봅니다. 핵심 명령어는  파일을  복사하는 <code class="highlighter-rouge">COPY</code>와 명령어를 실행하는 <code class="highlighter-rouge">RUN</code>입니다.</p>
 
@@ -324,7 +377,8 @@ CMD    bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 
 <p>빌드 파일을 작성했으니 이제 이미지를 만들어 봅니다.</p>
 
-<h3 id="docker-build">Docker build</h3>
+<h3 id="docker-build">
+<a id="docker-build" class="anchor" href="#docker-build" aria-hidden="true"><span class="octicon octicon-link"></span></a>Docker build</h3>
 
 <p>이미지를 빌드하는 명령어는 다음과 같습니다.</p>
 
@@ -334,12 +388,16 @@ CMD    bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 
 <p>Dockerfile을 만든 디렉토리로 이동하여 다음 명령어를 입력합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>docker build -t app .<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre>docker build -t app .<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -364,7 +422,8 @@ CMD    bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 23
 24
 25
-26</pre></td><td class="code"><pre>Sending build context to Docker daemon 22.02 kB
+26</pre></td>
+<td class="code"><pre>Sending build context to Docker daemon 22.02 kB
 Step 1/10 : FROM ubuntu:16.04
  ---&gt; f49eec89601e
 Step 2/10 : MAINTAINER subicura@subicura.com
@@ -390,46 +449,60 @@ Step 10/10 : CMD bundle exec ruby app.rb -o 0.0.0.0
  ---&gt; 54d239c00f11
 Removing intermediate container 1f7a9ba8d63c
 Successfully built 54d239c00f11<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<div class="asciinema-player-section"><asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>docker-build</figcaption></div>
+<div class="asciinema-player-section">
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>docker-build</figcaption>
+</div>
 
 <p>빌드 명령어를 실행하면 Dockerfile에 정의한 내용이 한 줄 한 줄 실행되는 걸 볼 수 있습니다. 실제로 명령어를 실행하기 때문에 빌드 시간이 꽤 걸리는 걸 알 수 있습니다. 최종적으로 <code class="highlighter-rouge">Successfully built xxxxxxxx</code> 메시지가 보이면 정상적으로 이미지를 생성한 것입니다.</p>
 
 <p>그럼 이미지가 잘 생성되었는지 확인해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>docker images<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre>docker images<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+3</pre></td>
+<td class="code"><pre>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 app                 latest              54d239c00f11        4 minutes ago       209 MB
 ubuntu              16.04               f49eec89601e        2 weeks ago         129 MB<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>와..와우! 드디어 첫 번째 도커 이미지를 생성했습니다! 이미지를 생성했으니 잘 동작하는지 컨테이너를 실행해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre>docker run -d -p 8080:4567 app
+3</pre></td>
+<td class="code"><pre>docker run -d -p 8080:4567 app
 docker run -d -p 8081:4567 app
 docker run -d -p 8082:4567 app<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test.png" alt="Container test result" /></p>
+<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test.png" alt="Container test result"></p>
 
 <p>접속 성공입니다. 기분이 좋아서 호스트 네임을 출력하는 <del>무쓸모</del> 웹서버를 3개나 만들었습니다. 이미지가 잘 만들어졌네요.</p>
 
-<h3 id="dockerfile--">Dockerfile 기본 명령어</h3>
+<h3 id="dockerfile--">
+<a id="dockerfile-기본-명령어" class="anchor" href="#dockerfile-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dockerfile 기본 명령어</h3>
 
 <p>이미지를 만드는 데 사용한 Dockerfile의 기본적인 명령어를 살펴보겠습니다.</p>
 
 <p><strong>FROM</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>FROM &lt;image&gt;:&lt;tag&gt;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>FROM &lt;image&gt;:&lt;tag&gt;
 FROM ubuntu:16.04
 </code></pre>
 </div>
@@ -439,7 +512,8 @@ FROM ubuntu:16.04
 
 <p><strong>MAINTAINER</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>MAINTAINER &lt;name&gt;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>MAINTAINER &lt;name&gt;
 MAINTAINER subicura@subicura.com
 </code></pre>
 </div>
@@ -448,7 +522,8 @@ MAINTAINER subicura@subicura.com
 
 <p><strong>COPY</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>COPY &lt;src&gt;... &lt;dest&gt;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>COPY &lt;src&gt;... &lt;dest&gt;
 COPY . /usr/src/app
 </code></pre>
 </div>
@@ -457,7 +532,8 @@ COPY . /usr/src/app
 
 <p><strong>ADD</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ADD &lt;src&gt;... &lt;dest&gt;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>ADD &lt;src&gt;... &lt;dest&gt;
 ADD . /usr/src/app
 </code></pre>
 </div>
@@ -466,7 +542,8 @@ ADD . /usr/src/app
 
 <p><strong>RUN</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>RUN &lt;command&gt;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>RUN &lt;command&gt;
 RUN ["executable", "param1", "param2"]
 RUN bundle install
 </code></pre>
@@ -476,7 +553,8 @@ RUN bundle install
 
 <p><strong>CMD</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>CMD ["executable","param1","param2"]
+<div class="highlighter-rouge">
+<pre class="highlight"><code>CMD ["executable","param1","param2"]
 CMD command param1 param2
 CMD bundle exec ruby app.rb
 </code></pre>
@@ -486,7 +564,8 @@ CMD bundle exec ruby app.rb
 
 <p><strong>WORKDIR</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>WORKDIR /path/to/workdir
+<div class="highlighter-rouge">
+<pre class="highlight"><code>WORKDIR /path/to/workdir
 </code></pre>
 </div>
 
@@ -494,7 +573,8 @@ CMD bundle exec ruby app.rb
 
 <p><strong>EXPOSE</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>EXPOSE &lt;port&gt; [&lt;port&gt;...]
+<div class="highlighter-rouge">
+<pre class="highlight"><code>EXPOSE &lt;port&gt; [&lt;port&gt;...]
 EXPOSE 4567
 </code></pre>
 </div>
@@ -503,7 +583,8 @@ EXPOSE 4567
 
 <p><strong>VOLUME</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>VOLUME ["/data"]
+<div class="highlighter-rouge">
+<pre class="highlight"><code>VOLUME ["/data"]
 </code></pre>
 </div>
 
@@ -511,7 +592,8 @@ EXPOSE 4567
 
 <p><strong>ENV</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ENV &lt;key&gt; &lt;value&gt;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>ENV &lt;key&gt; &lt;value&gt;
 ENV &lt;key&gt;=&lt;value&gt; ...
 ENV DB_URL mysql
 </code></pre>
@@ -521,11 +603,13 @@ ENV DB_URL mysql
 
 <p>여기까지 Dockerfile에서 가장 많이 사용하는 명령어에 대해 알아보았습니다. 모든 명령어가 궁금하신 분은 <a href="https://docs.docker.com/engine/reference/builder/">공식문서</a>를 참고하세요.</p>
 
-<h3 id="build-">Build 분석</h3>
+<h3 id="build-">
+<a id="build-분석" class="anchor" href="#build-%EB%B6%84%EC%84%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build 분석</h3>
 
 <p>도커는 Dockerfile을 가지고 무슨 일을 하는 걸까요? 빌드를 하면서 궁금하지 않으셨나요? 궁금하지 않으셨더라도 build로그를 보면서 하나하나 살펴봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -535,7 +619,8 @@ ENV DB_URL mysql
 8
 9
 10
-11</pre></td><td class="code"><pre>Sending build context to Docker daemon  5.12 kB   &lt;-- <span class="o">(</span>1<span class="o">)</span>
+11</pre></td>
+<td class="code"><pre>Sending build context to Docker daemon  5.12 kB   &lt;-- <span class="o">(</span>1<span class="o">)</span>
 Step 1/10 : FROM ubuntu:16.04                     &lt;-- <span class="o">(</span>2<span class="o">)</span>
  ---&gt; f49eec89601e                                &lt;-- <span class="o">(</span>3<span class="o">)</span>
 Step 2/10 : MAINTAINER subicura@subicura.com      &lt;-- <span class="o">(</span>4<span class="o">)</span>
@@ -546,57 +631,67 @@ Step 3/10 : RUN apt-get -y update                 &lt;-- <span class="o">(</span
 ...
 ...
 Successfully built 20369cef9829                   &lt;-- <span class="o">(</span>9<span class="o">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(1) Sending build context to Docker daemon  5.12 kB
+<div class="highlighter-rouge">
+<pre class="highlight"><code>(1) Sending build context to Docker daemon  5.12 kB
 </code></pre>
 </div>
 
 <p>빌드 명령어를 실행한 디렉토리의 파일들을 빌드컨텍스트<sub>build context</sub>라고 하고 이 파일들을 도커 서버(daemon)로 전송합니다. 도커는 서버-클라이언트 구조이므로 도커 서버가 작업하려면 미리 파일을 전송해야 합니다.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(2) Step 1/10 : FROM ubuntu:16.04
+<div class="highlighter-rouge">
+<pre class="highlight"><code>(2) Step 1/10 : FROM ubuntu:16.04
 </code></pre>
 </div>
 
 <p>Dockerfile을 한 줄 한 줄 수행합니다. 첫 번째로 FROM 명령어를 수행합니다. ubuntu:16.04 이미지를 다운받는 작업입니다.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(3) ---&gt; f49eec89601e
+<div class="highlighter-rouge">
+<pre class="highlight"><code>(3) ---&gt; f49eec89601e
 </code></pre>
 </div>
 
 <p>명령어 수행 결과를 이미지로 저장합니다. 여기서는 ubuntu:16.04를 사용하기로 했기 때문에 ubuntu 이미지의 ID가 표시됩니다.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(4) Step 2/10 : MAINTAINER subicura@subicura.com
+<div class="highlighter-rouge">
+<pre class="highlight"><code>(4) Step 2/10 : MAINTAINER subicura@subicura.com
 </code></pre>
 </div>
 
 <p>Dockerfile의 두 번째 명령어인 MAINTAINER 명령어를 수행합니다.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(5) ---&gt; Running in f4de0c750abb
+<div class="highlighter-rouge">
+<pre class="highlight"><code>(5) ---&gt; Running in f4de0c750abb
 </code></pre>
 </div>
 
 <p>명령어를 수행하기 위해 바로 이전에 생성된 <code class="highlighter-rouge">f49eec89601e</code> 이미지를 기반으로 <code class="highlighter-rouge">f4de0c750abb</code>컨테이너를 임시로 생성하여 실행합니다.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(6) ---&gt; 4a400609ff73
+<div class="highlighter-rouge">
+<pre class="highlight"><code>(6) ---&gt; 4a400609ff73
 </code></pre>
 </div>
 
 <p>명령어 수행 결과를 이미지로 저장합니다.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(7) Removing intermediate container f4de0c750abb
+<div class="highlighter-rouge">
+<pre class="highlight"><code>(7) Removing intermediate container f4de0c750abb
 </code></pre>
 </div>
 
 <p>명령어를 수행하기 위해 임시로 만들었던 컨테이너를 제거합니다.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(8) Step 3/10 : RUN apt-get -y update
+<div class="highlighter-rouge">
+<pre class="highlight"><code>(8) Step 3/10 : RUN apt-get -y update
 </code></pre>
 </div>
 
 <p>Dockerfile의 세 번째 명령어를 수행합니다. 이전 단계와 마찬가지로 바로 전에 만들어진 이미지를 기반으로 임시 컨테이너를 만들어 명령어를 실행하고 그 결과 상태를 이미지로 만듭니다. 이 과정을 마지막 줄까지 무한 반복합니다.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(9) Successfully built 20369cef9829
+<div class="highlighter-rouge">
+<pre class="highlight"><code>(9) Successfully built 20369cef9829
 </code></pre>
 </div>
 
@@ -606,7 +701,8 @@ Successfully built 20369cef9829                   &lt;-- <span class="o">(</span
 
 <p>이러한 레이어 개념을 잘 이해하고 있어야 최적화된 이미지를 생성할 수 있습니다.</p>
 
-<h3 id="section-1">도커 이미지 리팩토링</h3>
+<h3 id="section-1">
+<a id="도커-이미지-리팩토링" class="anchor" href="#%EB%8F%84%EC%BB%A4-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커 이미지 리팩토링</h3>
 
 <p>사실 앞에서 만든 이미지는 몇 가지 최적화 문제가 있습니다. 다시 한땀 한땀 살펴보겠습니다.</p>
 
@@ -614,7 +710,8 @@ Successfully built 20369cef9829                   &lt;-- <span class="o">(</span
 
 <p>위에서 만든 Ruby 애플리케이션 이미지는 <code class="highlighter-rouge">ubuntu</code>를 베이스로 만들었지만 사실 훠어어얼씬 간단한  <code class="highlighter-rouge">ruby</code> 베이스 이미지가 존재합니다. <del>미리 이야기하지 않아 죄송..</del> 기존에 ruby를 설치했던 명령어는 ruby 이미지를 사용하는 것으로 간단하게 생략할 수 있습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -623,7 +720,8 @@ Successfully built 20369cef9829                   &lt;-- <span class="o">(</span
 7
 8
 9
-10</pre></td><td class="code"><pre><span class="c"># before</span>
+10</pre></td>
+<td class="code"><pre><span class="c"># before</span>
 FROM ubuntu:16.04
 MAINTAINER subicura@subicura.com
 RUN apt-get -y update
@@ -633,7 +731,8 @@ RUN gem install bundler
 <span class="c"># after</span>
 FROM ruby:2.3
 MAINTAINER subicura@subicura.com<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>ruby외에도 nodejs, python, java, go등 다양한 베이스 이미지가 이미 존재합니다. 세부적인 설정이 필요하지 않다면 그대로 사용하는게 간편합니다.</p>
 
@@ -641,7 +740,8 @@ MAINTAINER subicura@subicura.com<span class="w">
 
 <p>조금전에 빌드한 이미지를 다시 빌드해볼까요?</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -651,7 +751,8 @@ MAINTAINER subicura@subicura.com<span class="w">
 8
 9
 10
-11</pre></td><td class="code"><pre>Sending build context to Docker daemon 13.31 kB
+11</pre></td>
+<td class="code"><pre>Sending build context to Docker daemon 13.31 kB
 Step 1/10 : FROM ubuntu:16.04
  ---&gt; f49eec89601e
 Step 2/10 : MAINTAINER subicura@subicura.com
@@ -662,7 +763,8 @@ Step 3/10 : RUN apt-get -y update
  ---&gt; 61d45ce11dc6
  ....
  <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>한번 빌드한 이미지를 다시 빌드하면 굉장히 빠르게 완료되는 걸 알 수 있습니다. 이미지를 빌드하는 과정에서 각 단계를 이미지 레이어로 저장하고 다음 빌드에서 캐시로 사용합니다.</p>
 
@@ -670,23 +772,29 @@ Step 3/10 : RUN apt-get -y update
 
 <p>기존 소스에서 소스파일이 수정되면 캐시가 깨지는 부분은 다음과 같습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre>COPY . /usr/src/app    <span class="c"># &lt;- 소스파일이 변경되면 캐시가 깨짐</span>
+3</pre></td>
+<td class="code"><pre>COPY . /usr/src/app    <span class="c"># &lt;- 소스파일이 변경되면 캐시가 깨짐</span>
 WORKDIR /usr/src/app
 RUN bundle install     <span class="c"># 패키지를 추가하지 않았는데 또 인스톨하게 됨 ㅠㅠ</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>복사하는 파일이 이전과 다르면 캐시를 사용하지 않고 그 이후 명령어는 다시 실행됩니다. ruby gem 패키지를 관리하는 파일은 Gemfile이고 Gemfile은 잘 수정되지 않으므로 다음과 같이 순서를 바꿀 수 있습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre>COPY Gemfile<span class="k">*</span> /usr/src/app/ <span class="c"># Gemfile을 먼저 복사함</span>
+4</pre></td>
+<td class="code"><pre>COPY Gemfile<span class="k">*</span> /usr/src/app/ <span class="c"># Gemfile을 먼저 복사함</span>
 WORKDIR /usr/src/app
 RUN bundle install          <span class="c"># 패키지 인스톨</span>
 COPY . /usr/src/app         <span class="c"># &lt;- 소스가 바꼈을 때 캐시가 깨지는 시점 ^0^</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>gem 설치 하는 부분을 소스 복사 이전으로 옮겼습니다. 이제 소스가 수정되더라도 매번 gem을 설치하지 않아 더욱 빠르게 빌드할 수 있습니다. 요즘 언어들은 대부분 패키지 매니저를 사용하므로 비슷한 전략으로 작성하면 됩니다.</p>
 
@@ -694,29 +802,35 @@ COPY . /usr/src/app         <span class="c"># &lt;- 소스가 바꼈을 때 캐�
 
 <p>이미지를 빌드할 때 불필요한 로그는 무시하는게 좋고 패키지 설치시 문서 파일도 생성할 필요가 없습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="c"># before</span>
+5</pre></td>
+<td class="code"><pre><span class="c"># before</span>
 RUN apt-get -y update
 
 <span class="c"># after</span>
 RUN apt-get -y -qq update<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">-qq</code> 옵션으로 로그를 출력하지 않게 했습니다. 각종 리눅스 명령어는 보통 <code class="highlighter-rouge">quite</code> 옵션이 있으니 적절하게 적용하면 됩니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="c"># before</span>
+5</pre></td>
+<td class="code"><pre><span class="c"># before</span>
 RUN bundle install
 
 <span class="c"># after</span>
 RUN bundle install --no-rdoc --no-ri<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">--no-doc</code>과 <code class="highlighter-rouge">--no-ri</code> 옵션으로 필요 없는 문서를 생성하지 않아 이미지 용량도 줄이고 빌드 속도도 더 빠르게 했습니다.</p>
 
@@ -724,20 +838,23 @@ RUN bundle install --no-rdoc --no-ri<span class="w">
 
 <p>명령어는 비슷한 것끼리 묶어 주는 게 보기도 좋고 레이어 수를 줄이는데 도움이 됩니다. 도커 이미지는 스토리지 엔진에 따라 레이어의 개수가 127개로 제한되어 있는 경우도 있어 너무 많은 명령어는 좋지 않습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
 6
-7</pre></td><td class="code"><pre><span class="c"># before</span>
+7</pre></td>
+<td class="code"><pre><span class="c"># before</span>
 RUN apt-get -y -qq update
 RUN apt-get -y -qq install ruby
 
 <span class="c"># after</span>
 RUN apt-get -y -qq update <span class="o">&amp;&amp;</span> <span class="se">\</span>
     apt-get -y -qq install ruby<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p><strong>최종</strong></p>
 
@@ -757,15 +874,17 @@ CMD bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 
 <p>이 외에도 다양한 이미지 생성팁이 있지만 일단 이 정도면 꽤 이쁘게 만들어진 것 같습니다.</p>
 
-<h2 id="section-2">이미지 저장소</h2>
+<h2 id="section-2">
+<a id="이미지-저장소" class="anchor" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%A0%80%EC%9E%A5%EC%86%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>이미지 저장소</h2>
 
-<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry.png" alt="Docker Registry" /></p>
+<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry.png" alt="Docker Registry"></p>
 
 <p>도커는 빌드한 이미지를 서버에 배포하기 위해 직접 파일을 복사하는 방법 대신 <a href="https://docs.docker.com/registry/">도커 레지스트리</a><sub>Docker Registry</sub>라는 이미지 저장소를 사용합니다. 도커 명령어를 이용하여 이미지를 레지스트리에 푸시<sub>push</sub>하고 다른 서버에서 풀<sub>pull</sub>받아 사용하는 구조입니다. <del>git을 사용하는 느낌?</del></p>
 
 <p>도커 레지스트리는  <a href="https://github.com/docker/distribution">오픈소스</a>로 무료로 설치할 수 있고 설치형이 싫다면 도커(Docker Inc.)에서 서비스 중인 <a href="https://hub.docker.com/">도커 허브</a><sub>Docker Hub</sub>를 사용할 수 있습니다.</p>
 
-<h3 id="docker-hub">Docker Hub</h3>
+<h3 id="docker-hub">
+<a id="docker-hub" class="anchor" href="#docker-hub" aria-hidden="true"><span class="octicon octicon-link"></span></a>Docker Hub</h3>
 
 <p>도커 허브는 도커에서 제공하는 기본 이미지 저장소로 ubuntu, centos, debian등의 베이스 이미지와 ruby, golang, java, python 등의 공식 이미지가 저장되어 있습니다. 일반 사용자들이 만든 이미지도 50만 개가 넘게 저장되어 있고 다운로드 횟수는 80억 회를 넘습니다.</p>
 
@@ -775,7 +894,7 @@ CMD bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 
 <p><strong>회원가입</strong></p>
 
-<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub.png" alt="Docker Hub" /></p>
+<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub.png" alt="Docker Hub"></p>
 
 <p><a href="https://hub.docker.com/">도커 허브</a>사이트에 접속하면 쉽게 회원가입을 할 수 있습니다. 디자인이 참 마음에 들지 않는데… 처음부터 지금까지 업데이트한 모습이 이 모양이라 앞으로도 크게 기대되지 않습니다. <del>다른 페이지는 다 이쁜데 ㅠㅠ</del></p>
 
@@ -783,19 +902,25 @@ CMD bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 
 <p>도커에서 도커 허브 계정을 사용하려면 로그인을 해야합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>docker login<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre>docker login<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre>Login with your Docker ID to push and pull images from Docker Hub. If you don<span class="s1">'t have a Docker ID, head over to https://hub.docker.com to create one.
+4</pre></td>
+<td class="code"><pre>Login with your Docker ID to push and pull images from Docker Hub. If you don<span class="s1">'t have a Docker ID, head over to https://hub.docker.com to create one.
 Username: subicura
 Password:
 Login Succeeded</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>ID와 패스워드를 입력하면 로그인이 되고 <code class="highlighter-rouge">~/.docker/config.json</code>에 인증정보가 저장되어 로그아웃하기 전까지 로그인 정보가 유지됩니다.</p>
 
@@ -813,17 +938,24 @@ Login Succeeded</span><span class="w">
 
 <p>앞에서 만든 <code class="highlighter-rouge">app</code>이미지에 계정정보와 버전 정보를 추가해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>docker tag app subicura/sinatra-app:1<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre>docker tag app subicura/sinatra-app:1<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">subicura</code>라는 ID를 사용하고 이미지 이름을 <code class="highlighter-rouge">sinatra-app</code>으로 변경했습니다. 첫 번째 버전이므로 태그는 <code class="highlighter-rouge">1</code>을 사용합니다. 이제  <code class="highlighter-rouge">push</code>명령을 이용해 도커 허브에 이미지를 전송해 봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>docker push subicura/sinatra-app:1<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre>docker push subicura/sinatra-app:1<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -834,7 +966,8 @@ Login Succeeded</span><span class="w">
 9
 10
 11
-12</pre></td><td class="code"><pre>The push refers to a repository <span class="o">[</span>docker.io/subicura/sinatra-app]
+12</pre></td>
+<td class="code"><pre>The push refers to a repository <span class="o">[</span>docker.io/subicura/sinatra-app]
 2adeabae7edc: Pushed
 8343e5bcf528: Pushed
 af3b68c8b565: Pushed
@@ -846,42 +979,54 @@ af605e724c5a: Mounted from library/ubuntu
 59f161c3069d: Mounted from library/ubuntu
 4f03495a4d7d: Mounted from library/ubuntu
 1: digest: sha256:af83aca920982c1fb17f08b4aa300439470349d58d63c921f67261054a0c9467 size: 2409<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>성공적으로 이미지를 도커 허브에 푸시하였습니다. 도커 허브에 저장된 50만 개의 이미지에 새로운 이미지가 하나 추가되었습니다!</p>
 
 <p>이제 어디서든 <code class="highlighter-rouge">subicura/sinatra-app:1</code>이미지를 사용할 수 있습니다.</p>
 
-<h3 id="private-docker-registry">Private Docker Registry</h3>
+<h3 id="private-docker-registry">
+<a id="private-docker-registry" class="anchor" href="#private-docker-registry" aria-hidden="true"><span class="octicon octicon-link"></span></a>Private Docker Registry</h3>
 
 <p>도커 이미지를 비공개로 저장하려면  <a href="https://www.docker.com/products/docker-cloud">Docker Cloud</a>를 유료($7 for 5 repos/month)로 사용하거나 레지스트리 서버를 자체적으로 구축해야합니다.</p>
 
 <p>도커 레지스트리는 도커를 이용하여 쉽게 만들 수 있습니다. 도커 이미지를 저장할 서버를 도커 스스로 만들어서 도커 이미지를 관리하다니 뭔가 므-_-흣합니다. <del>도커로 다하는 느낌</del></p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre>docker run -d <span class="se">\</span>
+4</pre></td>
+<td class="code"><pre>docker run -d <span class="se">\</span>
 -v <span class="nv">$PWD</span>/registry:/var/lib/registry <span class="se">\</span>
 -p 5000:5000 <span class="se">\</span>
 distribution/registry:2.6.0<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>저장된 이미지는 파일로 관리되기 때문에 호스트의 디렉토리를 마운트하였습니다. (S3 저장소를 사용할 수도 있습니다) 이제 레지스트리 서버의 아이피와 포트정보를 이미지명에 추가하면 바로 사용할 수 있습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre>docker tag app localhost:5000/subicura/sinatra-app:1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td>
+<td class="code"><pre>docker tag app localhost:5000/subicura/sinatra-app:1
 docker push localhost:5000/subicura/sinatra-app:1<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>앞에서 만든 이름에 <code class="highlighter-rouge">localhost:5000/</code>를 추가했습니다. 레지스트리 서버에 파일이 잘 저장되었나 마운트한 디렉토리를 한번 살펴봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>tree registry<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre>tree registry<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -965,7 +1110,8 @@ docker push localhost:5000/subicura/sinatra-app:1<span class="w">
 82
 83
 84
-85</pre></td><td class="code"><pre>registry
+85</pre></td>
+<td class="code"><pre>registry
 └── docker
     └── registry
         └── v2
@@ -1050,7 +1196,8 @@ docker push localhost:5000/subicura/sinatra-app:1<span class="w">
                         └── _uploads
 
 56 directories, 26 files<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>이미지가 레이어별로 이쁘게 저장된 걸 확인할 수 있습니다. 이렇게 개인 저장소를 만드는 법은 매우 간단합니다. 이제 내부적으로 이미지를 관리하고 여러 서버에 배포할 수 있습니다.</p>
 
@@ -1060,10 +1207,12 @@ docker push localhost:5000/subicura/sinatra-app:1<span class="w">
 
 <p>관련 설정은 <a href="https://docs.docker.com/registry/insecure/">문서</a>를 참고하시기 바랍니다.</p>
 
-<h2 id="section-3">배포하기</h2>
+<h2 id="section-3">
+<a id="배포하기" class="anchor" href="#%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>배포하기</h2>
 <p>드디어 도커 안내서의 마지막 주제, 서버관리의 꽃! 배포<sub>deploy</sub>에 대해 알아보겠습니다.</p>
 
-<h3 id="section-4">컨테이너 배포 방식으로</h3>
+<h3 id="section-4">
+<a id="컨테이너-배포-방식으로" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%B0%B0%ED%8F%AC-%EB%B0%A9%EC%8B%9D%EC%9C%BC%EB%A1%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 배포 방식으로</h3>
 
 <p>컨테이너를 배포하는 방식은 기존에 애플리케이션을 배포하는 방식과 큰 차이가 있습니다.</p>
 
@@ -1081,9 +1230,10 @@ docker push localhost:5000/subicura/sinatra-app:1<span class="w">
 
 <p>서버에 접속해서 컨테이너를 실행할 줄 안다면 이미 배포하는 법을 알고 있는 겁니다.  참 쉽죠?</p>
 
-<h3 id="section-5">컨테이너 업데이트</h3>
+<h3 id="section-5">
+<a id="컨테이너-업데이트" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 업데이트</h3>
 
-<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update.png" alt="Update" /></p>
+<p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update.png" alt="Update"></p>
 
 <p>도커를 사용하면 업데이트하는 방식도 배포와 큰 차이가 없습니다.</p>
 
@@ -1099,7 +1249,8 @@ docker push localhost:5000/subicura/sinatra-app:1<span class="w">
 
 <p>여기서는 개념만 소개하고 실제로 컨테이너를 업데이트하는 구체적인 방법은 <a href="/2016/06/07/zero-downtime-docker-deployment.html">도커를 이용한 웹서비스 무중단 배포하기</a><del>막간 홍보</del>글로 대신합니다.</p>
 
-<h3 id="section-6">배포에 대해 더 알아보기</h3>
+<h3 id="section-6">
+<a id="배포에-대해-더-알아보기" class="anchor" href="#%EB%B0%B0%ED%8F%AC%EC%97%90-%EB%8C%80%ED%95%B4-%EB%8D%94-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>배포에 대해 더 알아보기</h3>
 
 <p>도커를 이용한 배포, 그 자체는 매우 단순하지만 여러 대의 서버를 관리하고 문제없이 업데이트 하는 건 완전히 새로운 이야기입니다.</p>
 
@@ -1107,7 +1258,8 @@ docker push localhost:5000/subicura/sinatra-app:1<span class="w">
 
 <p>자세한 내용은 초보를 위한 안내서의 범위를 벗어나므로 더 많은 내용이 궁금하신 분은 각자 공부하는 것으로… <del>화이팅!!</del></p>
 
-<h2 id="section-7">마무으리</h2>
+<h2 id="section-7">
+<a id="마무으리" class="anchor" href="#%EB%A7%88%EB%AC%B4%EC%9C%BC%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>마무으리</h2>
 <p>클라우드가 발전하면서 언제든 원하는 장소에 수십 대의 서버를 클릭 한 번으로 생성하는 시대가 되었습니다. 서버는 구입하는것이 아니라 필요한 만큼 잠시 <strong>대여</strong>하는 개념이 되었고 오토 스케일링이라는 환상적인 기능은 부하에 따라 자동으로 서버 개수를 늘리고 줄여줍니다.</p>
 
 <p>이러한 흐름 속에서 아무 문제 없이 서비스를 배포하고 운영하는 것은 사실 기적이라고 할 수 있습니다. 도커가 등장하여 복잡한 부분을 단순하게 하고 많은 문제를 해결해 주고 있지만 도커도 모든 문제를 해결해 주지는 않습니다. (대표적으로 데이터베이스처럼 stateful한 애플리케이션은 관리가 어렵습니다) 다만, 현재 시점에서 그 어떤 방법보다도 <strong>좀 더 나은 방법</strong>인 건 확실합니다.</p>
@@ -1210,7 +1362,7 @@ docker push localhost:5000/subicura/sinatra-app:1<span class="w">
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1489210669085620000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1510773113069980000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

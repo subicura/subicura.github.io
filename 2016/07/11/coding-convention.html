@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1489210669085620000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1510773113069980000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -128,12 +128,24 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/carbo.jpg" alt="돈까스먹는용만이x까르보돈까스" /></p>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#문제는-유지보수">문제는 유지보수</a></li>
+<li class="toc-entry toc-h2"><a href="#linter-적용해보기">Linter 적용해보기</a></li>
+<li class="toc-entry toc-h2"><a href="#eslint-적용하기">eslint 적용하기</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#eslint-설치">eslint 설치</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#gulp-설정">Gulp 설정</a></li>
+<li class="toc-entry toc-h2"><a href="#ide-플러그인">IDE 플러그인</a></li>
+<li class="toc-entry toc-h2"><a href="#ci">CI</a></li>
+<li class="toc-entry toc-h2"><a href="#그래서">그래서</a></li>
+</ul><p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/carbo.jpg" alt="돈까스먹는용만이x까르보돈까스"></p>
 
 <p><a href="https://www.likehs.com">홈쇼핑처럼</a> 6번째 상품인 <a href="https://www.likehs.com/tvprogram/index/view/id/27/">까르보돈까스</a>는 부먹과 찍먹을 선택해야 합니다. 코딩도 둘중에 하나를 선택해야 하는 경우가 많은데 협업을 위해 코딩 스타일을 설정하고 규칙에 어긋난 코드를 한땀한땀 수정했던 순간이 떠올라 linter에 대해 이야기합니다.</p>
 
 <p align="center">
-<img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/civil_war.jpg" alt="시빌워" title="시빌워" />
+<img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/civil_war.jpg" alt="시빌워" title="시빌워">
 </p>
 
 <p><a href="https://en.wikipedia.org/wiki/Programming_style">코딩스타일</a>, 코딩 표준이라고도 불리는 <a href="https://en.wikipedia.org/wiki/Coding_conventions">코딩 컨벤션</a>은 코드를 작성할 때 추천하는 코딩 스타일, 괜찮은 사례등을 모아 놓은 가이드라인입니다.</p>
@@ -144,7 +156,8 @@
 
 <p>이러한 코딩 컨벤션과 에러 체크를 도와주는 툴을 linter라고 합니다.</p>
 
-<h2 id="section">문제는 유지보수</h2>
+<h2 id="section">
+<a id="문제는-유지보수" class="anchor" href="#%EB%AC%B8%EC%A0%9C%EB%8A%94-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>문제는 유지보수</h2>
 
 <p>과거의 많은 고오급 개발자들은 개발하는 시간의 반이상이 유지보수를 하는데 쓰인다는걸 알았습니다. 미래의 내가 현재의 나를 욕하지 않고 레거시가 내거시가 되어 나를 괴롭히지 않으려면 유지보수가 쉽도록 코드를 작성해야합니다.</p>
 
@@ -179,7 +192,8 @@
 
 <p>쌓이고 쌓인 기술부채는 여러가지 방법으로 이자를 갚거나 주기적인 리팩토링을 통해 원금을 갚아야 하지만 개발자 한명 뽑기 어려운 스타트업에서는 사실상 개선하기 어려운 부분(<del>너 왜 개발안하고 노니?</del>)이 많습니다. 큰 회사도 예외는 아니여서 그렇게 방치하고 땜질하다가 어느날 고도화라는 이름의 프로젝트를 시작하고 아예 새로 코드를 작성하기도 합니다.</p>
 
-<h2 id="linter-">Linter 적용해보기</h2>
+<h2 id="linter-">
+<a id="linter-적용해보기" class="anchor" href="#linter-%EC%A0%81%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linter 적용해보기</h2>
 
 <ol>
   <li>유지보수는 어렵고 시간이 많이 걸린는 작업이다. 개선이 필요하다고 생각한다.</li>
@@ -197,7 +211,7 @@
 
 <p>예전에는 코딩 스타일 가이드를 문서로 만들어 관리하기도 하였으나, 툴의 도움이 없다면 사실상 무의미한 작업입니다. 요즘은 다양한 툴이 존재하고 바로 적용하기 쉬우며 단계적으로 조금씩 적용하는 것도 가능합니다. 미적으로도 이쁘고 협업과 코드 리뷰를 할때도 좋고 심지어 더 나은 코드를 추천해주어 실력도 늘수 있는.. 이게 1석 몇조야… 바로 적용하지 않을 이유가 없습니다.</p>
 
-<noscript><pre>import React, { Component } from &#39;react&#39;;
+<noscript><pre>import React, { Component } from 'react';
 
 //form
 class Comment extends Component {
@@ -205,12 +219,12 @@ class Comment extends Component {
     super(props);
 
     this.state = {
-      msg:&quot;&quot;
+      msg:""
     };
   }
   onSubmit() {
     if(this.props.useComment) {
-      alert(this.state.name + &quot;님이 댓글을 작성하였습니다.&quot;);
+      alert(this.state.name + "님이 댓글을 작성하였습니다.");
     }
   }
   componentDidMount() {
@@ -220,9 +234,9 @@ class Comment extends Component {
     var onChange = e =&gt; this.setState({ msg: e.target.value });
 
     return (
-      &lt;form method=&quot;post&quot; className=&quot;form-horizontal&quot; onSubmit={this.onSubmit.bind(this)}&gt;
-        &lt;input name=&quot;msg&quot; type=&quot;text&quot; class=&quot;form-control&quot; onChange={onChange.bind(this)} value={this.state.msg} /&gt;
-        &lt;button type=&quot;submit&quot; ref=&quot;submitBtn&quot;&gt;{ this.props.useComment ? &#39;글쓰기&#39; : &#39;댓글불가&#39; }&lt;/button&gt;
+      &lt;form method="post" className="form-horizontal" onSubmit={this.onSubmit.bind(this)}&gt;
+        &lt;input name="msg" type="text" class="form-control" onChange={onChange.bind(this)} value={this.state.msg} /&gt;
+        &lt;button type="submit" ref="submitBtn"&gt;{ this.props.useComment ? '글쓰기' : '댓글불가' }&lt;/button&gt;
       &lt;/form&gt;
     )
   }
@@ -255,7 +269,7 @@ export default Comment;</pre></noscript>
 
 <p>헉, 무려 17개의 경고메시지가 발생합니다. 100% 완벽하진 않을꺼라 생각했지만 이 짧은 소스에 이렇게 많은 경고가 뜨다니 놀랍습니다. 이제 경고를 수정해 봅니다.</p>
 
-<noscript><pre>import React, { Component, PropTypes } from &#39;react&#39;;
+<noscript><pre>import React, { Component, PropTypes } from 'react';
 
 // form
 class Comment extends Component {
@@ -263,7 +277,7 @@ class Comment extends Component {
     super(props);
 
     this.state = {
-      msg: &#39;&#39;,
+      msg: '',
     };
   }
   componentDidMount() {
@@ -278,9 +292,9 @@ class Comment extends Component {
     const onChange = e =&gt; this.setState({ msg: e.target.value });
 
     return (
-      &lt;form method=&quot;post&quot; className=&quot;form-horizontal&quot; onSubmit={this.onSubmit.bind(this)}&gt;
-        &lt;input name=&quot;msg&quot; type=&quot;text&quot; className=&quot;form-control&quot; onChange={onChange.bind(this)} value={this.state.msg} /&gt;
-        &lt;button type=&quot;submit&quot; ref=&quot;submitBtn&quot;&gt;{this.props.useComment ? &#39;글쓰기&#39; : &#39;댓글불가&#39;}&lt;/button&gt;
+      &lt;form method="post" className="form-horizontal" onSubmit={this.onSubmit.bind(this)}&gt;
+        &lt;input name="msg" type="text" className="form-control" onChange={onChange.bind(this)} value={this.state.msg} /&gt;
+        &lt;button type="submit" ref="submitBtn"&gt;{this.props.useComment ? '글쓰기' : '댓글불가'}&lt;/button&gt;
       &lt;/form&gt;
     );
   }
@@ -355,24 +369,30 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 
 <p>사람마다 원하는 스타일이 다르고 이게 더 낫다고 생각하는 부분도 있지만, 정말 그런 스타일이 유지보수와 협업에 도움이 되는지 생각해봐야 합니다. 혼자 작성하는 코드가 아니라면 <strong>자신의 스타일</strong> 보다는 대부분이 괜찮다고 하는 <strong>모두의 스타일</strong>에 맞추는 것이 유지보수와 협업에 도움이 됩니다.</p>
 
-<h2 id="eslinthttpeslintorg-"><a href="http://eslint.org/">eslint</a> 적용하기</h2>
+<h2 id="eslinthttpeslintorg-">
+<a id="eslint-적용하기" class="anchor" href="#eslint-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://eslint.org/">eslint</a> 적용하기</h2>
 
 <p>실제로 lint를 어떻게 적용하는지, 어떠한 옵션이 있는지 알아보기 위해 javascript lint툴인 eslint를 설치하고 사용하는 방법을 알아봅니다. 굳이 javascript lint툴을 가지고 예를 든 이유는 javascript가 개발자들 마다 가장 스타일 차이가 많이 나는 언어라고 생각하기 때문입니다. linter들의 사용법과 옵션은 비슷비슷하기 때문에 eslint를 살펴보면 다른 언어의 linter도 적용하기 쉬울거라 생각됩니다.</p>
 
-<h3 id="eslint-">eslint 설치</h3>
+<h3 id="eslint-">
+<a id="eslint-설치" class="anchor" href="#eslint-%EC%84%A4%EC%B9%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>eslint 설치</h3>
 
 <p><strong>설치</strong></p>
 
 <p>eslint는 <a href="https://nodejs.org/">Node.js</a>로 작성된 프로그램입니다. 먼저, nodejs를 설치후에 eslint를 설치합니다.</p>
 
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="gp">$ </span>npm install -g eslint<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre><span class="gp">$ </span>npm install -g eslint<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p><strong>초기설정</strong></p>
 
 <p>설치후엔 eslint 초기 설정을 진행합니다.</p>
 
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -386,7 +406,8 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 12
 13
 14
-15</pre></td><td class="code"><pre><span class="gp">$ </span>npm init
+15</pre></td>
+<td class="code"><pre><span class="gp">$ </span>npm init
 <span class="gp">$ </span>eslint --init
 
 ? How would you like to configure ESLint? Answer questions about your style
@@ -401,43 +422,44 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 ? What line endings <span class="k">do </span>you use? Unix
 ? Do you require semicolons? Yes
 ? What format <span class="k">do </span>you want your config file to be <span class="k">in</span>? JavaScript<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>몇가지 옵션을 물어보면서 자동으로 필요한 plugin을 추가하고 <code class="highlighter-rouge">.eslintrc.js</code>라는 설정파일을 만들어줍니다.</p>
 
 <noscript><pre>module.exports = {
-    &quot;env&quot;: {
-        &quot;browser&quot;: true,
-        &quot;es6&quot;: true
+    "env": {
+        "browser": true,
+        "es6": true
     },
-    &quot;extends&quot;: &quot;eslint:recommended&quot;,
-    &quot;installedESLint&quot;: true,
-    &quot;parserOptions&quot;: {
-        &quot;ecmaFeatures&quot;: {
-            &quot;experimentalObjectRestSpread&quot;: true,
-            &quot;jsx&quot;: true
+    "extends": "eslint:recommended",
+    "installedESLint": true,
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
         },
-        &quot;sourceType&quot;: &quot;module&quot;
+        "sourceType": "module"
     },
-    &quot;plugins&quot;: [
-        &quot;react&quot;
+    "plugins": [
+        "react"
     ],
-    &quot;rules&quot;: {
-        &quot;indent&quot;: [
-            &quot;error&quot;,
+    "rules": {
+        "indent": [
+            "error",
             4
         ],
-        &quot;linebreak-style&quot;: [
-            &quot;error&quot;,
-            &quot;unix&quot;
+        "linebreak-style": [
+            "error",
+            "unix"
         ],
-        &quot;quotes&quot;: [
-            &quot;error&quot;,
-            &quot;single&quot;
+        "quotes": [
+            "error",
+            "single"
         ],
-        &quot;semi&quot;: [
-            &quot;error&quot;,
-            &quot;always&quot;
+        "semi": [
+            "error",
+            "always"
         ]
     }
 };</pre></noscript>
@@ -449,13 +471,16 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 
 <p>기본적인 옵션은 범용적으로 설정되기 때문에 회사마다 특성에 맞게 조금씩 규칙을 고쳐서 사용합니다. Airbnb 또한 자체적인 규칙을 설정하여 사용중인데 이를 <a href="https://github.com/airbnb/javascript">오픈소스</a>로 공개하였고 React와 ES6를 사용하는 프로젝트에 적절한 규칙을 제공합니다. Airbnb룰을 적용해봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="gp">$ </span>npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre><span class="gp">$ </span>npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <noscript><pre>module.exports = {
-    &quot;extends&quot;: &quot;airbnb&quot;,
-    &quot;plugins&quot;: [
-        &quot;react&quot;
+    "extends": "airbnb",
+    "plugins": [
+        "react"
     ]
 };</pre></noscript>
 <script src="https://gist.github.com/subicura/57c7ba78118f3afab25dbbb9b3276d81.js"> </script>
@@ -467,12 +492,12 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 <p>Airbnb규칙중에 <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md">react/jsx-no-bind</a>규칙은 빼는게 현재 상황에 적당할 것 같아 해당 규칙을 뺍니다.</p>
 
 <noscript><pre>module.exports = {
-    &quot;extends&quot;: &quot;airbnb&quot;,
-    &quot;plugins&quot;: [
-        &quot;react&quot;
+    "extends": "airbnb",
+    "plugins": [
+        "react"
     ],
-    &quot;rules&quot;: {
-    	&quot;react/jsx-no-bind&quot;: &quot;off&quot;
+    "rules": {
+    	"react/jsx-no-bind": "off"
     }
 };</pre></noscript>
 <script src="https://gist.github.com/subicura/1b7f686371897d96823f743f1b22c496.js"> </script>
@@ -481,9 +506,9 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 
 <p>가끔 특정 코드에서만 규칙을 따로 적용하고 싶을 수 있습니다. 이럴땐 주석을 이용한 inline 규칙을 적용하면 됩니다.</p>
 
-<noscript><pre>/* eslint no-class-assign: &quot;off&quot; */
+<noscript><pre>/* eslint no-class-assign: "off" */
 PostForm = reduxForm({
-  form: &#39;msg&#39;,
+  form: 'msg',
 })(PostForm);</pre></noscript>
 <script src="https://gist.github.com/subicura/308dfda948a55be8e8534aa24a3b71b1.js"> </script>
 
@@ -491,53 +516,64 @@ PostForm = reduxForm({
 
 <p>이제 설정은 거의 끝났으니 실제로 lint를 돌려봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="gp">$ </span>eslint <span class="k">**</span>/<span class="k">*</span>.jsx<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre><span class="gp">$ </span>eslint <span class="k">**</span>/<span class="k">*</span>.jsx<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>주르륵주르륵 에러가 뜹니다. ㅠㅠ 이제 고치기만 하면 되겠네요…</p>
 
-<h2 id="gulp-">Gulp 설정</h2>
+<h2 id="gulp-">
+<a id="gulp-설정" class="anchor" href="#gulp-%EC%84%A4%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gulp 설정</h2>
 
 <p>linter를 단독으로 사용하는 경우는 이런 샘플을 보여줄 때 빼고는 아마 거의 없을겁니다. 왜냐면 개발자들은 게을러서 파일을 저장하거나 수정할 때 자동으로 체크하게 해줘야 합니다. 테스크 자동화 툴인 <a href="http://gulpjs.com/">gulp</a>의 watch 기능을 이용하여 자동으로 체크하도록 설정해봅니다.</p>
 
 <p><strong>설치</strong></p>
 
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre><span class="gp">$ </span>npm install --global gulp-cli
+3</pre></td>
+<td class="code"><pre><span class="gp">$ </span>npm install --global gulp-cli
 <span class="gp">$ </span>npm install --save-dev gulp
 <span class="gp">$ </span>npm install --save-dev gulp-eslint<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>대부분의 linter는 <a href="https://github.com/adametry/gulp-eslint">gulp-eslint</a>와 같이 gulp용 plugin을 제공합니다. 이제 gulpfile을 설정합니다.</p>
 
-<noscript><pre>var gulp = require(&#39;gulp&#39;);
-var eslint = require(&#39;gulp-eslint&#39;);
+<noscript><pre>var gulp = require('gulp');
+var eslint = require('gulp-eslint');
 
-gulp.task(&#39;lint&#39;, function() {
-  return gulp.src([&#39;**/*.{js,jsx}&#39;,&#39;!node_modules/**&#39;])
+gulp.task('lint', function() {
+  return gulp.src(['**/*.{js,jsx}','!node_modules/**'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
 
-gulp.task(&#39;watch&#39;, function() {
-	gulp.watch(&#39;**/*.{js,jsx}&#39;, [&#39;lint&#39;]);
+gulp.task('watch', function() {
+	gulp.watch('**/*.{js,jsx}', ['lint']);
 });
 
-gulp.task(&#39;default&#39;, [&#39;watch&#39;], function () {
+gulp.task('default', ['watch'], function () {
 });
 </pre></noscript>
 <script src="https://gist.github.com/subicura/65a15aea86bc2582e3cca337491f5bbe.js"> </script>
 
 <p><strong>실행</strong></p>
 
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="gp">$ </span>gulp<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre><span class="gp">$ </span>gulp<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>node_modules 디렉토리를 제외하고 js와 jsx파일을 수정하면 자동으로 eslint를 실행하고 결과를 알려줍니다. 이런식으로 scss-lint등 원하는 linter를 추가할 수 있습니다.</p>
 
-<h2 id="ide-">IDE 플러그인</h2>
+<h2 id="ide-">
+<a id="ide-플러그인" class="anchor" href="#ide-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>IDE 플러그인</h2>
 
 <p><strong>SublimeText3</strong></p>
 
@@ -550,7 +586,7 @@ gulp.task(&#39;default&#39;, [&#39;watch&#39;], function () {
   <li>설치가 끝나면 재시작합니다.</li>
 </ol>
 
-<p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/sublimetext3.png" alt="sublime text3" /></p>
+<p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/sublimetext3.png" alt="sublime text3"></p>
 
 <p>왼쪽에 빨간색점이 보이고 하단에 에러문구가 보입니다.</p>
 
@@ -558,26 +594,31 @@ gulp.task(&#39;default&#39;, [&#39;watch&#39;], function () {
 
 <p>IntelliJ의 WebStorm IDE에는 ESLint가 이미 내장되어 있습니다. 설정에서 활성화하면 바로 적용됩니다.</p>
 
-<p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/webstorm_eslint.png" alt="WebStorm ESLint" /></p>
+<p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/webstorm_eslint.png" alt="WebStorm ESLint"></p>
 
 <p><code class="highlighter-rouge">Languages &amp; Frameworks &gt; Javascript &gt; Code Quality Tools &gt; ESLint</code></p>
 
-<p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/webstorm_eslint_view.png" alt="WebStorm ESLint Check" /></p>
+<p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/webstorm_eslint_view.png" alt="WebStorm ESLint Check"></p>
 
 <p>활성화하면 editor 오른쪽에 빨간색 라인이 보이고 마우스 오버하면 에러문구가 보입니다.</p>
 
-<h2 id="ci">CI</h2>
+<h2 id="ci">
+<a id="ci" class="anchor" href="#ci" aria-hidden="true"><span class="octicon octicon-link"></span></a>CI</h2>
 
 <p>linter를 사용하는 법은 거의 끝났고, 이제 CI에 적용할때입니다. 소스를 배포하고 빌드할 때마다 자동으로 lint를 체크하고 잘못된 점을 알려서 개발자를 압박해야겠죠. <a href="https://jenkins.io/">Jenkins</a>를 사용한다면 <a href="https://github.com/jenkinsci/checkstyle-plugin">checkstyle plugin</a>을 사용할 수 있습니다. <a href="http://checkstyle.sourceforge.net/">Checkstyle</a>은 원래 java파일을 체크할때 사용하던 포멧인데 다른 툴에서도 보통 같은 포멧을 제공합니다.</p>
 
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="gp">$ </span>eslint -f checkstyle <span class="k">*</span>.js &gt; checkstyle.xml<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
+<td class="code"><pre><span class="gp">$ </span>eslint -f checkstyle <span class="k">*</span>.js &gt; checkstyle.xml<span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>eslint에서는 -f 옵션을 통해 output 포멧을 지정할 수 있는데 checkstyle을 내장하고 있습니다. Jenkins에서 checkstyle을 설정하면 다음과 같은 화면을 볼 수 있습니다.</p>
 
-<p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/checkstyle.png" alt="Jenkins Checkstyle" /></p>
+<p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/checkstyle.png" alt="Jenkins Checkstyle"></p>
 
-<h2 id="section-1">그래서</h2>
+<h2 id="section-1">
+<a id="그래서" class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
 
 <p>코딩 컨벤션을 문법단계까지 적용한 대표적인 언어가 <a href="https://www.python.org/">python</a>과 <a href="https://golang.org/">Go</a>라고 생각합니다. 처음에 python이 블록 구분을 중괄호가 아닌 들여쓰기로 한다는 이야기를 들었을땐 엄청난 충격적이였습니다. <em>아니 python은 이제 블록 줄바꿈가지고 개발자들끼리 싸우지 않아도 되는건가?!</em> 이후에 Go를 접했을때도 Go는 줄을 바꾸지 않고 중괄호를 같은 줄에 붙이는 걸 강제하였고 언어 스펙도 굉장히 간결하여 다시 한번 충격적이였습니다. Go는 더 나아가 gofmt라는 코드 스타일 검사툴을 기본 설치판에 포함하여 대부분의 코드 스타일을 비슷하게 만들어 버렸습니다. 이때문에 Go 개발자들은 다른 사람의 소스를 이해하는게 쉽다고 느껴져 좋은 소스를 참고하고 배우는게 편하다는 이야기를 자주 합니다.</p>
 
@@ -672,7 +713,7 @@ gulp.task(&#39;default&#39;, [&#39;watch&#39;], function () {
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1489210669085620000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1510773113069980000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

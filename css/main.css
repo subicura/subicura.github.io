@@ -1035,3 +1035,38 @@ pre {
   background-color: #efefef;
   font-size: 14px;
   border-radius: 3px; }
+
+.post .post-content .section-nav {
+  font-weight: 400;
+  position: fixed;
+  top: 50% !important;
+  left: 0;
+  width: 200px;
+  margin-left: 0;
+  max-height: 66vh;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  list-style-type: none;
+  transform: translate3d(-100%, -50%, 0);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.4, 0.95);
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.4, 0.95); }
+  .post .post-content .section-nav.active {
+    transform: translate3d(0, -50%, 0);
+    opacity: 1; }
+  .post .post-content .section-nav li {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 140%;
+    margin-left: 15px; }
+    .post .post-content .section-nav li a {
+      color: #aaa;
+      text-decoration: none; }
+      .post .post-content .section-nav li a.active {
+        color: #db4d5e; }
+@media(max-width: 1100px) {
+  .post .post-content .section-nav {
+    display: none; } }

@@ -150,6 +150,8 @@ GEM
       jekyll (~> 3.3)
     jekyll-titles-from-headings (0.1.4)
       jekyll (~> 3.3)
+    jekyll-toc (0.4.0)
+      nokogiri (~> 1.6)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     jemoji (0.7.0)
@@ -202,7 +204,8 @@ DEPENDENCIES
   bourbon
   github-pages
   jekyll-gist
+  jekyll-toc
   jemoji
 
 BUNDLED WITH
-   1.11.2
+   1.15.3

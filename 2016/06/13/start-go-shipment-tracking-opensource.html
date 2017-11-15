@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1489210669085620000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1510773113069980000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -128,7 +128,14 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p><img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/yongman-pork.jpg" alt="돈까스먹는용만이x칠리등심돈까스" /></p>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#어떤걸-만들까">어떤걸 만들까?</a></li>
+<li class="toc-entry toc-h2"><a href="#왜-서비스를-따로-분리하여-오픈소스에-go로-만드는가">왜 서비스를 따로 분리하여 오픈소스에 Go로 만드는가?</a></li>
+<li class="toc-entry toc-h2"><a href="#go로-개발하기">Go로 개발하기</a></li>
+<li class="toc-entry toc-h2"><a href="#개발">개발</a></li>
+<li class="toc-entry toc-h2"><a href="#오픈소스로">오픈소스로</a></li>
+<li class="toc-entry toc-h2"><a href="#그래서">그래서</a></li>
+</ul><p><img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/yongman-pork.jpg" alt="돈까스먹는용만이x칠리등심돈까스"></p>
 
 <p><a href="https://www.likehs.com">홈쇼핑처럼</a>에서 세번째로 런칭한 <a href="https://www.likehs.com/tvprogram/index/view/id/24/">돈까스</a>를 구매해 주시는 분들을 보면서 <em>아.. 받은 만큼 나도 뭔가 베풀어야겠구나</em> 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다.</p>
 
@@ -139,19 +146,21 @@
 <p>이제 컨트리뷰터는 해봤으니 커미터가 되어봅시다. 아쉽게도 인기있는 오픈소스의 커미터는 꽤 많은 노력이 필요하고 고오급 개발자만 가능한 것 같습니다.
 그럼 오픈소스 프로젝트를 직접 운영해보는건 어떨까요? 직접 오픈소스 프로젝트를 운영하면 커미터가 될 수 있고 리뷰어도 될 수 있고 프로젝트를 운영하면서 많은 노하우를 배울수도 있습니다. 아참, 오픈소스에 참여하면 IntelliJ IDE도 <a href="https://www.jetbrains.com/buy/opensource/">무료</a>로 사용할 수 있고 JIRA도 <a href="https://ko.atlassian.com/software/views/open-source-license-request">무료</a>로 쓸 수 있습니다.</p>
 
-<h2 id="section">어떤걸 만들까?</h2>
+<h2 id="section">
+<a id="어떤걸-만들까" class="anchor" href="#%EC%96%B4%EB%96%A4%EA%B1%B8-%EB%A7%8C%EB%93%A4%EA%B9%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>어떤걸 만들까?</h2>
 
 <p>커머스에서 상품이 배송되면 배송상태를 추적해야합니다. 배송이 완료되면 구매확정 버튼을 누르게 할수도 있고, 배송정보 화면을 커스터마이징 할 수도 있습니다. 많은 배송업체가 API를 제공하지 않기 때문에 자동화하기가 까다롭습니다.(대체 다른 서비스들은 어떻게 추적하는거지…?) 그래서 결국 HTML을 파싱하는 방법을 선택합니다. 택배사와 송장번호를 입력하면 택배 사이트에 접속하여 HTML을 읽고 DOM을 파싱하여 정리된 포멧으로 택배정보를 조회하는 서비스를 만듭니다</p>
 
 <p>혹시 누가 만들어 놓지 않았을까 검색을 해보니 무료에 오픈소스로 공개된 건 없는것 같습니다. 질문글도 많고 원하는 사람도 있는거 같으니 오픈소스로 하기 딱인 프로젝트인것 같습니다. 아무도 안쓰는 기능을 만들면 힘들게 오픈해도 반응이 없어서 슬픔 ㅠ</p>
 
-<h2 id="go-">왜 서비스를 따로 분리하여 오픈소스에 Go로 만드는가?</h2>
+<h2 id="go-">
+<a id="왜-서비스를-따로-분리하여-오픈소스에-go로-만드는가" class="anchor" href="#%EC%99%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A5%BC-%EB%94%B0%EB%A1%9C-%EB%B6%84%EB%A6%AC%ED%95%98%EC%97%AC-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-go%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>왜 서비스를 따로 분리하여 오픈소스에 Go로 만드는가?</h2>
 
 <p>배송조회 서비스는 기존 웹서비스에 하나의 액션으로 구현하는게 아니라 완전히 독립적으로 구현합니다. 몇가지 검토끝에 오픈소스로 공개하기로 하였고 가벼운 프로젝트라 Go언어로 구현합니다.</p>
 
 <p><strong>왜 <a href="http://martinfowler.com/articles/microservices.html">마이크로서비스</a>인가?</strong></p>
 
-<p><img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/monolith-microservice.png" alt="monoliths / microservices" /></p>
+<p><img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/monolith-microservice.png" alt="monoliths / microservices"></p>
 
 <p>마이크로서비스와 비교되는 방식으로 모놀리식이라는 서비스 개발 방법이 있습니다.</p>
 
@@ -189,12 +198,13 @@
 
 <p><strong>왜 <a href="https://golang.org/">Go</a>인가</strong></p>
 
-<p><img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/languages.png" alt="languages" /></p>
+<p><img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/languages.png" alt="languages"></p>
 
 <ul>
   <li>구글이 개발한 가장 핫한 언어</li>
   <li><a href="https://github.com/golang/go/wiki/GoUsers">Go를 사용중인 회사들</a></li>
-  <li><a href="https://eng.uber.com/go-geofence/">uber의 Go언어 사용사례</a>, <a href="http://blog.parse.com/learn/how-we-moved-our-api-from-ruby-to-go-and-saved-our-sanity/">parse의 ruby에서 go로 전환사례</a>(루비야 아프지마.. ㅠ)</li>
+  <li>
+<a href="https://eng.uber.com/go-geofence/">uber의 Go언어 사용사례</a>, <a href="http://blog.parse.com/learn/how-we-moved-our-api-from-ruby-to-go-and-saved-our-sanity/">parse의 ruby에서 go로 전환사례</a>(루비야 아프지마.. ㅠ)</li>
   <li>코딩이 재밌고 속도도 괜찮음</li>
   <li>정적언어지만 동적언어의 장점을 많이 가져옴</li>
   <li>빠른 컴파일 빠른 실행</li>
@@ -218,22 +228,26 @@
 
 <p>배송조회는 <code class="highlighter-rouge">http요청</code> &gt; <code class="highlighter-rouge">html조회</code> &gt; <code class="highlighter-rouge">parsing</code> &gt; <code class="highlighter-rouge">응답</code>하는 과정을 가진 굉장히 단순한 서비스입니다. 새로운 언어를 적용하고 배우는데 가장 좋은 방법은 프로젝트를 한번 해보는 것이고 굉장히 적절한 사이즈의 프로젝트입니다.</p>
 
-<h2 id="go--1">Go로 개발하기</h2>
+<h2 id="go--1">
+<a id="go로-개발하기" class="anchor" href="#go%EB%A1%9C-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Go로 개발하기</h2>
 
 <p>Go언어에 대해 설명하는 포스트는 아니지만 Go를 처음 접하는분들을 위해 몇가지 팁을 공유합니다.</p>
 
 <ul>
   <li>공부
     <ul>
-      <li><a href="https://tour.golang.org/welcome/1">A Tour of go</a> - golang에서 공식으로 제공하는 방법으로 실습위주의 방법. 지하철 출퇴근때 하기 딱 좋음</li>
+      <li>
+<a href="https://tour.golang.org/welcome/1">A Tour of go</a> - golang에서 공식으로 제공하는 방법으로 실습위주의 방법. 지하철 출퇴근때 하기 딱 좋음</li>
       <li>공식문서(<a href="https://golang.org/doc/code.html">How to Write Go Code</a>, <a href="https://golang.org/doc/effective_go.html">Effective Go</a>) - 역시 지하철 출퇴근때 보면 좋음</li>
       <li>책 - 이미 한글로 된 책이 꽤 많이 출간되었고 번역서가 아닌 책도 많아 대부분 내용이 딱딱하지 않고 읽기 좋음(<a href="http://pyrasis.com/go.html">무료공개서적</a>도 있음)</li>
-      <li><a href="https://github.com/purpleworks/delibird">배송조회 오픈소스</a> 참여 고고 - 직접 만들어보는게 배우기 가장 좋음</li>
+      <li>
+<a href="https://github.com/purpleworks/delibird">배송조회 오픈소스</a> 참여 고고 - 직접 만들어보는게 배우기 가장 좋음</li>
     </ul>
   </li>
   <li>IDE
     <ul>
-      <li><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA Community</a> 추천</li>
+      <li>
+<a href="https://www.jetbrains.com/idea/">IntelliJ IDEA Community</a> 추천</li>
       <li>무료고 일반적으로 사용하기 쉽고 기능이 강력함</li>
       <li>GO, File watchers plugin 설치 필수</li>
       <li>File watcher는 파일을 저장할때마다 <code class="highlighter-rouge">goimports</code>를 실행하여 코드스타일을 정리함</li>
@@ -241,7 +255,8 @@
   </li>
 </ul>
 
-<h2 id="section-1">개발</h2>
+<h2 id="section-1">
+<a id="개발" class="anchor" href="#%EA%B0%9C%EB%B0%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>개발</h2>
 
 <p>이제 본격적으로 개발을 해 봅니다. 전체 소스는 <a href="https://github.com/purpleworks/delibird">https://github.com/purpleworks/delibird</a>에 공개되어 있습니다. 상세한 내용은 따로 설명하지 않고 어떤점을 주의하면서 개발하였는지 고민했던 과정을 정리합니다.</p>
 
@@ -271,7 +286,8 @@
 
 <p>홈쇼핑처럼은 CJ대한통운만 이용하지만 사용자수 1위인 우체국택배도 구현하였습니다. 뭔가 Go 초보티가 많이 나는 소스지만 동작은 합니다. 일단 완성! 버전 0.1.0으로 등록합니다.</p>
 
-<h2 id="section-2">오픈소스로</h2>
+<h2 id="section-2">
+<a id="오픈소스로" class="anchor" href="#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EB%A1%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>오픈소스로</h2>
 
 <p>어떤 프로젝트를 오픈소스화 한다는건 코딩이외에 추가적인 작업들을 필요로 합니다. 단순히 코드를 정리하고 공개하는것 외에 다른 개발자들의 참여를 유도하고 지속가능한 개발을 하기 위해 소스 품질에 신경을 써야 합니다.</p>
 
@@ -284,7 +300,7 @@
 <p>이제 이름을 지었으니 로고를 만듭니다. 직접 그릴순 없으니 심플한 무료 아이콘이 많은 <a href="https://icons8.com/#/ios">icons8.com</a>에서 새 아이콘을 하나 고르고 이쁘장한 색샘플을 모아놓은 <a href="http://flatuicolors.com/">flatuicolors.com</a>에서 보라색계열을 하나 선택합니다. 폰트도 밋밋하지 않게 <a href="https://www.google.com/fonts">구글웹폰트</a>에서 하나 고릅니다.</p>
 
 <p align="center">
-<img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/delibird.logo.png" alt="Delibird Logo" title="Delibird Logo" />
+<img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/delibird.logo.png" alt="Delibird Logo" title="Delibird Logo">
 </p>
 
 <p>짠, 포샵을 쓱싹하여 그럴싸한 이름에 로고가 만들어졌습니다.</p>
@@ -313,12 +329,12 @@
 <p>github은 <a href="https://help.github.com/articles/user-organization-and-project-pages/">page</a>라는 기능으로 정적인(html, image, css, js) 페이지를 무료로 만들수 있습니다.</p>
 
 <noscript><pre>$ git checkout --orphan gh-pages
-# Creates our branch, without any parents (it&#39;s an orphan!)
-Switched to a new branch &#39;gh-pages&#39;
+# Creates our branch, without any parents (it's an orphan!)
+Switched to a new branch 'gh-pages'
 
 $ git rm -rf .
 # Remove all files from the old working tree
-rm &#39;.gitignore&#39;</pre></noscript>
+rm '.gitignore'</pre></noscript>
 <script src="https://gist.github.com/subicura/56599a77c63ea929f413a7ab8052c61e.js"> </script>
 
 <p>프로젝트에 <code class="highlighter-rouge">gh-pages</code>라는 브랜치를 만들고 html파일과 js,css파일등을 넣으면 끝입니다. 인터넷에서 무료 bootstrap landing 테마를 하나 다운받아 쓱싹 만들고 push합니다. github 조직이름이 purpleworks이고 프로젝트명이 delibird라면 <a href="http://purpleworks.github.io/delibird/">purpleworks.github.io/delibird</a>라는 URL로 자동으로 연결됩니다. 이를 통해 README.md로는 부족한 내용을 보여줄 수 있습니다.</p>
@@ -332,28 +348,33 @@ rm &#39;.gitignore&#39;</pre></noscript>
 <p>유용한 서비스를 연동해 놓으면 코드 품질과 테스트 결과를 자동으로 알 수 있어 매우 유용합니다.</p>
 
 <ul>
-  <li><a href="https://travis-ci.org">travis-ci</a>
+  <li>
+<a href="https://travis-ci.org">travis-ci</a>
     <ul>
       <li>대표적인 Test and Deploy 서비스</li>
-      <li><a href="https://github.com/purpleworks/delibird/blob/master/.travis.yml"><code class="highlighter-rouge">.travis.yml</code></a> 파일을 만들고 빌드 정보 입력</li>
+      <li>
+<a href="https://github.com/purpleworks/delibird/blob/master/.travis.yml"><code class="highlighter-rouge">.travis.yml</code></a> 파일을 만들고 빌드 정보 입력</li>
       <li>매 빌드마다 <code class="highlighter-rouge">go test</code>를 수행하고 결과를 알려줌</li>
       <li>매 빌드가 끝나면 커버리지 정보를 coveralls로 전송하게 함</li>
     </ul>
   </li>
-  <li><a href="https://coveralls.io/">coveralls</a>
+  <li>
+<a href="https://coveralls.io/">coveralls</a>
     <ul>
       <li>대표적인 코드 커버리지 서비스</li>
       <li>travis-ci에서 정보를 전달하도록 설정</li>
     </ul>
   </li>
-  <li><a href="https://codeclimate.com">codeclimate</a>
+  <li>
+<a href="https://codeclimate.com">codeclimate</a>
     <ul>
       <li>대표적인 코드품질 검사 서비스</li>
       <li>다양한 항목으로 코드를 검사하여 학점처럼 점수를 매겨줌</li>
       <li>Go는 아직 지원 안하는듯하여 다른 서비스 사용</li>
     </ul>
   </li>
-  <li><a href="https://goreportcard.com/">goreportcard.com</a>
+  <li>
+<a href="https://goreportcard.com/">goreportcard.com</a>
     <ul>
       <li>Go전용 코드품질 검사 서비스</li>
       <li>go_vet, gocyclo, gofmt, golint, ineffassign, license, misspell등을 돌려 점수를 매겨줌</li>
@@ -364,42 +385,47 @@ rm &#39;.gitignore&#39;</pre></noscript>
 
 <p><strong>뱃지</strong></p>
 
-<p><img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/github-badge.png" alt="github badge" /></p>
+<p><img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/github-badge.png" alt="github badge"></p>
 
 <p>github은 상단에 각종 상태를 뱃지아이콘으로 보여주는 특별한 문화(?)가 있습니다. 라이센스라던가 문서링크, 코드 품질이나 커버리지, 빌드결과(테스트) 여부등이 있습니다. 이외에도 커뮤니티 게시판 링크라던가 채팅링크등 다양한 뱃지가 있습니다. <a href="http://shields.io/">shields.io</a>에서는 다양한 뱃지아이콘을 제공하고 있고 각 서비스마다 자체적으로 뱃지 링크를 제공하기도 합니다.</p>
 
 <ul>
   <li>license
     <ul>
-      <li><a href="http://shields.io/">shields.io</a> 라이센스 뱃지 사용</li>
+      <li>
+<a href="http://shields.io/">shields.io</a> 라이센스 뱃지 사용</li>
       <li>소스 저장소의 LICENSE파일을 보고 이미지 생성</li>
       <li>https://img.shields.io/github/license/{id}/{project}</li>
     </ul>
   </li>
   <li>godoc
     <ul>
-      <li><a href="https://godoc.org/">godoc.org</a> 뱃지 사용</li>
+      <li>
+<a href="https://godoc.org/">godoc.org</a> 뱃지 사용</li>
       <li>Go프로젝트는 godoc이 자동으로 생성됨</li>
       <li>https://godoc.org/github.com/{id}/{project}?status.svg</li>
     </ul>
   </li>
   <li>코드품질
     <ul>
-      <li><a href="https://goreportcard.com/">goreportcard.com</a> 뱃지 사용</li>
+      <li>
+<a href="https://goreportcard.com/">goreportcard.com</a> 뱃지 사용</li>
       <li>소스 품질 결과를 A+, B, C등의 뱃지로 생성함</li>
       <li>http://goreportcard.com/badge/{id}/{project}</li>
     </ul>
   </li>
   <li>커버리지
     <ul>
-      <li><a href="http://shields.io/">shields.io</a> coveralls 뱃지 사용</li>
+      <li>
+<a href="http://shields.io/">shields.io</a> coveralls 뱃지 사용</li>
       <li>coveralls 결과를 뱃지로 생성함</li>
       <li>http://img.shields.io/coveralls/{id}/{project}.svg</li>
     </ul>
   </li>
   <li>빌드결과
     <ul>
-      <li><a href="https://travis-ci.org">travis-ci</a> 뱃지 사용</li>
+      <li>
+<a href="https://travis-ci.org">travis-ci</a> 뱃지 사용</li>
       <li>https://travis-ci.org/{id}/{project}.svg?branch=master</li>
     </ul>
   </li>
@@ -410,14 +436,14 @@ rm &#39;.gitignore&#39;</pre></noscript>
 <p><a href="https://www.heroku.com/">heroku</a>는 소스빌드/배포/스케일이 자유로운 클라우드 서비스입니다. 다른 웹호스팅 서비스와 차별점은 소스를 업로드만 하면 알아서 웹서버를 띄워준다는 점입니다. 이게 무슨 말이냐면 Rails, Django, Express등은 고유한 파일 구조가 있습니다. 이러한 디렉토리구조나 파일의 확장자를 보고 <a href="https://devcenter.heroku.com/articles/buildpacks">알아서</a> 서버를 띄운다는 신박한 서비스입니다.</p>
 
 <p align="center">
-<img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/heroku.png" alt="heroku free plan" title="heroku free plan" />
+<img src="https://subicura.com/assets/article_images/2016-06-13-start-go-shipment-tracking-opensource/heroku.png" alt="heroku free plan" title="heroku free plan">
 </p>
 
 <p>더 놀라운건 무료 플렌입니다. 30분간 요청이 없으면 자동으로 서버가 중지되고 그 이후 요청이 들어오면 다시 서버를 시작합니다. 예전에는 시간제한이 없었는데 이제 시간제한이 생겨서 아쉽긴 하지만 테스트로 배송조회 서비스를 켜놓기에는 부족함이 없습니다. heroku에 로그인을 하고 서버를 만든 후 github 소스를 연동하니 바로 서버가 뜹니다. 정말 뜹니다.</p>
 
 <p align="center">
 <a href="https://heroku.com/deploy?template=https://github.com/purpleworks/delibird">
-<img src="https://www.herokucdn.com/deploy/button.svg" alt="Heroku button" title="Heroku button" />
+<img src="https://www.herokucdn.com/deploy/button.svg" alt="Heroku button" title="Heroku button">
 </a>
 </p>
 
@@ -433,7 +459,8 @@ rm &#39;.gitignore&#39;</pre></noscript>
 
 <p><a href="https://github.com/purpleworks/delibird">https://github.com/purpleworks/delibird</a>오셔서 star한번씩 눌러주시고 관심갖어 주시면 감사하겠습니다. ㅠㅠ</p>
 
-<h2 id="section-3">그래서</h2>
+<h2 id="section-3">
+<a id="그래서" class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
 
 <p>내부적으로 사용하던 소스를 오픈하기위에 적절히 리팩토링을 하고 문서를 추가하여 <a href="https://github.com/purpleworks/delibird">https://github.com/purpleworks/delibird</a>에 공개하였습니다. Go에 관심있으신분이나 배송조회에 관심있으신분은 별 눌러주시고 참여해주세요. 열려있습니다!</p>
 
@@ -531,7 +558,7 @@ rm &#39;.gitignore&#39;</pre></noscript>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1489210669085620000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1510773113069980000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
