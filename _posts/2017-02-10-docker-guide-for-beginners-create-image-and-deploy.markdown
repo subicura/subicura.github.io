@@ -6,6 +6,7 @@ tags: [Docker, DevOps, Server, Container]
 layout: post
 excerpt: 이 글은 초보를 위한 도커 안내서 - 설치부터 배포까지 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.
 comments: yes
+toc: true
 ---
 
 ![docker logo]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)

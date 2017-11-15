@@ -32,6 +32,43 @@
                 location.href = _mailChimpUrl;
             }
         });
+
+        // post affix
+        if($('.section-nav').length) {
+            var affixList = [];
+            $('.section-nav li a').each(function() {
+                affixList.push($(this).attr('href'));
+            });
+            
+            $(window).on('scroll', function() {
+                var scrollTop = $(window).scrollTop();
+
+                if (scrollTop > 200 && scrollTop < $('.bottom-teaser').offset().top - $(window).height() + 300) {
+                    $('.section-nav').addClass('active');
+                } else {
+                    $('.section-nav').removeClass('active');
+                }
+
+                for (let i = 1; i < affixList.length; i++) {
+                    if(scrollTop < $(affixList[i]).offset().top - 10) {
+                        var activeLi = $('.section-nav li a[href=' + affixList[i-1] + ']');
+                        if (!activeLi.hasClass('active')) {
+                            $('.section-nav li a').removeClass('active');
+                            activeLi.addClass('active');
+                        }
+                        break;
+                    }
+
+                    if (i == affixList.length - 1) {
+                        var activeLi = $('.section-nav li a[href=' + affixList[i] + ']');
+                        if (!activeLi.hasClass('active')) {
+                            $('.section-nav li a').removeClass('active');
+                            activeLi.addClass('active');
+                        }
+                    }
+                }
+            });
+        }
     });
 
 }(jQuery));

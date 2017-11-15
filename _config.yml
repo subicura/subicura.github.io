@@ -4,6 +4,7 @@ gems:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-sitemap
+  - jekyll-toc
 
 # Site settings
 title: "Subicura's Blog"

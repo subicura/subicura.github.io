@@ -5,6 +5,7 @@ excerpt: 홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 "홈
 tags: [TechStack, Startup, Likehs]
 layout: post
 comments: yes
+toc: true
 fb_social_baseurl: http://subicura.com
 last_modified_at: 2017-01-21T10:00:00+09:00
 ---

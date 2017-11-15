@@ -71,7 +71,7 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          {{content}}
+          {{content|toc}}
           <p class="tags">
             {% for tag in page.tags %}
               <a href="/tags#{{ tag | slugify }}-ref">{{ tag }}</a>
