@@ -882,15 +882,21 @@ pre
         opacity: 1
       li
         font-size: 13px
-        white-space: nowrap
-        overflow: hidden
-        text-overflow: ellipsis
         line-height: 140%
         margin-left: 15px
+        list-style-type: none
         a 
+          display: block
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
           color: #aaa
           text-decoration: none
+          transition: all .4s cubic-bezier(0.25,.8,.4,.95)
+          -webkit-transition: all .4s cubic-bezier(0.25,.8,.4,.95)
           &.active
+            padding-left: 5px
+            border-left: 3px solid #db4d5e
             color: #db4d5e
       @media(max-width: 1100px)
         display: none
