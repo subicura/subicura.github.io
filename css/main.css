@@ -1057,15 +1057,21 @@ pre {
     opacity: 1; }
   .post .post-content .section-nav li {
     font-size: 13px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     line-height: 140%;
-    margin-left: 15px; }
+    margin-left: 15px;
+    list-style-type: none; }
     .post .post-content .section-nav li a {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       color: #aaa;
-      text-decoration: none; }
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.4, 0.95);
+      -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.4, 0.95); }
       .post .post-content .section-nav li a.active {
+        padding-left: 5px;
+        border-left: 3px solid #db4d5e;
         color: #db4d5e; }
 @media(max-width: 1100px) {
   .post .post-content .section-nav {
