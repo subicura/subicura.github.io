@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1511492122515902000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1511499579312751000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -672,7 +672,7 @@ brew cask install font-hack-nerd-font<span class="w">
 
 <p><strong>플러그인</strong></p>
 
-<p>vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.</p>
+<p>vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 화면을 보는 순간 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
 <td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
@@ -680,11 +680,11 @@ brew cask install font-hack-nerd-font<span class="w">
 </span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>설치가 완료되면 <code class="highlighter-rouge">vi</code>를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (<code class="highlighter-rouge">1</code>을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 꽤 많아서 시간이 조금 걸립니다.</p>
+<p>설치가 완료되면 <code class="highlighter-rouge">vi</code>를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (<code class="highlighter-rouge">1</code>을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.</p>
 
 <p><strong>테마</strong></p>
 
-<p>기본 테마는 뭔가 칙칙한 느낌이 듭니다. <code class="highlighter-rouge">~/.SpaceVim.d/init.vim</code> 파일에 커스텀 테마를 추가합니다.</p>
+<p>기본 테마는 뭔가 칙칙한 느낌이 듭니다. <code class="highlighter-rouge">~/.SpaceVim.d/init.vim</code> 파일에 Colorscheme 설정을 추가합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
 <td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
@@ -700,7 +700,7 @@ brew cask install font-hack-nerd-font<span class="w">
 
 <p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/nvim-question.png" alt=""></p>
 
-<p>iTerm2에 개발용 폰트를 설정해줍니다.</p>
+<p>iTerm2에 개발 관련 폰트를 모은 NerdFont를 추가로 설정합니다.</p>
 
 <p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font.png" alt=""></p>
 
@@ -731,7 +731,7 @@ brew cask install font-hack-nerd-font<span class="w">
 </span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 <code class="highlighter-rouge">y</code>를 누르면 됩니다. 전부 완료되었으면 <code class="highlighter-rouge">source ~/.zshrc</code>를 입력하여 설정을 다시 불러옵니다.</p>
+<p>brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 <code class="highlighter-rouge">y</code>를 누르면 됩니다. 설치가 완료되었으면 <code class="highlighter-rouge">source ~/.zshrc</code>를 입력하여 설정을 다시 불러옵니다.</p>
 
 <p><strong>명령어</strong></p>
 
@@ -777,7 +777,7 @@ brew cask install font-hack-nerd-font<span class="w">
 <h3 id="fasd">
 <a id="fasd" class="anchor" href="#fasd" aria-hidden="true"><span class="octicon octicon-link"></span></a>fasd</h3>
 
-<p>fasd는 파일 또는 디렉토리 검색을 편하게 해서 엄청나게 생산성을 향상시켜주는 도구입니다. 자주 열어본 파일이나 이동한 디렉토리를 기억하고 우선순위를 정해서 빠르게 이동할 수 있게 도와줍니다.</p>
+<p>fasd는 사용빈도가 높은 파일 또는 디렉토리 검색을 편하게 해서 생산성을 향상시켜주는 도구입니다. 열어본 파일이나 이동한 디렉토리를 기억하고 우선순위를 정해서 빠르게 검색할 수 있게 도와줍니다.</p>
 
 <p><strong>설치</strong></p>
 
@@ -834,7 +834,7 @@ brew cask install font-hack-nerd-font<span class="w">
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-11-22-mac-os-development-environment-setup/fasd-demo.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption></figcaption>
 </div>
 
-<p>단순하지 굉장히 유용한 도구입니다.</p>
+<p>단순한 기능만큼 굉장히 자주, 유용하게 사용하는 도구입니다.</p>
 
 <p><a href="https://github.com/clvv/fasd">fasd github</a></p>
 
@@ -915,7 +915,7 @@ cp .tmux/.tmux.conf.local .<span class="w">
 
 <p><strong>사용법</strong></p>
 
-<p>tmux는 꽤 사용난이도가 높은 프로그램입니다. 자세한 내용은 따로 더 공부하셔야 하고 여기서는 아주 기본적인 기능 몇 가지만 알아봅니다.</p>
+<p>tmux는 꽤 사용난이도가 높은 프로그램입니다. 자세한 내용을 여기서 다루기엔 양이 너무 많기 떄문에 따로 공부를 해야하고 여기서는 아주 기본적인 기능 몇 가지만 알아봅니다.</p>
 
 <ul>
   <li>
@@ -923,7 +923,7 @@ cp .tmux/.tmux.conf.local .<span class="w">
   <li>
 <strong>윈도우<sub>window</sub></strong> 세션안에 존재하는 탭같은 단위</li>
   <li>
-<strong>펜<sub>pane</sub></strong> 윈도우 안에 가로 세로로 분할한 단위</li>
+<strong>팬<sub>pane</sub></strong> 윈도우 안에 가로 세로로 분할한 단위</li>
 </ul>
 
 <table class="table table-key-value-60">
@@ -1007,7 +1007,7 @@ cp .tmux/.tmux.conf.local .<span class="w">
 <h3 id="tmuxinator">
 <a id="tmuxinator" class="anchor" href="#tmuxinator" aria-hidden="true"><span class="octicon octicon-link"></span></a>tmuxinator</h3>
 
-<p>tmux의 쓸모를 한층 더 높여주는 게 tmuxinator입니다. 손으로 창을 만들고 화면을 분할하는 것을 설정으로 해줍니다.</p>
+<p>tmux의 쓸모를 한층 더 높여주는 게 tmuxinator입니다. 단축키로 창을 만들고 화면을 분할하는 것을 설정파일로 해줍니다.</p>
 
 <p>예를 들면, 1번 윈도우는 webpack을 실행하고 2번 윈도우는 rails server를 실행하고 3번 윈도우는 log를 실행하게 설정할 수 있습니다. 요즘 프로젝트는 복잡하게 구성된 경우가 많아서 굉장히 유용하게 사용할 수 있습니다.</p>
 
@@ -1159,7 +1159,7 @@ gem install tmuxinator<span class="w">
 
 <p>최근 개발 모임이나 세미나에 참석해보면 맥북을 사용하시는 분들이 많고 개발자라면 계속해서 터미널을 사용하므로 아직 제대로 개발 환경을 구축하지 못한 분들에게 많은 도움이 되었으면 좋겠습니다. 그리고 괜찮은 도구 있으면 댓글로 추천해주세요! 더 좋은, 편안한 환경에서 개발하고 싶습니다.</p>
 
-<p>다른 <del>고오오급</del>개발자들이 어떤 환경에서 작업하는지 궁금하다면 <a href="https://usesthis.com">usesthis.com</a>에 인터뷰가 있으니 참고하시고 커스텀하게 변경한 환경설정 파일은 Dropbox나 Google Drive 등으로 파일을 링크(<code class="highlighter-rouge">ln -s</code>)하여 백업하거나 <a href="https://dotfiles.github.io/">dotfiles</a> 도구를 사용하여 백업하면 나중에 새로운 맥북을 받아도 빠르게 설정할 수 있습니다.</p>
+<p>다른 <del>고오오급</del>개발자들이 어떤 환경에서 작업하는지 궁금하다면 <a href="https://usesthis.com">usesthis.com</a>에 인터뷰가 있으니 참고하시고 커스텀하게 변경한 환경설정 파일은 Dropbox나 Google Drive 등으로 파일을 링크(<code class="highlighter-rouge">ln -s</code>)하여 백업하거나 <a href="https://dotfiles.github.io/">dotfiles</a> 도구를 사용하여 백업하면 나중에 새로운 맥이 생겨도 동일한 환경을 빠르게 설정할 수 있습니다.</p>
 
 
           <p class="tags">
@@ -1252,7 +1252,7 @@ gem install tmuxinator<span class="w">
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1511492122515902000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1511499579312751000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

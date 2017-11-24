@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 24 Nov 2017 11:55:22 +0900</pubDate>
-    <lastBuildDate>Fri, 24 Nov 2017 11:55:22 +0900</lastBuildDate>
+    <pubDate>Fri, 24 Nov 2017 13:59:39 +0900</pubDate>
+    <lastBuildDate>Fri, 24 Nov 2017 13:59:39 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -430,16 +430,16 @@ brew cask install font-hack-nerd-font&lt;span class=&quot;w&quot;&gt;
 
 &lt;p&gt;&lt;strong&gt;플러그인&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.&lt;/p&gt;
+&lt;p&gt;vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 화면을 보는 순간 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;curl -sLf https://spacevim.org/install.sh | bash&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;설치가 완료되면 &lt;code class=&quot;highlighter-rouge&quot;&gt;vi&lt;/code&gt;를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (&lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 꽤 많아서 시간이 조금 걸립니다.&lt;/p&gt;
+&lt;p&gt;설치가 완료되면 &lt;code class=&quot;highlighter-rouge&quot;&gt;vi&lt;/code&gt;를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (&lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;테마&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;기본 테마는 뭔가 칙칙한 느낌이 듭니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.SpaceVim.d/init.vim&lt;/code&gt; 파일에 커스텀 테마를 추가합니다.&lt;/p&gt;
+&lt;p&gt;기본 테마는 뭔가 칙칙한 느낌이 듭니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.SpaceVim.d/init.vim&lt;/code&gt; 파일에 Colorscheme 설정을 추가합니다.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;let &lt;/span&gt;g:spacevim_colorscheme &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'onedark'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -452,7 +452,7 @@ brew cask install font-hack-nerd-font&lt;span class=&quot;w&quot;&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/nvim-question.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;iTerm2에 개발용 폰트를 설정해줍니다.&lt;/p&gt;
+&lt;p&gt;iTerm2에 개발 관련 폰트를 모은 NerdFont를 추가로 설정합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -479,7 +479,7 @@ brew cask install font-hack-nerd-font&lt;span class=&quot;w&quot;&gt;
 &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;brew --prefix&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/opt/fzf/install&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;를 누르면 됩니다. 전부 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt;를 입력하여 설정을 다시 불러옵니다.&lt;/p&gt;
+&lt;p&gt;brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;를 누르면 됩니다. 설치가 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt;를 입력하여 설정을 다시 불러옵니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;명령어&lt;/strong&gt;&lt;/p&gt;
 
@@ -516,7 +516,7 @@ brew cask install font-hack-nerd-font&lt;span class=&quot;w&quot;&gt;
 
 &lt;h3 id=&quot;fasd&quot;&gt;fasd&lt;/h3&gt;
 
-&lt;p&gt;fasd는 파일 또는 디렉토리 검색을 편하게 해서 엄청나게 생산성을 향상시켜주는 도구입니다. 자주 열어본 파일이나 이동한 디렉토리를 기억하고 우선순위를 정해서 빠르게 이동할 수 있게 도와줍니다.&lt;/p&gt;
+&lt;p&gt;fasd는 사용빈도가 높은 파일 또는 디렉토리 검색을 편하게 해서 생산성을 향상시켜주는 도구입니다. 열어본 파일이나 이동한 디렉토리를 기억하고 우선순위를 정해서 빠르게 검색할 수 있게 도와줍니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
 
@@ -565,7 +565,7 @@ brew cask install font-hack-nerd-font&lt;span class=&quot;w&quot;&gt;
 
 &lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-11-22-mac-os-development-environment-setup/fasd-demo.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/div&gt;
 
-&lt;p&gt;단순하지 굉장히 유용한 도구입니다.&lt;/p&gt;
+&lt;p&gt;단순한 기능만큼 굉장히 자주, 유용하게 사용하는 도구입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/clvv/fasd&quot;&gt;fasd github&lt;/a&gt;&lt;/p&gt;
 
@@ -633,12 +633,12 @@ cp .tmux/.tmux.conf.local .&lt;span class=&quot;w&quot;&gt;
 
 &lt;p&gt;&lt;strong&gt;사용법&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;tmux는 꽤 사용난이도가 높은 프로그램입니다. 자세한 내용은 따로 더 공부하셔야 하고 여기서는 아주 기본적인 기능 몇 가지만 알아봅니다.&lt;/p&gt;
+&lt;p&gt;tmux는 꽤 사용난이도가 높은 프로그램입니다. 자세한 내용을 여기서 다루기엔 양이 너무 많기 떄문에 따로 공부를 해야하고 여기서는 아주 기본적인 기능 몇 가지만 알아봅니다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;세션&lt;sub&gt;session&lt;/sub&gt;&lt;/strong&gt; tmux가 관리하는 가장 큰 단위&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;윈도우&lt;sub&gt;window&lt;/sub&gt;&lt;/strong&gt; 세션안에 존재하는 탭같은 단위&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;펜&lt;sub&gt;pane&lt;/sub&gt;&lt;/strong&gt; 윈도우 안에 가로 세로로 분할한 단위&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;팬&lt;sub&gt;pane&lt;/sub&gt;&lt;/strong&gt; 윈도우 안에 가로 세로로 분할한 단위&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;table class=&quot;table table-key-value-60&quot;&gt;
@@ -707,7 +707,7 @@ cp .tmux/.tmux.conf.local .&lt;span class=&quot;w&quot;&gt;
 
 &lt;h3 id=&quot;tmuxinator&quot;&gt;tmuxinator&lt;/h3&gt;
 
-&lt;p&gt;tmux의 쓸모를 한층 더 높여주는 게 tmuxinator입니다. 손으로 창을 만들고 화면을 분할하는 것을 설정으로 해줍니다.&lt;/p&gt;
+&lt;p&gt;tmux의 쓸모를 한층 더 높여주는 게 tmuxinator입니다. 단축키로 창을 만들고 화면을 분할하는 것을 설정파일로 해줍니다.&lt;/p&gt;
 
 &lt;p&gt;예를 들면, 1번 윈도우는 webpack을 실행하고 2번 윈도우는 rails server를 실행하고 3번 윈도우는 log를 실행하게 설정할 수 있습니다. 요즘 프로젝트는 복잡하게 구성된 경우가 많아서 굉장히 유용하게 사용할 수 있습니다.&lt;/p&gt;
 
@@ -834,7 +834,7 @@ gem install tmuxinator&lt;span class=&quot;w&quot;&gt;
 
 &lt;p&gt;최근 개발 모임이나 세미나에 참석해보면 맥북을 사용하시는 분들이 많고 개발자라면 계속해서 터미널을 사용하므로 아직 제대로 개발 환경을 구축하지 못한 분들에게 많은 도움이 되었으면 좋겠습니다. 그리고 괜찮은 도구 있으면 댓글로 추천해주세요! 더 좋은, 편안한 환경에서 개발하고 싶습니다.&lt;/p&gt;
 
-&lt;p&gt;다른 &lt;del&gt;고오오급&lt;/del&gt;개발자들이 어떤 환경에서 작업하는지 궁금하다면 &lt;a href=&quot;https://usesthis.com&quot;&gt;usesthis.com&lt;/a&gt;에 인터뷰가 있으니 참고하시고 커스텀하게 변경한 환경설정 파일은 Dropbox나 Google Drive 등으로 파일을 링크(&lt;code class=&quot;highlighter-rouge&quot;&gt;ln -s&lt;/code&gt;)하여 백업하거나 &lt;a href=&quot;https://dotfiles.github.io/&quot;&gt;dotfiles&lt;/a&gt; 도구를 사용하여 백업하면 나중에 새로운 맥북을 받아도 빠르게 설정할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;다른 &lt;del&gt;고오오급&lt;/del&gt;개발자들이 어떤 환경에서 작업하는지 궁금하다면 &lt;a href=&quot;https://usesthis.com&quot;&gt;usesthis.com&lt;/a&gt;에 인터뷰가 있으니 참고하시고 커스텀하게 변경한 환경설정 파일은 Dropbox나 Google Drive 등으로 파일을 링크(&lt;code class=&quot;highlighter-rouge&quot;&gt;ln -s&lt;/code&gt;)하여 백업하거나 &lt;a href=&quot;https://dotfiles.github.io/&quot;&gt;dotfiles&lt;/a&gt; 도구를 사용하여 백업하면 나중에 새로운 맥이 생겨도 동일한 환경을 빠르게 설정할 수 있습니다.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 22 Nov 2017 00:00:00 +0900</pubDate>
