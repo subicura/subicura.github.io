@@ -6,7 +6,7 @@ layout: post
 excerpt: macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다.
 comments: yes
 toc: true
-last_modified_at: 2017-11-24T10:40:00+09:00
+last_modified_at: 2017-11-24T13:40:00+09:00
 ---
 
 ![iTerm2 + snazzy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/terminal-neofetch.png)
@@ -353,17 +353,17 @@ export EDITOR=/usr/local/bin/nvim
 
 **플러그인**
 
-vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.
+vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 화면을 보는 순간 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.
 
 {% highlight bash linenos %}
 curl -sLf https://spacevim.org/install.sh | bash
 {% endhighlight %}
 
-설치가 완료되면 `vi`를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (`1`을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 꽤 많아서 시간이 조금 걸립니다.
+설치가 완료되면 `vi`를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (`1`을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.
 
 **테마**
 
-기본 테마는 뭔가 칙칙한 느낌이 듭니다. `~/.SpaceVim.d/init.vim` 파일에 커스텀 테마를 추가합니다.
+기본 테마는 뭔가 칙칙한 느낌이 듭니다. `~/.SpaceVim.d/init.vim` 파일에 Colorscheme 설정을 추가합니다.
 
 {% highlight bash linenos %}
 let g:spacevim_colorscheme = 'onedark'
@@ -377,7 +377,7 @@ let g:spacevim_colorscheme = 'onedark'
 
 ![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/nvim-question.png)
 
-iTerm2에 개발용 폰트를 설정해줍니다.
+iTerm2에 개발 관련 폰트를 모은 NerdFont를 추가로 설정합니다.
 
 ![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font.png)
 
@@ -402,7 +402,7 @@ brew install fzf
 $(brew --prefix)/opt/fzf/install
 {% endhighlight %}
 
-brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 `y`를 누르면 됩니다. 전부 완료되었으면 `source ~/.zshrc`를 입력하여 설정을 다시 불러옵니다.
+brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 `y`를 누르면 됩니다. 설치가 완료되었으면 `source ~/.zshrc`를 입력하여 설정을 다시 불러옵니다.
 
 **명령어**
 
@@ -423,7 +423,7 @@ brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 
 
 ### fasd
 
-fasd는 파일 또는 디렉토리 검색을 편하게 해서 엄청나게 생산성을 향상시켜주는 도구입니다. 자주 열어본 파일이나 이동한 디렉토리를 기억하고 우선순위를 정해서 빠르게 이동할 수 있게 도와줍니다.
+fasd는 사용빈도가 높은 파일 또는 디렉토리 검색을 편하게 해서 생산성을 향상시켜주는 도구입니다. 열어본 파일이나 이동한 디렉토리를 기억하고 우선순위를 정해서 빠르게 검색할 수 있게 도와줍니다.
 
 **설치**
 
@@ -457,7 +457,7 @@ plugins=(
 
 {% asciinema path: 'asciinema/2017-11-22-mac-os-development-environment-setup/fasd-demo.json', title: '' %}
 
-단순하지 굉장히 유용한 도구입니다.
+단순한 기능만큼 굉장히 자주, 유용하게 사용하는 도구입니다.
 
 [fasd github](https://github.com/clvv/fasd)
 
@@ -513,11 +513,11 @@ set -g mode-keys vi
 
 **사용법**
 
-tmux는 꽤 사용난이도가 높은 프로그램입니다. 자세한 내용은 따로 더 공부하셔야 하고 여기서는 아주 기본적인 기능 몇 가지만 알아봅니다.
+tmux는 꽤 사용난이도가 높은 프로그램입니다. 자세한 내용을 여기서 다루기엔 양이 너무 많기 떄문에 따로 공부를 해야하고 여기서는 아주 기본적인 기능 몇 가지만 알아봅니다.
 
 - **세션<sub>session</sub>** tmux가 관리하는 가장 큰 단위
 - **윈도우<sub>window</sub>** 세션안에 존재하는 탭같은 단위
-- **펜<sub>pane</sub>** 윈도우 안에 가로 세로로 분할한 단위
+- **팬<sub>pane</sub>** 윈도우 안에 가로 세로로 분할한 단위
 
 {:.table.table-key-value-60}
 명령어 | 기능
@@ -544,7 +544,7 @@ tmux는 꽤 사용난이도가 높은 프로그램입니다. 자세한 내용은
 
 ### tmuxinator
 
-tmux의 쓸모를 한층 더 높여주는 게 tmuxinator입니다. 손으로 창을 만들고 화면을 분할하는 것을 설정으로 해줍니다.
+tmux의 쓸모를 한층 더 높여주는 게 tmuxinator입니다. 단축키로 창을 만들고 화면을 분할하는 것을 설정파일로 해줍니다.
 
 예를 들면, 1번 윈도우는 webpack을 실행하고 2번 윈도우는 rails server를 실행하고 3번 윈도우는 log를 실행하게 설정할 수 있습니다. 요즘 프로젝트는 복잡하게 구성된 경우가 많아서 굉장히 유용하게 사용할 수 있습니다.
 
@@ -661,5 +661,5 @@ JSON 결과를 이쁘게 보여주고 원하는 대로 편집할 수 있는 도�
 
 최근 개발 모임이나 세미나에 참석해보면 맥북을 사용하시는 분들이 많고 개발자라면 계속해서 터미널을 사용하므로 아직 제대로 개발 환경을 구축하지 못한 분들에게 많은 도움이 되었으면 좋겠습니다. 그리고 괜찮은 도구 있으면 댓글로 추천해주세요! 더 좋은, 편안한 환경에서 개발하고 싶습니다.
 
-다른 ~~고오오급~~개발자들이 어떤 환경에서 작업하는지 궁금하다면 [usesthis.com](https://usesthis.com)에 인터뷰가 있으니 참고하시고 커스텀하게 변경한 환경설정 파일은 Dropbox나 Google Drive 등으로 파일을 링크(`ln -s`)하여 백업하거나 [dotfiles](https://dotfiles.github.io/) 도구를 사용하여 백업하면 나중에 새로운 맥북을 받아도 빠르게 설정할 수 있습니다.
+다른 ~~고오오급~~개발자들이 어떤 환경에서 작업하는지 궁금하다면 [usesthis.com](https://usesthis.com)에 인터뷰가 있으니 참고하시고 커스텀하게 변경한 환경설정 파일은 Dropbox나 Google Drive 등으로 파일을 링크(`ln -s`)하여 백업하거나 [dotfiles](https://dotfiles.github.io/) 도구를 사용하여 백업하면 나중에 새로운 맥이 생겨도 동일한 환경을 빠르게 설정할 수 있습니다.
 
