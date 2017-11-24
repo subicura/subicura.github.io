@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2017-11-24T10:40:47+09:00</updated>
+ <updated>2017-11-24T10:49:26+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -150,7 +150,7 @@
 &lt;h3 id=&quot;finder-preference&quot;&gt;Finder Preference&lt;/h3&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-preferences.png&quot; style=&quot;max-width: 450px&quot; /&gt;
+    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-preferences.png&quot; style=&quot;width: 450px&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Finder&lt;/code&gt;를 실행하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;Finder&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Preferences...&lt;/code&gt;)를 선택합니다.&lt;/p&gt;
@@ -172,7 +172,7 @@
 &lt;h3 id=&quot;download-folder-option&quot;&gt;Download Folder Option&lt;/h3&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/download-option.png&quot; style=&quot;max-width: 250px&quot; /&gt;
+    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/download-option.png&quot; style=&quot;width: 250px&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Downloads&lt;/code&gt; 폴더로 이동하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;J&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Show View Options&lt;/code&gt;)를 선택합니다.&lt;/p&gt;
