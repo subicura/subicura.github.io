@@ -6,7 +6,7 @@ layout: post
 excerpt: 도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다는 편견을 완전히 바꿔놓았습니다. 구축 비용이 거의 들지 않고 관리 또한 쉬우며 다양한 기능을 쉽게 제공하고 가볍게 사용할 수 있습니다. 도커 스웜의 핵심내용인 노드와 서비스에 대해 알아보고 ingress 네트워크와 자체 내장된 로드밸런서, DNS 서버를 살펴봅니다.
 comments: yes
 toc: true
-last_modified_at: 2017-11-23T10:30:00+09:00
+last_modified_at: 2017-11-24T10:30:00+09:00
 ---
 
 ![iTerm2 + snazzy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/terminal-neofetch.png)
