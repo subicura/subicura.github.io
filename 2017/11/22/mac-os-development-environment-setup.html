@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>본격 macOS에 개발 환경 구축하기</title>
-  <meta name="description" content="도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다는 편견을 완전히 바꿔놓았습니다. 구축 비용이 거의 들지 않고 관리 또한 쉬우며 다양한 기능을 쉽게 제공하고 가볍게 사용할 수 있습니다. 도커 스웜의 핵심내용인 노드와 서비스에 대해 알아보고 ingress 네트워크와 자체 내장된 로드밸런서, DNS 서버를 살펴봅니다." />
+  <meta name="description" content="macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다." />
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -20,14 +20,14 @@
     <meta name="twitter:title" content="본격 macOS에 개발 환경 구축하기" />
     <meta name="twitter:image" content="https://subicura.com/assets/images/df_logo.png" />
     
-    <meta name="twitter:description"  content="도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다는 편견을 완전히 바꿔놓았습니다. 구축 비용이 거의 들지 않고 관리 또한 쉬우며 다양한 기능을 쉽게 제공하고 가볍게 사용할 수 있습니다. 도커 스웜의 핵심내용인 노드와 서비스에 대해 알아보고 ingress 네트워크와 자체 내장된 로드밸런서, DNS 서버를 살펴봅니다." />
+    <meta name="twitter:description"  content="macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다." />
     
   
   
   <meta property="og:site_name" content="Subicura's Blog" />
   <meta property="og:title" content="본격 macOS에 개발 환경 구축하기"/>
   
-  <meta property="og:description" content="도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다는 편견을 완전히 바꿔놓았습니다. 구축 비용이 거의 들지 않고 관리 또한 쉬우며 다양한 기능을 쉽게 제공하고 가볍게 사용할 수 있습니다. 도커 스웜의 핵심내용인 노드와 서비스에 대해 알아보고 ingress 네트워크와 자체 내장된 로드밸런서, DNS 서버를 살펴봅니다." />
+  <meta property="og:description" content="macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다." />
   
   <meta property="og:image" content="https://subicura.com/assets/images/df_logo.png" />
   <meta property="og:url" content="https://subicura.com/2017/11/22/mac-os-development-environment-setup.html" />
@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1511487192783015000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1511487647361109000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -1176,6 +1176,12 @@ gem install tmuxinator<span class="w">
             
               <a href="/tags#terminal-ref">Terminal</a>
             
+              <a href="/tags#zsh-ref">zsh</a>
+            
+              <a href="/tags#vi-ref">vi</a>
+            
+              <a href="/tags#tmux-ref">tmux</a>
+            
           </p>
         </section>
         <footer class="post-footer">
@@ -1246,7 +1252,7 @@ gem install tmuxinator<span class="w">
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1511487192783015000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1511487647361109000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

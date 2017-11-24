@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 24 Nov 2017 10:33:12 +0900</pubDate>
-    <lastBuildDate>Fri, 24 Nov 2017 10:33:12 +0900</lastBuildDate>
+    <pubDate>Fri, 24 Nov 2017 10:40:47 +0900</pubDate>
+    <lastBuildDate>Fri, 24 Nov 2017 10:40:47 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -852,6 +852,12 @@ gem install tmuxinator&lt;span class=&quot;w&quot;&gt;
         <category>Environment</category>
         
         <category>Terminal</category>
+        
+        <category>zsh</category>
+        
+        <category>vi</category>
+        
+        <category>tmux</category>
         
         
       </item>

@@ -6,13 +6,13 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 24 Nov 2017 10:33:12 +0900</pubDate>
-    <lastBuildDate>Fri, 24 Nov 2017 10:33:12 +0900</lastBuildDate>
+    <pubDate>Fri, 24 Nov 2017 10:40:47 +0900</pubDate>
+    <lastBuildDate>Fri, 24 Nov 2017 10:40:47 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>본격 macOS에 개발 환경 구축하기</title>
-        <description>도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다는 편견을 완전히 바꿔놓았습니다. 구축 비용이 거의 들지 않고 관리 또한 쉬우며 다양한 기능을 쉽게 제공하고 가볍게 사용할 수 있습니다. 도커 스웜의 핵심내용인 노드와 서비스에 대해 알아보고 ingress 네트워크와 자체 내장된 로드밸런서, DNS 서버를 살펴봅니다.</description>
+        <description>macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다.</description>
         <pubDate>Wed, 22 Nov 2017 00:00:00 +0900</pubDate>
         <link>https://subicura.com/2017/11/22/mac-os-development-environment-setup.html</link>
         <guid isPermaLink="true">https://subicura.com/2017/11/22/mac-os-development-environment-setup.html</guid>
@@ -28,6 +28,12 @@
         <category>Environment</category>
         
         <category>Terminal</category>
+        
+        <category>zsh</category>
+        
+        <category>vi</category>
+        
+        <category>tmux</category>
         
         
       </item>
