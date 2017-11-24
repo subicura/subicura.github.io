@@ -1,12 +1,12 @@
 ---
 published: true
 title: 본격 macOS에 개발 환경 구축하기
-tags: [Mac, DevOps, Server, Development, Environment, Terminal]
+tags: [Mac, DevOps, Server, Development, Environment, Terminal, zsh, vi, tmux]
 layout: post
-excerpt: 도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다는 편견을 완전히 바꿔놓았습니다. 구축 비용이 거의 들지 않고 관리 또한 쉬우며 다양한 기능을 쉽게 제공하고 가볍게 사용할 수 있습니다. 도커 스웜의 핵심내용인 노드와 서비스에 대해 알아보고 ingress 네트워크와 자체 내장된 로드밸런서, DNS 서버를 살펴봅니다.
+excerpt: macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다.
 comments: yes
 toc: true
-last_modified_at: 2017-11-24T10:30:00+09:00
+last_modified_at: 2017-11-24T10:40:00+09:00
 ---
 
 ![iTerm2 + snazzy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/terminal-neofetch.png)
