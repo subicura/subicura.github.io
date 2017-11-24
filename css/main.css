@@ -552,7 +552,7 @@ body {
     letter-spacing: -0.02em;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.3;
     margin: 0;
     font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "나눔고딕", "Malgun Gothic";
@@ -1069,7 +1069,7 @@ pre {
       text-decoration: none;
       transition: all 0.4s cubic-bezier(0.25, 0.8, 0.4, 0.95);
       -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.4, 0.95); }
-      .post .post-content .section-nav li a.active {
+      .post .post-content .section-nav li a.active, .post .post-content .section-nav li a:hover {
         padding-left: 5px;
         border-left: 3px solid #db4d5e;
         color: #db4d5e; }

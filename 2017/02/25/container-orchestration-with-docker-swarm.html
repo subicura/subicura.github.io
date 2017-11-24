@@ -43,11 +43,14 @@
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1510816259543502000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1511487192783015000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
+  <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/custom.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script src="/assets/js/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
       custom: {
@@ -387,7 +390,7 @@
 <p>가상머신이 정상적으로 생성되었는지 확인하려면 <code class="highlighter-rouge">vagrant status</code>, 가상머신을 삭제하려면 <code class="highlighter-rouge">vagrant destroy</code> 를 실행합니다. 가상머신에 접속하는 명령어는  <code class="highlighter-rouge">vagrant ssh [가상머신이름]</code>입니다.</p>
 
 <div class="asciinema-player-section">
-<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/vagrant-up.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>vagrant up</figcaption>
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/vagrant-up.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>vagrant up</figcaption>
 </div>
 
 <h3 id="section-8">
@@ -480,7 +483,7 @@ q5pa26ik11g9surws03quvrsk    core-02   Ready   Active<span class="w">
 </blockquote>
 
 <div class="asciinema-player-section">
-<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/swarm-cluster.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>init swarm cluster</figcaption>
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/swarm-cluster.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>init swarm cluster</figcaption>
 </div>
 
 <h3 id="section-9">
@@ -585,7 +588,7 @@ cfb152786b87<span class="w">
 <p>분명 컨테이너는  <code class="highlighter-rouge">core-01</code>노드에서 실행중인데 모든 노드에서 정상적으로 응답하고 있습니다. 어떻게 된일일까요?</p>
 
 <div class="asciinema-player-section">
-<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/basic-web-application.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>basic web application</figcaption>
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/basic-web-application.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>basic web application</figcaption>
 </div>
 
 <h3 id="ingress-network">
@@ -693,7 +696,7 @@ e970ff9ed9c6
 <p>5개의 컨테이너에 아주 이쁘게 요청이 분산되었습니다. 아무런 설정 없이 ingress 네트워크가 알아서 로드 밸런서 역할을 해주고 있습니다. Nginx나 haproxy같은 설정이 필요 없습니다. 너무 편하지 않나요?</p>
 
 <div class="asciinema-player-section">
-<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/replication.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>replication</figcaption>
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/replication.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>replication</figcaption>
 </div>
 
 <h3 id="healthcheck">
@@ -771,7 +774,7 @@ xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9
 <p>하나씩 하나씩 이쁘게 업데이트되는 과정을 볼 수 있고 접속 테스트를 하면 문제 없이 업데이트되는걸 확인 할 수 있습니다.</p>
 
 <div class="asciinema-player-section">
-<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/healthcheck.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>service update</figcaption>
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/healthcheck.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>service update</figcaption>
 </div>
 
 <h3 id="section-10">
@@ -1010,7 +1013,7 @@ curl core-01:4568
 </blockquote>
 
 <div class="asciinema-player-section">
-<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/overlay.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>service with overlay</figcaption>
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/overlay.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>service with overlay</figcaption>
 </div>
 
 <h3 id="section-11">
@@ -1077,7 +1080,7 @@ curl core-01:4568
 <p>아주 잘 동작합니다. 도커를 이용하여 서비스를 구축하면 패스워드 정보를 어떻게 할지 고민일 때가 있는데 아주 유용하게 사용할 수 있습니다.</p>
 
 <div class="asciinema-player-section">
-<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/secret.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>docker secre</figcaption>
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/secret.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>docker secre</figcaption>
 </div>
 
 <h3 id="traefik---">
@@ -1218,7 +1221,7 @@ docker service create --name counter <span class="se">\</span>
 <p>마법과 같은 일이 옵션 몇줄로 일어났습니다. 음.. 스웜 정말 좋지 않나요?</p>
 
 <div class="asciinema-player-section">
-<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/traefik.json" poster="npt:0:15" speed="2"></asciinema-player><figcaption>traefik</figcaption>
+<asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/traefik.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>traefik</figcaption>
 </div>
 
 <h3 id="section-12">
@@ -1312,6 +1315,13 @@ docker service create --name counter <span class="se">\</span>
 
     <aside class="read-next">
       
+        <a class="read-next-story no-cover" href="/2017/11/22/mac-os-development-environment-setup.html">
+          <section class="post">
+            <h2>본격 macOS에 개발 환경 구축하기</h2>
+            <p>도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다는 편견을 완전히 바꿔놓았습니다. 구축 비용이 거의 들지...</p>
+          </section>
+        </a>
+      
       
         <a class="read-next-story prev no-cover" href="/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html">
           <section class="post">
@@ -1327,7 +1337,7 @@ docker service create --name counter <span class="se">\</span>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1510816259543502000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1511487192783015000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

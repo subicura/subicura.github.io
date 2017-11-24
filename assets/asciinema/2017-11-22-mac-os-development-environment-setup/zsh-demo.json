@@ -1,0 +1,690 @@
+{
+  "version": 1,
+  "width": 80,
+  "height": 25,
+  "duration": 38.216854,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.40845,
+      "\u001b]0;~\u0007"
+    ],
+    [
+      0.013174,
+      "\r\n\u001b[34m~\u001b[39m\u001b[38;5;242m\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      0.000292,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      0.0001,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000365,
+      "\u001b[?2004h"
+    ],
+    [
+      1.10986,
+      "\u001b[1m\u001b[31mc\u001b[0m\u001b[39m\u001b[90mlear\u001b[39m\b\b\b\b"
+    ],
+    [
+      0.078577,
+      "\b\u001b[0m\u001b[32mc\u001b[32md\u001b[39m\u001b[90m \u001b[90mW\u001b[90mo\u001b[90mrkspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[49D"
+    ],
+    [
+      0.754747,
+      "\u001b[39m "
+    ],
+    [
+      0.162033,
+      "\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[48D"
+    ],
+    [
+      2.6e-05,
+      "\r\r\n"
+    ],
+    [
+      9.5e-05,
+      "\u001b[1;31mApplications\u001b[0m/                 \u001b[1;31mMovies\u001b[0m/                     \r\n\u001b[1;31mApplications\\ \\(Parallels\\)\u001b[0m/  \u001b[1;31mMusic\u001b[0m/                      \r\n\u001b[1;31mCreative\\ Cloud\\ Files\u001b[0m/       \u001b[1;31mParallels\u001b[0m/                  \r\n\u001b[1;31mDesktop\u001b[0m/                      \u001b[1;31mPictures\u001b[0m/                   \r\n\u001b[1;31mDocuments\u001b[0m/                    \u001b[1;31mPublic\u001b[0m/                     \r\n\u001b[1;31mDownloads\u001b[0m/                    \u001b[1;31mVirtualBox\\ VMs\u001b[0m/            \r\n\u001b[1;31mGoogle\\ Drive\u001b[0m/                \u001b[1;31mWorkspace\u001b[0m/                  \r\n\u001b[J\u001b[1;31mLibrary\u001b[0m/                      \u001b[J                            \u001b[8A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcd\u001b[39m\u001b[K\u001b[39m\u001b[1C"
+    ],
+    [
+      0.000235,
+      "\u001b[90mWorkspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[48D"
+    ],
+    [
+      2e-05,
+      "\u0007"
+    ],
+    [
+      0.222862,
+      "\u001b[39mA\u001b[39mp\u001b[39mp\u001b[39ml\u001b[39mi\u001b[39mc\u001b[39ma\u001b[39mt\u001b[39mi\u001b[39mo\u001b[39mn\u001b[39ms\u001b[39m\u001b[1m/\u001b[0m\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[35D\r\r\n"
+    ],
+    [
+      7.4e-05,
+      "\u001b[7mApplications/               \u001b[0m  \u001b[1;31mMovies\u001b[0m/                     \u001b[K\r\n\u001b[1;31mApplications\\ \\(Parallels\\)\u001b[0m/  \u001b[1;31mMusic\u001b[0m/                      \u001b[K\r\n\u001b[1;31mCreative\\ Cloud\\ Files\u001b[0m/       \u001b[1;31mParallels\u001b[0m/                  \u001b[K\r\n\u001b[1;31mDesktop\u001b[0m/                      \u001b[1;31mPictures\u001b[0m/                   \u001b[K\r\n\u001b[1;31mDocuments\u001b[0m/                    \u001b[1;31mPublic\u001b[0m/                     \u001b[K\r\n\u001b[1;31mDownloads\u001b[0m/                    \u001b[1;31mVirtualBox\\ VMs\u001b[0m/            \u001b[K\r\n\u001b[1;31mGoogle\\ Drive\u001b[0m/                \u001b[1;31mWorkspace\u001b[0m/                  \u001b[K\r\n\u001b[J\u001b[1;31mLibrary\u001b[0m/                      \u001b[J                            \u001b[8A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcd\u001b[39m Applications\u001b[1m/\u001b[0m\u001b[K\u001b[39m"
+    ],
+    [
+      0.366482,
+      "\r\r\n"
+    ],
+    [
+      4.3e-05,
+      "\u001b[7mApplications/               \u001b[0m  \r\u001b[7mApplications/               \u001b[0m  \r\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcd\u001b[39m Applications\u001b[1m/\u001b[0m\u001b[K\u001b[39m"
+    ],
+    [
+      0.000128,
+      "\u001b[13DMovies\u001b[1m/\u001b[0m     \u001b[0m \b\b\b\b\b\b\r\r\n"
+    ],
+    [
+      4.2e-05,
+      "\u001b[30C\u001b[7mMovies/                     \u001b[0m\r\u001b[1;31mApplications\u001b[0m/                 \r\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      3e-05,
+      "\u001b[32mcd\u001b[39m Movies\u001b[1m/\u001b[0m\u001b[K\u001b[39m"
+    ],
+    [
+      0.252449,
+      "\b\b\b\b\b\busic\u001b[1m/\u001b[0m\u001b[0m \b\r\r\n"
+    ],
+    [
+      4.9e-05,
+      "\u001b[30C\u001b[1;31mMovies\u001b[0m/                     \r\u001b[1B\u001b[30C\u001b[7mMusic/                      \u001b[0m\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcd\u001b[39m Music\u001b[1m/\u001b[0m\u001b[K\u001b[39m"
+    ],
+    [
+      0.169798,
+      "\b\b\b\b\b\bParal\u001b[0mlels\u001b[1m/\u001b[0m\r\r\n"
+    ],
+    [
+      8.5e-05,
+      "\u001b[1B\u001b[30C\u001b[1;31mMusic\u001b[0m/                      \r\u001b[1B\u001b[30C\u001b[7mParallels/                  \u001b[0m\r\u001b[3A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcd\u001b[39m Parallels\u001b[1m/\u001b[0m\u001b[K\u001b[39m"
+    ],
+    [
+      0.14993,
+      "\u001b[9Dictures\u001b[1m/\u001b[0m\u001b[0m \b\r\r\n"
+    ],
+    [
+      3.4e-05,
+      "\u001b[2B\u001b[30C\u001b[1;31mParallels\u001b[0m/                  \r\u001b[1B\u001b[30C\u001b[7mPictures/                   \u001b[0m\r\u001b[4A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcd\u001b[39m Pictures\u001b[1m/\u001b[0m\u001b[K\u001b[39m"
+    ],
+    [
+      0.161917,
+      "\u001b[8Dublic\u001b[1m/\u001b[0m \u001b[0m \b\b\r\r\n"
+    ],
+    [
+      3.4e-05,
+      "\u001b[3B\u001b[30C\u001b[1;31mPictures\u001b[0m/                   \r\u001b[1B\u001b[30C\u001b[7mPublic/                     \u001b[0m\r\u001b[5A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcd\u001b[39m Public\u001b[1m/\u001b[0m\u001b[K\u001b[39m"
+    ],
+    [
+      0.179064,
+      "\b\b\b\b\b\b\bVirtua\u001b[0mlBox\\ VMs\u001b[1m/\u001b[0m\r\r\n"
+    ],
+    [
+      4.7e-05,
+      "\u001b[4B\u001b[30C\u001b[1;31mPublic\u001b[0m/                     \r\u001b[1B\u001b[30C\u001b[7mVirtualBox\\ VMs/            \u001b[0m\r\u001b[6A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcd\u001b[39m VirtualBox\\ VMs\u001b[1m/\u001b[0m\u001b[K\u001b[39m"
+    ],
+    [
+      0.178935,
+      "\u001b[16DWorkspace\u001b[1m/\u001b[0m     \u001b[0m \b\b\b\b\b\b\r\r\n"
+    ],
+    [
+      3.4e-05,
+      "\u001b[5B\u001b[30C\u001b[1;31mVirtualBox\\ VMs\u001b[0m/            \r\u001b[1B\u001b[30C\u001b[7mWorkspace/                  \u001b[0m\r\u001b[7A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcd\u001b[39m Workspace\u001b[1m/\u001b[0m\u001b[K\u001b[39m"
+    ],
+    [
+      1.759704,
+      "\r\r\n\u001b[J\u001b[A\u001b[15C"
+    ],
+    [
+      0.004495,
+      "\u001b[10D\u001b[4mW\u001b[4mo\u001b[4mr\u001b[4mk\u001b[4ms\u001b[4mp\u001b[4ma\u001b[4mc\u001b[4me\u001b[1m\u001b[4m/\u001b[0m\u001b[24m\u001b[90mgithub.com/subicura/subicura.github.io\u001b[39m\u001b[38D"
+    ],
+    [
+      0.002087,
+      "\b\u001b[0m\u001b[4m/\u001b[39m\u001b[4mg\u001b[24m"
+    ],
+    [
+      0.091887,
+      "\b\u001b[4mg\u001b[39m\u001b[4mi\u001b[24m"
+    ],
+    [
+      0.111211,
+      "\b\u001b[4mi\u001b[39m\u001b[4mt\u001b[24m"
+    ],
+    [
+      0.128094,
+      "\b\u001b[4mt\u001b[39m\u001b[4mh\u001b[24m"
+    ],
+    [
+      1.767197,
+      "\b\u001b[4mh\u001b[39m\u001b[4mu\u001b[39m\u001b[4mb\u001b[39m\u001b[4m.\u001b[39m\u001b[4mc\u001b[39m\u001b[4mo\u001b[39m\u001b[4mm\u001b[39m\u001b[1m\u001b[4m/\u001b[0m\u001b[24m"
+    ],
+    [
+      1.279819,
+      "\b\u001b[0m\u001b[4m/\u001b[39m\u001b[4ms\u001b[24m"
+    ],
+    [
+      0.123716,
+      "\b\u001b[4ms\u001b[39m\u001b[4mu\u001b[24m"
+    ],
+    [
+      0.398939,
+      "\b\u001b[4mu\u001b[39m\u001b[4mb\u001b[39m\u001b[4mi\u001b[39m\u001b[4mc\u001b[39m\u001b[4mu\u001b[39m\u001b[4mr\u001b[39m\u001b[4ma\u001b[39m\u001b[1m\u001b[4m/\u001b[0m\u001b[24m"
+    ],
+    [
+      0.641426,
+      "\b\u001b[0m\u001b[4m/\u001b[39m\u001b[4ms\u001b[24m"
+    ],
+    [
+      0.097641,
+      "\b\u001b[4ms\u001b[39m\u001b[4mu\u001b[24m"
+    ],
+    [
+      0.138637,
+      "\b\u001b[4mu\u001b[39m\u001b[4mb\u001b[39m\u001b[4mi\u001b[39m\u001b[4mc\u001b[39m\u001b[4mu\u001b[39m\u001b[4mr\u001b[39m\u001b[4ma\u001b[39m\u001b[4m.\u001b[39m\u001b[4mg\u001b[39m\u001b[4mi\u001b[39m\u001b[4mt\u001b[39m\u001b[4mh\u001b[39m\u001b[4mu\u001b[39m\u001b[4mb\u001b[39m\u001b[4m.\u001b[39m\u001b[4mi\u001b[39m\u001b[4mo\u001b[1m\u001b[4m/\u001b[0m\u001b[24m"
+    ],
+    [
+      0.563097,
+      "\b\b\u001b[4mo\u001b[24m\u001b[0m\u001b[24m \b"
+    ],
+    [
+      0.000155,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.001364,
+      "\u001b[?2004l\r\r\n\u001b[J"
+    ],
+    [
+      0.052591,
+      "\u001b]0;subicura: cd Workspace/github.com/subicura/subicura.github.io\u0007"
+    ],
+    [
+      0.031928,
+      "\u001b]0;~/Workspace/github.com/subicura/subicura.github.io\u0007"
+    ],
+    [
+      0.018573,
+      "\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[38;5;242m source\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      0.024372,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000242,
+      "\u001b[?2004h"
+    ],
+    [
+      0.000861,
+      "\u001b[1A\u001b[80D\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[38;5;242m source*\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\u001b[K\r\n"
+    ],
+    [
+      0.000185,
+      "\r\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.5,
+      "\u001b[32mg\u001b[39m\u001b[90ml\u001b[39m\b"
+    ],
+    [
+      0.100459,
+      "\b\u001b[1m\u001b[31mg\u001b[1m\u001b[31mi\u001b[0m\u001b[39m\u001b[90mt show 7737ffd16 -m --name-only\u001b[39m\u001b[31D"
+    ],
+    [
+      0.093849,
+      "\b\b\u001b[0m\u001b[32mg\u001b[0m\u001b[32mi\u001b[32mt\u001b[39m"
+    ],
+    [
+      0.11219,
+      "\u001b[39m "
+    ],
+    [
+      0.776949,
+      "\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[29D\r\r\n"
+    ],
+    [
+      8.5e-05,
+      "\u001b[0madd       -- add file contents to the index\r\nbisect    -- find by binary search the change that introduced a bug\r\nbranch    -- list, create, or delete branches\r\ncheckout  -- checkout a branch or paths to the working tree\r\nclone     -- clone a repository into a new directory\r\ncommit    -- record changes to the repository\r\ndiff      -- show changes between commits, commit and working tree, etc\r\nfetch     -- download objects and refs from another repository\r\ngrep      -- print lines matching a pattern\r\ninit      -- create an empty Git repository or reinitialize an existing one\r\nlog       -- show commit logs\r\nmerge     -- join two or more development histories together\r\nmv        -- move or rename a file, a directory, or a symlink\r\npull      -- fetch from and merge with another repository or a local branch\r\npush      -- update remote refs along with associated objects\r\nrebase    -- forward-port local commits to the updated upstream head\r\nreset     -- reset current HEAD to the specified state\r\nrm        -- rem"
+    ],
+    [
+      3.3e-05,
+      "ove files from th"
+    ],
+    [
+      0.000117,
+      "e working tree and from the index\r\nshow      -- show various types of objects\r\nstatus    -- show the working tree status\r\n\u001b[Jtag       -- create, list, delete or verify a tag object signed with GPG\u001b[J\u001b[21A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m\u001b[K\u001b[39m\u001b[1C"
+    ],
+    [
+      0.00036,
+      "\u001b[90mshow 7737ffd16 -m --name-only\u001b[39m\u001b[29D"
+    ],
+    [
+      3.1e-05,
+      "\u0007"
+    ],
+    [
+      2.143286,
+      "\u0007"
+    ],
+    [
+      0.57288,
+      "\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[29D\r\r\n\u001b[J"
+    ],
+    [
+      7.8e-05,
+      "\u001b[0madd       -- add file contents to the index\r\nbisect    -- find by binary search the change that introduced a bug\r\nbranch    -- list, create, or delete branches\r\ncheckout  -- checkout a branch or paths to the working tree\r\nclone     -- clone a repository into a new directory\r\ncommit    -- record changes to the repository\r\ndiff      -- show changes between commits, commit and working tree, etc\r\nfetch     -- download objects and refs from another repository\r\ngrep      -- print lines matching a pattern\r\ninit      -- create an empty Git repository or reinitialize an existing one\r\nlog       -- show commit logs\r\nmerge     -- join two or more development histories together\r\nmv        -- move or rename a file, a directory, or a symlink\r\npull      -- fetch from and merge with another repository or a local branch\r\npush      -- update remote refs along with associated objects\r\nrebase    -- forward-port local commits to the updated upstream head\r\nreset     -- reset current HEAD to the specified state\r\nrm        -- rem"
+    ],
+    [
+      3.2e-05,
+      "ove files from th"
+    ],
+    [
+      6.8e-05,
+      "e working tree and from the index\r\nshow      -- show various types of objects\r\nstatus    -- show the working tree status\r\n\u001b[Jtag       -- create, list, delete or verify a tag object signed with GPG\u001b[J\u001b[21A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m\u001b[K\u001b[39m\u001b[1C"
+    ],
+    [
+      0.000245,
+      "\u001b[90mshow 7737ffd16 -m --name-only\u001b[39m\u001b[29D\u0007"
+    ],
+    [
+      0.361334,
+      "\u001b[39ma\u001b[39md\u001b[39md\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[26D\r\r\n"
+    ],
+    [
+      0.000104,
+      "\u001b[7madd       -- add file contents to the index\u001b[K\u001b[0m\u001b[K\r\nbisect    -- find by binary search the change that introduced a bug\u001b[K\u001b[K\r\nbranch    -- list, create, or delete branches\u001b[K\u001b[K\r\ncheckout  -- checkout a branch or paths to the working tree\u001b[K\u001b[K\r\nclone     -- clone a repository into a new directory\u001b[K\u001b[K\r\ncommit    -- record changes to the repository\u001b[K\u001b[K\r\ndiff      -- show changes between commits, commit and working tree, etc\u001b[K\u001b[K\r\nfetch     -- download objects and refs from another repository\u001b[K\u001b[K\r\ngrep      -- print lines matching a pattern\u001b[K\u001b[K\r\ninit      -- create an empty Git repository or reinitialize an existing one\u001b[K\u001b[K\r\nlog       -- show commit logs\u001b[K\u001b[K\r\nmerge     -- join two or more development histories together\u001b[K\u001b[K\r\nmv        -- move or rename a file, a directory, or a symlink\u001b[K\u001b[K\r\npull      -- fetch from and merge with another repository or a local branch\u001b[K\u001b[K\r\npush      -- update remote refs along with associated objects\u001b[K\u001b[K\r\nrebase    -- forward-port local commits to the u"
+    ],
+    [
+      7.8e-05,
+      "pdated upstream"
+    ],
+    [
+      3e-05,
+      " head\u001b[K\u001b[K\r\nreset     -- reset current HEAD to the specified state\u001b[K\u001b[K\r\nrm        -- remove files from the working tree and from the index\u001b[K\u001b[K\r\nshow      -- show various types of objects\u001b[K\u001b[K\r\nstatus    -- show the working tree status\u001b[K\u001b[K\r\n\u001b[Jtag       -- create, list, delete or verify a tag object signed with GPG\u001b[K\u001b[J\u001b[21A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m add\u001b[K\u001b[39m"
+    ],
+    [
+      0.225108,
+      "\r\r\n"
+    ],
+    [
+      0.000115,
+      "\u001b[7madd       -- add file contents to the index\u001b[K\u001b[0m\r\u001b[7madd       -- add file contents to the index\u001b[K\u001b[0m\r\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m add\u001b[K\u001b[39m"
+    ],
+    [
+      3.2e-05,
+      "\b\b\bbisect\r\r\n"
+    ],
+    [
+      2.6e-05,
+      "\u001b[0madd       -- add file contents to the index\u001b[K\r\u001b[1B\u001b[7mbisect    -- find by binary search the change that introduced a bug\u001b[K\u001b[0m\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m bisect\u001b[K\u001b[39m"
+    ],
+    [
+      0.421189,
+      "\b\b\b\b\branch\r\r\n"
+    ],
+    [
+      8.7e-05,
+      "\u001b[1B\u001b[0mbisect    -- find by binary search the change that introduced a bug\u001b[K\r\u001b[1B\u001b[7mbranch    -- list, create, or delete branches\u001b[K\u001b[0m\r\u001b[3A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m branch\u001b[K\u001b[39m"
+    ],
+    [
+      0.166754,
+      "\b\b\b\b\b\bcheckout\r\r\n"
+    ],
+    [
+      3.5e-05,
+      "\u001b[2B\u001b[0mbranch    -- list, create, or delete branches\u001b[K\r\u001b[1B\u001b[7mcheckout  -- checkout a branch or paths to the working tree\u001b[K\u001b[0m\r\u001b[4A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m checkout\u001b[K\u001b[39m"
+    ],
+    [
+      0.155961,
+      "\b\b\b\b\b\b\blone   \b\b\b\r\r\n"
+    ],
+    [
+      4.3e-05,
+      "\u001b[3B\u001b[0mcheckout  -- checkout a branch or paths to the working tree\u001b[K\r\u001b[1B\u001b[7mclone     -- clone a repository into a new directory\u001b[K\u001b[0m\r\u001b[5A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m clone\u001b[K\u001b[39m"
+    ],
+    [
+      0.151305,
+      "\b\b\b\bommit\r\r\n"
+    ],
+    [
+      6.1e-05,
+      "\u001b[4B\u001b[0mclone     -- clone a repository into a new directory\u001b[K\r\u001b[1B\u001b[7mcommit    -- record changes to the repository\u001b[K\u001b[0m\r\u001b[6A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m commit\u001b[K\u001b[39m"
+    ],
+    [
+      0.164398,
+      "\b\b\b\b\b\bdiff  \b\b\r\r\n"
+    ],
+    [
+      3.8e-05,
+      "\u001b[5B\u001b[0mcommit    -- record changes to the repository\u001b[K\r\u001b[1B\u001b[7mdiff      -- show changes between commits, commit and working tree, etc\u001b[K\u001b[0m\r\u001b[7A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m diff\u001b[K\u001b[39m"
+    ],
+    [
+      0.157489,
+      "\b\b\b\bfetch\r\r\n"
+    ],
+    [
+      2.5e-05,
+      "\u001b[6B\u001b[0mdiff      -- show changes between commits, commit and working tree, etc\u001b[K\r\u001b[1B\u001b[7mfetch     -- download objects and refs from another repository\u001b[K\u001b[0m\r\u001b[8A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m fetch\u001b[K\u001b[39m"
+    ],
+    [
+      0.151626,
+      "\b\b\b\b\bgrep \b\r\r\n"
+    ],
+    [
+      3.5e-05,
+      "\u001b[7B\u001b[0mfetch     -- download objects and refs from another repository\u001b[K\r\u001b[1B\u001b[7mgrep      -- print lines matching a pattern\u001b[K\u001b[0m\r\u001b[9A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m grep\u001b[K\u001b[39m"
+    ],
+    [
+      0.185262,
+      "\b\b\b\binit\r\r\n"
+    ],
+    [
+      3.4e-05,
+      "\u001b[8B\u001b[0mgrep      -- print lines matching a pattern\u001b[K\r\u001b[1B\u001b[7minit      -- create an empty Git repository or reinitialize an existing one\u001b[K\u001b[0m\r\u001b[10A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m init\u001b[K\u001b[39m"
+    ],
+    [
+      1.110665,
+      "\b\b\b\blog \b\r\r\n"
+    ],
+    [
+      3.5e-05,
+      "\u001b[9B\u001b[0minit      -- create an empty Git repository or reinitialize an existing one\u001b[K\r\u001b[1B\u001b[7mlog       -- show commit logs\u001b[K\u001b[0m\r\u001b[11A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m log\u001b[K\u001b[39m"
+    ],
+    [
+      0.162901,
+      "\b\b\bmerge\r\r\n"
+    ],
+    [
+      4.1e-05,
+      "\u001b[10B\u001b[0mlog       -- show commit logs\u001b[K\r\u001b[1B\u001b[7mmerge     -- join two or more development histories together\u001b[K\u001b[0m\r\u001b[12A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m merge\u001b[K\u001b[39m"
+    ],
+    [
+      0.158884,
+      "\b\b\b\bv   \b\b\b\r\r\n"
+    ],
+    [
+      3.4e-05,
+      "\u001b[11B\u001b[0mmerge     -- join two or more development histories together\u001b[K\r\u001b[1B\u001b[7mmv        -- move or rename a file, a directory, or a symlink\u001b[K\u001b[0m\r\u001b[13A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m mv\u001b[K\u001b[39m"
+    ],
+    [
+      0.154248,
+      "\b\bpull\r\r\n"
+    ],
+    [
+      3.6e-05,
+      "\u001b[12B\u001b[0mmv        -- move or rename a file, a directory, or a symlink\u001b[K\r\u001b[1B\u001b[7mpull      -- fetch from and merge with another repository or a local branch\u001b[K\u001b[0m\r\u001b[14A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m pull\u001b[K\u001b[39m"
+    ],
+    [
+      0.152879,
+      "\b\bsh\r\r\n"
+    ],
+    [
+      4.3e-05,
+      "\u001b[13B\u001b[0mpull      -- fetch from and merge with another repository or a local branch\u001b[K\r\u001b[1B\u001b[7mpush      -- update remote refs along with associated objects\u001b[K\u001b[0m\r\u001b[15A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m push\u001b[K\u001b[39m"
+    ],
+    [
+      0.153204,
+      "\b\b\b\brebase\r\r\n"
+    ],
+    [
+      7.7e-05,
+      "\u001b[14B\u001b[0mpush      -- update remote refs along with associated objects\u001b[K\r\u001b[1B\u001b[7mrebase    -- forward-port local commits to the updated upstream head\u001b[K\u001b[0m\r\u001b[16A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m rebase\u001b[K\u001b[39m"
+    ],
+    [
+      0.153091,
+      "\b\b\b\bset \b\r\r\n"
+    ],
+    [
+      3.6e-05,
+      "\u001b[15B\u001b[0mrebase    -- forward-port local commits to the updated upstream head\u001b[K\r\u001b[1B\u001b[7mreset     -- reset current HEAD to the specified state\u001b[K\u001b[0m\r\u001b[17A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m reset\u001b[K\u001b[39m"
+    ],
+    [
+      0.140315,
+      "\b\b\b\bm   \b\b\b\r\r\n"
+    ],
+    [
+      3.6e-05,
+      "\u001b[16B\u001b[0mreset     -- reset current HEAD to the specified state\u001b[K\r\u001b[1B\u001b[7mrm        -- remove files from the working tree and from the index\u001b[K\u001b[0m\r\u001b[18A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m rm\u001b[K\u001b[39m"
+    ],
+    [
+      0.161987,
+      "\b\bshow\r\r\n"
+    ],
+    [
+      0.000121,
+      "\u001b[17B\u001b[0mrm        -- remove files from the working tree and from the index\u001b[K\r\u001b[1B\u001b[7mshow      -- show various types of objects\u001b[K\u001b[0m\r\u001b[19A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m show\u001b[K\u001b[39m"
+    ],
+    [
+      0.139008,
+      "\b\b\btatus\r\r\n"
+    ],
+    [
+      3.5e-05,
+      "\u001b[18B\u001b[0mshow      -- show various types of objects\u001b[K\r\u001b[1B\u001b[7mstatus    -- show the working tree status\u001b[K\u001b[0m\r\u001b[20A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mgit\u001b[39m status\u001b[K\u001b[39m"
+    ],
+    [
+      0.446672,
+      "\r\r\n\u001b[J\u001b[A\u001b[12C\u001b[1m \u001b[0m"
+    ],
+    [
+      0.005343,
+      "\u001b[90mpop\u001b[39m\b\b\b"
+    ],
+    [
+      0.887479,
+      "\b\u001b[0m \u001b[39m \u001b[39m \u001b[39m \b\b\b\b"
+    ],
+    [
+      0.000119,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.001331,
+      "\u001b[?2004l\r\r\n\u001b[J"
+    ],
+    [
+      0.050309,
+      "\u001b]0;subicura.github.io: git status\u0007"
+    ],
+    [
+      0.006126,
+      "On branch source\r\n"
+    ],
+    [
+      9.7e-05,
+      "Your branch is up to date with 'origin/source'.\r\n\r\nChanges not staged for commit:\r\n  (use \"git add <file>...\" to update what will be committed)\r\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\r\n\r\n\t\u001b[31mmodified:   _includes/head.html\u001b[m\r\n\t\u001b[31mmodified:   _plugins/asciinema.rb\u001b[m\r\n\t\u001b[31mmodified:   assets/js/asciinema-player.js\u001b[m\r\n\t\u001b[31mmodified:   css/asciinema-player.css\u001b[m\r\n\t\u001b[31mmodified:   css/main.sass\u001b[m\r\n\r\nUntracked files:\r\n  (use \"git add <file>...\" to include in what will be committed)\r\n\r\n\t\u001b[31m_posts/2017-11-22-mac-os-development-environment-setup.markdown\u001b[m\r\n\t\u001b[31massets/article_images/2017-11-22-mac-os-development-environment-setup/\u001b[m\r\n\t\u001b[31massets/asciinema/2017-11-22-mac-os-development-environment-setup/\u001b[m\r\n\t\u001b[31massets/fonts/\u001b[m\r\n\t\u001b[31massets/js/webfont.js\u001b[m\r\n\t\u001b[31mcss/asciinema-theme-snazzy.css\u001b[m\r\n\t\u001b[31mcss/custom.css\u001b[m\r\n\t\u001b[31mcss/nerd-fonts-generated.css\u001b[m\r\n"
+    ],
+    [
+      2.1e-05,
+      "\t\u001b[31mdemo.json\u001b[m\r\n\r\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\r\n"
+    ],
+    [
+      0.000681,
+      "\u001b]0;"
+    ],
+    [
+      1.8e-05,
+      "~/Workspace/github.com/subicura/subicura.github.io\u0007"
+    ],
+    [
+      0.019174,
+      "\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[38;5;242m source*\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      0.024476,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.2e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000308,
+      "\u001b[?2004h"
+    ],
+    [
+      1.474781,
+      "\u001b[32mg\u001b[39m\u001b[90mit status\u001b[39m\u001b[9D"
+    ],
+    [
+      0.193631,
+      "\b\u001b[1m\u001b[31mg\u001b[1m\u001b[31ms\u001b[0m\u001b[39m\u001b[90mt\u001b[39m\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[8D"
+    ],
+    [
+      0.092126,
+      "\b\b\u001b[0m\u001b[32mg\u001b[0m\u001b[32ms\u001b[32mt\u001b[39m"
+    ],
+    [
+      1.997375,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.001027,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.047594,
+      "\u001b]0;subicura.github.io: git status\u0007"
+    ],
+    [
+      0.006501,
+      "On branch source\r\n"
+    ],
+    [
+      0.000114,
+      "Your branch is up to date with 'origin/source'.\r\n\r\nChanges not staged for commit:\r\n  (use \"git add <file>...\" to update what will be committed)\r\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\r\n\r\n\t\u001b[31mmodified:   _includes/head.html\u001b[m\r\n\t\u001b[31mmodified:   _plugins/asciinema.rb\u001b[m\r\n\t\u001b[31mmodified:   assets/js/asciinema-player.js\u001b[m\r\n\t\u001b[31mmodified:   css/asciinema-player.css\u001b[m\r\n\t\u001b[31mmodified:   css/main.sass\u001b[m\r\n\r\nUntracked files:\r\n  (use \"git add <file>...\" to include in what will be committed)\r\n\r\n\t\u001b[31m_posts/2017-11-22-mac-os-development-environment-setup.markdown\u001b[m\r\n\t\u001b[31massets/article_images/2017-11-22-mac-os-development-environment-setup/\u001b[m\r\n\t\u001b[31massets/asciinema/2017-11-22-mac-os-development-environment-setup/\u001b[m\r\n\t\u001b[31massets/fonts/\u001b[m\r\n\t\u001b[31massets/js/webfont.js\u001b[m\r\n\t\u001b[31mcss/asciinema-theme-snazzy.css\u001b[m\r\n\t\u001b[31mcss/custom.css\u001b[m\r\n\t\u001b[31mcss/nerd-fonts-generated.css\u001b[m\r\n\t\u001b[31mdemo.json\u001b[m\r\n\r\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\r\n"
+    ],
+    [
+      0.000607,
+      "\u001b]0;~/Workspace/github.com/subicura/subicura.github.io\u0007"
+    ],
+    [
+      0.028244,
+      "\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[38;5;242m source*\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      0.027553,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.1e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000289,
+      "\u001b[?2004h"
+    ],
+    [
+      1.073066,
+      "\u001b[32mg\u001b[39m\u001b[90mst\u001b[39m\b\b"
+    ],
+    [
+      0.135907,
+      "\b\u001b[32mg\u001b[32ml\u001b[39m\u001b[39m \b"
+    ],
+    [
+      1.755117,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.000731,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.047175,
+      "\u001b]0;subicura.github.io: git pull\u0007"
+    ],
+    [
+      2.189447,
+      "Already up to date.\r\n"
+    ],
+    [
+      0.000718,
+      "\u001b]0;~/Workspace/github.com/subicura/subicura.github.io\u0007"
+    ],
+    [
+      0.022441,
+      "\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[38;5;242m source*\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      0.026681,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.7e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000353,
+      "\u001b[?2004h"
+    ],
+    [
+      1.970146,
+      "\u001b[32m.\u001b[39m\u001b[90m....\u001b[39m\b\b\b\b"
+    ],
+    [
+      0.213184,
+      "\b\u001b[39m\u001b[4m.\u001b[39m\u001b[4m.\u001b[24m"
+    ],
+    [
+      0.233219,
+      "\b\b\u001b[24m\u001b[32m.\u001b[24m\u001b[32m.\u001b[32m.\u001b[39m"
+    ],
+    [
+      0.22753,
+      "\b\u001b[32m.\u001b[32m.\u001b[39m"
+    ],
+    [
+      0.196961,
+      "\b\u001b[32m.\u001b[32m.\u001b[39m"
+    ],
+    [
+      0.92456,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.000863,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.045948,
+      "\u001b]0;subicura.github.io: ../../../..\u0007"
+    ],
+    [
+      0.000193,
+      "\u001b]0;~\u0007"
+    ],
+    [
+      0.004848,
+      "\r\n\u001b[34m~\u001b[39m\u001b[38;5;242m\u001b[39m\u001b[36m\u001b[39m\u001b[33m\u001b[39m\r\n"
+    ],
+    [
+      0.020725,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.3e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000211,
+      "\u001b[?2004h"
+    ],
+    [
+      1.395836,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

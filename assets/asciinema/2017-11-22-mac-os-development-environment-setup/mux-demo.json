@@ -1,0 +1,1190 @@
+{
+  "version": 1,
+  "width": 80,
+  "height": 25,
+  "duration": 51.569334,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.470396,
+      "\u001b]2;subicura@subicuras-Mac: ~\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.033551,
+      "\u001b]0;~\u0007"
+    ],
+    [
+      0.004064,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      0.000448,
+      "\u001b[?2004h"
+    ],
+    [
+      0.703592,
+      "\u001b[4mm\u001b[24m\u001b[90mux start jekyll\u001b[39m\u001b[15D"
+    ],
+    [
+      0.278989,
+      "\b\u001b[4mm\u001b[39m\u001b[4mu\u001b[24m"
+    ],
+    [
+      0.560306,
+      "\b\b\u001b[24m\u001b[32mm\u001b[24m\u001b[32mu\u001b[32mx\u001b[39m"
+    ],
+    [
+      0.317668,
+      "\u001b[39m "
+    ],
+    [
+      0.257931,
+      "\u001b[39ml\u001b[90ms\u001b[39m\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[11D"
+    ],
+    [
+      0.112135,
+      "\u001b[39ms"
+    ],
+    [
+      0.525281,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.001639,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000708,
+      "\u001b]2;tmuxinator ls\u0007\u001b]1;mux\u0007"
+    ],
+    [
+      0.042966,
+      "\u001b]0;subicura: tmuxinator ls\u0007"
+    ],
+    [
+      0.171892,
+      "tmuxinator projects:\r\n"
+    ],
+    [
+      0.007397,
+      "jekyll\r\n"
+    ],
+    [
+      0.00221,
+      "\u001b]2;subicura@subicuras-Mac: ~\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.000537,
+      "\u001b]0;~\u0007"
+    ],
+    [
+      0.024429,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      0.000372,
+      "\u001b[?2004h"
+    ],
+    [
+      1.127055,
+      "\u001b[4mm\u001b[24m\u001b[90mux ls\u001b[39m\b\b\b\b\b"
+    ],
+    [
+      0.463311,
+      "\b\u001b[4mm\u001b[39m\u001b[4mu\u001b[24m"
+    ],
+    [
+      0.191724,
+      "\b\b\u001b[24m\u001b[32mm\u001b[24m\u001b[32mu\u001b[32mx\u001b[39m"
+    ],
+    [
+      0.159574,
+      "\u001b[39m "
+    ],
+    [
+      0.1431,
+      "\u001b[39ms\u001b[90mt\u001b[90mart jekyll\u001b[39m\u001b[11D"
+    ],
+    [
+      0.178257,
+      "\u001b[39mt"
+    ],
+    [
+      0.112678,
+      "\u001b[39ma"
+    ],
+    [
+      0.127007,
+      "\u001b[39mr"
+    ],
+    [
+      0.144433,
+      "\u001b[39mt"
+    ],
+    [
+      0.335709,
+      "\u001b[39m \u001b[39mj\u001b[39me\u001b[39mk\u001b[39my\u001b[39ml\u001b[39ml"
+    ],
+    [
+      1.038001,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.002065,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000692,
+      "\u001b]2;tmuxinator start jekyll\u0007\u001b]1;mux\u0007"
+    ],
+    [
+      0.038927,
+      "\u001b]0;subicura: tmuxinator start jekyll\u0007"
+    ],
+    [
+      2.5,
+      "\u001b[?1049h\u001b[?1h\u001b=\u001b[H\u001b[2J\u001b[?12l\u001b[?25h\u001b[?1000l\u001b[?1002l\u001b[?1006l\u001b[?1005l\u001b[?1004h\u001b[c\u001b(B\u001b[m\u001b[?12;25h\u001b[?12l\u001b[?25h\u001b[?1003l\u001b[?1006l\u001b[?2004l\u001b[1;1H\u001b[1;25r\u001b]112\u0007\u001b[3;1H"
+    ],
+    [
+      0.044712,
+      "\u001b]0;subicuras-Mac ❐ jekyll ● 1 server\u0007\u001b[?25l\u001b[38;5;39m\u001b[22d─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[mcd /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\nbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\u001b[2Bngrok http 4000\u001b[K\r\n\u001b[K\r\n\u001b[38;5;245m\u001b[48;5;232m                                                                                \u001b(B\u001b[m\u001b[3;1H\u001b[?12l\u001b[?25h\u001b(B\u001b[m\u001b[?12;25h\u001b[?12l\u001b[?25h\u001b[?1003l\u001b[?1006l\u001b[?2004l\u001b[1;1H\u001b[1;25r"
+    ],
+    [
+      0.008376,
+      "\u001b[?25l\u001b[38;5;39m\u001b[22;1H─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[mcd /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\nbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\u001b[2Bngrok http 4000\u001b[K\r\n\u001b[K\r\n\u001b[38;5;245m\u001b[48;5;232m                                                                                \u001b(B\u001b[m\u001b[3;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.131163,
+      "\u001b[?25l\u001b[38;5;39m\u001b[22d─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[mcd /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\nbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\u001b[2Bngrok http 4000\u001b[K\r\n\u001b[K\r\n\u001b[38;5;245m\u001b[48;5;232m                                                                                \u001b(B\u001b[m\u001b[3;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.027904,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 server \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 ed\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[3;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.071517,
+      "\u001b[?25l\u001b[38;5;39m\u001b[22d─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[mcd /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\nbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\u001b[2Bngrok http 4000\u001b[K\r\n\u001b[K\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 server \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 ed\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[3;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.160195,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 server \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 ..\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[3;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.032455,
+      "\u001b]0;subicuras-Mac ❐ jekyll ● 1 ..ura.github.io\u0007\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;16m\u001b[48;5;39m\u001b[1mura.github.io \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[3;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.083419,
+      "\u001b[23;24r\u001b[24;1H\u001b[K\u001b[79C\n\r\u001b[34m~/Works\u001b[1;25r\u001b[3;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.000284,
+      "\u001b[24;8H\u001b[34mpace/github.com/\u001b[3;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.000654,
+      "\u001b[24;24H\u001b[34msubicura/subicur\u001b[3;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.000178,
+      "\u001b[24;40H\u001b[34ma.github.io\u001b[3;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.000177,
+      "\u001b[23;24r\u001b[24;80H\n\r\u001b[35m❯\u001b[1;25r\u001b[3;1H\u001b(B\u001b[m"
+    ],
+    [
+      1.5e-05,
+      "\u001b[24;2H \u001b[K\u001b[3;1H"
+    ],
+    [
+      0.016433,
+      "\u001b[24;3Hn\u001b[3;1H"
+    ],
+    [
+      0.003694,
+      "\u001b[24;3Hngr\u001b[3;1H"
+    ],
+    [
+      0.001923,
+      "\u001b[24;6Ho\u001b[3;1H"
+    ],
+    [
+      0.000506,
+      "\u001b[24;7Hk\u001b[3;1H"
+    ],
+    [
+      0.00195,
+      "\u001b[24;8H h\u001b[3;1H"
+    ],
+    [
+      0.007296,
+      "\u001b[24;10Ht\u001b[3;1H"
+    ],
+    [
+      0.00163,
+      "\u001b[1;21r\u001b[4;21r\u001b[18S\u001b[3;1H\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\r\n\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[5;3H"
+    ],
+    [
+      0.002032,
+      "\u001b[?2004h"
+    ],
+    [
+      0.015981,
+      "c\u001b[24;11Ht\u001b[5;4H"
+    ],
+    [
+      0.000348,
+      "\bcd"
+    ],
+    [
+      0.003083,
+      " /"
+    ],
+    [
+      0.004563,
+      "U"
+    ],
+    [
+      0.007049,
+      "s"
+    ],
+    [
+      0.011406,
+      "e"
+    ],
+    [
+      0.002093,
+      "r"
+    ],
+    [
+      0.00257,
+      "s/"
+    ],
+    [
+      0.001118,
+      "s"
+    ],
+    [
+      0.002259,
+      "ub"
+    ],
+    [
+      0.000404,
+      "i"
+    ],
+    [
+      0.00133,
+      "cu\u001b[24;12Hp\u001b[5;19H"
+    ],
+    [
+      0.002113,
+      "\u001b[24;13H 4\u001b[5;19H"
+    ],
+    [
+      0.000198,
+      "\u001b[24;15H0\u001b[5;19H"
+    ],
+    [
+      0.000734,
+      "\u001b[24;16H0\u001b[5;19H"
+    ],
+    [
+      0.00093,
+      "r\u001b[24;17H0\u001b[5;20H"
+    ],
+    [
+      0.008644,
+      "a/"
+    ],
+    [
+      0.002211,
+      "Wor"
+    ],
+    [
+      0.00867,
+      "ks"
+    ],
+    [
+      0.00764,
+      "pace/github.com/sub"
+    ],
+    [
+      0.002043,
+      "\u001b[24;3H\u001b[32mngrok\u001b[5;46H\u001b(B\u001b[m"
+    ],
+    [
+      0.001238,
+      "\u001b[23;24r\u001b[24;80H\n\u001b[1;25r\u001b[5;46H"
+    ],
+    [
+      0.00199,
+      "\u001b]0;subicuras-Mac ❐ jekyll ● 1 ngrok\u0007\u001b[?25l\u001b[25;1H\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 ngrok \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 vim\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[5;46H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.005971,
+      "ic"
+    ],
+    [
+      0.001478,
+      "ur"
+    ],
+    [
+      0.005713,
+      "a/"
+    ],
+    [
+      0.000381,
+      "s"
+    ],
+    [
+      0.000396,
+      "u"
+    ],
+    [
+      0.001033,
+      "b"
+    ],
+    [
+      0.000449,
+      "i"
+    ],
+    [
+      0.000608,
+      "c"
+    ],
+    [
+      0.004301,
+      "ur"
+    ],
+    [
+      0.002806,
+      "a."
+    ],
+    [
+      0.003799,
+      "g"
+    ],
+    [
+      0.000957,
+      "it"
+    ],
+    [
+      0.003267,
+      "hub.io"
+    ],
+    [
+      0.000897,
+      "\r\n\u001b[?2004l"
+    ],
+    [
+      0.006976,
+      "bundle exec jekyll serve --increm\u001b]0;subicuras-Mac ❐ jekyll ● 1 cd\u0007\u001b[?25l\u001b[25;1H\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 cd \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 vim\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m     | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[6;34H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000469,
+      "ental\r\n"
+    ],
+    [
+      0.097421,
+      "\u001b[?25l\u001b[23d\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[24;1H\u001b[38;5;16m                                                                                \u001b(B\u001b[m\u001b[7;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.001812,
+      "\u001b[24d\u001b[37m\u001b[48;5;16mConnections                   ttl     opn     rt1     rt5     p50     p90     \u001b[38;5;16m  \u001b[24;1H\u001b[37m                              0       0       0.00    0.00    0.00    0.00    \u001b[38;5;16m  \u001b[24;1H                                                                                \u001b[24;1H                                                                                \u001b[7;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.007636,
+      "\u001b]0;subicuras-Mac ❐ jekyll ● 1 ..ura.github.io\u0007\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;16m\u001b[48;5;39m\u001b[1mura.github.io \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[7;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.077598,
+      "\u001b[1;21r\u001b[8;21r\u001b[14S\u001b[7;1H\u001b[K\u001b[1;25r\u001b[8;1H\u001b[34m~/Workspace/github.com/su\u001b(B\u001b[m"
+    ],
+    [
+      0.000155,
+      "\u001b[34mbicura/subicura.github.io\u001b(B\u001b[m"
+    ],
+    [
+      0.000116,
+      "\r\n\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      9.2e-05,
+      "b\bbundle e\u001b[?2004h"
+    ],
+    [
+      9.2e-05,
+      "xec j"
+    ],
+    [
+      0.000341,
+      "e"
+    ],
+    [
+      0.003166,
+      "kyll ser"
+    ],
+    [
+      0.003104,
+      "ve --incr"
+    ],
+    [
+      0.005733,
+      "emental\u001b[3G\u001b[32mbundle\u001b[32C\u001b(B\u001b[m"
+    ],
+    [
+      0.000905,
+      "\r\n\u001b[?2004l"
+    ],
+    [
+      0.001796,
+      "\u001b]0;subicuras-Mac ❐ jekyll ● 1 bundle\u0007\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 vi\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m> | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[10;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.110817,
+      "\u001b[23;24r\u001b[24;1H\u001b[K\u001b[A\u001b[K\u001b[1;25r\u001b[10;1H"
+    ],
+    [
+      5.7e-05,
+      "\u001b[23d\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[24;1H\u001b[38;5;16m                                                                                \u001b[10;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.664777,
+      "Configuration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\r\n"
+    ],
+    [
+      0.000963,
+      "Configuration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\r\n"
+    ],
+    [
+      0.226551,
+      "            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\r\n Incremental build: enabled\r\n      Generating... \r\n"
+    ],
+    [
+      0.376922,
+      "\u001b[1;21r\u001b[21;80H\n\u001b[19;1H/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[1;25r\u001b[21;1H"
+    ],
+    [
+      0.010161,
+      "\u001b[1;21r\u001b[2S\u001b[19;1H/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[1;25r\u001b[21;1H"
+    ],
+    [
+      2.5,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[21;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.11983,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[m\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m cd /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\nbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enable"
+    ],
+    [
+      0.00038,
+      "d\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[24;1H\u001b[38;5;16m                                                                                \u001b[25;1H\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[21;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.578379,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[m\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m cd /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\nbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enable"
+    ],
+    [
+      0.008808,
+      "d\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[24;1H\u001b[38;5;16m                                                                                \u001b[25;1H\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[21;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.108461,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[m\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m cd /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\nbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enable"
+    ],
+    [
+      0.003,
+      "d\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[24;1H\u001b[38;5;16m                                                                                \u001b[25;1H\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[21;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.116677,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[m\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m cd /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\nbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enable"
+    ],
+    [
+      0.00064,
+      "d\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[24;1H\u001b[38;5;16m                                                                                \u001b[25;1H\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[21;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.361326,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 vi\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m> | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[21;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.531695,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[21;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.125009,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[m\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m cd /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\nbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enable"
+    ],
+    [
+      0.00031,
+      "d\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[24;1H\u001b[38;5;16m                                                                                \u001b[25;1H\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[21;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.055232,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[m\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m cd /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\nbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enable"
+    ],
+    [
+      0.000386,
+      "d\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[24;1H\u001b[38;5;16m                                                                                \u001b[25;1H\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[21;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.389406,
+      "\u001b[?25l\u001b[38;5;39m\u001b[A─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[mbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enabled\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is de"
+    ],
+    [
+      0.000258,
+      "precated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[22;1H\u001b[38;5;16m                                                                                \u001b[39m\u001b[49m\u001b[23;1H\u001b[K\r\n\u001b[K\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[19;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000186,
+      "\u001b[21;24r\u001b[22;24r\u001b[3S\u001b[21;1H\u001b[K\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[22;1H\u001b[38;5;16m                                                                                \u001b[22;1H\u001b[1;25r\u001b[19;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.16971,
+      "\u001b[23d\u001b[32m\u001b[48;5;16mSession Status                online\u001b[38;5;16m                                            \u001b[24;1H\u001b[37mVersion                       2.2.8\u001b[38;5;16m                                             \u001b[19;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.43947,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 vi\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m> | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[19;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.124795,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[mbundle exec jekyll serve --incremental\u001b[K\r\n\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enabled\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is dep"
+    ],
+    [
+      0.000322,
+      "recated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[22;1H\u001b[38;5;16m                                                                                \u001b[23;1H\u001b[32mSession Status                online\u001b[38;5;16m                                            \u001b[24;1H\u001b[37mVersion                       2.2.8\u001b[38;5;16m                                             \u001b[25;1H\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 vi\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m> | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[19;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.416607,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[19;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.405135,
+      "\u001b[?25l\u001b[38;5;39m\u001b[A─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[m\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enabled\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems"
+    ],
+    [
+      0.00128,
+      "/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[20;1H\u001b[38;5;16m                                                                                \u001b[21;1H\u001b[32mSession Status                online\u001b[38;5;16m                                            \u001b[22;1H\u001b[37mVersion                       2.2.8\u001b[38;5;16m                                             \u001b[39m\u001b[49m\u001b[23;1H\u001b[K\r\n\u001b[K\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[17;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.001733,
+      "\u001b[19;24r\u001b[20;24r\u001b[5S\u001b[19;1H\u001b[K\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[20;1H\u001b[38;5;16m                                                                                \u001b[21;1H\u001b[32mSession Status                online\u001b[38;5;16m                                            \u001b[22;1H\u001b[37mVersion                       2.2.8\u001b[38;5;16m                                             \u001b[22;1H\u001b[1;25r\u001b[17;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.11806,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[m\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enabled\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/"
+    ],
+    [
+      0.000691,
+      "nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[20;1H\u001b[38;5;16m                                                                                \u001b[21;1H\u001b[32mSession Status                online\u001b[38;5;16m                                            \u001b[22;1H\u001b[37mVersion                       2.2.8\u001b[38;5;16m                                             \u001b[39m\u001b[49m\u001b[23;1H\u001b[K\r\n\u001b[K\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[17;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.474525,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 vi\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m> | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[17;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.021627,
+      "\u001b[23d\u001b[37m\u001b[48;5;16mRegion                        United States (us)\u001b[38;5;16m                                \u001b[24;1H\u001b[37mWeb Interface                 http://127.0.0.1:4040\u001b[38;5;16m                             \u001b[17;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.454861,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[17;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.1214,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[m\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mbundle\u001b[39m exec jekyll serve --incremental\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enabled\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/"
+    ],
+    [
+      0.000319,
+      "nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[20;1H\u001b[38;5;16m                                                                                \u001b[21;1H\u001b[32mSession Status                online\u001b[38;5;16m                                            \u001b[22;1H\u001b[37mVersion                       2.2.8\u001b[38;5;16m                                             \u001b[23;1H\u001b[37mRegion                        United States (us)\u001b[38;5;16m                                \u001b[24;1H\u001b[37mWeb Interface                 http://127.0.0.1:4040\u001b[38;5;16m                             \u001b[25;1H\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨"
+    ],
+    [
+      0.000715,
+      "  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[17;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.349945,
+      "\u001b[?25l\u001b[38;5;39m\u001b[A─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[mConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enabled\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b["
+    ],
+    [
+      0.000358,
+      "38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[18;1H\u001b[38;5;16m                                                                                \u001b[19;1H\u001b[32mSession Status                online\u001b[38;5;16m                                            \u001b[20;1H\u001b[37mVersion                       2.2.8\u001b[38;5;16m                                             \u001b[21;1H\u001b[37mRegion                        United States (us)\u001b[38;5;16m                                \u001b[22;1H\u001b[37mWeb Interface                 http://127.0.0.1:4040\u001b[38;5;16m                             \u001b[39m\u001b[49m\u001b[23;1H\u001b[K\r\n\u001b[K\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[15"
+    ],
+    [
+      0.000272,
+      ";1H\u001b[?12l\u001b[?25h\u001b[17;24r\u001b[18;24r\u001b[7S\u001b[17;1H\u001b[K\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[18;1H\u001b[38;5;16m                                                                                \u001b[19;1H\u001b[32mSession Status                online\u001b[38;5;16m                                            \u001b[20;1H\u001b[37mVersion                       2.2.8\u001b[38;5;16m                                             \u001b[21;1H\u001b[37mRegion                        United States (us)\u001b[38;5;16m                                \u001b[22;1H\u001b[37mWeb Interface                 http://127.0.0.1:4040\u001b[38;5;16m                             \u001b[22;1H\u001b[1;25r\u001b[15;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.066421,
+      "\u001b[23d\u001b[37m\u001b[48;5;16mForwarding                    http://4da40c60.ngrok.io -> localhost:4000\u001b[38;5;16m        \u001b[24;1H\u001b[37mForwarding                    https://4da40c60.ngrok.io -> localhost:4000\u001b[38;5;16m       \u001b[15;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.54404,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 vi\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m> | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[15;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.096729,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[mConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n            Source: /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\r\n       Destination: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_site\u001b[K\r\n Incremental build: enabled\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[3"
+    ],
+    [
+      0.000378,
+      "8;5;16m\u001b[48;5;16m \u001b[37mby\u001b[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[18;1H\u001b[38;5;16m                                                                                \u001b[19;1H\u001b[32mSession Status                online\u001b[38;5;16m                                            \u001b[20;1H\u001b[37mVersion                       2.2.8\u001b[38;5;16m                                             \u001b[21;1H\u001b[37mRegion                        United States (us)\u001b[38;5;16m                                \u001b[22;1H\u001b[37mWeb Interface                 http://127.0.0.1:4040\u001b[38;5;16m                             \u001b[23;1H\u001b[37mForwarding                    http://4da40c60.ngrok.io -> localhost:4000\u001b[38;5;16m        \u001b[24;1H\u001b[37mForwarding                    https://4da40c60.ngrok.io -> localhost:4000\u001b[38;5;16m       \u001b[25;1H\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;3"
+    ],
+    [
+      0.000503,
+      "9m\u001b[4m2 vi\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m> | 06:53 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[15;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.613396,
+      "\u001b[1;15r\u001b[15;80H\n\u001b[14;1H                    done in 15.214 seconds.\u001b[1;25r\u001b[15;1H"
+    ],
+    [
+      0.070639,
+      "\u001b[1;15r\u001b[15;80H\n\u001b[14;1H Auto-regeneration: enabled for '/Users/subicura/Workspace/github.com/subicura/subicura.github.io'\u001b[1;25r\u001b[15;19H"
+    ],
+    [
+      0.000279,
+      "\u001b[1;15r\u001b[15;80H\n\u001b[1;25r\u001b[15;1H"
+    ],
+    [
+      0.002062,
+      "\u001b[1;15r\u001b[15;80H\n\u001b[14;1HConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[1;25r\u001b[15;17H"
+    ],
+    [
+      0.000241,
+      "\u001b[1;15r\u001b[15;80H\n\u001b[1;25r\u001b[15;1H"
+    ],
+    [
+      0.055699,
+      "\u001b[1;15r\u001b[15;80H\n\u001b[14;1H    Server address: http://127.0.0.1:4000/\u001b[1;25r\u001b[15;1H"
+    ],
+    [
+      0.00012,
+      "\u001b[1;15r\u001b[15;80H\n\u001b[14;1H  Server running... press ctrl-c to stop.\u001b[1;25r\u001b[15;1H"
+    ],
+    [
+      0.204011,
+      "\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[15;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.087224,
+      "\u001b[?25l\u001b[38;5;39m\r\n─────────────────────────────────────────\u001b[38;5;238m───────────────────────────────────────\u001b[1;1H\u001b(B\u001b[mb.io/_site\u001b[K\r\n Incremental build: enabled\u001b[K\r\n      Generating...\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/html/document.rb:164: warning: constant ::Fixnum is deprecated\u001b[K\r\n/usr/local/lib/ruby/gems/2.4.0/gems/nokogiri-1.6.8.1/lib/nokogiri/xml/node.rb:390: warning: constant ::Fixnum is deprecated\u001b[K\r\n                    done in 15.214 seconds.\u001b[K\r\n Auto-regeneration: enabled for '/Users/subicura/Workspace/github.com/subicura/subicura.github.io'\u001b[K\r\nConfiguration file: /Users/subicura/Workspace/github.com/subicura/subicura.github.io/_config.yml\u001b[K\r\n    Server address: http://127.0.0.1:4000/\u001b[K\r\n  Server running... press ctrl-c to stop.\u001b[K\r\n\u001b[K\u001b[2B\u001b[36m\u001b[48;5;16m\u001b[1mngrok\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m \u001b[37mby\u001b"
+    ],
+    [
+      0.000326,
+      "[38;5;16m \u001b[36m\u001b[1m@inconshreveable\u001b(B\u001b[m\u001b[38;5;16m\u001b[48;5;16m                                       \u001b[37m(Ctrl+C to quit)\u001b[18;1H\u001b[38;5;16m                                                                                \u001b[19;1H\u001b[32mSession Status                online\u001b[38;5;16m                                            \u001b[20;1H\u001b[37mVersion                       2.2.8\u001b[38;5;16m                                             \u001b[21;1H\u001b[37mRegion                        United States (us)\u001b[38;5;16m                                \u001b[22;1H\u001b[37mWeb Interface                 http://127.0.0.1:4040\u001b[38;5;16m                             \u001b[23;1H\u001b[37mForwarding                    http://4da40c60.ngrok.io -> localhost:4000\u001b[38;5;16m        \u001b[24;1H\u001b[37mForwarding                    https://4da40c60.ngrok.io -> localhost:4000\u001b[38;5;16m       \u001b[25;1H\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 1 bundle \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m \u001b[38;5;39m\u001b[4m2 \u001b(B\u001b[m\u001b[38;5;245m\u001b"
+    ],
+    [
+      0.00027,
+      "[48;5;232m\u001b[7m>\u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[15;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.20717,
+      "\u001b]0;subicuras-Mac ❐ jekyll ● 2 vim\u0007\u001b[?25l\u001b[1 q\u001b[H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2;1H                                                 \u001b[38;5;234m│\u001b[38;5;75m[in]: \u001b[38;5;168m_posts/\u001b[38;5;249m                 \u001b[3;1H                                                 \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-03-23-hello.markdown    \u001b[4;1H\u001b[38;5;114m      ██████  ██▓███   ▄▄▄       ▄████▄  ▓█████ █\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-05-30-l..op-log.markdown\u001b[5;1H\u001b[38;5;114m    ▒██    ▒ ▓██░  ██▒▒████▄    ▒██▀ ▀█  ▓█   ▀▓█\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-07-z..oyment.markdown\u001b[6;1H\u001b[38;5;114m    ░ ▓██▄   ▓██░ ██▓▒▒██  ▀█▄  ▒▓█    ▄ ▒███   ▓\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-13-s..source.markdown\u001b[7;1H\u001b[38;5;114m      ▒   ██▒▒██▄█▓"
+    ],
+    [
+      0.004296,
+      "▒ ▒░██▄▄▄▄██ ▒▓▓▄ ▄██▒▒▓█  ▄  \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-20-s..-react.markdown\u001b[8;1H\u001b[38;5;114m    ▒██████▒▒▒██▒ ░  ░ ▓█   ▓██▒▒ ▓███▀ ░░▒████▒ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-07-11-c..ention.markdown\u001b[9;1H\u001b[38;5;114m    ▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░ ▒▒   ▓▒█░░ ░▒ ▒  ░░░ ▒░ ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-12-31-r..r-2016.markdown\u001b[10;1H\u001b[38;5;114m    ░ ░▒  ░ ░░▒ ░       ▒   ▒▒ ░  ░  ▒    ░ ░  ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-1.markdown\u001b[11;1H\u001b[38;5;114m    ░  ░  ░  ░░         ░   ▒   ░           ░    \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-2.markdown\u001b[12;1H\u001b[38;5;114m          ░                 ░  ░░ ░         ░  ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-02-10-d..deploy.markdown\u001b[13;1H\u001b[38;5;114m                "
+    ],
+    [
+      0.006937,
+      "                ░                \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-02-25-c..-swarm.markdown\u001b[14;1H\u001b[38;5;114m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[15;1H\u001b[38;5;114m                     version : 0.6.0-dev   by : s\u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[16;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[17;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[18;1H\u001b[38;5;249m   [\u001b[38;5;173me\u001b[38;5;249m]  \u001b[38;5;241m<empty buffer>\u001b[38;5;249m                           \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[19;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[20;1H\u001b[38;5;176m   My most recently used files:\u001b[38;5;249m                  \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[21;1H\u001b[38;5;2"
+    ],
+    [
+      0.009029,
+      "49m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[22;1H\u001b[38;5;249m   [\u001b[38;5;173m0\u001b[38;5;249m]  \u001b[38;5;75m~\u001b[38;5;249m/\u001b[38;5;75m.config\u001b[38;5;249m/\u001b[38;5;75mtmuxinator\u001b[38;5;249m/\u001b[38;5;168mjekyll.yml\u001b[38;5;249m          \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[23;1H\u001b[38;5;249m\u001b[48;5;238m<ify \u001b[38;5;238m\u001b[38;5;249m ❖ ⓢ  \u001b[38;5;238m\u001b[38;5;249m  source \u001b[38;5;238m\u001b[48;5;241m\u001b[38;5;249m\u001b[48;5;238m  | utf-8 \u001b[38;5;238m\u001b[38;5;249m 18:5 \u001b[38;5;238m\u001b[38;5;249m 14% \u001b[48;5;236m \u001b[38;5;236m\u001b[48;5;114m ❷ \u001b[38;5;114m\u001b[48;5;238m\u001b[38;5;249m vimfiler \u001b[38;5;238m               \u001b[24;1H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2 q\u001b[25;1H\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;39m bundle\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 2 vim \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;"
+    ],
+    [
+      0.010034,
+      "5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[18;5H\u001b[?12l\u001b[?25h\u001b[1 q\u001b[?1006h\u001b[?1002h\u001b[?2004h"
+    ],
+    [
+      0.105132,
+      "\u001b[?25l\u001b[H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2;1H                                                 \u001b[38;5;234m│\u001b[38;5;75m[in]: \u001b[38;5;168m_posts/\u001b[38;5;249m                 \u001b[3;1H                                                 \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-03-23-hello.markdown    \u001b[4;1H\u001b[38;5;114m      ██████  ██▓███   ▄▄▄       ▄████▄  ▓█████ █\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-05-30-l..op-log.markdown\u001b[5;1H\u001b[38;5;114m    ▒██    ▒ ▓██░  ██▒▒████▄    ▒██▀ ▀█  ▓█   ▀▓█\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-07-z..oyment.markdown\u001b[6;1H\u001b[38;5;114m    ░ ▓██▄   ▓██░ ██▓▒▒██  ▀█▄  ▒▓█    ▄ ▒███   ▓\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-13-s..source.markdown\u001b[7;1H\u001b[38;5;114m      ▒   ██▒▒██▄█▓▒ ▒░██▄▄▄▄██ ▒▓▓"
+    ],
+    [
+      0.000422,
+      "▄ ▄██▒▒▓█  ▄  \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-20-s..-react.markdown\u001b[8;1H\u001b[38;5;114m    ▒██████▒▒▒██▒ ░  ░ ▓█   ▓██▒▒ ▓███▀ ░░▒████▒ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-07-11-c..ention.markdown\u001b[9;1H\u001b[38;5;114m    ▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░ ▒▒   ▓▒█░░ ░▒ ▒  ░░░ ▒░ ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-12-31-r..r-2016.markdown\u001b[10;1H\u001b[38;5;114m    ░ ░▒  ░ ░░▒ ░       ▒   ▒▒ ░  ░  ▒    ░ ░  ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-1.markdown\u001b[11;1H\u001b[38;5;114m    ░  ░  ░  ░░         ░   ▒   ░           ░    \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-2.markdown\u001b[12;1H\u001b[38;5;114m          ░                 ░  ░░ ░         ░  ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-02-10-d..deploy.markdown\u001b[13;1H\u001b[38;5;114m                                ░                \u001b[38;5;23"
+    ],
+    [
+      0.00037,
+      "4m│\u001b[38;5;75m \u001b[38;5;249m2017-02-25-c..-swarm.markdown\u001b[14;1H\u001b[38;5;114m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[15;1H\u001b[38;5;114m                     version : 0.6.0-dev   by : s\u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[16;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[17;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[18;1H\u001b[38;5;249m   [\u001b[38;5;173me\u001b[38;5;249m]  \u001b[38;5;241m<empty buffer>\u001b[38;5;249m                           \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[19;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[20;1H\u001b[38;5;176m   My most recently used files:\u001b[38;5;249m                  \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[21;1H\u001b[38;5;249m                                         "
+    ],
+    [
+      0.000108,
+      "        \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[22;1H\u001b[38;5;249m   [\u001b[38;5;173m0\u001b[38;5;249m]  \u001b[38;5;75m~\u001b[38;5;249m/\u001b[38;5;75m.config\u001b[38;5;249m/\u001b[38;5;75mtmuxinator\u001b[38;5;249m/\u001b[38;5;168mjekyll.yml\u001b[38;5;249m          \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[23;1H\u001b[38;5;249m\u001b[48;5;238m<ify \u001b[38;5;238m\u001b[38;5;249m ❖ ⓢ  \u001b[38;5;238m\u001b[38;5;249m  source \u001b[38;5;238m\u001b[48;5;241m\u001b[38;5;249m\u001b[48;5;238m  | utf-8 \u001b[38;5;238m\u001b[38;5;249m 18:5 \u001b[38;5;238m\u001b[38;5;249m 14% \u001b[48;5;236m \u001b[38;5;236m\u001b[48;5;114m ❷ \u001b[38;5;114m\u001b[48;5;238m\u001b[38;5;249m vimfiler \u001b[38;5;238m               \u001b[24;1H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2 q\u001b[25;1H\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;39m bundle\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 2 vim \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;"
+    ],
+    [
+      0.000169,
+      "254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[18;5H\u001b[?12l\u001b[?25h\u001b[1 q"
+    ],
+    [
+      1.221075,
+      "\u001b[?25l\u001b[H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2;1H                                                 \u001b[38;5;234m│\u001b[38;5;75m[in]: \u001b[38;5;168m_posts/\u001b[38;5;249m                 \u001b[3;1H                                                 \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-03-23-hello.markdown    \u001b[4;1H\u001b[38;5;114m      ██████  ██▓███   ▄▄▄       ▄████▄  ▓█████ █\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-05-30-l..op-log.markdown\u001b[5;1H\u001b[38;5;114m    ▒██    ▒ ▓██░  ██▒▒████▄    ▒██▀ ▀█  ▓█   ▀▓█\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-07-z..oyment.markdown\u001b[6;1H\u001b[38;5;114m    ░ ▓██▄   ▓██░ ██▓▒▒██  ▀█▄  ▒▓█    ▄ ▒███   ▓\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-13-s..source.markdown\u001b[7;1H\u001b[38;5;114m      ▒   ██▒▒██▄█▓▒ ▒░██▄▄▄▄██ ▒▓▓"
+    ],
+    [
+      0.000359,
+      "▄ ▄██▒▒▓█  ▄  \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-20-s..-react.markdown\u001b[8;1H\u001b[38;5;114m    ▒██████▒▒▒██▒ ░  ░ ▓█   ▓██▒▒ ▓███▀ ░░▒████▒ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-07-11-c..ention.markdown\u001b[9;1H\u001b[38;5;114m    ▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░ ▒▒   ▓▒█░░ ░▒ ▒  ░░░ ▒░ ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-12-31-r..r-2016.markdown\u001b[10;1H\u001b[38;5;114m    ░ ░▒  ░ ░░▒ ░       ▒   ▒▒ ░  ░  ▒    ░ ░  ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-1.markdown\u001b[11;1H\u001b[38;5;114m    ░  ░  ░  ░░         ░   ▒   ░           ░    \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-2.markdown\u001b[12;1H\u001b[38;5;114m          ░                 ░  ░░ ░         ░  ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-02-10-d..deploy.markdown\u001b[13;1H\u001b[38;5;114m                                ░                \u001b[38;5;23"
+    ],
+    [
+      0.000392,
+      "4m│\u001b[38;5;75m \u001b[38;5;249m2017-02-25-c..-swarm.markdown\u001b[14;1H\u001b[38;5;114m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[15;1H\u001b[38;5;114m                     version : 0.6.0-dev   by : s\u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[16;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[17;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[18;1H\u001b[38;5;249m   [\u001b[38;5;173me\u001b[38;5;249m]  \u001b[38;5;241m<empty buffer>\u001b[38;5;249m                           \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[19;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[20;1H\u001b[38;5;176m   My most recently used files:\u001b[38;5;249m                  \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[21;1H\u001b[38;5;249m                                         "
+    ],
+    [
+      0.000241,
+      "        \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[22;1H\u001b[38;5;249m   [\u001b[38;5;173m0\u001b[38;5;249m]  \u001b[38;5;75m~\u001b[38;5;249m/\u001b[38;5;75m.config\u001b[38;5;249m/\u001b[38;5;75mtmuxinator\u001b[38;5;249m/\u001b[38;5;168mjekyll.yml\u001b[38;5;249m          \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[23;1H\u001b[38;5;249m\u001b[48;5;238m<ify \u001b[38;5;238m\u001b[38;5;249m ❖ ⓢ  \u001b[38;5;238m\u001b[38;5;249m  source \u001b[38;5;238m\u001b[48;5;241m\u001b[38;5;249m\u001b[48;5;238m  | utf-8 \u001b[38;5;238m\u001b[38;5;249m 18:5 \u001b[38;5;238m\u001b[38;5;249m 14% \u001b[48;5;236m \u001b[38;5;236m\u001b[48;5;114m ❷ \u001b[38;5;114m\u001b[48;5;238m\u001b[38;5;249m vimfiler \u001b[38;5;238m               \u001b[24;1H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2 q\u001b[25;1H\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;39m bundle\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 2 vim \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;"
+    ],
+    [
+      5e-05,
+      "254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[18;5H\u001b[?12l\u001b[?25h\u001b[1 q"
+    ],
+    [
+      2.5,
+      "\u001b[23;1H\u001b[38;5;249m\u001b[48;5;238m<startify \u001b[C❖ ⓢ    source\u001b[C\u001b[C unix|utf-8 \u001b(B\u001b[m"
+    ],
+    [
+      0.000381,
+      "\u001b[3;51H\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2016-03-23-hello.markdown    \u001b[23;50H\u001b[38;5;241m \u001b[4;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.000225,
+      "\u001b[3;51H"
+    ],
+    [
+      0.660781,
+      "\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2016-03-23-hello.markdown    \u001b[4;51H\u001b[38;5;75m \u001b[38;5;249m2016-05-30-l..op-log.markdown\u001b[4;51H\u001b(B\u001b[m"
+    ],
+    [
+      0.784507,
+      "\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2016-05-30-l..op-log.markdown\u001b[5;51H\u001b[38;5;75m \u001b[38;5;249m2016-06-07-z..oyment.markdown\u001b[6;1H\u001b(B\u001b[m"
+    ],
+    [
+      9.1e-05,
+      "\u001b[5;51H"
+    ],
+    [
+      0.192232,
+      "\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2016-06-07-z..oyment.markdown\u001b[6;51H\u001b[38;5;75m \u001b[38;5;249m2016-06-13-s..source.markdown\u001b[7;1H\u001b(B\u001b[m"
+    ],
+    [
+      2.7e-05,
+      "\u001b[6;51H"
+    ],
+    [
+      0.176111,
+      "\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2016-06-13-s..source.markdown\u001b[7;51H\u001b[38;5;75m \u001b[38;5;249m2016-06-20-s..-react.markdown\u001b[8;1H\u001b(B\u001b[m"
+    ],
+    [
+      2.9e-05,
+      "\u001b[7;51H"
+    ],
+    [
+      0.19301,
+      "\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2016-06-20-s..-react.markdown\u001b[8;51H\u001b[38;5;75m \u001b[38;5;249m2016-07-11-c..ention.markdown\u001b[9;1H\u001b(B\u001b[m\u001b[8;51H"
+    ],
+    [
+      0.190421,
+      "\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2016-07-11-c..ention.markdown\u001b[9;51H\u001b[38;5;75m \u001b[38;5;249m2016-12-31-r..r-2016.markdown\u001b[10;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.000104,
+      "\u001b[9;51H"
+    ],
+    [
+      2.5,
+      "\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2016-12-31-r..r-2016.markdown\u001b[10;51H\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-1.markdown\u001b[11;1H\u001b(B\u001b[m"
+    ],
+    [
+      2.9e-05,
+      "\u001b[10;51H"
+    ],
+    [
+      0.145855,
+      "\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2017-01-19-d..ners-1.markdown\u001b[11;51H\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-2.markdown\u001b[12;1H\u001b(B\u001b[m"
+    ],
+    [
+      2.7e-05,
+      "\u001b[11;51H"
+    ],
+    [
+      0.207443,
+      "\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2017-01-19-d..ners-2.markdown\u001b[12;51H\u001b[38;5;75m \u001b[38;5;249m2017-02-10-d..deploy.markdown\u001b[13;1H\u001b(B\u001b[m"
+    ],
+    [
+      9.6e-05,
+      "\u001b[12;51H"
+    ],
+    [
+      1.025771,
+      "\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2017-02-10-d..deploy.markdown\u001b[13;51H\u001b[38;5;75m \u001b[38;5;249m2017-02-25-c..-swarm.markdown\u001b[14;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.000172,
+      "\u001b[13;51H"
+    ],
+    [
+      0.544938,
+      "\u001b[?25l\u001b[H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2;1H                                                 \u001b[38;5;234m│\u001b[38;5;75m[in]: \u001b[38;5;168m_posts/\u001b[38;5;249m                 \u001b[3;1H                                                 \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-03-23-hello.markdown    \u001b[4;1H\u001b[38;5;114m      ██████  ██▓███   ▄▄▄       ▄████▄  ▓█████ █\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-05-30-l..op-log.markdown\u001b[5;1H\u001b[38;5;114m    ▒██    ▒ ▓██░  ██▒▒████▄    ▒██▀ ▀█  ▓█   ▀▓█\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-07-z..oyment.markdown\u001b[6;1H\u001b[38;5;114m    ░ ▓██▄   ▓██░ ██▓▒▒██  ▀█▄  ▒▓█    ▄ ▒███   ▓\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-13-s..source.markdown\u001b[7;1H\u001b[38;5;114m      ▒   ██▒▒██▄█▓▒ ▒░██▄▄▄▄██ ▒▓▓"
+    ],
+    [
+      0.000412,
+      "▄ ▄██▒▒▓█  ▄  \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-20-s..-react.markdown\u001b[8;1H\u001b[38;5;114m    ▒██████▒▒▒██▒ ░  ░ ▓█   ▓██▒▒ ▓███▀ ░░▒████▒ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-07-11-c..ention.markdown\u001b[9;1H\u001b[38;5;114m    ▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░ ▒▒   ▓▒█░░ ░▒ ▒  ░░░ ▒░ ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-12-31-r..r-2016.markdown\u001b[10;1H\u001b[38;5;114m    ░ ░▒  ░ ░░▒ ░       ▒   ▒▒ ░  ░  ▒    ░ ░  ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-1.markdown\u001b[11;1H\u001b[38;5;114m    ░  ░  ░  ░░         ░   ▒   ░           ░    \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-2.markdown\u001b[12;1H\u001b[38;5;114m          ░                 ░  ░░ ░         ░  ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-02-10-d..deploy.markdown\u001b[13;1H\u001b[38;5;114m                                ░                \u001b[38;5;23"
+    ],
+    [
+      0.000366,
+      "4m│\u001b[38;5;75m \u001b[38;5;249m2017-02-25-c..-swarm.markdown\u001b[14;1H\u001b[38;5;114m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[15;1H\u001b[38;5;114m                     version : 0.6.0-dev   by : s\u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[16;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[17;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[18;1H\u001b[38;5;249m   [\u001b[38;5;173me\u001b[38;5;249m]  \u001b[38;5;241m<empty buffer>\u001b[38;5;249m                           \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[19;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[20;1H\u001b[38;5;176m   My most recently used files:\u001b[38;5;249m                  \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[21;1H\u001b[38;5;249m                                         "
+    ],
+    [
+      0.000114,
+      "        \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[22;1H\u001b[38;5;249m   [\u001b[38;5;173m0\u001b[38;5;249m]  \u001b[38;5;75m~\u001b[38;5;249m/\u001b[38;5;75m.config\u001b[38;5;249m/\u001b[38;5;75mtmuxinator\u001b[38;5;249m/\u001b[38;5;168mjekyll.yml\u001b[38;5;249m          \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[23;1H\u001b[38;5;249m\u001b[48;5;238m<startify  ❖ ⓢ    source   unix|utf-8  14% \u001b[38;5;241m\u001b[48;5;236m \u001b[38;5;236m\u001b[48;5;114m ❷ \u001b[38;5;114m\u001b[48;5;238m\u001b[38;5;249m vimfiler \u001b[38;5;238m               \u001b[24;1H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2 q\u001b[25;1H\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;39m bundle\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 2 vim \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[13;51H\u001b[?12l\u001b[?25h\u001b[1 q"
+    ],
+    [
+      0.10518,
+      "\u001b[?25l\u001b[H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2;1H                                                 \u001b[38;5;234m│\u001b[38;5;75m[in]: \u001b[38;5;168m_posts/\u001b[38;5;249m                 \u001b[3;1H                                                 \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-03-23-hello.markdown    \u001b[4;1H\u001b[38;5;114m      ██████  ██▓███   ▄▄▄       ▄████▄  ▓█████ █\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-05-30-l..op-log.markdown\u001b[5;1H\u001b[38;5;114m    ▒██    ▒ ▓██░  ██▒▒████▄    ▒██▀ ▀█  ▓█   ▀▓█\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-07-z..oyment.markdown\u001b[6;1H\u001b[38;5;114m    ░ ▓██▄   ▓██░ ██▓▒▒██  ▀█▄  ▒▓█    ▄ ▒███   ▓\u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-13-s..source.markdown\u001b[7;1H\u001b[38;5;114m      ▒   ██▒▒██▄█▓▒ ▒░██▄▄▄▄██ ▒▓▓"
+    ],
+    [
+      0.000412,
+      "▄ ▄██▒▒▓█  ▄  \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-20-s..-react.markdown\u001b[8;1H\u001b[38;5;114m    ▒██████▒▒▒██▒ ░  ░ ▓█   ▓██▒▒ ▓███▀ ░░▒████▒ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-07-11-c..ention.markdown\u001b[9;1H\u001b[38;5;114m    ▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░ ▒▒   ▓▒█░░ ░▒ ▒  ░░░ ▒░ ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-12-31-r..r-2016.markdown\u001b[10;1H\u001b[38;5;114m    ░ ░▒  ░ ░░▒ ░       ▒   ▒▒ ░  ░  ▒    ░ ░  ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-1.markdown\u001b[11;1H\u001b[38;5;114m    ░  ░  ░  ░░         ░   ▒   ░           ░    \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-2.markdown\u001b[12;1H\u001b[38;5;114m          ░                 ░  ░░ ░         ░  ░ \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-02-10-d..deploy.markdown\u001b[13;1H\u001b[38;5;114m                                ░                \u001b[38;5;23"
+    ],
+    [
+      0.0004,
+      "4m│\u001b[38;5;75m \u001b[38;5;249m2017-02-25-c..-swarm.markdown\u001b[14;1H\u001b[38;5;114m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[15;1H\u001b[38;5;114m                     version : 0.6.0-dev   by : s\u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[16;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[17;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[18;1H\u001b[38;5;249m   [\u001b[38;5;173me\u001b[38;5;249m]  \u001b[38;5;241m<empty buffer>\u001b[38;5;249m                           \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[19;1H\u001b[38;5;249m                                                 \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[20;1H\u001b[38;5;176m   My most recently used files:\u001b[38;5;249m                  \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[21;1H\u001b[38;5;249m                                         "
+    ],
+    [
+      0.000225,
+      "        \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[22;1H\u001b[38;5;249m   [\u001b[38;5;173m0\u001b[38;5;249m]  \u001b[38;5;75m~\u001b[38;5;249m/\u001b[38;5;75m.config\u001b[38;5;249m/\u001b[38;5;75mtmuxinator\u001b[38;5;249m/\u001b[38;5;168mjekyll.yml\u001b[38;5;249m          \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[23;1H\u001b[38;5;249m\u001b[48;5;238m<startify  ❖ ⓢ    source   unix|utf-8  14% \u001b[38;5;241m\u001b[48;5;236m \u001b[38;5;236m\u001b[48;5;114m ❷ \u001b[38;5;114m\u001b[48;5;238m\u001b[38;5;249m vimfiler \u001b[38;5;238m               \u001b[24;1H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2 q\u001b[25;1H\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;39m bundle\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 2 vim \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[13;51H\u001b[?12l\u001b[?25h\u001b[1 q"
+    ],
+    [
+      0.620704,
+      "\u001b[?25l"
+    ],
+    [
+      0.008847,
+      "\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.02761,
+      "\u001b[H\u001b[38;5;236m\u001b[48;5;114m ①  2017-02-25-container-orchestration-with-docker-swarm.markdown \u001b[38;5;114m\u001b[48;5;238m  \u001b[38;5;236m\u001b[48;5;114m Buffers \u001b[2;1H\u001b[38;5;249m\u001b[48;5;236m1\u001b[3C\u001b[38;5;241m---\u001b[38;5;249m                                          \r\n\u001b[38;5;240m  1 \u001b[38;5;249mpublished:\u001b[Ctrue\r\n\u001b[38;5;240m  2 \u001b[38;5;249mtitle: Docker Swarm을 이용한 쉽고 빠른 분산  \r\n\u001b[38;5;240m    \u001b[38;5;249m서버 관리                                    \r\n\u001b[38;5;240m  3 \u001b[38;5;249mtags: [Docker, Swarm, DevOps, Server,        \r\n\u001b[38;5;240m    \u001b[38;5;249mContainer, Cluster]                          \r\n\u001b[?25l\u001b(B\u001b[m"
+    ],
+    [
+      0.000183,
+      "\u001b[38;5;240m\u001b[48;5;236m  4 \u001b[38;5;249mlayout: post                                 \r\n\u001b[38;5;240m  5 \u001b[38;5;249mexcerpt: 도커 스웜은 오케스트레이션 툴은     \r\n\u001b[38;5;240m    \u001b[38;5;249m관리가 어렵고 사용하기 복잡하다는 편견을     \r\n\u001b[38;5;240m    \u001b[38;5;249m완전히 바꿔놓았습니다. 구축 비용이 거의 들지 \r\n\u001b[38;5;240m    \u001b[38;5;249m않고 관리 또한 쉬우며 다양한 기능을 쉽게     \r\n\u001b[38;5;240m    \u001b[38;5;249m제공하고 가볍게 사용할 수 있습니다. 도커     \r\n\u001b[38;5;240m    \u001b[38;5;249m스웜의 핵심내용인 노드와 서비스에 대해       \r\n\u001b[38;5;240m    \u001b(B\u001b[m"
+    ],
+    [
+      0.000234,
+      "\u001b[38;5;249m\u001b[48;5;236m알아보고 ingress 네트워크와 자체 내장된      \r\n\u001b[38;5;240m    \u001b[38;5;249m로드밸런서,\u001b[CDNS\u001b[C서버를\u001b[C살펴봅니다.\r\n\u001b[38;5;240m  6 \u001b[38;5;249mcomments:\u001b[Cyes\r\n\u001b[38;5;240m  7 \u001b[38;5;249mtoc: true         \r\n\u001b[38;5;240m  8 \u001b[38;5;168mlast_modified_at: 2017-03-05T20:30:00+09:00\r\n\u001b[38;5;240m  9 \u001b[38;5;241m---\u001b[38;5;249m                        \r\n\u001b[38;5;240m 10 \r\n 11 \u001b[38;5;249m![\u001b[38;5;75mdocker swarm\u001b[38;5;249m](\u001b[38;5;176m{{\u001b[38;5;249m \u001b[38;5;176msite.url\u001b(B\u001b[m"
+    ],
+    [
+      6.8e-05,
+      "\u001b[38;5;249m\u001b[48;5;236m \u001b[38;5;176m}}/assets/       \u001b[3D\u001b[38;5;238m@@@\u001b[?12l\u001b[?25h\u001b(B\u001b[m"
+    ],
+    [
+      0.000599,
+      "\r\n\u001b[38;5;249m\u001b[48;5;238m<down \u001b[38;5;238m\u001b[38;5;249m ❖\u001b[Cⓢ\u001b[C \u001b[38;5;238m\u001b[38;5;249m  source \u001b[38;5;238m\u001b[48;5;241m\u001b[38;5;249m\u001b[48;5;238m  | utf-8 \u001b[38;5;238m\u001b[38;5;249m 1:1 \u001b[38;5;238m\u001b[C\u001b[38;5;249mTop\u001b(B\u001b[m"
+    ],
+    [
+      0.000475,
+      "\u001b[13;51H\u001b[38;5;75m\u001b[48;5;236m \u001b[38;5;249m2017-02-25-c..-swarm.markdown\u001b[23;50H \u001b[14;1H\u001b(B\u001b[m"
+    ],
+    [
+      0.000714,
+      "\u001b[2;5H"
+    ],
+    [
+      0.007968,
+      "\u001b[22;47H\u001b[38;5;176m\u001b[48;5;236m   \u001b[3D\u001b[38;5;238m@@@\u001b(B\u001b[m"
+    ],
+    [
+      0.000748,
+      "\u001b[2;5H"
+    ],
+    [
+      1.921578,
+      "\r\u001b[38;5;240m\u001b[48;5;236m  1 \u001b[38;5;241m---\u001b[38;5;249m                                          \r\n2   published: true                              \u001b[4;3H\u001b[38;5;240m1\u001b[6;3H2\u001b[8;3H3\u001b[9;3H4\u001b[17;3H5\u001b[18;3H6\u001b[19;3H7\u001b[20;3H8\u001b[21;2H 9\u001b[22;3H0\u001b[43C\u001b[38;5;176m   \u001b[3D\u001b[38;5;238m@@@\u001b(B\u001b[m"
+    ],
+    [
+      0.000758,
+      "\u001b[23;40H\u001b[38;5;249m\u001b[48;5;238m2\u001b[3;5H\u001b(B\u001b[m"
+    ],
+    [
+      0.567314,
+      "\u001b[2;3H\u001b[38;5;240m\u001b[48;5;236m2\r\n  1 \u001b[38;5;249mpublished: true                              \r\n3   title: Docker Swarm을 이용한 쉽고 빠른 분산  \r\n    서버 관리                                    \u001b[6;3H\u001b[38;5;240m1\u001b[8;3H2\u001b[9;3H3\u001b[17;3H4\u001b[18;3H5\u001b[19;3H6\u001b[20;3H7\u001b[21;3H8\u001b[22;2H 9\u001b[43C\u001b[38;5;176m   \u001b[3D\u001b[38;5;238m@@@\u001b(B\u001b[m"
+    ],
+    [
+      0.000919,
+      "\u001b[23;40H\u001b[38;5;249m\u001b[48;5;238m3\u001b[4;5H\u001b(B\u001b[m"
+    ],
+    [
+      0.351832,
+      "\u001b[2;3H\u001b[38;5;240m\u001b[48;5;236m3\u001b[3;3H2\r\n  1 \u001b[38;5;249mtitle: Docker Swarm을 이용한 쉽고 빠른 분산  \r\n\u001b[38;5;240m    \u001b[38;5;249m서버 관리                                    \r\n4   tags: [Docker, Swarm, DevOps, Server,        \r\n    Container, Cluster]                          \u001b[8;3H\u001b[38;5;240m1\u001b[9;3H2\u001b[17;3H3\u001b[18;3H4\u001b[19;3H5\u001b[20;3H6\u001b[21;3H7\u001b[22;3H8\u001b[43C\u001b[38;5;176m   \u001b[3D\u001b[38;5;238m@@@\u001b(B\u001b[m"
+    ],
+    [
+      0.001072,
+      "\u001b[23;40H\u001b[38;5;249m\u001b[48;5;238m4\u001b[6;5H\u001b(B\u001b[m"
+    ],
+    [
+      2.5,
+      "\u001b[?25l\u001b[2 q\u001b[25;1H\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;39mundle\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 2 vim \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[6;5H\u001b[?12l\u001b[?25h\u001b[1 q"
+    ],
+    [
+      0.126862,
+      "\u001b[?25l\u001b[H\u001b[38;5;236m\u001b[48;5;114m ①  2017-02-25-container-orchestration-with-docker-swarm.markdown \u001b[38;5;114m\u001b[48;5;238m  \u001b[38;5;236m\u001b[48;5;114m Buffers \u001b[2;1H\u001b[38;5;240m\u001b[48;5;236m  3 \u001b[38;5;241m---\u001b[38;5;249m                                          \u001b[38;5;234m│\u001b[38;5;75m[in]: \u001b[38;5;168m_posts/\u001b[38;5;249m                 \u001b[3;1H\u001b[38;5;240m  2 \u001b[38;5;249mpublished: true                              \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-03-23-hello.markdown    \u001b[4;1H\u001b[38;5;240m  1 \u001b[38;5;249mtitle: Docker Swarm을 이용한 쉽고 빠른 분산  \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-05-30-l..op-log.markdown\u001b[5;1H\u001b[38;5;240m    \u001b[38;5;249m서버 관리                                    \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-07-z..oyment.markdown\u001b[6;1H4   tags: [Docker, Swarm, DevOps, Server,        \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-13-s..source.markdown\u001b[7;1H    Container, Cluster]                          \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-06-20-s..-react.markdown\u001b[8;1H"
+    ],
+    [
+      0.000372,
+      "\u001b[38;5;240m  1 \u001b[38;5;249mlayout: post                                 \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-07-11-c..ention.markdown\u001b[9;1H\u001b[38;5;240m  2 \u001b[38;5;249mexcerpt: 도커 스웜은 오케스트레이션 툴은     \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2016-12-31-r..r-2016.markdown\u001b[10;1H\u001b[38;5;240m    \u001b[38;5;249m관리가 어렵고 사용하기 복잡하다는 편견을     \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-1.markdown\u001b[11;1H\u001b[38;5;240m    \u001b[38;5;249m완전히 바꿔놓았습니다. 구축 비용이 거의 들지 \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-01-19-d..ners-2.markdown\u001b[12;1H\u001b[38;5;240m    \u001b[38;5;249m않고 관리 또한 쉬우며 다양한 기능을 쉽게     \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-02-10-d..deploy.markdown\u001b[13;1H\u001b[38;5;240m    \u001b[38;5;249m제공하고 가볍게 사용할 수 있습니다. 도커     \u001b[38;5;234m│\u001b[38;5;75m \u001b[38;5;249m2017-02-25-c..-swarm.markdown\u001b[14;1H\u001b[38;5;240m    \u001b[38;5;249m스웜의 핵심내용인 노드와 서비스에 대해 "
+    ],
+    [
+      0.000393,
+      "      \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[15;1H\u001b[38;5;240m    \u001b[38;5;249m알아보고 ingress 네트워크와 자체 내장된      \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[16;1H\u001b[38;5;240m    \u001b[38;5;249m로드밸런서, DNS 서버를 살펴봅니다.           \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[17;1H\u001b[38;5;240m  3 \u001b[38;5;249mcomments: yes                                \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[18;1H\u001b[38;5;240m  4 \u001b[38;5;249mtoc: true                                    \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[19;1H\u001b[38;5;240m  5 \u001b[38;5;168mlast_modified_at: 2017-03-05T20:30:00+09:00\u001b[38;5;249m  \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[20;1H\u001b[38;5;240m  6 \u001b[38;5;241m---\u001b[38;5;249m                                          \u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[21;1H\u001b[38;5;240m  7 \u001b[38;5;249m                                             \u001b[38;5;234m│\u001b[38;5;236m~            "
+    ],
+    [
+      6.6e-05,
+      "                 \u001b[22;1H\u001b[38;5;240m  8 \u001b[38;5;249m![\u001b[38;5;75mdocker swarm\u001b[38;5;249m](\u001b[38;5;176m{{\u001b[38;5;249m \u001b[38;5;176msite.url\u001b[38;5;249m \u001b[38;5;176m}}/assets/    \u001b[38;5;238m@@@\u001b[38;5;234m│\u001b[38;5;236m~                             \u001b[23;1H\u001b[38;5;249m\u001b[48;5;238m<down \u001b[38;5;238m\u001b[38;5;249m ❖ ⓢ  \u001b[38;5;238m\u001b[38;5;249m  source \u001b[38;5;238m\u001b[48;5;241m\u001b[38;5;249m\u001b[48;5;238m  | utf-8 \u001b[38;5;238m\u001b[38;5;249m 4:1 \u001b[38;5;238m\u001b[38;5;249m Top \u001b[48;5;236m \u001b[38;5;236m\u001b[48;5;114m ❷ \u001b[38;5;114m\u001b[48;5;238m\u001b[38;5;249m vimfiler \u001b[38;5;238m               \u001b[24;1H\u001b[38;5;249m\u001b[48;5;236m                                                                                \u001b[2 q\u001b[25;1H\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;39mundle\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 2 vim \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[6;5H\u001b[?12l\u001b[?25h\u001b[1 q"
+    ],
+    [
+      2.5,
+      "\u001b]0;subicuras-Mac ❐ jekyll ● 3 zsh\u0007\u001b[?25l\u001b[2 q\u001b[H\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<e \u001b[38;5;39m2 vim\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 3 zsh \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[1;1H\u001b[?12l\u001b[?25h\u001b[?1002l\u001b[?1006l\u001b[?2004l"
+    ],
+    [
+      0.116615,
+      "\u001b[?25l\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<e \u001b[38;5;39m2 vim\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 3 zsh \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[1;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.240654,
+      "\u001b]0;subicuras-Mac ❐ jekyll ● 3 ..ura.github.io\u0007\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;16m\u001b[48;5;39m\u001b[1m.ura.github.io \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[1;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.05627,
+      "\u001b[1;24r\u001b[2;24r\u001b[23S\u001b[1;1H\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\r\n\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[3;3H\u001b[?2004h"
+    ],
+    [
+      0.077703,
+      "\u001b[?25l\u001b[H\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;16m\u001b[48;5;39m\u001b[1m.ura.github.io \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[3;3H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.029387,
+      "\u001b[1;24r\u001b[2;24r\u001b[23S\u001b[1;1H\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m \u001b[38;5;242msource\r\n\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[3;3H"
+    ],
+    [
+      0.347421,
+      "\u001b[4mc\u001b(B\u001b[m\u001b[90md /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[4G\u001b(B\u001b[m"
+    ],
+    [
+      0.15783,
+      "\b\u001b[32mcu\u001b[90mrl -sLf https://spacevim.org/install.sh | bash\u001b[39m                   \u001b[5G"
+    ],
+    [
+      0.126062,
+      "\b\b\u001b[31m\u001b[1mcur\u001b(B\u001b[m"
+    ],
+    [
+      0.080814,
+      "\u001b[3G\u001b[32mcurl\u001b(B\u001b[m"
+    ],
+    [
+      0.113649,
+      " "
+    ],
+    [
+      0.463786,
+      "l                                          \u001b[9G"
+    ],
+    [
+      0.095805,
+      "o"
+    ],
+    [
+      0.1287,
+      "c"
+    ],
+    [
+      0.06388,
+      "a"
+    ],
+    [
+      0.047956,
+      "l"
+    ],
+    [
+      0.176302,
+      "h"
+    ],
+    [
+      0.06201,
+      "o"
+    ],
+    [
+      0.113653,
+      "s"
+    ],
+    [
+      0.080509,
+      "t"
+    ],
+    [
+      0.127349,
+      ":"
+    ],
+    [
+      0.192043,
+      "4"
+    ],
+    [
+      0.095397,
+      "0"
+    ],
+    [
+      0.159385,
+      "0"
+    ],
+    [
+      0.145073,
+      "0"
+    ],
+    [
+      0.065044,
+      "\r\n\u001b[?2004l"
+    ],
+    [
+      0.009343,
+      "\u001b]0;subicuras-Mac ❐ jekyll ● 3 curl\u0007\u001b[?25l\u001b[25d\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m< \u001b[38;5;39m2 vim\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 3 curl \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[4;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.113573,
+      "\u001b[?25l\u001b[H\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m \u001b[38;5;242msource\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m \u001b[32mcurl\u001b[39m localhost:4000\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m< \u001b[38;5;39m2 vim\u001b[38;5;245m \u001b[38;5;16m\u001b[48;5;39m\u001b[1m 3 curl \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[4;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.278134,
+      "<!DOCTYPE html>\r\n<html>\u001b[7;1H  <head>\r\n  <meta charset=\"utf-8\">\r\n  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\u001b[14;1H  <title>Subicura's Blog</title>\r\n  <meta name=\"description\" content=\"서비큐라 기술 블로그\u001b[1;24r\u001b[5S\u001b[10;57H\" />\u001b[12;1H  <meta name=\"HandheldFriendly\" content=\"True\" />\r\n  <meta name=\"MobileOptimized\" content=\"320\" />\r\n  <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\r\n  <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\">\r\n  \r\n    <meta name=\"twitter:card\" content=\"summary\" />\r\n    <meta name=\"twitter:site\" content=\"@subicura\" />\r\n    <meta name=\"twitter:title\" content=\"Subicura's Blog\" />\r\n    <meta name=\"twitter:image\" content=\"http://localhost:4000/assets/images/df_logo.png\" />\r\n    \r\n    <meta name=\"twitter:description\" content=\"서"
+    ],
+    [
+      0.000629,
+      "비큐라 기술 블로그\" \u001b[1;25r\u001b[24;69H\u001b[1;24r\u001b[7S\u001b[17;69H/>\r\n    \r\n  \r\n  \r\n  <meta property=\"og:site_name\" content=\"Subicura's Blog\" />\r\n  <meta property=\"og:title\" content=\"Subicura's Blog\"/>\r\n  \r\n  <meta property=\"og:description\" content=\"서비큐라 기술 블로그\u001b[20S\u001b[4d\" />\r\n  \r\n  <meta property=\"og:image\" content=\"http://localhost:4000/assets/images/df_logo.png\" />\r\n  <meta property=\"og:url\" content=\"http://localhost:4000/\" />\r\n  <meta property=\"og:type\" content=\"article\" />\r\n  \u001b[12;1H  <meta property=\"fb:app_id\" content=\"1611862309129685\" />\u001b[14;1H  <meta name=\"naver-site-verification\" content=\"cc257cc7988ed85c9db6c228330b4870f9dfa25f\" />\u001b[17;1H  <link rel=\"canonical\" href=\"http://localhost:4000/\"/>\r\n  <link rel=\"shortcut icon\" href=\"/assets/images/favicon.png\" type=\"image/png\"/>\u001b[19;1H  <link rel=\"stylesheet\" href=\"//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i\" />\r\n  <link href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel="
+    ],
+    [
+      0.000192,
+      "\"stylesheet\" />\u001b[24;1H  <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/main.css?1511\u001b[1;25r\u001b[24;66H\u001b[1;24r\u001b[24S\u001b[1;1H        urls: ['/css/spoqa-han-sans-font.css']\r\n      }\r\n    });\r\n  </script>\u001b[6;1H  <script>\r\n    var _mailChimpUrl = \"http://eepurl.com/cywDtP\";\r\n  </script>\r\n</head>\u001b[12;1H  <body>\u001b[14;1H    <!-- header start -->\r\n<script>\r\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\r\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\u001b[18;1H  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');\u001b[23;1H  ga('create', 'UA-43194822-1', 'auto');\r\n  ga('require', 'displayfeatures')\u001b[1;25r\u001b[24;35H"
+    ],
+    [
+      0.000546,
+      "\u001b[1;24r\u001b[24S62309129685\";\u001b[2;1H  fjs.parentNode.insertBefore(js, fjs);\r\n}(document, 'script', 'facebook-jssdk'));</script>\u001b[5;1H<a href=\"http://localhost:4000\" class=\"logo-readium\"><span class=\"logo\" style=\"background-image: url(/assets/images/df_logo.png)\"></span></a>\r\n<!-- header end -->\u001b[10;1H    <!-- content start -->\u001b[12;1H    <div class=\"page-content\">\r\n      <div class=\"wrapper\">\r\n        <div class=\"teaserimage\">\r\n    <div class=\"teaserimage-image\" style=\"background-image: url(/assets/images/background_image.jpg)\">\r\n        Teaser Image\r\n    </div>\r\n</div>\u001b[21;1H<header class=\"blog-header\">\r\n    \r\n      <a class=\"blog-logo\" href=\"http://localhost:4000\" style=\"background-image: url('/assets/images/df_logo.png')\">Subicura's Blo\u001b[1;25r\u001b[24;51H"
+    ],
+    [
+      0.000342,
+      "\u001b[1;24r\u001b[3S\u001b[21;51Hg</a>\r\n    \r\n    <h1 class=\"blog-title\">Subicura's Blog</h1>\r\n    <h2 class=\"blog-description\">서비큐라 기술 블로그\u001b[9S\u001b[16;1H</h2>\r\n    <div class=\"custom-links\">\r\n      \r\n        \r\n            <a class=\"icon-twitter\" href=\"https://twitter.com/subicura\"  title=\"Follow me on twitter\"\">\r\n              <i class=\"fa fa-twitter\"></i>\r\n            </a>\r\n            &nbsp;&nbsp;·\u001b[8S\u001b[8A&nbsp;&nbsp;\r\n        \r\n      \r\n        \r\n            <a class=\"icon-github\" href=\"https://github.com/subicura\"  title=\"Fork me on github\"\">\r\n              <i class=\"fa fa-github\"></i>\r\n            </a>\r\n            &nbsp;&nbsp;·\u001b[4S\u001b[4A&nbsp;&nbsp;\r\n        \r\n      \r\n      <a href=\"/about/\">About</a>\r\n      &nbsp;&nbsp;·\u001b[15S\u001b[9d&nbsp;&nbsp;\r\n      <a href=\"/tags/\">Tags</a>\r\n    </div>\r\n</header>\u001b[15;1H<main class=\"content\" role=\"main\">\u001b[17;1H    \u001b[19;1H    <div class=\"cf frame\">\r\n      \r\n        <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\" role=\"article\">\r\n          <div c"
+    ],
+    [
+      0.000314,
+      "lass=\"article-item\">\r\n            <header class=\"post-header\u001b[1;25r\u001b[24;39H\u001b[1;24r\u001b[4S\u001b[20;39H\">\r\n              <h2 class=\"post-title\" itemprop=\"name\">\r\n                <a href=\"/2017/02/25/container-orchestration-with-docker-swarm.html\" itemprop=\"url\">\r\n                  Docker Swarm을 이용한 쉽고 빠른 분산 서버 관리\u001b[6S\u001b[19;1H                  \r\n                </a>\r\n              </h2>\r\n            </header>\r\n            <section class=\"post-excerpt\" itemprop=\"description\">\r\n              <p>도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다\u001b[24;80H\n\r는 편견을 완전히 바꿔놓았습니다. 구축 비용이 거의 들지 않고 관리 또한 쉬우며 다\n\r양한 기능을 쉽게 제공하고 가볍게 사용할 수 있습니다. 도커 스웜의 핵심내용인 노드\u001b[24;80H\n\r와 서비스에 대해 알아보고 ingress 네트워크와 자체 내장된 로드밸런서, DNS 서버를 \u001b[24;80H\n\r살펴봅니다\u001b[5S\u001b[5A.</p>\r\n            </section>"
+    ],
+    [
+      0.000305,
+      "\r\n            <div class=\"post-meta\">\r\n              <time datetime=\"25 February 2017\">25 February 2017</time>\r\n            </div>\r\n          <\u001b[1;25r\u001b[24;12H\u001b[1;24r\u001b[10S\u001b[14;12H/div>\r\n        </article>\r\n      \r\n        <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\" role=\"article\">\r\n          <div class=\"article-item\">\r\n            <header class=\"post-header\">\r\n              <h2 class=\"post-title\" itemprop=\"name\">\r\n                <a href=\"/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html\" itemprop=\"url\">\r\n                  초보를 위한 도커 안내서 - 이미지 만들고 배포하기\u001b[8S\u001b[17;1H                  \r\n                    <span class=\"series\">SERIES 3/3</span>\r\n                  \r\n                </a>\r\n              </h2>\r\n            </header>\r\n            <section class=\"post-excerpt\" itemprop=\"description\">\r\n              <p>이 글은 초보를 위한 도커 안내서 - 설치부터 배포까지 시리즈의 마\u001b[24;80H\n\r지막 글입니다. "
+    ],
+    [
+      0.000295,
+      "지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이\n\r미지를 만들고 서버에 배포해보도록 하겠습니다\u001b[2S\u001b[2A.</p>\r\n            </section>\r\n          \u001b[1;25r\u001b[24;11H\u001b[1;24r\u001b[13S\u001b[11;11H  <div class=\"post-meta\">\r\n              <time datetime=\"10 February 2017\">10 February 2017</time>\r\n            </div>\r\n          </div>\r\n        </article>\r\n      \r\n        <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\" role=\"article\">\r\n          <div class=\"article-item\">\r\n            <header class=\"post-header\">\r\n              <h2 class=\"post-title\" itemprop=\"name\">\r\n                <a href=\"/2017/01/19/docker-guide-for-beginners-2.html\" itemprop=\"url\">\r\n                  초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기\u001b[8S\u001b[17;1H                  \r\n                    <span class=\"series\">SERIES 2/3</span>\r\n                  \r\n                </a>\r\n              </h2>\r\n            </header>\r\n            <section clas"
+    ],
+    [
+      0.000449,
+      "s=\"post-excerpt\" itemprop=\"description\">\r\n              <p>초보를 위한 도커 안내서 2번째 글입니다. 도커의 기본적인 내용을 \u001b[24;80H\n\r이야기 했던 첫번째 글에 이어 실제로 도커를 설치하고 컨테이너를 실행하면\u001b[1;25r\u001b[24;72H서 도커 \u001b[1;24r\u001b[24;80H\n\r명령어를 알아봅니다. 도커를 처음 접하는 분들을 위해 아주 가볍게 자주 쓰는 명령어\u001b[24;80H\n\r를 다루었습니다\u001b[15S\u001b[9d.</p>\r\n            </section>\r\n            <div class=\"post-meta\">\r\n              <time datetime=\"19 January 2017\">19 January 2017</time>\r\n            </div>\r\n          </div>\r\n        </article>\r\n      \r\n        <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\" role=\"article\">\r\n          <div class=\"article-item\">\r\n            <header class=\"post-header\">\r\n              <h2 class=\"post-title\" itemprop=\"name\">\r\n                <a href=\"/2017/01/19/docker-guide-for-beginners-1.html\" itemprop=\"url\">\r\n                  초보를 위한 도"
+    ],
+    [
+      0.000248,
+      "커 안내서 - 도커란 무엇인가\u001b[8S\u001b[8A?\r\n                  \r\n                    <span class=\"series\">SERIES 1/3</span>\r\n                  \r\n                </a>\r\n              </h2>\r\n            </header>\r\n            <section class=\"post-excerpt\" itemprop=\"description\">\r\n              <p>도커를 처음 접\u001b[1;25r\u001b[24;32H하는 시스템 관리자나 서버 개발자를 대상으로 도커 \u001b[24;1H\u001b[1;24r\u001b[24;80H\n\r전반에 대해 얕고 넓은 지식을 담고 있습니다. 도커가 등장한 배경과 도커의 역사, 그\u001b[24;80H\n\r리고 도커의 핵심 개념인 컨테이너와 이미지에 대해 알아보고 왜 이렇게 도커가 인기 \u001b[24;80H\n\r인지 하나하나 살펴보겠습니다\u001b[14S\u001b[10d.</p>\r\n            </section>\r\n            <div class=\"post-meta\">\r\n              <time datetime=\"19 January 2017\">19 January 2017</time>\r\n            </div>\r\n          </div>\r\n        </article>\r\n      \r\n        <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\" role=\"article"
+    ],
+    [
+      0.000485,
+      "\">\r\n          <div class=\"article-item\">\r\n            <header class=\"post-header\">\r\n              <h2 class=\"post-title\" itemprop=\"name\">\r\n                <a href=\"/2016/12/31/remember-2016.html\" itemprop=\"url\">\r\n                  2016년 블로그 회고\u001b[5S\u001b[20;1H                  \r\n                </a>\r\n              </h2>\r\n            </header>\r\n            <section class=\"post-excerpt\" item\u001b[1;25r\u001b[24;47H\u001b[1;24r\u001b[24;80H\n\u001b[23;47Hprop=\"description\">\r\n              <p>어느덧 2016년 마지막 날입니다. 올 한해 역시 정신없이 지나갔고 \n\r작년에 태어난 딸도 돌을 지나고 어느새 python 개발 서적을 읽을 정도의 나이가 되었\u001b[24;80H\n\r습니다. 회사는 6주년을 맞이했고 올해 처음으로 일반 고객을 대상으로한 서비스를 오\u001b[24;80H\n\r픈했습니다. 서비스를 운영하면서 느낀 점도 많지만 일단은 블로그에 대해 한해를 마\n\r무리하는 회고를 하려고 합니다\u001b[14S\u001b[10d.</p>\r\n            </section>\r\n            <div c"
+    ],
+    [
+      0.000189,
+      "lass=\"post-meta\">\r\n              <time datetime=\"31 December 2016\">31 December 2016</time>\r\n            </div>\r\n          </div>\r\n        </article>\r\n      \r\n        <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\" role=\"article\">\r\n          <div class=\"article-item\">\r\n            <header class=\"post-header\">\r\n              <h2 class=\"post-title\" itemprop=\"name\">\r\n                <a href=\"/2016/07/11/coding-convention.html\" itemprop=\"url\">\r\n  \u001b[1;25r\u001b[24;3H                linter를 이용한 코딩스타일과 에러 체크하기\u001b[1;24r\u001b[6S\u001b[19;1H                  \r\n                </a>\r\n              </h2>\r\n            </header>\r\n            <section class=\"post-excerpt\" itemprop=\"description\">\r\n              <p>홈쇼핑처럼 6번째 상품인 까르보돈까스는 부먹과 찍먹을 선택해야 \n\r합니다. 코딩도 둘중에 하나를 선택해야 하는 경우가 많은데 협업을 위해 코딩 스타일\u001b[24;80H\n\r을 설정하고 규칙에 어긋난 코드를 한땀한땀 "
+    ],
+    [
+      0.000391,
+      "수정했던 순간이 떠올라 linter에 대해 \n\r이야기합니다\u001b[13S\u001b[11d.</p>\r\n            </section>\r\n            <div class=\"post-meta\">\r\n              <time datetime=\"11 July 2016\">11 July 2016</time>\r\n            </div>\r\n          </div>\r\n        </article>\r\n      \r\n        <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\" role=\"article\">\r\n          <div class=\"article-item\">\r\n            <header class=\"post-header\">\r\n              <h2 class=\"post-title\" itemprop=\"name\">\r\n               \u001b[1;25r\u001b[24;16H\u001b[1;24r\u001b[2S\u001b[22;16H <a href=\"/2016/06/20/server-side-rendering-with-react.html\" itemprop=\"url\">\r\n                  왜 React와 서버 사이드 렌더링인가\u001b[6S\u001b[6A?\r\n                  \r\n                </a>\r\n              </h2>\r\n            </header>\r\n            <section class=\"post-excerpt\" itemprop=\"description\">\r\n              <p>홈쇼핑처럼 4번째 상품인 튀김을 기름에 튀기면서 React를 적용하느\u001b[24;80H\n\r라 고생했던 순간이 떠올라 React와"
+    ],
+    [
+      0.000458,
+      " 서버 사이드 렌더링 적용과정을 정리해봅니다. 여\u001b[24;80H\n\r기서는 어떻게보다는 왜에 대해 설명합니다\u001b[13S\u001b[11d.</p>\r\n            </section>\r\n            <div class=\"post-meta\">\r\n              <time datetime=\"20 June 2016\">20 June 2016</time>\r\n            </div>\r\n          </div>\r\n        </article>\r\n      \r\n        <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\" role=\"article\">\r\n          <div class=\"article-item\">\r\n            <header class=\"post-header\">\r\n              <h2 class=\"post-title\" itemprop=\"name\">\r\n                <a h\u001b[1;25r\u001b[24;21H\u001b[1;24r\u001b[2S\u001b[22;21Href=\"/2016/06/13/start-go-shipment-tracking-opensource.html\" itemprop=\"url\">\r\n                  Go언어로 오픈소스 배송조회 서비스 만들기\u001b[6S\u001b[19;1H                  \r\n                </a>\r\n              </h2>\r\n            </header>\r\n            <section class=\"post-excerpt\" itemprop=\"description\">\r\n              <p>홈쇼핑처럼에서 세번째로 런칭한 돈까스를 "
+    ],
+    [
+      0.00029,
+      "구매해 주시는 분들을 보\u001b[24;80H\n\r면서 *아.. 받은 만큼 나도 뭔가 베풀어야겠구나* 라는 생각에 배송조회 서비스를 오\n\r픈소스로 공개하는 과정을 정리해봅니다. github이라는 소셜코딩 플랫폼이 등장하면서\u001b[24;80H\n\r 오픈소스에 참여할 수 있는 장벽이 많이 낮아졌습니다. 사용하던 오픈소스에서 버그\n\r를 발견하면 이슈를 살펴보고 수정한 소스를 슬쩍 풀 리퀘스트 하면 됩니다. 내가 작\n\r성한 소스가 커미터\u001b[3S\u001b[3A...</p>\r\n            </section>\r\n            <div class=\"post-meta\">\r\n              <time datetime=\"13 June 2016\">13 June 2016</time>\u001b[1;25r\u001b[24;64H\u001b[1;24r\u001b[12S\u001b[13;1H            </div>\r\n          </div>\r\n        </article>\r\n      \r\n        <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\" role=\"article\">\r\n          <div class=\"article-item\">\r\n            <header class=\"post-header\">\r\n              <h2 class=\"post-title\" itemprop=\"name\">\r\n                <"
+    ],
+    [
+      0.000246,
+      "a href=\"/2016/06/07/zero-downtime-docker-deployment.html\" itemprop=\"url\">\r\n                  도커를 이용한 웹서비스 무중단 배포하기\u001b[6S\u001b[19;1H                  \r\n                </a>\r\n              </h2>\r\n            </header>\r\n            <section class=\"post-excerpt\" itemprop=\"description\">\r\n              <p>홈쇼핑처럼x밀본고기덮밥이 팔리는걸 관리자화면에서 보면서 하루에\u001b[24;80H\n\r도 여러번 소스를 업데이트 하고 운영서버로 배포했던 내용이 떠올라 후기로 정리합니\u001b[24;80H\n\r다. 배포는 단순히 로컬의 소스를 운영 서버로 복사하는 것입니다. FTP로 파일을 복사\u001b[24;80H\n\r하는 방식은 가장 기본이면서 그럭저럭 잘 동작합\u001b[1;25r\u001b[24;47H니다. 배포 중에 서비스가 잠깐 멈추\u001b[24;1H\u001b[1;24r\u001b[24;80H\n\r는 문제가 있다면 새벽에 배포하면 되고 굳이 다른 개발할일도 많은데 배포에 신경을 \u001b[24;80H\n\r써야 하는\u001b[14S\u001b[10d...</p>\r\n            </section>\r\n            <"
+    ],
+    [
+      0.000783,
+      "div class=\"post-meta\">\r\n              <time datetime=\"07 June 2016\">07 June 2016</time>\r\n            </div>\r\n          </div>\r\n        </article>\r\n      \r\n        <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\" role=\"article\">\r\n          <div class=\"article-item\">\r\n            <header class=\"post-header\">\r\n              <h2 class=\"post-title\" itemprop=\"name\">\r\n                <a href=\"/2016/05/30/likehs-develop-log.html\" itemprop=\"url\">\r\n                  홈쇼핑처럼 개발후기\u001b[6S\u001b[19;1H                  \r\n                </a>\r\n              </h2>\r\n            </header>\r\n            <section class=\"post-excerpt\" itemprop=\"description\">\r\n              <p>홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 \"홈쇼핑처럼\"을 개\u001b[24;80H\n\r발했던 내용이 떠올\u001b[1;25r\u001b[24;19H라 후기로 정리합니다. 기술적으로 고민했던 것과 어떤 기술들을 \u001b[1;24r\u001b[24;80H\n\r사용했는지를 중점으로 정리해 보았습니다. \"아, 이 스타트업은"
+    ],
+    [
+      0.00087,
+      " 이렇게 일을 하고 이\n\r런식으로 서비스를 개발했구나\" 하고 봐주시면 감사할 것 같습니다. 더 나은 대안이 \n\r있다면 추천해주셔도 좋습니다\u001b[24S\u001b[H          </div>\r\n        </article>\r\n      \r\n    </div>\u001b[6;1H    <nav class=\"pagination\" role=\"navigation\">\r\n      \r\n        <a class=\"newer-posts\" href=\"/page2\">&larr; Older posts</a>\r\n      \r\n      <span class=\"page-number\">Page 1 of 2</span>\r\n      \r\n    </nav>\r\n</main>\u001b[15;1H      </div>\r\n    </div>\u001b[18;1H    <!-- content end -->\u001b[20;1H    <!-- footer start -->\u001b[22;1H<footer class=\"site-footer\">\r\n  <a class=\"subscribe\" href=\"/feed.xml\"> <span class=\"tooltip\"> <i class=\"fa fa-rss\"></i> RSS 구독하기\u001b[2S\u001b[2A</span></a>\r\n   \r\n    <a c\u001b[1;25r\u001b[24;9H\u001b[1;24r\u001b[24;80H\n\u001b[23;9Hlass=\"subscribe\" href=\"http://eepurl.com/cywDtP\" target=\"_blank\"> <span class=\"tooltip\"> <i class=\"fa fa-rss\"></i> Email 구독하기\u001b[23S\u001b[1d</span></a>\r\n  \r\n  <div class=\"inner\">\r\n     <section class=\"copyright\">All content copyright <a href=\"mail"
+    ],
+    [
+      0.000937,
+      "to:subicura@subicura.com\">subicura</a> &copy; 2017 &bull; All rights reserved.</section>\r\n     <section class=\"poweredby\">Made with <a href=\"http://jekyllrb.com\"> Jekyll</a></section>\r\n  </div>\r\n</footer>\r\n<!-- footer end -->\u001b[12;1H    <script src=\"https://code.jquery.com/jquery-1.11.1.min.js\"></script>\r\n<script type=\"text/javascript\" src=\"/assets/js/jquery.fitvids.js\"></script>\r\n<script type=\"text/javascript\" src=\"/assets/js/index.js?1511474024784647000\"></script>\r\n<script type=\"text/javascript\" src=\"/assets/js/readingtime.js\"></script>\r\n<script type=\"text/javascript\" src=\"/assets/js/asciinema-player.js\"></script>\r\n<script>\r\n(function ($) {\r\n  \"use strict\";\r\n  $(document).ready(function(){\u001b[23;1H    var $window = $(window),\r\n    $image = $('.post-image-image, .teaserimage-image'\u001b[1;25r\u001b[24;55H\u001b[1;24r\u001b[24S\u001b[2;1H      $('a[href*=#]:not([href=#])').click(function() {\r\n        if (location.pathname.replace(/^\\//,'') == this.pathname.replace(/^\\//,'')\r\n         && location.hostname == this.hostname) {\r\n          "
+    ],
+    [
+      0.000954,
+      "var target = $(this.hash);\r\n          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');\r\n          if (target.length) {\r\n            $('html,body').animate({ scrollTop: target.offset().top }, 500);\r\n            return false;\r\n          }\r\n        }\r\n      });\u001b[16;1H  });\r\n}(jQuery));\r\n</script>\u001b[21;1H  </body>\u001b[23;1H</html>\u001b[1;25r\u001b[24;1H"
+    ],
+    [
+      0.00021,
+      "\u001b]0;subicuras-Mac ❐ jekyll ● 3 ..ura.github.io\u0007\u001b[?25l\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;16m\u001b[48;5;39m\u001b[1m.ura.github.io \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.023128,
+      "\u001b[1;24r\u001b[24;1H\u001b[K\u001b[2S\u001b[A\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m \u001b[38;5;242msource\r\n\u001b[35m❯\u001b[39m \u001b[K\u001b[1;25r\u001b[24;3H"
+    ],
+    [
+      0.000286,
+      "\u001b[?2004h"
+    ],
+    [
+      1.235782,
+      "\u001b[?25l\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;16m\u001b[48;5;39m\u001b[1mra.github.io \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[24;3H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.12387,
+      "\u001b[?25l\u001b[H        if (location.pathname.replace(/^\\//,'') == this.pathname.replace(/^\\//,'')\u001b[K\r\n         && location.hostname == this.hostname) {\u001b[K\r\n          var target = $(this.hash);\u001b[K\r\n          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');\u001b[K\r\n          if (target.length) {\u001b[K\r\n            $('html,body').animate({ scrollTop: target.offset().top }, 500);\u001b[K\r\n            return false;\u001b[K\r\n          }\u001b[K\r\n        }\u001b[K\r\n      });\u001b[K\r\n\u001b[K\r\n  });\u001b[K\r\n}(jQuery));\u001b[K\r\n</script>\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n  </body>\u001b[K\r\n\u001b[K\r\n</html>\u001b[K\r\n\u001b[K\r\n\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m \u001b[38;5;242msource\u001b[39m\u001b[K\r\n\u001b[35m❯\u001b[39m\u001b[K\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;16m\u001b[48;5;39m\u001b[1mra.github.io \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m⌨  | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[24;3H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.011817,
+      "\u001b[?25l\r\n\u001b[38;5;16m\u001b[48;5;226m\u001b[1m ❐ jekyll \u001b(B\u001b[m\u001b[38;5;254m\u001b[48;5;199m ↑ 4h 47m \u001b[38;5;199m\u001b[48;5;232m \u001b[38;5;245m<\u001b[38;5;16m\u001b[48;5;39m\u001b[1m.ura.github.io \u001b(B\u001b[m\u001b[38;5;245m\u001b[48;5;232m | 06:54 | 24 Nov \u001b[38;5;254m\u001b[48;5;160m subicura \u001b[38;5;16m\u001b[48;5;254m\u001b[1m subicuras-Mac \u001b(B\u001b[m\u001b[24;3H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.001978,
+      "\u001b[1;25r\u001b(B\u001b[m\u001b[?1l\u001b>\u001b[H\u001b[2J\u001b[?2004l\u001b]112\u0007\u001b[?12l\u001b[?25h\u001b[?1000l\u001b[?1002l\u001b[?1006l\u001b[?1005l\u001b[?1004l\u001b[?1049l"
+    ],
+    [
+      0.000636,
+      "[detached (from session jekyll)]\r\n"
+    ],
+    [
+      0.003142,
+      "\u001b]2;subicura@subicuras-Mac: ~\u0007\u001b]1;~\u0007\u001b]0;~\u0007"
+    ],
+    [
+      0.050437,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~\u001b[39m \u001b[33m49s\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[K\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      0.768284,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

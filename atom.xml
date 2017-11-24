@@ -4,13 +4,845 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2017-11-16T16:10:59+09:00</updated>
+ <updated>2017-11-24T10:33:12+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>본격 macOS에 개발 환경 구축하기</title>
+   <link href="https://subicura.com/2017/11/22/mac-os-development-environment-setup.html"/>
+   <updated>2017-11-22T00:00:00+09:00</updated>
+   <id>https://subicura.com/2017/11/22/mac-os-development-environment-setup</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/terminal-neofetch.png&quot; alt=&quot;iTerm2 + snazzy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;개발 관련 스터디 모임이나 컨퍼런스에서 발표를 듣다 보면 발표 주제와 별도로 예제 화면이나 라이브 코딩에서 사용하는 개발 도구에 관심이 가는 경우가 있습니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;같은 macOS를 사용하는데 터미널이 왜 다르게 생긴 거지? vi 에디터에 원래 저런 기능이 있었어? 뭐가 저렇게 막 글자가 자동완성되는 거지? 저건 무슨 테마지?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;개인적인 경험으로도 어디서 발표를 할 때 주제와 상관없이 “아까 그거 무슨 프로그램이에요?”, “어떻게 셋팅한 거에요?” 와 같은 질문을 받은 적이 있고 다른 분들 화면을 보고 쉬는 시간에 조용히 가서 “아까 그거 어떻게 하신건지..” 하고 물어본 경우도 많습니다.&lt;/p&gt;
+
+&lt;p&gt;개발 환경 설정은 실제적인 개발과 상관이 없고 &lt;del&gt;해도 그만 안 해도 그만&lt;/del&gt; 개발자들의 개인 취향에 영향을 많이 받기 때문에 처음부터 차근차근 설정하는 법을 알려주는 문서가 잘 없고 여기저기 작은 단위로 소개하거나 모임 같은 곳에서 입에서 입으로 전해지고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이 글은 macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다.&lt;/p&gt;
+
+&lt;p&gt;최종 설정이 완료된 화면을 살펴보고 어떻게 설정하는지 알아봅니다.&lt;/p&gt;
+
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-11-22-mac-os-development-environment-setup/terminal-demo.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;키보드 기호 설명&lt;/h2&gt;
+
+&lt;p&gt;단축키 입력과 관련해서 기호를 사용합니다. 잘 기억해 둡니다.&lt;/p&gt;
+
+&lt;table class=&quot;table table-key-value-60&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;기호&lt;/th&gt;
+      &lt;th&gt;설명&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;⌘&lt;/td&gt;
+      &lt;td&gt;Command&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;⌥&lt;/td&gt;
+      &lt;td&gt;Option&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;⌃&lt;/td&gt;
+      &lt;td&gt;Control&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;⇧&lt;/td&gt;
+      &lt;td&gt;Shift&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;+&lt;/td&gt;
+      &lt;td&gt;동시 입력&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;,&lt;/td&gt;
+      &lt;td&gt;키를 떼고 다시 입력함&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;예) &lt;code class=&quot;highlighter-rouge&quot;&gt;⌃&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt; 는 control키를 누른 상태에서 b를 누르고 control키와 b에서 모두 손을 뗀 다음에 c를 입력하라는 의미입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;시스템 설정&lt;/h2&gt;
+
+&lt;p&gt;본격적인 개발환경 설정에 앞서 몇 가지 유용한 시스템 설정을 확인해봅니다. macOS High Sierra를 기준으로 하였으나 다른 버전도 비슷비슷할 것으로 보입니다. 반드시 동일하게 설정할 필요는 없으며 보고 괜찮다 싶은 항목만 적용하면 됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;system-preferences&quot;&gt;System Preferences&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/system-preferences.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;상단 메뉴의 &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;/code&gt; 로고를 누르고 &lt;code class=&quot;highlighter-rouge&quot;&gt;System Preferences...&lt;/code&gt;를 선택합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;미션 컨트롤 창 순서 고정&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Mission Control&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Automatically rearrange Spaces based on most recent use&lt;/code&gt;: 체크 안함&lt;/li&gt;
+  &lt;li&gt;미션 컨트롤 창 순서가 기본적으로 최근 사용 순으로 설정되어 있어 의도하지 않게 순서가 변경되는 것을 막음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;언어 설정 영어 우선순위로 변경&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Language &amp;amp; Region&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Preferred languages&lt;/code&gt;: English &amp;gt; 한국어 (드래그로 순서 조정)&lt;/li&gt;
+  &lt;li&gt;간혹 locale 설정 때문에 오류가 발생하는 걸 방지해주고 영어 오류 메시지가 구글검색이 잘됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;패스워드 즉시 설정&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Security &amp;amp; Privacy&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;General&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Require password&lt;/code&gt;: immediately&lt;/li&gt;
+  &lt;li&gt;잠자기 모드나 화면 보호기가 켜지면 즉시 패스워드 입력을 활성화하여 보안을 최대한 안전하게 유지&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;분실대비 패스워드 메시지 설정&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Security &amp;amp; Privacy&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;General&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Show a message when the screen is locked&lt;/code&gt;: 전화번호 / 이름&lt;/li&gt;
+  &lt;li&gt;혹시 분실했을 경우를 대비하여 전화번호, 이름 등을 알려줌&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;디스크 암호화&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Security &amp;amp; Privacy&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;FileVault&lt;/code&gt;: Turn On FileVault&lt;/li&gt;
+  &lt;li&gt;분실 시 복구 불가능하게 디스크를 암호화&lt;/li&gt;
+  &lt;li&gt;파일 읽기/쓰기 퍼포먼스가 걱정되지만 최신 CPU와 SSD에서는 거의 성능 차이가 없다고 함&lt;del&gt;믿고쓰자&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;모든 텍스트 자동 변경 옵션 끄기&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Keyboard&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt;: 모든 자동 변경 옵션 끄기&lt;/li&gt;
+  &lt;li&gt;입력한 단어를 컴퓨터 마음대로 바꾸는 걸 방지&lt;/li&gt;
+  &lt;li&gt;특히 Use smart quotes and dashes는 코드 복사하다가 따옴표가 바뀌면서 고생이 시작됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;클릭은 터치로&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Trackpad&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Point &amp;amp; Click&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Tab to click&lt;/code&gt;: 체크함&lt;/li&gt;
+  &lt;li&gt;트랙패드 클릭 시 꾸욱 누를 필요 없이 톡톡 터치로 클릭해서 손의 피로를 줄임&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;드래그는 세손가락으로&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Accessibility&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Mouse &amp;amp; Trackpad&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Trackpad options...&lt;/code&gt;:  Enable dragging - three finger drag&lt;/li&gt;
+  &lt;li&gt;창 또는 아이콘을 이동할 때 트랙패드를 누른 상태로 이동할 필요 없이 세 손가락으로 드래그 할 수 있음&lt;/li&gt;
+  &lt;li&gt;이건 해봐야 감이 오는데 몰랐다면 신세계가 열림&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;finder-preference&quot;&gt;Finder Preference&lt;/h3&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-preferences.png&quot; style=&quot;max-width: 450px&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Finder&lt;/code&gt;를 실행하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;Finder&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Preferences...&lt;/code&gt;)를 선택합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;파인더 기본 폴더 설정&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;General&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;New Finder windows show&lt;/code&gt;: subicura (home folder)&lt;/li&gt;
+  &lt;li&gt;파인더 최초 실행 시 버벅임이 없도록 기본 폴더를 홈 폴더로 설정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;파일 확장자 보여주기&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Show all filename extensions&lt;/code&gt;: 체크함&lt;/li&gt;
+  &lt;li&gt;모든 파일의 확장자를 보여줌&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;download-folder-option&quot;&gt;Download Folder Option&lt;/h3&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/download-option.png&quot; style=&quot;max-width: 250px&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Downloads&lt;/code&gt; 폴더로 이동하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;J&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Show View Options&lt;/code&gt;)를 선택합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;날짜그룹 + 이름 정렬&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Arrange By&lt;/code&gt;:Date added, &lt;code class=&quot;highlighter-rouge&quot;&gt;Sort By&lt;/code&gt;:Name&lt;/li&gt;
+  &lt;li&gt;파일 목록을 보여줄 때 날짜별로 그룹화 하고 그룹 내에서 이름으로 다시 정렬&lt;/li&gt;
+  &lt;li&gt;다운로드 폴더 특성상 최근에 받은 파일들을 찾는 경우가 많으므로 유용함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;필수 프로그램&lt;/h2&gt;
+
+&lt;p&gt;시스템 설정을 완료했으니 개발 환경 구축을 위한 필수 프로그램을 설치합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;xcode&quot;&gt;Xcode&lt;/h3&gt;
+
+&lt;p&gt;macOS에는 기본적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;gcc&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;make&lt;/code&gt;와 같은 컴파일 도구가 설치되어 있지 않기 때문에 명령어 도구&lt;sub&gt;Command Line Tools&lt;/sub&gt;를 설치해야 합니다. 예전에는 Xcode를 전체 설치하고 추가로 명령어 도구를 설치해야 했으나 Xcode용량이 꽤 크고 모든 사람이 IDE가 필요한 게 아니기 때문에 명령어 도구만 따로 설치할 수 있게 변경되었습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;xcode-select --install&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;확인&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# gcc test&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gcc
+clang: error: no input files&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;Xcode 홈페이지&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;homebrew&quot;&gt;homebrew&lt;/h3&gt;
+
+&lt;p&gt;brew&lt;sub&gt;homebrew&lt;/sub&gt;는 각종 커맨드라인 프로그램(요즘은 GUI도..)을 손쉽게 설치해주는 맥용 패키지 매니저입니다. 리눅스의 &lt;code class=&quot;highlighter-rouge&quot;&gt;apt&lt;/code&gt;나  &lt;code class=&quot;highlighter-rouge&quot;&gt;yum&lt;/code&gt;과 비슷하며 brew외에 &lt;a href=&quot;https://www.macports.org/&quot;&gt;MacPorts&lt;/a&gt; 라는 패키지 메니저가 있는데 몇몇 단점으로 요즘은 거의 brew를 사용하는 추세입니다. 다양한 프로그램을 복잡한 빌드과정 없이 손쉽게 설치할 수 있고 업데이트, 관리도 간단하므로 안쓸 이유가 없는 필수 프로그램입니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;그냥 홈페이지 가서 다운로드 하고 설치하는 게 편한데..&lt;/code&gt;라고 하는분들이 있는데 나중에 업데이트나 삭제를 생각해보면 글쎄요.. brew 쓰세요!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;/usr/bin/ruby -e &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;확인&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# brew test&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;brew doctor
+Your system is ready to brew.&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew 홈페이지&lt;/a&gt; / &lt;a href=&quot;https://docs.brew.sh/Manpage.html&quot;&gt;brew 명령어&lt;/a&gt; / &lt;a href=&quot;http://formulae.brew.sh/&quot;&gt;brew 패키지 검색&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;git&quot;&gt;git&lt;/h3&gt;
+
+&lt;p&gt;버전 관리 도구로 유명한 &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;입니다. 다들 아시죠? macOS에 기본으로 설치되어 있지만 최신 버전이 아니므로 &lt;code class=&quot;highlighter-rouge&quot;&gt;brew&lt;/code&gt;를 이용해서 업데이트 합니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;git-lfs&lt;/code&gt; 는 Git Large File Storage로 용량이 큰 바이너리 파일을 git으로 관리할 때 유용합니다. git 설치할 때 같이 설치합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew install git git-lfs&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;git 설치가 완료되었으면 개인정보를 설정하고 맥에서 한글 파일명을 정상적으로 처리하기 위해 추가 옵션을 설정합니다. &lt;del&gt;망할 한글처리&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설정&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;git config --global user.name &lt;span class=&quot;s2&quot;&gt;&quot;Your Name&quot;&lt;/span&gt;
+git config --global user.email &lt;span class=&quot;s2&quot;&gt;&quot;you@your-domain.com&quot;&lt;/span&gt;
+git config --global core.precomposeunicode &lt;span class=&quot;nb&quot;&gt;true
+&lt;/span&gt;git config --global core.quotepath &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git 홈페이지&lt;/a&gt; / &lt;a href=&quot;https://git-lfs.github.com/&quot;&gt;Git LFS 홈페이지&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;터미널 설정&lt;/h2&gt;
+
+&lt;p&gt;시스템 설정도 하고 필수 프로그램도 설치했으니 본격적으로 터미널을 설정해 봅니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;iterm2&quot;&gt;iTerm2&lt;/h3&gt;
+
+&lt;p&gt;macOS에 기본으로 설치되어 있는 Terminal 앱 대신 iTerm2를 터미널 앱으로 사용합니다. iTerm2는 기본 앱에 없는 &lt;a href=&quot;https://www.iterm2.com/features.html&quot;&gt;다양한 기능&lt;/a&gt;이 있고 손쉽게 테마를 설정할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;brew로 설치 하거나 &lt;a href=&quot;https://www.iterm2.com/downloads.html&quot;&gt;여기&lt;/a&gt;서 다운로드 합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew cask install iterm2&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;테마선택&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/snazzy-theme.png&quot; alt=&quot;snazzy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;설치를 완료했으면 &lt;a href=&quot;https://github.com/sindresorhus/iterm2-snazzy/raw/master/Snazzy.itermcolors&quot;&gt;Snazzy.itermcolors&lt;/a&gt; 파일을 오른쪽 버튼 누르고 다운 받거나 &lt;a href=&quot;http://iterm2colorschemes.com/&quot;&gt;여러 개의 테마&lt;/a&gt;를 둘러보고 맘에드는것을 고릅니다. 다운받은 파일을 더블클릭하면 자동으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;iTerm Color Preset&lt;/code&gt;에 추가됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;테마적용&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;iTerm을 실행하고 설정(&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;)창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; 항목을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Colors&lt;/code&gt;탭을 선택합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-preferences.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;오른쪽 하단에  &lt;code class=&quot;highlighter-rouge&quot;&gt;Color presets...&lt;/code&gt; 선택 박스를 클릭하면 조금전에 추가한 &lt;code class=&quot;highlighter-rouge&quot;&gt;Snazzy&lt;/code&gt; preset을 선택할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;음.. 그런데 테마를 바꿔도 그다지 달라지는 건 없어보입니다.. &lt;del&gt;이게 무슨 소리요?!&lt;/del&gt; 제대로 색을 활용하려면 쉘&lt;sub&gt;shell&lt;/sub&gt; 설정을 해야합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;추가설정&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;타이틀바 배경색 어둡게 변경
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Appearance&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Theme&lt;/code&gt;: Dark&lt;/li&gt;
+      &lt;li&gt;High Sierra에서는 &lt;a href=&quot;https://gitlab.com/gnachman/iterm2/issues/4080&quot;&gt;현재&lt;/a&gt; Light/Dark 테마만 선택할 수 있으며 임의의 색은 불가능&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;스크롤바 감추기
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Appearance&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Hide scrollbars&lt;/code&gt;: 체크함&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;타이틀바 밑에 1px 라인 제거
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Appearance&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Show line under title bar when the tab bar is not visible&lt;/code&gt;: 체크 안함&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;마진 수정
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Height of top and bottom margins in terminal panes&lt;/code&gt;: 10&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Width of left and right margins in terminal panes&lt;/code&gt;: 12&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.iterm2.com&quot;&gt;iTerm2 홈페이지&lt;/a&gt; / &lt;a href=&quot;https://www.iterm2.com/downloads.html&quot;&gt;iTerm2 다운로드&lt;/a&gt; / &lt;a href=&quot;https://github.com/sindresorhus/iterm2-snazzy&quot;&gt;snazzy github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;zsh-with-oh-my-zsh&quot;&gt;zsh with oh-my-zsh&lt;/h3&gt;
+
+&lt;p&gt;iTerm2도 설치하고 테마도 설치했으니 쉘을 바꿀 차례입니다.&lt;/p&gt;
+
+&lt;p&gt;macOS는 기본으로 &lt;a href=&quot;https://en.wikipedia.org/wiki/Bash_(Unix_shell)&quot;&gt;Bash(Bourne-again) shell&lt;/a&gt;을 사용하고 있습니다. bash외에 csh, ksh, sh, tcsh, zsh등을 내장하고 있는데 최근 대새는 단연 zsh입니다. zsh에 설정 관리 프레임워크인 oh-my-zsh을 사용하여 이쁜 테마를 적용하고 여러 가지 플러그인을 설치해봅니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;zsh을 최신 버전으로 업데이트하고 &lt;a href=&quot;https://github.com/zsh-users/zsh-completions&quot;&gt;zsh-completions&lt;/a&gt;도 설치합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew install zsh zsh-completions&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;그리고 zsh의 설정을 관리해주는 oh-my-zsh을 설치합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;sh -c &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설치스크립트를 실행하면 관련 파일을 설치하고 패스워드를 물어봅니다. 계정의 패스워드를 입력하면 기본쉘을 자동으로 bash에서 zsh로 변경해줍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;플러그인&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;oh-my-zsh의 가장 강력한 점은 플러그인입니다. &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins&quot;&gt;기본 플러그인&lt;/a&gt;외에 명령어 하이라이팅 플러그인 &lt;a href=&quot;https://github.com/zsh-users/zsh-syntax-highlighting&quot;&gt;zsh-syntax-highlighting&lt;/a&gt;과 자동완성 플러그인 &lt;a href=&quot;https://github.com/zsh-users/zsh-autosuggestions&quot;&gt;zsh-autosuggestions&lt;/a&gt;을 설치합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# zsh-syntax-highlighting&lt;/span&gt;
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ZSH_CUSTOM&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;~/.oh-my-zsh/custom&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/plugins/zsh-syntax-highlighting
+
+&lt;span class=&quot;c&quot;&gt;# zsh-autosuggestions&lt;/span&gt;
+git clone git://github.com/zsh-users/zsh-autosuggestions &lt;span class=&quot;nv&quot;&gt;$ZSH_CUSTOM&lt;/span&gt;/plugins/zsh-autosuggestions&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;플러그인을 설치하면 반드시 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;파일에 설정을 해야합니다. 파일을 열고 &lt;code class=&quot;highlighter-rouge&quot;&gt;plugins&lt;/code&gt;항목에 플러그인을 추가합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설정 파일을 수정했으면 터미널을 재시작하거나 &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt; 명령어를 실행하여 설정을 다시 불러와야 합니다. 이제 명령어를 입력할 때 존재하지 않는 명령어는 빨간색으로 뜨고 한번 입력했던 명령어를 회색으로 표현해주는 걸 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;테마&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;oh-my-zsh의 기본 테마인 &lt;code class=&quot;highlighter-rouge&quot;&gt;robbyrussell&lt;/code&gt;도 깔끔하지만, 이 외에 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh/wiki/Themes&quot;&gt;다양한 테마&lt;/a&gt;가 존재합니다. 테마를 바꾸는 방법은 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;파일의 &lt;code class=&quot;highlighter-rouge&quot;&gt;ZSH_THEME=&quot;robbyrussell&quot;&lt;/code&gt; 부분을 원하는 테마로 수정하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;여기서는 이쁘고 단순하고 빠른 &lt;a href=&quot;https://github.com/sindresorhus/pure&quot;&gt;pure&lt;/a&gt; prompt를 사용합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew install nodejs &lt;span class=&quot;c&quot;&gt;# nodejs가 설치되어 있다면 skip&lt;/span&gt;
+npm install --global pure-prompt&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설치를 완료했으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;파일에 다음항목을 추가합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;autoload -U promptinit; promptinit
+prompt pure&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;이제 zsh 기본 설정이 끝났습니다!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;oh-my-zsh 팁&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;zsh과 oh-my-zsh의 조합으로 강력한 쉘을 사용할 수 있게 되었습니다. 여기서 모든 기능을 설명할 순 없지만 자주 사용하는 몇 가지 팁을 소개합니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;명령어가 기억나지 않으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;tab&lt;/code&gt;을 누르세요&lt;/li&gt;
+  &lt;li&gt;cd ../.. 대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;...&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;....&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.....&lt;/code&gt;, …&lt;/li&gt;
+  &lt;li&gt;단축명령어 - &lt;code class=&quot;highlighter-rouge&quot;&gt;git status&lt;/code&gt; =&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;gst&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;git pull&lt;/code&gt; =&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;gl&lt;/code&gt; 등등 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git&quot;&gt;다양한 단축명령어&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-11-22-mac-os-development-environment-setup/zsh-demo.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/div&gt;
+
+&lt;p&gt;팁이 맘에 드시면 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins&quot;&gt;다른 플러그인&lt;/a&gt;도 구경하세요. 어마어마한 양의 플러그인이 준비되어 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;oh-my-zsh 홈페이지&lt;/a&gt; / &lt;a href=&quot;https://github.com/sindresorhus/pure&quot;&gt;pure github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;커맨드라인 애플리케이션&lt;/h2&gt;
+
+&lt;p&gt;이제 터미널이 이뻐졌으니 각종 도구를 설정해봅니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;vim&quot;&gt;vim&lt;/h3&gt;
+
+&lt;p&gt;vim은 기본으로 설치된 터미널용 에디터로 GUI 환경의 에디터를 사용할 수 있는 macOS 환경에서는 일부 &lt;del&gt;고오오급&lt;/del&gt; 개발자를 제외하고는 잘 쓰이지 않습니다. 하지만 터미널 작업을 하다 보면 간단하게 수정할 파일이 있고 git 커밋메시지를 작성할 때 종종 사용하게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;기본으로 설정된 화면은 밋밋하기 그지 없기 때문에 강력한 기능의 플러그인을 설치해줍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;내장된 vim대신 neovim을 설치합니다. neovim은 vim과 차이가 없어 보이는데 24bit True Color를 지원하고 오래된 vim 소스를 처음부터 다시 짜서 소스코드가 줄었다고 합니다. 저 같은 라이트 유저는 차이를 느끼진 못하지만 좋다고 해서 사용하고 있습니다. 그리고 테마에서 사용할 개발용 폰트를 설치합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew install neovim
+brew tap caskroom/fonts
+brew cask install font-hack-nerd-font&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;기본 설치가 완료되었으면 터미널 기본 에디터로 vi대신 neovim을 사용하도록 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;에 다음 항목을 추가합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;vim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;nvim&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;vi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;nvim&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;vimdiff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;nvim -d&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;EDITOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/bin/nvim&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt;를 입력하여 설정을 다시 불러옵니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;플러그인&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;curl -sLf https://spacevim.org/install.sh | bash&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설치가 완료되면 &lt;code class=&quot;highlighter-rouge&quot;&gt;vi&lt;/code&gt;를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (&lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 꽤 많아서 시간이 조금 걸립니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;테마&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;기본 테마는 뭔가 칙칙한 느낌이 듭니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.SpaceVim.d/init.vim&lt;/code&gt; 파일에 커스텀 테마를 추가합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;let &lt;/span&gt;g:spacevim_colorscheme &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'onedark'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설정 파일을 수정하고 다시 시작하면 좀 더 나은 화면을 볼 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;폰트&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;앗, 플러그인을 설치하고 vi를 실행하면 폰트가 깨져서 ?가 보이는 걸 알 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/nvim-question.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;iTerm2에 개발용 폰트를 설정해줍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;iTerm을 실행하고 설정(&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;)창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; 항목을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt;탭을 선택합니다. Font항목에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Use a different font for non-ASCII text&lt;/code&gt;를 체크하고 다른 탭을 살짝 눌렀다 다시 돌아오면 Non-ASCII Font를 설정할 수 있습니다. 거기서 Knack Regular Nerd Font Complete를 선택하면 폰트가 이쁘게 나옵니다.&lt;/p&gt;
+
+&lt;p&gt;이제 설정이 모두 완료되었으니 vim 공부만 하면 됩니다. :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://neovim.io/&quot;&gt;neovim 홈페이지&lt;/a&gt; / &lt;a href=&quot;https://github.com/ryanoasis/nerd-fonts&quot;&gt;Nerd Font github&lt;/a&gt; / &lt;a href=&quot;https://github.com/SpaceVim/SpaceVim&quot;&gt;SpaceVim github&lt;/a&gt; / &lt;a href=&quot;http://spacevim.org/documentation/&quot;&gt;SpaceVim 설정문서&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fzf&quot;&gt;fzf&lt;/h3&gt;
+
+&lt;p&gt;fzf는 강력하고 엄청나게 빠른 fuzzy finder 도구입니다. 증분 검색을 통하여 원하는 파일이나 히스토리를 쉽고 빠르게 찾을 수 있게 해줍니다. 정확하게 원하는 값을 입력하지 않고 일부만 입력해도 실시간으로 검색 결과를 보여줍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/fzf-sample.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew install fzf
+
+&lt;span class=&quot;c&quot;&gt;# To install useful key bindings and fuzzy completion:&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;brew --prefix&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/opt/fzf/install&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;를 누르면 됩니다. 전부 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt;를 입력하여 설정을 다시 불러옵니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;명령어&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;정말 다양하게 사용할 수 있지만 여기선 가장 기본적인 기능만 살펴봅니다.&lt;/p&gt;
+
+&lt;table class=&quot;table table-key-value-60&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;단축키&lt;/th&gt;
+      &lt;th&gt;기능&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;⌃&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;하위 디렉토리 파일 검색&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;⌃&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;히스토리 검색&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;esc&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;C&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;하위 디렉토리 검색 후 이동&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-11-22-mac-os-development-environment-setup/fzf-demo.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/div&gt;
+
+&lt;p&gt;단축키 입력하고 글자를 몇 개 입력하면 금방 감이 옵니다. 취소는 &lt;code class=&quot;highlighter-rouge&quot;&gt;esc&lt;/code&gt;입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/junegunn/fzf&quot;&gt;fzf github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fasd&quot;&gt;fasd&lt;/h3&gt;
+
+&lt;p&gt;fasd는 파일 또는 디렉토리 검색을 편하게 해서 엄청나게 생산성을 향상시켜주는 도구입니다. 자주 열어본 파일이나 이동한 디렉토리를 기억하고 우선순위를 정해서 빠르게 이동할 수 있게 도와줍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew install fasd&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설치가 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;에 plugin을 추가해줍니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;
+  ...
+  ...
+  fasd
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;전부 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt;를 입력하여 설정을 다시 불러옵니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;명령어&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;명령어를 사용하기 위해서는 일단 디렉토리를 좀 이동하고 파일도 열어보고 해야 합니다. 어느 정도 히스토리가 쌓이면 명령어를 입력해봅니다.&lt;/p&gt;
+
+&lt;table class=&quot;table table-key-value-60&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;단축키&lt;/th&gt;
+      &lt;th&gt;기능&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;z&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;디렉토리 이동&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;파일 or 디렉토리 검색&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;디렉토리를 이동할 때 &lt;code class=&quot;highlighter-rouge&quot;&gt;z github&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;tab&lt;/code&gt;과 같이 일부 검색어를 입력하고 tab을 눌러서 이동합니다.&lt;/p&gt;
+
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-11-22-mac-os-development-environment-setup/fasd-demo.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/div&gt;
+
+&lt;p&gt;단순하지 굉장히 유용한 도구입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/clvv/fasd&quot;&gt;fasd github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tmux&quot;&gt;tmux&lt;/h3&gt;
+
+&lt;p&gt;tmux는 터미널 멀티플렉서&lt;sub&gt;Terminal MUltipleXer&lt;/sub&gt;라고 합니다. 하나의 화면에서 창을 여러 개 만들 수 있고 가로 분할, 세로 분할 할 수도 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;어, 그거 iTerm에서 그냥 되는데요?&lt;/code&gt;라고 말씀하시면 딱히 할말은 없지만&lt;del&gt;반박 불가&lt;/del&gt;.. 알아두면 원격 리눅스 서버 환경에서 유용하게 쓸 수 있고 무엇보다 꽤나 있어보이는 화면을 만들 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew install tmux&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설치가 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;에 plugin을 추가해줍니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;
+  ...
+  ...
+  tmux
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;테마&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;tmux 역시 기본 테마는 너무 밋밋하기 때문에 &lt;a href=&quot;https://github.com/gpakosz/.tmux&quot;&gt;잘 만들어 놓은 테마&lt;/a&gt;를 가져다 씁니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
+cp .tmux/.tmux.conf.local .&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;설정&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;예전에는 몰랐는데 요즘 tmux는 놀랍게도 마우스를 지원합니다. 터미널인데 마우스가 됩니다! 하단에 윈도우 탭을 누르면 바로바로 이동하고 분할 창&lt;sub&gt;pane&lt;/sub&gt;도 마우스를 누르는 창으로 포커스됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.tmux/.tmux.conf.local&lt;/code&gt;파일을 열고 맨 밑으로 이동해서 주석으로 되어 있는 설정을 해제해 줍니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# increase history size&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -g &lt;span class=&quot;nb&quot;&gt;history&lt;/span&gt;-limit 10000
+
+&lt;span class=&quot;c&quot;&gt;# start with mouse mode enabled&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -g mouse on
+
+&lt;span class=&quot;c&quot;&gt;# force Vi mode&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# really you should export VISUAL or EDITOR environment variable, see manual&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -g status-keys vi
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -g mode-keys vi&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;사용법&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;tmux는 꽤 사용난이도가 높은 프로그램입니다. 자세한 내용은 따로 더 공부하셔야 하고 여기서는 아주 기본적인 기능 몇 가지만 알아봅니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;세션&lt;sub&gt;session&lt;/sub&gt;&lt;/strong&gt; tmux가 관리하는 가장 큰 단위&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;윈도우&lt;sub&gt;window&lt;/sub&gt;&lt;/strong&gt; 세션안에 존재하는 탭같은 단위&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;펜&lt;sub&gt;pane&lt;/sub&gt;&lt;/strong&gt; 윈도우 안에 가로 세로로 분할한 단위&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table class=&quot;table table-key-value-60&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;명령어&lt;/th&gt;
+      &lt;th&gt;기능&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tmux &lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;세션 생성&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tmux attach&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;생성되어 있는 세션에 진입&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tmux ls&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;세션 목록 확인&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class=&quot;table table-key-value-60&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;단축키&lt;/th&gt;
+      &lt;th&gt;기능&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;⌃&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;새 창 만들기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;⌃&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;tmux 환경에서 나오기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;⌃&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;~&lt;code class=&quot;highlighter-rouge&quot;&gt;9&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;해당 창으로 이동&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;⌃&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;세로로 창을 나눔 (좌/우)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;⌃&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;가로로 창을 나눔 (위/아래)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;⌃&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;화살표&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;나뉘어진 창을 좌/우/위/아래로 움직임&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-11-22-mac-os-development-environment-setup/tmux-demo.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/div&gt;
+
+&lt;p&gt;아주 간단하게 살펴보았지만 사실 스크롤, 복사 등등 알아야 할 게 은근 많습니다. &lt;del&gt;안될꺼야..&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/tmux/tmux&quot;&gt;tmux github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tmuxinator&quot;&gt;tmuxinator&lt;/h3&gt;
+
+&lt;p&gt;tmux의 쓸모를 한층 더 높여주는 게 tmuxinator입니다. 손으로 창을 만들고 화면을 분할하는 것을 설정으로 해줍니다.&lt;/p&gt;
+
+&lt;p&gt;예를 들면, 1번 윈도우는 webpack을 실행하고 2번 윈도우는 rails server를 실행하고 3번 윈도우는 log를 실행하게 설정할 수 있습니다. 요즘 프로젝트는 복잡하게 구성된 경우가 많아서 굉장히 유용하게 사용할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;tmuxinator는 ruby로 작성된 프로그램입니다. ruby를 최신 버전으로 업데이트하고 tmuxinator를 설치합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew install ruby
+gem install tmuxinator&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설치가 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;에 plugin과 alias를 추가합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;
+  ...
+  ...
+  tmuxinator
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;mux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;tmuxinator&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;샘플&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;간단하게 샘플을 하나 만들어 봅니다. 블로그를 작성하는 환경을 만드는데 1번창을 두개로 나눠서 위에는 jekyll을 실행하고 아래는 ngrok으로 서버를 외부로 오픈합니다. 2번 창은 post폴더를 vi로 오픈해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;tmuxinator를 명령어가 너무 길어서 위에 설정에서 mux로 alias를 설정하였습니다. 새로 tmuxinator 프로젝트를 만들어보겠습니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;mux new jekyll&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;명령어를 실행하면 간단한 샘플이 포함된 jekyll 프로젝트 설정 파일이 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.config/tmuxinator/jekyll.yml&lt;/code&gt; 만들어지고 자동으로 에디터가 열립니다. 설정 파일을 다음과 같이 작성합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;~/Workspace/github.com/subicura/subicura.github.io&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;windows&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;main-horizontal&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bundle exec jekyll serve --incremental&lt;/span&gt;
+        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ngrok http 4000&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;editor&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;vim _posts&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;이제 프로젝트를 시작합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;s&quot;&gt;mux start jekyll&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-11-22-mac-os-development-environment-setup/mux-demo.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/div&gt;
+
+&lt;p&gt;샘플이라 약간 억지가 있어 보이는 구성이지만 스크립트 구성이 엄청나게 편하다는걸 알 수 있습니다. 전체 스크립트를 실행하고 intelliJ와 같은 IDE를 실행하게 구성할 수도 있습니다. 자세한 건 공식 홈페이지를 참고하세요.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/tmuxinator/tmuxinator&quot;&gt;tmuxinator github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-5&quot;&gt;추천 애플리케이션&lt;/h2&gt;
+
+&lt;p&gt;기본적인 프로그램 외에 사용하면 꽤 쓸만한 프로그램을 소개합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;docker&quot;&gt;docker&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/docker-for-mac.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;따로 소개할 필요가 없을 정도로 유명한 가상화 프로그램입니다. MySQL, Redis와 같은 데이터베이스나 rails, php 개발환경까지 두루두루 사용하고 있습니다. 하나의 개발 피시에 여러버전의 MySQL이나 Redis를 설치하는 건 쉽지 않은데 docker를 사용하면 쉽고 간단하게 개발환경을 구축할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;docker에 대한 자세한 내용은 &lt;a href=&quot;/2017/01/19/docker-guide-for-beginners-1.html&quot;&gt;여기&lt;/a&gt;서 확인하세요.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker 홈페이지&lt;/a&gt; / &lt;a href=&quot;https://www.docker.com/docker-mac&quot;&gt;Docker for mac download&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tig&quot;&gt;tig&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/tig.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;텍스트모드 git 인터페이스 프로그램입니다. git 자체 기능이 강력하긴 하지만 여러 로그를 편하게 보기는 쉽지 않습니다. tig를 사용하여 화살표 키와 &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;j&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;k&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;l&lt;/code&gt;키를 잘 사용하면 쉽게 로그를 볼 수 있고 메인 화면에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt;를 누르면 도움말을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jonas/tig&quot;&gt;tig github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;jq&quot;&gt;jq&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/jq.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;JSON 결과를 이쁘게 보여주고 원하는 대로 편집할 수 있는 도구입니다. 간단하게 필터를 적용하여 원하는 항목만 볼 수 있고 특정 결과를 다른 형태로 변경할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stedolan.github.io/jq/&quot;&gt;jq github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ngrok&quot;&gt;ngrok&lt;/h3&gt;
+
+&lt;p&gt;로컬 서버를 외부로 터널링을 통해 오픈해주는 도구입니다. 보통 로컬에 개발 서버를 띄우면 외부에서 접근하기가 어려운데 ngrok을 이용하여 간단하게 오픈할 수 있습니다. 사용법도 간단합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok 홈페이지&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;asciinema&quot;&gt;asciinema&lt;/h3&gt;
+
+&lt;p&gt;터미널을 &lt;strong&gt;텍스트&lt;/strong&gt;로 녹화하는 프로그램입니다. 영상으로 녹화하는 것보다 용량이 적고 품질도 훌륭한 편입니다. 제 블로그에서 자주 볼 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://asciinema.org/&quot;&gt;asciinema 홈페이지&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;neofetch&quot;&gt;neofetch&lt;/h3&gt;
+
+&lt;p&gt;지금 보고 있는 포스트 첫번째 이미지에서 사용한 프로그램입니다. 간단하게 시스템 상태를 보여줍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/dylanaraps/neofetch&quot;&gt;neofetch github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-6&quot;&gt;그래서&lt;/h2&gt;
+
+&lt;p&gt;너무 오랫동안 블로깅을 못 하고 있어서 가볍게 &lt;del&gt;급하게&lt;/del&gt; 작성한 포스트입니다. 새로 산 맥북프로를 셋팅하고 설치 프로그램 목록을 정리하던 중에 우연찮게 몇몇 분들한테 터미널 설정에 대한 질문을 받으면서 환경설정에 대한 글을 쓰면 괜찮다고 생각했습니다.&lt;/p&gt;
+
+&lt;p&gt;커맨드라인 애플리케이션은 알면 알수록 새로운 것도 많고 개발자들 취향에 따라 설정이 조금씩 다르므로 가장 무난한 설정을 소개했고 대부분의 커스텀 설정은 수정하지 않았습니다. 설정이 굉장히 다양하므로 각 프로그램이 어떤 설정을 제공하는지는 꼭 한 번씩 보면 좋을 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;최근 개발 모임이나 세미나에 참석해보면 맥북을 사용하시는 분들이 많고 개발자라면 계속해서 터미널을 사용하므로 아직 제대로 개발 환경을 구축하지 못한 분들에게 많은 도움이 되었으면 좋겠습니다. 그리고 괜찮은 도구 있으면 댓글로 추천해주세요! 더 좋은, 편안한 환경에서 개발하고 싶습니다.&lt;/p&gt;
+
+&lt;p&gt;다른 &lt;del&gt;고오오급&lt;/del&gt;개발자들이 어떤 환경에서 작업하는지 궁금하다면 &lt;a href=&quot;https://usesthis.com&quot;&gt;usesthis.com&lt;/a&gt;에 인터뷰가 있으니 참고하시고 커스텀하게 변경한 환경설정 파일은 Dropbox나 Google Drive 등으로 파일을 링크(&lt;code class=&quot;highlighter-rouge&quot;&gt;ln -s&lt;/code&gt;)하여 백업하거나 &lt;a href=&quot;https://dotfiles.github.io/&quot;&gt;dotfiles&lt;/a&gt; 도구를 사용하여 백업하면 나중에 새로운 맥북을 받아도 빠르게 설정할 수 있습니다.&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Docker Swarm을 이용한 쉽고 빠른 분산 서버 관리</title>
@@ -211,7 +1043,7 @@
 
 &lt;p&gt;가상머신이 정상적으로 생성되었는지 확인하려면 &lt;code class=&quot;highlighter-rouge&quot;&gt;vagrant status&lt;/code&gt;, 가상머신을 삭제하려면 &lt;code class=&quot;highlighter-rouge&quot;&gt;vagrant destroy&lt;/code&gt; 를 실행합니다. 가상머신에 접속하는 명령어는  &lt;code class=&quot;highlighter-rouge&quot;&gt;vagrant ssh [가상머신이름]&lt;/code&gt;입니다.&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/vagrant-up.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;vagrant up&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/vagrant-up.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;vagrant up&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section-8&quot;&gt;스웜 클러스터 만들기&lt;/h3&gt;
 
@@ -283,7 +1115,7 @@ q5pa26ik11g9surws03quvrsk    core-02   Ready   Active&lt;span class=&quot;w&quot
   &lt;p&gt;매니저 노드가 관리하는 정보는  &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/lib/docker/swarm&lt;/code&gt;에 저장됩니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/swarm-cluster.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;init swarm cluster&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/swarm-cluster.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;init swarm cluster&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section-9&quot;&gt;기본 웹 애플리케이션&lt;/h3&gt;
 
@@ -361,7 +1193,7 @@ cfb152786b87&lt;span class=&quot;w&quot;&gt;
 
 &lt;p&gt;분명 컨테이너는  &lt;code class=&quot;highlighter-rouge&quot;&gt;core-01&lt;/code&gt;노드에서 실행중인데 모든 노드에서 정상적으로 응답하고 있습니다. 어떻게 된일일까요?&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/basic-web-application.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;basic web application&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/basic-web-application.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;basic web application&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;ingress-network&quot;&gt;Ingress network&lt;/h3&gt;
 
@@ -450,7 +1282,7 @@ e970ff9ed9c6
 
 &lt;p&gt;5개의 컨테이너에 아주 이쁘게 요청이 분산되었습니다. 아무런 설정 없이 ingress 네트워크가 알아서 로드 밸런서 역할을 해주고 있습니다. Nginx나 haproxy같은 설정이 필요 없습니다. 너무 편하지 않나요?&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/replication.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;replication&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/replication.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;replication&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;healthcheck&quot;&gt;HEALTHCHECK&lt;/h3&gt;
 
@@ -513,7 +1345,7 @@ xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9
 
 &lt;p&gt;하나씩 하나씩 이쁘게 업데이트되는 과정을 볼 수 있고 접속 테스트를 하면 문제 없이 업데이트되는걸 확인 할 수 있습니다.&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/healthcheck.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;service update&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/healthcheck.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;service update&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section-10&quot;&gt;방문자수 체크 웹 애플리케이션&lt;/h3&gt;
 
@@ -719,7 +1551,7 @@ curl core-01:4568
   &lt;p&gt;내부 DNS에서 counter의 IP는 10.0.0.4로 3개 컨테이너의 로드 벨런서용 IP를 가리키고 있습니다. 실제 각각의 IP는 tasks.counter의 A Record에 기록되어 있고 10.0.0.5~7을 가지고 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/overlay.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;service with overlay&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/overlay.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;service with overlay&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section-11&quot;&gt;비밀키 조회 애플리케이션&lt;/h3&gt;
 
@@ -765,7 +1597,7 @@ curl core-01:4568
 
 &lt;p&gt;아주 잘 동작합니다. 도커를 이용하여 서비스를 구축하면 패스워드 정보를 어떻게 할지 고민일 때가 있는데 아주 유용하게 사용할 수 있습니다.&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/secret.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker secre&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/secret.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker secre&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;traefik---&quot;&gt;Traefik 리버스 프록시 서버&lt;/h3&gt;
 
@@ -885,7 +1717,7 @@ docker service create --name counter &lt;span class=&quot;se&quot;&gt;\&lt;/span
 
 &lt;p&gt;마법과 같은 일이 옵션 몇줄로 일어났습니다. 음.. 스웜 정말 좋지 않나요?&lt;/p&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/traefik.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;traefik&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/traefik.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;traefik&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section-12&quot;&gt;스웜 서버 모니터링&lt;/h3&gt;
 
@@ -976,7 +1808,7 @@ docker service create --name counter &lt;span class=&quot;se&quot;&gt;\&lt;/span
 bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;ruby app.rb   &lt;span class=&quot;c&quot;&gt;# Run sinatra&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run-sinatra&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run-sinatra&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;ruby가 설치되어 있지 않다고요? 도커만 있으면 문제없습니다. 다음 명령어를 실행합니다.&lt;/p&gt;
 
@@ -993,7 +1825,7 @@ ruby &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 bash -c &lt;span class=&quot;s2&quot;&gt;&quot;bundle install &amp;amp;&amp;amp; bundle exec ruby app.rb -o 0.0.0.0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run-docker-sinatra&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run-docker-sinatra&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;호스트의 디렉토리를 루비가 설치된 컨테이너의 디렉토리에 마운트한다음 그대로 명령어를 실행하면 로컬에 개발 환경을 구축하지 않고 도커 컨테이너를 개발환경으로 사용할 수 있습니다. &lt;del&gt;어으썸!&lt;/del&gt;&lt;/p&gt;
 
@@ -1176,7 +2008,7 @@ Removing intermediate container 1f7a9ba8d63c
 Successfully built 54d239c00f11&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker-build&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker-build&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;빌드 명령어를 실행하면 Dockerfile에 정의한 내용이 한 줄 한 줄 실행되는 걸 볼 수 있습니다. 실제로 명령어를 실행하기 때문에 빌드 시간이 꽤 걸리는 걸 알 수 있습니다. 최종적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;Successfully built xxxxxxxx&lt;/code&gt; 메시지가 보이면 정상적으로 이미지를 생성한 것입니다.&lt;/p&gt;
 
@@ -1939,7 +2771,7 @@ docker push localhost:5000/subicura/sinatra-app:1&lt;span class=&quot;w&quot;&gt
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;curl -s https://get.docker.com/ | sudo sh&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;Docker Install (ubuntu)&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;Docker Install (ubuntu)&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;sudo 없이 사용하기&lt;/strong&gt;&lt;/p&gt;
 
@@ -2086,7 +2918,7 @@ Server:
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker run ubuntu:16.04&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run ubuntu 16.04 container&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run ubuntu 16.04 container&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt;명령어를 사용하면 사용할 이미지가 저장되어 있는지 확인하고 없다면 다운로드(&lt;code class=&quot;highlighter-rouge&quot;&gt;pull&lt;/code&gt;)를 한 후 컨테이너를 생성(&lt;code class=&quot;highlighter-rouge&quot;&gt;create&lt;/code&gt;)하고 시작(&lt;code class=&quot;highlighter-rouge&quot;&gt;start&lt;/code&gt;) 합니다.&lt;/p&gt;
 
@@ -2113,7 +2945,7 @@ bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
 boot  etc  lib   media  opt  root  sbin  sys  usr&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run ubuntu 16.04 container with /bin/bash&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run ubuntu 16.04 container with /bin/bash&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;컨테이너 내부에 들어가기 위해 bash 쉘을 실행하고 키보드 입력을 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;-it&lt;/code&gt; 옵션을 줍니다. 추가적으로 프로세스가 종료되면 컨테이너가 자동으로 삭제되도록 &lt;code class=&quot;highlighter-rouge&quot;&gt;--rm&lt;/code&gt; 옵션도 추가하였습니다.&lt;/p&gt;
 
@@ -2150,7 +2982,7 @@ get mykey
 hello&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run redis container&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run redis container&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-d&lt;/code&gt; 옵션을 주었기 때문에 컨테이너를 실행하자마자 컨테이너의 ID(5dff91d2…)를 보여주고 바로 쉘로 돌아왔습니다. 컨테이너는 종료된 것이 아니라 백그라운드 모드로 동작하고 있고 컨테이너 ID를 이용하여 컨테이너를 제어할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;-p&lt;/code&gt; 옵션을 이용하여 호스트의 &lt;code class=&quot;highlighter-rouge&quot;&gt;1234포트&lt;/code&gt;를 컨테이너의 &lt;code class=&quot;highlighter-rouge&quot;&gt;6379포트&lt;/code&gt;로 연결하였고 localhost의 1234포트로 접속하면 하면 redis를 사용할 수 있습니다.&lt;/p&gt;
 
@@ -2207,7 +3039,7 @@ hello&lt;span class=&quot;w&quot;&gt;
 &lt;span class=&quot;gp&quot;&gt;mysql&amp;gt; &lt;/span&gt;quit&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-mysql.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run mysql 5.7 container&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-mysql.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run mysql 5.7 container&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;와우, 순식간에 MySQL서버가 실행되었습니다. 이번 테스트는 호스트 OS에 MySQL 클라이언트가 설치되어 있어야 합니다. 추후에 실행중인 MySQL 도커 컨테이너에 접속하여 클라이언트를 실행해 보도록 하겠습니다.&lt;/p&gt;
 
@@ -2252,7 +3084,7 @@ docker run -d -p 8080:80 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   wordpress&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-wp.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run wordpress container&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-wp.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run wordpress container&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;컨테이너가 제대로 실행되었는지 웹 브라우저로 확인해봅니다.&lt;/p&gt;
 
@@ -2623,7 +3455,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker logs -f &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WORDPRESS_CONTAINER_ID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker logs -f&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker logs -f&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;로그를 켜 놓은 상태에서 워드프레스 페이지를 새로고침하면 브라우저 접속 로그가 실시간으로 보입니다. 가장 흔하게 사용하는 옵션이고 로그 보기를 중지하려면 &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt;를 입력하면 됩니다.&lt;/p&gt;
 
@@ -2684,7 +3516,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker exec bash&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker exec bash&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;키보드 입력이 필요하니 run 명령어와 마찬가지로 &lt;code class=&quot;highlighter-rouge&quot;&gt;-it&lt;/code&gt; 옵션을 주었고 bash 쉘로 접속하여 마치 가상머신에 들어온 것 같은 느낌이 듭니다. 접속한 이후에는 어떤 작업도 할 수 있고 컨테이너를 마음껏 건드릴 수 있습니다.&lt;/p&gt;
 
@@ -2727,7 +3559,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 &lt;span class=&quot;gp&quot;&gt;mysql&amp;gt; &lt;/span&gt;quit&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker exec mysql&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker exec mysql&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;이제, 호스트 OS에 mysql을 설치하지 않아도 mysql 클라이언트를 사용할 수 있습니다. 굳이 복잡한 작업이 필요 없는 경우는 &lt;code class=&quot;highlighter-rouge&quot;&gt;-it&lt;/code&gt; 옵션없이 단순하게 명령을 실행하고 종료할 수도 있습니다.&lt;/p&gt;
 
@@ -2833,7 +3665,7 @@ volumes:
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker-compose up&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-compose.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker-compose&lt;/figcaption&gt;&lt;/div&gt;
+&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-compose.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker-compose&lt;/figcaption&gt;&lt;/div&gt;
 
 &lt;p&gt;와우, 아주 손쉽게 워드프레스가 만들어 졌습니다. 단지 명령어를 설정파일로 바꾼거에 불과하지만 가독성과 편리성은 훨씬 향상되었습니다.&lt;/p&gt;
 
