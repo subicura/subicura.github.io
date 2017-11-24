@@ -180,6 +180,12 @@
 .highlight {
   margin-bottom: 16px; }
 
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
 main {
   display: block; }
 
@@ -347,6 +353,8 @@ body {
       .content article .post-meta a {
         color: #b3b3b1;
         text-decoration: none; }
+        .content article .post-meta a.icon-twitter {
+          color: #00aced; }
         .content article .post-meta a:hover {
           text-decoration: underline; }
       .content article .post-meta .share {
@@ -500,11 +508,11 @@ body {
       color: rgba(255, 255, 255, 0.75); }
       .post .article-image .post-meta-text a:hover {
         color: white; }
-  .post .article-image .fa-angle-down {
+  .post .article-image .nf-fa-angle-down {
     font-size: 32px;
     margin: 64px auto 0;
     color: rgba(255, 255, 255, 0.75); }
-    .post .article-image .fa-angle-down:hover {
+    .post .article-image .nf-fa-angle-down:hover {
       color: #fff; }
   .post .article-image .topofpage {
     text-decoration: underline; }
@@ -791,7 +799,7 @@ body {
 
 .share {
   padding: 20px 0 0;
-  line-height: 100%; }
+  line-height: 22px; }
   .share a {
     text-decoration: none;
     color: #bbb;
