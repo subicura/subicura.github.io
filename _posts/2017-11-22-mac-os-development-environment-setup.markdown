@@ -316,7 +316,7 @@ zsh과 oh-my-zsh의 조합으로 강력한 쉘을 사용할 수 있게 되었습
 
 {% asciinema path: 'asciinema/2017-11-22-mac-os-development-environment-setup/zsh-demo.json', title: '' %}
 
-팁이 맘에 드시면 [다른 플러그인](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins)도 구경하세요. 어마어마한 양의 플러그인이 준비되어 있습니다.
+팁이 맘에 든다면 [다른 플러그인](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins)도 구경하세요. 어마어마한 양의 플러그인이 준비되어 있습니다.
 
 [oh-my-zsh 홈페이지](https://github.com/robbyrussell/oh-my-zsh) / [pure github](https://github.com/sindresorhus/pure)
 
