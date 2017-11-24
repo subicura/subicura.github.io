@@ -97,7 +97,7 @@ last_modified_at: 2017-11-24T10:40:00+09:00
 ### Finder Preference
 
 <p align="center">
-    <img src="{{ "/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-preferences.png"  | prepend: site.baseurl  }}" style="max-width: 450px">
+    <img src="{{ "/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-preferences.png"  | prepend: site.baseurl  }}" style="width: 450px">
 </p>
 
 `Finder`를 실행하고 `⌘` + `,` (`Finder` > `Preferences...`)를 선택합니다.
@@ -115,7 +115,7 @@ last_modified_at: 2017-11-24T10:40:00+09:00
 ### Download Folder Option
 
 <p align="center">
-    <img src="{{ "/assets/article_images/2017-11-22-mac-os-development-environment-setup/download-option.png"  | prepend: site.baseurl  }}" style="max-width: 250px">
+    <img src="{{ "/assets/article_images/2017-11-22-mac-os-development-environment-setup/download-option.png"  | prepend: site.baseurl  }}" style="width: 250px">
 </p>
 
 `Downloads` 폴더로 이동하고 `⌘` + `J` (`View` > `Show View Options`)를 선택합니다.
