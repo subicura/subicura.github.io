@@ -22,6 +22,11 @@ $font-sans: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "나눔고�
 %vertical-rhythm
   margin-bottom: $rs
 
+.pull-left
+  float: left
+.pull-right
+  float: right
+  
 main
   display: block
 
@@ -183,6 +188,8 @@ body
       a
         color: #b3b3b1
         text-decoration: none
+        &.icon-twitter
+          color: #00aced
         &:hover
           text-decoration: underline
       .share
@@ -332,7 +339,7 @@ body
         color: rgba(255,255,255,0.75)
         &:hover
           color: rgba(255,255,255,1)
-    .fa-angle-down
+    .nf-fa-angle-down
       font-size: 32px
       margin: 64px auto 0
       color: rgba(255,255,255,0.75)
@@ -619,7 +626,7 @@ body
     padding-top: 30px
 .share
   padding: 20px 0 0
-  line-height: 100%
+  line-height: 22px
   a
     text-decoration: none
     color: #bbb
