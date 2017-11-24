@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2017-11-24T10:49:26+09:00</updated>
+ <updated>2017-11-24T11:49:06+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -395,7 +395,7 @@ prompt pure&lt;span class=&quot;w&quot;&gt;
 
 &lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-11-22-mac-os-development-environment-setup/zsh-demo.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/div&gt;
 
-&lt;p&gt;팁이 맘에 드시면 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins&quot;&gt;다른 플러그인&lt;/a&gt;도 구경하세요. 어마어마한 양의 플러그인이 준비되어 있습니다.&lt;/p&gt;
+&lt;p&gt;팁이 맘에 든다면 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins&quot;&gt;다른 플러그인&lt;/a&gt;도 구경하세요. 어마어마한 양의 플러그인이 준비되어 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;oh-my-zsh 홈페이지&lt;/a&gt; / &lt;a href=&quot;https://github.com/sindresorhus/pure&quot;&gt;pure github&lt;/a&gt;&lt;/p&gt;
 
