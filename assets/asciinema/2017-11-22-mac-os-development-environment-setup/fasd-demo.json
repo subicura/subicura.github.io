@@ -1,0 +1,226 @@
+{
+  "version": 1,
+  "width": 80,
+  "height": 25,
+  "duration": 23.80564,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.245634,
+      "\u001b]2;subicura@subicuras-Mac: ~\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.031993,
+      "\u001b]0;~\u0007"
+    ],
+    [
+      0.004366,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      3.8e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.221363,
+      "\u001b[32mz\u001b[39m\u001b[90m /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[39m\u001b[65D"
+    ],
+    [
+      1.760399,
+      "\b\u001b[32mz\u001b[39m\u001b[39m "
+    ],
+    [
+      0.352513,
+      "\u001b[39ms\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[63D"
+    ],
+    [
+      0.111675,
+      "u"
+    ],
+    [
+      1.630879,
+      "b"
+    ],
+    [
+      0.112699,
+      "i"
+    ],
+    [
+      0.361933,
+      "\u0007\b\b\b\b/Users/subicura/Workspace/github.com/subicura/subicura.github.io\r\r\n"
+    ],
+    [
+      0.00017,
+      "\u001b[7m/Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[0m\u001b[K\r\n\u001b[J/Users/subicura                                                 \u001b[J\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mz\u001b[39m /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\u001b[39m"
+    ],
+    [
+      1.988936,
+      "\r\r\n"
+    ],
+    [
+      0.001932,
+      "\u001b[7m/Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[0m\r\u001b[7m/Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[0m\r\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mz\u001b[39m /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\u001b[39m\r\r\n\u001b[J\u001b[A\u001b[68C\u001b[1m \u001b[0m"
+    ],
+    [
+      0.001463,
+      "\u001b[65D\u001b[4m/\u001b[4mU\u001b[4ms\u001b[4me\u001b[4mr\u001b[4ms\u001b[4m/\u001b[4ms\u001b[4mu\u001b[4mb\u001b[4mi\u001b[4mc\u001b[4mu\u001b[4mr\u001b[4ma\u001b[4m/\u001b[4mW\u001b[4mo\u001b[4mr\u001b[4mk\u001b[4ms\u001b[4mp\u001b[4ma\u001b[4mc\u001b[4me\u001b[4m/\u001b[4mg\u001b[4mi\u001b[4mt\u001b[4mh\u001b[4mu\u001b[4mb\u001b[4m.\u001b[4mc\u001b[4mo\u001b[4mm\u001b[4m/\u001b[4ms\u001b[4mu\u001b[4mb\u001b[4mi\u001b[4mc\u001b[4mu\u001b[4mr\u001b[4ma\u001b[4m/\u001b[4ms\u001b[4mu\u001b[4mb\u001b[4mi\u001b[4mc\u001b[4mu\u001b[4mr\u001b[4ma\u001b[4m.\u001b[4mg\u001b[4mi\u001b[4mt\u001b[4mh\u001b[4mu\u001b[4mb\u001b[4m.\u001b[4mi\u001b[4mo\u001b[24m\u001b[1C"
+    ],
+    [
+      1.485657,
+      "\b\u001b[0m \b"
+    ],
+    [
+      0.000282,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.001723,
+      "\u001b[?2004l\r\r\n\u001b[J"
+    ],
+    [
+      0.000627,
+      "\u001b]2;fasd_cd -d /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u0007\u001b]1;z\u0007"
+    ],
+    [
+      0.046093,
+      "\u001b]0;subicura: fasd_cd -d /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u0007"
+    ],
+    [
+      0.014352,
+      "\u001b]2;subicura@subicuras-Mac: ~/Workspace/github.com/subicura/subicura.github.io\u0007\u001b]1;..ura.github.io\u0007"
+    ],
+    [
+      2.9e-05,
+      "\u001b]0;"
+    ],
+    [
+      3.5e-05,
+      "~/Workspace/github.com/subicura/subicura.github.io\u0007"
+    ],
+    [
+      0.023537,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      0.000372,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      9e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.016612,
+      "\r\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m \u001b[38;5;242msource\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      1.608217,
+      "\u001b[4mc\u001b[24m\u001b[90mlear\u001b[39m\b\b\b\b"
+    ],
+    [
+      0.144398,
+      "\b\u001b[24m\u001b[1m\u001b[31mc\u001b[1m\u001b[31ma\u001b[0m\u001b[39m\u001b[90mt\u001b[90m \u001b[90m.\u001b[90mzshrc\u001b[39m\u001b[8D"
+    ],
+    [
+      0.095188,
+      "\b\b\u001b[0m\u001b[32mc\u001b[0m\u001b[32ma\u001b[32mt\u001b[39m"
+    ],
+    [
+      0.414699,
+      "\u001b[39m "
+    ],
+    [
+      0.529279,
+      "\u001b[39m`\u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \b\b\b\b\b"
+    ],
+    [
+      1.710968,
+      "s"
+    ],
+    [
+      0.641426,
+      " "
+    ],
+    [
+      1.489138,
+      "\u0007/Users/subicura/Workspace/github.com/subicura/subicura.github.io\r\r\n"
+    ],
+    [
+      3.3e-05,
+      "\u001b[7m/Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[0m\u001b[K\r\n/Users/subicura/.zshrc                                          \u001b[K\r\n/Users/subicura/Workspace/github.com                            \u001b[K\r\n/Users/subicura/Downloads                                       \u001b[K\r\n/Users/subicura/Documents                                       \u001b[K\r\n/Users/subicura/.bash_history                                   \u001b[K\r\n/Users/subicura/fasd-demo.json                                  \u001b[K\r\n\u001b[J/Users/subicura                                                 \u001b[J\u001b[8A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcat\u001b[39m `s /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\u001b[39m"
+    ],
+    [
+      1.165659,
+      "\r\r\n"
+    ],
+    [
+      0.00027,
+      "\u001b[7m/Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[0m\r\u001b[7m/Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[0m\r\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcat\u001b[39m `s /Users/subicura/Workspace/github.com/subicura/subicura.github.io\u001b[K\u001b[39m\u001b[48D.zshrc                                          \u001b[42D\r\r\n"
+    ],
+    [
+      0.00031,
+      "\u001b[0m/Users/subicura/Workspace/github.com/subicura/subicura.github.io\r\u001b[1B\u001b[7m/Users/subicura/.zshrc                                          \u001b[0m\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C\u001b[32mcat\u001b[39m `s /Users/subicura/.zshrc\u001b[K\u001b[39m"
+    ],
+    [
+      2.205726,
+      "\r\r\n\u001b[J\u001b[A\u001b[31C\u001b[1m \u001b[0m"
+    ],
+    [
+      0.004423,
+      "\b\u001b[0m `"
+    ],
+    [
+      1.740885,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.001505,
+      "\u001b[?2004l\r\r\n\u001b[J"
+    ],
+    [
+      0.000773,
+      "\u001b]2;cat `s /Users/subicura/.zshrc `\u0007\u001b]1;cat\u0007"
+    ],
+    [
+      0.047609,
+      "\u001b]0;subicura.github.io: cat `s /Users/subicura/.zshrc `\u0007"
+    ],
+    [
+      0.056941,
+      "# If you come from bash you might have to change your $PATH.\r\n# export PATH=$HOME/bin:/usr/local/bin:$PATH\r\n\r\n# Path to your oh-my-zsh installation.\r\nexport ZSH=/Users/subicura/.oh-my-zsh\r\n\r\n# Set name of the theme to load. Optionally, if you set this to \"random\"\r\n# it'll load a random theme each time that oh-my-zsh is loaded.\r\n# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes\r\nZSH_THEME=\"robbyrussell\"\r\n\r\n# Set list of themes to load\r\n# Setting this variable when ZSH_THEME=random\r\n# cause zsh load theme from this variable instead of\r\n# looking in ~/.oh-my-zsh/themes/\r\n# An empty array have no effect\r\n# ZSH_THEME_RANDOM_CANDIDATES=( \"robbyrussell\" \"agnoster\" )\r\n\r\n# Uncomment the following line to use case-sensitive completion.\r\n# CASE_SENSITIVE=\"true\"\r\n\r\n# Uncomment the following line to use hyphen-insensitive completion. Case\r\n# sensitive completion must be off. _ and - will be interchangeable.\r\n# HYPHEN_INSENSITIVE=\"true\"\r\n\r\n# Uncomment the following line to disable bi-weekly auto-update checks.\r\n#"
+    ],
+    [
+      0.000133,
+      " DISABLE_AUTO_UPDATE=\"true\"\r\n\r\n# Uncomment the following line to change how often to auto-update (in days).\r\n# export UPDATE_ZSH_DAYS=13\r\n\r\n# Uncomment the following line to disable colors in ls.\r\n# DISABLE_LS_COLORS=\"true\"\r\n\r\n# Uncomment the following line to disable auto-setting terminal title.\r\n# DISABLE_AUTO_TITLE=\"true\"\r\n\r\n# Uncomment the following line to enable command auto-correction.\r\n# ENABLE_CORRECTION=\"true\"\r\n\r\n# Uncomment the following line to display red dots whilst waiting for completion.\r\n# COMPLETION_WAITING_DOTS=\"true\"\r\n\r\n# Uncomment the following line if you want to disable marking untracked files\r\n# under VCS as dirty. This makes repository status check for large repositories\r\n# much, much faster.\r\n# DISABLE_UNTRACKED_FILES_DIRTY=\"true\"\r\n\r\n# Uncomment the following line if you want to change the command execution time\r\n# stamp shown in the history command output.\r\n# The optional three formats: \"mm/dd/yyyy\"|\"dd.mm.yyyy\"|\"yyyy-mm-dd\"\r\n# HIST_STAMPS=\"mm/dd/yyyy\"\r\n\r\n# Would you like to use ano"
+    ],
+    [
+      9.7e-05,
+      "ther custom folder than $ZSH/custom?\r\n# ZSH_CUSTOM=/path/to/new-custom-folder\r\n\r\n# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)\r\n# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/\r\n# Example format: plugins=(rails git textmate ruby lighthouse)\r\n# Add wisely, as too many plugins slow down shell startup.\r\nplugins=(\r\n  git\r\n  zsh-syntax-highlighting\r\n  zsh-autosuggestions\r\n  fasd\r\n)\r\n\r\nsource $ZSH/oh-my-zsh.sh\r\n\r\n# User configuration\r\n\r\n# export MANPATH=\"/usr/local/man:$MANPATH\"\r\n\r\n# You may need to manually set your language environment\r\n# export LANG=en_US.UTF-8\r\n\r\n# Preferred editor for local and remote sessions\r\n# if [[ -n $SSH_CONNECTION ]]; then\r\n#   export EDITOR='vim'\r\n# else\r\n#   export EDITOR='mvim'\r\n# fi\r\n\r\n# Compilation flags\r\n# export ARCHFLAGS=\"-arch x86_64\"\r\n\r\n# ssh\r\n# export SSH_KEY_PATH=\"~/.ssh/rsa_id\"\r\n\r\n# Set personal aliases, overriding those provided by oh-my-zsh libs,\r\n# plugins, and themes. Aliases can be placed here, though oh-my-zsh\r\n#"
+    ],
+    [
+      0.0005,
+      " users are encouraged to define aliases within the ZSH_CUSTOM folder.\r\n# For a full list of active aliases, run `alias`.\r\n#\r\n# Example aliases\r\n# alias zshconfig=\"mate ~/.zshrc\"\r\n# alias ohmyzsh=\"mate ~/.oh-my-zsh\"\r\n\r\nautoload -U promptinit; promptinit\r\nprompt pure\r\n\r\n\r\n[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh\r\n"
+    ],
+    [
+      0.00104,
+      "\u001b]2;subicura@subicuras-Mac: ~/Workspace/github.com/subicura/subicura.github.io\u0007\u001b]1;..ura.github.io\u0007\u001b]0;~/Workspace/github.com/subicura/subicura.github.io\u0007"
+    ],
+    [
+      0.025717,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura/subicura.github.io\u001b[39m \u001b[38;5;242msource\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      0.000305,
+      "\u001b[?2004h"
+    ],
+    [
+      2.5,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

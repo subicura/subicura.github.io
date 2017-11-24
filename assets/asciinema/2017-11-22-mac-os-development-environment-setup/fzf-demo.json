@@ -1,0 +1,450 @@
+{
+  "version": 1,
+  "width": 80,
+  "height": 25,
+  "duration": 39.806284,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.24254,
+      "\u001b]2;subicura@subicuras-Mac: ~\u0007\u001b]1;~\u0007"
+    ],
+    [
+      0.029692,
+      "\u001b]0;~\u0007"
+    ],
+    [
+      0.004215,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      2.5e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000485,
+      "\u001b[?2004h"
+    ],
+    [
+      2.5,
+      "\u001b[1m\u001b[31mc\u001b[0m\u001b[39m\u001b[90mlear\u001b[39m\b\b\b\b"
+    ],
+    [
+      0.090527,
+      "\b\u001b[0m\u001b[32mc\u001b[32md\u001b[39m\u001b[90m \u001b[90m.\u001b[90mS\u001b[90mpaceVim.d\u001b[39m\u001b[12D"
+    ],
+    [
+      0.159335,
+      "\u001b[39m "
+    ],
+    [
+      1.248902,
+      "\u001b[39m\u001b[4mW\u001b[24m\u001b[90mo\u001b[90mr\u001b[90mk\u001b[90ms\u001b[90mp\u001b[90ma\u001b[90mc\u001b[90me\u001b[90m/\u001b[90mg\u001b[90mithub.com/subicura/subicura.github.io\u001b[39m\u001b[47D"
+    ],
+    [
+      0.176452,
+      "\b\u001b[4mW\u001b[39m\u001b[4mo\u001b[24m"
+    ],
+    [
+      0.134113,
+      "\b\u001b[4mo\u001b[39m\u001b[4mr\u001b[39m\u001b[4mk\u001b[39m\u001b[4ms\u001b[39m\u001b[4mp\u001b[39m\u001b[4ma\u001b[39m\u001b[4mc\u001b[39m\u001b[4me\u001b[39m\u001b[1m\u001b[4m/\u001b[0m\u001b[24m"
+    ],
+    [
+      1.277986,
+      "\b\u001b[0m\u001b[4m/\u001b[39m\u001b[4mg\u001b[39m\u001b[4mi\u001b[39m\u001b[4mt\u001b[39m\u001b[4mh\u001b[39m\u001b[4mu\u001b[39m\u001b[4mb\u001b[39m\u001b[4m.\u001b[39m\u001b[4mc\u001b[39m\u001b[4mo\u001b[39m\u001b[4mm\u001b[39m\u001b[1m\u001b[4m/\u001b[0m\u001b[24m"
+    ],
+    [
+      0.511098,
+      "\b\u001b[0m\u001b[4m/\u001b[39m\u001b[4ms\u001b[39m\u001b[4mu\u001b[39m\u001b[4mb\u001b[39m\u001b[4mi\u001b[39m\u001b[4mc\u001b[39m\u001b[4mu\u001b[39m\u001b[4mr\u001b[39m\u001b[4ma\u001b[39m\u001b[1m\u001b[4m/\u001b[0m\u001b[24m"
+    ],
+    [
+      0.667607,
+      "\b\b\u001b[4ma\u001b[24m\u001b[0m\u001b[24m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[39m \u001b[19D"
+    ],
+    [
+      0.00025,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.001384,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000719,
+      "\u001b]2;cd Workspace/github.com/subicura\u0007\u001b]1;cd\u0007"
+    ],
+    [
+      0.04872,
+      "\u001b]0;subicura: cd Workspace/github.com/subicura\u0007"
+    ],
+    [
+      0.000773,
+      "\u001b]2;subicura@subicuras-Mac: ~/Workspace/github.com/subicura\u0007\u001b]1;...com/subicura\u0007\u001b]0;~/Workspace/github.com/subicura\u0007"
+    ],
+    [
+      0.024489,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      3.3e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000428,
+      "\u001b[?2004h"
+    ],
+    [
+      2.5,
+      "\u001b[J\u001b[6n"
+    ],
+    [
+      0.000367,
+      "\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\u001b[?1000h\u001b[9A\u001b[G\u001b[K\u001b[6n"
+    ],
+    [
+      0.001174,
+      "\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[9A\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[2C\u001b[1B\r\u001b"
+    ],
+    [
+      4.8e-05,
+      "[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m0/265\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236msubicura.github.io\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_includes\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_includes/javascripts.html\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_includes/head.html\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_includes/footer.html\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_includes/header.html\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/feed.xml\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/tags.html\u001b[m\u001b[8A\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m265/265\u001b[m\u001b[1A\r\u001b[2C"
+    ],
+    [
+      0.020296,
+      "\r\u001b[2C"
+    ],
+    [
+      1.129664,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m2\u001b[m\r\u001b[3C"
+    ],
+    [
+      0.000608,
+      "\u001b[2B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236msubicura.github.io/_posts/\u001b[m\u001b[;1;38;5;151;48;5;236m2\u001b[m\u001b[;1;38;5;254;48;5;236m016-03-23-hello.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_posts/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m016-12-31-remember-2016.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_posts/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m016-07-11-coding-convention.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_posts/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m016-05-30-likehs-develop-log.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m016-12-31-remember-2016\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m014-08-29-welcome-to-jekyll\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m014-11-30-mediator_features\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.g"
+    ],
+    [
+      0.000146,
+      "ithub.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m016-07-11-coding-convention\u001b[m\u001b[8A\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m129/265\u001b[m\u001b[1A\r\u001b[3C"
+    ],
+    [
+      0.127479,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m20\u001b[m\r\u001b[4C"
+    ],
+    [
+      0.000483,
+      "\u001b[1B\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m129/265\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236msubicura.github.io/_posts/\u001b[m\u001b[;1;38;5;151;48;5;236m2\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236m0\u001b[m\u001b[;1;38;5;254;48;5;236m16-03-23-hello.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_posts/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m16-12-31-remember-2016.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_posts/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m16-07-11-coding-convention.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_posts/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m16-05-30-likehs-develop-log.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m16-12-31-remember-2016\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/asse"
+    ],
+    [
+      3.3e-05,
+      "ts/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m14-08-29-welcome-to-jekyll\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m14-11-30-mediator_features\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m16-07-11-coding-convention\u001b[m\u001b[9A\r\u001b[4C"
+    ],
+    [
+      0.17531,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m201\u001b[m\r\u001b[5C"
+    ],
+    [
+      0.000728,
+      "\u001b[1B\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m129/265\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236msubicura.github.io/_posts/\u001b[m\u001b[;1;38;5;151;48;5;236m2\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236m0\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236m1\u001b[m\u001b[;1;38;5;254;48;5;236m6-03-23-hello.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_posts/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m6-12-31-remember-2016.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_posts/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m6-07-11-coding-convention.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_posts/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m6-05-30-likehs-develop-log.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b"
+    ],
+    [
+      4.8e-05,
+      "[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m6-12-31-remember-2016\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m4-08-29-welcome-to-jekyll\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m4-11-30-mediator_features\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m6-07-11-coding-convention\u001b[m\u001b[9A\r\u001b[5C"
+    ],
+    [
+      0.19099,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m2011\u001b[m\r\u001b[6C"
+    ],
+    [
+      0.000815,
+      "\u001b[1B\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m73/265\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236msubicura.github.io/_posts/\u001b[m\u001b[;1;38;5;151;48;5;236m2\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236m0\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236m1\u001b[m\u001b[;1;38;5;254;48;5;236m6-\u001b[m\u001b[;1;38;5;151;48;5;236m1\u001b[m\u001b[;1;38;5;254;48;5;236m2-31-remember-2016.markdown\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m6-\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m2-31-remember-2016\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m4-\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m1-30-mediator_features\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m6-\u001b[m\u001b["
+    ],
+    [
+      2.8e-05,
+      ";38;5;108m1\u001b[m\u001b[;m2-31-remember-2016/1st_off.jpg\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m6-\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m2-31-remember-2016/pageview...\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m4-\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m1-30-mediator_features/night..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m6-\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m2-31-remember-2016/woozoo_re..\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/assets/article_images/\u001b[m\u001b[;38;5;108m2\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m0\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m4-\u001b[m\u001b[;38;5;108m1\u001b[m\u001b[;m1-30-mediator_features/night..\u001b[m\u001b[9A\r\u001b[6C"
+    ],
+    [
+      2.5,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m2011\u001b[m\r\u001b[A\u001b[J\u001b[?1000l"
+    ],
+    [
+      0.004646,
+      "\r\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[4msubicura.github.io/_posts/2016-12-31-remember-2016.markdown\u001b[24m\u001b[K\u001b[1C"
+    ],
+    [
+      0.00026,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.5,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000691,
+      "\u001b]2;subicura@subicuras-Mac: ~/Workspace/github.com/subicura\u0007\u001b]1;...com/subicura\u0007"
+    ],
+    [
+      0.000781,
+      "\u001b]0;~/Workspace/github.com/subicura\u0007"
+    ],
+    [
+      0.024909,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura\u001b[39m\r\n\r\u001b[31m❯\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      0.000527,
+      "\u001b[?2004h"
+    ],
+    [
+      2.5,
+      "\u001b[J\u001b[6n"
+    ],
+    [
+      0.000387,
+      "\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\u001b[?1000h\u001b[9A\u001b[G\u001b[K\u001b[6n"
+    ],
+    [
+      0.001344,
+      "\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[2C\u001b[1A\r\u001b[;m "
+    ],
+    [
+      3.2e-05,
+      "                                                                               \r\r\u001b[2C\u001b[;38;5;144m109/109 +S\u001b[m\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m109/109 +S\u001b[m\u001b[8A\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m  102  ls\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m  103  vi init.vim\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m  104  ls\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m  105  vi --version\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m  106  vi ~/.SpaceVim.d/init.vim\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m  107  clear\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m  108  asciinema rec -w 2.5 fzf-demo.json\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m  109  cd Workspace/github.com/subicura\u001b[m\u001b[2B\r\u001b[2C"
+    ],
+    [
+      0.101481,
+      "\r\u001b[2C"
+    ],
+    [
+      1.606481,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mb\u001b[m\r\u001b[3C"
+    ],
+    [
+      0.000791,
+      "\u001b[1A\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m26/109 +S\u001b[m\u001b[8A\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   62  vi ~/.\u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;mash_history\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   76  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;mrew install asciinema\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   88  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;mrew install neovim font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   89  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;mrew install neovim\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   90  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;mrew cask install font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   91  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;mrew tap caskroom/fonts\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   92  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;mrew cask install font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m   98  curl -sLf https://spacevim.org/install.sh | \u001b[m\u001b[;1;38;5;151;48;5;236mb\u001b[m\u001b[;1;38;5;254;48;5;236mash\u001b[m\u001b[2B\r\u001b["
+    ],
+    [
+      3.4e-05,
+      "3C"
+    ],
+    [
+      0.367672,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mbr\u001b[m\r\u001b[4C"
+    ],
+    [
+      0.000439,
+      "\u001b[1A\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m25/109 +S\u001b[m\u001b[8A\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   46  $(\u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mew --prefix)/opt/fzf/install\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   49  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mew install fasd\u001b[m\u001b[;m     \u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   76  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mew install asciinema\u001b[m\u001b[;m                 \u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   88  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mew install neovim font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   89  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mew install neovim\u001b[m\u001b[;m                  \u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   90  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mew cask install font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   91  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;mew tap caskroom/fonts\u001b["
+    ],
+    [
+      3.2e-05,
+      "m\u001b[;m              \u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m   92  \u001b[m\u001b[;1;38;5;151;48;5;236mb\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236mew cask install font-hack-nerd-font\u001b[m\u001b[;m           \u001b[2B\r\u001b[4C"
+    ],
+    [
+      0.014823,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mbre\u001b[m\r\u001b[5C"
+    ],
+    [
+      0.000375,
+      "\u001b[1A\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m17/109 +S\u001b[m\u001b[8A\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   46  $(\u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mw --prefix)/opt/fzf/install\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   49  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mw install fasd\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   76  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mw install asciinema\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   88  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mw install neovim font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   89  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mw install neovim\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   90  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mw cask install font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m "
+    ],
+    [
+      5.7e-05,
+      "\u001b[;m   91  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mw tap caskroom/fonts\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m   92  \u001b[m\u001b[;1;38;5;151;48;5;236mb\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236mw cask install font-hack-nerd-font\u001b[m\u001b[2B\r\u001b[5C"
+    ],
+    [
+      0.207406,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mbrew\u001b[m\r\u001b[6C"
+    ],
+    [
+      0.000666,
+      "\u001b[1A\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m11/109 +S\u001b[m\u001b[8A\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   46  $(\u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m --prefix)/opt/fzf/install\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   49  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install fasd\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   76  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install asciinema\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   88  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install neovim font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   89  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install neovim\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   90  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5"
+    ],
+    [
+      4.1e-05,
+      ";108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m cask install font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   91  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m tap caskroom/fonts\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m   92  \u001b[m\u001b[;1;38;5;151;48;5;236mb\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mw\u001b[m\u001b[;1;38;5;254;48;5;236m cask install font-hack-nerd-font\u001b[m\u001b[2B\r\u001b[6C"
+    ],
+    [
+      1.199125,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mbrew \u001b[m\u001b[1A\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m11/109 +S\u001b[m\u001b[8A\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   46  $(\u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m --prefix)/opt/fzf/install\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   49  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install fasd\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   76  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install asciinema\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   88  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install neovim font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   89  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b"
+    ],
+    [
+      2.4e-05,
+      "[;38;5;108mw\u001b[m\u001b[;m install neovim\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   90  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m cask install font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   91  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m tap caskroom/fonts\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m   92  \u001b[m\u001b[;1;38;5;151;48;5;236mb\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mw\u001b[m\u001b[;1;38;5;254;48;5;236m cask install font-hack-nerd-font\u001b[m\u001b[2B\r\u001b[7C"
+    ],
+    [
+      1.025437,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mbrew n\u001b[m\r\u001b[8C"
+    ],
+    [
+      0.000684,
+      "\u001b[1A\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m11/109 +S\u001b[m\u001b[8A\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   49  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m i\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mstall fasd\u001b[m\u001b[;m               \u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   76  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m i\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mstall asciinema\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   91  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m tap caskroom/fo\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mts\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   23  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install \u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;modejs\u001b[m\u001b[;m                    \u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   88  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b"
+    ],
+    [
+      4.1e-05,
+      "[;m install \u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;meovim font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   89  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install \u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;meovim\u001b[m\u001b[;m                  \u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   90  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m cask install font-hack-\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;merd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m   92  \u001b[m\u001b[;1;38;5;151;48;5;236mb\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mw\u001b[m\u001b[;1;38;5;254;48;5;236m cask install font-hack-\u001b[m\u001b[;1;38;5;151;48;5;236mn\u001b[m\u001b[;1;38;5;254;48;5;236merd-font\u001b[m\u001b[2B\r\u001b[8C"
+    ],
+    [
+      0.142418,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mbrew ne\u001b[m\r\u001b[9C"
+    ],
+    [
+      0.000715,
+      "\u001b[1A\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m7/109 +S\u001b[m\u001b[8A\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m    9  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m i\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mstall zsh zsh-compl\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mtions\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   76  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install ascii\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mma\u001b[m\u001b[;m \u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   23  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install \u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mod\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mjs\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   88  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install \u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b"
+    ],
+    [
+      0.000209,
+      "[m\u001b[;movim font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   89  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install \u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;movim\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   90  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m cask install font-hack-\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mrd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m   92  \u001b[m\u001b[;1;38;5;151;48;5;236mb\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mw\u001b[m\u001b[;1;38;5;254;48;5;236m cask install font-hack-\u001b[m\u001b[;1;38;5;151;48;5;236mn\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236mrd-font\u001b[m\u001b[2B\r\u001b[9C"
+    ],
+    [
+      0.206465,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mbrew neo\u001b[m\r\u001b[10C"
+    ],
+    [
+      0.001356,
+      "\u001b[1A\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m5/109 +S\u001b[m\u001b[7A\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m    9  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m i\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;mstall zsh zsh-compl\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mti\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mns\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   90  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m cask install font-hack-\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mrd-f\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mnt\u001b[m\u001b[;m  \u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   92  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m cask install font-hack-\u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;mrd-f\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mnt\u001b["
+    ],
+    [
+      0.000149,
+      "m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;m   88  \u001b[m\u001b[;38;5;108mb\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mr\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mw\u001b[m\u001b[;m install \u001b[m\u001b[;38;5;108mn\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108me\u001b[m\u001b[;m\u001b[m\u001b[;38;5;108mo\u001b[m\u001b[;mvim font-hack-nerd-font\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236m   89  \u001b[m\u001b[;1;38;5;151;48;5;236mb\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mr\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mw\u001b[m\u001b[;1;38;5;254;48;5;236m install \u001b[m\u001b[;1;38;5;151;48;5;236mn\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236me\u001b[m\u001b[;1;38;5;254;48;5;236m\u001b[m\u001b[;1;38;5;151;48;5;236mo\u001b[m\u001b[;1;38;5;254;48;5;236mvim\u001b[m\u001b[;m                  \u001b[2B\r\u001b[10C"
+    ],
+    [
+      2.271734,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1mbrew neo\u001b[m\u001b[9A\r\u001b[A\u001b[J\u001b[?1000l"
+    ],
+    [
+      0.005642,
+      "\u001b[32mbrew\u001b[39m install neovim"
+    ],
+    [
+      0.000604,
+      "\r\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura\u001b[39m\r\n\r\u001b[31m❯\u001b[39m \u001b[32mbrew\u001b[39m install neovim\u001b[K"
+    ],
+    [
+      0.00021,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.5,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.00064,
+      "\u001b]2;subicura@subicuras-Mac: ~/Workspace/github.com/subicura\u0007\u001b]1;...com/subicura\u0007"
+    ],
+    [
+      0.000978,
+      "\u001b]0;~/Workspace/github.com/subicura\u0007"
+    ],
+    [
+      0.030871,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura\u001b[39m\r\n\r\u001b[31m❯\u001b[39m \u001b[K\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      2.5,
+      "\u001b[J\u001b[6n"
+    ],
+    [
+      0.000453,
+      "\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\n\u001b[G\u001b[?1000h\u001b[9A\u001b[G\u001b[K\u001b[6n"
+    ],
+    [
+      0.001268,
+      "\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[1B\r\u001b[;m                                                                                \r\u001b[9A\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[2C\u001b[1B\r\u001b"
+    ],
+    [
+      0.00014,
+      "[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m35/35\u001b[m\r\u001b[;m                                                                                \r\r\u001b[2C\u001b[;38;5;144m35/35\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236msubicura.github.io\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_includes\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/css\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_posts\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_layouts\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_plugins\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_sass\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_sass/bourbon\u001b[m\u001b[9A\r\u001b[2C"
+    ],
+    [
+      0.021347,
+      "\r\u001b[2C"
+    ],
+    [
+      1.661796,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\u001b[2B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236msubicura.github.io/_includes\u001b[m\u001b[3A\r\u001b[2C"
+    ],
+    [
+      0.35027,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\u001b[3B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/_includes\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236msubicura.github.io/css\u001b[m\u001b[4A\r\u001b[2C"
+    ],
+    [
+      0.832841,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\u001b[4B\r\u001b[;1;38;5;161;48;5;236m \u001b[m\u001b[;m \u001b[;msubicura.github.io/css\u001b[m\u001b[1B\r\u001b[;1;38;5;161;48;5;236m>\u001b[m\u001b[;1;38;5;254;48;5;236m \u001b[m\u001b[;1;38;5;254;48;5;236msubicura.github.io/_posts\u001b[m\u001b[5A\r\u001b[2C"
+    ],
+    [
+      0.67202,
+      "\r\u001b[;m                                                                                \r\u001b[;1;38;5;110m> \u001b[m\u001b[;1m\u001b[m\r\u001b[A\u001b[J\u001b[?1000l"
+    ],
+    [
+      0.003151,
+      "\r\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura/subicura.github.io/_posts\u001b[39m\r\n\r\u001b[31m❯\u001b[39m \u001b[K"
+    ],
+    [
+      0.000221,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.5,
+      "\u001b[32ml\u001b[39m\u001b[90ms\u001b[39m\b"
+    ],
+    [
+      0.00173,
+      "\b\u001b[32ml\u001b[32ms\u001b[39m"
+    ],
+    [
+      0.593665,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      0.001253,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.00081,
+      "\u001b]2;ls -G\u0007\u001b]1;ls\u0007"
+    ],
+    [
+      0.035961,
+      "\u001b]0;_posts: ls -G\u0007"
+    ],
+    [
+      0.003229,
+      "2016-03-23-hello.markdown\r\n2016-05-30-likehs-develop-log.markdown\r\n2016-06-07-zero-downtime-docker-deployment.markdown\r\n2016-06-13-start-go-shipment-tracking-opensource.markdown\r\n2016-06-20-server-side-rendering-with-react.markdown\r\n2016-07-11-coding-convention.markdown\r\n2016-12-31-remember-2016.markdown\r\n2017-01-19-docker-guide-for-beginners-1.markdown\r\n2017-01-19-docker-guide-for-beginners-2.markdown\r\n2017-02-10-docker-guide-for-beginners-create-image-and-deploy.markdown\r\n2017-02-25-container-orchestration-with-docker-swarm.markdown\r\n"
+    ],
+    [
+      0.000471,
+      "\u001b]2;subicura@subicuras-Mac: ~/Workspace/github.com/subicura/subicura.github.io/_posts\u0007\u001b]1;..hub.io/_posts\u0007"
+    ],
+    [
+      0.00063,
+      "\u001b]0;~/Workspace/github.com/subicura/subicura.github.io/_posts\u0007"
+    ],
+    [
+      0.025337,
+      "\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura/subicura.github.io/_posts\u001b[39m\r\n\r\u001b[35m❯\u001b[39m \u001b[K"
+    ],
+    [
+      0.00028,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.000571,
+      "\u001b[?2004h"
+    ],
+    [
+      0.035691,
+      "\r\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[J\r\n\r\u001b[34m~/Workspace/github.com/subicura/subicura.github.io/_posts\u001b[39m \u001b[38;5;242msource\u001b[39m\r\n\r\u001b[35m❯\u001b[39m "
+    ],
+    [
+      0.001707,
+      "\u001b[K"
+    ],
+    [
+      2.068902,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ]
+}

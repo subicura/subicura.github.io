@@ -1,0 +1,117 @@
+.asciinema-theme-snazzy .asciinema-terminal {
+  color: #eff0eb;                    /* default text color */
+  background-color: #282a36;         /* terminal background color */
+  border-color: #282a36;
+}
+.asciinema-theme-snazzy .fg-bg {    /* inverse for default text color */
+  color: #282a36;
+}
+.asciinema-theme-snazzy .bg-fg {    /* inverse for terminal background color */
+  background-color: #eff0eb;
+}
+.asciinema-theme-snazzy .fg-0 {
+  color: #282a36;
+}
+.asciinema-theme-snazzy .bg-0 {
+  background-color: #282a36;
+}
+.asciinema-theme-snazzy .fg-1 {
+  color: #ff5c57;
+}
+.asciinema-theme-snazzy .bg-1 {
+  background-color: #ff5c57;
+}
+.asciinema-theme-snazzy .fg-2 {
+  color: #5af78e;
+}
+.asciinema-theme-snazzy .bg-2 {
+  background-color: #5af78e;
+}
+.asciinema-theme-snazzy .fg-3 {
+  color: #f3f99d;
+}
+.asciinema-theme-snazzy .bg-3 {
+  background-color: #f3f99d;
+}
+.asciinema-theme-snazzy .fg-4 {
+  color: #57c7ff;
+}
+.asciinema-theme-snazzy .bg-4 {
+  background-color: #57c7ff;
+}
+.asciinema-theme-snazzy .fg-5 {
+  color: #ff6ac1;
+}
+.asciinema-theme-snazzy .bg-5 {
+  background-color: #ff6ac1;
+}
+.asciinema-theme-snazzy .fg-6 {
+  color: #9aedfe;
+}
+.asciinema-theme-snazzy .bg-6 {
+  background-color: #9aedfe;
+}
+.asciinema-theme-snazzy .fg-7 {
+  color: #f1f1f0;
+}
+.asciinema-theme-snazzy .bg-7 {
+  background-color: #f1f1f0;
+}
+.asciinema-theme-snazzy .fg-8 {
+  color: #686868;
+}
+.asciinema-theme-snazzy .bg-8 {
+  background-color: #686868;
+}
+.asciinema-theme-snazzy .fg-9 {
+  color: #ff5c57;
+}
+.asciinema-theme-snazzy .bg-9 {
+  background-color: #ff5c57;
+}
+.asciinema-theme-snazzy .fg-10 {
+  color: #5af78e;
+}
+.asciinema-theme-snazzy .bg-10 {
+  background-color: #5af78e;
+}
+.asciinema-theme-snazzy .fg-11 {
+  color: #f3f99d;
+}
+.asciinema-theme-snazzy .bg-11 {
+  background-color: #f3f99d;
+}
+.asciinema-theme-snazzy .fg-12 {
+  color: #57c7ff;
+}
+.asciinema-theme-snazzy .bg-12 {
+  background-color: #57c7ff;
+}
+.asciinema-theme-snazzy .fg-13 {
+  color: #ff6ac1;
+}
+.asciinema-theme-snazzy .bg-13 {
+  background-color: #ff6ac1;
+}
+.asciinema-theme-snazzy .fg-14 {
+  color: #9aedfe;
+}
+.asciinema-theme-snazzy .bg-14 {
+  background-color: #9aedfe;
+}
+.asciinema-theme-snazzy .fg-15 {
+  color: #eff0eb;
+}
+.asciinema-theme-snazzy .bg-15 {
+  background-color: #eff0eb;
+}
+.asciinema-theme-snazzy .fg-8,
+.asciinema-theme-snazzy .fg-9,
+.asciinema-theme-snazzy .fg-10,
+.asciinema-theme-snazzy .fg-11,
+.asciinema-theme-snazzy .fg-12,
+.asciinema-theme-snazzy .fg-13,
+.asciinema-theme-snazzy .fg-14,
+.asciinema-theme-snazzy .fg-15 {
+  font-weight: bold;
+}
