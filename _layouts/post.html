@@ -43,22 +43,24 @@
               {% endif %}
             </h1>
             <div class="cf post-meta-text">
-              <section class="share pull-right">
+              <section class="share">
                 <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ko"></a>
                 {% for social in site.social %}
                   {% if social.share_url != null %}
-                    <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}"
+                    <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}.html"
                       onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-                    <i class="nf nf-fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
+                      <i class="nf nf-fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
                     </a>
                   {% endif %}
                 {% endfor %}
               </section>
-              
-              <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
-              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ page.author }}</h4>
-              on
-              <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+              <div class="author-info">
+                <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
+                <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ page.author }}</h4>
+                on
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+              </div>
             </div>
           </div>
         </div>
@@ -81,6 +83,7 @@
         <footer class="post-footer">
           <section class="share">
             <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ko"></a>
             {% for social in site.social %}
               {% if social.share_url != null %}
                 <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}"

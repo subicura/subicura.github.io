@@ -190,10 +190,19 @@ body
         text-decoration: none
         &.icon-twitter
           color: #00aced
+          &:hover 
+            text-decoration: none
         &:hover
           text-decoration: underline
       .share
+        float: right
         padding: 5px 0 0
+        @include respond-to(500)
+          float: none
+      .author-info
+        @include respond-to(500)
+          margin-top: 10px
+          clear: both
 .container.featured
   padding-bottom: 40px
 
@@ -627,16 +636,27 @@ body
 .share
   padding: 20px 0 0
   line-height: 22px
+  .fb_iframe_widget
+    float: left
+  .pocket-btn
+    float: left
+    margin-left: 3px
+    iframe
+      display: block
+      margin-top: 3px
   a
     text-decoration: none
     color: #bbb
-    padding-left: 12px
+    padding-left: 8px
     .hidden
       display: none
     &:hover
       color: #333
   .icon-twitter
     font-size: 16px
+    color: #00aced
+    &:hover 
+      text-decoration: none
 
 .bottom-closer
   width: 100%
