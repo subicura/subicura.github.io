@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 25 Nov 2017 09:04:19 +0900</pubDate>
-    <lastBuildDate>Sat, 25 Nov 2017 09:04:19 +0900</lastBuildDate>
+    <pubDate>Sat, 25 Nov 2017 09:18:51 +0900</pubDate>
+    <lastBuildDate>Sat, 25 Nov 2017 09:18:51 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -703,7 +703,7 @@ cp .tmux/.tmux.conf.local .&lt;span class=&quot;w&quot;&gt;
 
 &lt;p&gt;아주 간단하게 살펴보았지만 사실 스크롤, 복사 등등 알아야 할 게 은근 많습니다. &lt;del&gt;안될꺼야..&lt;/del&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/tmux/tmux&quot;&gt;tmux github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tmux/tmux&quot;&gt;tmux github&lt;/a&gt; / &lt;a href=&quot;https://github.com/gpakosz/.tmux&quot;&gt;Oh My Tmux!&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;tmuxinator&quot;&gt;tmuxinator&lt;/h3&gt;
 
