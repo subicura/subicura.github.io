@@ -355,10 +355,20 @@ body {
         text-decoration: none; }
         .content article .post-meta a.icon-twitter {
           color: #00aced; }
+          .content article .post-meta a.icon-twitter:hover {
+            text-decoration: none; }
         .content article .post-meta a:hover {
           text-decoration: underline; }
       .content article .post-meta .share {
+        float: right;
         padding: 5px 0 0; }
+        @media only screen and (max-width: 500px) {
+          .content article .post-meta .share {
+            float: none; } }
+      @media only screen and (max-width: 500px) {
+        .content article .post-meta .author-info {
+          margin-top: 10px;
+          clear: both; } }
 
 .container.featured {
   padding-bottom: 40px; }
@@ -800,16 +810,27 @@ body {
 .share {
   padding: 20px 0 0;
   line-height: 22px; }
+  .share .fb_iframe_widget {
+    float: left; }
+  .share .pocket-btn {
+    float: left;
+    margin-left: 3px; }
+    .share .pocket-btn iframe {
+      display: block;
+      margin-top: 3px; }
   .share a {
     text-decoration: none;
     color: #bbb;
-    padding-left: 12px; }
+    padding-left: 8px; }
     .share a .hidden {
       display: none; }
     .share a:hover {
       color: #333; }
   .share .icon-twitter {
-    font-size: 16px; }
+    font-size: 16px;
+    color: #00aced; }
+    .share .icon-twitter:hover {
+      text-decoration: none; }
 
 .bottom-closer {
   width: 100%;
