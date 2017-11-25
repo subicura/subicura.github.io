@@ -540,7 +540,7 @@ tmux는 꽤 사용난이도가 높은 프로그램입니다. 자세한 내용을
 
 아주 간단하게 살펴보았지만 사실 스크롤, 복사 등등 알아야 할 게 은근 많습니다. ~~안될꺼야..~~
 
-[tmux github](https://github.com/tmux/tmux)
+[tmux github](https://github.com/tmux/tmux) / [Oh My Tmux!](https://github.com/gpakosz/.tmux)
 
 ### tmuxinator
 
