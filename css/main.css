@@ -432,6 +432,13 @@ body {
     text-decoration: none; }
     .site-footer a:hover {
       color: #333; }
+  .site-footer .subscribe {
+    display: inline-block;
+    margin-bottom: 3px; }
+    .site-footer .subscribe .nf {
+      display: inline-block;
+      text-align: center;
+      width: 18px; }
 
 .post .article-image {
   position: absolute;
@@ -706,7 +713,7 @@ body {
     letter-spacing: 0.5px;
     word-break: normal; }
 .post .bottom-teaser {
-  padding: 50px 0;
+  padding: 50px 0 30px;
   font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "나눔고딕", "Malgun Gothic"; }
   .post .bottom-teaser hr {
     border: 0;
