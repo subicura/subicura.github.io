@@ -28,8 +28,9 @@ url: "https://subicura.com" # the base hostname & protocol for your site
 # url: "http://0.0.0.0:4000" # the base hostname & protocol for your site
 baseurl: ""
 mailchimp: "http://eepurl.com/cywDtP"
+feedly: "http://bit.ly/2A8Dkav"
 #used to display twitter cards
-twitter_handle: '@subicura'
+twitter_handle: "@subicura"
 
 #fill in disqus shortname to use disqus
 #disqus: disqus-shortname
