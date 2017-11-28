@@ -5,7 +5,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-43194822-1', 'auto');
+  ga('create', '{{ site.google_analytics_id }}', 'auto');
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
@@ -15,7 +15,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.11&appId=1611862309129685";
+  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.11&appId={{ site.fb_app_id }}";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 

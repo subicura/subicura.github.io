@@ -36,9 +36,9 @@
   <meta property="og:type" content="article" />
   {% if page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
 
-  <meta property="fb:app_id" content="1611862309129685" />
+  <meta property="fb:app_id" content="{{ site.fb_app_id }}" />
 
-  <meta name="naver-site-verification" content="cc257cc7988ed85c9db6c228330b4870f9dfa25f" />
+  <meta name="naver-site-verification" content="{{ site.naver_site_verification }}" />
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
   <link rel="shortcut icon" href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" type="image/png"/>
@@ -59,6 +59,14 @@
         families: ['Spoqa Han Sans'],
         urls: ['/css/spoqa-han-sans-font.css']
       }
+    });
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "{{ site.google_ad_client }}",
+      enable_page_level_ads: true
     });
   </script>
 
