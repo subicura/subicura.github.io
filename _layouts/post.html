@@ -104,20 +104,36 @@
               <hr>
               <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
             </section>
+            <footer class="subscribe-info">
+                <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+                <a class="subscribe" href="{{ site.feedly }}"  target="blank"><img id='feedlyFollow' src='//s3.feedly.com/img/follows/feedly-follow-logo-black_2x.png' alt='follow us in feedly' width='18' height='18'> Feedly 구독하기</a><br />
+                <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="nf nf-fa-rss"></i> RSS 구독하기</span></a><br />
+                {% if site.mailchimp %} 
+                  <a class="subscribe" href="{{ site.mailchimp }}" target="_blank"> <span class="tooltip"> <i class="nf nf-oct-mail"></i> Email 구독하기</span></a>
+                {% endif %}
+            </footer>
           </div>
 
           <div class="isRight">
             <h5 class="index-headline featured"><span>Supported by</span></h5>
-            <footer class="site-footer">
-              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
-              <a class="subscribe" href="{{ site.feedly }}"  target="blank"><img id='feedlyFollow' src='//s3.feedly.com/img/follows/feedly-follow-logo-black_2x.png' alt='follow us in feedly' width='18' height='18'> Feedly 구독하기</a><br />
-              <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="nf nf-fa-rss"></i> RSS 구독하기</span></a><br />
-              {% if site.mailchimp %} 
-                <a class="subscribe" href="{{ site.mailchimp }}" target="_blank"> <span class="tooltip"> <i class="nf nf-oct-mail"></i> Email 구독하기</span></a>
+            <div class="googleads">
+              {% if site.google_ad_slot_1_id %}
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- 기본 광고 -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="{{ site.google_ad_client }}"
+                    data-ad-slot="{{ site.google_ad_slot_1_id }}"
+                    data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
               {% endif %}
-            </footer>
+            </div>
           </div>
         </div>
+
+        
 
         {% if page.comments %} 
         <div class="fb-comments-wrapper">
