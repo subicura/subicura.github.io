@@ -35,6 +35,9 @@ twitter_handle: "@subicura"
 #fill in disqus shortname to use disqus
 #disqus: disqus-shortname
 
+# for thumbnail
+absolute_root_path: /Users/subicura/Workspace/github.com/subicura/subicura.github.io
+
 # tracking & ad code
 fb_app_id: "1611862309129685"
 google_analytics_id: "UA-43194822-1"
