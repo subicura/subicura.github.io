@@ -427,15 +427,23 @@ body {
   text-align: center;
   color: #999;
   line-height: 17.6px; }
-  .site-footer a {
+
+.subscribe-info {
+  clear: both;
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 140%; }
+  .subscribe-info a {
     color: #666;
     text-decoration: none; }
-    .site-footer a:hover {
+    .subscribe-info a:hover {
       color: #333; }
-  .site-footer .subscribe {
+  .subscribe-info .poweredby {
+    margin-bottom: 20px; }
+  .subscribe-info .subscribe {
     display: inline-block;
     margin-bottom: 3px; }
-    .site-footer .subscribe .nf {
+    .subscribe-info .subscribe .nf {
       display: inline-block;
       text-align: center;
       width: 18px; }
