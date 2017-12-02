@@ -1068,9 +1068,6 @@ pre {
 
 .googleads-content {
   margin-top: 20px; }
-  @media only screen and (max-width: 520px) {
-    .googleads-content {
-      display: none; } }
 
 .googleads {
   max-width: 100%;
