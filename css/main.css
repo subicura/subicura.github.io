@@ -427,6 +427,11 @@ body {
   text-align: center;
   color: #999;
   line-height: 17.6px; }
+  .site-footer a {
+    color: #666;
+    text-decoration: none; }
+    .site-footer a:hover {
+      color: #333; }
 
 .subscribe-info {
   clear: both;
