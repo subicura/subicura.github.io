@@ -29,6 +29,10 @@ last_modified_at: 2017-01-21T10:00:00+09:00
 
 먼저, 자바스크립트를 이용한 웹 개발의 발전방향을 살펴봅니다.
 
+{% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
+
+---
+
 ## ajax가 없던 시절
 
 지금은 Javascript를 이용하여 동적인 웹페이지를 자연스럽게 만들고 있지만 10년전 [ajax](https://en.wikipedia.org/wiki/Ajax_(programming))가 등장하기 전에는 서버에서 전체 HTML을 만드는 방식이 일반적이였습니다.

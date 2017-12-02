@@ -27,6 +27,8 @@ last_modified_at: 2017-02-10T01:00:00+09:00
 * [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기]({% post_url 2017-01-19-docker-guide-for-beginners-2 %}) <span class="series">SERIES 2/3</span>
 * [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
 
+{% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
+
 ---
 
 ## 서버를 관리한다는 것

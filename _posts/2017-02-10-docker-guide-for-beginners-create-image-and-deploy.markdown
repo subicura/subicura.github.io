@@ -19,6 +19,8 @@ toc: true
 * [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기]({% post_url 2017-01-19-docker-guide-for-beginners-2 %}) <span class="series">SERIES 2/3</span>
 * **초보를 위한 도커 안내서 - 이미지 만들고 배포하기 ✓** <span class="series">SERIES 3/3</span>
 
+{% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
+
 ---
 
 ## 도커 이미지 만들기

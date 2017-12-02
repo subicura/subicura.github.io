@@ -27,6 +27,8 @@ last_modified_at: 2017-11-24T13:40:00+09:00
 
 {% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
 
+---
+
 ## 키보드 기호 설명
 
 단축키 입력과 관련해서 기호를 사용합니다. 잘 기억해 둡니다.

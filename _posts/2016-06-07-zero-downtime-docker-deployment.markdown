@@ -22,6 +22,10 @@ last_modified_at: 2017-01-21T10:00:00+09:00
 
 웹 서비스는 웹서버 1대(nginx + php)와 디비서버 1대(mysql + redis)로 가난하게 구성되어 있습니다. 서버 규모에 맞게 최대한 단순하게 배포 프로세스를 구성하려고 했지만, 추후 서비스가 잘 되었을때를 고려하여 확장가능성도 고려하였습니다.
 
+{% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
+
+---
+
 ## 어떻게 배포할까?
 
 배포 프로세스를 만들면서 고민했던 내용입니다.

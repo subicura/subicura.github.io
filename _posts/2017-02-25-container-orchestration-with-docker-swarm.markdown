@@ -21,6 +21,10 @@ last_modified_at: 2017-03-05T20:30:00+09:00
 
 다행히 비슷한 고민을 미리한 고오급 개발자들이 있었고 이러한 작업을 [오케스트레이션](https://en.wikipedia.org/wiki/Orchestration_(computing))<sub>Orchestration</sub>이라고 합니다.
 
+{% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
+
+---
+
 ## 서버 오케스트레이션 <sub>server orchestration</sub>
 ![container orchestration]({{ site.url }}/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/container-orchestration.png)
 
