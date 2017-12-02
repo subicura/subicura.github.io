@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2017-12-02T15:19:12+09:00</updated>
+ <updated>2017-12-02T15:27:31+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -39,6 +39,8 @@
                 &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
                 &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
             &lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;키보드 기호 설명&lt;/h2&gt;
 
@@ -865,6 +867,13 @@ gem install tmuxinator&lt;span class=&quot;w&quot;&gt;
 &lt;p&gt;도커덕분에 애플리케이션 설치 자체가 굉장히 편해져 이런 작업은 사소해 보일 수 있지만, 인간의 욕심은 끝이 없고 더욱 격렬하게 아무것도 안 하고 싶기 때문에 컨테이너를 실행할 서버를 고르는 것부터 정보를 관리하는 것까지 모든 과정을 자동화하면 좋겠다는 생각을 했습니다.&lt;/p&gt;
 
 &lt;p&gt;다행히 비슷한 고민을 미리한 고오급 개발자들이 있었고 이러한 작업을 &lt;a href=&quot;https://en.wikipedia.org/wiki/Orchestration_(computing)&quot;&gt;오케스트레이션&lt;/a&gt;&lt;sub&gt;Orchestration&lt;/sub&gt;이라고 합니다.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;subserver-orchestrationsub&quot;&gt;서버 오케스트레이션 &lt;sub&gt;server orchestration&lt;/sub&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/container-orchestration.png&quot; alt=&quot;container orchestration&quot; /&gt;&lt;/p&gt;
@@ -1762,6 +1771,11 @@ docker service create --name counter &lt;span class=&quot;se&quot;&gt;\&lt;/span
   &lt;li&gt;&lt;a href=&quot;/2017/01/19/docker-guide-for-beginners-2.html&quot;&gt;초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기&lt;/a&gt; &lt;span class=&quot;series&quot;&gt;SERIES 2/3&lt;/span&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;초보를 위한 도커 안내서 - 이미지 만들고 배포하기 ✓&lt;/strong&gt; &lt;span class=&quot;series&quot;&gt;SERIES 3/3&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
 
 &lt;hr /&gt;
 
@@ -2763,6 +2777,11 @@ docker push localhost:5000/subicura/sinatra-app:1&lt;span class=&quot;w&quot;&gt
   &lt;li&gt;&lt;a href=&quot;/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html&quot;&gt;초보를 위한 도커 안내서 - 이미지 만들고 배포하기&lt;/a&gt; &lt;span class=&quot;series&quot;&gt;SERIES 3/3&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
+
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;도커 설치하기&lt;/h2&gt;
@@ -3717,6 +3736,11 @@ volumes:
   &lt;li&gt;&lt;a href=&quot;/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html&quot;&gt;초보를 위한 도커 안내서 - 이미지 만들고 배포하기&lt;/a&gt; &lt;span class=&quot;series&quot;&gt;SERIES 3/3&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
+
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;서버를 관리한다는 것&lt;/h2&gt;
@@ -3980,6 +4004,13 @@ CMD [&amp;quot;start.sh&amp;quot;]&lt;/pre&gt;&lt;/noscript&gt;
 &lt;p&gt;코딩 컨벤션은 표준이라고 하지만 꼭 지켜지 않아도 프로그램은 잘 동작하고 이 방식이 좋은지 저 방식이 좋은지 백날 싸워도 결론이 없는 딱히 신경 쓰지 않아도 크게 문제 없어 보이는 가이드라인입니다.&lt;/p&gt;
 
 &lt;p&gt;이러한 코딩 컨벤션과 에러 체크를 도와주는 툴을 linter라고 합니다.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;문제는 유지보수&lt;/h2&gt;
 
@@ -4454,6 +4485,13 @@ gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;watch&amp;#39;], function () {
 
 &lt;p&gt;먼저, 자바스크립트를 이용한 웹 개발의 발전방향을 살펴봅니다.&lt;/p&gt;
 
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
+
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;ajax--&quot;&gt;ajax가 없던 시절&lt;/h2&gt;
 
 &lt;p&gt;지금은 Javascript를 이용하여 동적인 웹페이지를 자연스럽게 만들고 있지만 10년전 &lt;a href=&quot;https://en.wikipedia.org/wiki/Ajax_(programming)&quot;&gt;ajax&lt;/a&gt;가 등장하기 전에는 서버에서 전체 HTML을 만드는 방식이 일반적이였습니다.&lt;/p&gt;
@@ -4835,6 +4873,13 @@ foreach($talks as $talk) {
 &lt;p&gt;이제 컨트리뷰터는 해봤으니 커미터가 되어봅시다. 아쉽게도 인기있는 오픈소스의 커미터는 꽤 많은 노력이 필요하고 고오급 개발자만 가능한 것 같습니다.
 그럼 오픈소스 프로젝트를 직접 운영해보는건 어떨까요? 직접 오픈소스 프로젝트를 운영하면 커미터가 될 수 있고 리뷰어도 될 수 있고 프로젝트를 운영하면서 많은 노하우를 배울수도 있습니다. 아참, 오픈소스에 참여하면 IntelliJ IDE도 &lt;a href=&quot;https://www.jetbrains.com/buy/opensource/&quot;&gt;무료&lt;/a&gt;로 사용할 수 있고 JIRA도 &lt;a href=&quot;https://ko.atlassian.com/software/views/open-source-license-request&quot;&gt;무료&lt;/a&gt;로 쓸 수 있습니다.&lt;/p&gt;
 
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
+
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;section&quot;&gt;어떤걸 만들까?&lt;/h2&gt;
 
 &lt;p&gt;커머스에서 상품이 배송되면 배송상태를 추적해야합니다. 배송이 완료되면 구매확정 버튼을 누르게 할수도 있고, 배송정보 화면을 커스터마이징 할 수도 있습니다. 많은 배송업체가 API를 제공하지 않기 때문에 자동화하기가 까다롭습니다.(대체 다른 서비스들은 어떻게 추적하는거지…?) 그래서 결국 HTML을 파싱하는 방법을 선택합니다. 택배사와 송장번호를 입력하면 택배 사이트에 접속하여 HTML을 읽고 DOM을 파싱하여 정리된 포멧으로 택배정보를 조회하는 서비스를 만듭니다&lt;/p&gt;
@@ -5160,6 +5205,13 @@ rm &amp;#39;.gitignore&amp;#39;&lt;/pre&gt;&lt;/noscript&gt;
 &lt;p&gt;현재 홈쇼핑처럼 운영서버는 크게 웹(+API), 마이크로서비스(배송조회, 우편번호검색), 영상, 채팅, 모니터링으로 구성되어 있습니다. 여기서는 웹 서비스 배포에 대해서 이야기 하려고 합니다.&lt;/p&gt;
 
 &lt;p&gt;웹 서비스는 웹서버 1대(nginx + php)와 디비서버 1대(mysql + redis)로 가난하게 구성되어 있습니다. 서버 규모에 맞게 최대한 단순하게 배포 프로세스를 구성하려고 했지만, 추후 서비스가 잘 되었을때를 고려하여 확장가능성도 고려하였습니다.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;어떻게 배포할까?&lt;/h2&gt;
 
@@ -5661,6 +5713,13 @@ docker tag -f ${DOCKER_REGISTRY_NAME}-app:$COMMIT_HASH ${DOCKER_REGISTRY_NAME}-a
 &lt;p&gt;그동안 주로 SI관련일을 하다가 이번에 처음으로 일반 고객을 대상으로 서비스를 만들게 되었습니다. 처음부터 끝까지 만들어야 하다보니 정말 일이 많고 힘드네요. 모든 대한민국의 스타트업에게 존경을…&lt;/p&gt;
 
 &lt;p&gt;밑에 내용은 서비스를 만들면서 기술적으로 고민했던 것과 어떤 기술들을 사용했는지를 중점으로 정리해 보았습니다. “아, 이 스타트업은 이렇게 일을 하고 이런식으로 서비스를 개발했구나” 하고 봐주시면 감사할 것 같습니다. 더 나은 대안이 있다면 추천해주셔도 좋습니다.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;어떤걸 만들까?&lt;/h2&gt;
 
