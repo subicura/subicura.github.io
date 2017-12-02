@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2017-12-01T02:00:23+09:00</updated>
+ <updated>2017-12-02T15:19:12+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -34,6 +34,11 @@
 &lt;p&gt;최종 설정이 완료된 화면을 살펴보고 어떻게 설정하는지 알아봅니다.&lt;/p&gt;
 
 &lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-11-22-mac-os-development-environment-setup/terminal-demo.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/div&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;키보드 기호 설명&lt;/h2&gt;
 

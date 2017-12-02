@@ -1066,6 +1066,16 @@ pre {
       text-decoration: none;
       font-weight: bold; }
 
+.googleads-content {
+  margin-top: 20px; }
+  @media only screen and (max-width: 520px) {
+    .googleads-content {
+      display: none; } }
+
+.googleads {
+  max-width: 100%;
+  overflow: hidden; }
+
 .asciinema-player-section {
   padding-top: 10px;
   padding-bottom: 20px; }
