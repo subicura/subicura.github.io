@@ -369,6 +369,8 @@ body {
         .content article .post-meta .author-info {
           margin-top: 10px;
           clear: both; } }
+      .content article .post-meta .nf-fa-comment {
+        margin-left: 10px; }
 
 .container.featured {
   padding-bottom: 40px; }
