@@ -33,7 +33,7 @@ last_modified_at: 2017-02-10T01:00:00+09:00
 리눅스에 도커를 설치하는 방법은 자동 설치 스크립트를 이용하는 것이 가장 쉽습니다. 다음 명령어를 입력하면 root 권한을 요구하고 잠시 기다리면 설치가 완료됩니다. 음.. 참 쉽죠?
 
 {% highlight bash linenos %}
-curl -s https://get.docker.com/ | sudo sh
+curl -fsSL https://get.docker.com/ | sudo sh
 {% endhighlight %}
 
 {% asciinema path: 'asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json', title: 'Docker Install (ubuntu)' %}
