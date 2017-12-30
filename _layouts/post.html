@@ -72,7 +72,7 @@
               <div class="author-info">
                 <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
                 <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                  {%if page.author %}{{ page.author }}{% else %}{{ site.author }}<meta itemprop="url" content="{{ site.url }}/about" />{% endif %}
+                  {%if page.author %}{{ page.author }}<meta itemprop="name" content="{{ page.author }}" />{% else %}{{ site.author }}<meta itemprop="name" content="{{ site.author }}" /><meta itemprop="url" content="{{ site.url }}/about" />{% endif %}
                 </h4>
                 on
                 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
