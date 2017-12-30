@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 05 Dec 2017 04:13:10 +0900</pubDate>
-    <lastBuildDate>Tue, 05 Dec 2017 04:13:10 +0900</lastBuildDate>
+    <pubDate>Sat, 30 Dec 2017 12:05:22 +0900</pubDate>
+    <lastBuildDate>Sat, 30 Dec 2017 12:05:22 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -2831,7 +2831,7 @@ docker push localhost:5000/subicura/sinatra-app:1&lt;span class=&quot;w&quot;&gt
 
 &lt;p&gt;리눅스에 도커를 설치하는 방법은 자동 설치 스크립트를 이용하는 것이 가장 쉽습니다. 다음 명령어를 입력하면 root 권한을 요구하고 잠시 기다리면 설치가 완료됩니다. 음.. 참 쉽죠?&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;curl -s https://get.docker.com/ | sudo sh&lt;span class=&quot;w&quot;&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;curl -fsSL https://get.docker.com/ | sudo sh&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-install-on-linux.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;Docker Install (ubuntu)&lt;/figcaption&gt;&lt;/div&gt;
