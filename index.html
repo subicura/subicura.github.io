@@ -38,6 +38,24 @@ layout: default
     <div class="container featured">
       {% for post in site.tags.featured %}
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop="name" content="{{ site.title }}" />
+            <meta itemprop="url" content="{{ site.url }}" />
+            <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="{{ site.url }}{{ site.logo }}" />
+            </div>
+          </div>
+          <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="name" content="{{ site.author }}" />
+            <meta itemprop="url" content="{{ site.url }}/about" />
+          </div>
+          <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ site.url }}{{ site.author_image }}" />
+          </div>
+          <meta itemprop="headline" content="{{ post.title }}" />
+          <meta itemprop="mainEntityOfPage" content="{{ post.url }}" />
+          <meta itemprop="datePublished" content="{{ post.date }}" />
+          <meta itemprop="dateModified" content="{% if post.last_modified_at %}{{ post.last_modified_at }}{% else %}{{ post.date }}{% endif %}" />
           <div class="article-item">
             <header class="post-header">
               <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
@@ -65,6 +83,24 @@ layout: default
     <div class="cf frame">
       {% for post in paginator.posts %}
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop="name" content="{{ site.title }}" />
+            <meta itemprop="url" content="{{ site.url }}" />
+            <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="{{ site.url }}{{ site.logo }}" />
+            </div>
+          </div>
+          <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="name" content="{{ site.author }}" />
+            <meta itemprop="url" content="{{ site.url }}/about" />
+          </div>
+          <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ site.url }}{{ site.author_image }}" />
+          </div>
+          <meta itemprop="headline" content="{{ post.title }}" />
+          <meta itemprop="mainEntityOfPage" content="{{ post.url }}" />
+          <meta itemprop="datePublished" content="{{ post.date }}" />
+          <meta itemprop="dateModified" content="{% if post.last_modified_at %}{{ post.last_modified_at }}{% else %}{{ post.date }}{% endif %}" />
           <div class="article-item">
             <header class="post-header">
               <h2 class="post-title" itemprop="name">

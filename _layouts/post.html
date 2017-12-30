@@ -3,10 +3,24 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body itemscope itemtype="http://schema.org/Article">
+  <body itemscope itemtype="http://schema.org/BlogPosting">
     {% include header.html %}
     <main class="content" role="main">
       <article class="post">
+        <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+          <meta itemprop="name" content="{{ site.title }}" />
+          <meta itemprop="url" content="{{ site.url }}" />
+          <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ site.url }}{{ site.logo }}" />
+          </div>
+        </div>
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <meta itemprop="url" content="{{ site.url }}{{ site.author_image }}" />
+        </div>
+        <meta itemprop="headline" content="{{ page.title }}" />
+        <meta itemprop="mainEntityOfPage" content="{{ page.url }}" />
+        <meta itemprop="datePublished" content="{{ page.date }}" />
+        <meta itemprop="dateModified" content="{% if page.last_modified_at %}{{ page.last_modified_at }}{% else %}{{ page.date }}{% endif %}" />
         {% if page.image %}
         <div class="article-image">
           <div class="post-image-image" style="background-image: url({% if page.image %}{{ page.image }}{% endif %})">
@@ -16,7 +30,7 @@
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">
+            <h1 class="post-title" itemprop="name">
               {{ page.title }}
               {% if page.series %}
                 <span class="series">SERIES {{ page.series }}</span>
@@ -57,7 +71,9 @@
               </section>
               <div class="author-info">
                 <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
-                <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ page.author }}</h4>
+                <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  {%if page.author %}{{ page.author }}{% else %}{{ site.author }}<meta itemprop="url" content="{{ site.url }}/about" />{% endif %}
+                </h4>
                 on
                 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
               </div>
