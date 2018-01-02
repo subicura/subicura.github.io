@@ -1134,3 +1134,12 @@ pre {
 @media(max-width: 1100px) {
   .post .post-content .section-nav {
     display: none; } }
+.post .post-content .profile {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center; }
+  .post .post-content .profile figcaption {
+    display: none; }
+  .post .post-content .profile .profile-img {
+    display: block;
+    width: 200px; }
