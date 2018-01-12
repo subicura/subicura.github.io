@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 02 Jan 2018 09:04:51 +0900</pubDate>
-    <lastBuildDate>Tue, 02 Jan 2018 09:04:51 +0900</lastBuildDate>
+    <pubDate>Fri, 12 Jan 2018 20:09:59 +0900</pubDate>
+    <lastBuildDate>Fri, 12 Jan 2018 20:09:59 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -3840,9 +3840,9 @@ volumes:
 
 &lt;p&gt;기존의 가상화 방식은 주로 &lt;strong&gt;OS를 가상화&lt;/strong&gt;하였습니다.&lt;/p&gt;
 
-&lt;p&gt;우리에게 익숙한 &lt;a href=&quot;http://www.vmware.com/&quot;&gt;VMware&lt;/a&gt;나  &lt;a href=&quot;https://www.virtualbox.org&quot;&gt;VirtualBox&lt;/a&gt;같은 가상머신은 &lt;a href=&quot;https://en.wikipedia.org/wiki/Full_virtualization&quot;&gt;전가상화&lt;/a&gt;&lt;sub&gt;Full virtualization&lt;/sub&gt;방식이라고 하는데 호스트OS위에 게스트 OS 전체를 가상화하여 사용하는 방식입니다. 이 방식은 여러가지 OS를 가상화(리눅스에서 윈도우를 돌린다던가) 할 수 있고 비교적 사용법이 간단하지만 무겁고 느려서 운영환경에선 사용할 수 없었습니다.&lt;/p&gt;
+&lt;p&gt;우리에게 익숙한 &lt;a href=&quot;http://www.vmware.com/&quot;&gt;VMware&lt;/a&gt;나 &lt;a href=&quot;https://www.virtualbox.org&quot;&gt;VirtualBox&lt;/a&gt;같은 가상머신은 호스트 OS위에 게스트 OS 전체를 가상화하여 사용하는 방식입니다. 이 방식은 여러가지 OS를 가상화(리눅스에서 윈도우를 돌린다던가) 할 수 있고 비교적 사용법이 간단하지만 무겁고 느려서 운영환경에선 사용할 수 없었습니다.&lt;/p&gt;
 
-&lt;p&gt;이러한 상황을 개선하기 위해 CPU의 가상화 기술(&lt;a href=&quot;https://en.wikipedia.org/wiki/Hardware-assisted_virtualization&quot;&gt;HVM&lt;/a&gt;)을 이용한 &lt;a href=&quot;http://www.linux-kvm.org/&quot;&gt;KVM&lt;/a&gt;&lt;sub&gt;Kernel-based Virtual Machine&lt;/sub&gt;과 &lt;a href=&quot;https://en.wikipedia.org/wiki/Paravirtualization&quot;&gt;반가상화&lt;/a&gt; &lt;sub&gt;Paravirtualization&lt;/sub&gt;방식의 &lt;a href=&quot;https://www.xenproject.org/&quot;&gt;Xen&lt;/a&gt;이 등장합니다. 반가상화 방식은 게스트 OS가 필요하긴 하지만 전체OS를 가상화하는 방식이 아니였기 때문에 전가상화 방식에 비해 성능이 향상되었습니다. 이러한 기술들은 &lt;a href=&quot;https://www.openstack.org/&quot;&gt;OpenStack&lt;/a&gt;이나 AWS, &lt;a href=&quot;https://www.rackspace.com/&quot;&gt;Rackspace&lt;/a&gt;같은 클라우드 서비스에서 가상 컴퓨팅 기술의 기반이 되었습니다.&lt;/p&gt;
+&lt;p&gt;이러한 상황을 개선하기 위해 CPU의 가상화 기술(&lt;a href=&quot;https://en.wikipedia.org/wiki/Hardware-assisted_virtualization&quot;&gt;HVM&lt;/a&gt;)을 이용한 &lt;a href=&quot;http://www.linux-kvm.org/&quot;&gt;KVM&lt;/a&gt;&lt;sub&gt;Kernel-based Virtual Machine&lt;/sub&gt;과 &lt;a href=&quot;https://en.wikipedia.org/wiki/Paravirtualization&quot;&gt;반가상화&lt;/a&gt; &lt;sub&gt;Paravirtualization&lt;/sub&gt;방식의 &lt;a href=&quot;https://www.xenproject.org/&quot;&gt;Xen&lt;/a&gt;이 등장합니다. 이러한 방식은 게스트 OS가 필요하긴 하지만 전체OS를 가상화하는 방식이 아니였기 때문에 호스트형 가상화 방식에 비해 성능이 향상되었습니다. 이러한 기술들은 &lt;a href=&quot;https://www.openstack.org/&quot;&gt;OpenStack&lt;/a&gt;이나 AWS, &lt;a href=&quot;https://www.rackspace.com/&quot;&gt;Rackspace&lt;/a&gt;같은 클라우드 서비스에서 가상 컴퓨팅 기술의 기반이 되었습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png&quot; alt=&quot;가상머신과 도커&quot; /&gt;&lt;/p&gt;
 

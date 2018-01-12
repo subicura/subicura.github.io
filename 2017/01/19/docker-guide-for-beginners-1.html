@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1514851491247892000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1515755399525480000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -111,7 +111,7 @@
         <meta itemprop="headline" content="초보를 위한 도커 안내서 - 도커란 무엇인가?" />
         <meta itemprop="mainEntityOfPage" content="/2017/01/19/docker-guide-for-beginners-1.html" />
         <meta itemprop="datePublished" content="2017-01-19 00:00:00 +0900" />
-        <meta itemprop="dateModified" content="2017-02-10 01:00:00 +0900" />
+        <meta itemprop="dateModified" content="2018-01-12 20:00:00 +0900" />
         
         <div class="noarticleimage">
           <div class="post-meta">
@@ -258,9 +258,9 @@
 
 <p>기존의 가상화 방식은 주로 <strong>OS를 가상화</strong>하였습니다.</p>
 
-<p>우리에게 익숙한 <a href="http://www.vmware.com/">VMware</a>나  <a href="https://www.virtualbox.org">VirtualBox</a>같은 가상머신은 <a href="https://en.wikipedia.org/wiki/Full_virtualization">전가상화</a><sub>Full virtualization</sub>방식이라고 하는데 호스트OS위에 게스트 OS 전체를 가상화하여 사용하는 방식입니다. 이 방식은 여러가지 OS를 가상화(리눅스에서 윈도우를 돌린다던가) 할 수 있고 비교적 사용법이 간단하지만 무겁고 느려서 운영환경에선 사용할 수 없었습니다.</p>
+<p>우리에게 익숙한 <a href="http://www.vmware.com/">VMware</a>나 <a href="https://www.virtualbox.org">VirtualBox</a>같은 가상머신은 호스트 OS위에 게스트 OS 전체를 가상화하여 사용하는 방식입니다. 이 방식은 여러가지 OS를 가상화(리눅스에서 윈도우를 돌린다던가) 할 수 있고 비교적 사용법이 간단하지만 무겁고 느려서 운영환경에선 사용할 수 없었습니다.</p>
 
-<p>이러한 상황을 개선하기 위해 CPU의 가상화 기술(<a href="https://en.wikipedia.org/wiki/Hardware-assisted_virtualization">HVM</a>)을 이용한 <a href="http://www.linux-kvm.org/">KVM</a><sub>Kernel-based Virtual Machine</sub>과 <a href="https://en.wikipedia.org/wiki/Paravirtualization">반가상화</a> <sub>Paravirtualization</sub>방식의 <a href="https://www.xenproject.org/">Xen</a>이 등장합니다. 반가상화 방식은 게스트 OS가 필요하긴 하지만 전체OS를 가상화하는 방식이 아니였기 때문에 전가상화 방식에 비해 성능이 향상되었습니다. 이러한 기술들은 <a href="https://www.openstack.org/">OpenStack</a>이나 AWS, <a href="https://www.rackspace.com/">Rackspace</a>같은 클라우드 서비스에서 가상 컴퓨팅 기술의 기반이 되었습니다.</p>
+<p>이러한 상황을 개선하기 위해 CPU의 가상화 기술(<a href="https://en.wikipedia.org/wiki/Hardware-assisted_virtualization">HVM</a>)을 이용한 <a href="http://www.linux-kvm.org/">KVM</a><sub>Kernel-based Virtual Machine</sub>과 <a href="https://en.wikipedia.org/wiki/Paravirtualization">반가상화</a> <sub>Paravirtualization</sub>방식의 <a href="https://www.xenproject.org/">Xen</a>이 등장합니다. 이러한 방식은 게스트 OS가 필요하긴 하지만 전체OS를 가상화하는 방식이 아니였기 때문에 호스트형 가상화 방식에 비해 성능이 향상되었습니다. 이러한 기술들은 <a href="https://www.openstack.org/">OpenStack</a>이나 AWS, <a href="https://www.rackspace.com/">Rackspace</a>같은 클라우드 서비스에서 가상 컴퓨팅 기술의 기반이 되었습니다.</p>
 
 <p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png" alt="가상머신과 도커"></p>
 
@@ -511,7 +511,7 @@ CMD ["start.sh"]</pre></noscript>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1514851491247892000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1515755399525480000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
