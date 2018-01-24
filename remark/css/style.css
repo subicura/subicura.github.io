@@ -1,0 +1,149 @@
+body { 
+  font-family: 'Lato', 'Noto Sans KR';
+  font-weight: 300;
+}
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz', 'Noto Sans KR';
+  font-weight: 500;
+  margin: 0.1em 0;
+}
+.title h1 {
+  margin-top: 1em;
+}
+li {
+  padding: 0.18em;
+}
+textarea {
+  display: none;
+}
+img {
+  max-width: 100%;
+  max-height: 400px;
+}
+.remark-code, .remark-inline-code { 
+  font-family: 'Ubuntu Mono'; 
+}
+.remark-inline-code {
+  padding: 3px 5px;
+  border-radius: 5px;
+  background-color: #F0F0F0;
+}
+.remark-code { 
+  font-size: 16px;
+}
+.remark-code-line {
+  min-height: 1.25em;
+}
+.remark-slide-content {
+  padding: 3em 4em 3em 4em;
+}
+.remark-slide table {
+  width: 100%;
+}
+.footnote {
+  position: absolute;
+  bottom: 3em;
+  left: 1em;
+  right: 1em;
+  text-align: center;
+}
+
+.footnote .text {
+  background-color: #333;
+  color: #fff;
+  padding: 0.2em 0.4em;
+}
+
+/* template */
+.ch {
+  font-family: 'Yanone Kaffeesatz', 'Noto Sans KR';
+  font-weight: 700;
+  border-top: 2px solid #654EA3;
+  color: #654EA3;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.center .ch {
+  position: absolute;
+  top: 3em;
+  left: 4em;
+}
+
+/* layout */
+.left-bottom {
+  position: absolute;
+  bottom: 3em;
+  left: 4em;
+}
+.right-bottom {
+  position: absolute;
+  bottom: 3em;
+  right: 4em;
+}
+.right-top {
+  position: absolute;
+  top: 3em;
+  right: 4em;
+}
+
+.list-unstyled ul {
+    padding: 0;
+}
+
+.list-unstyled li {
+    list-style: none;
+}
+
+/* bg */
+.black-bg {
+  background-size: cover;
+  color: #fff;
+}
+
+.black-bg a {
+  color: #fff;
+}
+
+/* theme */
+.default-layout {
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.default-layout h1 {
+  margin: 0;
+}
+.inverse {
+  background: #654EA3;
+  color: #ffffff;
+}
+
+.right-padding-layer {
+  width: 70%;
+}
+
+/* Two-column layout */
+.left-column {
+  color: #777;
+  width: 25%;
+  height: 92%;
+  float: left;
+}
+.left-column.active {
+  color: #000;
+}
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+
+.right-column {
+  width: 75%;
+  float: right;
+}
+
+/* custom */
+.logo-wrapper img {
+  margin-top: 30px;
+  width: 150px;
+}
