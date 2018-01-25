@@ -154,7 +154,7 @@ A deployment tool for Docker
 <img src="./imgs/kubernetes-intro/docker-container-icon.svg" width="100" />
 <img src="./imgs/kubernetes-intro/docker-container-icon.svg" width="100" />
 
-.footnote[.text[서버 2-3대까지는 이러한 방식 ~~한땀한땀~~ 도 괜찮습니다.]]
+.footnote[.text[서버 2-3대까지는 이러한 방식 ~~한땀한땀~~ 도 괜찮습니다]]
 
 ---
 
@@ -497,41 +497,57 @@ ch: Kubernetes Object
 <br />
 .center[.text[[The Illustrated Children's Guide to Kubernetes](https://www.youtube.com/watch?v=4ht22ReBjno)]]
 
+.footnote[.text[8분동안 쿠버네티스 개념을 소개합니다]]
+
 ---
 
-Containers
-
+<br />
 .center[![container](./imgs/kubernetes-intro/kubernetes-illustrated-guide-diagram-3.png)]
 
+.footnote[.text[쿠버네티스는 컨테이너를]]
+
 ---
 
-Containers > Pods
-
+<br />
 .center[![container](./imgs/kubernetes-intro/kubernetes-illustrated-guide-diagram-6.png)]
 
+.footnote[.text[팟이라는 최소 개념으로 관리합니다]]
+
 ---
 
-Containers > Pods > Replication Controller (ReplicaSet으로 대체됨)
-
+<br />
 .center[![container](./imgs/kubernetes-intro/kubernetes-illustrated-guide-diagram-7.png)]
 
+.footnote[.text[팟을 확장할 땐 복제 컨트롤러를 이용합니다.]]
+
 ---
 
-Service
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+.center[.text[`container` - `pod` - `controller`]]
 
+.footnote[.text[팟은 컨테이너를 관리하고 컨트롤러는 팟을 관리합니다]]
+
+---
+
+<br />
 .center[![container](./imgs/kubernetes-intro/kubernetes-illustrated-guide-diagram-8.png)]
 
+.footnote[.text[팟은 자체 IP가 있지만 직접 IP로 통신하지 않고 서비스를 만들고 서비스를 통해 통신합니다]]
+
 ---
 
-Volume
-
+<br />
 .center[![container](./imgs/kubernetes-intro/kubernetes-illustrated-guide-diagram-9.png)]
 
+.footnote[.text[저장소가 필요하면 볼륨을 만들어서 연결합니다]]
+
+
 ---
 
-Namespace
-
+<br />
 .center[![container](./imgs/kubernetes-intro/kubernetes-illustrated-guide-diagram-10.png)]
+
+.footnote[.text[모든 오브젝트는 특정 namespace안에 존재합니다]]
 
 ---
 
@@ -621,15 +637,22 @@ Namespace
 
 # Service / ClusterIP
 
-특정 팟 그룹(Label 조건)에 연결된 내부 IP입니다. 보통 Deployment에 할당하고 서로 다른 Deployment나 StatefulSet과 통신이 필요할 때 사용합니다.
+팟은 자체 IP를 가지고 있지만 직접 사용하지 않습니다. 팟은 언제든지 죽을 수 있고 다른 노드로 이동할 수 있고 확장되거나 축소될 수 있기 때문입니다.
+팟에 연결할 수 있는 서비스를 만들고 해당 서비스의 IP, PORT를 사용합니다.
 
-내부적으로 `endpoint` 오브젝트로 리스트를 관리합니다.
+ClusterIP는 클러스터 내부에서만 통신할 수 있습니다.
+보통 Deployment에 할당하고 서로 다른 Deployment나 StatefulSet과 통신이 필요할 때 사용합니다.
+
+내부적으로 `endpoint` 오브젝트로 IP 리스트를 관리합니다. 여러개 복제된 팟에 서비스를 연결하면 여러개의 팟 IP를 관리합니다.
 
 ---
 
 # Service / NodePort
 
-노드에 포트를 오픈하고 Cluster IP의 Port와 연결합니다. 모든 노드에 해당 포트가 오픈되고 해당 포트로 접속하면 내부와 연결됩니다.
+ClusterIP는 내부 통신용이기 때문에 외부에서 접속하려면 각 노드에 외부에서 접속할 수 있는 포트를 오픈해야 합니다.
+NodePort는 각 노드에 포트를 오픈하고 들어온 요청을 내부의 ClusterIP로 연결합니다.
+
+NodePort를 만들면 ClusterIP가 자동으로 생성됩니다.
 
 ---
 
@@ -637,13 +660,16 @@ Namespace
 
 클라우드 전용으로 NodePort를 외부에 연결된 LoadBalancer와 연결합니다. AWS의 ELB와 연결한다고 이해하면 됩니다.
 
+`LoadBalance` > `NodePort` > `ClusterIP` 순으로 연결됩니다.
+
 ---
 
 # Service / Ingress
 
-보통 모든 노드에 80/443포트로 오픈하여 도메인 또는 Path에 따라 내부 Cluster IP의 포트와 연결합니다. 기본 내장되어 있지 않고 상황에 따라 컨트롤러를 배포하여 사용합니다.
+보통 모든 노드에 80/443포트로 오픈하여 도메인 또는 Path에 따라 내부 ClusterIP와 연결합니다.
+기본 내장되어 있지 않고 상황에 따라 Ingress Controller를 팟으로 배포하여 사용할 수 있게 유연한 구조로 설계 되어 있습니다.
 
-대표적으로 nginx ingress와 gce ingress가 있습니다.
+대표적으로 `nginx ingress`와 `gce ingress`가 있습니다.
 
 ---
 
@@ -721,7 +747,7 @@ services:
 
 ---
 
-== kubernetes config file 😱
+== kubernetes config file(뒤에 짤림..) 😱
 
 .center[![config](./imgs/kubernetes-intro/kubernetes-config.png)]
 
