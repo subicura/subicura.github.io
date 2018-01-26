@@ -40,6 +40,7 @@ permalink: /about/
 
 ## Presentation
  
+- microservices x kubernetes(2018) - [An Introduction to Kubernetes](https://subicura.com/remark/kubernetes-intro.html)
 - AWS Summit Seoul 2017(2017) - [Docker Swarm on AWS](https://youtu.be/16LNWMqphOA)
 - 홈쇼핑처럼x개발자처럼 첫번째이야기(2016) - [홈쇼핑처럼 개발후기 / 도커 어떻게 사용하고 배포할까](https://www.facebook.com/purpleworks.co.kr/videos/1206111219462679/)
 - Docker seoul meetup #4(2015) - [Mesos on CoreOS](https://www.slideshare.net/subicura/mesos-on-coreos)
