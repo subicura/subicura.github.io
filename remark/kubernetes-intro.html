@@ -900,17 +900,32 @@ class: center, middle
     data-ad-client="ca-pub-2468713653725581"
     data-ad-slot="1015072194"
     data-ad-format="auto"></ins>
-
     </textarea>
     <script src="./js/remark.min.js">
     </script>
     <script>
+      var loadGoogleAds = false;
       var slideshow = remark.create({
         ratio: '4:3'
       });
+      slideshow.on('showSlide', function (slide) {
+        if (loadGoogleAds) {
+          return;
+        }
+
+        for(var i=0; i<slide.content.length; i++) {
+          if (typeof slide.content[i] != 'string') {
+            return;
+          }
+
+          if (slide.content[i].indexOf('adsbygoogle') > -1) {
+            loadGoogleAds = true;
+            setTimeout(function() {
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            }, 100);
+          }
+        }
+      });
     </script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>  
   </body>
 </html>
