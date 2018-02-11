@@ -95,6 +95,18 @@ img {
     list-style: none;
 }
 
+.max-width-50 {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.max-width-80 {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
 /* bg */
 .black-bg {
   background-size: cover;
