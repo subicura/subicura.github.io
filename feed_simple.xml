@@ -6,9 +6,29 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 26 Jan 2018 21:47:09 +0900</pubDate>
-    <lastBuildDate>Fri, 26 Jan 2018 21:47:09 +0900</lastBuildDate>
+    <pubDate>Wed, 14 Feb 2018 09:36:41 +0900</pubDate>
+    <lastBuildDate>Wed, 14 Feb 2018 09:36:41 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>크롬 개발자 도구를 이용한 자바스크립트 디버깅</title>
+        <description>자바스크립트 디버깅 어떻게 하시나요? alert()을 사용하시나요? 아니면 console.log()를 선호하시나요? 크롬 개발자 도구는 일반적으로 알고 있는 것 보다 더 강력한 기능을 제공합니다. 많은 개발자들이 버그로 고생하지만 따로 디버깅을 공부하거나 누군가 자세히 알려주는 경우는 잘 없습니다. 여기 자바스크립트 디버깅의 일반적인 작업흐름과 꿀팁을 소개합니다.</description>
+        <pubDate>Wed, 14 Feb 2018 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2018/02/14/javascript-debugging.html</link>
+        <guid isPermaLink="true">https://subicura.com/2018/02/14/javascript-debugging.html</guid>
+        
+        <category>Chrome</category>
+        
+        <category>Devtools</category>
+        
+        <category>javascript</category>
+        
+        <category>debug</category>
+        
+        <category>node</category>
+        
+        
+      </item>
     
       <item>
         <title>본격 macOS에 개발 환경 구축하기</title>
@@ -168,24 +188,6 @@
         <category>Go</category>
         
         <category>OpenSource</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>도커를 이용한 웹서비스 무중단 배포하기</title>
-        <description>홈쇼핑처럼x밀본고기덮밥이 팔리는걸 관리자화면에서 보면서 하루에도 여러번 소스를 업데이트 하고 운영서버로 배포했던 내용이 떠올라 후기로 정리합니다. 배포는 단순히 로컬의 소스를 운영 서버로 복사하는 것입니다. FTP로 파일을 복사하는 방식은 가장 기본이면서 그럭저럭 잘 동작합니다. 배포 중에 서비스가 잠깐 멈추는 문제가 있다면 새벽에 배포하면 되고 굳이 다른 개발할일도 많은데 배포에 신경을 써야 하는 생각도 듭니다. 하지만, 오히려 배포가 탄탄해지면 서비스 개발에 집중할 수 있고 하루에 몇번이라도 배포를 자주, 더 빨리 하는 것이 서비스의 경쟁력이 되는 세상입니다. 서비스가 빠르게 발전하고 있고 서버를 확장하려면 미리미리 신경쓰는 것이 맞다고 생각합니다.</description>
-        <pubDate>Tue, 07 Jun 2016 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html</link>
-        <guid isPermaLink="true">https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html</guid>
-        
-        <category>Docker</category>
-        
-        <category>DevOps</category>
-        
-        <category>Server</category>
-        
-        <category>Deployment</category>
         
         
       </item>
