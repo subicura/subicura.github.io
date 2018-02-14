@@ -6,17 +6,17 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 14 Feb 2018 09:36:41 +0900</pubDate>
-    <lastBuildDate>Wed, 14 Feb 2018 09:36:41 +0900</lastBuildDate>
+    <pubDate>Wed, 14 Feb 2018 11:08:33 +0900</pubDate>
+    <lastBuildDate>Wed, 14 Feb 2018 11:08:33 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>크롬 개발자 도구를 이용한 자바스크립트 디버깅</title>
-        <description>&lt;p&gt;자바스크립트 디버깅 어떻게 하시나요? 과거의 저를 포함하여 많은 웹 프론트엔드 개발자들이 소스 사이사이에 &lt;code class=&quot;highlighter-rouge&quot;&gt;alert()&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log()&lt;/code&gt;를 사용하여 상태를 출력하고 변수를 모니터링 합니다. 이러한 &lt;del&gt;노가다식&lt;/del&gt; 디버깅 방식이 널리 퍼진 이유는 자바스크립트의 역사와 관련이 있는데 IE&lt;sup&gt;Internet Explorer&lt;/sup&gt;가 인기 있던 시절 IE는 제대로 된 디버그 도구를 제공하지 않았고 로그도 출력할 수 없었기 때문에 어쩔수 없이 경고창을 사용했습니다. HTML에 스크립트 코드를 입력하는 인라인 방식이 널리 쓰였고 모듈화는 자바스크립트랑 거리가 먼 이야기 였습니다.&lt;/p&gt;
+        <description>&lt;p&gt;자바스크립트 디버깅 어떻게 하시나요? 과거의 저를 포함하여 많은 웹 프론트엔드 개발자들이 소스 사이사이에 &lt;code class=&quot;highlighter-rouge&quot;&gt;alert()&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log()&lt;/code&gt;를 사용하여 상태를 출력하고 변수를 모니터링 합니다. 이러한 &lt;del&gt;노가다식&lt;/del&gt; 디버깅 방식이 널리 퍼진 이유는 자바스크립트의 역사와 관련이 있는데 IE&lt;sup&gt;Internet Explorer&lt;/sup&gt;가 인기 있던 시절 IE는 제대로 된 디버그 도구를 제공하지 않았고 로그도 출력할 수 없었기 때문에 어쩔 수 없이 경고창을 사용했습니다. HTML에 스크립트 코드를 입력하는 인라인 방식이 널리 쓰였고 모듈화는 자바스크립트랑 거리가 먼 이야기였습니다.&lt;/p&gt;
 
-&lt;p&gt;척박한 개발환경에서 등장한 Firefox의  &lt;a href=&quot;https://getfirebug.com/&quot;&gt;Firebug&lt;/a&gt; 플러그인은 엄청나게 인기를 끌었고 후에 등장하는 브라우저의 개발자 도구에 많은 영향을 끼쳤습니다. 최근에는 크롬, 파이어폭스, 사파리, IE 등 대부분의 브라우저에서 강력한 개발자 도구를 기본으로 제공하고 있습니다.&lt;/p&gt;
+&lt;p&gt;척박한 개발환경에서 등장한 Firefox의  &lt;a href=&quot;https://getfirebug.com/&quot;&gt;Firebug&lt;/a&gt; 플러그인은 엄청나게 인기를 끌었고 후에 등장하는 브라우저의 개발자 도구에 많은 영향을 끼쳤습니다. 최근에는 크롬, 파이어폭스, 사파리, IE 등 대부분 브라우저에서 강력한 개발자 도구를 기본으로 제공하고 있습니다.&lt;/p&gt;
 
-&lt;p&gt;웹 브라우저에 내장된 개발자 도구는 웹이라는 특성에 맞게 로그나 라인 중단점&lt;sup&gt;Breakpoint&lt;/sup&gt;을 이용한 디버깅 뿐 아니라 &lt;code class=&quot;highlighter-rouge&quot;&gt;click&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;submit&lt;/code&gt; 이벤트를 체크 할 수 있고 특정 DOM 객체의 class가 변경되는지 감시하다가 변경 되는 순간 변경을 유발한 소스에 자동으로 중단점을 걸 수도 있습니다.&lt;/p&gt;
+&lt;p&gt;웹 브라우저에 내장된 개발자 도구는 웹이라는 특성에 맞게 로그나 라인 중단점&lt;sup&gt;Breakpoint&lt;/sup&gt;을 이용한 디버깅뿐 아니라 &lt;code class=&quot;highlighter-rouge&quot;&gt;click&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;submit&lt;/code&gt; 이벤트를 체크 할 수 있고 특정 DOM 객체의 class가 변경되는지 감시하다가 변경되는 순간 변경을 유발한 소스에 자동으로 중단점을 걸 수도 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/code_chrome_devtools.gif&quot; alt=&quot;Visual Studio Code + Chrome Devtools 조합&quot; /&gt;&lt;/p&gt;
 
@@ -33,7 +33,7 @@
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/google-debug-doodle.gif&quot; alt=&quot;Grace Hopper's 107th Birthday - 나방(버그) 디테일에 주목&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;버그란 프로그램 내의 결함이나 문제점을 이야기하는 것으로 프로그래밍 언어 COBOL의 개발을 주도한 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%8A%A4_%ED%98%B8%ED%8D%BC&quot;&gt;그레이스 호퍼&lt;/a&gt;가 1945년 Mark II의 오작동 원인을 찾다가 컴퓨터에 나방이 껴있는걸 발견한 것을 최초의 버그라고 기록하고 있습니다.&lt;/p&gt;
+&lt;p&gt;버그란 프로그램 내의 결함이나 문제점을 이야기하는 것으로 프로그래밍 언어 COBOL의 개발을 주도한 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%8A%A4_%ED%98%B8%ED%8D%BC&quot;&gt;그레이스 호퍼&lt;/a&gt;가 1945년 Mark II의 오작동 원인을 찾다가 컴퓨터에 나방이 껴있는 걸 발견한 것을 최초의 버그라고 기록하고 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/bug.png&quot; alt=&quot;역사적인 버그 발견 기록&quot; /&gt;&lt;/p&gt;
 
@@ -46,17 +46,17 @@
 
 &lt;p&gt;여기선 인터렉티브 디버깅 전략에 대해 알아봅니다.&lt;/p&gt;
 
-&lt;p&gt;디버깅을 하기 위해서는 도구가 필요한데 특정 기기/프로그램의 경우 특별한 하드웨어가 필요한 경우도 있지만 웹 어플리케이션은 크롬 개발자 도구와 같이 브라우저에 내장된 무료 소프트웨어를 사용하면 됩니다.&lt;/p&gt;
+&lt;p&gt;디버깅을 하기 위해서는 도구가 필요한데 특정 기기/프로그램의 경우 특별한 하드웨어가 필요한 때도 있지만, 웹 어플리케이션은 크롬 개발자 도구와 같이 브라우저에 내장된 무료 소프트웨어를 사용하면 됩니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/Xbox-Debug-Console-Set.jpg&quot; alt=&quot;Xbox Debug Kit&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;devtools&quot;&gt;크롬 개발자 도구 (DevTools)&lt;/h2&gt;
 
-&lt;p&gt;크롬 개발자 도구는 크롬 브라우저에 내장되어 있는 개발관련 도구입니다. 웹 어플리케이션을 개발하고 수정/최적화 하는데 필요한 다양한 기능을 제공합니다. 자바스크립트 디버깅 뿐 아니라 모바일 기기 시뮬레이터, 네트워크 분석, 최적화에 대한 검사도 해줍니다. 전체 기능은 &lt;a href=&quot;https://developers.google.com/web/tools/chrome-devtools/&quot;&gt;공식 홈페이지&lt;/a&gt;에서 확인하세요.&lt;/p&gt;
+&lt;p&gt;크롬 개발자 도구는 크롬 브라우저에 내장된 개발 관련 도구입니다. 웹 어플리케이션을 개발하고 수정/최적화하는데 필요한 다양한 기능을 제공합니다. 자바스크립트 디버깅뿐 아니라 모바일 기기 시뮬레이터, 네트워크 분석, 최적화에 대해 검사도 해줍니다. 전체 기능은 &lt;a href=&quot;https://developers.google.com/web/tools/chrome-devtools/&quot;&gt;공식 홈페이지&lt;/a&gt;에서 확인하세요.&lt;/p&gt;
 
 &lt;h3 id=&quot;section-1&quot;&gt;개발자 도구 열기&lt;/h3&gt;
 
-&lt;p&gt;개발자 도구를 여는 방법은 여러가지가 있습니다. 단축키를 외우는걸 추천합니다.&lt;/p&gt;
+&lt;p&gt;개발자 도구를 여는 방법은 여러 가지가 있습니다. 단축키를 외우는 걸 추천합니다.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;크롬 브라우저 메뉴에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;More Tools（도구 더보기）&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer Tools（개발자 도구）&lt;/code&gt; 선택&lt;/li&gt;
@@ -116,9 +116,9 @@
 
 &lt;p&gt;&lt;strong&gt;2. 중단점 걸기&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;코드를 실행하는 도중에 일시 정지하고 해당 시점의 변수 값을 확인하기 위해 중단점을 걸어보겠습니다. 소스가 익숙하고 어떤함수가 문제인지 안다면 바로 해당 라인에 중단점을 걸 수 있지만 여기서는 소스가 복잡해서 어디에 중단점을 걸어야 할지 모른다고 가정하고 다른 방식으로 접근해보겠습니다.&lt;/p&gt;
+&lt;p&gt;코드를 실행하는 도중에 일시 정지하고 해당 시점의 변수값을 확인하기 위해 중단점을 걸어보겠습니다. 소스가 익숙하고 어떤 함수가 문제인지 안다면 바로 해당 라인에 중단점을 걸 수 있지만 여기서는 소스가 복잡해서 어디에 중단점을 걸어야 할지 모른다고 가정하고 다른 방식으로 접근해보겠습니다.&lt;/p&gt;
 
-&lt;p&gt;개발자 도구는 특정 라인이 아닌 글로벌한 이벤트에 대해 중단점을 만들 수 있는데 이름과 내용을 입력하고 폼 전송을 하는 순간을 체크하기 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;submit&lt;/code&gt; 이벤트에 중단점을 생성할 수 있습니다. 이제 submit 관련 이벤트가 발생하면 해당 소스에서 멈출겁니다.&lt;/p&gt;
+&lt;p&gt;개발자 도구는 특정 라인이 아닌 글로벌한 이벤트에 대해 중단점을 만들 수 있는데 이름과 내용을 입력하고 폼 전송을 하는 순간을 체크하기 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;submit&lt;/code&gt; 이벤트에 중단점을 생성할 수 있습니다. 이제 submit 관련 이벤트가 발생하면 해당 소스에서 멈출 겁니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/message-submit-breakpoint.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -132,21 +132,21 @@
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/message-submit-debug-edit.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vanilla-script.js&lt;/code&gt;파일의 &lt;code class=&quot;highlighter-rouge&quot;&gt;14line&lt;/code&gt;에 소스가 중단되었습니다. 🙀 어떤 파일의 어떤 함수를 수정해야 할지 몰랐지만 submit 이벤트가 발생한다고 추측하고 접근해서 찾았습니다. &lt;del&gt;만세&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vanilla-script.js&lt;/code&gt;파일의 &lt;code class=&quot;highlighter-rouge&quot;&gt;14line&lt;/code&gt;에 소스가 중단되었습니다. 🙀 어떤 파일의 어떤 함수를 수정해야 할지 몰랐지만, submit 이벤트가 발생한다고 추측하고 접근해서 찾았습니다. &lt;del&gt;만세&lt;/del&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;3. 단계별(step) 코드 실행&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;코드를 한줄 한줄 단계별로 실행하면서 스크립트가 어떻게 실행되는지, 변수가 어떻게 저장되어 있는지 확인해 보겠습니다. 디버깅 정보창 위에 &lt;code class=&quot;highlighter-rouge&quot;&gt;Step over next function call&lt;/code&gt; &lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/step-over.png&quot; width=&quot;20&quot; /&gt;을 클릭하여 한줄씩 실행합니다.&lt;/p&gt;
+&lt;p&gt;코드를 한줄 한줄 단계별로 실행하면서 스크립트가 어떻게 실행되는지, 변수가 어떻게 저장되어 있는지 확인해 보겠습니다. 디버깅 정보창 위에 &lt;code class=&quot;highlighter-rouge&quot;&gt;Step over next function call&lt;/code&gt; &lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/step-over.png&quot; width=&quot;20&quot; /&gt;을 클릭하여 한 줄씩 실행합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/message-step-edit.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;디버깅 정보창의 Scope 섹션과 소스의 변수명 근처에서 현재 시점의 변수값을 확인할 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;message&lt;/code&gt;변수는 정상적으로 할당된 것 같으니 &lt;code class=&quot;highlighter-rouge&quot;&gt;updatePost&lt;/code&gt; 함수를 살펴봐야겠습니다. updatePost를 호출하는 라인에 디버깅이 멈춰있을 때 &lt;code class=&quot;highlighter-rouge&quot;&gt;Step into next function call&lt;/code&gt; &lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/step-into.png&quot; width=&quot;10&quot; /&gt;을 클릭해서 updatePost 함수로 이동합니다.&lt;/p&gt;
 
-&lt;p&gt;updatePost함수를 한줄씩 실행해보니 postHtml에 이름과 메시지가 반대로 들어간 것을 알 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;9line&lt;/code&gt;까지 진행합니다.&lt;/p&gt;
+&lt;p&gt;updatePost함수를 한 줄씩 실행해보니 postHtml에 이름과 메시지가 반대로 들어간 것을 알 수 있습니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;9line&lt;/code&gt;까지 진행합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;4. 콘솔창에서 테스트하기&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;콘솔탭을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;postHtml&lt;/code&gt;을 입력하면 디버깅이 진행중인 시점의 postHtml 변수값이 출력됩니다. 여기서 변수에 새로운 값을 할당하면 진행중인 변수의 값이 변하게 됩니다. 원래 있던 값을 복사하기 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;copy(postHtml)&lt;/code&gt; 명령어를 입력합니다. 마치 텍스트를 드래그 하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl(⌘)&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt;한것처럼 메모리에 내용이 복사됩니다. 다시 내용을 붙여넣기 하고 이름과 내용을 바꿔줍니다.&lt;/p&gt;
+&lt;p&gt;콘솔탭을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;postHtml&lt;/code&gt;을 입력하면 디버깅이 진행 중인 시점의 postHtml 변수값이 출력됩니다. 여기서 변수에 새로운 값을 할당하면 진행 중인 변수의 값이 변하게 됩니다. 원래 있던 값을 복사하기 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;copy(postHtml)&lt;/code&gt; 명령어를 입력합니다. 마치 텍스트를 드래그하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl(⌘)&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt; 한 것처럼 메모리에 내용이 복사됩니다. 다시 내용을 붙여넣고 이름과 내용을 바꿔줍니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/message-console.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -158,7 +158,7 @@
 
 &lt;p&gt;&lt;strong&gt;5. 소스 수정하기&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Sources창의 에디터에서 코드를 수정합니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;post.name&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;post.message&lt;/code&gt;를 바꿔주면 됩니다. 그리고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Deactivate breakpoints&lt;/code&gt; &lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/deactivate-breakpoints-button.png&quot; width=&quot;15&quot; /&gt; 버튼을 클릭해서 활성화 되어 있는 중단점을 비활성화하고 다시 메시지를 입력해 봅니다.&lt;/p&gt;
+&lt;p&gt;Sources창의 에디터에서 코드를 수정합니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;post.name&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;post.message&lt;/code&gt;를 바꿔주면 됩니다. 그리고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Deactivate breakpoints&lt;/code&gt; &lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/deactivate-breakpoints-button.png&quot; width=&quot;15&quot; /&gt; 버튼을 클릭해서 활성화되어 있는 중단점을 비활성화하고 다시 메시지를 입력해 봅니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/message-source-edit.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -172,19 +172,19 @@
   &lt;p&gt;방금 살펴본 방식은 수정한 내용을 임시로 저장한다는 점에 유의하세요. 새로 고침을 하면 수정전 소스로 원복됩니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;크롬 개발자 도구의 워크플레이스&lt;sup&gt;workspace&lt;/sup&gt;기능을 사용하면 수정한 내용을 로컬 소스에 바로 반영할 수 있습니다. 개발자 도구의 에디터도 문법 하이라이팅&lt;sup&gt;Syntax Highlighting&lt;/sup&gt;을 지원하고 자동완성 기능&lt;sup&gt;Auto Completion&lt;/sup&gt;을 제공하지만 아직 다른 전용 에디터에 비해서는 기능이 부족합니다. 따라서 뒤에 설명할 VSCode와 연동해서 사용하는걸 추천하지만 간단하게 워크플레이스 기능을 살펴보겠습니다.&lt;/p&gt;
+&lt;p&gt;크롬 개발자 도구의 워크플레이스&lt;sup&gt;workspace&lt;/sup&gt;기능을 사용하면 수정한 내용을 로컬 소스에 바로 반영할 수 있습니다. 개발자 도구의 에디터도 문법 하이라이팅&lt;sup&gt;Syntax Highlighting&lt;/sup&gt;을 지원하고 자동완성 기능&lt;sup&gt;Auto Completion&lt;/sup&gt;을 제공하지만, 아직 다른 전용 에디터보다는 기능이 부족합니다. 따라서 뒤에 설명할 VSCode와 연동해서 사용하는 걸 추천하지만 간단하게 워크플레이스 기능을 살펴보겠습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;6. Workspace 사용하기&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Workspace는 개발중인 소스 파일을 개발자 도구에 등록하고 브라우저에서 바라보는 네트워크 상의 파일을 연결하여 수정을 편하게 해주는 기능입니다.&lt;/p&gt;
+&lt;p&gt;Workspace는 개발 중인 소스 파일을 개발자 도구에 등록하고 브라우저에서 바라보는 네트워크 상의 파일을 연결하여 수정을 편하게 해주는 기능입니다.&lt;/p&gt;
 
 &lt;p&gt;예를 들면, &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:3000/js/vanilla-script.js&lt;/code&gt; 라는 네트워크상의 파일을 로컬의 &lt;code class=&quot;highlighter-rouge&quot;&gt;/Users/subicura/Workspace/js/vanilla-script.js&lt;/code&gt; 와 연결할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;Workspace에 폴더를 등록하기 위해 개발자 도구의 Sources탭을 선택합니다. 그리고 왼쪽 파일 네비게이션 창에서 Filesystem 탭을 누르고 &lt;code class=&quot;highlighter-rouge&quot;&gt;+ Add folder to workspace&lt;/code&gt;를 누르거나 소스 폴더를 드래그 해서 추가해줍니다. 그러면 접근 권한을 묻는 창이 뜨고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Allow&lt;/code&gt;를 선택해줍니다. 마지막으로 화면을 새로고침하면 맵핑된 파일 아이콘에 연결되었다는 의미의 동그라미가 표시됩니다.&lt;/p&gt;
+&lt;p&gt;Workspace에 폴더를 등록하기 위해 개발자 도구의 Sources탭을 선택합니다. 그리고 왼쪽 파일 네비게이션 창에서 Filesystem 탭을 누르고 &lt;code class=&quot;highlighter-rouge&quot;&gt;+ Add folder to workspace&lt;/code&gt;를 누르거나 소스 폴더를 드래그해서 추가해줍니다. 그러면 접근 권한을 묻는 창이 뜨고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Allow&lt;/code&gt;를 선택해줍니다. 마지막으로 화면을 새로고침하면 맵핑된 파일 아이콘에 연결되었다는 의미의 동그라미가 표시됩니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/devtools-workspace.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;단지 폴더만 추가했을뿐인데 개발자 도구가 똘똘하게 &lt;code class=&quot;highlighter-rouge&quot;&gt;vanilla.html&lt;/code&gt; 파일과 &lt;code class=&quot;highlighter-rouge&quot;&gt;vanilla-script.js&lt;/code&gt; 파일을 맵핑 하였습니다. 동일한 파일명이 여러개 있어 자동으로 맵핑 되지 않으면 Network의 파일에서 오른쪽 버튼을 누르고 따로 맵핑해주면 됩니다. 잘 안된다면 캐시를 비활성화하고 새로고침해 보세요.&lt;/p&gt;
+&lt;p&gt;단지 폴더만 추가했을 뿐인데 개발자 도구가 똘똘하게 &lt;code class=&quot;highlighter-rouge&quot;&gt;vanilla.html&lt;/code&gt; 파일과 &lt;code class=&quot;highlighter-rouge&quot;&gt;vanilla-script.js&lt;/code&gt; 파일을 맵핑 하였습니다. 동일한 파일명이 여러 개 있어 자동으로 맵핑 되지 않으면 Network의 파일에서 오른쪽 버튼을 누르고 따로 맵핑해주면 됩니다. 잘 안된다면 캐시를 비활성화하고 새로고침해 보세요.&lt;/p&gt;
 
 &lt;p&gt;이제 개발자 도구 에디터에서 소스를 수정하면 로컬 개발환경의 소스 파일도 수정됩니다. 새로고침해도 문제없네요!&lt;/p&gt;
 
@@ -198,17 +198,17 @@
 
 &lt;p&gt;&lt;strong&gt;Blackboxing&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Basic 예제에서는 라이브러리를 사용하지 않았기 때문에 submit 이벤트를 검사할 때 정상적으로 소스에 중단점이 걸린것을 확인했습니다. jQuery같은 라이브러리를 쓰면 상황이 좀 달라지는데 &lt;code class=&quot;highlighter-rouge&quot;&gt;$(element).click()&lt;/code&gt;과 같은 코드는 이벤트 생성을 jQuery 라이브러리에 위임하고 실제로  &lt;code class=&quot;highlighter-rouge&quot;&gt;jquery.js&lt;/code&gt; 파일에서 이벤트가 발생합니다.&lt;/p&gt;
+&lt;p&gt;Basic 예제에서는 라이브러리를 사용하지 않았기 때문에 submit 이벤트를 검사할 때 정상적으로 소스에 중단점이 걸린 것을 확인했습니다. jQuery같은 라이브러리를 쓰면 상황이 좀 달라지는데 &lt;code class=&quot;highlighter-rouge&quot;&gt;$(element).click()&lt;/code&gt;과 같은 코드는 이벤트 생성을 jQuery 라이브러리에 위임하고 실제로  &lt;code class=&quot;highlighter-rouge&quot;&gt;jquery.js&lt;/code&gt; 파일에서 이벤트가 발생합니다.&lt;/p&gt;
 
 &lt;p&gt;테스트를 위해 Event Listener중에 &lt;code class=&quot;highlighter-rouge&quot;&gt;click&lt;/code&gt;이벤트에 중단점을 생성합니다. 디버깅 정보 창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Event Listener Breakpoints&lt;/code&gt;섹션을 열고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Mouse&lt;/code&gt;&amp;gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;click&lt;/code&gt;을 체크하면 됩니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;Fetch Avatar&lt;/code&gt;를 클릭해볼까요?&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/jquery-click.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;예상대로(?) jquery 파일에 중단점이 걸렸습니다. minified되어 알아볼 수 없는 코드가 보이고 Scope의 변수 또한 아무 의미가 없어보입니다. minified된 코드를 좀 더 이쁘게 바꿔보겠습니다. 에디터 왼쪽 하단에 &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt; 버튼을 클릭합니다.&lt;/p&gt;
+&lt;p&gt;예상대로(?) jquery 파일에 중단점이 걸렸습니다. minified되어 알아볼 수 없는 코드가 보이고 Scope의 변수 또한 아무 의미가 없어 보입니다. minified된 코드를 좀 더 이쁘게 바꿔보겠습니다. 에디터 왼쪽 하단에 &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt; 버튼을 클릭합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/jquery-pretty-code.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;뭔가 한줄로 복잡했던 소스가 좀 이뻐지긴 했지만.. 큰 도움이 되지 않습니다. 역시 디버깅은 console.log 밖에 없을까요? &lt;del&gt;안돼&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;뭔가 한 줄로 복잡했던 소스가 좀 이뻐지긴 했지만.. 큰 도움이 되지 않습니다. 역시 디버깅은 console.log 밖에 없을까요? &lt;del&gt;안돼&lt;/del&gt;&lt;/p&gt;
 
 &lt;p&gt;개발자 도구에선 이렇게 무의미한 파일을 제외하기 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;Blackboxing&lt;/code&gt;이라는 옵션을 제공합니다.&lt;/p&gt;
 
@@ -224,15 +224,15 @@
 
 &lt;p&gt;&lt;strong&gt;Fetch Breakpoint&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;이번에는 click 이벤트가 아닌 &lt;code class=&quot;highlighter-rouge&quot;&gt;github.com에 네트워크 요청이 있을때&lt;/code&gt; 중단점을 걸어보겠습니다.&lt;/p&gt;
+&lt;p&gt;이번에는 click 이벤트가 아닌 &lt;code class=&quot;highlighter-rouge&quot;&gt;github.com에 네트워크 요청이 있을 때&lt;/code&gt; 중단점을 걸어보겠습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/jquery-fetch-edit.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;디버깅 정보 창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;XHR/fetch Breakpoints&lt;/code&gt;섹션을 열고 &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; 버튼을 누른다음에 &lt;code class=&quot;highlighter-rouge&quot;&gt;github&lt;/code&gt;을 입력합니다. Github ID 입력창에 ID를 입력하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Fetch Avatar&lt;/code&gt;를 클릭하면 github이 들어간 주소에 네트워크 요청이 있는 코드에서 중단점이 생성됩니다. 이제 네트워크 요청을 하는 코드가 어디있는지 고민하지 않아도 되겠죠.&lt;/p&gt;
+&lt;p&gt;디버깅 정보 창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;XHR/fetch Breakpoints&lt;/code&gt;섹션을 열고 &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; 버튼을 누른 다음에 &lt;code class=&quot;highlighter-rouge&quot;&gt;github&lt;/code&gt;을 입력합니다. Github ID 입력창에 ID를 입력하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Fetch Avatar&lt;/code&gt;를 클릭하면 github이 들어간 주소에 네트워크 요청이 있는 코드에서 중단점이 생성됩니다. 이제 네트워크 요청을 하는 코드가 어디 있는지 고민하지 않아도 되겠죠.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Column Breakpoint&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;fetch함수를 자세히 보면 한줄로 길게 연결(chain)되어 있는걸 알 수 있습니다. 어떤 응답 데이터가 오는지 궁금한데.. 한줄내 중간중간열에 중단점을 생성할 수도 있을까요? 일단 디버깅할 라인에 중단점을 체크하면 연결된 함수에 다시 중단점을 걸 수 있습니다.&lt;/p&gt;
+&lt;p&gt;fetch함수를 자세히 보면 한 줄로 길게 연결(chain)되어 있는걸 알 수 있습니다. 어떤 응답 데이터가 오는지 궁금한데… 한 줄 내 중간중간열에 중단점을 생성할 수도 있을까요? 일단 디버깅할 라인에 중단점을 체크하면 연결된 함수에 다시 중단점을 걸 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/jquery-inline-edit.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -240,27 +240,27 @@
 
 &lt;p&gt;&lt;strong&gt;DOM change Breakpoint&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;마지막으로 DOM이 변경되었을때 중단점을 생성해보겠습니다. 지금 보는 웹 어플리케이션은 Github의 사용자 정보를 조회하여 &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt;라는 ID를 가진 div에 정보를 출력합니다. result div에 중단점을 생성해보겠습니다.&lt;/p&gt;
+&lt;p&gt;마지막으로 DOM이 변경되었을 때 중단점을 생성해보겠습니다. 지금 보는 웹 어플리케이션은 Github의 사용자 정보를 조회하여 &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt;라는 ID를 가진 div에 정보를 출력합니다. result div에 중단점을 생성해보겠습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Elements&lt;/code&gt;탭을 누르고 &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt; div를 찾은 다음 오른쪽 버튼을 누르면 &lt;code class=&quot;highlighter-rouge&quot;&gt;Break on&lt;/code&gt;메뉴와  &lt;code class=&quot;highlighter-rouge&quot;&gt;subtree modifications&lt;/code&gt; 항목이 보입니다. 해당 DOM의 하위에 값이 변경되면 멈추겠다는 뜻입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/jquery-dom-break-edit.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;DOM 왼쪽에 동그라미 표시가 된게 보이시죠? 이제 다시 테스트를 해보겠습니다.&lt;/p&gt;
+&lt;p&gt;DOM 왼쪽에 동그라미 표시가 된 게 보이시죠? 이제 다시 테스트를 해보겠습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/jquery-dom-breakpoint-edit.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;데이터를 요청하고 화면에 그리는 순간 중단점에 걸립니다. 이제 에디터 전체검색창에 DOM ID를 입력하고 검색결과의 홍수속에서 원하는 소스를 일일이 찾아보지 않아도 됩니다.&lt;/p&gt;
+&lt;p&gt;데이터를 요청하고 화면에 그리는 순간 중단점에 걸립니다. 이제 에디터 전체검색창에 DOM ID를 입력하고 검색결과의 홍수 속에서 원하는 소스를 일일이 찾아보지 않아도 됩니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;react-example&quot;&gt;React Example&lt;/h3&gt;
 
-&lt;p&gt;마지막 예제는 webpack을 이용하여 소스를 번들링한 최신 트랜드를 반영한 예제입니다. 이전까지 예제는 소스 파일과 브라우저에서 보이는 소스파일이 정확하게 일치했지만 webpack을 사용하면 소스 파일을 bundle.js라는 하나의 파일로 묶기 때문에 소스가 일치하지 않습니다. 이런 경우에도 디버깅이 가능할까요?&lt;/p&gt;
+&lt;p&gt;마지막 예제는 webpack을 이용하여 소스를 번들링한 최신 트랜드를 반영한 예제입니다. 이전까지 예제는 소스 파일과 브라우저에서 보이는 소스 파일이 정확하게 일치했지만 webpack을 사용하면 소스 파일을 bundle.js라는 하나의 파일로 묶기 때문에 소스가 일치하지 않습니다. 이런 경우에도 디버깅이 가능할까요?&lt;/p&gt;
 
 &lt;p&gt;브라우저에서  &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:3000/react.html&lt;/code&gt;에 접속합니다. 개발자 도구를 열고 Sources탭의 파일 네비게이션 창을 봅니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/react-sources-edit.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;static/js/bundle.js&lt;/code&gt; 파일외에 webpack으로 번들링 된 소스 파일 목록이 보입니다.  &lt;code class=&quot;highlighter-rouge&quot;&gt;src/reducers/todos.js&lt;/code&gt;파일의 switch문에 중단점을 걸고 새로운 할일을 등록하면 정확하게 중단점에 멈추는걸 확인할 수 있습니다. 어떻게 된걸까요? 정답은 source map입니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;static/js/bundle.js&lt;/code&gt; 파일외에 webpack으로 번들링 된 소스 파일 목록이 보입니다.  &lt;code class=&quot;highlighter-rouge&quot;&gt;src/reducers/todos.js&lt;/code&gt;파일의 switch문에 중단점을 걸고 새로운 할 일을 등록하면 정확하게 중단점에 멈추는 걸 확인할 수 있습니다. 어떻게 된걸까요? 정답은 source map입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;source map&lt;/strong&gt;&lt;/p&gt;
 
@@ -290,13 +290,13 @@
 
 &lt;p&gt;이 파일을 &lt;code class=&quot;highlighter-rouge&quot;&gt;source map&lt;/code&gt; 이라고 합니다.&lt;/p&gt;
 
-&lt;p&gt;소스맵은 합쳐지거나 minified된 파일과 원본파일을 연결하기 위해 어떤 소스의 몇번째 줄 몇번째 열이 어떤 소스의 몇번째 줄 몇번째 열과 일치하는지 알려주는 역할을 합니다. &lt;del&gt;너와 나의 연결고리&lt;/del&gt; React와 관련된 파일은 엄청나게 많기 때문에 소스맵파일도 엄청나게 클 수 밖에 없습니다.&lt;/p&gt;
+&lt;p&gt;소스맵은 합쳐지거나 minified된 파일과 원본 파일을 연결하기 위해 어떤 소스의 몇번째 줄 몇번째 열이 어떤 소스의 몇번째 줄 몇번째 열과 일치하는지 알려주는 역할을 합니다. &lt;del&gt;너와 나의 연결고리&lt;/del&gt; React와 관련된 파일은 엄청나게 많기 때문에 소스맵파일도 엄청나게 클 수밖에 없습니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;소스맵에 대해 더 자세히 알고 싶다면 &lt;a href=&quot;https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/&quot;&gt;Introduction to JavaScript Source Maps - HTML5 Rocks&lt;/a&gt;를 참고하세요.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;webpack은 소스맵을 생성할 수 있는 옵션(&lt;code class=&quot;highlighter-rouge&quot;&gt;devtool&lt;/code&gt;)이 있기 때문에 설정만으로 손쉽게(?) 사용할 수 있습니다. 이러한 방식은 typescript로 작성한 코드에서도 잘 동작합니다.&lt;/p&gt;
+&lt;p&gt;webpack은 소스맵을 생성할 수 있는 옵션(&lt;code class=&quot;highlighter-rouge&quot;&gt;devtool&lt;/code&gt;)이 있어서 설정만으로 손쉽게(?) 사용할 수 있습니다. 이러한 방식은 typescript로 작성한 코드에서도 잘 동작합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Conditional Breakpoint&lt;/strong&gt;&lt;/p&gt;
 
@@ -308,23 +308,23 @@
 
 &lt;p&gt;&lt;strong&gt;Store as Global Variable&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;마지막으로 특정 React Component에 존재하는 멤버(지역) 변수를 콘솔창에서 자유롭게 테스트 하는 방법을 알아봅니다. 자바스크립트가 모듈화 되면서 콘솔에서 내부에 존재하는 변수에 접근하기 어려워졌지만 다 방법이 있습니다.&lt;/p&gt;
+&lt;p&gt;마지막으로 특정 React Component에 존재하는 멤버(지역) 변수를 콘솔창에서 자유롭게 테스트하는 방법을 알아봅니다. 자바스크립트가 모듈화 되면서 콘솔에서 내부에 존재하는 변수에 접근하기 어려워졌지만 다 방법이 있습니다.&lt;/p&gt;
 
 &lt;p&gt;개발자 도구에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;src/components/Header.js&lt;/code&gt;파일을 열고 &lt;code class=&quot;highlighter-rouge&quot;&gt;handleSave&lt;/code&gt;에 중단점을 만듭니다. 중단점에 걸리면 Scope의 Closure (Header) 섹션에서  &lt;code class=&quot;highlighter-rouge&quot;&gt;_this&lt;/code&gt; 변수를 오른쪽 버튼 클릭하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Store as global variable&lt;/code&gt;을 선택합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/devtools-global.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;콘솔창을 보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;temp1&lt;/code&gt;이라는 변수가 생성된 것을 알 수 있고 이제 자유롭게 사용할 수 있습니다. 중단점을 제거 하고 코드로 할일을 생성해 보겠습니다. 콘솔에 &lt;code class=&quot;highlighter-rouge&quot;&gt;temp1.props.addTodo(&quot;Hello world&quot;)&lt;/code&gt;를 입력합니다.&lt;/p&gt;
+&lt;p&gt;콘솔창을 보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;temp1&lt;/code&gt;이라는 변수가 생성된 것을 알 수 있고 이제 자유롭게 사용할 수 있습니다. 중단점을 제거하고 코드로 할 일을 생성해 보겠습니다. 콘솔에 &lt;code class=&quot;highlighter-rouge&quot;&gt;temp1.props.addTodo(&quot;Hello world&quot;)&lt;/code&gt;를 입력합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/react-console.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;정상적으로 새로운 할일이 추가되었습니다. 이제 콘솔에서 자유롭게 테스트하세요!&lt;/p&gt;
+&lt;p&gt;정상적으로 새로운 할 일이 추가되었습니다. 이제 콘솔에서 자유롭게 테스트하세요!&lt;/p&gt;
 
 &lt;h2 id=&quot;visual-studio-code&quot;&gt;Visual Studio Code&lt;/h2&gt;
 
-&lt;p&gt;지금까지 개발자 도구의 다양한 디버깅 기능을 살펴보았습니다. 내장된 에디터도 간단하게 사용하기엔 좋지만 아직 기능이 많이 부족해 보입니다.  코드 작성은 VSCode에서, 중단점 및 테스트는 크롬 브라우저에서 테스트할 수 있게 설정해보겠습니다.&lt;/p&gt;
+&lt;p&gt;지금까지 개발자 도구의 다양한 디버깅 기능을 살펴보았습니다. 내장된 에디터도 간단하게 사용하기엔 좋지만, 아직 기능이 많이 부족해 보입니다.  코드 작성은 VSCode에서, 중단점 및 테스트는 크롬 브라우저에서 테스트할 수 있게 설정해보겠습니다.&lt;/p&gt;
 
-&lt;p&gt;VSCode를 실행하고 다운 받은 소스 디렉토리를 엽니다.&lt;/p&gt;
+&lt;p&gt;VSCode를 실행하고 다운받은 소스 디렉토리를 엽니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;chrome--&quot;&gt;chrome 확장기능 소개&lt;/h3&gt;
 
@@ -382,12 +382,12 @@
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;설정파일을 보면 대략 어떤 내용인지 유추할 수 있어 자세히 설명하지 않습니다. 옵션에 대한 설명은 &lt;a href=&quot;https://github.com/Microsoft/vscode-chrome-debug&quot;&gt;GitHub - Microsoft/vscode-chrome-debug: Debug your JavaScript code running in Google Chrome from VS Code.&lt;/a&gt; 여기서 확인할 수 있습니다.&lt;/p&gt;
+  &lt;p&gt;설정 파일을 보면 대략 어떤 내용인지 유추할 수 있어 자세히 설명하지 않습니다. 옵션에 대한 설명은 &lt;a href=&quot;https://github.com/Microsoft/vscode-chrome-debug&quot;&gt;GitHub - Microsoft/vscode-chrome-debug: Debug your JavaScript code running in Google Chrome from VS Code.&lt;/a&gt; 여기서 확인할 수 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;vscode-debugger&quot;&gt;VSCode Debugger&lt;/h3&gt;
 
-&lt;p&gt;설정파일을 저장하면 디버깅모드의 실행 목록에 자동으로 추가됩니다.&lt;/p&gt;
+&lt;p&gt;설정 파일을 저장하면 디버깅 모드의 실행 목록에 자동으로 추가됩니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/vscode-debug-edit.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -395,16 +395,16 @@
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/vscode-debugger.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;내용을 입력하면 크롬 브라우저와 VSCode 동시에 중단점이 걸리는 걸 볼 수 있습니다. 개발자 도구처럼 한줄한줄 실행할 수도 있고 콘솔을 사용할 수도 있습니다. 개발자 도구와 VSCode가 동기화되서 움직이기 때문에 개발자 도구에 중단점을 생성해도 VSCode에서 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;내용을 입력하면 크롬 브라우저와 VSCode 동시에 중단점이 걸리는 걸 볼 수 있습니다. 개발자 도구처럼 한줄한줄 실행할 수도 있고 콘솔을 사용할 수도 있습니다. 개발자 도구와 VSCode가 동기화돼서 움직이기 때문에 개발자 도구에 중단점을 생성해도 VSCode에서 확인할 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;이제 VSCode를 사용하면서 크롬 개발자 도구의 강력한 부가 기능도 같이 사용할 수 있습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;section-4&quot;&gt;그래서&lt;/h2&gt;
-&lt;p&gt;자바스크립트 디버깅에 대한 자료를 찾아보면서 이렇게 개발자 도구가 좋아졌나 하고 많이 놀랐습니다. 크롬 브라우저는 6주에 한번씩 새로운 버전을 &lt;a href=&quot;https://www.chromium.org/chrome-release-channels&quot;&gt;릴리즈&lt;/a&gt;하는데 매번 새로운 기능을 추가하고 있습니다. &lt;a href=&quot;https://www.youtube.com/playlist?list=PLNYkxOF6rcIBDSojZWBv4QJNoT4GNYzQD&quot;&gt;공식 Youtube 채널&lt;/a&gt;에서 새 릴리즈에 대한 내용을 짧게 요약해주니 관심있으면 구독하는걸 추천합니다.&lt;/p&gt;
+&lt;p&gt;자바스크립트 디버깅에 대한 자료를 찾아보면서 이렇게 개발자 도구가 좋아졌나 하고 많이 놀랐습니다. 크롬 브라우저는 6주에 한 번씩 새로운 버전을 &lt;a href=&quot;https://www.chromium.org/chrome-release-channels&quot;&gt;릴리즈&lt;/a&gt;하는데 매번 새로운 기능을 추가하고 있습니다. &lt;a href=&quot;https://www.youtube.com/playlist?list=PLNYkxOF6rcIBDSojZWBv4QJNoT4GNYzQD&quot;&gt;공식 Youtube 채널&lt;/a&gt;에서 새 릴리즈에 대한 내용을 짧게 요약해주니 관심 있으면 구독하는 걸 추천합니다.&lt;/p&gt;
 
-&lt;p&gt;Visual Studio Code 또한 굉장히 빠르게 업데이트 되고 있습니다.(매달 &lt;a href=&quot;https://code.visualstudio.com/updates&quot;&gt;릴리즈&lt;/a&gt;) Node.js와의 궁합도 좋아 서버를 node로 작성한 경우 서버와 클라이언트를 동시에 스무스하게 디버깅하고 작업할 수 있습니다. 특히 터치바가 장착된 맥북 프로를 사용한다면 디버깅 모드에서 컨트롤이 이쁘게 터치바에 표시되는 걸 볼 수 있습니다.&lt;/p&gt;
+&lt;p&gt;Visual Studio Code 또한 굉장히 빠르게 업데이트되고 있습니다.(매달 &lt;a href=&quot;https://code.visualstudio.com/updates&quot;&gt;릴리즈&lt;/a&gt;) Node.js와의 궁합도 좋아 서버를 node로 작성한 경우 서버와 클라이언트를 동시에 스무스하게 디버깅하고 작업할 수 있습니다. 특히 터치바가 장착된 맥북 프로를 사용한다면 디버깅 모드에서 컨트롤이 이쁘게 터치바에 표시되는 걸 볼 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;console.log&lt;/code&gt;는 여전히 쓸만하지만 다른 여러가지 방법을 익혀둔다면 디버깅을 더 효율적으로 할 수 있습니다. 그리고 잘 모듈화된 소스, 이해하기 쉽게 지어진 변수명 or 함수명이 더해지면 더더더욱 효과적일거라 생각합니다. 자바스크립트를 이용한 프레임워크는 더욱 복잡해지고 유지보수는 더 어려워집니다. 오늘도 디버깅하느라 고생하는 많은 개발자에 도움이 되길 바랍니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;console.log&lt;/code&gt;는 여전히 쓸만하지만 다른 여러 가지 방법을 익혀둔다면 디버깅을 더 효율적으로 할 수 있습니다. 그리고 잘 모듈화된 소스, 이해하기 쉽게 지어진 변수명 or 함수명이 더해지면 더더더욱 효과적일거라 생각합니다. 자바스크립트를 이용한 프레임워크는 더욱 복잡해지고 유지보수는 더 어려워집니다. 오늘도 디버깅하느라 고생하는 많은 개발자에 도움이 되길 바랍니다.&lt;/p&gt;
 
 &lt;p&gt;개발자 상시 모집중입니다. 연락주세요 ㅎㅎ (&lt;a href=&quot;http://www.purpleworks.co.kr/recruit&quot;&gt;http://www.purpleworks.co.kr/recruit&lt;/a&gt;)&lt;/p&gt;
 </description>
