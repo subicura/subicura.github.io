@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>홈쇼핑처럼 개발후기</title>
+  <meta name="description" content="홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 "홈쇼핑처럼"을 개발했던 내용이 떠올라 후기로 정리합니다. 기술적으로 고민했던 것과 어떤 기술들을 사용했는지를 중점으로 정리해 보았습니다. "아, 이 스타트업은 이렇게 일을 하고 이런식으로 서비스를 개발했구나" 하고 봐주시면 감사할 것 같습니다. 더 나은 대안이 있다면 추천해주셔도 좋습니다." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@subicura" />
+    <meta name="twitter:title" content="홈쇼핑처럼 개발후기" />
+    <meta name="twitter:image" content="https://subicura.com/assets/images/df_logo.png" />
+    
+    <meta name="twitter:description"  content="홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 "홈쇼핑처럼"을 개발했던 내용이 떠올라 후기로 정리합니다. 기술적으로 고민했던 것과 어떤 기술들을 사용했는지를 중점으로 정리해 보았습니다. "아, 이 스타트업은 이렇게 일을 하고 이런식으로 서비스를 개발했구나" 하고 봐주시면 감사할 것 같습니다. 더 나은 대안이 있다면 추천해주셔도 좋습니다." />
+    
+  
+  
+  <meta property="og:site_name" content="Subicura's Blog" />
+  <meta property="og:title" content="홈쇼핑처럼 개발후기"/>
+  
+  <meta property="og:description" content="홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 "홈쇼핑처럼"을 개발했던 내용이 떠올라 후기로 정리합니다. 기술적으로 고민했던 것과 어떤 기술들을 사용했는지를 중점으로 정리해 보았습니다. "아, 이 스타트업은 이렇게 일을 하고 이런식으로 서비스를 개발했구나" 하고 봐주시면 감사할 것 같습니다. 더 나은 대안이 있다면 추천해주셔도 좋습니다." />
+  
+  <meta property="og:image" content="https://subicura.com/assets/images/df_logo.png" />
+  <meta property="og:url" content="https://subicura.com/development/2016/05/30/likehs-develop-log.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2016-05-30T00:00:00+09:00">
+
+  <meta property="fb:app_id" content="1611862309129685" />
+
+  <meta name="naver-site-verification" content="cc257cc7988ed85c9db6c228330b4870f9dfa25f" />
+
+  <link rel="canonical" href="https://subicura.com/development/2016/05/30/likehs-develop-log.html"/>
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+  <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1518679387407238000" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
+  <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/custom.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
+  
+  <script src="/assets/js/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      custom: {
+        families: ['Spoqa Han Sans'],
+        urls: ['/css/spoqa-han-sans-font.css']
+      }
+    });
+  </script>
+  <script>
+    var _mailChimpUrl = "http://eepurl.com/cywDtP";
+  </script>
+
+  
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+</head>
+
+  <body itemscope itemtype="http://schema.org/BlogPosting">
+    <!-- header start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43194822-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.12&appId=1611862309129685";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+
+<a href="https://subicura.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.png)"></span></a>
+<!-- header end -->
+
+
+    <main class="content" role="main">
+      <article class="post">
+        <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+          <meta itemprop="name" content="Subicura's Blog" />
+          <meta itemprop="url" content="https://subicura.com" />
+          <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="url" content="https://subicura.com/assets/images/df_logo.png" />
+          </div>
+        </div>
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <meta itemprop="url" content="https://subicura.com/assets/images/author.jpg" />
+        </div>
+        <meta itemprop="headline" content="홈쇼핑처럼 개발후기" />
+        <meta itemprop="mainEntityOfPage" content="/development/2016/05/30/likehs-develop-log.html" />
+        <meta itemprop="datePublished" content="2016-05-30 00:00:00 +0900" />
+        <meta itemprop="dateModified" content="2017-01-21 10:00:00 +0900" />
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">
+              홈쇼핑처럼 개발후기
+              
+            </h1>
+            <div class="cf post-meta-text">
+              <section class="share">
+                <div class="fb-like" data-href="https://subicura.com/development/2016/05/30/likehs-develop-log.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ko"></a>
+                
+                  
+                    <a class="icon-twitter" href="http://twitter.com/share?text=%ED%99%88%EC%87%BC%ED%95%91%EC%B2%98%EB%9F%BC+%EA%B0%9C%EB%B0%9C%ED%9B%84%EA%B8%B0&amp;url=https://subicura.com/development/2016/05/30/likehs-develop-log.html"
+                      onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                      <i class="nf nf-fa-twitter"></i><span class="hidden">twitter</span>
+                    </a>
+                  
+                
+                  
+                
+              </section>
+              <div class="author-info">
+                <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+                <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  subicura<meta itemprop="name" content="subicura" /><meta itemprop="url" content="https://subicura.com/about" />
+                </h4>
+                on
+                <time datetime="2016-05-30T00:00:00+09:00">30 May 2016</time>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#어떤걸-만들까">어떤걸 만들까?</a></li>
+<li class="toc-entry toc-h2"><a href="#어떻게-개발해야-할까">어떻게 개발해야 할까?</a></li>
+<li class="toc-entry toc-h2"><a href="#커뮤니케이션은-어떻게">커뮤니케이션은 어떻게?</a></li>
+<li class="toc-entry toc-h2"><a href="#그래서">그래서</a></li>
+</ul><p><img src="https://subicura.com/assets/article_images/2016-05-30-likehs-develop-log/dduk.png" alt="서울스낵x불맛쌀떡볶이"></p>
+
+<p>홈쇼핑처럼x불맛쌀떡볶이를 배송받으면서 그동안 “<a href="https://www.likehs.com/">홈쇼핑처럼</a>“을 개발했던 내용이 떠올라 후기로 정리합니다.</p>
+
+<p>그동안 주로 SI관련일을 하다가 이번에 처음으로 일반 고객을 대상으로 서비스를 만들게 되었습니다. 처음부터 끝까지 만들어야 하다보니 정말 일이 많고 힘드네요. 모든 대한민국의 스타트업에게 존경을…</p>
+
+<p>밑에 내용은 서비스를 만들면서 기술적으로 고민했던 것과 어떤 기술들을 사용했는지를 중점으로 정리해 보았습니다. “아, 이 스타트업은 이렇게 일을 하고 이런식으로 서비스를 개발했구나” 하고 봐주시면 감사할 것 같습니다. 더 나은 대안이 있다면 추천해주셔도 좋습니다.</p>
+
+<div align="center" class="googleads googleads-content">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2468713653725581" data-ad-slot="8649023787" data-ad-format="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+<hr>
+
+<h2 id="section">
+<a id="어떤걸-만들까" class="anchor" href="#%EC%96%B4%EB%96%A4%EA%B1%B8-%EB%A7%8C%EB%93%A4%EA%B9%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>어떤걸 만들까?</h2>
+
+<p>대략적인 서비스 개요입니다</p>
+
+<p><strong>맛집음식을 집에서 간편하게 먹자</strong></p>
+
+<ul>
+  <li>입소문이 난 맛집과 협력하여 처음부터 함께 간편식을 개발하자</li>
+  <li>개발부터 패키징, 냉장보관, 배송까지 관리하여 빠르고 편리하게 제품을 전달하자</li>
+</ul>
+
+<p><strong>BJ가 실시간 동영상을 통해 제품을 알리자</strong></p>
+
+<ul>
+  <li>BJ를 섭외하고 일주일에 한번씩 실시간으로 제품을 홍보하고 소통하자</li>
+  <li>그외에 맛집정보와 조리법등을 영상으로 편집하여 볼 수 있게 하자</li>
+</ul>
+
+<p><strong>채팅을 넣자</strong></p>
+
+<ul>
+  <li>실시간 채팅이 가장 편한 커뮤니케이션 도구다</li>
+  <li>질문/답변 및 제품에 대한 이야기를 게시판이나 댓글이 아닌 채팅으로 얘기하자</li>
+</ul>
+
+<p><strong>단순하게 만들자</strong></p>
+
+<ul>
+  <li>제품을 보고 구매하고 확인 하는 단순한 과정에 집중하자</li>
+  <li>구매자가 최대한 편하고 짧은 시간에 구매할 수 있도록 하자</li>
+</ul>
+
+<h2 id="section-1">
+<a id="어떻게-개발해야-할까" class="anchor" href="#%EC%96%B4%EB%96%BB%EA%B2%8C-%EA%B0%9C%EB%B0%9C%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>어떻게 개발해야 할까?</h2>
+
+<p>기술 스택 소개입니다</p>
+
+<p><strong>APP</strong></p>
+
+<ul>
+  <li>안드로이드와 아이폰 - 한국은 안드로이드 사용자가 압도적이지만 아이폰 사용자를 포기할 수 없음. 우리 회사도 한명 빼곤 전부 아이폰이라.. 같이 런칭하기로 결정</li>
+  <li>안드로이드는 Android Studio에 Java를 이용하고 아이폰은 Xcode에 swift를 이용</li>
+  <li>
+<a href="http://reactivex.io/">RxAndroid</a>
+    <ul>
+      <li>뭔가 좋아보이니 도입</li>
+      <li>timeout, loading 상황이라던가 채팅 메시지를 받는 부분에 적용 =&gt; 생각보다 쓰기가 어려웠음</li>
+      <li>뭐하나 할때마다 문서를 찾아봐야하고 이렇게 쓰는게 맞나 싶은 상황이 많음</li>
+      <li>좋은 샘플이 많이 나오고 베스트 프렉티스라던가 문서들이 더 성숙해져야 할 것 같음</li>
+      <li>조금 더 지나면 좋아질 것 같은데 아직 좀 이른느낌</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://developer.apple.com/swift/">swift</a>
+    <ul>
+      <li>플러그인들 개발이 많이 되어서 몇년 전에 비해 실제 제품을 개발하는데 무리가 없어짐</li>
+      <li>Objective-C 안녕</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.xamarin.com/">xamarin</a>, <a href="https://facebook.github.io/react-native/">react native</a>, <a href="http://ionicframework.com/">ionic</a>, <a href="http://www.rubymotion.com/">rubymotion</a>
+    <ul>
+      <li>한번 소스 작성으로 아이폰과 안드로이드 앱을 가능하게 하는 녀석들</li>
+      <li>비지니스용 앱에는 적합해 보이나 고객용 앱으로는 적용이 어렵다고 판단</li>
+      <li>개발자들이 기본 언어에 기본 SDK 선호</li>
+      <li>고려해봤지만 결국 안쓰는것으로</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://cocoapods.org/">cocoapods</a>
+    <ul>
+      <li>iOS 라이브러리는 cocoapod 사용중</li>
+      <li>내부 private 라이브러리가 있어 따로 pod 리파지터리 구성</li>
+      <li>pod 리파지터리는 <a href="https://guides.cocoapods.org/syntax/podspec.html">podpsec</a>만 구현하면 손쉽게 구현가능함
+        <ul>
+          <li>버전과 라이브러리 정보를 xxx.podspec으로 해서 git 저장소에 저장하면 끝</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>WEB / Backend</strong></p>
+
+<ul>
+  <li>제품관리부터 배송, 환불, 재고, 이벤트, 쿠폰등 일련의 커머스 시스템을 전부 만들수는 없으니 유명한 프레임워크를 찾아보고 커스터마이징 하기로함</li>
+  <li>오픈 소스 커머스 후보
+    <ul>
+      <li>.net 기반의 <a href="http://www.nopcommerce.com/">nopCommerce</a>
+        <ul>
+          <li>좋은 설계</li>
+          <li>개발환경이 좀 느림</li>
+          <li>윈도우 visual studio 필수 =&gt; 다들 mac을 사용해서 가상환경에서 해야함</li>
+        </ul>
+      </li>
+      <li>rails기반의 <a href="https://spreecommerce.com/">spree</a>
+        <ul>
+          <li>가벼움</li>
+          <li>커스터마이징 방식이 맘에 들지 않음</li>
+          <li>생각보다 기능이 부실함</li>
+          <li>유/무료 플러그인이 적음</li>
+        </ul>
+      </li>
+      <li>php기반의 <a href="https://magento.com/">magento</a>
+        <ul>
+          <li>php지만 자체 프레임웍을 잘 구성해 놓음 =&gt; 프레임웍 꽤 공부해야함</li>
+          <li>(프레임웍을 잘 이해하고 있다면) 기존 기능 확장과 커스터마이징이 쉬움</li>
+          <li>유/무료 플러그인 많음 =&gt; 맘에 쏙드는 플러그인은 없고 결국 커스터마이징 해야함</li>
+          <li>ebay에서 인수하고 세계적으로 널리 쓰임</li>
+          <li>최종 선택</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>magento
+    <ul>
+      <li>한국 페이먼트 솔루션이 잘 안되어 있어서 이니시스를 사용했는데 결제, 환불, 부분환불을 전부 구현해야했음. (플러그인으로 오픈하면 좀 팔릴까?)</li>
+      <li>
+<a href="https://xdebug.org/">xdebug</a>, <a href="https://github.com/squizlabs/PHP_CodeSniffer">code sniffer</a>, <a href="https://phpunit.de/">phpunit</a>을 이용해서 잘 케어해줘야 오류가 안나고 신중하게 코드를 관리해야 유지보수가 수월함</li>
+      <li>개발환경 셋팅하는데 애먹음
+        <ul>
+          <li>magento는 왜 <a href="https://rubygems.org/">gem</a>이나 <a href="https://www.npmjs.com/">npm</a>같은 방식으로 제공하지 않는가?</li>
+          <li>
+<a href="http://rubyonrails.org/">rails</a>나 <a href="http://expressjs.com/">express</a>같은 경우는 core소스가 개발소스와 완전히 분리되어 개발 가능한데 마젠토는 전체 소스를 가지고 있어야 했음</li>
+          <li>결국 코어랑 커스터마이징을 분리하기는 했는데 맞는 방법인지 모르겠음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Web / Frontend</strong></p>
+
+<ul>
+  <li>
+<a href="http://gulpjs.com/">gulp</a>+<a href="https://webpack.github.io/">webpack</a>+<a href="http://babeljs.io/">babel</a>+<a href="http://facebook.github.io/react/">react</a>+<a href="https://github.com/reactjs/redux">redux</a>+<a href="https://jquery.com/">jquery</a>
+</li>
+  <li>
+<a href="https://github.com/phpv8/v8js">PHP v8js</a>를 설치하여 <a href="http://blog.remotty.com/blog/2015/08/30/react-server-rendering-on-rails/">react 서버 사이드 렌더링</a> 사용</li>
+  <li>redux 생각보다 공부하기 어려웠음</li>
+  <li>
+<a href="http://sass-lang.com/">SCSS</a> / <a href="http://getbootstrap.com/">bootstrap 3</a>
+    <ul>
+      <li>bootstrap은 style중 base와 일부분만 사용</li>
+      <li>javascript plugin은 제외함</li>
+    </ul>
+  </li>
+  <li>앱 기반이라 웹은 아직 많이 사용하지 않는데.. 구성이 과해졌음;;</li>
+  <li>나중에 웹 개발 들어가면 감사하겠지</li>
+</ul>
+
+<p><strong>개발환경</strong></p>
+
+<ul>
+  <li>
+<a href="https://www.vagrantup.com/">vagrant</a>와 <a href="https://www.docker.com/">docker</a>를 이용하여 구성</li>
+  <li>vagrant안에 nginx, php7, mysql, redis docker container를 띄워서 개발</li>
+  <li>배포도 도커를 사용하기때문에 배포환경이랑 99% 일치하는 장점</li>
+  <li>매번 힘들게 개발환경 구성할 필요 없음 <code class="highlighter-rouge">vagrant up</code>하고 커피한잔 마시면 됨</li>
+  <li>빨리 <a href="https://blog.docker.com/2016/03/docker-for-mac-windows-beta/">docker for mac</a>이 안정화되길 기다리는중
+    <ul>
+      <li>docker때문에 리눅스를 개발환경으로 써볼까 까지도 생각했지만 IDE와 한글궁합, 폰트 구성이 너무 힘듬 ㅠㅠ</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>채팅</strong></p>
+
+<ul>
+  <li>
+<a href="https://www.google.co.kr/?#newwindow=1&amp;q=chat+sdk">여러가지 솔루션</a> 검토 후 최종결정은 자체 개발
+    <ul>
+      <li>주문 상황을 채팅창에 공유하거나, 바로 구매하기 링크 버튼등 채팅창에 넣을 요소를 고려</li>
+      <li>커스터마이징이 필요한데 기존 솔류션들은 자유도가 떨어져 보였음</li>
+      <li>만드는김에 별개의 서비스로 개발하고 홈쇼핑처럼이 해당 서비스를 사용하는 방식으로 구현 =&gt; 여유 생기면 채팅 솔루션 개발업체로 변신</li>
+      <li>덕분에 프로젝트가 하나 더 생긴 느낌</li>
+    </ul>
+  </li>
+  <li>채팅같은 개발은 처음이라 안전성보다는 좋아보이는 최신 기술스택을 대거 채용함</li>
+  <li>기본적인 관리자 페이지와 API
+    <ul>
+      <li>rails / react+redux조합</li>
+    </ul>
+  </li>
+  <li>채팅 스트림 소켓 접속
+    <ul>
+      <li><a href="http://vertx.io/">Vert.x</a></li>
+      <li>Java기반에 netty사용으로 믿음직함</li>
+      <li>stream과 확장성에 최적화됨</li>
+      <li>TCP/websocket등을 쉽게 처리해줘서 코어만 단순하고 심플하게 개발할 수 있음</li>
+      <li>자잘한 버그가 있음 ㅠ 3.3이 빨리 나오길 기다리는 중</li>
+    </ul>
+  </li>
+  <li>메시지 파싱 및 큐, 디비 전송
+    <ul>
+      <li>
+<a href="https://golang.org/">go</a>로 구현한 워커</li>
+      <li>큐에서 메시지를 받고 검증 후 채팅창에 돌려주고 디비에 저장함</li>
+      <li>처음 go를 써봤는데 굉장히 만족스러움</li>
+      <li>개발속도도 빠르고 버그도 많이 없고 속도 빠른 ruby 쓰는 느낌</li>
+    </ul>
+  </li>
+  <li>디비
+    <ul>
+      <li><a href="https://www.mysql.com/">mysql</a></li>
+      <li>
+<a href="https://www.mongodb.com/">mongo</a>나 nosql류를 쓰면 좋을것 같긴한데 익숙하지 않아 관리할 자신이 없어서 포기</li>
+    </ul>
+  </li>
+  <li>큐
+    <ul>
+      <li><a href="http://kafka.apache.org/">kafka</a></li>
+      <li>
+<a href="https://www.rabbitmq.com/">rabbitmq</a>를 썼다가 퍼포먼스 이슈가 발생해서 옮김</li>
+      <li>kafka는 <a href="https://linkedin.com/">linkedin</a>에서 만들었고 메모리 방식이 아닌 하드 저장 방식임 =&gt; 메모리가 아니다! 메시지 유실걱정이 없음!</li>
+      <li>하드를 백엔드로 하지만 캐시와 random access를 제한하여 굉장히 빠름</li>
+      <li>기능은 굉장히 부실하지만 속도가 극강임</li>
+      <li>버전별 호환성이 너무 안좋아서 특정 라이브러리에 같은 버전을 지원하도록 잘 써야함
+        <ul>
+          <li>java, ruby, go 라이브러리가 찰싹 붙어야하는 상황</li>
+        </ul>
+      </li>
+      <li>빨리 버전 안정화 되길</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>실시간 동영상</strong></p>
+
+<ul>
+  <li>실시간으로 영상을 전송하는게 우리 서비스의 핵심</li>
+  <li>
+<a href="https://www.wowza.com/">wowza</a>
+    <ul>
+      <li>적극 고려했으나 그냥 이쁜 UI에 유료로 <a href="https://www.ffmpeg.org/">ffmpeg</a> 쓰는 느낌</li>
+      <li>결국 테스트할때만 사용하고 ffmpeg 사용함</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://en.wikipedia.org/wiki/Real_Time_Messaging_Protocol">RTMP</a>/<a href="https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol">RTSP</a>/<a href="https://developer.apple.com/streaming/">HLS</a> 프로토콜만 지원하면  대부분 문제 해결됨</li>
+  <li>오리진 서버와 엣지 서버를 어떻게 구성하는지가 중요</li>
+  <li>트래픽이 어마어마하여 속도와 비용을 고려하여 클라우드 선택. 아직도 여러 클라우드 테스트중
+    <ul>
+      <li>트래픽을 무제한으로 주는 어떤 클라우드의 경우 속도도 빨라서 최종결정했었으나 방송직전 속도가 떨어짐 =&gt; 트래픽이 많다는 이유로 강제로 제한당함</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.youtube.com/">유튜브</a>와 <a href="https://live.fb.com/">페이스북 라이브</a>, <a href="https://vimeo.com/">비메오</a> 사용중</li>
+  <li>비메오 유료계정은 광고 없이 자체 플레이어를 쓸수 있고 트래픽이 무제한임</li>
+</ul>
+
+<p><strong>배송조회</strong></p>
+
+<ul>
+  <li>
+<a href="https://www.doortodoor.co.kr/main/">CJ대한통운</a> 이용
+    <ul>
+      <li>api을 제공하지 않음</li>
+      <li>
+<a href="http://sweettracker.github.io/">sweettracker</a>와 <a href="https://www.aftership.com/">aftership</a>은 유료</li>
+    </ul>
+  </li>
+  <li>오픈소스
+    <ul>
+      <li>go로 그냥 만듬</li>
+      <li>다른 택배사도 지원가능한 구조</li>
+      <li>곧, 오픈소스 공개할 예정</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>우편번호검색</strong></p>
+
+<ul>
+  <li>
+<a href="http://postcode.map.daum.net/guide">daum API</a>가 최고
+    <ul>
+      <li>키 발급도 없고 무제한 트래픽에 속도도 빠름!</li>
+      <li>하지만, 웹만 제공하고 커스터마이징이 어려운 단점</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://postcodify.poesis.kr/">postcodify</a>
+    <ul>
+      <li>php기반의 오픈소스 프로젝트</li>
+      <li>구주소, 신주소 동시 검색 지원</li>
+      <li>상세한 결과 API</li>
+      <li>굉장히 유연한 검색을 지원</li>
+      <li>대신 좀 느림 ㅠ 맴캐시 걸어도 새로운 주소는 느림 ㅠ</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>API Gateway</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2016-05-30-likehs-develop-log/api-gateway.png" alt="API Gateway란?"></p>
+
+<ul>
+  <li>배송조회 및 우편번호검색에서 사용</li>
+  <li>배송조회와 우편번호검색이 따로 인증 기능이 없기 때문에 앞단에 gateway를 둠</li>
+  <li>위 사진처럼, 호출개수 제한, 키등록, 캐싱, 로깅, 분석등을 해줌</li>
+  <li>tyk
+    <ul>
+      <li>
+<a href="https://getkong.org/">kong</a>을 고려해봤으나 gui가 유료임</li>
+      <li>
+<a href="https://tyk.io/">tyk</a>는 go 기반의 gateway로 전직 구글러들이 만듬</li>
+      <li>서버 한대까지 무료고 GUI도 제공</li>
+      <li>설치가 간단하고 사용법도 쉬움</li>
+      <li>tyk에 api를 호출하면 tyk가 다시 원래 api를 호출하는 방식임</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>푸시</strong></p>
+
+<ul>
+  <li>
+<a href="https://pushbots.com/">pushbot</a>
+    <ul>
+      <li>다른 솔루션들은 기기등록 제한이 있는 경우가 많은데, pushbot은 기기등록 수 제한없음</li>
+      <li>무료 발송 건수가 엄청나게 많음</li>
+      <li>푸시는 광고성 푸시가 대부분일거라 생각해 대량의 기기에 소량의 건수라 우리한테 딱임</li>
+      <li>문서가 조금 부실함 =&gt; 안드로이드 상태바 아이콘 바꾸는 법 문서에 없는데 기능은 있음;</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>메일</strong></p>
+
+<ul>
+  <li>
+<a href="https://www.mailgun.com/">mailgun</a>
+    <ul>
+      <li>발송용으로 사용</li>
+      <li>비슷한 서비스들 사이에 딱히 장점/단점은 모르겠음</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.worksmobile.com/kr/">네이버웍스</a>
+    <ul>
+      <li>메일 수신/발송용으로 사용</li>
+      <li>구글웍스가 유료화되어 아쉬움 ㅠ</li>
+    </ul>
+  </li>
+  <li>템플릿
+    <ul>
+      <li>데스크탑, 모바일, 앱에서 이메일이 깨지지 않는지 확인함</li>
+      <li>
+<a href="https://litmus.com/">litmus</a> =&gt; 최대 테스트 개수가 제한되어 있긴 한데 쓸만함</li>
+      <li>
+<a href="https://github.com/leemunroe/grunt-email-workflow">Grunt Email Design Workflow</a>
+        <ul>
+          <li>이메일은 css class를 지원하지 않아 전부 inline으로 넣어야함 그런걸 자동으로 해줌</li>
+          <li>class 지원과 scss지원, 미리보기등을 지원함</li>
+          <li>express 기반이라 변수설정등도 가능함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>SMS</strong></p>
+
+<ul>
+  <li>
+<a href="http://www.apistore.co.kr/api/apiView.do?service_seq=151">olleh API Store</a>
+    <ul>
+      <li>타사 대비 저렴함
+        <ul>
+          <li>SMS 9.9원 / LMS 28원 / MMS 110원</li>
+        </ul>
+      </li>
+      <li>REST API 사용 간단함</li>
+      <li>서비스 신청시 계약서를 등기로 보내야하는 번거로움. 원래 다 이런식으로 계약하는건가?</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>CS</strong></p>
+
+<ul>
+  <li>
+<a href="https://yellowid.kakao.com/">카카오톡 옐로우아이디</a>
+    <ul>
+      <li>상담은 채팅으로 유도</li>
+      <li>한 아이디에 여려명 관리자 등록 가능하고 데스크탑에서도 잘 동작함</li>
+    </ul>
+  </li>
+  <li>SK 브로드밴드 1670-xxxx
+    <ul>
+      <li>02번호 대신 대표 번호로 사용</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>이슈관리/코드검수</strong></p>
+
+<ul>
+  <li>
+<a href="http://phabricator.org/">phabricator</a>
+    <ul>
+      <li>facebook의 오픈소스 코드리뷰, 테스크 관리, 프로젝트 관리툴</li>
+      <li>기능은 짱짱 많고 좋은듯 하지만 세부적으로 꼭 필요한 몇몇 기능은 부족한 느낌임</li>
+      <li>일반 이슈 관리시스템 대비 기능이 부족하여 무조건 추천하지는 못하겠음</li>
+      <li>기능이 부족한 부분은 phabricator 방식에 맞춰야함</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://gitlab.com/">gitlab</a>
+    <ul>
+      <li>gitlab에 <a href="https://guides.github.com/introduction/flow/">github flow</a> 방식을 사용
+        <ul>
+          <li>
+<a href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html">git flow</a>와는 다르고 <a href="https://code.google.com/p/gerrit/">gerrit</a>과는 다르다!</li>
+          <li>gitlab이 master push를 제한할수 있기때문에 쉽게 적용가능</li>
+        </ul>
+      </li>
+      <li>기능단위로 브랜치를 따고 pull request를 보내면 팀장이 코드 검수 후 auto merge</li>
+      <li>팀장이 부지런해야 빨리빨리 동작</li>
+      <li>안드로이드, 아이폰은 개발자가 각각 한명이라 코드 검수 없이 진행함 / 간혹 특이하거나 괜찮은 부분은 따로 공유</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>서버</strong></p>
+
+<ul>
+  <li>회사자체서버
+    <ul>
+      <li>IBM System x3650 M4
+        <ul>
+          <li>Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz * 2 / Memory - 96G</li>
+          <li>각종 내부 툴들과 gitlab, 모니터링등이 돌고 있음</li>
+          <li>채팅 서비스도 여기서 도는중</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://ucloudbiz.olleh.com/">KT 클라우드</a>
+    <ul>
+      <li>클라우드는 아마존은 생각보다 너무 비쌌고 KT가 저렴하고 속도도 빨랐음</li>
+      <li>커머스와 영상은 KT 클라우드에서 운영중</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.chef.io/chef/">chef</a>
+    <ul>
+      <li>ruby에 익숙하고 웹 GUI를 무료로 제공하여 선택했고 <a href="https://puppet.com/">puppet</a>이나 <a href="https://saltstack.com/">saltstack</a>, <a href="https://www.ansible.com/">ansible</a>같은 다른 툴들도 기능은 비슷비슷한듯함</li>
+      <li>기본적인 방화벽 설정과 도커, sensu monitoring client를 설치하는게 주된 용도</li>
+      <li>방화벽은 <a href="https://help.ubuntu.com/community/UFW">ufw</a>사용중. iptables 너무 어렵 ㅠ</li>
+    </ul>
+  </li>
+  <li>Docker
+    <ul>
+      <li>web application</li>
+      <li>nginx</li>
+      <li>mysql</li>
+      <li>sensu</li>
+      <li>… 모든건 컨테이너로.. 짱짱맨</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>웹서버</strong></p>
+
+<ul>
+  <li>
+<a href="http://nginx.org/">nginx</a>
+    <ul>
+      <li>http/tcp/websocket reverse proxy용도</li>
+      <li>
+<a href="https://developers.google.com/speed/pagespeed/module/">nginx pagespeed module</a> 적용하여 정적 파일 최적화
+        <ul>
+          <li>단순히 <code class="highlighter-rouge">pagespeed on;</code>만 해주면 이미지를 알아서 압축해서 내려보내줌</li>
+          <li>chrome은 <a href="https://developers.google.com/speed/webp/">webp</a>로 jpeg보다 더 좋은 압축률에 좋은화질임</li>
+          <li>그외에 최적화에 대한 많은 기능들 포함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.cloudflare.com/">cloudflare</a>
+    <ul>
+      <li>앞단에 적용하여 cdn과 방화벽 용도로 사용</li>
+      <li>단점을 모르겠음</li>
+      <li>dns server 설정도 엄청나게 편하고 cdn cache도 엄청나게 간단함</li>
+      <li>땅파서 장사하는건지.. 그래서 유료 플랜 가입함</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>모니터링</strong></p>
+
+<ul>
+  <li>
+<a href="https://sensuapp.org/">sensu</a>
+    <ul>
+      <li>한곳에서 서버상황과 자원을 모니터링함</li>
+      <li>슬랙 플러그인을 사용하여 서버가 죽거나 자원을 많이 사용하면 경고메시지 날라옴</li>
+      <li>확장성이 좋고 <a href="https://github.com/sensu-plugins">플러그인</a>이 다양하고 ruby기반에 수정하기도 편함. 게다가 구조도 간단해서 선택함</li>
+      <li>rabbitmq 통신을 암호화하고 방화벽을 적용하면 설정 끝</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://grafana.org/">grafana</a>
+    <ul>
+      <li>sensu가 influxdb에 서버 모니터링 정보를 저장</li>
+      <li>데이터를 그래프로 보여주고 있음. 한눈에 보기 좋고 다양한 커스터마이징이 가능함</li>
+    </ul>
+  </li>
+  <li>전통의 강호 <a href="https://analytics.google.com/">구글 애널리틱스</a> 적용</li>
+</ul>
+
+<p><strong>배포</strong></p>
+
+<ul>
+  <li>
+<a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/web_hooks/web_hooks.md">gitlab</a>+<a href="https://jenkins.io/">jenkins</a>
+    <ul>
+      <li>gitlab에 push하면 webhook을 통해 jenkins 자동 배포</li>
+      <li>빌드 / 테스트 / 도커라이징 / 배포</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://docs.docker.com/compose/">docker compose</a>
+    <ul>
+      <li>서버쪽은 전부 도커! docker compose를 적극 활용함 도커 만세</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://martinfowler.com/bliki/BlueGreenDeployment.html">blue green deployment</a> 방식사용
+    <ul>
+      <li>한서버에 8090, 8091 포트를 사용중</li>
+      <li>8090이 떠있을때 배포를 하면 8091로 배포를 하고 nginx가 8091을 바라보게 한 후 8090을 죽임 =&gt; 8090, 8091 왔다갔다 하는 방식임</li>
+      <li>덕분에, 하루에도 수십번 이상없이 배포중</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://fabric.io/home">fabric</a>
+    <ul>
+      <li>아이폰/안드로이드 앱 테스트 배포</li>
+      <li>사용법이 쉽고 오류로깅도 해줌</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://seoulappcenter.co.kr/">서울앱비지니스센터</a>
+    <ul>
+      <li>다양한 안드로이드 및 iOS 기기를 빌려줌</li>
+      <li>이전한지 얼마 안되서 정식 오픈은 안했고 무료에 쾌적함</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>디자인</strong></p>
+
+<ul>
+  <li>
+<a href="https://www.sketchapp.com/">sketch</a>
+    <ul>
+      <li>디자인은 이제 거의다 sketch로 하고 포토샵은 일부만 사용함</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://zeplin.io/">zeplin</a>
+    <ul>
+      <li>sketch와 찰떡 궁합인 zaplin을 사용하여 웹/앱 디자인 공유</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="section-2">
+<a id="커뮤니케이션은-어떻게" class="anchor" href="#%EC%BB%A4%EB%AE%A4%EB%8B%88%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>커뮤니케이션은 어떻게?</h2>
+
+<p>개발자와 기획자 / 디자이너</p>
+
+<p><strong><a href="https://slack.com/">slack</a></strong></p>
+
+<ul>
+  <li>요즘 대부분 사용하고 있는 슬랙</li>
+  <li>주제별로 채널을 만들어서 사용중
+    <ul>
+      <li>app, web, marketing, cs, video, ci, bug, bot 등으로 구성</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong><a href="https://airtable.com/">airtable</a></strong></p>
+
+<ul>
+  <li>웹/앱 기반 스프리드시트 서비스</li>
+  <li>자유도가 높고 간단한 내용은 데이터베이스를 대체하여 사용할 수 있음</li>
+  <li>자료성 정보 공유는 여기서 이루어짐</li>
+</ul>
+
+<h2 id="section-3">
+<a id="그래서" class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
+
+<p>이번 프로젝트에서 기획/디자인/영업을 제외한 순수 개발파트는 4명이 풀로 투입되고 2명이 다른 일과 병행하면서 진행하였습니다. 다들 기술적인 부분을 좋아하다보니 여러가지 기술이 사용되면서 단순할 수 있는 부분도 복잡해진 느낌이 있습니다.</p>
+
+<p>결국 집에서 <strong>떡볶이 하나</strong>를 먹기 위해 생각보다 많은 작업을 한것 같습니다. 개발과 관련된 내용만 정리했지만 BJ를 섭외하고 영상을 촬영하고 편집하고 상품을 기획하고 영업하고 만들고 배송하고 CS를 운영하고 마케팅을 하는 부분도 엄청난 노력이 필요했습니다.</p>
+
+<p>서비스에 관심있으신분은 <a href="https://www.likehs.com">https://www.likehs.com/</a> 에 방문해 주시구요. (현재 서울스낵x불맛쌀떡볶이 <strong>무료 구매 이벤트</strong>중!)</p>
+
+<p>아참, 개발자도 모집합니다. 연락주세요 ㅎㅎ (<a href="http://www.purpleworks.co.kr/recruit">http://www.purpleworks.co.kr/recruit</a>)</p>
+
+<p>홈쇼핑처럼팀 다들 수고하셨어요. 모두 화이팅! 앱도 화이팅 ㅋㅋ</p>
+
+          <p class="tags">
+            
+              <a href="/tags#techstack-ref">TechStack</a>
+            
+              <a href="/tags#startup-ref">Startup</a>
+            
+              <a href="/tags#likehs-ref">Likehs</a>
+            
+          </p>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            <div class="fb-like" data-href="https://subicura.com/development/2016/05/30/likehs-develop-log.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ko"></a>
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=%ED%99%88%EC%87%BC%ED%95%91%EC%B2%98%EB%9F%BC+%EA%B0%9C%EB%B0%9C%ED%9B%84%EA%B8%B0&amp;url=https://subicura.com/development/2016/05/30/likehs-develop-log"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="nf nf-fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>subicura</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2016-05-30 00:00">30 May 2016</time></p>
+            </section>
+            <footer class="subscribe-info">
+                <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+                <a class="subscribe" href="http://bit.ly/2A8Dkav"  target="blank"><img id='feedlyFollow' src='//s3.feedly.com/img/follows/feedly-follow-logo-black_2x.png' alt='follow us in feedly' width='18' height='18'> Feedly 구독하기</a><br />
+                <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="nf nf-fa-rss"></i> RSS 구독하기</span></a><br />
+                 
+                  <a class="subscribe" href="http://eepurl.com/cywDtP" target="_blank"> <span class="tooltip"> <i class="nf nf-oct-mail"></i> Email 구독하기</span></a>
+                
+            </footer>
+          </div>
+
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <div class="googleads">
+              
+                <!-- 기본 광고 -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-2468713653725581"
+                    data-ad-slot="1015072194"
+                    data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+              
+            </div>
+          </div>
+        </div>
+
+        
+
+         
+        <div class="fb-comments-wrapper">
+           
+            <div class="fb-comments" data-href="http://subicura.com/development/2016/05/30/likehs-develop-log.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          
+        </div>
+        
+
+        
+      </article>
+    </main>
+
+    <aside class="read-next">
+      
+        <a class="read-next-story no-cover" href="/docker/2016/06/07/zero-downtime-docker-deployment.html">
+          <section class="post">
+            <h2>도커를 이용한 웹서비스 무중단 배포하기</h2>
+            <p>홈쇼핑처럼x밀본고기덮밥이 팔리는걸 관리자화면에서 보면서 하루에도 여러번 소스를 업데이트 하고 운영서버로 배포했던 내용이 떠올라 후기로 정리합니다....</p>
+          </section>
+        </a>
+      
+      
+        <a class="read-next-story prev no-cover" href="/talk/2016/03/23/hello.html">
+          <section class="post">
+            <h2>hello</h2>
+            <p>2016/12/31 수정 tinypress.co는 더이상 사용하지 않습니다. blog 시작하기 좋은날입니다. ghost설치했다가 실수로 서버를 지우는 바람에 이전...</p>
+          </section>
+        </a>
+      
+    </aside>
+    <footer class="post-site-footer clearfix">
+      <section class="copyright"><a href="/">Subicura's Blog</a> © 2018</section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js?1518679387407238000"></script>
+<script type="text/javascript" src="/assets/js/readingtime.js"></script>
+<script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+  </body>
+</html>
