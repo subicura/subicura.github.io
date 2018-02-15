@@ -1,6 +1,7 @@
 ---
 published: true
 title: 본격 macOS에 개발 환경 구축하기
+categories: Tool
 tags: [Mac, DevOps, Server, Development, Environment, Terminal, zsh, vi, tmux]
 layout: post
 excerpt: macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다.

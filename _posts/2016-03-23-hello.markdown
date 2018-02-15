@@ -1,6 +1,7 @@
 ---
 published: true
 title: hello
+categories: Talk
 tags: [Blog]
 layout: post
 comments: yes

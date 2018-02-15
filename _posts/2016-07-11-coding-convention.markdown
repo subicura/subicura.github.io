@@ -1,6 +1,7 @@
 ---
 published: true
 title: linter를 이용한 코딩스타일과 에러 체크하기
+categories: Code
 excerpt: 홈쇼핑처럼 6번째 상품인 까르보돈까스는 부먹과 찍먹을 선택해야 합니다. 코딩도 둘중에 하나를 선택해야 하는 경우가 많은데 협업을 위해 코딩 스타일을 설정하고 규칙에 어긋난 코드를 한땀한땀 수정했던 순간이 떠올라 linter에 대해 이야기합니다.
 tags: [Coding, Lint]
 layout: post

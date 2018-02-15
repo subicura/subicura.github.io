@@ -2,6 +2,7 @@
 published: true
 title: 왜 React와 서버 사이드 렌더링인가?
 excerpt: 홈쇼핑처럼 4번째 상품인 튀김을 기름에 튀기면서 React를 적용하느라 고생했던 순간이 떠올라 React와 서버 사이드 렌더링 적용과정을 정리해봅니다. 여기서는 어떻게보다는 왜에 대해 설명합니다.
+categories: Javascript
 tags: [FrontEnd, Javascript, React, Angular]
 layout: post
 comments: yes

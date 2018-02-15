@@ -2,6 +2,7 @@
 published: true
 title: 초보를 위한 도커 안내서 - 도커란 무엇인가?
 series: 1/3
+categories: Docker
 tags: [Docker, DevOps, Server]
 layout: post
 excerpt: 도커를 처음 접하는 시스템 관리자나 서버 개발자를 대상으로 도커 전반에 대해 얕고 넓은 지식을 담고 있습니다. 도커가 등장한 배경과 도커의 역사, 그리고 도커의 핵심 개념인 컨테이너와 이미지에 대해 알아보고 왜 이렇게 도커가 인기 인지 하나하나 살펴보겠습니다.
