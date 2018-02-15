@@ -6,16 +6,16 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 15 Feb 2018 16:23:07 +0900</pubDate>
-    <lastBuildDate>Thu, 15 Feb 2018 16:23:07 +0900</lastBuildDate>
+    <pubDate>Thu, 15 Feb 2018 16:30:16 +0900</pubDate>
+    <lastBuildDate>Thu, 15 Feb 2018 16:30:16 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>크롬 개발자 도구를 이용한 자바스크립트 디버깅</title>
         <description>자바스크립트 디버깅 어떻게 하시나요? alert()을 사용하시나요? 아니면 console.log()를 선호하시나요? 크롬 개발자 도구는 일반적으로 알고 있는 것보다 더 강력한 기능을 제공합니다. 많은 개발자가 버그로 고생하지만, 따로 디버깅을 공부하거나 누군가 자세히 알려주는 경우는 잘 없습니다. 여기 자바스크립트 디버깅의 일반적인 작업 흐름과 꿀팁을 소개합니다.</description>
         <pubDate>Wed, 14 Feb 2018 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/javascript/2018/02/14/javascript-debugging.html</link>
-        <guid isPermaLink="true">https://subicura.com/javascript/2018/02/14/javascript-debugging.html</guid>
+        <link>https://subicura.com/2018/02/14/javascript-debugging.html</link>
+        <guid isPermaLink="true">https://subicura.com/2018/02/14/javascript-debugging.html</guid>
         
         <category>Chrome</category>
         
@@ -36,8 +36,8 @@
         <title>본격 macOS에 개발 환경 구축하기</title>
         <description>macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다.</description>
         <pubDate>Wed, 22 Nov 2017 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/tool/2017/11/22/mac-os-development-environment-setup.html</link>
-        <guid isPermaLink="true">https://subicura.com/tool/2017/11/22/mac-os-development-environment-setup.html</guid>
+        <link>https://subicura.com/2017/11/22/mac-os-development-environment-setup.html</link>
+        <guid isPermaLink="true">https://subicura.com/2017/11/22/mac-os-development-environment-setup.html</guid>
         
         <category>Mac</category>
         
@@ -66,8 +66,8 @@
         <title>Docker Swarm을 이용한 쉽고 빠른 분산 서버 관리</title>
         <description>도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다는 편견을 완전히 바꿔놓았습니다. 구축 비용이 거의 들지 않고 관리 또한 쉬우며 다양한 기능을 쉽게 제공하고 가볍게 사용할 수 있습니다. 도커 스웜의 핵심내용인 노드와 서비스에 대해 알아보고 ingress 네트워크와 자체 내장된 로드밸런서, DNS 서버를 살펴봅니다.</description>
         <pubDate>Sat, 25 Feb 2017 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/docker/2017/02/25/container-orchestration-with-docker-swarm.html</link>
-        <guid isPermaLink="true">https://subicura.com/docker/2017/02/25/container-orchestration-with-docker-swarm.html</guid>
+        <link>https://subicura.com/2017/02/25/container-orchestration-with-docker-swarm.html</link>
+        <guid isPermaLink="true">https://subicura.com/2017/02/25/container-orchestration-with-docker-swarm.html</guid>
         
         <category>Docker</category>
         
@@ -90,8 +90,8 @@
         <title>초보를 위한 도커 안내서 - 이미지 만들고 배포하기</title>
         <description>이 글은 초보를 위한 도커 안내서 - 설치부터 배포까지 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.</description>
         <pubDate>Fri, 10 Feb 2017 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/docker/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</link>
-        <guid isPermaLink="true">https://subicura.com/docker/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</guid>
+        <link>https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</link>
+        <guid isPermaLink="true">https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</guid>
         
         <category>Docker</category>
         
@@ -110,8 +110,8 @@
         <title>초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기</title>
         <description>초보를 위한 도커 안내서 2번째 글입니다. 도커의 기본적인 내용을 이야기 했던 첫번째 글에 이어 실제로 도커를 설치하고 컨테이너를 실행하면서 도커 명령어를 알아봅니다. 도커를 처음 접하는 분들을 위해 아주 가볍게 자주 쓰는 명령어를 다루었습니다.</description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/docker/2017/01/19/docker-guide-for-beginners-2.html</link>
-        <guid isPermaLink="true">https://subicura.com/docker/2017/01/19/docker-guide-for-beginners-2.html</guid>
+        <link>https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html</link>
+        <guid isPermaLink="true">https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html</guid>
         
         <category>Docker</category>
         
@@ -130,8 +130,8 @@
         <title>초보를 위한 도커 안내서 - 도커란 무엇인가?</title>
         <description>도커를 처음 접하는 시스템 관리자나 서버 개발자를 대상으로 도커 전반에 대해 얕고 넓은 지식을 담고 있습니다. 도커가 등장한 배경과 도커의 역사, 그리고 도커의 핵심 개념인 컨테이너와 이미지에 대해 알아보고 왜 이렇게 도커가 인기 인지 하나하나 살펴보겠습니다.</description>
         <pubDate>Thu, 19 Jan 2017 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/docker/2017/01/19/docker-guide-for-beginners-1.html</link>
-        <guid isPermaLink="true">https://subicura.com/docker/2017/01/19/docker-guide-for-beginners-1.html</guid>
+        <link>https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html</link>
+        <guid isPermaLink="true">https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html</guid>
         
         <category>Docker</category>
         
@@ -148,8 +148,8 @@
         <title>2016년 블로그 회고</title>
         <description>어느덧 2016년 마지막 날입니다. 올 한해 역시 정신없이 지나갔고 작년에 태어난 딸도 돌을 지나고 어느새 python 개발 서적을 읽을 정도의 나이가 되었습니다. 회사는 6주년을 맞이했고 올해 처음으로 일반 고객을 대상으로한 서비스를 오픈했습니다. 서비스를 운영하면서 느낀 점도 많지만 일단은 블로그에 대해 한해를 마무리하는 회고를 하려고 합니다.</description>
         <pubDate>Sat, 31 Dec 2016 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/talk/2016/12/31/remember-2016.html</link>
-        <guid isPermaLink="true">https://subicura.com/talk/2016/12/31/remember-2016.html</guid>
+        <link>https://subicura.com/2016/12/31/remember-2016.html</link>
+        <guid isPermaLink="true">https://subicura.com/2016/12/31/remember-2016.html</guid>
         
         <category>Blog</category>
         
@@ -162,8 +162,8 @@
         <title>linter를 이용한 코딩스타일과 에러 체크하기</title>
         <description>홈쇼핑처럼 6번째 상품인 까르보돈까스는 부먹과 찍먹을 선택해야 합니다. 코딩도 둘중에 하나를 선택해야 하는 경우가 많은데 협업을 위해 코딩 스타일을 설정하고 규칙에 어긋난 코드를 한땀한땀 수정했던 순간이 떠올라 linter에 대해 이야기합니다.</description>
         <pubDate>Mon, 11 Jul 2016 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/code/2016/07/11/coding-convention.html</link>
-        <guid isPermaLink="true">https://subicura.com/code/2016/07/11/coding-convention.html</guid>
+        <link>https://subicura.com/2016/07/11/coding-convention.html</link>
+        <guid isPermaLink="true">https://subicura.com/2016/07/11/coding-convention.html</guid>
         
         <category>Coding</category>
         
@@ -178,8 +178,8 @@
         <title>왜 React와 서버 사이드 렌더링인가?</title>
         <description>홈쇼핑처럼 4번째 상품인 튀김을 기름에 튀기면서 React를 적용하느라 고생했던 순간이 떠올라 React와 서버 사이드 렌더링 적용과정을 정리해봅니다. 여기서는 어떻게보다는 왜에 대해 설명합니다.</description>
         <pubDate>Mon, 20 Jun 2016 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/javascript/2016/06/20/server-side-rendering-with-react.html</link>
-        <guid isPermaLink="true">https://subicura.com/javascript/2016/06/20/server-side-rendering-with-react.html</guid>
+        <link>https://subicura.com/2016/06/20/server-side-rendering-with-react.html</link>
+        <guid isPermaLink="true">https://subicura.com/2016/06/20/server-side-rendering-with-react.html</guid>
         
         <category>FrontEnd</category>
         
@@ -198,8 +198,8 @@
         <title>Go언어로 오픈소스 배송조회 서비스 만들기</title>
         <description>홈쇼핑처럼에서 세번째로 런칭한 돈까스를 구매해 주시는 분들을 보면서 *아.. 받은 만큼 나도 뭔가 베풀어야겠구나* 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다. github이라는 소셜코딩 플랫폼이 등장하면서 오픈소스에 참여할 수 있는 장벽이 많이 낮아졌습니다. 사용하던 오픈소스에서 버그를 발견하면 이슈를 살펴보고 수정한 소스를 슬쩍 풀 리퀘스트 하면 됩니다. 내가 작성한 소스가 커미터 마음에 들면 머지가 될 것이고 그렇게 우리는 오픈소스 컨트리뷰터가 되고 인류에 조금이라도 공헌한 사람이 됩니다.</description>
         <pubDate>Mon, 13 Jun 2016 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/go/2016/06/13/start-go-shipment-tracking-opensource.html</link>
-        <guid isPermaLink="true">https://subicura.com/go/2016/06/13/start-go-shipment-tracking-opensource.html</guid>
+        <link>https://subicura.com/2016/06/13/start-go-shipment-tracking-opensource.html</link>
+        <guid isPermaLink="true">https://subicura.com/2016/06/13/start-go-shipment-tracking-opensource.html</guid>
         
         <category>BackEnd</category>
         
