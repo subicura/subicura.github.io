@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1525930237108117000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1558304229804403000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -175,7 +175,7 @@
 <li class="toc-entry toc-h3"><a href="#주석">주석</a></li>
 </ul>
 </li>
-</ul><h3 id="section">
+</ul><h3 id="20161229-수정">
 <a id="20161229-수정" class="anchor" href="#20161229-%EC%88%98%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>2016/12/29 수정</h3>
 
 <ul>
@@ -204,7 +204,7 @@
 
 <hr>
 
-<h2 id="ajax--">
+<h2 id="ajax가-없던-시절">
 <a id="ajax가-없던-시절" class="anchor" href="#ajax%EA%B0%80-%EC%97%86%EB%8D%98-%EC%8B%9C%EC%A0%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>ajax가 없던 시절</h2>
 
 <p>지금은 Javascript를 이용하여 동적인 웹페이지를 자연스럽게 만들고 있지만 10년전 <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">ajax</a>가 등장하기 전에는 서버에서 전체 HTML을 만드는 방식이 일반적이였습니다.</p>
@@ -239,7 +239,7 @@ $conn-&gt;close();
 
 <p>조금 복잡해보이고 뷰에 여러가지 로직이 들어가 있지만 지금도 어디선가는 사용하고 있는 전통적인 개발 방식입니다. 이때까지만 해도 javascript는 일부 고오급 웹 개발자들이 사용하는 언어였고 웹페이지의 컨텐츠보다는 무언가를 꾸며주거나 화려한 느낌을 주는데 사용했습니다.</p>
 
-<h2 id="ajax-">
+<h2 id="ajax의-등장">
 <a id="ajax의-등장" class="anchor" href="#ajax%EC%9D%98-%EB%93%B1%EC%9E%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>ajax의 등장</h2>
 
 <p align="center">
@@ -252,7 +252,7 @@ $conn-&gt;close();
 
 <p>Javascript 라이브러리를 안쓰는 페이지는 없었고 ajax를 이용한 동적인 컨텐츠 구성도 일반적으로 사용되기 시작했습니다. 하지만 제대로 된 표준이라던가 프레임워크는 없었고 이를 화면에서 표현하기 위해 다양한 방법이 등장합니다.</p>
 
-<h2 id="javascript--">
+<h2 id="javascript-뷰-렌더링">
 <a id="javascript-뷰-렌더링" class="anchor" href="#javascript-%EB%B7%B0-%EB%A0%8C%EB%8D%94%EB%A7%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>Javascript 뷰 렌더링</h2>
 
 <p>예전에 뷰는 서버 프로그램에 찰싹 달라붙어 있었지만 이제 Javascript를 이용하여 동적으로 HTML을 만드는 시대가 왔습니다. 동적으로 HTML을 만드는 방법을 하나씩 알아봅니다.</p>
@@ -287,7 +287,7 @@ $('#profile').append(htmlString);</pre></noscript>
 
 <p><img src="https://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/template-engine.png" alt="template engine compile"></p>
 
-<p>각각 라이브러리마다 파일 사이즈, 성능, 부가기능등의 차이가 있지만 하는 일은 동일합니다. 중괄호(<code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="err">콧수염</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="err">mustach</span></code>)를 이용하여 반복문, 조건문 등을 넣은 템플릿파일을 만들고 Data를 연동하여 HTML을 생성합니다. 이러한 방법은 string을 붙이고 붙이고 붙이는 방법보다 훨씬 나은 환경을 보여줍니다.</p>
+<p>각각 라이브러리마다 파일 사이즈, 성능, 부가기능등의 차이가 있지만 하는 일은 동일합니다. 중괄호(<code class="highlighter-rouge">{ &gt; 콧수염 &gt; mustach</code>)를 이용하여 반복문, 조건문 등을 넣은 템플릿파일을 만들고 Data를 연동하여 HTML을 생성합니다. 이러한 방법은 string을 붙이고 붙이고 붙이는 방법보다 훨씬 나은 환경을 보여줍니다.</p>
 
 <p>지금도 새로운 템플릿엔진이 계속해서 나오고 있고 동적으로 작은 view를 처리하거나 큰 프레임워크의 일부로 사용되고 있습니다.</p>
 
@@ -304,7 +304,7 @@ $('#profile').append(htmlString);</pre></noscript>
 
 <p>그때 끝판왕 AngularJS가 나타납니다.</p>
 
-<h2 id="angularjshttpsangularjsorg">
+<h2 id="angularjs">
 <a id="angularjs" class="anchor" href="#angularjs" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://angularjs.org/">AngularJS</a>
 </h2>
 
@@ -423,7 +423,7 @@ angular.module('myApp', [])
 
 <p>AngularJS는 좋지만, 웹앱용에 한정이고 성능이 크게 중요치 않은 어드민이나 내부서비스에 적합하다고 결론을 내립니다.</p>
 
-<h2 id="reactjshttpsfacebookgithubioreact">
+<h2 id="reactjs">
 <a id="reactjs" class="anchor" href="#reactjs" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://facebook.github.io/react/">ReactJS</a>
 </h2>
 
@@ -482,7 +482,7 @@ foreach($talks as $talk) {
   <li>웹앱의 단점 대부분 없어짐!</li>
 </ul>
 
-<h2 id="react---">
+<h2 id="react-서버-사이드-렌더링">
 <a id="react-서버-사이드-렌더링" class="anchor" href="#react-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>React 서버 사이드 렌더링</h2>
 
 <p>React는 서버 사이드 렌더링을 염두에 두고 설계되었습니다.</p>
@@ -510,7 +510,7 @@ foreach($talks as $talk) {
 
 <p>이러한 부분이 이미 React는 서버 사이드 렌더링을 염두에 두고 설계되었다는 점입니다.</p>
 
-<h2 id="section-1">
+<h2 id="서버-사이드-렌더링-적용">
 <a id="서버-사이드-렌더링-적용" class="anchor" href="#%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%A0%81%EC%9A%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a>서버 사이드 렌더링 적용</h2>
 
 <p>그럼 실제로 서버 사이드 렌더링을 사용하려면 어떻게 해야 할까요?</p>
@@ -555,7 +555,7 @@ foreach($talks as $talk) {
 
 <p>기존 서버가 API를 잘 제공하고 있다면 앞단에 Node.js를 두고 기존 서버를 API서버로 사용하는 방법이 있습니다. 이럴 경우 쿠키라던가 인증 토큰등을 추가로 관리하고 라우팅을 다시 셋팅해야 합니다.</p>
 
-<h2 id="section-2">
+<h2 id="그래서">
 <a id="그래서" class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
 
 <p>현재 React를 즐겨 사용하고 있긴 하지만, 사실 언제 또 바뀔지 모릅니다. 최근에는 <a href="https://www.meteor.com/">meteor</a>라는 걸출한 Javascript App Platform이 나와서 인기를 얻고 있습니다. 빠르게 변하는 웹환경만큼 새로운 라이브러리, 프레임워크도 계속해서 나옵니다. 왜 프론트엔드 개발자는 끊임없이 공부해야 하는가? 대체 언제 좀 편하게 예전에 배웠던거 슬렁슬렁 쓰면서 개발할 수 있을까? 라는 질문을 해보지만, 포기하고 적당히 하는 순간 빠르게 변하는 웹 세계에서 뒤쳐진다고 생각합니다.</p>
@@ -569,22 +569,22 @@ foreach($talks as $talk) {
 
 <hr>
 
-<h3 id="section-3">
+<h3 id="주석">
 <a id="주석" class="anchor" href="#%EC%A3%BC%EC%84%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>주석</h3>
 
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p><a href="https://github.com/fergaldoyle/angular.js-ie8-builds">angular.js-ie8-build</a>를 이용하면 IE8에서도 돌긴돔 <a href="#fnref:1" class="reversefootnote">↩</a></p>
+      <p><a href="https://github.com/fergaldoyle/angular.js-ie8-builds">angular.js-ie8-build</a>를 이용하면 IE8에서도 돌긴돔 <a href="#fnref:1" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:2">
-      <p><a href="https://docs.angularjs.org/api/ng/directive/ngCloak">ng-cloak</a>으로 어느정도 극복가능 <a href="#fnref:2" class="reversefootnote">↩</a></p>
+      <p><a href="https://docs.angularjs.org/api/ng/directive/ngCloak">ng-cloak</a>으로 어느정도 극복가능 <a href="#fnref:2" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:3">
-      <p><a href="https://prerender.io/">prerender</a>를 이용하면 어느정도 극복가능. meta tag 업데이트도 디렉티브를 만들면 됨 <a href="#fnref:3" class="reversefootnote">↩</a></p>
+      <p><a href="https://prerender.io/">prerender</a>를 이용하면 어느정도 극복가능. meta tag 업데이트도 디렉티브를 만들면 됨 <a href="#fnref:3" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:4">
-      <p>스크롤 위치를 기억했다가 뒤로가기라고 인지되면 다시 강제로 이동시켜주는 방법 있음 <a href="#fnref:4" class="reversefootnote">↩</a></p>
+      <p>스크롤 위치를 기억했다가 뒤로가기라고 인지되면 다시 강제로 이동시켜주는 방법 있음 <a href="#fnref:4" class="reversefootnote">↩</a></p>
     </li>
   </ol>
 </div>
@@ -688,12 +688,12 @@ foreach($talks as $talk) {
       
     </aside>
     <footer class="post-site-footer clearfix">
-      <section class="copyright"><a href="/">Subicura's Blog</a> © 2018</section>
+      <section class="copyright"><a href="/">Subicura's Blog</a> © 2019</section>
     </footer>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1525930237108117000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1558304229804403000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

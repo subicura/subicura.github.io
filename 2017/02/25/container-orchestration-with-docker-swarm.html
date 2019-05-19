@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1525930237108117000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1558304229804403000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -208,7 +208,7 @@
 
 <hr>
 
-<h2 id="subserver-orchestrationsub">
+<h2 id="서버-오케스트레이션-server-orchestration">
 <a id="서버-오케스트레이션-server-orchestration" class="anchor" href="#%EC%84%9C%EB%B2%84-%EC%98%A4%EC%BC%80%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98-server-orchestration" aria-hidden="true"><span class="octicon octicon-link"></span></a>서버 오케스트레이션 <sub>server orchestration</sub>
 </h2>
 <p><img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/container-orchestration.png" alt="container orchestration"></p>
@@ -233,7 +233,7 @@
 
 <p>이런 상황에서 등장한 도커 스웜은 오케스트레이션 툴은 관리가 어렵고 사용하기 복잡하다는 편견을 완전히 바꿔놓았습니다. <strong>구축 비용이 거의 들지 않고 관리 또한 쉬우며 다양한 기능을 쉽게 제공하고 가볍게 사용</strong>할 수 있습니다.</p>
 
-<h2 id="subcontainer-orchestration-toolsub">
+<h2 id="컨테이너-오케스트레이션-툴-container-orchestration-tool">
 <a id="컨테이너-오케스트레이션-툴-container-orchestration-tool" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%98%A4%EC%BC%80%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98-%ED%88%B4-container-orchestration-tool" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 오케스트레이션 툴 <sub>Container Orchestration Tool</sub>
 </h2>
 
@@ -291,7 +291,7 @@
   <li>도커외에 rkt, java 애플리케이션을 지원하고 커맨드라인 명령어는 직관적이고 매우 이쁘게 동작함</li>
 </ul>
 
-<h3 id="section">
+<h3 id="그외">
 <a id="그외" class="anchor" href="#%EA%B7%B8%EC%99%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>그외</h3>
 
 <ul>
@@ -299,7 +299,7 @@
 <a href="https://github.com/rancher/cattle">Cattle</a> by rancher, <a href="http://cockpit-project.org/">Cockpit</a>  by Redhat, <a href="https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html">Diego</a> by Cloud Foundry, <a href="https://flynn.io/">Flynn</a>등등 다양한 툴이 있고 딱히 안 써봐서 정확한 내용을 모르지만 괜찮을 것 같음</li>
 </ul>
 
-<h3 id="section-1">
+<h3 id="결론">
 <a id="결론" class="anchor" href="#%EA%B2%B0%EB%A1%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>결론</h3>
 
 <ul>
@@ -313,21 +313,21 @@
 </li>
 </ul>
 
-<h2 id="section-2">
+<h2 id="도커-스웜-살펴보기">
 <a id="도커-스웜-살펴보기" class="anchor" href="#%EB%8F%84%EC%BB%A4-%EC%8A%A4%EC%9B%9C-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커 스웜 살펴보기</h2>
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/swarmnado.gif" alt="docker swarm mode"></p>
 
 <p>이제 본격적으로 스웜에 대해 알아보겠습니다.</p>
 
-<h3 id="section-3">
+<h3 id="도커-스웜의-등장">
 <a id="도커-스웜의-등장" class="anchor" href="#%EB%8F%84%EC%BB%A4-%EC%8A%A4%EC%9B%9C%EC%9D%98-%EB%93%B1%EC%9E%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커 스웜의 등장</h3>
 
 <p>스웜은 도커와 별도로 개발되었지만 도커 1.12 버전부터 스웜 모드<sub>Swarm mode</sub>라는 이름으로 합쳐졌습니다. 도커에 모오오오오든게 내장되어 다른 툴을 설치할 필요가 없고 도커 명령어와 compose를 그대로 사용할 수 있어 다른 툴에 비해 압도적으로 쉽고 편리합니다.</p>
 
 <p>기능이 단순하고 필요한 것만 구현되어 있어 세부적인 컨트롤은 어렵습니다. 갑툭튀한 것 같지만 꽤 오랫동안 개발되었고(2015년 1.0버전) 1,000개 노드에 50,000개 컨테이너도 문제없이 테스트하여 안전성이 검증되었습니다.</p>
 
-<h3 id="section-4">
+<h3 id="도커-스웜에서-사용하는-용어">
 <a id="도커-스웜에서-사용하는-용어" class="anchor" href="#%EB%8F%84%EC%BB%A4-%EC%8A%A4%EC%9B%9C%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9A%A9%EC%96%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커 스웜에서 사용하는 용어</h3>
 
 <p><strong>스웜<sub>swarm</sub></strong>: 직역하면 떼, 군중이라는 뜻을 가지고 있습니다. 도커 1.12버전에서 스웜이 스웜 모드로 바뀌었지만 그냥 스웜이라고도 하는듯 합니다. 스웜 클러스터 자체도 스웜이라고 합니다. (스웜을 만들다. 스웜에 가입하다. = 클러스터를 만들다. 클러스터에 가입하다)</p>
@@ -342,7 +342,7 @@
 
 <p><strong>테스크<sub>task</sub></strong>: 컨테이너 배포 단위입니다. 하나의 서비스는 여러개의 테스크를 실행할 수 있고 각각의 테스크가 컨테이너를 관리합니다.</p>
 
-<h3 id="section-5">
+<h3 id="도커-스웜이-제공하는-기능">
 <a id="도커-스웜이-제공하는-기능" class="anchor" href="#%EB%8F%84%EC%BB%A4-%EC%8A%A4%EC%9B%9C%EC%9D%B4-%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8A%94-%EA%B8%B0%EB%8A%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커 스웜이 제공하는 기능</h3>
 
 <p>Docker 1.13을 기준으로 어떤 기능을 제공하는지 하나하나 살펴봅니다.</p>
@@ -368,7 +368,7 @@
 
 <p><strong>크론, 반복작업 <sub>Cron</sub></strong>: 크론, 반복작업도 알아서 구현해야 합니다. 여러 가지 방식으로 해결할 수 있겠지만 직접 제공하지 않아 아쉬운 부분입니다.</p>
 
-<h2 id="section-6">
+<h2 id="스웜실습">
 <a id="스웜실습" class="anchor" href="#%EC%8A%A4%EC%9B%9C%EC%8B%A4%EC%8A%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>스웜실습</h2>
 
 <p>본격적으로 스웜 클러스터를 만들고 여러 가지 서비스를 생성해보면서 도커 스웜에 빠져보겠습니다. 전체적인 내용은 다음과 같습니다.</p>
@@ -383,7 +383,7 @@
   <li>스웜 서버 모니터링</li>
 </ol>
 
-<h3 id="section-7">
+<h3 id="준비">
 <a id="준비" class="anchor" href="#%EC%A4%80%EB%B9%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>준비</h3>
 
 <p><a href="https://www.vagrantup.com/">Vagrant</a>를 이용하여 3개의 <a href="https://coreos.com/os/docs/latest">CoreOS(Container Linux)</a>가상머신을 만듭니다. 각각 1 CPU와 1G Memory를 할당하고 매니저 노드 하나와 워커 노드 2개를 설정하여 사용합니다.</p>
@@ -423,25 +423,25 @@
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/vagrant-up.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>vagrant up</figcaption>
 </div>
 
-<h3 id="section-8">
+<h3 id="스웜-클러스터-만들기">
 <a id="스웜-클러스터-만들기" class="anchor" href="#%EC%8A%A4%EC%9B%9C-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>스웜 클러스터 만들기</h3>
 
 <p>가상머신이 정상적으로 생성되었으면 스웜 클러스터를 만들어보겠습니다. 스웜 클러스터는 매니저 노드를 먼저 만들고 매니저 노드가 생성한 토큰을 가지고 워커 노드에서 매니저 노드로 접속하면 됩니다.</p>
 
 <p>먼저, <code class="highlighter-rouge">core-01</code>서버를 매니저 노드로 설정합니다. <code class="highlighter-rouge">swarm init</code>명령어를 사용합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+</pre></td>
 <td class="code"><pre><span class="c"># vagrant ssh core-01</span>
-docker swarm init --advertise-addr 172.17.8.101<span class="w">
-</span></pre></td>
+docker swarm init <span class="nt">--advertise-addr</span> 172.17.8.101</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -449,61 +449,61 @@ docker swarm init --advertise-addr 172.17.8.101<span class="w">
 6
 7
 8
-9</pre></td>
+9
+</pre></td>
 <td class="code"><pre>Swarm initialized: current node <span class="o">(</span>gjm2fxwcx29ha4rfzkw3zskvt<span class="o">)</span> is now a manager.
 
 To add a worker to this swarm, run the following <span class="nb">command</span>:
 
     docker swarm join <span class="se">\</span>
-    --token SWMTKN-1-1la23f7y6y8joqxz27hac4j79yffyixcp15tjtlrnei14wwd1t-5tlmx4q9fm46drjzzd95g1l4q <span class="se">\</span>
+    <span class="nt">--token</span> SWMTKN-1-1la23f7y6y8joqxz27hac4j79yffyixcp15tjtlrnei14wwd1t-5tlmx4q9fm46drjzzd95g1l4q <span class="se">\</span>
     172.17.8.101:2377
 
-To add a manager to this swarm, run <span class="s1">'docker swarm join-token manager'</span> and follow the instructions.<span class="w">
-</span></pre></td>
+To add a manager to this swarm, run <span class="s1">'docker swarm join-token manager'</span> and follow the instructions.</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>순식간에 매니저 노드가 생성되었습니다. <code class="highlighter-rouge">swarm init</code>명령어를 실행하면 친절하게 워커 노드에서 실행할 명령어를 알려줍니다. <del>친절한도커씨</del> 명령어를 그대로 복사하여 2, 3번 서버에서 각각 실행합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
-4</pre></td>
+4
+</pre></td>
 <td class="code"><pre><span class="c"># vagrant ssh core-02</span>
 docker swarm join <span class="se">\</span>
-    --token SWMTKN-1-1la23f7y6y8joqxz27hac4j79yffyixcp15tjtlrnei14wwd1t-5tlmx4q9fm46drjzzd95g1l4q <span class="se">\</span>
-    172.17.8.101:2377<span class="w">
-</span></pre></td>
+    <span class="nt">--token</span> SWMTKN-1-1la23f7y6y8joqxz27hac4j79yffyixcp15tjtlrnei14wwd1t-5tlmx4q9fm46drjzzd95g1l4q <span class="se">\</span>
+    172.17.8.101:2377</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>This node joined a swarm as a worker.<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>This node joined a swarm as a worker.</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>워커 노드가 정상적으로 만들어졌는지 매니저 노드에서 확인합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker node ls<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker node <span class="nb">ls</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
-4</pre></td>
+4
+</pre></td>
 <td class="code"><pre>ID                           HOSTNAME  STATUS  AVAILABILITY  MANAGER STATUS
 gjm2fxwcx29ha4rfzkw3zskvt <span class="k">*</span>  core-01   Ready   Active        Leader
 mu6l92w2dzjmsbucvar1bl9mg    core-03   Ready   Active
-q5pa26ik11g9surws03quvrsk    core-02   Ready   Active<span class="w">
-</span></pre></td>
+q5pa26ik11g9surws03quvrsk    core-02   Ready   Active</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>명령어 3줄로 클러스터가 생성되었습니다. 도커 외에 아무것도 설치하지 않았고 어떤 agent도 실행하지 않았습니다. 이렇게 쉽게 생성되는 클러스터 보셨나요?</p>
@@ -516,103 +516,103 @@ q5pa26ik11g9surws03quvrsk    core-02   Ready   Active<span class="w">
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/swarm-cluster.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>init swarm cluster</figcaption>
 </div>
 
-<h3 id="section-9">
+<h3 id="기본-웹-애플리케이션">
 <a id="기본-웹-애플리케이션" class="anchor" href="#%EA%B8%B0%EB%B3%B8-%EC%9B%B9-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>기본 웹 애플리케이션</h3>
 
 <p>클러스터가 생성되었으니 간단한 웹 애플리케이션 서비스를 생성해보겠습니다.</p>
 
 <p>서비스를 생성하려면 <code class="highlighter-rouge">service create</code>명령어를 이용합니다. <code class="highlighter-rouge">run</code>명령어와 아주 유사합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
-3</pre></td>
-<td class="code"><pre>docker service create --name whoami <span class="se">\</span>
-  -p 4567:4567 <span class="se">\</span>
-  subicura/whoami:1<span class="w">
-</span></pre></td>
+3
+</pre></td>
+<td class="code"><pre>docker service create <span class="nt">--name</span> whoami <span class="se">\</span>
+  <span class="nt">-p</span> 4567:4567 <span class="se">\</span>
+  subicura/whoami:1</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>beepr6q5kdm724vdvgmb2awxg<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>beepr6q5kdm724vdvgmb2awxg</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">subicura/whoami:1</code> 이미지는 서버의 hostname을 출력하는 단순한 웹 애플리케이션입니다. 서비스의 이름을 <code class="highlighter-rouge">whoami</code> 로 지정했고 4567 포트를 오픈하였습니다.</p>
 
 <p>서비스가 잘 생성되었는지 <code class="highlighter-rouge">service ls</code>명령어로 확인해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker service ls<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker service <span class="nb">ls</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+</pre></td>
 <td class="code"><pre>ID            NAME    MODE        REPLICAS  IMAGE                               
-beepr6q5kdm7  whoami  replicated  0/1       subicura/whoami:1 <span class="w">
-</span></pre></td>
+beepr6q5kdm7  whoami  replicated  0/1       subicura/whoami:1 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">whoami</code>라는 서비스가 보입니다. 아직 컨테이너가 생성되지 않아 REPLICAS 상태가 <code class="highlighter-rouge">0/1</code>입니다. 좀 더 상세한 상태를 확인하기 위해 <code class="highlighter-rouge">service ps</code>명령어를 입력합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker service ps whoami<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker service ps whoami</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+</pre></td>
 <td class="code"><pre>ID            NAME      IMAGE              NODE     DESIRED STATE  CURRENT STATE            ERROR  PORTS
-wnt5m97ci36t  whoami.1  subicura/whoami:1  core-01  Running        Preparing 7 seconds ago<span class="w">
-</span></pre></td>
+wnt5m97ci36t  whoami.1  subicura/whoami:1  core-01  Running        Preparing 7 seconds ago</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>서비스의 상태와 어떤 노드에서 실행 중인지를 상세하게 확인할 수 있습니다. 현재 상태가 <code class="highlighter-rouge">Preparing</code>인걸 보니 이미지를 다운 받는 중인 것 같습니다. 조금만 기다리고 컨테이너가 실행되면 상태가 <code class="highlighter-rouge">Running</code>으로 바뀝니다.</p>
 
 <p>정상적으로 서비스가 실행되었는지 HTTP 요청으로 테스트해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
-4</pre></td>
+4
+</pre></td>
 <td class="code"><pre>curl core-01:4567
 
 <span class="c">#output</span>
-cfb152786b87<span class="w">
-</span></pre></td>
+cfb152786b87</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>와우! 첫번째 서비스를 성공적으로 생성하였습니다.</p>
 
 <p><code class="highlighter-rouge">core-01</code>에서 테스트를 했는데 다른 서버도 테스트해볼까요?</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td>
+6
+</pre></td>
 <td class="code"><pre>curl core-02:4567
 curl core-03:4567
 
 <span class="c">#output</span>
 cfb152786b87
-cfb152786b87<span class="w">
-</span></pre></td>
+cfb152786b87</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>분명 컨테이너는  <code class="highlighter-rouge">core-01</code>노드에서 실행중인데 모든 노드에서 정상적으로 응답하고 있습니다. 어떻게 된일일까요?</p>
@@ -640,7 +640,7 @@ cfb152786b87<span class="w">
   <p>실제 운영시에는 외부에 nginx 또는 haproxy같은 로드발란서를 두고 전체 스웜 노드를 바라보게 설정할 수 있습니다. <a href="https://docs.docker.com/engine/swarm/ingress/#/configure-an-external-load-balancer">관련링크</a></p>
 </blockquote>
 
-<h3 id="replication">
+<h3 id="서비스-복제-replication">
 <a id="서비스-복제-replication" class="anchor" href="#%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%B3%B5%EC%A0%9C-replication" aria-hidden="true"><span class="octicon octicon-link"></span></a>서비스 복제 replication</h3>
 
 <p>앞에서 생성한 웹 애플리케이션에 부하가 발생했다고 가정하고 컨테이너를 5개로 늘려보겠습니다. 노드가 3개인데 컨테이너를 5개로 늘리면 서버 한 개에 2개의 컨테이너가 생성됩니다. 어차피 각각은 독립된 컨테이너이기 때문에 여러 개를 생성해도 상관없고 ingress 네트워크가 알아서 요청을 분산처리해줍니다.</p>
@@ -649,50 +649,50 @@ cfb152786b87<span class="w">
 
 <p><code class="highlighter-rouge">service scale</code>명령어를 이용하여 서비스 개수를 늘려보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker service scale <span class="nv">whoami</span><span class="o">=</span>5<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker service scale <span class="nv">whoami</span><span class="o">=</span>5</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>whoami scaled to 5 <span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>whoami scaled to 5 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">serivice ps</code>명령어를 이용하여 상태를 확인합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker service ps whoami<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker service ps whoami</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td>
+6
+</pre></td>
 <td class="code"><pre>ID            NAME      IMAGE              NODE     DESIRED STATE  CURRENT STATE            ERROR  PORTS
 z5mcfb0lcizi  whoami.1  subicura/whoami:1  core-01  Running        Running 11 minutes ago
 nwkduapf1kvk  whoami.2  subicura/whoami:1  core-03  Running        Preparing 4 seconds ago
 vhxmipcdht6c  whoami.3  subicura/whoami:1  core-03  Running        Preparing 4 seconds ago
 mntns383mnhz  whoami.4  subicura/whoami:1  core-01  Running        Running 4 seconds ago
-xga086cubnj3  whoami.5  subicura/whoami:1  core-02  Running        Preparing 4 seconds ago<span class="w">
-</span></pre></td>
+xga086cubnj3  whoami.5  subicura/whoami:1  core-02  Running        Preparing 4 seconds ago</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>처음 컨테이너를 생성하는 노드에서 이미지를 다운받는동안 Pending인 상태가 보이고 조금 기다리면 모두 실행됩니다. 이제 테스트해볼까요?</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -705,7 +705,8 @@ xga086cubnj3  whoami.5  subicura/whoami:1  core-02  Running        Preparing 4 s
 11
 12
 13
-14</pre></td>
+14
+</pre></td>
 <td class="code"><pre>curl core-01:4567
 curl core-01:4567
 curl core-01:4567
@@ -719,8 +720,7 @@ curl core-01:4567
 a2c04acee702
 88498091561a
 e970ff9ed9c6
-7590556fb196<span class="w">
-</span></pre></td>
+7590556fb196</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>5개의 컨테이너에 아주 이쁘게 요청이 분산되었습니다. 아무런 설정 없이 ingress 네트워크가 알아서 로드 밸런서 역할을 해주고 있습니다. Nginx나 haproxy같은 설정이 필요 없습니다. 너무 편하지 않나요?</p>
@@ -755,50 +755,50 @@ CMD bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 
 <p><code class="highlighter-rouge">service update</code>명령어를 이용하여 서비스를 업데이트합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
-3</pre></td>
+3
+</pre></td>
 <td class="code"><pre>docker service update <span class="se">\</span>
---image subicura/whoami:2 <span class="se">\</span>
-whoami<span class="w">
-</span></pre></td>
+<span class="nt">--image</span> subicura/whoami:2 <span class="se">\</span>
+whoami</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>whoami scaled to 5<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>whoami scaled to 5</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">service ps</code>명령어로 업데이트 상태를 확인해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker service ps whoami<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker service ps whoami</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-7</pre></td>
+7
+</pre></td>
 <td class="code"><pre>ID            NAME          IMAGE              NODE     DESIRED STATE  CURRENT STATE           ERROR  PORTS
 kv2jddl0bsfw  whoami.1      subicura/whoami:2  core-01  Ready          Ready 2 seconds ago
 z5mcfb0lcizi   <span class="se">\_</span> whoami.1  subicura/whoami:1  core-01  Shutdown       Running 11 seconds ago
 nwkduapf1kvk  whoami.2      subicura/whoami:1  core-03  Running        Running 9 minutes ago
 vhxmipcdht6c  whoami.3      subicura/whoami:1  core-03  Running        Running 9 minutes ago
 mntns383mnhz  whoami.4      subicura/whoami:1  core-01  Running        Running 11 minutes ago
-xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9 minutes ago<span class="w">
-</span></pre></td>
+xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9 minutes ago</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>하나씩 하나씩 이쁘게 업데이트되는 과정을 볼 수 있고 접속 테스트를 하면 문제 없이 업데이트되는걸 확인 할 수 있습니다.</p>
@@ -807,7 +807,7 @@ xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/healthcheck.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>service update</figcaption>
 </div>
 
-<h3 id="section-10">
+<h3 id="방문자수-체크-웹-애플리케이션">
 <a id="방문자수-체크-웹-애플리케이션" class="anchor" href="#%EB%B0%A9%EB%AC%B8%EC%9E%90%EC%88%98-%EC%B2%B4%ED%81%AC-%EC%9B%B9-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>방문자수 체크 웹 애플리케이션</h3>
 
 <p>아주아주 간단한 실습에 이어 조금 복잡한 구성을 살펴봅니다. 실제 세상에서는 웹 애플리케이션이 혼자 실행되는 경우가 거의 없죠. redis와 함께 웹 애플리케이션을 실행하고 서버에 접속할 때마다 카운트를 +1 하는 서비스를 만들어 보겠습니다.</p>
@@ -818,80 +818,80 @@ xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9
 
 <p><code class="highlighter-rouge">network create</code>명령어로 오버레이 네트워크를 생성합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
-3</pre></td>
-<td class="code"><pre>docker network create --attachable <span class="se">\</span>
-  --driver overlay <span class="se">\</span>
-  backend<span class="w">
-</span></pre></td>
+3
+</pre></td>
+<td class="code"><pre>docker network create <span class="nt">--attachable</span> <span class="se">\</span>
+  <span class="nt">--driver</span> overlay <span class="se">\</span>
+  backend</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>k7ayhk5hqbxnk8zbb959txh6h  <span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>k7ayhk5hqbxnk8zbb959txh6h  </pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>잘 생성되었는지 <code class="highlighter-rouge">network ls</code>명령어로 확인해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker network ls<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker network <span class="nb">ls</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-7</pre></td>
+7
+</pre></td>
 <td class="code"><pre>NETWORK ID          NAME                DRIVER              SCOPE
 k7ayhk5hqbxn        backend             overlay             swarm
 c420312e4c9b        bridge              bridge              <span class="nb">local
 </span>c3ef285ed639        docker_gwbridge     bridge              <span class="nb">local
 </span>244840dc44fd        host                host                <span class="nb">local
 </span>4biz947vsmez        ingress             overlay             swarm
-f41f0c773519        none                null                <span class="nb">local</span><span class="w">
-</span></pre></td>
+f41f0c773519        none                null                <span class="nb">local</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>backend라는 이름의 오버레이 네트워크가 생성되었습니다. 그 외에 네트워크는 기본으로 생성되는 네트워크들입니다. 이제 redis를 backend네트워크에 생성하겠습니다.</p>
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/overlay-network-redis.png" alt="redis with overlay network"></p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
-3</pre></td>
-<td class="code"><pre>docker service create --name redis <span class="se">\</span>
-  --network<span class="o">=</span>backend <span class="se">\</span>
-  redis<span class="w">
-</span></pre></td>
+3
+</pre></td>
+<td class="code"><pre>docker service create <span class="nt">--name</span> redis <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>backend <span class="se">\</span>
+  redis</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>cjqrmjqfvj8zyr7k9skih01g4<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>cjqrmjqfvj8zyr7k9skih01g4</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">--network</code> 옵션으로 어느 네트워크에 속할지 정의하였습니다. backend 네트워크에 속한 redis 서비스는 외부 네트워크에서는 접근할 수 없고 backend 네트워크 상에서 원래 포트인 6379로 접속할 수 있습니다.</p>
 
 <p>redis 서비스가 제대로 생성되었다면 telnet명령어로 테스트해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -901,9 +901,10 @@ f41f0c773519        none                null                <span class="nb">loc
 8
 9
 10
-11</pre></td>
-<td class="code"><pre>docker run --rm -it <span class="se">\</span>
-  --network<span class="o">=</span>backend <span class="se">\</span>
+11
+</pre></td>
+<td class="code"><pre>docker run <span class="nt">--rm</span> <span class="nt">-it</span> <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>backend <span class="se">\</span>
   alpine <span class="se">\</span>
   telnet redis 6379
 
@@ -912,8 +913,7 @@ KEYS <span class="k">*</span>
 SET hello world
 GET hello
 DEL hello
-QUIT<span class="w">
-</span></pre></td>
+QUIT</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>외부 네트워크에서는 redis 서버에 접근할 수 없으므로 접속 테스트용 컨테이너를 생성하였습니다. <code class="highlighter-rouge">--network</code>옵션으로 backend 네트워크에 접속하였고 redis 서비스의 이름이 곧 도메인명이므로 바로 접속할 수 있습니다.</p>
@@ -926,36 +926,36 @@ QUIT<span class="w">
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/overlay-network-redis-counter.png" alt="web application + redis"></p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td>
-<td class="code"><pre>docker service create --name counter <span class="se">\</span>
-  --network<span class="o">=</span>backend <span class="se">\</span>
-  --replicas 3 <span class="se">\</span>
-  -e <span class="nv">REDIS_HOST</span><span class="o">=</span>redis <span class="se">\</span>
-  -p 4568:4567 <span class="se">\</span>
-  subicura/counter<span class="w">
-</span></pre></td>
+6
+</pre></td>
+<td class="code"><pre>docker service create <span class="nt">--name</span> counter <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>backend <span class="se">\</span>
+  <span class="nt">--replicas</span> 3 <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">REDIS_HOST</span><span class="o">=</span>redis <span class="se">\</span>
+  <span class="nt">-p</span> 4568:4567 <span class="se">\</span>
+  subicura/counter</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>nlq75mhritr3hj4tibm8ka9d8<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>nlq75mhritr3hj4tibm8ka9d8</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>redis 서버와 통신해야 하므로 backend 네트워크를 지정했고 <code class="highlighter-rouge">--replicas</code>옵션을 이용하여 3개를 생성하도록 했습니다. 외부의 4568 포트로 접근할 수 있도록 포트를 오픈 했고 redis 서버의 도메인명을 환경변수로 전달했습니다.</p>
 
 <p>이제 테스트해볼까요?</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -992,46 +992,46 @@ QUIT<span class="w">
 35
 36
 37
-38</pre></td>
+38
+</pre></td>
 <td class="code"><pre>curl core-01:4568
 
 <span class="c">#output</span>
-50bec9ce8874 &gt; 1
+50bec9ce8874 <span class="o">&gt;</span> 1
 
 curl core-01:4568
 
 <span class="c">#output</span>
-50bec9ce8874 &gt; 1
-6705a6272a4a &gt; 1
+50bec9ce8874 <span class="o">&gt;</span> 1
+6705a6272a4a <span class="o">&gt;</span> 1
 
 curl core-01:4568
 
 <span class="c">#output</span>
-50bec9ce8874 &gt; 1
-6705a6272a4a &gt; 1
-92b471d0d741 &gt; 1
+50bec9ce8874 <span class="o">&gt;</span> 1
+6705a6272a4a <span class="o">&gt;</span> 1
+92b471d0d741 <span class="o">&gt;</span> 1
 
 curl core-01:4568
 
 <span class="c">#output</span>
-50bec9ce8874 &gt; 2
-6705a6272a4a &gt; 1
-92b471d0d741 &gt; 1
+50bec9ce8874 <span class="o">&gt;</span> 2
+6705a6272a4a <span class="o">&gt;</span> 1
+92b471d0d741 <span class="o">&gt;</span> 1
 
 curl core-01:4568
 
 <span class="c">#output</span>
-50bec9ce8874 &gt; 2
-6705a6272a4a &gt; 2
-92b471d0d741 &gt; 1
+50bec9ce8874 <span class="o">&gt;</span> 2
+6705a6272a4a <span class="o">&gt;</span> 2
+92b471d0d741 <span class="o">&gt;</span> 1
 
 curl core-01:4568
 
 <span class="c">#output</span>
-50bec9ce8874 &gt; 2
-6705a6272a4a &gt; 2
-92b471d0d741 &gt; 2<span class="w">
-</span></pre></td>
+50bec9ce8874 <span class="o">&gt;</span> 2
+6705a6272a4a <span class="o">&gt;</span> 2
+92b471d0d741 <span class="o">&gt;</span> 2</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>웹 애플리케이션 서버와 redis가 backend오버레이 네트워크를 통해 연결되었고 ingress 네트워크가 3개의 웹 컨테이너에 이쁘게 부하를 분산하였습니다.</p>
@@ -1046,65 +1046,65 @@ curl core-01:4568
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/overlay.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>service with overlay</figcaption>
 </div>
 
-<h3 id="section-11">
+<h3 id="비밀키-조회-애플리케이션">
 <a id="비밀키-조회-애플리케이션" class="anchor" href="#%EB%B9%84%EB%B0%80%ED%82%A4-%EC%A1%B0%ED%9A%8C-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>비밀키 조회 애플리케이션</h3>
 
 <p>이번에는 1.13에 추가된 비밀키 관리 기능을 이용해보겠습니다. 먼저 비밀키를 생성합니다. 파일 또는 파이프를 이용한 stdin입력만 가능합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre><span class="nb">echo</span> <span class="s2">"this is my password!"</span> | docker secret create my-password -<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre><span class="nb">echo</span> <span class="s2">"this is my password!"</span> | docker secret create my-password -</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>8rsw3eu74xea4q2e8mnhuw6lu<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>8rsw3eu74xea4q2e8mnhuw6lu</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">my-passsword</code>라는 이름의 비밀키에 <code class="highlighter-rouge">this is my password!</code>라는 내용을 저장하였습니다. 이제 이 키를 사용할 서비스를 하나 생성하겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td>
-<td class="code"><pre>docker service create --name secret <span class="se">\</span>
-  --secret my-password <span class="se">\</span>
-  -p 4569:4567 <span class="se">\</span>
-  -e <span class="nv">SECRET_PATH</span><span class="o">=</span>/run/secrets/my-password <span class="se">\</span>
-  subicura/secret<span class="w">
-</span></pre></td>
+5
+</pre></td>
+<td class="code"><pre>docker service create <span class="nt">--name</span> secret <span class="se">\</span>
+  <span class="nt">--secret</span> my-password <span class="se">\</span>
+  <span class="nt">-p</span> 4569:4567 <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">SECRET_PATH</span><span class="o">=</span>/run/secrets/my-password <span class="se">\</span>
+  subicura/secret</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>nmyk5647bv4mfneafwhpg7o4t<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>nmyk5647bv4mfneafwhpg7o4t</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">--secret</code>옵션으로 어떤 키를 사용할지 지정하면 <code class="highlighter-rouge">/run/secrest</code>디렉토리 밑에 키 이름의 파일로 마운트 됩니다. <code class="highlighter-rouge">subicura/secret</code> 이미지는 파일의 내용을 출력해주는 웹 애플리케이션으로 4569포트로 오픈하였습니다.</p>
 
 <p>잘 동작하는지 테스트해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>curl core-01:4569<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>curl core-01:4569</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>this is my password!<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>this is my password!</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>아주 잘 동작합니다. 도커를 이용하여 서비스를 구축하면 패스워드 정보를 어떻게 할지 고민일 때가 있는데 아주 유용하게 사용할 수 있습니다.</p>
@@ -1113,7 +1113,7 @@ curl core-01:4568
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/secret.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>docker secre</figcaption>
 </div>
 
-<h3 id="traefik---">
+<h3 id="traefik-리버스-프록시-서버">
 <a id="traefik-리버스-프록시-서버" class="anchor" href="#traefik-%EB%A6%AC%EB%B2%84%EC%8A%A4-%ED%94%84%EB%A1%9D%EC%8B%9C-%EC%84%9C%EB%B2%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>Traefik 리버스 프록시 서버</h3>
 
 <p>스웜은 매니저 노드에서 모든 서비스를 관리할 수 있고 서비스가 생성된 것을 체크하면 무언가를 자동화할 수 있습니다. <a href="https://traefik.io/">Traefik</a>은 이러한 아이디어를 이용해 웹 애플리케이션이 생성되면 자동으로 도메인을 만들고 내부 서비스로 연결해줍니다.</p>
@@ -1122,24 +1122,24 @@ curl core-01:4568
 
 <p>테스트를 위해 도메인 정보를 <code class="highlighter-rouge">/etc/hosts</code>에 추가합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>172.17.8.101 portainer.local.dev counter.local.dev<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>172.17.8.101 portainer.local.dev counter.local.dev</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>프록시로 연결하기 위해 <code class="highlighter-rouge">frontend</code>라는 네트워크를 생성합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker network create --driver overlay frontend<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker network create <span class="nt">--driver</span> overlay frontend</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>이제 <code class="highlighter-rouge">traefik</code>서비스를 frontend네트워크에 연결합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1150,20 +1150,20 @@ curl core-01:4568
 9
 10
 11
-12</pre></td>
-<td class="code"><pre>docker service create --name traefik <span class="se">\</span>
-  --constraint <span class="s1">'node.role == manager'</span> <span class="se">\</span>
-  -p 80:80 <span class="se">\</span>
-  -p 8080:8080 <span class="se">\</span>
-  --mount <span class="nb">type</span><span class="o">=</span><span class="nb">bind</span>,source<span class="o">=</span>/var/run/docker.sock,target<span class="o">=</span>/var/run/docker.sock <span class="se">\</span>
-  --network frontend <span class="se">\</span>
+12
+</pre></td>
+<td class="code"><pre>docker service create <span class="nt">--name</span> traefik <span class="se">\</span>
+  <span class="nt">--constraint</span> <span class="s1">'node.role == manager'</span> <span class="se">\</span>
+  <span class="nt">-p</span> 80:80 <span class="se">\</span>
+  <span class="nt">-p</span> 8080:8080 <span class="se">\</span>
+  <span class="nt">--mount</span> <span class="nb">type</span><span class="o">=</span><span class="nb">bind</span>,source<span class="o">=</span>/var/run/docker.sock,target<span class="o">=</span>/var/run/docker.sock <span class="se">\</span>
+  <span class="nt">--network</span> frontend <span class="se">\</span>
   traefik <span class="se">\</span>
-  --docker <span class="se">\</span>
-  --docker.swarmmode <span class="se">\</span>
-  --docker.domain<span class="o">=</span>local.dev <span class="se">\</span>
-  --docker.watch <span class="se">\</span>
-  --web<span class="w">
-</span></pre></td>
+  <span class="nt">--docker</span> <span class="se">\</span>
+  <span class="nt">--docker</span>.swarmmode <span class="se">\</span>
+  <span class="nt">--docker</span>.domain<span class="o">=</span>local.dev <span class="se">\</span>
+  <span class="nt">--docker</span>.watch <span class="se">\</span>
+  <span class="nt">--web</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">--constraint</code> 옵션을 이용하여 매니저 노드에서 실행하게 배포를 제한하였습니다. 스웜 서비스 정보를 얻기 위해서는 반드시 매니저 노드에서 실행되어야 합니다. 그리고 <code class="highlighter-rouge">--mount</code> 옵션을 이용해 호스트의 도커 소켓을 마운트 하였습니다. <code class="highlighter-rouge">docker run -v</code> 옵션과 유사한데 service를 만들 때는 <code class="highlighter-rouge">--mount</code> 옵션을 사용합니다. 80포트는 실제 웹 서비스를 제공하기 위해 사용할 포트고 8080은 관리자용 포트입니다.</p>
@@ -1174,20 +1174,20 @@ curl core-01:4568
 
 <p>뭔가 그럴싸한 관리자 화면이 보입니다. 아직 아무것도 실행하지 않아 휑한 모습입니다. <a href="http://portainer.io/">portainer</a> 웹 애플리케이션을 실행하여 자동으로 연결해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td>
-<td class="code"><pre>docker service create --name portainer <span class="se">\</span>
-  --network<span class="o">=</span>frontend <span class="se">\</span>
-  --label traefik.port<span class="o">=</span>9000 <span class="se">\</span>
-  --constraint <span class="s1">'node.role == manager'</span> <span class="se">\</span>
-  --mount <span class="s2">"type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock"</span> <span class="se">\</span>
-  portainer/portainer<span class="w">
-</span></pre></td>
+6
+</pre></td>
+<td class="code"><pre>docker service create <span class="nt">--name</span> portainer <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>frontend <span class="se">\</span>
+  <span class="nt">--label</span> traefik.port<span class="o">=</span>9000 <span class="se">\</span>
+  <span class="nt">--constraint</span> <span class="s1">'node.role == manager'</span> <span class="se">\</span>
+  <span class="nt">--mount</span> <span class="s2">"type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock"</span> <span class="se">\</span>
+  portainer/portainer</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>traefik과 접속할 수 있도록 frontend네트워크에 연결했고 <code class="highlighter-rouge">--label</code>옵션으로 내부적으로 사용하는 웹 포트를 알려주었습니다. traefik은 <code class="highlighter-rouge">traefik.port</code>라벨의 값을 읽어 해당 포트로 리버스 프록시를 연결합니다. portainer는 스웜을 관리해주는 툴이기 때문에 매니저 노드에 실행하도록 했습니다.</p>
@@ -1204,46 +1204,46 @@ curl core-01:4568
 
 <p>portainer도 역시 접속 성공입니다! 이제 어떤 서비스도 frontend네트워크를 연결하고 <code class="highlighter-rouge">traefik.port</code> 라벨만 지정하면 자동으로 외부에 노출됩니다. 내친김에 아까 만든 <code class="highlighter-rouge">counter</code>서비스도 붙여보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8</pre></td>
+8
+</pre></td>
 <td class="code"><pre>docker service rm counter
-docker service create --name counter <span class="se">\</span>
-  --network<span class="o">=</span>frontend <span class="se">\</span>
-  --network<span class="o">=</span>backend <span class="se">\</span>
-  --replicas 3 <span class="se">\</span>
-  --label traefik.port<span class="o">=</span>4567 <span class="se">\</span>
-  -e <span class="nv">REDIS_HOST</span><span class="o">=</span>redis <span class="se">\</span>
-  subicura/counter<span class="w">
-</span></pre></td>
+docker service create <span class="nt">--name</span> counter <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>frontend <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>backend <span class="se">\</span>
+  <span class="nt">--replicas</span> 3 <span class="se">\</span>
+  <span class="nt">--label</span> traefik.port<span class="o">=</span>4567 <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">REDIS_HOST</span><span class="o">=</span>redis <span class="se">\</span>
+  subicura/counter</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>기존에 생성되어 있던 서비스를 삭제하고 새로운 옵션으로 서비스를 생성하였습니다. frontend와 backend 두개의 네트워크에 모두 속해있고 label을 주어 traefik에서 자동으로 인식할 수 있도록 했습니다. 이제 테스트해볼까요?</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8</pre></td>
+8
+</pre></td>
 <td class="code"><pre>curl counter.local.dev
 
 <span class="c"># output</span>
 
-50bec9ce8874 &gt; 2                                                                
-5cbd7ecbb5b8 &gt; 1                                                                
-6705a6272a4a &gt; 2                                                                
-92b471d0d741 &gt; 2 <span class="w">
-</span></pre></td>
+50bec9ce8874 <span class="o">&gt;</span> 2                                                                
+5cbd7ecbb5b8 <span class="o">&gt;</span> 1                                                                
+6705a6272a4a <span class="o">&gt;</span> 2                                                                
+92b471d0d741 <span class="o">&gt;</span> 2 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/magic.gif" alt="this is magic!"></p>
@@ -1254,7 +1254,7 @@ docker service create --name counter <span class="se">\</span>
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/traefik.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>traefik</figcaption>
 </div>
 
-<h3 id="section-12">
+<h3 id="스웜-서버-모니터링">
 <a id="스웜-서버-모니터링" class="anchor" href="#%EC%8A%A4%EC%9B%9C-%EC%84%9C%EB%B2%84-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>스웜 서버 모니터링</h3>
 
 <p>스웜은 자체적인 모니터링 서비스를 제공하지 않습니다. 따라서 적당한 툴을 선택하여 직접 운영해야 합니다. <a href="%EF%BF%BChttps://prometheus.io/">prometheus</a>와 <a href="%EF%BF%BChttp://grafana.org/">grafana</a>를 이용하면 아주 그럴듯한 모니터링 시스템을 만들 수 있습니다. 게다가 <code class="highlighter-rouge">docker stack</code>명령어를 이용하면 여러 개의 서비스를 일일이 생성하지 않고 하나의 docker-compose 설정 파일로 관리할 수 있습니다. 명령어 한 줄로 모든 서버에 정보를 수집하는 서비스를 생성하고 모니터링 툴을 설치할 수 있습니다.</p>
@@ -1267,7 +1267,7 @@ docker service create --name counter <span class="se">\</span>
   <li><a class="waiting-post">[준비중] 도커 스웜과 prometheus를 이용한 서버 모니터링</a></li>
 </ul>
 
-<h2 id="section-13">
+<h2 id="결론-1">
 <a id="결론-1" class="anchor" href="#%EA%B2%B0%EB%A1%A0-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>결론</h2>
 <p>도커 스웜의 핵심내용인 노드와 서비스에 대해 알아보았고 ingress 네트워크와 자체 내장된 로드밸런서, DNS 서버를 사용해봤습니다.</p>
 
@@ -1379,12 +1379,12 @@ docker service create --name counter <span class="se">\</span>
       
     </aside>
     <footer class="post-site-footer clearfix">
-      <section class="copyright"><a href="/">Subicura's Blog</a> © 2018</section>
+      <section class="copyright"><a href="/">Subicura's Blog</a> © 2019</section>
     </footer>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1525930237108117000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1558304229804403000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

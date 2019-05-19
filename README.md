@@ -2,6 +2,12 @@
 
 by jekyll
 
+## requirement
+
+- ruby 2.5
+- bundler 1.17 (`gem install bundler -v '1.17.3'`)
+  - `bundle install`
+
 ## test
 
 ```

@@ -318,7 +318,8 @@ body {
       display: block;
       font-size: 25px;
       line-height: 1.3;
-      margin: 0 0; }
+      margin: 0 0;
+      word-break: keep-all; }
       .content article .post-title a {
         text-decoration: none;
         color: #333332; }
@@ -508,7 +509,7 @@ body {
     font-style: normal;
     letter-spacing: -0.05em;
     font-size: 27px;
-    line-height: 1.1;
+    line-height: 1.3;
     color: #fff;
     margin-bottom: 16px;
     text-shadow: 0px 1px 16px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5); }
@@ -556,7 +557,7 @@ body {
   font-style: normal;
   letter-spacing: -0.04em;
   font-size: 30px;
-  line-height: 1.1;
+  line-height: 1.3;
   color: #333332;
   margin-bottom: 16px; }
 .post .noarticleimage .author-image {
@@ -587,7 +588,8 @@ body {
   font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "나눔고딕", "Malgun Gothic";
   color: #333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "나눔고딕", "Malgun Gothic"; }
+    font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "나눔고딕", "Malgun Gothic";
+    word-break: keep-all; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 400;
@@ -1113,6 +1115,10 @@ pre {
   .post .post-content .section-nav.active {
     transform: translate3d(0, -50%, 0);
     opacity: 1; }
+  .post .post-content .section-nav .toc-h3 ul {
+    padding: 0; }
+  .post .post-content .section-nav .toc-h4 ul {
+    padding: 0; }
   .post .post-content .section-nav li {
     font-size: 13px;
     line-height: 140%;

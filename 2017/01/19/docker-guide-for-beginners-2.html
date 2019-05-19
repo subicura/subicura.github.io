@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1525930237108117000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1558304229804403000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -223,7 +223,7 @@
 
 <hr>
 
-<h2 id="section">
+<h2 id="도커-설치하기">
 <a id="도커-설치하기" class="anchor" href="#%EB%8F%84%EC%BB%A4-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커 설치하기</h2>
 
 <p>도커는 리눅스 컨테이너 기술이므로 macOS나 windows에 설치할 경우 가상머신에 설치가 됩니다. 리눅스 컨테이너 말고 윈도우즈 컨테이너라는 것도 존재하지만 여기서는 다루지 않습니다.</p>
@@ -233,10 +233,10 @@
 
 <p>리눅스에 도커를 설치하는 방법은 자동 설치 스크립트를 이용하는 것이 가장 쉽습니다. 다음 명령어를 입력하면 root 권한을 요구하고 잠시 기다리면 설치가 완료됩니다. 음.. 참 쉽죠?</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>curl -fsSL https://get.docker.com/ | sudo sh<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>curl <span class="nt">-fsSL</span> https://get.docker.com/ | <span class="nb">sudo </span>sh</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -247,12 +247,12 @@
 
 <p>docker는 기본적으로 root권한이 필요합니다. root가 아닌 사용자가 sudo없이 사용하려면 해당 사용자를 <code class="highlighter-rouge">docker</code>그룹에 추가합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td>
-<td class="code"><pre>sudo usermod -aG docker <span class="nv">$USER</span> <span class="c"># 현재 접속중인 사용자에게 권한주기</span>
-sudo usermod -aG docker your-user <span class="c"># your-user 사용자에게 권한주기</span><span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="code"><pre><span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="nv">$USER</span> <span class="c"># 현재 접속중인 사용자에게 권한주기</span>
+<span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker your-user <span class="c"># your-user 사용자에게 권한주기</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>사용자가 로그인 중이라면 다시 로그인 후 권한이 적용됩니다.</p>
@@ -276,26 +276,26 @@ sudo usermod -aG docker your-user <span class="c"># your-user 사용자에게 �
 
 <p>docker for mac은 <a href="https://github.com/mist64/xhyve">xhyve</a>라는 macOS에서 제공하는 가상환경을 이용하고 docker for windows는 <a href="https://en.wikipedia.org/wiki/Hyper-V">Hyper-V</a>기능을 이용합니다. 따라서 OS가 최신버전이 아니면 동작하지 않을 수 있습니다.</p>
 
-<h3 id="section-1">
+<h3 id="가상머신에-설치하기">
 <a id="가상머신에-설치하기" class="anchor" href="#%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0%EC%97%90-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>가상머신에 설치하기</h3>
 
 <p>이런저런 이유로 Docker for … 를 사용하지 못하는 경우 <a href="https://docs.docker.com/machine/">Docker machine</a>을 이용할 수 있는데 처음 도커를 공부하는 경우에는 Virtual Box나 VMware같은 가상머신에 리눅스를 설치하고 리눅스에 접속하여 도커를 사용하는 방법을 권장합니다. 처음부터 Docker machine을 사용하면 환경이 약간 혼란스러울 수 있습니다.</p>
 
-<h3 id="section-2">
+<h3 id="설치확인하기">
 <a id="설치확인하기" class="anchor" href="#%EC%84%A4%EC%B9%98%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>설치확인하기</h3>
 
 <p>설치가 완료되었다면 정상적으로 설치되었는지 도커 명령어를 입력해 확인해 봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker version<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker version</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -309,7 +309,8 @@ sudo usermod -aG docker your-user <span class="c"># your-user 사용자에게 �
 12
 13
 14
-15</pre></td>
+15
+</pre></td>
 <td class="code"><pre>Client:
  Version:      1.12.6
  API version:  1.24
@@ -324,8 +325,7 @@ Server:
  Go version:   go1.6.4
  Git commit:   78d1802
  Built:        Wed Jan 11 00:23:16 2017
- OS/Arch:      linux/amd64<span class="w">
-</span></pre></td>
+ OS/Arch:      linux/amd64</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>Client와 Server 정보가 정상적으로 출력되었다면 설치가 완료된 것 입니다.</p>
@@ -340,7 +340,7 @@ Server:
 
 <p>기본값이 도커 서버의 소켓을 바라보고 있기 때문에 사용자는 의식하지 않고 마치 바로 명령을 내리는 것 같은 느낌을 받습니다. 이러한 설계가 mac이나 windows의 터미널에서 명령어를 입력했을때 가상 서버에 설치된 도커가 동작하는 이유입니다.</p>
 
-<h2 id="section-3">
+<h2 id="컨테이너-실행하기">
 <a id="컨테이너-실행하기" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 실행하기</h2>
 <p>이제! 드디어! 컨테이너를 실행해 보려고 합니다. 손이 근질근질하고 컨테이너의 강려크함을 보여드리고 싶기 때문에 여러개의 프로그램을 마구잡이로 손쉽게 띄워보겠습니다.</p>
 
@@ -400,10 +400,10 @@ Server:
 
 <p>시작은 가볍게 ubuntu 16.04 컨테이너를 생성하고 컨테이너 내부에 들어가 봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker run ubuntu:16.04<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker run ubuntu:16.04</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -416,8 +416,8 @@ Server:
 
 <p>이번에는 <code class="highlighter-rouge">/bin/bash</code> 명령어를 입력해서 <code class="highlighter-rouge">ubuntu:16.04</code> 컨테이너를 실행해 보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -425,17 +425,17 @@ Server:
 6
 7
 8
-9</pre></td>
-<td class="code"><pre>docker run --rm -it ubuntu:16.04 /bin/bash
+9
+</pre></td>
+<td class="code"><pre>docker run <span class="nt">--rm</span> <span class="nt">-it</span> ubuntu:16.04 /bin/bash
 
 <span class="c"># in container</span>
-<span class="gp">$ </span>cat /etc/issue
+<span class="nv">$ </span><span class="nb">cat</span> /etc/issue
 Ubuntu 16.04.1 LTS <span class="se">\n</span> <span class="se">\l</span>
 
-<span class="gp">$ </span>ls
-bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
-boot  etc  lib   media  opt  root  sbin  sys  usr<span class="w">
-</span></pre></td>
+<span class="nv">$ </span><span class="nb">ls
+</span>bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -459,8 +459,8 @@ boot  etc  lib   media  opt  root  sbin  sys  usr<span class="w">
   <p><code class="highlighter-rouge">-d</code>옵션이 없다면 프로세스가 foreground로 실행되어 아무키도 입력할 수 없게 됩니다. 컨테이너를 종료하려면 <code class="highlighter-rouge">ctrl + c</code>를 입력해 주세요.</p>
 </blockquote>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -468,17 +468,17 @@ boot  etc  lib   media  opt  root  sbin  sys  usr<span class="w">
 6
 7
 8
-9</pre></td>
-<td class="code"><pre>docker run -d -p 1234:6379 redis
+9
+</pre></td>
+<td class="code"><pre>docker run <span class="nt">-d</span> <span class="nt">-p</span> 1234:6379 redis
 
 <span class="c"># redis test</span>
-<span class="gp">$ </span>telnet localhost 1234
+<span class="nv">$ </span>telnet localhost 1234
 <span class="nb">set </span>mykey hello
 +OK
 get mykey
 <span class="nv">$5</span>
-hello<span class="w">
-</span></pre></td>
+hello</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -500,8 +500,8 @@ hello<span class="w">
 
 <p><a href="https://hub.docker.com/_/mysql/">MySQL Docker hub</a> 페이지에 접속하면 간단한 사용법과 환경변수에 대한 설명이 있습니다. 여러가지 설정값이 있는데 패스워드 없이 root계정을 만들기 위해 <code class="highlighter-rouge">MYSQL_ALLOW_EMPTY_PASSWORD</code> 환경변수를 설정합니다. 그리고 컨테이너의 이름은 <code class="highlighter-rouge">mysql</code>로 할당하고 백그라운드 모드로 띄우기 위해 <code class="highlighter-rouge">-d</code> 옵션을 줍니다. 포트는 <code class="highlighter-rouge">3306포트</code>를 호스트에서 그대로 사용하겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -520,16 +520,17 @@ hello<span class="w">
 17
 18
 19
-20</pre></td>
-<td class="code"><pre>docker run -d -p 3306:3306 <span class="se">\</span>
-  -e <span class="nv">MYSQL_ALLOW_EMPTY_PASSWORD</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
-  --name mysql <span class="se">\</span>
+20
+</pre></td>
+<td class="code"><pre>docker run <span class="nt">-d</span> <span class="nt">-p</span> 3306:3306 <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">MYSQL_ALLOW_EMPTY_PASSWORD</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--name</span> mysql <span class="se">\</span>
   mysql:5.7
 
 <span class="c"># MySQL test</span>
-<span class="gp">$ </span>mysql -h127.0.0.1 -uroot
+<span class="nv">$ </span>mysql <span class="nt">-h127</span>.0.0.1 <span class="nt">-uroot</span>
 
-<span class="gp">mysql&gt; </span>show databases;
+mysql&gt; show databases<span class="p">;</span>
 +--------------------+
 | Database           |
 +--------------------+
@@ -540,8 +541,7 @@ hello<span class="w">
 +--------------------+
 4 rows <span class="k">in </span><span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
 
-<span class="gp">mysql&gt; </span>quit<span class="w">
-</span></pre></td>
+mysql&gt; quit</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -561,8 +561,8 @@ hello<span class="w">
 
 <p>먼저, 워드프레스용 데이터베이스를 생성하고 워드프레스 컨테이너를 실행합니다. 호스트의 <code class="highlighter-rouge">8080포트</code>를 컨테이너의 <code class="highlighter-rouge">80포트</code>로 연결하고 MySQL 컨테이너와 연결한 후 각종 데이터베이스 설정 정보를 환경변수로 입력합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -576,23 +576,23 @@ hello<span class="w">
 12
 13
 14
-15</pre></td>
+15
+</pre></td>
 <td class="code"><pre><span class="c"># create mysql database</span>
-<span class="gp">$ </span>mysql -h127.0.0.1 -uroot
-create database wp CHARACTER SET utf8;
-grant all privileges on wp.<span class="k">*</span> to wp@<span class="s1">'%'</span> identified by <span class="s1">'wp'</span>;
-flush privileges;
+<span class="nv">$ </span>mysql <span class="nt">-h127</span>.0.0.1 <span class="nt">-uroot</span>
+create database wp CHARACTER SET utf8<span class="p">;</span>
+grant all privileges on wp.<span class="k">*</span> to wp@<span class="s1">'%'</span> identified by <span class="s1">'wp'</span><span class="p">;</span>
+flush privileges<span class="p">;</span>
 quit
 
 <span class="c"># run wordpress container</span>
-docker run -d -p 8080:80 <span class="se">\</span>
-  --link mysql:mysql <span class="se">\</span>
-  -e <span class="nv">WORDPRESS_DB_HOST</span><span class="o">=</span>mysql <span class="se">\</span>
-  -e <span class="nv">WORDPRESS_DB_NAME</span><span class="o">=</span>wp <span class="se">\</span>
-  -e <span class="nv">WORDPRESS_DB_USER</span><span class="o">=</span>wp <span class="se">\</span>
-  -e <span class="nv">WORDPRESS_DB_PASSWORD</span><span class="o">=</span>wp <span class="se">\</span>
-  wordpress<span class="w">
-</span></pre></td>
+docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span class="se">\</span>
+  <span class="nt">--link</span> mysql:mysql <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">WORDPRESS_DB_HOST</span><span class="o">=</span>mysql <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">WORDPRESS_DB_NAME</span><span class="o">=</span>wp <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">WORDPRESS_DB_USER</span><span class="o">=</span>wp <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">WORDPRESS_DB_PASSWORD</span><span class="o">=</span>wp <span class="se">\</span>
+  wordpress</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -620,10 +620,10 @@ docker run -d -p 8080:80 <span class="se">\</span>
 
 <p>마지막으로 이렇게 활용할 수 있다라는 예제로 tensorflow를 실행보도록 하겠습니다. <a href="https://www.tensorflow.org/">tensorflow</a>는 손쉽게 머신러닝을 할 수 있는 툴입니다. tensorflow는 python으로 만들어져 python과 관련 패키지를 설치해야 합니다. 이번에 설치하는 이미지는 python과 함께 numpy, scipy, pandas, jupyter, scikit-learn, gensim, BeautifulSoup4, Tensorflow가 설치되어 있습니다. 뭔가 복잡해 보이지만 도커라면 손쉽게 실행해 볼 수 있습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker run -d -p 8888:8888 -p 6006:6006 teamlab/pydata-tensorflow:0.1<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker run <span class="nt">-d</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 6006:6006 teamlab/pydata-tensorflow:0.1</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>설치된 파일이 많아 다운로드 하는데 시간이 좀 걸립니다. 컨테이너가 실행되면 웹 브라우저에서 jupyter에 접속하여 머신러닝을 시작해 봅시다!</p>
@@ -634,12 +634,12 @@ docker run -d -p 8080:80 <span class="se">\</span>
 
 <p>여기까지 ubuntu, MySQL, redis, Wordpress, tensorflow를 실행해 보았습니다. 가상머신을 이용해서 동일한 작업을 했다면 컴퓨터가 엄청나게 버벅이기 시작했겠지만 컨테이너 기반의 도커를 이용하여 매우 가볍게 실행하고 있습니다. 내부 구조나 설치과정은 자세히 모르지만, 간단한 도커 명령어로 여러개의 서비스를 순식간에 실행하고 사용할 수 있다니 정말 짱짱맨입니다.</p>
 
-<h2 id="section-4">
+<h2 id="도커-기본-명령어">
 <a id="도커-기본-명령어" class="anchor" href="#%EB%8F%84%EC%BB%A4-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커 기본 명령어</h2>
 
 <p>앞에서 도커의 <code class="highlighter-rouge">run</code> 명령어를 이용하여 여러개의 컨테이너를 실행했습니다. 이제 컨테이너의 상태를 살펴보고 어떤 이미지가 설치되어 있는지 확인하는 명령어를 알아봅니다.</p>
 
-<h3 id="ps">
+<h3 id="컨테이너-목록-확인하기-ps">
 <a id="컨테이너-목록-확인하기-ps" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%AA%A9%EB%A1%9D-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0-ps" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 목록 확인하기 (ps)</h3>
 
 <p>컨테이너 목록을 확인하는 명령어는 다음과 같습니다.</p>
@@ -648,59 +648,59 @@ docker run -d -p 8080:80 <span class="se">\</span>
 
 <p>일단 기본옵션과 <code class="highlighter-rouge">-a, --all</code> 옵션만 살펴봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker ps<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker ps</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td>
+5
+</pre></td>
 <td class="code"><pre>CONTAINER ID        IMAGE                           COMMAND                  CREATED              STATUS              PORTS                                                    NAMES
 6a1d027b604f        teamlab/pydata-tensorflow:0.1   "/opt/start"             About a minute ago   Up About a minute   0.0.0.0:6006-&gt;6006/tcp, 22/tcp, 0.0.0.0:8888-&gt;8888/tcp   desperate_keller
 52a516f87ceb        wordpress                       "docker-entrypoint.sh"   8 minutes ago        Up 8 minutes        0.0.0.0:8080-&gt;80/tcp                                     happy_curran
 2e2c569115b9        mysql:5.7                       "docker-entrypoint.sh"   9 minutes ago        Up 9 minutes        0.0.0.0:3306-&gt;3306/tcp                                   mysql
-56341072b515        redis                           "docker-entrypoint.sh"   16 minutes ago       Up 9 minutes        0.0.0.0:1234-&gt;6379/tcp                                   furious_tesla<span class="w">
-</span></pre></td>
+56341072b515        redis                           "docker-entrypoint.sh"   16 minutes ago       Up 9 minutes        0.0.0.0:1234-&gt;6379/tcp                                   furious_tesla</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">ps</code> 명령어는 실행중인 컨테이너 목록을 보여줍니다. detached mode로 실행중인 컨테이너들이 보입니다. 어떤 이미지를 기반으로 만들었는지 어떤 포트와 연결이 되어있는지 등 간단한 내용을 보여줍니다.</p>
 
 <p>이번에는 <code class="highlighter-rouge">-a</code> 옵션을 추가로 실행해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker ps -a<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker ps <span class="nt">-a</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td>
+6
+</pre></td>
 <td class="code"><pre>CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS                      PORTS                                                    NAMES
 6a1d027b604f        teamlab/pydata-tensorflow:0.1   "/opt/start"             2 minutes ago       Up 2 minutes                0.0.0.0:6006-&gt;6006/tcp, 22/tcp, 0.0.0.0:8888-&gt;8888/tcp   desperate_keller
 52a516f87ceb        wordpress                       "docker-entrypoint.sh"   9 minutes ago       Up 9 minutes                0.0.0.0:8080-&gt;80/tcp                                     happy_curran
 2e2c569115b9        mysql:5.7                       "docker-entrypoint.sh"   10 minutes ago      Up 10 minutes               0.0.0.0:3306-&gt;3306/tcp                                   mysql
 56341072b515        redis                           "docker-entrypoint.sh"   18 minutes ago      Up 10 minutes               0.0.0.0:1234-&gt;6379/tcp                                   furious_tesla
-e1a00c5934a7        ubuntu:16.04                    "/bin/bash"              32 minutes ago      Exited (0) 32 minutes ago                                                            berserk_visvesvaraya<span class="w">
-</span></pre></td>
+e1a00c5934a7        ubuntu:16.04                    "/bin/bash"              32 minutes ago      Exited (0) 32 minutes ago                                                            berserk_visvesvaraya</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>맨 처음 실행했다가 종료된 컨테이너(Exited (0))가 추가로 보입니다. 컨테이너는 종료되어도 삭제되지 않고 남아있습니다. 종료된 건 다시 시작할 수 있고 컨테이너의 읽기/쓰기 레이어는 그대로 존재합니다. 명시적으로 삭제를 하면 깔끔하게 컨테이너가 제거됩니다.</p>
 
-<h3 id="stop">
+<h3 id="컨테이너-중지하기-stop">
 <a id="컨테이너-중지하기-stop" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%A4%91%EC%A7%80%ED%95%98%EA%B8%B0-stop" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 중지하기 (stop)</h3>
 
 <p>실행중인 컨테이너를 중지하는 명령어는 다음과 같습니다.</p>
@@ -711,14 +711,14 @@ e1a00c5934a7        ubuntu:16.04                    "/bin/bash"              32 
 
 <p>앞에서 실행한 tensorflow 컨테이너는 더이상 필요가 없으니 중지해 보겠습니다. 중지하려면 컨테이너의 ID 또는 이름을 입력하면 됩니다. tensorflow 컨테이너의 ID를 <code class="highlighter-rouge">ps</code>명령을 통해 확인하고 중지해 봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
-3</pre></td>
+3
+</pre></td>
 <td class="code"><pre>docker ps <span class="c"># get container ID</span>
 docker stop <span class="k">${</span><span class="nv">TENSORFLOW_CONTAINER_ID</span><span class="k">}</span>
-docker ps -a <span class="c"># show all containers</span><span class="w">
-</span></pre></td>
+docker ps <span class="nt">-a</span> <span class="c"># show all containers</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <blockquote>
@@ -727,7 +727,7 @@ docker ps -a <span class="c"># show all containers</span><span class="w">
 
 <p>잠시 기다리면 tensorflow 컨테이너가 종료됩니다. <code class="highlighter-rouge">ps -a</code>명령어를 입력하여 종료되었는지 확인합니다.</p>
 
-<h3 id="rm">
+<h3 id="컨테이너-제거하기-rm">
 <a id="컨테이너-제거하기-rm" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0-rm" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 제거하기 (rm)</h3>
 
 <p>종료된 컨테이너를 완전히 제거하는 명령어는 다음과 같습니다.</p>
@@ -736,14 +736,14 @@ docker ps -a <span class="c"># show all containers</span><span class="w">
 
 <p>종료 명령어도 옵션은 특별한게 없습니다. 종료된 컨테이너를 하나 또는 여러개 삭제할 수 있습니다. 종료된 ubuntu 컨테이너와 tensorflow 컨테이너를 삭제해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
-3</pre></td>
-<td class="code"><pre>docker ps -a <span class="c"># get container ID</span>
+3
+</pre></td>
+<td class="code"><pre>docker ps <span class="nt">-a</span> <span class="c"># get container ID</span>
 docker rm <span class="k">${</span><span class="nv">UBUNTU_CONTAINER_ID</span><span class="k">}</span> <span class="k">${</span><span class="nv">TENSORFLOW_CONTAINER_ID</span><span class="k">}</span>
-docker ps -a <span class="c"># check exist</span><span class="w">
-</span></pre></td>
+docker ps <span class="nt">-a</span> <span class="c"># check exist</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>컨테이너가 말끔히 삭제되었습니다. 호스트 OS는 아무런 흔적도 남아있지 않고 컨테이너만 격리된 상태로 실행되었다가 삭제되었습니다. 시스템이 꼬일 걱정이 없습니다.</p>
@@ -752,7 +752,7 @@ docker ps -a <span class="c"># check exist</span><span class="w">
   <p>중지된 컨테이너를 일일이 삭제 하는 건 귀찮은 일입니다. <code class="highlighter-rouge">docker rm -v $(docker ps -a -q -f status=exited)</code> 명령어를 입력하면 중지된 컨테이너 ID를 가져와서 한번에 삭제합니다.</p>
 </blockquote>
 
-<h3 id="images">
+<h3 id="이미지-목록-확인하기-images">
 <a id="이미지-목록-확인하기-images" class="anchor" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%AA%A9%EB%A1%9D-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>이미지 목록 확인하기 (images)</h3>
 
 <p>도커가 다운로드한 이미지 목록을 보는 명령어는 다음과 같습니다.</p>
@@ -761,33 +761,33 @@ docker ps -a <span class="c"># check exist</span><span class="w">
 
 <p>간단하게 도커 이미지 목록을 확인해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker images<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker images</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td>
+6
+</pre></td>
 <td class="code"><pre>REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
 wordpress                   latest              b1fe82b15de9        43 hours ago        400.2 MB
 redis                       latest              45c3ea2cecac        44 hours ago        182.9 MB
 mysql                       5.7                 f3694c67abdb        46 hours ago        400.1 MB
 ubuntu                      16.04               104bec311bcd        4 weeks ago         129 MB
-teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago        3.081 GB<span class="w">
-</span></pre></td>
+teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago        3.081 GB</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>이미지 주소와 태그, ID, 생성시점, 용량이 보입니다. 이미지가 너무 많이 쌓이면 용량을 차지하기 때문에 사용하지 않는 이미지는 지우는 것이 좋습니다.</p>
 
-<h3 id="pull">
+<h3 id="이미지-다운로드하기-pull">
 <a id="이미지-다운로드하기-pull" class="anchor" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%ED%95%98%EA%B8%B0-pull" aria-hidden="true"><span class="octicon octicon-link"></span></a>이미지 다운로드하기 (pull)</h3>
 
 <p>이미지를 다운로드하는 명령어는 다음과 같습니다.</p>
@@ -796,15 +796,15 @@ teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago
 
 <p><code class="highlighter-rouge">ubuntu:14.04</code>를 다운받아보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker pull ubuntu:14.04<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker pull ubuntu:14.04</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">run</code>명령어를 입력하면 이미지가 없을 때 자동으로 다운받으니 <code class="highlighter-rouge">pull</code>명령어를 언제 쓰는지 궁금할 수 있는데 <code class="highlighter-rouge">pull</code>은 최신버전으로 다시 다운 받습니다. 같은 태그지만 이미지가 업데이트 된 경우는 <code class="highlighter-rouge">pull</code>명령어를 통해 새로 다운받을 수 있습니다.</p>
 
-<h3 id="rmi">
+<h3 id="이미지-삭제하기-rmi">
 <a id="이미지-삭제하기-rmi" class="anchor" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%82%AD%EC%A0%9C%ED%95%98%EA%B8%B0-rmi" aria-hidden="true"><span class="octicon octicon-link"></span></a>이미지 삭제하기 (rmi)</h3>
 
 <p>이미지를 삭제하는 방법은 다음과 같습니다.</p>
@@ -815,18 +815,18 @@ teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago
 
 <p>tensorflow는 더 이상 사용하지 않으니 이미지를 제거해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+</pre></td>
 <td class="code"><pre>docker images <span class="c"># get image ID</span>
-docker rmi <span class="k">${</span><span class="nv">TENSORFLOW_IMAGE_ID</span><span class="k">}</span><span class="w">
-</span></pre></td>
+docker rmi <span class="k">${</span><span class="nv">TENSORFLOW_IMAGE_ID</span><span class="k">}</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -864,7 +864,8 @@ docker rmi <span class="k">${</span><span class="nv">TENSORFLOW_IMAGE_ID</span><
 36
 37
 38
-39</pre></td>
+39
+</pre></td>
 <td class="code"><pre>Untagged: teamlab/pydata-tensorflow:0.1
 Untagged: teamlab/pydata-tensorflow@sha256:cb5e036afc0aa647a6fe1f384475275aeed946c751de5209d84282c986589b7f
 Deleted: sha256:7bdf5d7e0191a6133a385ac69ec6a07be46b08cf5b5e6b826a89b9b47aadabe5
@@ -903,18 +904,17 @@ Deleted: sha256:0ad5b9ed74fe2eee856b368d426cdd9335a6a6ecec0c4c705b5153c219a82692
 Deleted: sha256:b159c847c5b9b899c23eba59395a4d7b7b275a8c686191ed6c4ef21ceadad8a2
 Deleted: sha256:89e9f76552fd1a8d249c1e133e4c8964fe1f9104bb708db1e0ca6f6171ee4c22
 Deleted: sha256:6d31e1827ca8f5037077314b2403eabd82590f9eae8baf956a2c2a819db68d4e
-Deleted: sha256:7f4734de8e3dd402f10030f06bcb8781129b1eb6a25c58811a76d015f2a0982f<span class="w">
-</span></pre></td>
+Deleted: sha256:7f4734de8e3dd402f10030f06bcb8781129b1eb6a25c58811a76d015f2a0982f</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>이미지가 삭제되었습니다. 이미지는 여러개의 레이어로 구성되어 있기 때문에 모든 레이어가 삭제된 것을 알 수 있습니다.</p>
 
-<h2 id="section-5">
+<h2 id="컨테이너-둘러보기">
 <a id="컨테이너-둘러보기" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%91%98%EB%9F%AC%EB%B3%B4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 둘러보기</h2>
 
 <p>도커에 대한 아주아주아주 기본적인 명령어를 살펴보았습니다. 사실 저 명령어들과 이번에 살펴볼 <code class="highlighter-rouge">log</code>, <code class="highlighter-rouge">exec</code> 명령어를 익히면 도커에서 사용하는 명령어는 거의 다 익혔다고 할 수 있습니다. 다른 명령어는 필요에 따라 하나하나 살펴보면 됩니다.</p>
 
-<h3 id="logs">
+<h3 id="컨테이너-로그-보기-logs">
 <a id="컨테이너-로그-보기-logs" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%A1%9C%EA%B7%B8-%EB%B3%B4%EA%B8%B0-logs" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 로그 보기 (logs)</h3>
 
 <p>컨테이너가 정상적으로 동작하는지 확인하는 좋은 방법은 로그를 확인하는 것 입니다. 로그를 확인하는 방법은 다음과 같습니다.</p>
@@ -925,18 +925,18 @@ Deleted: sha256:7f4734de8e3dd402f10030f06bcb8781129b1eb6a25c58811a76d015f2a0982f
 
 <p>기존에 생성해 놓은 워드프레스 컨테이너 로그를 확인해 보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+</pre></td>
 <td class="code"><pre>docker ps
-docker logs <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span><span class="w">
-</span></pre></td>
+docker logs <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -959,7 +959,8 @@ docker logs <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</sp
 21
 22
 23
-24</pre></td>
+24
+</pre></td>
 <td class="code"><pre>WordPress not found in /var/www/html - copying now...
 Complete! WordPress has been successfully copied to /var/www/html
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.4. Set the 'ServerName' directive globally to suppress this message
@@ -983,22 +984,21 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 172.17.0.1 - - [19/Jan/2017:16:12:02 +0000] "GET /favicon.ico HTTP/1.1" 200 229 "http://localhost:8080/wp-admin/install.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
 ::1 - - [19/Jan/2017:16:12:08 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"
 ::1 - - [19/Jan/2017:16:12:09 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"
-::1 - - [19/Jan/2017:16:12:10 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"<span class="w">
-</span></pre></td>
+::1 - - [19/Jan/2017:16:12:10 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>컨테이너에서 실행한 로그가 쭈욱 보입니다. 아무 옵션을 주지 않았을 때는 전체 로그를 <del>무식하게</del> 전부 다 출력합니다. 너무 많으니 <code class="highlighter-rouge">--tail</code>옵션으로 마지막 10줄만 출력해 보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker logs --tail 10 <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span><span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker logs <span class="nt">--tail</span> 10 <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
 
-<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1007,7 +1007,8 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 7
 8
 9
-10</pre></td>
+10
+</pre></td>
 <td class="code"><pre>172.17.0.1 - - [19/Jan/2017:16:12:01 +0000] "GET /wp-includes/js/wp-util.min.js?ver=4.7.1 HTTP/1.1" 200 924 "http://localhost:8080/wp-admin/install.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
 172.17.0.1 - - [19/Jan/2017:16:12:01 +0000] "GET /wp-admin/js/user-profile.min.js?ver=4.7.1 HTTP/1.1" 200 2590 "http://localhost:8080/wp-admin/install.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
 172.17.0.1 - - [19/Jan/2017:16:12:01 +0000] "GET /wp-includes/js/underscore.min.js?ver=1.8.3 HTTP/1.1" 200 6173 "http://localhost:8080/wp-admin/install.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
@@ -1017,16 +1018,15 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 172.17.0.1 - - [19/Jan/2017:16:12:02 +0000] "GET /favicon.ico HTTP/1.1" 200 229 "http://localhost:8080/wp-admin/install.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
 ::1 - - [19/Jan/2017:16:12:08 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"
 ::1 - - [19/Jan/2017:16:12:09 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"
-::1 - - [19/Jan/2017:16:12:10 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"<span class="w">
-</span></pre></td>
+::1 - - [19/Jan/2017:16:12:10 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>마지막 10줄만 보니 좀 나아 보입니다. 이제 실시간으로 로그가 생성되는 걸 확인해보겠습니다. <code class="highlighter-rouge">-f</code> 옵션으로 실행합니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker logs -f <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span><span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker logs <span class="nt">-f</span> <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -1041,7 +1041,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 
 <p>또하나 중요한 점은 컨테이너의 로그파일은 json 방식으로 어딘가에 저장이 됩니다. 로그가 많으면 은근히 파일이 차지하는 용량이 커지므로 주의해야합니다. 도커는 다양한 플러그인을 지원하여 json이 아닌 특정 로그 서비스에 스트림을 전달할 수 있습니다. 어느 정도 앱의 규모가 커지면 기본적인 방식 대신 로그 서비스를 이용하는 걸 고려해야 합니다.</p>
 
-<h3 id="exec">
+<h3 id="컨테이너-명령어-실행하기-exec">
 <a id="컨테이너-명령어-실행하기-exec" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0-exec" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 명령어 실행하기 (exec)</h3>
 
 <p>컨테이너를 관리하다 보면 실행중인 컨테이너에 들어가보거나 컨테이너의 파일을 실행하고 싶을 때가 있습니다. 컨테이너에 <code class="highlighter-rouge">SSH</code>를 설치하면 되지 않을까? 라고 생각할 수 있지만 SSH는 권장하지 않습니다. <del>하지 말라고 하면 꼭 하는 분들이 있던데 제발..</del> 예전에는 <a href="https://github.com/jpetazzo/nsenter">nsenter</a>라는 프로그램을 이용하였는데 docker에 <code class="highlighter-rouge">exec</code>라는 명령어로 흡수되었습니다.</p>
@@ -1054,8 +1054,8 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 
 <p>일단, 가볍게 실행중인 <code class="highlighter-rouge">MySQL</code> 컨테이너에 접속해보겠습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1073,13 +1073,14 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 16
 17
 18
-19</pre></td>
-<td class="code"><pre>docker <span class="nb">exec</span> -it mysql /bin/bash
+19
+</pre></td>
+<td class="code"><pre>docker <span class="nb">exec</span> <span class="nt">-it</span> mysql /bin/bash
 
 <span class="c"># MySQL test</span>
-<span class="gp">$ </span>mysql -uroot
+<span class="nv">$ </span>mysql <span class="nt">-uroot</span>
 
-<span class="gp">mysql&gt; </span>show databases;
+mysql&gt; show databases<span class="p">;</span>
 +--------------------+
 | Database           |
 +--------------------+
@@ -1091,9 +1092,8 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 +--------------------+
 5 rows <span class="k">in </span><span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
 
-<span class="gp">mysql&gt; </span>quit
-<span class="nb">exit</span><span class="w">
-</span></pre></td>
+mysql&gt; quit
+<span class="nb">exit</span></pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -1104,8 +1104,8 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 
 <p>쉘로 완전한 권한을 얻는 방법말고 바로 <code class="highlighter-rouge">mysql</code>명령어를 실행 할 수도 있습니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1122,13 +1122,14 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 15
 16
 17
-18</pre></td>
-<td class="code"><pre>docker <span class="nb">exec</span> -it mysql mysql -uroot
+18
+</pre></td>
+<td class="code"><pre>docker <span class="nb">exec</span> <span class="nt">-it</span> mysql mysql <span class="nt">-uroot</span>
 
 <span class="c"># MySQL test</span>
-<span class="gp">$ </span>mysql -uroot
+<span class="nv">$ </span>mysql <span class="nt">-uroot</span>
 
-<span class="gp">mysql&gt; </span>show databases;
+mysql&gt; show databases<span class="p">;</span>
 +--------------------+
 | Database           |
 +--------------------+
@@ -1140,8 +1141,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 +--------------------+
 5 rows <span class="k">in </span><span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
 
-<span class="gp">mysql&gt; </span>quit<span class="w">
-</span></pre></td>
+mysql&gt; quit</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -1150,7 +1150,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 
 <p>이제, 호스트 OS에 mysql을 설치하지 않아도 mysql 클라이언트를 사용할 수 있습니다. 굳이 복잡한 작업이 필요 없는 경우는 <code class="highlighter-rouge">-it</code> 옵션없이 단순하게 명령을 실행하고 종료할 수도 있습니다.</p>
 
-<h2 id="section-6">
+<h2 id="컨테이너-업데이트">
 <a id="컨테이너-업데이트" class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 업데이트</h2>
 
 <p>이제 지금까지 배운 모든걸 정리해서 컨테이너를 새로운 버전으로 업데이트 하는 과정을 살펴보겠습니다.</p>
@@ -1165,8 +1165,8 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 
 <p>데이터 볼륨을 사용하는 방법은 몇가지가 있는데 여기서는 호스트의 디렉토리를 마운트해서 사용하는 방법에 대해 알아봅니다. <code class="highlighter-rouge">run</code>명령어에서 소개한 옵션중에 <code class="highlighter-rouge">-v</code> 옵션을 드디어 사용해 보겠습니다. MySQL이라면 <code class="highlighter-rouge">/var/lib/mysql</code>디렉토리에 모든 데이터베이스 정보가 담기므로 호스트의 특정 디렉토리를 연결해주면 됩니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1177,20 +1177,20 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 9
 10
 11
-12</pre></td>
+12
+</pre></td>
 <td class="code"><pre><span class="c"># before</span>
-docker run -d -p 3306:3306 <span class="se">\</span>
-  -e <span class="nv">MYSQL_ALLOW_EMPTY_PASSWORD</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
-  --name mysql <span class="se">\</span>
+docker run <span class="nt">-d</span> <span class="nt">-p</span> 3306:3306 <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">MYSQL_ALLOW_EMPTY_PASSWORD</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--name</span> mysql <span class="se">\</span>
   mysql:5.7
 
 <span class="c"># after</span>
-docker run -d -p 3306:3306 <span class="se">\</span>
-  -e <span class="nv">MYSQL_ALLOW_EMPTY_PASSWORD</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
-  --name mysql <span class="se">\</span>
-  -v /my/own/datadir:/var/lib/mysql <span class="se">\ </span><span class="c"># &lt;- volume mount</span>
-  mysql:5.7<span class="w">
-</span></pre></td>
+docker run <span class="nt">-d</span> <span class="nt">-p</span> 3306:3306 <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">MYSQL_ALLOW_EMPTY_PASSWORD</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--name</span> mysql <span class="se">\</span>
+  <span class="nt">-v</span> /my/own/datadir:/var/lib/mysql <span class="se">\ </span><span class="c"># &lt;- volume mount</span>
+  mysql:5.7</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>위 샘플은 호스트의 <code class="highlighter-rouge">/my/own/datadir</code>디렉토리를 컨테이너의 <code class="highlighter-rouge">/var/lib/mysql</code>디렉토리로 마운트 하였습니다. 이제 데이터베이스 파일은 호스트의 <code class="highlighter-rouge">/my/own/datadir</code>디렉토리에 저장되고 컨테이너를 삭제해도 데이터는 사라지지 않습니다. 최신버전의 MySQL 이미지를 다운받고 다시 컨테이너를 실행할 때 동일한 디렉토리를 마운트 한다면 그대로 데이터를 사용할 수 있습니다. <del>만세!</del></p>
@@ -1202,24 +1202,24 @@ docker run -d -p 3306:3306 <span class="se">\</span>
 
 <p>도커는 복잡한 설정을 쉽게 관리하기 위해 <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>방식의 설정파일을 이용한 <a href="https://docs.docker.com/compose/">Docker Compose</a>라는 툴을 제공합니다. 깊게 파고들면 은근 기능이 많고 복잡한데 이번에는 아주 가볍게 다루고 지나가도록 하겠습니다.</p>
 
-<h3 id="section-7">
+<h3 id="설치하기">
 <a id="설치하기" class="anchor" href="#%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>설치하기</h3>
 
 <p>Docker for Mac 또는 Docker for Windows를 설치했다면 자동으로 설치됩니다. 리눅스의 경우 다음 명령어를 입력하여 설치합니다. 그냥 설치파일 하나 다운받으면 됩니다. <del>Golang 짱</del></p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
-4</pre></td>
-<td class="code"><pre>curl -L <span class="s2">"https://github.com/docker/compose/releases/download/1.9.0/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">"</span> -o /usr/local/bin/docker-compose
+4
+</pre></td>
+<td class="code"><pre>curl <span class="nt">-L</span> <span class="s2">"https://github.com/docker/compose/releases/download/1.9.0/docker-compose-</span><span class="k">$(</span>uname <span class="nt">-s</span><span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname <span class="nt">-m</span><span class="k">)</span><span class="s2">"</span> <span class="nt">-o</span> /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 <span class="c"># test</span>
-docker-compose version<span class="w">
-</span></pre></td>
+docker-compose version</pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<h3 id="wordpress-">
+<h3 id="wordpress-만들기">
 <a id="wordpress-만들기" class="anchor" href="#wordpress-%EB%A7%8C%EB%93%A4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>wordpress 만들기</h3>
 
 <p>기존에 명령어로 만들었던 wordpress를 compose를 이용해 만들어 보겠습니다.</p>
@@ -1259,10 +1259,10 @@ volumes:
 
 <p>몇몇 생소해보이는 설정이 눈에 보이지만, 일단 실행해 봅니다.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td>
-<td class="code"><pre>docker-compose up<span class="w">
-</span></pre></td>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>docker-compose up</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -1273,7 +1273,7 @@ volumes:
 
 <p>Docker Compose의 다른 기능과 생소한 설정내용은 숙제로 남겨드립니다. 원래 개발공부라는게 왠만큼 했다고 생각하면 또 다른게 나오고 끊임없이 공부해야 하는 분야입니다. <del>화이팅!</del> 도커에 대해 이해를 했다면 Docker Compose 또한 쉽게 사용할 수 있을 것입니다.</p>
 
-<h2 id="section-8">
+<h2 id="정리">
 <a id="정리" class="anchor" href="#%EC%A0%95%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>정리</h2>
 
 <p>여기까지 도커에 대해 기본적인 내용부터 컨테이너를 실행하고 살펴보는 방법까지 알아보았습니다. 도커가 어떤건지, 컨테이너가 뭔지, 이미지가 뭔지 감이 좀 오시나요? 이제 남이 만든 이미지를 사용하는 것이 아니라 직접 이미지를 만들고 컨테이너를 여러 서버로 배포하는 방법을 알아봐야하는데… 다음글에서 알아보도록 하겠습니다.</p>
@@ -1393,12 +1393,12 @@ volumes:
       
     </aside>
     <footer class="post-site-footer clearfix">
-      <section class="copyright"><a href="/">Subicura's Blog</a> © 2018</section>
+      <section class="copyright"><a href="/">Subicura's Blog</a> © 2019</section>
     </footer>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1525930237108117000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1558304229804403000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
