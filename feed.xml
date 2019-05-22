@@ -6,12 +6,12 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 20 May 2019 07:17:09 +0900</pubDate>
-    <lastBuildDate>Mon, 20 May 2019 07:17:09 +0900</lastBuildDate>
+    <pubDate>Thu, 23 May 2019 08:42:08 +0900</pubDate>
+    <lastBuildDate>Thu, 23 May 2019 08:42:08 +0900</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>쿠버네티스 시작하기 - 쿠버네티스란 무엇인가?</title>
+        <title>쿠버네티스 시작하기 - Kubernetes란 무엇인가?</title>
         <description>&lt;p align=&quot;center&quot;&gt;
     &lt;img src=&quot;/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo.png&quot; alt=&quot;docker logo&quot; style=&quot;width: 450px&quot; /&gt;
 &lt;/p&gt;

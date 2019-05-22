@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2019-05-20T07:17:09+09:00</updated>
+ <updated>2019-05-23T08:42:08+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>쿠버네티스 시작하기 - 쿠버네티스란 무엇인가?</title>
+   <title>쿠버네티스 시작하기 - Kubernetes란 무엇인가?</title>
    <link href="https://subicura.com/2019/05/19/kubernetes-basic-1.html"/>
    <updated>2019-05-19T00:00:00+09:00</updated>
    <id>https://subicura.com/2019/05/19/kubernetes-basic-1</id>

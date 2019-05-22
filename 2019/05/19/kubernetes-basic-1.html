@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>쿠버네티스 시작하기 - 쿠버네티스란 무엇인가?</title>
+  <title>쿠버네티스 시작하기 - Kubernetes란 무엇인가?</title>
   <meta name="description" content="쿠버네티스는 컨테이너를 쉽고 빠르게 배포/확장하고 관리를 자동화해주는 오픈소스 플랫폼입니다. 1주일에 수십억 개의 컨테이너를 생성하는 구글이 내부 배포시스템으로 사용하던 borg를 기반으로 2014년 프로젝트를 시작했고 여러 커뮤니티의 아이디어와 좋은 사례를 모아 빠르게 발전하고 있습니다. 이 글은 쿠버네티스가 무엇인지 궁금한 엔지니어를 대상으로 쿠버..." />
 
   <meta name="HandheldFriendly" content="True" />
@@ -17,7 +17,7 @@
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@subicura" />
-    <meta name="twitter:title" content="쿠버네티스 시작하기 - 쿠버네티스란 무엇인가?" />
+    <meta name="twitter:title" content="쿠버네티스 시작하기 - Kubernetes란 무엇인가?" />
     <meta name="twitter:image" content="https://subicura.com/assets/images/df_logo.png" />
     
     <meta name="twitter:description"  content="쿠버네티스는 컨테이너를 쉽고 빠르게 배포/확장하고 관리를 자동화해주는 오픈소스 플랫폼입니다. 1주일에 수십억 개의 컨테이너를 생성하는 구글이 내부 배포시스템으로 사용하던 borg를 기반으로 2014년 프로젝트를 시작했고 여러 커뮤니티의 아이디어와 좋은 사례를 모아 빠르게 발전하고 있습니다. 이 글은 쿠버네티스가 무엇인지 궁금한 엔지니어를 대상으로 쿠버..." />
@@ -25,7 +25,7 @@
   
   
   <meta property="og:site_name" content="Subicura's Blog" />
-  <meta property="og:title" content="쿠버네티스 시작하기 - 쿠버네티스란 무엇인가?"/>
+  <meta property="og:title" content="쿠버네티스 시작하기 - Kubernetes란 무엇인가?"/>
   
   <meta property="og:description" content="쿠버네티스는 컨테이너를 쉽고 빠르게 배포/확장하고 관리를 자동화해주는 오픈소스 플랫폼입니다. 1주일에 수십억 개의 컨테이너를 생성하는 구글이 내부 배포시스템으로 사용하던 borg를 기반으로 2014년 프로젝트를 시작했고 여러 커뮤니티의 아이디어와 좋은 사례를 모아 빠르게 발전하고 있습니다. 이 글은 쿠버네티스가 무엇인지 궁금한 엔지니어를 대상으로 쿠버..." />
   
@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1558304229804403000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1558568528668359000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -108,15 +108,15 @@
         <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
           <meta itemprop="url" content="https://subicura.com/assets/images/author.jpg" />
         </div>
-        <meta itemprop="headline" content="쿠버네티스 시작하기 - 쿠버네티스란 무엇인가?" />
+        <meta itemprop="headline" content="쿠버네티스 시작하기 - Kubernetes란 무엇인가?" />
         <meta itemprop="mainEntityOfPage" content="/2019/05/19/kubernetes-basic-1.html" />
         <meta itemprop="datePublished" content="2019-05-19 00:00:00 +0900" />
-        <meta itemprop="dateModified" content="2019-05-19 00:00:00 +0900" />
+        <meta itemprop="dateModified" content="2019-05-23 08:30:00 +0900" />
         
         <div class="noarticleimage">
           <div class="post-meta">
             <h1 class="post-title">
-              쿠버네티스 시작하기 - 쿠버네티스란 무엇인가?
+              쿠버네티스 시작하기 - Kubernetes란 무엇인가?
               
                 <span class="series">SERIES 1/4</span>
               
@@ -127,7 +127,7 @@
                 <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ko"></a>
                 
                   
-                    <a class="icon-twitter" href="http://twitter.com/share?text=%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0+-+%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F&amp;url=https://subicura.com/2019/05/19/kubernetes-basic-1.html"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0+-+Kubernetes%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F&amp;url=https://subicura.com/2019/05/19/kubernetes-basic-1.html"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                       <i class="nf nf-fa-twitter"></i><span class="hidden">twitter</span>
                     </a>
@@ -650,7 +650,7 @@
             <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ko"></a>
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0+-+%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F&amp;url=https://subicura.com/2019/05/19/kubernetes-basic-1"
+                <a class="icon-twitter" href="http://twitter.com/share?text=%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0+-+Kubernetes%EB%9E%80+%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F&amp;url=https://subicura.com/2019/05/19/kubernetes-basic-1"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="nf nf-fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
@@ -729,7 +729,7 @@
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1558304229804403000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1558568528668359000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
