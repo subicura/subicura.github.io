@@ -7,7 +7,7 @@ layout: post
 excerpt: macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다.
 comments: yes
 toc: true
-last_modified_at: 2017-11-24T13:40:00+09:00
+last_modified_at: 2019-07-22T09:00:00+09:00
 ---
 
 ![iTerm2 + snazzy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/terminal-neofetch.png)
@@ -130,6 +130,22 @@ last_modified_at: 2017-11-24T13:40:00+09:00
 - `Arrange By`:Date added, `Sort By`:Name
 - 파일 목록을 보여줄 때 날짜별로 그룹화 하고 그룹 내에서 이름으로 다시 정렬
 - 다운로드 폴더 특성상 최근에 받은 파일들을 찾는 경우가 많으므로 유용함
+
+### '₩' 대신 '`' 입력하기
+
+맥 최신 버전에서 한글입력 일땐 **₩**가 입력되고 영문입력 일땐 **\`**가 입력되어 불편한 경우가 많습니다. 무조건 **\`**가 입력되도록 시스템을 설정합니다.
+
+**~/Library/KeyBindings/DefaultkeyBinding.dict**
+
+해당 위치에 파일을 생성하고 다음과 같은 내용을 입력합니다.
+
+{% highlight bash linenos %}
+{
+  "₩" = ("insertText:", "`");
+}
+{% endhighlight %}
+
+프로그램 재시작이 필요합니다.
 
 ## 필수 프로그램
 
