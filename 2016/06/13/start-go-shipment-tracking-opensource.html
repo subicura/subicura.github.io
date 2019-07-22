@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1558568528668359000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1563753506048388000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -180,14 +180,14 @@
 <hr>
 
 <h2 id="어떤걸-만들까">
-<a id="어떤걸-만들까" class="anchor" href="#%EC%96%B4%EB%96%A4%EA%B1%B8-%EB%A7%8C%EB%93%A4%EA%B9%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>어떤걸 만들까?</h2>
+<a class="anchor" href="#%EC%96%B4%EB%96%A4%EA%B1%B8-%EB%A7%8C%EB%93%A4%EA%B9%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>어떤걸 만들까?</h2>
 
 <p>커머스에서 상품이 배송되면 배송상태를 추적해야합니다. 배송이 완료되면 구매확정 버튼을 누르게 할수도 있고, 배송정보 화면을 커스터마이징 할 수도 있습니다. 많은 배송업체가 API를 제공하지 않기 때문에 자동화하기가 까다롭습니다.(대체 다른 서비스들은 어떻게 추적하는거지…?) 그래서 결국 HTML을 파싱하는 방법을 선택합니다. 택배사와 송장번호를 입력하면 택배 사이트에 접속하여 HTML을 읽고 DOM을 파싱하여 정리된 포멧으로 택배정보를 조회하는 서비스를 만듭니다</p>
 
 <p>혹시 누가 만들어 놓지 않았을까 검색을 해보니 무료에 오픈소스로 공개된 건 없는것 같습니다. 질문글도 많고 원하는 사람도 있는거 같으니 오픈소스로 하기 딱인 프로젝트인것 같습니다. 아무도 안쓰는 기능을 만들면 힘들게 오픈해도 반응이 없어서 슬픔 ㅠ</p>
 
 <h2 id="왜-서비스를-따로-분리하여-오픈소스에-go로-만드는가">
-<a id="왜-서비스를-따로-분리하여-오픈소스에-go로-만드는가" class="anchor" href="#%EC%99%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A5%BC-%EB%94%B0%EB%A1%9C-%EB%B6%84%EB%A6%AC%ED%95%98%EC%97%AC-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-go%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>왜 서비스를 따로 분리하여 오픈소스에 Go로 만드는가?</h2>
+<a class="anchor" href="#%EC%99%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A5%BC-%EB%94%B0%EB%A1%9C-%EB%B6%84%EB%A6%AC%ED%95%98%EC%97%AC-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EC%97%90-go%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>왜 서비스를 따로 분리하여 오픈소스에 Go로 만드는가?</h2>
 
 <p>배송조회 서비스는 기존 웹서비스에 하나의 액션으로 구현하는게 아니라 완전히 독립적으로 구현합니다. 몇가지 검토끝에 오픈소스로 공개하기로 하였고 가벼운 프로젝트라 Go언어로 구현합니다.</p>
 
@@ -262,7 +262,7 @@
 <p>배송조회는 <code class="highlighter-rouge">http요청</code> &gt; <code class="highlighter-rouge">html조회</code> &gt; <code class="highlighter-rouge">parsing</code> &gt; <code class="highlighter-rouge">응답</code>하는 과정을 가진 굉장히 단순한 서비스입니다. 새로운 언어를 적용하고 배우는데 가장 좋은 방법은 프로젝트를 한번 해보는 것이고 굉장히 적절한 사이즈의 프로젝트입니다.</p>
 
 <h2 id="go로-개발하기">
-<a id="go로-개발하기" class="anchor" href="#go%EB%A1%9C-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Go로 개발하기</h2>
+<a class="anchor" href="#go%EB%A1%9C-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Go로 개발하기</h2>
 
 <p>Go언어에 대해 설명하는 포스트는 아니지만 Go를 처음 접하는분들을 위해 몇가지 팁을 공유합니다.</p>
 
@@ -289,7 +289,7 @@
 </ul>
 
 <h2 id="개발">
-<a id="개발" class="anchor" href="#%EA%B0%9C%EB%B0%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>개발</h2>
+<a class="anchor" href="#%EA%B0%9C%EB%B0%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>개발</h2>
 
 <p>이제 본격적으로 개발을 해 봅니다. 전체 소스는 <a href="https://github.com/purpleworks/delibird">https://github.com/purpleworks/delibird</a>에 공개되어 있습니다. 상세한 내용은 따로 설명하지 않고 어떤점을 주의하면서 개발하였는지 고민했던 과정을 정리합니다.</p>
 
@@ -320,7 +320,7 @@
 <p>홈쇼핑처럼은 CJ대한통운만 이용하지만 사용자수 1위인 우체국택배도 구현하였습니다. 뭔가 Go 초보티가 많이 나는 소스지만 동작은 합니다. 일단 완성! 버전 0.1.0으로 등록합니다.</p>
 
 <h2 id="오픈소스로">
-<a id="오픈소스로" class="anchor" href="#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EB%A1%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>오픈소스로</h2>
+<a class="anchor" href="#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EB%A1%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>오픈소스로</h2>
 
 <p>어떤 프로젝트를 오픈소스화 한다는건 코딩이외에 추가적인 작업들을 필요로 합니다. 단순히 코드를 정리하고 공개하는것 외에 다른 개발자들의 참여를 유도하고 지속가능한 개발을 하기 위해 소스 품질에 신경을 써야 합니다.</p>
 
@@ -493,7 +493,7 @@ rm '.gitignore'</pre></noscript>
 <p><a href="https://github.com/purpleworks/delibird">https://github.com/purpleworks/delibird</a>오셔서 star한번씩 눌러주시고 관심갖어 주시면 감사하겠습니다. ㅠㅠ</p>
 
 <h2 id="그래서">
-<a id="그래서" class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
+<a class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
 
 <p>내부적으로 사용하던 소스를 오픈하기위에 적절히 리팩토링을 하고 문서를 추가하여 <a href="https://github.com/purpleworks/delibird">https://github.com/purpleworks/delibird</a>에 공개하였습니다. Go에 관심있으신분이나 배송조회에 관심있으신분은 별 눌러주시고 참여해주세요. 열려있습니다!</p>
 
@@ -608,7 +608,7 @@ rm '.gitignore'</pre></noscript>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1558568528668359000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1563753506048388000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

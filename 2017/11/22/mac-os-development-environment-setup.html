@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1558568528668359000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1563753506048388000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -111,7 +111,7 @@
         <meta itemprop="headline" content="본격 macOS에 개발 환경 구축하기" />
         <meta itemprop="mainEntityOfPage" content="/2017/11/22/mac-os-development-environment-setup.html" />
         <meta itemprop="datePublished" content="2017-11-22 00:00:00 +0900" />
-        <meta itemprop="dateModified" content="2017-11-24 13:40:00 +0900" />
+        <meta itemprop="dateModified" content="2019-07-22 09:00:00 +0900" />
         
         <div class="noarticleimage">
           <div class="post-meta">
@@ -161,6 +161,7 @@
 <li class="toc-entry toc-h3"><a href="#system-preferences">System Preferences</a></li>
 <li class="toc-entry toc-h3"><a href="#finder-preference">Finder Preference</a></li>
 <li class="toc-entry toc-h3"><a href="#download-folder-option">Download Folder Option</a></li>
+<li class="toc-entry toc-h3"><a href="#-대신--입력하기">‘₩’ 대신 ‘`’ 입력하기</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#필수-프로그램">필수 프로그램</a>
@@ -224,7 +225,7 @@
 <hr>
 
 <h2 id="키보드-기호-설명">
-<a id="키보드-기호-설명" class="anchor" href="#%ED%82%A4%EB%B3%B4%EB%93%9C-%EA%B8%B0%ED%98%B8-%EC%84%A4%EB%AA%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>키보드 기호 설명</h2>
+<a class="anchor" href="#%ED%82%A4%EB%B3%B4%EB%93%9C-%EA%B8%B0%ED%98%B8-%EC%84%A4%EB%AA%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>키보드 기호 설명</h2>
 
 <p>단축키 입력과 관련해서 기호를 사용합니다. 잘 기억해 둡니다.</p>
 
@@ -268,12 +269,12 @@
 </blockquote>
 
 <h2 id="시스템-설정">
-<a id="시스템-설정" class="anchor" href="#%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>시스템 설정</h2>
+<a class="anchor" href="#%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>시스템 설정</h2>
 
 <p>본격적인 개발환경 설정에 앞서 몇 가지 유용한 시스템 설정을 확인해봅니다. macOS High Sierra를 기준으로 하였으나 다른 버전도 비슷비슷할 것으로 보입니다. 반드시 동일하게 설정할 필요는 없으며 보고 괜찮다 싶은 항목만 적용하면 됩니다.</p>
 
 <h3 id="system-preferences">
-<a id="system-preferences" class="anchor" href="#system-preferences" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Preferences</h3>
+<a class="anchor" href="#system-preferences" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Preferences</h3>
 
 <p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/system-preferences.png" alt=""></p>
 
@@ -348,7 +349,7 @@
 </ul>
 
 <h3 id="finder-preference">
-<a id="finder-preference" class="anchor" href="#finder-preference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Finder Preference</h3>
+<a class="anchor" href="#finder-preference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Finder Preference</h3>
 
 <p align="center">
     <img src="/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-preferences.png" style="width: 450px">
@@ -373,7 +374,7 @@
 </ul>
 
 <h3 id="download-folder-option">
-<a id="download-folder-option" class="anchor" href="#download-folder-option" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download Folder Option</h3>
+<a class="anchor" href="#download-folder-option" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download Folder Option</h3>
 
 <p align="center">
     <img src="/assets/article_images/2017-11-22-mac-os-development-environment-setup/download-option.png" style="width: 250px">
@@ -390,13 +391,34 @@
   <li>다운로드 폴더 특성상 최근에 받은 파일들을 찾는 경우가 많으므로 유용함</li>
 </ul>
 
+<h3 id="-대신--입력하기">
+<a class="anchor" href="#-%EB%8C%80%EC%8B%A0--%EC%9E%85%EB%A0%A5%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>‘₩’ 대신 ‘`’ 입력하기</h3>
+
+<p>맥 최신 버전에서 한글입력 일땐 <strong>₩</strong>가 입력되고 영문입력 일땐 <strong>`</strong>가 입력되어 불편한 경우가 많습니다. 무조건 <strong>`</strong>가 입력되도록 시스템을 설정합니다.</p>
+
+<p><strong>~/Library/KeyBindings/DefaultkeyBinding.dict</strong></p>
+
+<p>해당 위치에 파일을 생성하고 다음과 같은 내용을 입력합니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="code"><pre><span class="o">{</span>
+  <span class="s2">"₩"</span> <span class="o">=</span> <span class="o">(</span><span class="s2">"insertText:"</span>, <span class="s2">"</span><span class="sb">`</span><span class="s2">");
+}</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>프로그램 재시작이 필요합니다.</p>
+
 <h2 id="필수-프로그램">
-<a id="필수-프로그램" class="anchor" href="#%ED%95%84%EC%88%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>필수 프로그램</h2>
+<a class="anchor" href="#%ED%95%84%EC%88%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>필수 프로그램</h2>
 
 <p>시스템 설정을 완료했으니 개발 환경 구축을 위한 필수 프로그램을 설치합니다.</p>
 
 <h3 id="xcode">
-<a id="xcode" class="anchor" href="#xcode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Xcode</h3>
+<a class="anchor" href="#xcode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Xcode</h3>
 
 <p>macOS에는 기본적으로 <code class="highlighter-rouge">gcc</code>, <code class="highlighter-rouge">make</code>와 같은 컴파일 도구가 설치되어 있지 않기 때문에 명령어 도구<sub>Command Line Tools</sub>를 설치해야 합니다. 예전에는 Xcode를 전체 설치하고 추가로 명령어 도구를 설치해야 했으나 Xcode용량이 꽤 크고 모든 사람이 IDE가 필요한 게 아니기 때문에 명령어 도구만 따로 설치할 수 있게 변경되었습니다.</p>
 
@@ -423,7 +445,7 @@ clang: error: no input files</pre></td>
 <p><a href="https://developer.apple.com/xcode/">Xcode 홈페이지</a></p>
 
 <h3 id="homebrew">
-<a id="homebrew" class="anchor" href="#homebrew" aria-hidden="true"><span class="octicon octicon-link"></span></a>homebrew</h3>
+<a class="anchor" href="#homebrew" aria-hidden="true"><span class="octicon octicon-link"></span></a>homebrew</h3>
 
 <p>brew<sub>homebrew</sub>는 각종 커맨드라인 프로그램(요즘은 GUI도..)을 손쉽게 설치해주는 맥용 패키지 매니저입니다. 리눅스의 <code class="highlighter-rouge">apt</code>나  <code class="highlighter-rouge">yum</code>과 비슷하며 brew외에 <a href="https://www.macports.org/">MacPorts</a> 라는 패키지 메니저가 있는데 몇몇 단점으로 요즘은 거의 brew를 사용하는 추세입니다. 다양한 프로그램을 복잡한 빌드과정 없이 손쉽게 설치할 수 있고 업데이트, 관리도 간단하므로 안쓸 이유가 없는 필수 프로그램입니다. <code class="highlighter-rouge">그냥 홈페이지 가서 다운로드 하고 설치하는 게 편한데..</code>라고 하는분들이 있는데 나중에 업데이트나 삭제를 생각해보면 글쎄요.. brew 쓰세요!</p>
 
@@ -450,7 +472,7 @@ Your system is ready to brew.</pre></td>
 <p><a href="https://brew.sh/">Homebrew 홈페이지</a> / <a href="https://docs.brew.sh/Manpage.html">brew 명령어</a> / <a href="http://formulae.brew.sh/">brew 패키지 검색</a></p>
 
 <h3 id="git">
-<a id="git" class="anchor" href="#git" aria-hidden="true"><span class="octicon octicon-link"></span></a>git</h3>
+<a class="anchor" href="#git" aria-hidden="true"><span class="octicon octicon-link"></span></a>git</h3>
 
 <p>버전 관리 도구로 유명한 <code class="highlighter-rouge">git</code>입니다. 다들 아시죠? macOS에 기본으로 설치되어 있지만 최신 버전이 아니므로 <code class="highlighter-rouge">brew</code>를 이용해서 업데이트 합니다. <code class="highlighter-rouge">git-lfs</code> 는 Git Large File Storage로 용량이 큰 바이너리 파일을 git으로 관리할 때 유용합니다. git 설치할 때 같이 설치합니다.</p>
 
@@ -481,12 +503,12 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 <p><a href="https://git-scm.com/">Git 홈페이지</a> / <a href="https://git-lfs.github.com/">Git LFS 홈페이지</a></p>
 
 <h2 id="터미널-설정">
-<a id="터미널-설정" class="anchor" href="#%ED%84%B0%EB%AF%B8%EB%84%90-%EC%84%A4%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>터미널 설정</h2>
+<a class="anchor" href="#%ED%84%B0%EB%AF%B8%EB%84%90-%EC%84%A4%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>터미널 설정</h2>
 
 <p>시스템 설정도 하고 필수 프로그램도 설치했으니 본격적으로 터미널을 설정해 봅니다.</p>
 
 <h3 id="iterm2">
-<a id="iterm2" class="anchor" href="#iterm2" aria-hidden="true"><span class="octicon octicon-link"></span></a>iTerm2</h3>
+<a class="anchor" href="#iterm2" aria-hidden="true"><span class="octicon octicon-link"></span></a>iTerm2</h3>
 
 <p>macOS에 기본으로 설치되어 있는 Terminal 앱 대신 iTerm2를 터미널 앱으로 사용합니다. iTerm2는 기본 앱에 없는 <a href="https://www.iterm2.com/features.html">다양한 기능</a>이 있고 손쉽게 테마를 설정할 수 있습니다.</p>
 
@@ -551,7 +573,7 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 <p><a href="https://www.iterm2.com">iTerm2 홈페이지</a> / <a href="https://www.iterm2.com/downloads.html">iTerm2 다운로드</a> / <a href="https://github.com/sindresorhus/iterm2-snazzy">snazzy github</a></p>
 
 <h3 id="zsh-with-oh-my-zsh">
-<a id="zsh-with-oh-my-zsh" class="anchor" href="#zsh-with-oh-my-zsh" aria-hidden="true"><span class="octicon octicon-link"></span></a>zsh with oh-my-zsh</h3>
+<a class="anchor" href="#zsh-with-oh-my-zsh" aria-hidden="true"><span class="octicon octicon-link"></span></a>zsh with oh-my-zsh</h3>
 
 <p>iTerm2도 설치하고 테마도 설치했으니 쉘을 바꿀 차례입니다.</p>
 
@@ -659,12 +681,12 @@ prompt pure</pre></td>
 <p><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh 홈페이지</a> / <a href="https://github.com/sindresorhus/pure">pure github</a></p>
 
 <h2 id="커맨드라인-애플리케이션">
-<a id="커맨드라인-애플리케이션" class="anchor" href="#%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%9D%BC%EC%9D%B8-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>커맨드라인 애플리케이션</h2>
+<a class="anchor" href="#%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%9D%BC%EC%9D%B8-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>커맨드라인 애플리케이션</h2>
 
 <p>이제 터미널이 이뻐졌으니 각종 도구를 설정해봅니다.</p>
 
 <h3 id="vim">
-<a id="vim" class="anchor" href="#vim" aria-hidden="true"><span class="octicon octicon-link"></span></a>vim</h3>
+<a class="anchor" href="#vim" aria-hidden="true"><span class="octicon octicon-link"></span></a>vim</h3>
 
 <p>vim은 기본으로 설치된 터미널용 에디터로 GUI 환경의 에디터를 사용할 수 있는 macOS 환경에서는 일부 <del>고오오급</del> 개발자를 제외하고는 잘 쓰이지 않습니다. 하지만 터미널 작업을 하다 보면 간단하게 수정할 파일이 있고 git 커밋메시지를 작성할 때 종종 사용하게 됩니다.</p>
 
@@ -741,7 +763,7 @@ brew cask install font-hack-nerd-font</pre></td>
 <p><a href="https://neovim.io/">neovim 홈페이지</a> / <a href="https://github.com/ryanoasis/nerd-fonts">Nerd Font github</a> / <a href="https://github.com/SpaceVim/SpaceVim">SpaceVim github</a> / <a href="http://spacevim.org/documentation/">SpaceVim 설정문서</a></p>
 
 <h3 id="fzf">
-<a id="fzf" class="anchor" href="#fzf" aria-hidden="true"><span class="octicon octicon-link"></span></a>fzf</h3>
+<a class="anchor" href="#fzf" aria-hidden="true"><span class="octicon octicon-link"></span></a>fzf</h3>
 
 <p>fzf는 강력하고 엄청나게 빠른 fuzzy finder 도구입니다. 증분 검색을 통하여 원하는 파일이나 히스토리를 쉽고 빠르게 찾을 수 있게 해줍니다. 정확하게 원하는 값을 입력하지 않고 일부만 입력해도 실시간으로 검색 결과를 보여줍니다.</p>
 
@@ -805,7 +827,7 @@ brew cask install font-hack-nerd-font</pre></td>
 <p><a href="https://github.com/junegunn/fzf">fzf github</a></p>
 
 <h3 id="fasd">
-<a id="fasd" class="anchor" href="#fasd" aria-hidden="true"><span class="octicon octicon-link"></span></a>fasd</h3>
+<a class="anchor" href="#fasd" aria-hidden="true"><span class="octicon octicon-link"></span></a>fasd</h3>
 
 <p>fasd는 사용빈도가 높은 파일 또는 디렉토리 검색을 편하게 해서 생산성을 향상시켜주는 도구입니다. 열어본 파일이나 이동한 디렉토리를 기억하고 우선순위를 정해서 빠르게 검색할 수 있게 도와줍니다.</p>
 
@@ -869,7 +891,7 @@ brew cask install font-hack-nerd-font</pre></td>
 <p><a href="https://github.com/clvv/fasd">fasd github</a></p>
 
 <h3 id="tmux">
-<a id="tmux" class="anchor" href="#tmux" aria-hidden="true"><span class="octicon octicon-link"></span></a>tmux</h3>
+<a class="anchor" href="#tmux" aria-hidden="true"><span class="octicon octicon-link"></span></a>tmux</h3>
 
 <p>tmux는 터미널 멀티플렉서<sub>Terminal MUltipleXer</sub>라고 합니다. 하나의 화면에서 창을 여러 개 만들 수 있고 가로 분할, 세로 분할 할 수도 있습니다. <code class="highlighter-rouge">어, 그거 iTerm에서 그냥 되는데요?</code>라고 말씀하시면 딱히 할말은 없지만<del>반박 불가</del>.. 알아두면 원격 리눅스 서버 환경에서 유용하게 쓸 수 있고 무엇보다 꽤나 있어보이는 화면을 만들 수 있습니다.</p>
 
@@ -1035,7 +1057,7 @@ cp .tmux/.tmux.conf.local .</pre></td>
 <p><a href="https://github.com/tmux/tmux">tmux github</a> / <a href="https://github.com/gpakosz/.tmux">Oh My Tmux!</a></p>
 
 <h3 id="tmuxinator">
-<a id="tmuxinator" class="anchor" href="#tmuxinator" aria-hidden="true"><span class="octicon octicon-link"></span></a>tmuxinator</h3>
+<a class="anchor" href="#tmuxinator" aria-hidden="true"><span class="octicon octicon-link"></span></a>tmuxinator</h3>
 
 <p>tmux의 쓸모를 한층 더 높여주는 게 tmuxinator입니다. 단축키로 창을 만들고 화면을 분할하는 것을 설정파일로 해줍니다.</p>
 
@@ -1126,12 +1148,12 @@ gem install tmuxinator</pre></td>
 <p><a href="https://github.com/tmuxinator/tmuxinator">tmuxinator github</a></p>
 
 <h2 id="추천-애플리케이션">
-<a id="추천-애플리케이션" class="anchor" href="#%EC%B6%94%EC%B2%9C-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>추천 애플리케이션</h2>
+<a class="anchor" href="#%EC%B6%94%EC%B2%9C-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>추천 애플리케이션</h2>
 
 <p>기본적인 프로그램 외에 사용하면 꽤 쓸만한 프로그램을 소개합니다.</p>
 
 <h3 id="docker">
-<a id="docker" class="anchor" href="#docker" aria-hidden="true"><span class="octicon octicon-link"></span></a>docker</h3>
+<a class="anchor" href="#docker" aria-hidden="true"><span class="octicon octicon-link"></span></a>docker</h3>
 
 <p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/docker-for-mac.png" alt=""></p>
 
@@ -1142,7 +1164,7 @@ gem install tmuxinator</pre></td>
 <p><a href="https://www.docker.com/">Docker 홈페이지</a> / <a href="https://www.docker.com/docker-mac">Docker for mac download</a></p>
 
 <h3 id="tig">
-<a id="tig" class="anchor" href="#tig" aria-hidden="true"><span class="octicon octicon-link"></span></a>tig</h3>
+<a class="anchor" href="#tig" aria-hidden="true"><span class="octicon octicon-link"></span></a>tig</h3>
 
 <p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/tig.png" alt=""></p>
 
@@ -1151,7 +1173,7 @@ gem install tmuxinator</pre></td>
 <p><a href="https://github.com/jonas/tig">tig github</a></p>
 
 <h3 id="jq">
-<a id="jq" class="anchor" href="#jq" aria-hidden="true"><span class="octicon octicon-link"></span></a>jq</h3>
+<a class="anchor" href="#jq" aria-hidden="true"><span class="octicon octicon-link"></span></a>jq</h3>
 
 <p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/jq.png" alt=""></p>
 
@@ -1160,28 +1182,28 @@ gem install tmuxinator</pre></td>
 <p><a href="https://stedolan.github.io/jq/">jq github</a></p>
 
 <h3 id="ngrok">
-<a id="ngrok" class="anchor" href="#ngrok" aria-hidden="true"><span class="octicon octicon-link"></span></a>ngrok</h3>
+<a class="anchor" href="#ngrok" aria-hidden="true"><span class="octicon octicon-link"></span></a>ngrok</h3>
 
 <p>로컬 서버를 외부로 터널링을 통해 오픈해주는 도구입니다. 보통 로컬에 개발 서버를 띄우면 외부에서 접근하기가 어려운데 ngrok을 이용하여 간단하게 오픈할 수 있습니다. 사용법도 간단합니다.</p>
 
 <p><a href="https://ngrok.com/">ngrok 홈페이지</a></p>
 
 <h3 id="asciinema">
-<a id="asciinema" class="anchor" href="#asciinema" aria-hidden="true"><span class="octicon octicon-link"></span></a>asciinema</h3>
+<a class="anchor" href="#asciinema" aria-hidden="true"><span class="octicon octicon-link"></span></a>asciinema</h3>
 
 <p>터미널을 <strong>텍스트</strong>로 녹화하는 프로그램입니다. 영상으로 녹화하는 것보다 용량이 적고 품질도 훌륭한 편입니다. 제 블로그에서 자주 볼 수 있습니다.</p>
 
 <p><a href="https://asciinema.org/">asciinema 홈페이지</a></p>
 
 <h3 id="neofetch">
-<a id="neofetch" class="anchor" href="#neofetch" aria-hidden="true"><span class="octicon octicon-link"></span></a>neofetch</h3>
+<a class="anchor" href="#neofetch" aria-hidden="true"><span class="octicon octicon-link"></span></a>neofetch</h3>
 
 <p>지금 보고 있는 포스트 첫번째 이미지에서 사용한 프로그램입니다. 간단하게 시스템 상태를 보여줍니다.</p>
 
 <p><a href="https://github.com/dylanaraps/neofetch">neofetch github</a></p>
 
 <h2 id="그래서">
-<a id="그래서" class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
+<a class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
 
 <p>너무 오랫동안 블로깅을 못 하고 있어서 가볍게 <del>급하게</del> 작성한 포스트입니다. 새로 산 맥북프로를 셋팅하고 설치 프로그램 목록을 정리하던 중에 우연찮게 몇몇 분들한테 터미널 설정에 대한 질문을 받으면서 환경설정에 대한 글을 쓰면 괜찮다고 생각했습니다.</p>
 
@@ -1306,7 +1328,7 @@ gem install tmuxinator</pre></td>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1558568528668359000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1563753506048388000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

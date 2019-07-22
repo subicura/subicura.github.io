@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2019-05-23T08:42:08+09:00</updated>
+ <updated>2019-07-22T08:58:26+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -957,6 +957,23 @@
   &lt;li&gt;파일 목록을 보여줄 때 날짜별로 그룹화 하고 그룹 내에서 이름으로 다시 정렬&lt;/li&gt;
   &lt;li&gt;다운로드 폴더 특성상 최근에 받은 파일들을 찾는 경우가 많으므로 유용함&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&quot;-대신--입력하기&quot;&gt;‘₩’ 대신 ‘`’ 입력하기&lt;/h3&gt;
+
+&lt;p&gt;맥 최신 버전에서 한글입력 일땐 &lt;strong&gt;₩&lt;/strong&gt;가 입력되고 영문입력 일땐 &lt;strong&gt;`&lt;/strong&gt;가 입력되어 불편한 경우가 많습니다. 무조건 &lt;strong&gt;`&lt;/strong&gt;가 입력되도록 시스템을 설정합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;~/Library/KeyBindings/DefaultkeyBinding.dict&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;해당 위치에 파일을 생성하고 다음과 같은 내용을 입력합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;₩&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;insertText:&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;);
+}&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;프로그램 재시작이 필요합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;필수-프로그램&quot;&gt;필수 프로그램&lt;/h2&gt;
 

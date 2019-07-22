@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1558568528668359000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1563753506048388000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -208,7 +208,7 @@
 <hr>
 
 <h2 id="서버를-관리한다는-것">
-<a id="서버를-관리한다는-것" class="anchor" href="#%EC%84%9C%EB%B2%84%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%9C%EB%8B%A4%EB%8A%94-%EA%B2%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>서버를 관리한다는 것</h2>
+<a class="anchor" href="#%EC%84%9C%EB%B2%84%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%9C%EB%8B%A4%EB%8A%94-%EA%B2%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>서버를 관리한다는 것</h2>
 
 <p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration.jpg" alt="복잡하고 어려운 서버관리"></p>
 
@@ -225,7 +225,7 @@
 <p><a href="https://en.wikipedia.org/wiki/DevOps">DevOps</a>의 등장으로 개발주기가 짧아지면서 배포는 더 자주 이루어지고 <a href="https://en.wikipedia.org/wiki/Microservices">마이크로서비스 아키텍쳐</a>가 유행하면서 프로그램은 더 잘게 쪼개어져 관리는 더 복잡해집니다. 새로운 툴은 계속해서 나오고 클라우드의 발전으로 설치해야 할 서버가 수백, 수천대에 이르는 <code class="highlighter-rouge">1 나누기 0</code> <del>답이 없는</del> 같은 상황에서 <a href="https://www.docker.com/">도커(Docker)</a> 가 등장하고 서버관리 방식이 완전히 바뀌게 됩니다.</p>
 
 <h2 id="도커의-역사">
-<a id="도커의-역사" class="anchor" href="#%EB%8F%84%EC%BB%A4%EC%9D%98-%EC%97%AD%EC%82%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커의 역사</h2>
+<a class="anchor" href="#%EB%8F%84%EC%BB%A4%EC%9D%98-%EC%97%AD%EC%82%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커의 역사</h2>
 
 <p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers.png" alt="The future of Linux Containers"></p>
 
@@ -238,7 +238,7 @@
 <p><del>도커에서한</del> 2016년 설문조사에서 90%가 개발에 사용중이고 80%가 DevOps에 사용할 예정이며 58%가 운영환경에서 사용중이라고 합니다. 2014년 도커 서울 밋업을 시작할 때만 해도 대부분의 사람들이 도커를 잘 모르고 개념도 이해하지 못했는데 이제는 거의 모르는 사람이 없을 정도로 널리 쓰이고 있습니다.</p>
 
 <h2 id="도커란">
-<a id="도커란" class="anchor" href="#%EB%8F%84%EC%BB%A4%EB%9E%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커란?</h2>
+<a class="anchor" href="#%EB%8F%84%EC%BB%A4%EB%9E%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커란?</h2>
 
 <p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works.png" alt="도커는 컨테이너를 관리하는 플랫폼"></p>
 
@@ -297,14 +297,14 @@
 <p>도커 이미지는 <a href="https://hub.docker.com/">Docker hub</a>에 등록하거나 <a href="https://docs.docker.com/registry/">Docker Registry</a> 저장소를 직접 만들어 관리할 수 있습니다. 현재 공개된 도커 이미지는 50만개가 넘고 Docker hub의 이미지 다운로드 수는 80억회에 이릅니다. 누구나 쉽게 이미지를 만들고 배포할 수 있습니다.</p>
 
 <h2 id="왜-이렇게-핫한가">
-<a id="왜-이렇게-핫한가" class="anchor" href="#%EC%99%9C-%EC%9D%B4%EB%A0%87%EA%B2%8C-%ED%95%AB%ED%95%9C%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>왜 이렇게 핫한가?</h2>
+<a class="anchor" href="#%EC%99%9C-%EC%9D%B4%EB%A0%87%EA%B2%8C-%ED%95%AB%ED%95%9C%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>왜 이렇게 핫한가?</h2>
 
 <p>도커는 완전히 새로운 기술이 아니며 이미 존재하는 기술을 잘 포장했다고 볼 수 있습니다. <del>(마치 최신기술을 잘 포장해서 만든 아이폰처럼)</del></p>
 
 <p>컨테이너, <a href="https://en.wikipedia.org/wiki/Overlay_network">오버레이 네트워크</a><sub>overlay network</sub>, <a href="https://en.wikipedia.org/wiki/UnionFS">유니온 파일 시스템</a><sub>union file systems</sub>등 이미 존재하는 기술을 도커처럼 잘 조합하고 사용하기 쉽게 만든 것은 없었고 사용자들이 원하는 기능을 간단하지만 획기적인 아이디어로 구현하였습니다.</p>
 
 <h3 id="레이어-저장방식">
-<a id="레이어-저장방식" class="anchor" href="#%EB%A0%88%EC%9D%B4%EC%96%B4-%EC%A0%80%EC%9E%A5%EB%B0%A9%EC%8B%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>레이어 저장방식</h3>
+<a class="anchor" href="#%EB%A0%88%EC%9D%B4%EC%96%B4-%EC%A0%80%EC%9E%A5%EB%B0%A9%EC%8B%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>레이어 저장방식</h3>
 
 <p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer.png" alt="Docker Layer"></p>
 
@@ -317,14 +317,14 @@
 <p>가상화의 특성상 이미지 용량이 크고 여러대의 서버에 배포하는걸 감안하면 단순하지만 엄청나게 영리한 설계입니다.</p>
 
 <h3 id="이미지-경로">
-<a id="이미지-경로" class="anchor" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EA%B2%BD%EB%A1%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>이미지 경로</h3>
+<a class="anchor" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EA%B2%BD%EB%A1%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>이미지 경로</h3>
 
 <p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url.png" alt="Docker image url"></p>
 
 <p>이미지는 url 방식으로 관리하며 태그를 붙일 수 있습니다. ubuntu 14.04 이미지는 <code class="highlighter-rouge">docker.io/library/ubuntu:14.04</code> 또는 <code class="highlighter-rouge">docker.io/library/ubuntu:trusty</code> 이고 <code class="highlighter-rouge">docker.io/library</code>는 생략가능하여 <code class="highlighter-rouge">ubuntu:14.04</code> 로 사용할 수 있습니다. 이러한 방식은 이해하기 쉽고 편리하게 사용할 수 있으며 태그 기능을 잘 이용하면 테스트나 롤백도 쉽게 할 수 있습니다.</p>
 
 <h3 id="dockerfile">
-<a id="dockerfile" class="anchor" href="#dockerfile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dockerfile</h3>
+<a class="anchor" href="#dockerfile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dockerfile</h3>
 
 <noscript><pre># vertx/vertx3 debian version
 FROM subicura/vertx3:3.3.1
@@ -346,19 +346,19 @@ CMD ["start.sh"]</pre></noscript>
 <p>이것은 굉장히 간단하지만 유용한 아이디어인데, 서버에 어떤 프로그램을 설치하려고 이것저것 의존성 패키지를 설치하고 설정파일을 만들었던 경험이 있다면 더 이상 그 과정을 블로깅 하거나 메모장에 적지 말고 <code class="highlighter-rouge">Dockerfile</code>로 관리하면 됩니다. 이 파일은 소스와 함께 버전 관리 되고 원한다면 누구나 이미지 생성과정을 보고 수정할 수 있습니다.</p>
 
 <h3 id="docker-hub">
-<a id="docker-hub" class="anchor" href="#docker-hub" aria-hidden="true"><span class="octicon octicon-link"></span></a>Docker Hub</h3>
+<a class="anchor" href="#docker-hub" aria-hidden="true"><span class="octicon octicon-link"></span></a>Docker Hub</h3>
 
 <p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull.png" alt="Docker Hub Hits 5 Billion Pulls(2016/08)"></p>
 
 <p>도커 이미지의 용량은 보통 수백메가로 수기가가 넘는 경우도 흔합니다. 이렇게 큰 용량의 이미지를 서버에 저장하고 관리하는 것은 쉽지 않은데 도커는 Docker hub를 통해 공개 이미지를 무료로 관리해 줍니다. 하루에도 엄청난 용량의 이미지가 전세계에서 다운로드 되고 트래픽 비용만 해도 어마어마 할 것 같은데 그것이 다 무료!입니다.</p>
 
 <h3 id="command와-api">
-<a id="command와-api" class="anchor" href="#command%EC%99%80-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command와 API</h3>
+<a class="anchor" href="#command%EC%99%80-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command와 API</h3>
 
 <p>도커 클라이언트의 커맨드 명령어는 정말 자아아알 만들어져 있습니다. 대부분의 명령어는 직관적이고 사용하기 쉬우며 컨테이너의 복잡한 시스템 구성을 이해하지 못하더라도 편하게 사용할 수 있습니다. 또한 http기반의 Rest API도 지원하여 확장성이 굉장히 좋고 훌륭한 3rd party 툴이 나오기 좋은 환경입니다.</p>
 
 <h3 id="유용한-새로운-기능들">
-<a id="유용한-새로운-기능들" class="anchor" href="#%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%83%88%EB%A1%9C%EC%9A%B4-%EA%B8%B0%EB%8A%A5%EB%93%A4" aria-hidden="true"><span class="octicon octicon-link"></span></a>유용한 새로운 기능들</h3>
+<a class="anchor" href="#%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%83%88%EB%A1%9C%EC%9A%B4-%EA%B8%B0%EB%8A%A5%EB%93%A4" aria-hidden="true"><span class="octicon octicon-link"></span></a>유용한 새로운 기능들</h3>
 
 <p>도커는 발전속도가 아주 빠른 오픈소스입니다. 사용하면서 부족하다고 느꼈던 부분은 빠르게 개선되고 새로운 버전이 나오면 유용한 기능이 대폭 추가됩니다. 어떻게 보면 프로그램을 작은 조각으로 나누고 여러개의 프로그램을 조합하여 동작시키는 유닉스의 철학에는 맞지 않지만.. 너무 잘합니다. ㅠㅠ</p>
 
@@ -367,14 +367,14 @@ CMD ["start.sh"]</pre></noscript>
 <p>새로운 기능이 계속 추가되고 있고 다음 릴리즈가 기대됩니다.</p>
 
 <h3 id="훌륭한-생태계">
-<a id="훌륭한-생태계" class="anchor" href="#%ED%9B%8C%EB%A5%AD%ED%95%9C-%EC%83%9D%ED%83%9C%EA%B3%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>훌륭한 생태계</h3>
+<a class="anchor" href="#%ED%9B%8C%EB%A5%AD%ED%95%9C-%EC%83%9D%ED%83%9C%EA%B3%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>훌륭한 생태계</h3>
 
 <p>도커는 굉장히 큰 생태계를 가지고 있고 커다란 기업과 협력하여 사실상 클라우드 컨테이너 세계의 <a href="https://ko.wikipedia.org/wiki/%EC%82%AC%EC%8B%A4%EC%83%81_%ED%91%9C%EC%A4%80">de facto</a>가 되었습니다. 로깅, 모니터링, 스토리지, 네트워크, 컨테이너 관리, 배포등 다양한 분야에서 다양한 툴들이 존재하며 아예 <a href="https://coreos.com/why/">도커를 위한 OS(coreos-&gt; container linux)</a>도 존재합니다.</p>
 
 <p>현재 도커를 기반으로한 오픈소스 프로젝트는 10만개가 넘고 굉장히 활발하게 진행되고 있습니다.</p>
 
 <h3 id="커뮤니티-지원">
-<a id="커뮤니티-지원" class="anchor" href="#%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0-%EC%A7%80%EC%9B%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>커뮤니티 지원</h3>
+<a class="anchor" href="#%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0-%EC%A7%80%EC%9B%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>커뮤니티 지원</h3>
 
 <p>도커는 기술기업답지 않게 홍보와 커뮤니티 관리에 굉장히 신경쓰고 있습니다. 커뮤니티를 위한 스티커나 티셔츠를 무료로 제공하고 필요하면 연사요청도 할 수 있습니다. 홈페이지에서는 전세계에서 열리는 밋업 상황을 볼 수 있고 일주일마다 발송되는 <a href="https://blog.docker.com/docker-weekly-archives/">뉴스레터</a>에는 다양한 개발자들의 글이 실려있습니다.</p>
 
@@ -383,14 +383,14 @@ CMD ["start.sh"]</pre></noscript>
 <p>운이 좋았지만 도커 오피스에 방문해서 사무실을 구경할 수도 있었고 고오오오급 개발자 <a href="https://twitter.com/jpetazzo">Jérôme Petazzoni</a>와 직접 이야기를 나눌수 있었습니다! <del>아 또 가고 싶다</del></p>
 
 <h3 id="moby-dock">
-<a id="moby-dock" class="anchor" href="#moby-dock" aria-hidden="true"><span class="octicon octicon-link"></span></a>moby dock</h3>
+<a class="anchor" href="#moby-dock" aria-hidden="true"><span class="octicon octicon-link"></span></a>moby dock</h3>
 
 <p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals.jpg" alt="Tux(linux) - Moby Dock(docker) - Gopher (golang)"></p>
 
 <p>도커는 넘나 귀여운 고래를 로고로 하고 있습니다. 로고 스티커는 항상 인기가 넘치고 로고가 그려진 티셔츠는 입고 돌아다녀도 개발자처럼 보이지 않습니다. 도커가 성공한 가장 큰 이유는 귀여운 고래 덕분이라고 생각합니다.(엄근진) <del>오픈소스가 성공하려면 귀여운 동물 캐릭터를 사용하세요!</del></p>
 
 <h2 id="정리">
-<a id="정리" class="anchor" href="#%EC%A0%95%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>정리</h2>
+<a class="anchor" href="#%EC%A0%95%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>정리</h2>
 <p>여기까지 도커에 대해 기본적인 내용을 아주 얕게 살펴보았습니다. 이제 실전으로 들어가봅시다!</p>
 
 <hr>
@@ -511,7 +511,7 @@ CMD ["start.sh"]</pre></noscript>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1558568528668359000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1563753506048388000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
