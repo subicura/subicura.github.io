@@ -5,6 +5,11 @@
   {% include head.html %}
   <body itemscope itemtype="http://schema.org/BlogPosting">
     {% include header.html %}
+
+    {% if site.top_banner %}
+      {% include top_banner.html %}
+    {% endif %}
+
     <main class="content" role="main">
       <article class="post">
         <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
