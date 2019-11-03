@@ -32,14 +32,16 @@ permalink: /about/
 - 퍼플웍스 / Software Engineer (2010~)
   - .NET MVC/Java(spring)/Ruby on rails/Go를 이용한 백엔드 개발
   - AngularJS/ReactJS를 이용한 프론트엔드 개발, iOS/android 앱 개발
-  - Docker를 이용한 서버 관리, OpenGL을 이용한 동영상 제작 및 인코딩 작업
-  - Processing/Openframeworks를 이용한 뉴미디어 작업
+  - Docker, Kubernetes, AWS를 이용한 서버 인프라 관리
+  - Processing/Openframeworks(OpenGL)을 이용한 뉴미디어 작업
 - 도전하는사람들 / Software Engineer (2006~2010 / 병역특례)
   - 군(해군/공군/합참) 전문처리 커스터마이징 및 연동 개발
   - 솔루션 사업부 소속으로 JAVA를 이용한 홈페이지 개발
 
 ## Presentation
  
+- Open Infrastructure & Cloud Native Days Korea 2019 - [쿠버네티스를 이용한 기능 브랜치별 테스트 서버 만들기 (GitOps CI/CD)](https://drive.google.com/file/d/1WdMCzC-L7uY2qExGSZAXOWWvU_CobPvu/view)
+- GDG DevFest Seoul 2018 - [마이크로서비스 아키텍처에 서비스메시 끼얹기 (feat. Istio)](https://drive.google.com/open?id=1ZfGEN5WmHENxkOH3Lr8roL2aSYF9Qpp4)
 - microservices x kubernetes(2018) - [An Introduction to Kubernetes](https://subicura.com/remark/kubernetes-intro.html)
 - AWS Summit Seoul 2017(2017) - [Docker Swarm on AWS](https://youtu.be/16LNWMqphOA)
 - 홈쇼핑처럼x개발자처럼 첫번째이야기(2016) - [홈쇼핑처럼 개발후기 / 도커 어떻게 사용하고 배포할까](https://www.facebook.com/purpleworks.co.kr/videos/1206111219462679/)
@@ -47,6 +49,15 @@ permalink: /about/
 - Docker seoul meetup #3(2015) - [Launching Containers with fleet](https://www.slideshare.net/subicura/launching-containers-with-fleet)
 - Docker seoul meetup #2(2014) - [confd, systemd, fleet을 이용한 어플리케이션 배포 in CoreOS](https://www.slideshare.net/subicura/confd-systemd-fleet-in-coreos)
 - Docker seoul meetup #1(2014) - [CoreOS를 이용한 도커 컨테이너 배포](https://www.slideshare.net/subicura/coreos-38279596)
+
+## Writing
+
+- 마이크로소프트웨어 398호(2019) - 클라우드의 어떤 것(Something Cloud) - 쿠버네티스와 GitOps 도입으로 배포 프로세스 개선하기
+- 마이크로소프트웨어 394호(2018) - 클라우드 혹은 도전(CLOUD or DARE) - 이스티오 서비스 메시를 이용한 MSA 구축
+
+## Workshop
+
+- 삼성전자, SK, 44bits, T아카데미, DevOps Korea, 고려대학교등 다수
 
 ## Education
 
