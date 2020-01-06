@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1572754409173548000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1578332021524631000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -410,7 +410,8 @@
 </pre></td>
 <td class="code"><pre><span class="o">{</span>
   <span class="s2">"₩"</span> <span class="o">=</span> <span class="o">(</span><span class="s2">"insertText:"</span>, <span class="s2">"</span><span class="sb">`</span><span class="s2">");
-}</span></pre></td>
+}</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>프로그램 재시작이 필요합니다.</p>
@@ -430,7 +431,8 @@
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>xcode-select <span class="nt">--install</span></pre></td>
+<td class="code"><pre>xcode-select <span class="nt">--install</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><strong>확인</strong></p>
@@ -442,7 +444,8 @@
 </pre></td>
 <td class="code"><pre><span class="c"># gcc test</span>
 <span class="nv">$ </span>gcc
-clang: error: no input files</pre></td>
+clang: error: no input files
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><a href="https://developer.apple.com/xcode/">Xcode 홈페이지</a></p>
@@ -457,7 +460,8 @@ clang: error: no input files</pre></td>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>/usr/bin/ruby <span class="nt">-e</span> <span class="s2">"</span><span class="k">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span></pre></td>
+<td class="code"><pre>/usr/bin/ruby <span class="nt">-e</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="si">)</span><span class="s2">"</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><strong>확인</strong></p>
@@ -469,7 +473,8 @@ clang: error: no input files</pre></td>
 </pre></td>
 <td class="code"><pre><span class="c"># brew test</span>
 <span class="nv">$ </span>brew doctor
-Your system is ready to brew.</pre></td>
+Your system is ready to brew.
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><a href="https://brew.sh/">Homebrew 홈페이지</a> / <a href="https://docs.brew.sh/Manpage.html">brew 명령어</a> / <a href="http://formulae.brew.sh/">brew 패키지 검색</a></p>
@@ -484,7 +489,8 @@ Your system is ready to brew.</pre></td>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>brew install git git-lfs</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>git git-lfs
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>git 설치가 완료되었으면 개인정보를 설정하고 맥에서 한글 파일명을 정상적으로 처리하기 위해 추가 옵션을 설정합니다. <del>망할 한글처리</del></p>
@@ -500,7 +506,8 @@ Your system is ready to brew.</pre></td>
 <td class="code"><pre>git config <span class="nt">--global</span> user.name <span class="s2">"Your Name"</span>
 git config <span class="nt">--global</span> user.email <span class="s2">"you@your-domain.com"</span>
 git config <span class="nt">--global</span> core.precomposeunicode <span class="nb">true
-</span>git config <span class="nt">--global</span> core.quotepath <span class="nb">false</span></pre></td>
+</span>git config <span class="nt">--global</span> core.quotepath <span class="nb">false</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><a href="https://git-scm.com/">Git 홈페이지</a> / <a href="https://git-lfs.github.com/">Git LFS 홈페이지</a></p>
@@ -522,7 +529,8 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>brew cask install iterm2</pre></td>
+<td class="code"><pre>brew cask <span class="nb">install </span>iterm2
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><strong>테마선택</strong></p>
@@ -589,7 +597,8 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>brew install zsh zsh-completions</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>zsh zsh-completions
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>그리고 zsh의 설정을 관리해주는 oh-my-zsh을 설치합니다.</p>
@@ -597,7 +606,8 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>sh <span class="nt">-c</span> <span class="s2">"</span><span class="k">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="k">)</span><span class="s2">"</span></pre></td>
+<td class="code"><pre>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>설치스크립트를 실행하면 관련 파일을 설치하고 패스워드를 물어봅니다. 계정의 패스워드를 입력하면 기본쉘을 자동으로 bash에서 zsh로 변경해줍니다.</p>
@@ -617,7 +627,8 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="k">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="k">}</span>/plugins/zsh-syntax-highlighting
 
 <span class="c"># zsh-autosuggestions</span>
-git clone git://github.com/zsh-users/zsh-autosuggestions <span class="nv">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions</pre></td>
+git clone git://github.com/zsh-users/zsh-autosuggestions <span class="nv">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>플러그인을 설치하면 반드시 <code class="highlighter-rouge">~/.zshrc</code>파일에 설정을 해야합니다. 파일을 열고 <code class="highlighter-rouge">plugins</code>항목에 플러그인을 추가합니다.</p>
@@ -633,7 +644,8 @@ git clone git://github.com/zsh-users/zsh-autosuggestions <span class="nv">$ZSH_C
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
-<span class="o">)</span></pre></td>
+<span class="o">)</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>설정 파일을 수정했으면 터미널을 재시작하거나 <code class="highlighter-rouge">source ~/.zshrc</code> 명령어를 실행하여 설정을 다시 불러와야 합니다. 이제 명령어를 입력할 때 존재하지 않는 명령어는 빨간색으로 뜨고 한번 입력했던 명령어를 회색으로 표현해주는 걸 확인할 수 있습니다.</p>
@@ -648,8 +660,9 @@ git clone git://github.com/zsh-users/zsh-autosuggestions <span class="nv">$ZSH_C
 <td class="gutter gl"><pre class="lineno">1
 2
 </pre></td>
-<td class="code"><pre>brew install nodejs <span class="c"># nodejs가 설치되어 있다면 skip</span>
-npm install <span class="nt">--global</span> pure-prompt</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>nodejs <span class="c"># nodejs가 설치되어 있다면 skip</span>
+npm <span class="nb">install</span> <span class="nt">--global</span> pure-prompt
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>설치를 완료했으면 <code class="highlighter-rouge">~/.zshrc</code>파일에 다음항목을 추가합니다.</p>
@@ -659,7 +672,8 @@ npm install <span class="nt">--global</span> pure-prompt</pre></td>
 2
 </pre></td>
 <td class="code"><pre>autoload <span class="nt">-U</span> promptinit<span class="p">;</span> promptinit
-prompt pure</pre></td>
+prompt pure
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>이제 zsh 기본 설정이 끝났습니다!</p>
@@ -704,9 +718,10 @@ prompt pure</pre></td>
 2
 3
 </pre></td>
-<td class="code"><pre>brew install neovim
+<td class="code"><pre>brew <span class="nb">install </span>neovim
 brew tap caskroom/fonts
-brew cask install font-hack-nerd-font</pre></td>
+brew cask <span class="nb">install </span>font-hack-nerd-font
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>기본 설치가 완료되었으면 터미널 기본 에디터로 vi대신 neovim을 사용하도록 <code class="highlighter-rouge">~/.zshrc</code>에 다음 항목을 추가합니다.</p>
@@ -720,7 +735,8 @@ brew cask install font-hack-nerd-font</pre></td>
 <td class="code"><pre><span class="nb">alias </span><span class="nv">vim</span><span class="o">=</span><span class="s2">"nvim"</span>
 <span class="nb">alias </span><span class="nv">vi</span><span class="o">=</span><span class="s2">"nvim"</span>
 <span class="nb">alias </span><span class="nv">vimdiff</span><span class="o">=</span><span class="s2">"nvim -d"</span>
-<span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>/usr/local/bin/nvim</pre></td>
+<span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>/usr/local/bin/nvim
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">source ~/.zshrc</code>를 입력하여 설정을 다시 불러옵니다.</p>
@@ -732,7 +748,8 @@ brew cask install font-hack-nerd-font</pre></td>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>curl <span class="nt">-sLf</span> https://spacevim.org/install.sh | bash</pre></td>
+<td class="code"><pre>curl <span class="nt">-sLf</span> https://spacevim.org/install.sh | bash
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>설치가 완료되면 <code class="highlighter-rouge">vi</code>를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (<code class="highlighter-rouge">1</code>을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.</p>
@@ -744,7 +761,8 @@ brew cask install font-hack-nerd-font</pre></td>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre><span class="nb">let </span>g:spacevim_colorscheme <span class="o">=</span> <span class="s1">'onedark'</span></pre></td>
+<td class="code"><pre><span class="nb">let </span>g:spacevim_colorscheme <span class="o">=</span> <span class="s1">'onedark'</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>설정 파일을 수정하고 다시 시작하면 좀 더 나은 화면을 볼 수 있습니다.</p>
@@ -780,10 +798,11 @@ brew cask install font-hack-nerd-font</pre></td>
 3
 4
 </pre></td>
-<td class="code"><pre>brew install fzf
+<td class="code"><pre>brew <span class="nb">install </span>fzf
 
 <span class="c"># To install useful key bindings and fuzzy completion:</span>
-<span class="k">$(</span>brew <span class="nt">--prefix</span><span class="k">)</span>/opt/fzf/install</pre></td>
+<span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/opt/fzf/install
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 <code class="highlighter-rouge">y</code>를 누르면 됩니다. 설치가 완료되었으면 <code class="highlighter-rouge">source ~/.zshrc</code>를 입력하여 설정을 다시 불러옵니다.</p>
@@ -839,7 +858,8 @@ brew cask install font-hack-nerd-font</pre></td>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>brew install fasd</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>fasd
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>설치가 완료되었으면 <code class="highlighter-rouge">~/.zshrc</code>에 plugin을 추가해줍니다.</p>
@@ -855,7 +875,8 @@ brew cask install font-hack-nerd-font</pre></td>
   ...
   ...
   fasd
-<span class="o">)</span></pre></td>
+<span class="o">)</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>전부 완료되었으면 <code class="highlighter-rouge">source ~/.zshrc</code>를 입력하여 설정을 다시 불러옵니다.</p>
@@ -903,7 +924,8 @@ brew cask install font-hack-nerd-font</pre></td>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>brew install tmux</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>tmux
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>설치가 완료되었으면 <code class="highlighter-rouge">~/.zshrc</code>에 plugin을 추가해줍니다.</p>
@@ -919,7 +941,8 @@ brew cask install font-hack-nerd-font</pre></td>
   ...
   ...
   tmux
-<span class="o">)</span></pre></td>
+<span class="o">)</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><strong>테마</strong></p>
@@ -934,8 +957,9 @@ brew cask install font-hack-nerd-font</pre></td>
 </pre></td>
 <td class="code"><pre><span class="nb">cd</span> ~/
 git clone https://github.com/gpakosz/.tmux.git
-ln <span class="nt">-s</span> <span class="nt">-f</span> .tmux/.tmux.conf
-cp .tmux/.tmux.conf.local .</pre></td>
+<span class="nb">ln</span> <span class="nt">-s</span> <span class="nt">-f</span> .tmux/.tmux.conf
+<span class="nb">cp</span> .tmux/.tmux.conf.local .
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><strong>설정</strong></p>
@@ -965,7 +989,8 @@ cp .tmux/.tmux.conf.local .</pre></td>
 <span class="c"># force Vi mode</span>
 <span class="c"># really you should export VISUAL or EDITOR environment variable, see manual</span>
 <span class="nb">set</span> <span class="nt">-g</span> status-keys vi
-<span class="nb">set</span> <span class="nt">-g</span> mode-keys vi</pre></td>
+<span class="nb">set</span> <span class="nt">-g</span> mode-keys vi
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><strong>사용법</strong></p>
@@ -1074,8 +1099,9 @@ cp .tmux/.tmux.conf.local .</pre></td>
 <td class="gutter gl"><pre class="lineno">1
 2
 </pre></td>
-<td class="code"><pre>brew install ruby
-gem install tmuxinator</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>ruby
+gem <span class="nb">install </span>tmuxinator
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>설치가 완료되었으면 <code class="highlighter-rouge">~/.zshrc</code>에 plugin과 alias를 추가합니다.</p>
@@ -1093,7 +1119,8 @@ gem install tmuxinator</pre></td>
   ...
   tmuxinator
 <span class="o">)</span>
-<span class="nb">alias </span><span class="nv">mux</span><span class="o">=</span><span class="s2">"tmuxinator"</span></pre></td>
+<span class="nb">alias </span><span class="nv">mux</span><span class="o">=</span><span class="s2">"tmuxinator"</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><strong>샘플</strong></p>
@@ -1105,7 +1132,8 @@ gem install tmuxinator</pre></td>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>mux new jekyll</pre></td>
+<td class="code"><pre>mux new jekyll
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>명령어를 실행하면 간단한 샘플이 포함된 jekyll 프로젝트 설정 파일이 <code class="highlighter-rouge">~/.config/tmuxinator/jekyll.yml</code> 만들어지고 자동으로 에디터가 열립니다. 설정 파일을 다음과 같이 작성합니다.</p>
@@ -1130,8 +1158,9 @@ gem install tmuxinator</pre></td>
       <span class="na">layout</span><span class="pi">:</span> <span class="s">main-horizontal</span>
       <span class="na">panes</span><span class="pi">:</span>
         <span class="pi">-</span> <span class="s">bundle exec jekyll serve --incremental</span>
-        <span class="pi">-</span> <span class="s">ngrok http 4000</span>
-  <span class="pi">-</span> <span class="na">editor</span><span class="pi">:</span> <span class="s">vim _posts</span></pre></td>
+        <span class="pi">-</span> <span class="s">ngrok http </span><span class="m">4000</span>
+  <span class="pi">-</span> <span class="na">editor</span><span class="pi">:</span> <span class="s">vim _posts</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>이제 프로젝트를 시작합니다.</p>
@@ -1139,7 +1168,8 @@ gem install tmuxinator</pre></td>
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre><span class="s">mux start jekyll</span></pre></td>
+<td class="code"><pre><span class="s">mux start jekyll</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -1326,12 +1356,12 @@ gem install tmuxinator</pre></td>
       
     </aside>
     <footer class="post-site-footer clearfix">
-      <section class="copyright"><a href="/">Subicura's Blog</a> © 2019</section>
+      <section class="copyright"><a href="/">Subicura's Blog</a> © 2020</section>
     </footer>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1572754409173548000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1578332021524631000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

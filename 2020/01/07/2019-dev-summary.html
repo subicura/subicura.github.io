@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>2019년 개발 이야기</title>
+  <meta name="description" content="2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 회고하면서 어떤 이야기를 할까 고민하다가 3년 전에 작성했던 홈쇼핑처럼 개발 후기가 생각났고 퍼플웍스에서 그동안 도입했던 기술과 유용한 개발 내용을 정리해 보았습니다." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@subicura" />
+    <meta name="twitter:title" content="2019년 개발 이야기" />
+    <meta name="twitter:image" content="https://subicura.com/assets/images/df_logo.png" />
+    
+    <meta name="twitter:description"  content="2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 회고하면서 어떤 이야기를 할까 고민하다가 3년 전에 작성했던 홈쇼핑처럼 개발 후기가 생각났고 퍼플웍스에서 그동안 도입했던 기술과 유용한 개발 내용을 정리해 보았습니다." />
+    
+  
+  
+  <meta property="og:site_name" content="Subicura's Blog" />
+  <meta property="og:title" content="2019년 개발 이야기"/>
+  
+  <meta property="og:description" content="2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 회고하면서 어떤 이야기를 할까 고민하다가 3년 전에 작성했던 홈쇼핑처럼 개발 후기가 생각났고 퍼플웍스에서 그동안 도입했던 기술과 유용한 개발 내용을 정리해 보았습니다." />
+  
+  <meta property="og:image" content="https://subicura.com/assets/images/df_logo.png" />
+  <meta property="og:url" content="https://subicura.com/2020/01/07/2019-dev-summary.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2020-01-07T00:00:00+09:00">
+
+  <meta property="fb:app_id" content="1611862309129685" />
+
+  <meta name="naver-site-verification" content="cc257cc7988ed85c9db6c228330b4870f9dfa25f" />
+
+  <link rel="canonical" href="https://subicura.com/2020/01/07/2019-dev-summary.html"/>
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png"/>
+  <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
+  <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1578332021524631000" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
+  <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/custom.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
+  
+  <script src="/assets/js/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      custom: {
+        families: ['Spoqa Han Sans'],
+        urls: ['/css/spoqa-han-sans-font.css']
+      }
+    });
+  </script>
+  <script>
+    var _mailChimpUrl = "http://eepurl.com/cywDtP";
+  </script>
+
+  
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+</head>
+
+  <body itemscope itemtype="http://schema.org/BlogPosting">
+    <!-- header start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43194822-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.12&appId=1611862309129685";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+
+<a href="https://subicura.com" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.png)"></span></a>
+<!-- header end -->
+
+
+
+    
+
+    <main class="content" role="main">
+      <article class="post">
+        <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+          <meta itemprop="name" content="Subicura's Blog" />
+          <meta itemprop="url" content="https://subicura.com" />
+          <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="url" content="https://subicura.com/assets/images/df_logo.png" />
+          </div>
+        </div>
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <meta itemprop="url" content="https://subicura.com/assets/images/author.jpg" />
+        </div>
+        <meta itemprop="headline" content="2019년 개발 이야기" />
+        <meta itemprop="mainEntityOfPage" content="/2020/01/07/2019-dev-summary.html" />
+        <meta itemprop="datePublished" content="2020-01-07 00:00:00 +0900" />
+        <meta itemprop="dateModified" content="2020-01-07 01:00:00 +0900" />
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">
+              2019년 개발 이야기
+              
+            </h1>
+            <div class="cf post-meta-text">
+              <section class="share">
+                <div class="fb-like" data-href="https://subicura.com/2020/01/07/2019-dev-summary.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ko"></a>
+                
+                  
+                    <a class="icon-twitter" href="http://twitter.com/share?text=2019%EB%85%84+%EA%B0%9C%EB%B0%9C+%EC%9D%B4%EC%95%BC%EA%B8%B0&amp;url=https://subicura.com/2020/01/07/2019-dev-summary.html"
+                      onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                      <i class="nf nf-fa-twitter"></i><span class="hidden">twitter</span>
+                    </a>
+                  
+                
+                  
+                
+              </section>
+              <div class="author-info">
+                <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+                <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  subicura<meta itemprop="name" content="subicura" /><meta itemprop="url" content="https://subicura.com/about" />
+                </h4>
+                on
+                <time datetime="2020-01-07T00:00:00+09:00">07 Jan 2020</time>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#타입스크립트의-시대로">타입스크립트의 시대로</a></li>
+<li class="toc-entry toc-h2"><a href="#tslint에-prettier-끼얹기">TSLint에 Prettier 끼얹기</a></li>
+<li class="toc-entry toc-h2"><a href="#visual-studio-code---최고의-타입스크립트-에디터">Visual Studio Code - 최고의 타입스크립트 에디터</a></li>
+<li class="toc-entry toc-h2"><a href="#jest--enzyme로-react-테스트하기">Jest &amp; Enzyme로 React 테스트하기</a></li>
+<li class="toc-entry toc-h2"><a href="#styled-component---자바스크립트로-만드는-css">Styled Component - 자바스크립트로 만드는 CSS</a></li>
+<li class="toc-entry toc-h2"><a href="#atomic-design---컴포넌트를-구조화하자">Atomic Design - 컴포넌트를 구조화하자</a></li>
+<li class="toc-entry toc-h2"><a href="#storybook---공통-컴포넌트-개발환경">Storybook - 공통 컴포넌트 개발환경</a></li>
+<li class="toc-entry toc-h2"><a href="#ant-design---어드민을-위한-react-프레임워크">Ant Design - 어드민을 위한 React 프레임워크</a></li>
+<li class="toc-entry toc-h2"><a href="#nextjs---간단하고-강력한-react-프레임워크">Next.js - 간단하고 강력한 React 프레임워크</a></li>
+<li class="toc-entry toc-h2"><a href="#headless-cms---머리없는-컨텐츠-관리-시스템">Headless CMS - 머리없는 컨텐츠 관리 시스템</a></li>
+<li class="toc-entry toc-h2"><a href="#graphqlfeat-hasura-도입">GraphQL(feat. hasura) 도입</a></li>
+<li class="toc-entry toc-h2"><a href="#apollo---최고의-graphql-라이브러리">Apollo - 최고의 GraphQL 라이브러리</a></li>
+<li class="toc-entry toc-h2"><a href="#정적페이지-만들기---html의-귀환">정적페이지 만들기 - HTML의 귀환</a></li>
+<li class="toc-entry toc-h2"><a href="#배포-프로세스-개선---google-next-2019-sf">배포 프로세스 개선 - Google Next 2019 SF</a></li>
+<li class="toc-entry toc-h2"><a href="#cloud-run---가장-쉬운-컨테이너-배포-방법">Cloud Run - 가장 쉬운 컨테이너 배포 방법</a></li>
+<li class="toc-entry toc-h2"><a href="#kubernetes---eks-도입">Kubernetes - EKS 도입</a></li>
+<li class="toc-entry toc-h2"><a href="#terraform-드디어-도입">Terraform 드디어 도입</a></li>
+<li class="toc-entry toc-h2"><a href="#소중한-shopify-앱-개발-경험">소중한 Shopify 앱 개발 경험</a></li>
+<li class="toc-entry toc-h2"><a href="#업무-프로세스-개선">업무 프로세스 개선</a></li>
+<li class="toc-entry toc-h2"><a href="#그래서">그래서</a></li>
+</ul><p>2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 회고하면서 어떤 이야기를 할까 고민하다가 3년 전에 작성했던 <a href="https://subicura.com/2016/05/30/likehs-develop-log.html">홈쇼핑처럼 개발후기</a>가 생각났고 퍼플웍스에서 그동안 도입했던 기술과 유용한 개발 내용을 정리해 보았습니다.</p>
+
+<p>React와 Docker는 <del>신기술 나올 때가 됐는데..</del> 여전히 잘 사용 중이고 프론트엔드, 백엔드, 인프라, 개발 프로세스에 소소한(?) 변화가 있었습니다. 공감이 가거나 괜찮은 대안이 있다면 편하게 알려주세요!</p>
+
+<p>참고로 홈쇼핑처럼은 <a href="https://flavr.co.kr/">FLAVR</a>라는 이름으로 서비스를 변경하여 간편 조리식과 고기를 판매 중이고 최근에는 <a href="https://www.kolonmall.com/">KOLONMALL</a>과 <a href="https://www.stayfolio.com/">스테이폴리오</a> 작업을 주로 하고 있습니다. <del>👈 예쁜 옷과 예쁜 장소가 궁금하다면 클릭!!</del></p>
+
+<div align="center" class="googleads googleads-content">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2468713653725581" data-ad-slot="8649023787" data-ad-format="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+<hr>
+
+<h2 id="타입스크립트의-시대로">
+<a class="anchor" href="#%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EC%8B%9C%EB%8C%80%EB%A1%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>타입스크립트의 시대로</h2>
+
+<p align="center">
+    <img src="/assets/article_images/2020-01-07-2019-dev-summary/conversion.png">
+</p>
+
+<p>타입스크립트<sub>TypeScript</sub>는 마이크로소프트에서 개발한 자바스크립트(ES6)의 슈퍼셋<sub>superset</sub> 언어입니다. 자바스크립트 문법을 그대로 사용하면서 타입을 추가하여 엄격하게 문법을 체크합니다.</p>
+
+<figure class="highlight"><pre><code class="language-typescript" data-lang="typescript"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="code"><pre><span class="c1">// 아주 간단한 타입스크립트 샘플</span>
+<span class="kd">function</span> <span class="nx">greeter</span><span class="p">(</span><span class="nx">person</span><span class="p">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="dl">"</span><span class="s2">Hello, </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">person</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>타입을 변수 뒤에 선언합니다. 간단하죠?</p>
+
+<p><strong>타입스크립트 장점</strong></p>
+
+<ul>
+  <li>쉬운 도입
+    <ul>
+      <li>모든 자바스크립트 코드는 곧 타입스크립트 코드</li>
+    </ul>
+  </li>
+  <li>정적 타입
+    <ul>
+      <li>컴파일 타임 타입 체크</li>
+      <li>IDE에서 실시간으로 에러를 발견하고 고칠 수 있음</li>
+    </ul>
+  </li>
+  <li>자동완성 기능
+    <ul>
+      <li>사용할 수 있는 함수, 변수를 제안</li>
+      <li>타이핑이 줄고 생산성이 좋아짐</li>
+    </ul>
+  </li>
+  <li>안전한 리팩토링
+    <ul>
+      <li>함수 이름이나 변수명을 쉽게 바꿀 수 있음</li>
+      <li>더 이상 전체 파일 검색 안 해도 됨</li>
+    </ul>
+  </li>
+  <li>새로운 문법 사용
+    <ul>
+      <li>ES6/ESNext 문법을 대부분 지원</li>
+      <li>타입스크립트 3.7에 추가된  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">Optional chaining</a>과 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Nullish coalescing operator</a> 짱짱맨</li>
+    </ul>
+  </li>
+  <li>거대한 커뮤니티</li>
+</ul>
+
+<p><strong>도입시 고려할점</strong></p>
+
+<ul>
+  <li>높은 러닝 커브
+    <ul>
+      <li>시작은 쉽지만 프로젝트 적용은 어려움</li>
+      <li>체감 난이도: <code class="highlighter-rouge">Hello World</code> &lt; <code class="highlighter-rouge">React</code> &lt; (넘사벽) &lt; <code class="highlighter-rouge">Redux</code>
+</li>
+      <li>레거시 자바스크립트 코드랑 같이 사용하기 어려움</li>
+      <li>빨간색 밑줄(오류)이 잘 안 사라짐 <del>any 쓸까…?</del>
+</li>
+    </ul>
+  </li>
+  <li>복잡한 설정
+    <ul>
+      <li>babel? webpack? awesome-typescript-loader? ts-loader? ts-node? d.ts? tsconfig? 어느정도 다 알아야 함</li>
+      <li>설정이 안 되면 시작을 못함</li>
+    </ul>
+  </li>
+  <li>관련 생태계
+    <ul>
+      <li>테스트 프레임워크와 정적분석도구도 타입스크립트를 지원해야 함</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://www.typescriptlang.org/">TypeScript - JavaScript that scales.</a></li>
+</ul>
+
+<h2 id="tslint에-prettier-끼얹기">
+<a class="anchor" href="#tslint%EC%97%90-prettier-%EB%81%BC%EC%96%B9%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>TSLint에 Prettier 끼얹기</h2>
+
+<p>프로젝트에서 코드의 품질을 높이기 위해선 일관된 규칙이 필요합니다. 규칙을 하나하나 검사하기 어렵기 때문에 자동화 도구를 사용합니다. 예전엔 주로 ESLint를 사용했는데 타입스크립트를 도입하고 TSLint로 변경했습니다. <del>(큰 실수를 했어..)</del></p>
+
+<blockquote>
+  <p>TSLint 프로젝트는 deprecated 되었습니다. ESLint도 타입스크립트를 잘 지원합니다. ESLint 사용하세요.</p>
+</blockquote>
+
+<p><strong>TSLint</strong></p>
+<ul>
+  <li>타입스크립트용 정적분석도구
+    <ul>
+      <li>코딩 스타일과 코드 퀄리티를 위한 다양한 규칙 제공</li>
+    </ul>
+  </li>
+  <li>플러그인 지원
+    <ul>
+      <li>Google, Airbnb(추천) 등 내부에서 사용하는 규칙을 플러그인으로 공개</li>
+    </ul>
+  </li>
+  <li>IDE 지원
+    <ul>
+      <li>실시간 규칙 검사</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Prettier</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/prettier.gif" alt=""></p>
+
+<ul>
+  <li>코드 스타일 도구
+    <ul>
+      <li>TSLint와 비슷한 역할을 하지만 코딩 스타일만 집중</li>
+    </ul>
+  </li>
+  <li>다양한 언어 지원
+    <ul>
+      <li>js, jsx, angular, view, flow, typescript, css, less, scss, html, json, GraphQL, markdown, yaml, …</li>
+    </ul>
+  </li>
+  <li>기본으로 제공하는 스타일과 가독성이 꽤 좋음</li>
+  <li>
+<del>대충 막 짜고</del> 저장(ctrl+s)하면 코드를 이쁘게 정리해줌</li>
+  <li>ESLint/TSLint와 함께 사용할 수 있음</li>
+</ul>
+
+<p><strong>사용 팁</strong></p>
+<ul>
+  <li>에디터에 “저장 시 자동 포멧팅” 옵션을 켜면 저장할 때마다 스타일을 자동으로 적용함</li>
+  <li>
+<code class="highlighter-rouge">git pre-commit hook</code>에 스타일 검사 스크립트 추가
+    <ul>
+      <li>
+<code class="highlighter-rouge">.git/hooks/pre-commit.sample</code> 파일을 <code class="highlighter-rouge">.git/hooks/pre-commit</code>로 복사하고 다음과 같이 수정</li>
+    </ul>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="code"><pre>...<span class="o">(</span>생략<span class="o">)</span>...
+
+<span class="c"># 다음 2줄 추가</span>
+<span class="nb">set</span> <span class="nt">-e</span>
+npm run lint
+
+<span class="c"># If there are whitespace errors, print the offending file names and fail.</span>
+<span class="nb">exec </span>git diff-index <span class="nt">--check</span> <span class="nt">--cached</span> <span class="nv">$against</span> <span class="nt">--</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p><strong>참고링크</strong></p>
+<ul>
+  <li><a href="https://eslint.org/">ESLint - Pluggable JavaScript linter</a></li>
+  <li><a href="https://palantir.github.io/tslint/">TSLint</a></li>
+  <li><a href="https://prettier.io/">Prettier · Opinionated Code Formatter</a></li>
+</ul>
+
+<h2 id="visual-studio-code---최고의-타입스크립트-에디터">
+<a class="anchor" href="#visual-studio-code---%EC%B5%9C%EA%B3%A0%EC%9D%98-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%97%90%EB%94%94%ED%84%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visual Studio Code - 최고의 타입스크립트 에디터</h2>
+
+<p>예전엔 VSCode를 소소하게 사용했지만, 타입스크립트를 도입하고 주력 에디터로 사용 중입니다. 무료면서 가볍고 맥, 윈도우, 리눅스, 심지어 서버에 띄우고 <a href="https://coder.com/">브라우저로 사용</a>할 수도 있습니다.</p>
+
+<p>VSCode는 숨겨진(?) 기능이 많은데 적절히 활용하면 좀 더 편하게 개발할 수 있습니다. 프로젝트 설정과 관련해서 잘 사용하고 있는 팁을 공유합니다.</p>
+
+<p><strong>프로젝트 설정</strong></p>
+
+<p>프로젝트 폴더 하위에 <code class="highlighter-rouge">.vscode</code>폴더를 만들고 각종 설정 파일을 작성하여 팀과 공유할 수 있습니다.</p>
+
+<p><strong>.vscode/settings.json</strong></p>
+
+<p><code class="highlighter-rouge">settings.json</code> VSCode 기본설정</p>
+
+<noscript><pre>{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,  
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true,
+    "source.fixAll.eslint": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}</pre></noscript>
+<script src="https://gist.github.com/subicura/041f1ae908aa687eb1fb893f45977a17.js"> </script>
+
+<p>탭 사이즈를 2칸으로 설정하고 저장하거나 붙여넣기 할 때 자동으로 TSLint와 Prettier 규칙을 적용합니다. VSCode는 기본적으로 에디터에 내장된 타입스크립트를 사용하는데 별도의 SDK 경로를 지정하면 최신 버전을 사용할 수 있습니다.</p>
+
+<p><strong>.vscode/extensions.json</strong></p>
+
+<p><code class="highlighter-rouge">extentions.json</code> VSCode 확장기능 설정</p>
+
+<noscript><pre>{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-tslint-plugin" 
+  ]
+}</pre></noscript>
+<script src="https://gist.github.com/subicura/184ae0f46bcb0898ce4164db921657a9.js"> </script>
+
+<p>위와 같이 설정하면 VSCode가 실행될 때 확장기능이 설치되어 있는지 체크하고 없으면 설치를 유도합니다. 이거 설치해라 저거 설치해라 따로 이야기하지 않아도 됩니다.</p>
+
+<p><strong>.vscode/react.code-snippets</strong></p>
+
+<p><code class="highlighter-rouge">xxxx.code-snippets</code> VSCode Snippet 설정</p>
+
+<p>VSCode에 <code class="highlighter-rouge">insert snippet</code>이라는 기능이 있는데 자주 사용하는 코드 패턴을 만들면 편합니다. 다음은 리엑트 컴포넌트를 만들 때 항상 하는 작업을 스니펫으로 작성한 예제입니다. <a href="https://snippet-generator.app/">snippet generator</a>에서 쉽게 만들 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-jsx" data-lang="jsx"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+<td class="code"><pre><span class="c1">// 항상 작성하는 React 코드</span>
+<span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">IHelloProps</span> <span class="p">{}</span>
+
+<span class="kd">const</span> <span class="nx">Hello</span><span class="p">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">FunctionComponent</span><span class="o">&lt;</span><span class="nx">IHelloProps</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> 
+  <span class="k">return</span> <span class="p">&lt;&gt;&lt;/&gt;;</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Hello</span><span class="p">;</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>파일명을 보고 자동으로 코드를 작성하려면 다음과 같이 설정합니다.</p>
+
+<noscript><pre>{
+  "Default React Function Component": {
+    "prefix": "function-component",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface I${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}Props {}",
+      "",
+      "const ${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}: React.FunctionComponent&lt;I${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g}Props&gt; = () =&gt; {",
+      "  return &lt;&gt;&lt;/&gt;;",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(^[a-z])|\\-([0-9a-z])/${1:/capitalize}${2:/capitalize}/g};",
+      ""
+    ],
+    "description": "Default React Function Component"
+  }
+}</pre></noscript>
+<script src="https://gist.github.com/subicura/fbbb905f6e46b3c98b2e3d5027476be9.js"> </script>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+  <li><a href="https://github.com/cdr/code-server">Code server</a></li>
+  <li><a href="https://snippet-generator.app/">snippet generator</a></li>
+</ul>
+
+<h2 id="jest--enzyme로-react-테스트하기">
+<a class="anchor" href="#jest--enzyme%EB%A1%9C-react-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jest &amp; Enzyme로 React 테스트하기</h2>
+
+<p>타입스크립트와 린터는 개발 생산성을 향상하고 코드 퀄리티를 높이지만 버그를 줄이는 가장 좋은 방법은 테스트 코드를 작성하는 것입니다.</p>
+
+<p><strong>Jest</strong></p>
+
+<ul>
+  <li>공식 홈페이지 소개 - 간단하고<sub>simplicity</sub> 즐거운<sub>delightful</sub> 자바스크립트 테스트 프레임워크</li>
+  <li>Babel, 타입스크립트, Node, React 지원</li>
+  <li>Matchers 사용 - toBe, toBeNull, toEqual, toBeGreaterThan, toContain, … 등등</li>
+  <li>스냅샷 테스팅 지원 - Jest 완소기능 😍</li>
+</ul>
+
+<p><strong>스냅샷 테스팅<sub>snapshot testing</sub>이란?</strong></p>
+
+<ul>
+  <li>UI가 의도하지 않게 변경되었는지 검사</li>
+  <li>스냅샷 - React가 렌더링 한 결과를 스크린샷 찍듯이 텍스트로 저장</li>
+  <li>스냅샷 테스트 - 이전에 저장한 스냅샷과 테스트 시점의 스냅샷을 비교</li>
+  <li>스냅샷 업데이트가 필요한 경우
+    <ul>
+      <li>의도적으로 컴포넌트 UI를 변경한 경우</li>
+      <li>개발이 한창일 땐 스냅샷을 자주 업데이트하는 것이 정상</li>
+    </ul>
+  </li>
+  <li>스냅샷 테스트가 실패하는 경우
+    <ul>
+      <li>의도하지 않게 컴포넌트가 변경되는 경우</li>
+      <li>사용 중인 라이브러리 버전이 변경되면서 호환성이 깨질 때</li>
+      <li>배포 직전 CI 서버에서 빌드한 코드가 개발 환경과 다를 때</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Enzyme</strong></p>
+
+<ul>
+  <li>Airbnb에서 만든 React 테스트 도구</li>
+  <li>컴포넌트 렌더링, 탐색 테스트, 이벤트 시뮬레이션 테스트 지원</li>
+</ul>
+
+<p>Enzyme와 Jest를 사용한 스냅샷 테스트는 다음과 같습니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="code"><pre><span class="nx">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;Coupon /&gt;</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">matches snapshot with mount</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">component</span> <span class="o">=</span> <span class="nx">mount</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">MockedCoupon</span> <span class="o">/&gt;</span><span class="p">);</span>
+    <span class="nx">component</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">component</span><span class="p">).</span><span class="nx">toMatchSnapshot</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://jestjs.io/">Jest · 🃏 Delightful JavaScript Testing</a></li>
+  <li><a href="https://jestjs.io/docs/en/snapshot-testing">Snapshot Testing · Jest</a></li>
+  <li><a href="https://airbnb.io/enzyme/">Introduction · Enzyme</a></li>
+</ul>
+
+<h2 id="styled-component---자바스크립트로-만드는-css">
+<a class="anchor" href="#styled-component---%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-css" aria-hidden="true"><span class="octicon octicon-link"></span></a>Styled Component - 자바스크립트로 만드는 CSS</h2>
+
+<p>React를 본격적으로 사용하면서 여러 컴포넌트를 만들었고 자연스레 컴포넌트 재사용에 관심이 생겼습니다. React 컴포넌트에 <a href="https://en.wikipedia.org/wiki/CSS-in-JS">CSS-in-JS</a>기능을 이용하면 마크업과 스크립트, 스타일까지 한 번에 관리할 수 있습니다.</p>
+
+<p>자바스크립트로 CSS를 어떻게 관리할까요? CSS-in-JS방식의 여러 가지 라이브러리 중 styled components 예제입니다.</p>
+
+<figure class="highlight"><pre><code class="language-jsx" data-lang="jsx"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td>
+<td class="code"><pre><span class="kd">const</span> <span class="nx">LinkButton</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">a</span><span class="s2">`
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  color: palevioletred;
+  padding: 0.25em 1em;
+
+  </span><span class="p">${</span><span class="nx">props</span> <span class="o">=&gt;</span> <span class="nx">props</span><span class="p">.</span><span class="nx">primary</span> <span class="o">&amp;&amp;</span> <span class="nx">css</span><span class="s2">`
+    background: palevioletred;
+    color: white;
+  `</span><span class="p">}</span><span class="s2">
+`</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Container</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="s2">`
+  text-align: center;
+`</span>
+
+<span class="nx">render</span> <span class="p">(</span>
+  <span class="p">&lt;</span><span class="nc">Container</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">LinkButton</span>
+      <span class="na">href=</span><span class="s2">"https://github.com/styled-components/styled-components"</span>
+      <span class="nt">primary</span>
+    <span class="p">&gt;</span>
+      Styled Components
+    <span class="p">&lt;/</span><span class="nc">LinkButton</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nc">Container</span><span class="p">&gt;</span>
+<span class="p">);</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<blockquote>
+  <p>Styled components 문법은 독특합니다. 괄호 없이  `(backtick, <del>숫자 1 왼쪽 위 그거</del> )으로 스타일 코드를 감싸고 있는데 ES6에 추가된 <a href="https://mxstbr.blog/2016/11/styled-components-magic-explained/">Tagged Template Literal 기능</a>입니다.</p>
+</blockquote>
+
+<p>웹 개발에선 전통적으로 마크업과 스타일, 스크립트를 분리하기 때문에 CSS-in-JS 기술은 논란을 불러왔습니다. 사실 지금 사용하면서도 이래도 되나 싶은 부분이 있기는 합니다. <del>머리로는 이해가 되지만 마음은 불편</del> 웹 개발이 점점 더 복잡해지고 컴포넌트 기술이 발전하면서 CSS-in-JS기술은 필수라고 생각하지만 장/단점을 정확히 알고 사용하는 것이 좋아 보입니다.</p>
+
+<p><strong>CSS를 좀 해본(?) 사람들이 겪는 문제</strong></p>
+
+<ul>
+  <li>CSS 클래스 이름 중복 문제</li>
+  <li>스타일 상속에 의한 중복 문제</li>
+  <li>
+<code class="highlighter-rouge">!important</code> 문제</li>
+  <li>코드 최적화 문제 - 지우기 찝찝해서 남아 있는 코드들</li>
+  <li>자바스크립트와 변수를 공유할 수 없는 문제</li>
+  <li>격리하여 관리하기 어려운 문제</li>
+</ul>
+
+<p><strong>Styled components의 특징</strong></p>
+
+<ul>
+  <li>컴포넌트
+    <ul>
+      <li>컴포넌트별로 스타일을 분리해서 관리</li>
+      <li>클래스 이름을 자동으로 생성하고 중복 문제가 해결됨</li>
+      <li>여기를 고치면 저기가 망가지고 저기를 고치면 거기가 망가지는 일 없음</li>
+    </ul>
+  </li>
+  <li>CSS 코드 최적화
+    <ul>
+      <li>페이지에서 사용하는 컴포넌트의 스타일만 사용</li>
+      <li>불필요한 스타일은 제거</li>
+    </ul>
+  </li>
+  <li>자바스크립트 사용
+    <ul>
+      <li>CSS를 <strong>코딩</strong>할 수 있음</li>
+      <li>변수나 함수를 만들고 자바스크립트 코드와 상수를 공유할 수 있음</li>
+      <li>테스트 코드 작성 가능</li>
+      <li>타입스크립트를 이용한 자동완성 지원</li>
+    </ul>
+  </li>
+  <li>Vendor prefix
+    <ul>
+      <li>
+<code class="highlighter-rouge">-moz</code>, <code class="highlighter-rouge">-webkit</code> 같은거 자동으로 붙여줌</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>CSS-in-JS 기술의 단점</strong></p>
+
+<ul>
+  <li>페이지 로드 시 자바스크립트를 분석하여 CSS 생성
+    <ul>
+      <li>CSS 생성 오버헤드 - 규모가 클수록 영향 -&gt; Styled components는 새로 업데이트될 때마다 속도가 이전보다 xx% 빨라졌다고 광고함. (그만큼 현재는 느리다는 뜻 아닐까?)</li>
+    </ul>
+  </li>
+  <li>렌더링 되는 시점에 스타일 코드가 추가됨
+    <ul>
+      <li>CSS 파일을 캐시 할 수 없음 (파일 자체가 없음)</li>
+      <li>Head영역이 아닌 Body영역에서 렌더링 됨 -&gt; 스타일 없는 컴포넌트가 렌더링 되고 스타일이 뒤늦게 적용됨 (안 이쁨) -&gt; SSR 설정으로 해결 가능</li>
+    </ul>
+  </li>
+  <li>러닝커브
+    <ul>
+      <li>이미 CSS를 잘 쓰고 있는 사람들의 불만<del>(또 뭐 새로 나왔어?)</del>이지만 경험상 러닝 커브 매우 낮음</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>고려할 점</strong></p>
+<ul>
+  <li>일반 CSS파일과 사용
+    <ul>
+      <li>CSS-in-JS와 일반 CSS를 같이 사용할 수 있음</li>
+      <li>기본 + 공통 레이아웃은 기존처럼 CSS파일로 작성하고 컴포넌트와 혼용해서 사용</li>
+      <li>컴포넌트 스타일을 최소화하여 오버헤드를 줄임</li>
+    </ul>
+  </li>
+  <li>자바스크립트 코드에서 스타일 코드 감추기
+    <ul>
+      <li>
+<code class="highlighter-rouge">//#region style</code> 과 <code class="highlighter-rouge">//#endregion</code>으로 스타일 코드의 시작과 끝을 감싸면 VSCode에서 코드를 접었다 폈다 할 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+<ul>
+  <li><a href="https://www.styled-components.com/">styled-components</a></li>
+  <li><a href="http://blog.vjeux.com/2014/javascript/react-css-in-js-nationjs.html">Vjeux » React: CSS in JS – NationJS</a></li>
+</ul>
+
+<h2 id="atomic-design---컴포넌트를-구조화하자">
+<a class="anchor" href="#atomic-design---%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A5%BC-%EA%B5%AC%EC%A1%B0%ED%99%94%ED%95%98%EC%9E%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>Atomic Design - 컴포넌트를 구조화하자</h2>
+
+<p>React를 사용하는 프로젝트가 많아지고 공통 컴포넌트가 생기면서 컴포넌트에 계층구조가 필요하게 되었습니다.</p>
+
+<p>작은 컴포넌트가 모여 큰 컴포넌트가 되고 큰 컴포넌트가 모여 더 큰 컴포넌트가 된다는 개념을 잘 정리한 것이 Atomic Design 입니다.</p>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/atomic-design.png" alt=""></p>
+
+<p>그림만 봐도 직관적으로 계층 구조가 이해되지만 문제는 영어였습니다. atoms, template, pages는 익숙한데 molecule, organism은 입에 붙지 않았던 거죠. 그래서 개념을 살짝 바꿔 다음과 같이 사용 중입니다.</p>
+
+<ul>
+  <li>atom - atoms + molecule을 포함하는 계층</li>
+  <li>block - organism 대체</li>
+  <li>component - template 대체</li>
+  <li>pages - pages 동일</li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://bradfrost.com/blog/post/atomic-web-design">Atomic Design | Brad Frost</a></li>
+  <li><a href="https://medium.muz.li/building-design-systems-with-atomic-design-93a13286f676">Building Design Systems with Atomic Design - Muzli - Design Inspiration</a></li>
+</ul>
+
+<h2 id="storybook---공통-컴포넌트-개발환경">
+<a class="anchor" href="#storybook---%EA%B3%B5%ED%86%B5-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>Storybook - 공통 컴포넌트 개발환경</h2>
+
+<p>공통 컴포넌트를 개발하기 위해선 임의의 페이지를 만들어야 합니다. 뭔가 보면서 하려면 해당 컴포넌트만 덩그러니 렌더링 되는 페이지가 필요한 거죠.</p>
+
+<p>Storybook은 컴포넌트를 위한 개발환경입니다.</p>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/storybook-intro.gif" alt=""></p>
+
+<p>디자인이 깔끔하고 사용법이 쉬워 공통 컴포넌트를 개발하거나 갤러리 용도로 사용하기 좋습니다.</p>
+
+<p><strong>유용한 플러그인</strong></p>
+
+<ul>
+  <li>
+<code class="highlighter-rouge">addon-knobs</code> props를 변경할 수 있는 UI 컨트롤 제공</li>
+  <li>
+<code class="highlighter-rouge">addon-viewport</code> phone, tablet, pc 해상도 테스트</li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://storybook.js.org/">Storybook: UI component explorer for frontend developers</a></li>
+</ul>
+
+<h2 id="ant-design---어드민을-위한-react-프레임워크">
+<a class="anchor" href="#ant-design---%EC%96%B4%EB%93%9C%EB%AF%BC%EC%9D%84-%EC%9C%84%ED%95%9C-react-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ant Design - 어드민을 위한 React 프레임워크</h2>
+
+<p>React를 이용하여 관리자 화면을 만들 때 한동안 <a href="https://getbootstrap.com/">Bootstrap</a>을 사용했습니다. Bootstrap은 jQuery 기반이지만 React용 라이브러리도 있고 오랫동안 써봐서 빠르게 만들 수 있었습니다.</p>
+
+<p>시간이 흘러 더 이쁘고 사용하기 편리한 React UI Kit들이 등장했습니다.</p>
+
+<ul>
+  <li><a href="http://elemental-ui.com/">Elemental UI</a></li>
+  <li><a href="https://developer.microsoft.com/en-us/fabric">Home - Office UI Fabric</a></li>
+  <li><a href="https://atlaskit.atlassian.com/">Atlaskit by Atlassian</a></li>
+  <li><a href="https://evergreen.segment.com/">Evergreen</a></li>
+  <li><a href="https://polaris.shopify.com/">Shopify Polaris</a></li>
+</ul>
+
+<p>여러가지 고민 끝에 최종적으로 선택한 것이 <a href="https://ant.design/">Ant Design</a> 입니다.</p>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/antd.png" alt=""></p>
+
+<p><strong>Ant Design</strong></p>
+
+<ul>
+  <li>타입스크립트 지원</li>
+  <li>잘 정리된 문서</li>
+  <li>다양한 폼 컨트롤 - Cascader 좋음</li>
+  <li>폼 서브밋, 유효성 검사, 에러 처리</li>
+  <li>고급 기능을 가진 테이블 컴포넌트</li>
+  <li>GitHub Star 수 55K</li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://ant.design/">Ant Design - The world’s second most popular React UI framework</a></li>
+</ul>
+
+<h2 id="nextjs---간단하고-강력한-react-프레임워크">
+<a class="anchor" href="#nextjs---%EA%B0%84%EB%8B%A8%ED%95%98%EA%B3%A0-%EA%B0%95%EB%A0%A5%ED%95%9C-react-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Next.js - 간단하고 강력한 React 프레임워크</h2>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/black-nextjs.png" alt=""></p>
+
+<p>React는 코딩보다 설정이 어렵다는 전설이 있습니다. 타입스크립트를 쓰거나 페이지별로 스크립트 파일을 분리하는 것, SSR 설정하기, CSS 프레임워크 설정은 숙련된 개발자도 고생입니다.
+모두 다 같은 고생을 하고 있었고 no configuration 컨셉을 사용한 여러 가지 프레임워크가 나왔습니다. 최근 즐겨 쓰고 있는 프레임워크는 Next.js 입니다.</p>
+
+<p><strong>Next.js 특징</strong></p>
+
+<ul>
+  <li>운영 환경 검증
+    <ul>
+      <li>Hulu, Tencent News, Twitch, AT&amp;T, Auth0 등 다양한 곳에서 사용</li>
+    </ul>
+  </li>
+  <li>파일 기반 라우팅 제공
+    <ul>
+      <li>/pages/index.js -&gt; /</li>
+      <li>/pages/about.js -&gt; /about</li>
+      <li>/pages/posts/[id].js -&gt; /posts/:id (고민의 흔적 캬 👍)</li>
+    </ul>
+  </li>
+  <li>정적페이지 생성 기능
+    <ul>
+      <li>빌드 후 html 파일 생성</li>
+      <li>동적인 페이지 지원 (/posts/1 -&gt; posts/1.html, /posts/2 -&gt; posts/2.html, …)</li>
+    </ul>
+  </li>
+  <li>API 전용 라우팅 지원
+    <ul>
+      <li>/pages/<strong>api</strong>/myApi.js</li>
+    </ul>
+  </li>
+  <li>수십 가지 다양한 라이브러리 <a href="https://github.com/zeit/next.js/tree/canary/examples">연동 예제</a> (redux, apollo, …) 제공</li>
+  <li>Server Side Rendering(SSR) 지원</li>
+  <li>타입스크립트 지원</li>
+  <li>Babel, webpack 커스터마이징 지원</li>
+  <li>Express, Koa, Micro 등 다양한 커스텀 웹서버 지원</li>
+</ul>
+
+<p>이 모든 기능을 별다른 설정 없이 바로 사용할 수 있습니다. 설정이 간편하면서 확장성을 고려하기는 쉽지 않은데 그 어려운걸 <a href="https://zeit.co/">ZEIT</a>가 해냅니다! <del>칭찬해</del></p>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://nextjs.org/">Next.js - The React Framework</a></li>
+  <li><a href="https://zeit.co/">World-Class Static Hosting - ZEIT</a></li>
+</ul>
+
+<h2 id="headless-cms---머리없는-컨텐츠-관리-시스템">
+<a class="anchor" href="#headless-cms---%EB%A8%B8%EB%A6%AC%EC%97%86%EB%8A%94-%EC%BB%A8%ED%85%90%EC%B8%A0-%EA%B4%80%EB%A6%AC-%EC%8B%9C%EC%8A%A4%ED%85%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Headless CMS - 머리없는 컨텐츠 관리 시스템</h2>
+<p>Next.js를 본격적으로 도입하기 전에 작은 규모의 브랜드 소개 사이트를 만들었습니다.</p>
+
+<blockquote>
+  <p>새로운 기술을 사용했을 때 발생하는 리스크를 줄이기 위해 작은, 중간 사이즈의 프로젝트에서 시범 적용을 합니다. Next.js의 경우 약 5개의 작은 프로젝트에서 6개월 정도 사용하고 메인 프로젝트에 적용했습니다.</p>
+</blockquote>
+
+<p>브랜드 소개 사이트는 복잡한 비지니스 로직은 없지만 소개, 이미지 갤러리, 매장같은 정보가 수시로 변경되었습니다. 컨텐츠 관리를 좀 더 쉽게 하는 방법 <del>일 안 하는 방법</del> 을 찾다가 Headless CMS를 발견했습니다.</p>
+
+<p><strong>Headless CMS란</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/prismic.jpg" alt=""></p>
+
+<ul>
+  <li>백엔드 온리 시스템
+    <ul>
+      <li>프론트엔드와 분리된 순수 컨텐츠 관리에 최적화된 백엔드 시스템</li>
+    </ul>
+  </li>
+  <li>REST API / GraphQL
+    <ul>
+      <li>프론트엔드는 API를 이용하여 HeadlessCMS 조회</li>
+      <li>정렬, 페이징, 검색 기능 제공</li>
+    </ul>
+  </li>
+  <li>테이블과 컬럼 관리
+    <ul>
+      <li>손쉬운 컨텐츠 관리 화면 제공</li>
+      <li>문자열, 텍스트, 셀렉트 박스, 라디오 박스, 이미지 같은 범용 타입 제공</li>
+      <li>테이블 간 1:N 설계 가능</li>
+    </ul>
+  </li>
+  <li>협업, 버전 관리, 스케줄링, 다국어 기능 제공</li>
+</ul>
+
+<p>Headless CMS를 검색하면 <del>너무</del> 다양한 서비스와 설치형 프로그램이 나오는데 대동소이한 기능을 제공합니다. 그중에 설치형으로 괜찮았던 것은 directus였고 서비스로 괜찮았던 것은 prismic 이었습니다.</p>
+
+<p><strong>Directus</strong></p>
+
+<ul>
+  <li>오픈소스 &amp; 설치형</li>
+  <li>MySql과 S3 파일 업로드</li>
+  <li>사용자별 권한 관리</li>
+  <li>다양한 기능을 제공하는 API</li>
+  <li>단점은 소소한 버그들. 개발이 빠른 편이여서 이미 다 해결되었을지도..?</li>
+  <li>마이그레이션 귀찮음 (설치형은 어쩔 수 없음)</li>
+</ul>
+
+<p><strong>Prismic</strong></p>
+
+<ul>
+  <li>유료 서비스지만 관리자 1명은 무료</li>
+  <li>트래픽 과금 있지만 기본 제공 넉넉한 편</li>
+  <li>GraphQL 인터페이스 제공</li>
+  <li>다양한 언어별 라이브러리 제공. 사용하기 편리함</li>
+  <li>예약 발행 기능, 레이아웃 기능, A/B 테스트, 웹 훅 기능</li>
+  <li>자바스크립트 한 줄로 가능한 In-website preview 기능 (이건.. 직접 써봐야 감이 옴. 이렇게 편하게 구현할 수도 있구나.. 살짝 감동)</li>
+  <li>아주 가~끔 API 호출을 실패할 때가 있음. 요청 실패를 대비하여 cache와 fallback 정책 필수</li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://directus.io/">Open-Source Headless CMS &amp; API — Directus</a></li>
+  <li><a href="https://prismic.io/">Make your website editable for the whole team - Prismic</a></li>
+</ul>
+
+<h2 id="graphqlfeat-hasura-도입">
+<a class="anchor" href="#graphqlfeat-hasura-%EB%8F%84%EC%9E%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>GraphQL(feat. hasura) 도입</h2>
+
+<p>GraphQL은 페이스북에서 만든 쿼리<sub>Query</sub> 언어입니다. 언젠가부터 개발자 커뮤니티에서 자주 이야기가 되고 있었는데 REST API 방식을 별문제 없이 쓰고 있었기에 특별히 도입할 생각은 없었습니다. 그러던 어느 날 GraphQL이 운명처럼 다가왔습니다.</p>
+
+<p>위에서 언급한 Prismic을 한창 사용하고 있을 때, 페이스북에서 우연히 Prisma 설치 글을 봤습니다. “Prismic은 설치형이 없는 줄 알았는데 뭐지?” 하고 들어갔다가 글자를 해갈렸다는 걸 알았지만 내용이 괜찮았고 특히 관리자가 이뻤습니다.</p>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/prisma.png" alt=""></p>
+
+<p>그 당시에 새로운 CMS를 만들고 있었는데 우연이 발견한 Prisma가 좋은 해결책이 될 것 같았고 분석 결과 빠르게 요구사항을 대응하고, 확장 가능한 구조를 만들 수 있다는 걸 확인했습니다.</p>
+
+<p>그렇게 2주 정도 프로토타입을 만들다가 치명적인 단점을 발견합니다. Prisma 기본 기능으로는 전체 데이터 개수와 같은 aggregate 데이터를 가져올 수 없었습니다. SQL을 사용하여 별도로 구현할까 고민하다가 또 우연히 GraphQL 엔진의 끝판왕 Hasura를 만납니다.</p>
+
+<p><strong>Hasura</strong></p>
+
+<ul>
+  <li>Haskell 기반의 가볍고 빠른 오픈소스 GraphQL 엔진</li>
+  <li>Postgres 지원. jsonb 타입 사용 가능</li>
+  <li>강력한 Admin 기능
+    <ul>
+      <li>조회, 추가, 수정, 삭제 화면 제공</li>
+      <li>인증, 인가, 이벤트 트리거 등 각종 기능 웹 콘솔 제공</li>
+    </ul>
+  </li>
+  <li>강력한 Query 기능
+    <ul>
+      <li>기본 Query + filter, sort, aggregate, paginate, distinct 지원</li>
+      <li>filter - eq, neq, gt, lt, Ute, lte, in, min, like, contains, has_key, and, or, .. 지원</li>
+      <li>aggregate -  count, sum, avg, max, min 지원</li>
+    </ul>
+  </li>
+  <li>강력한 Mutation 기능
+    <ul>
+      <li>Insert, Update, Delete 외에 Upsert 지원</li>
+      <li>Upsert - key가 있으면 Update하고 없으면 Insert. 은근 유용</li>
+    </ul>
+  </li>
+  <li>이벤트 트리거</li>
+  <li>JWT 기반 인증 &amp; 인가</li>
+  <li>Table View 연동 기능</li>
+</ul>
+
+<p>Hasura는 GraphQL의 유연한 인터페이스를 이용하여 강력한 기본 기능을 제공합니다. 마치 예전 Ruby on rails의 15분 만에 블로그 만들기를 보는 것 같은 느낌입니다.</p>
+
+<p>실제 <code class="highlighter-rouge">좋아요 기능</code>을 하루 만에 만들었는데, 대부분의 시간은 프론트엔드를 만드는데 걸렸고 백엔드는 테이블 설계가 전부였습니다.</p>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://hasura.io/">Instant realtime GraphQL on Postgres | Hasura GraphQL Engine</a></li>
+</ul>
+
+<h2 id="apollo---최고의-graphql-라이브러리">
+<a class="anchor" href="#apollo---%EC%B5%9C%EA%B3%A0%EC%9D%98-graphql-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Apollo - 최고의 GraphQL 라이브러리</h2>
+
+<p>Apollo는 Nodejs기반으로 GraphQL과 관련된 다양한 도구를 제공합니다. Client(React), Server뿐 아니라 Cache, Manager(분석도구)를 제공하고 다양한 플러그인을 붙여 생산성을 높여줍니다.</p>
+
+<p><strong>Apollo Client</strong></p>
+
+<ul>
+  <li>선언적 데이터 조회
+    <ul>
+      <li>React가 렌더링 될 때 데이터를 로드하고 쿼리에서 사용하는 변수가 바뀌면 다시 로드함</li>
+      <li>데이터, 로딩, 에러를 상태로 관리 -&gt; React hook과 잘 어울림</li>
+    </ul>
+  </li>
+  <li>개발환경
+    <ul>
+      <li>타입스크립트 지원, 크롬 개발자 도구 지원, VSCode 플러그인 지원</li>
+    </ul>
+  </li>
+  <li>캐시
+    <ul>
+      <li>타입별 ID 기반 캐시 사용 (데이터에 식별자가 꼭 있어야 함)</li>
+      <li>페이지가 렌더링 되면 캐시에 있는 데이터를 먼저 로드한 후 네트워크로 조회한 데이터로 갱신</li>
+      <li>
+<code class="highlighter-rouge">FetchPolicy</code>에서 캐시와 네트워크 설정을 할 수 있음</li>
+    </ul>
+  </li>
+  <li>로컬 상태 관리
+    <ul>
+      <li>로컬 상태를 GraphQL로 관리</li>
+      <li>Redux, MobX 대체</li>
+    </ul>
+  </li>
+  <li>SSR 지원
+    <ul>
+      <li>컴포넌트에서 사용할 쿼리를 뽑아 호출하고 페이지 렌더링 할 때 로컬 캐시로 제공</li>
+      <li>SSR을 적용할 쿼리와 아닌 쿼리 구분 가능</li>
+    </ul>
+  </li>
+  <li>Batch 기능
+    <ul>
+      <li>여러 번 나눠서 호출하는 쿼리를 하나로 합쳐줌</li>
+      <li>요청이 최적화되는 장점이 있지만, 가장 느린 쿼리가 응답할 때까지 기다린다는 단점이 있음</li>
+      <li>TIP - SSR에서는 batch를 사용하고 CSR에서는 batch를 끔</li>
+    </ul>
+  </li>
+  <li>PersistedQueries 기능
+    <ul>
+      <li>GraphQL Query의 특징은 단일 엔드포인트에 POST방식으로 필요한 <del>거대한</del> 쿼리를 매번 요청함</li>
+      <li>이 방식은 유연하고 편리하지만 캐시와 오버헤드가 문제 - POST는 네트워크 캐시를 사용할 수 없고 거대한 쿼리는 매번 오버헤드임</li>
+      <li>PersistedQueries는 요청을 hash key로 치환하고 GET 방식을 사용. 캐시 사용 가능하고 거대한 쿼리를 사용하지 않아도 됨 - 서버 지원 필요</li>
+    </ul>
+  </li>
+  <li>Mock 지원
+    <ul>
+      <li>GraphQL은 요청하는 사람이 응답할 데이터를 정의할 수 있다는 특징 때문에 mock을 작성하는 것도 굉장히 유연함</li>
+      <li>필요한 데이터를 mock 데이터로 미리 만들어 작업하고 백엔드 개발이 완료되면 타입스크립트의 리팩토링 기능으로 변수명을 맞춰주면 됨</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Apollo Server</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/apollo-server.png" alt=""></p>
+
+<ul>
+  <li>다양한 데이터 소스 지원
+    <ul>
+      <li>GraphQL, REST API, 데이터베이스 등 다양한 백엔드 연동</li>
+      <li>스무스하게 의도한 데로 잘 동작함 <del>이게 돼?</del>
+</li>
+      <li>클라이언트는 Apollo Server를 단일 엔드포인트로 바라보고 Apollo Server가 여러 서비스를 조합하는 Gateway 형식을 사용할 수 있음</li>
+    </ul>
+  </li>
+  <li>GraphQL Playground 지원 - GraphQL 쿼리를 실행하고 테스트할 수 있는 페이지 제공. 이쁨</li>
+</ul>
+
+<p><strong>Apollo Graph Manager</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/apollo-engine.gif" alt=""></p>
+
+<ul>
+  <li>Apollo Server와 연동해서 사용하는 분석 도구 - API Key만 입력하면 됨</li>
+  <li>GraphQL에 특화됨
+    <ul>
+      <li>GraphQL은  모든 요청이 단일 엔드포인트를 바라보고 있어 일반 APM 분석도구를 사용하기에 적합하지 않음 -&gt; 어떤 쿼리가 이슈가 있는지 파악하기 어려움</li>
+      <li>쿼리를 분석하고 단계별로 추적해줌</li>
+      <li>쿼리 별로 평균 응답 시간, 느린 응답 시간, 요청 횟수 등을 분석할 수 있음</li>
+    </ul>
+  </li>
+  <li>GraphQL 스키마 관리 기능 제공</li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://www.apollographql.com/">Apollo GraphQL | Apollo Data Graph Platform— unify APIs, microservices, and databases into a data graph that you can query with GraphQL</a></li>
+</ul>
+
+<h2 id="정적페이지-만들기---html의-귀환">
+<a class="anchor" href="#%EC%A0%95%EC%A0%81%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0---html%EC%9D%98-%EA%B7%80%ED%99%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>정적페이지 만들기 - HTML의 귀환</h2>
+
+<p>최근 개발 스택이 복잡해지면서 하나의 페이지를 만드는데 많은 기술이 들어가고 서버 응답은 점점 느려집니다. 다행히 서버 성능이 좋아지고 비용은 저렴해지면서 돈으로 해결 가능하지만 그것도 한계가 있습니다. 💸</p>
+
+<p>최근에 가장 관심을 많이 가지고 있는 것은 정적페이지 생성입니다. 렌더링 된 결과를 HTML 정적페이지로 만들고 CDN으로 배포하는 거죠.</p>
+
+<p><strong>정적페이지?</strong></p>
+
+<ul>
+  <li>서버, 데이터베이스를 거치지 않고 완성된 HTML을 제공하기 때문에 굉장히 빠름</li>
+  <li>접속자 수가 많거나 갑자기 몰려도 안정적</li>
+  <li>서버 코드가 없기 때문에 에러도 없음</li>
+  <li>비용이 저렴함 (작은 규모는 무료도 가능)</li>
+</ul>
+
+<p>정적페이지라고 하면 Jekyll이 떠오릅니다. 지금 이 블로그도 Jekyll을 이용하여 정적페이지를 만들고 GitHub을 통해 무료로 제공하고 있습니다.</p>
+
+<p>작은 블로그나 티저 사이트에서 정적페이지를 사용하는 건 가능하지만, E-커머스나 큰 규모의 프로젝트에서도 사용할 수 있을까요?</p>
+
+<p><strong>동적인 데이터 연동하기</strong></p>
+
+<ul>
+  <li>Static Site Generation (SSG) <del>신세계쓱</del>
+    <ul>
+      <li>시간별 배너나, 새로운 상품 목록이 포함된 페이지는 데이터가 바뀌면 정적 페이지도 변경해야 함</li>
+      <li>특정 주기(5분에 한번)나 관리자가 업데이트 버튼을 눌렀을 때 페이지를 갱신하면 어떨까?</li>
+    </ul>
+  </li>
+  <li>Client Side Rendering (CSR)
+    <ul>
+      <li>로그인 상태나 관리자페이지처럼 정적페이지 제공이 불가능한 경우 동적인 데이터가 필요한 영역을 CSR로 처리</li>
+      <li>해당 영역은 빈값(또는 기본값)으로 로드하고 클라이언트에서 API를 호출하여 추가로 렌더링</li>
+      <li>네이버 메인등 접속자 수가 엄청나게 많은 페이지에서 이미 사용중인 방법</li>
+    </ul>
+  </li>
+</ul>
+
+<p>아이디어는 심플합니다. 정적페이지를 최대한 활용하고 공통으로 적용하기 어려운 영역을 스크립트로 처리하는 것입니다.</p>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/ssr-csr.jpg" alt=""></p>
+
+<p><strong>구현하기</strong></p>
+
+<ul>
+  <li>Next.js Export 기능
+    <ul>
+      <li>Export는 SSR을 이용하여 각 페이지를 HTML 파일로 출력함</li>
+      <li>
+<code class="highlighter-rouge">/posts/[id]</code>와 같은 동적인 링크도 적용 가능 (API로 목록을 가져와서 구성)</li>
+      <li>제약사항 - 일부 서버 로직은 처리할 수 없음. User-Agent에 따라 페이지를 분기하거나 Cookie를 사용한다던가</li>
+    </ul>
+  </li>
+  <li>Apollo SSR 기능
+    <ul>
+      <li>SSG가 가능한 영역은 SSR 옵션을 켜고 그렇지 않은 부분은 끔</li>
+      <li>SSR 옵션을 켠 부분은 정적인 페이지로 제공하고 끈 부분은 페이지 로드 후 요청</li>
+    </ul>
+  </li>
+  <li>AWS Lambda Edge 활용
+    <ul>
+      <li>Lambda Edge는 CDN 호출 앞뒤로 사용할 수 있는 작고 가벼운 API</li>
+      <li>Export의 제약사항 일부 해결</li>
+    </ul>
+  </li>
+</ul>
+
+<p>위에서 언급한 기술은 정적인 마크업, 자바스크립트, API로 요약할 수 있습니다. 이 기술을 사용한 스택을 <code class="highlighter-rouge">Jamstack</code>이라고 하고 2020년에 뜨지 않을까? 예측해봅니다.</p>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://rauchg.com/2020/2019-in-review">2019 in Review</a></li>
+  <li><a href="https://jamstack.org/">Jamstack | JavaScript, APIs, and Markup</a></li>
+</ul>
+
+<h2 id="배포-프로세스-개선---google-next-2019-sf">
+<a class="anchor" href="#%EB%B0%B0%ED%8F%AC-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EA%B0%9C%EC%84%A0---google-next-2019-sf" aria-hidden="true"><span class="octicon octicon-link"></span></a>배포 프로세스 개선 - Google Next 2019 SF</h2>
+<p>Google Next는 구글에서 진행하는 클라우드 컨퍼런스입니다. 2019년엔 샌프란시스코, 도쿄, 영국에서 열렸고 2020년도 샌프란시스코에서 열릴 예정입니다.</p>
+
+<p>2019년 4월 샌프란시스코에서 열린 컨퍼런스에 참가하여 많은 세션을 들었고 가장 기억에 남은 건 CI/CD와 빠른 배포 주기에 대한 내용이었습니다.</p>
+
+<p>보통 개발팀의 규모가 커질수록 배포는 어려울 꺼라고 생각했는데 우리보다 수십, 수백 배 규모의 회사에서 하루에도 몇 번씩 운영 배포를 하는 것에 큰 충격😱을 받고 한동안 배포 프로세스 개선을 진행했습니다.</p>
+
+<p><strong>개선내용</strong></p>
+
+<ul>
+  <li>AWS ECR 도입
+    <ul>
+      <li>설치형 도커 레지스트리 -&gt; 은근히 용량이 빨리 참 -&gt; ECR은 사실상 무제한!</li>
+      <li>설치가 단순한 서비스라도 가급적 매니지드 서비스를 이용하기로 결심</li>
+    </ul>
+  </li>
+  <li>CI와 CD를 분리하자
+    <ul>
+      <li>기존엔 빌드와 배포가 한 번에 이루어졌음 - 롤백이나 확장이 느림</li>
+      <li>CI는 도커 이미지를 만들어 저장소에 올리고 CD는 도커 컨테이너를 배포하도록 변경</li>
+      <li>개발 브랜치를 푸시하면 CI가 이미지를 만들어 놓고 테스트할 땐 만들어 놓은 이미지를 활용하여 테스트 효율을 높임</li>
+    </ul>
+  </li>
+  <li>Feature Flag 도입
+    <ul>
+      <li>기존엔 새로운 기능을 만들면서 기존 기능을 지웠음</li>
+      <li>Feature Flag로 새로운 기능과 기존 기능을 껐다 킬 수 있게 함</li>
+      <li>기능이 완성되는 데로 배포 먼저 하고 원하는 시점에 기능을 오픈할 수 있음. 문제 생기면 배포 없이 끄는 것도 가능</li>
+      <li>일부 사용자를 대상으로 조금씩 오픈하는 것도 고려</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://cloud.withgoogle.com/next/sf/">Google Cloud Next ’20 | April 6-8</a></li>
+  <li><a href="https://engineering.fb.com/web/rapid-release-at-massive-scale/">Rapid release at massive scale - Facebook Engineering</a></li>
+  <li><a href="https://launchdarkly.com/">Feature Flag and Toggle Management For Continuous Delivery | LaunchDarkly</a></li>
+  <li><a href="https://www.thoughtworks.com/radar/techniques/decoupling-deployment-from-release">Decoupling deployment from release | Technology Radar | ThoughtWorks</a></li>
+  <li><a href="https://medium.com/@thysniu/coding-with-feature-flags-how-to-guide-and-best-practices-3f9637f51265">Coding with Feature Flags: How-to Guide and Best Practices</a></li>
+</ul>
+
+<h2 id="cloud-run---가장-쉬운-컨테이너-배포-방법">
+<a class="anchor" href="#cloud-run---%EA%B0%80%EC%9E%A5-%EC%89%AC%EC%9A%B4-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%B0%B0%ED%8F%AC-%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cloud Run - 가장 쉬운 컨테이너 배포 방법</h2>
+
+<p>Google Next 2019에서 발표한 것 중 가장 기대했던 건 Cloud Run이었습니다. AWS 람다처럼 사용하기 쉽고 컨테이너를 사용하기 때문에 언어나 환경에 제한이 없는 환상적인 기술입니다.</p>
+
+<p>Cloud Run 자체도 좋았지만 Google Cloud를 이용하여 Cloud Run에 배포하는 과정이 더 좋았습니다.</p>
+
+<p><strong>Cloud Run 배포하기</strong></p>
+
+<ul>
+  <li>Cloud Source Repository
+    <ul>
+      <li>Git 저장소인데 뭔가 구글스러운(안 이쁜) UI</li>
+      <li>메인 저장소가 아니라 배포를 위한 저장소로 사용
+        <ul>
+          <li>origin - 기존 git 원격 저장소</li>
+          <li>google - cloud source repository</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Google Cloud Build
+    <ul>
+      <li>Cloud Source Repository에 소스가 푸시되면 트리거 발생</li>
+      <li>Dockerfile이 있으면 모든 게 자동화 - Commit ID로 도커 이미지를 빌드하고 Container Registry에 이미지를 저장</li>
+    </ul>
+  </li>
+  <li>Cloud Run
+    <ul>
+      <li>애플리케이션을 만들 때 Container Regsitry에 등록된 이미지를 선택</li>
+      <li>커스텀 도메인 연결은 도메인 관리자에서 CNAME만 추가하면 됨</li>
+      <li>Google Cloud SQL(MySQL) 연동 가능</li>
+      <li>HTTPS 기본 지원</li>
+      <li>사용한 만큼만 비용 발생</li>
+    </ul>
+  </li>
+</ul>
+
+<p>소스 저장소만 만들면 배포까지 5분도 걸리지 않습니다. 역시 구글!</p>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://cloud.google.com/run/">Cloud Run   |  Google Cloud</a></li>
+</ul>
+
+<h2 id="kubernetes---eks-도입">
+<a class="anchor" href="#kubernetes---eks-%EB%8F%84%EC%9E%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kubernetes - EKS 도입</h2>
+
+<p>쿠버네티스는 구글이 만든 컨테이너 오케스트레이션 도구입니다. 도커를 사용하고 어느 정도 규모가 있는 곳에서는 거의 필수적으로 사용하고 있습니다.</p>
+
+<p><strong>쿠버네티스 개선</strong></p>
+
+<ul>
+  <li>KOPS -&gt; EKS
+    <ul>
+      <li>기존에 KOPS로 구축한 클러스터를 EKS로 변경 - On demand와 Spot 인스턴스 사용</li>
+      <li>EKS는 마스터 서버를 알아서 관리해줌</li>
+      <li>마스터 서버에 직접 접근이 안되기 때문에 몇 가지 제약이 있음 -&gt; 일반적인 상황에서는 크게 문제가 없고, 시간이 지나면서 하나둘 제약이 없어지고 있음</li>
+      <li>KOPS를 잘 사용하고 있다면 굳이 옮길 필요는 없어 보임</li>
+    </ul>
+  </li>
+  <li>쿠버네티스 배포
+    <ul>
+      <li>Helm과 ArgoCD 사용</li>
+      <li>GitOps 방식 완소🥰</li>
+    </ul>
+  </li>
+  <li>Istio
+    <ul>
+      <li>1년째 테스트만.. 적용할까 말까</li>
+    </ul>
+  </li>
+  <li>클러스터 업데이트 시 주의점
+    <ul>
+      <li>노드를 업데이트할 때 기존 컨테이너를 다른 노드에 생성하지 않고 노드가 삭제됨 -&gt; 복제개수가 1개라면 잠시 서비스 중단 발생 (예상은 컨테이너를 옮기고 노드를 지우는 건데..)</li>
+      <li>컨테이너를 2개 이상 띄우거나 Taint + Drain 조합으로 한 땀 한 땀 옮기는 작업 필요</li>
+      <li>혹시 쉽게 하는 법 아시는 분..?</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://subicura.com/2019/05/19/kubernetes-basic-1.html">쿠버네티스 시작하기 - Kubernetes란 무엇인가?</a></li>
+  <li><a href="https://www.slideshare.net/subicura/gitops-cicd-156402754">쿠버네티스를 이용한 기능 브랜치별 테스트 서버 만들기 (GitOps CI/CD)</a></li>
+  <li><a href="https://helm.sh/">Helm Docs | Helm</a></li>
+  <li><a href="https://argoproj.github.io/argo-cd/">Argo CD - Declarative GitOps CD for Kubernetes</a></li>
+</ul>
+
+<h2 id="terraform-드디어-도입">
+<a class="anchor" href="#terraform-%EB%93%9C%EB%94%94%EC%96%B4-%EB%8F%84%EC%9E%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terraform 드디어 도입</h2>
+
+<p>테라폼은 하시코프에서 만든 인프라를 코드로 관리해주는 도구입니다. 인프라는 관리자 화면에서 클릭클릭으로 관리할 수 있지만 규모가 커질수록 관리가 어려워집니다. 그리고 문제가 생겨 복구를 하거나 비슷한 환경을 하나 더 만들려면 테라폼 같은 도구가 필요합니다.</p>
+
+<p>테라폼은 공부만 하고 있었는데 EKS를 도입하면서 적극적으로 사용하고 있습니다. <del>eksctl을 공부하느니 테라폼을 배우겠다</del></p>
+
+<p><strong>간단한(?) 테라폼 사용방법</strong></p>
+
+<ol>
+  <li>리소스 선언</li>
+  <li>리소스 적용이 가능한지 테스트 (Plan)</li>
+  <li>테스트 후 실제 적용하기 (Apply)</li>
+  <li>1번으로 돌아감 (반복)</li>
+</ol>
+
+<p>참 쉽죠? 기본적인 사용법은 쉽지만, 문제는 <strong>리소스 선언</strong> 입니다.</p>
+
+<p><strong>어려운 테라폼 리소스 선언</strong></p>
+
+<ul>
+  <li>리소스를 선언하려면 해당 인프라에 대해 자세히 알아야 함
+    <ul>
+      <li>첫 시도에 적용은 사실상 어려움</li>
+      <li>관리자 화면에서 몇 번 만들면서 감을 잡고 코드로 옮김</li>
+    </ul>
+  </li>
+  <li>인프라를 잘 안다고 하더라도 별도의 언어로 표현하는 건 다른 이야기
+    <ul>
+      <li>HCL 문법을 익혀야 함</li>
+      <li>보이지 않는 영역 (왜 리소스가 나누어져 있지?) 을 이해하고 여러 가지 팁을 알고 있어야 함</li>
+    </ul>
+  </li>
+  <li>레거시
+    <ul>
+      <li>기존에 만들어진 리소스를 테라폼 코드로 옮기기 어려움 <del>귀찮음</del>
+</li>
+      <li>테라포밍이라는 도구를 쓰면 좋은데 전체 리소스를 지원하진 않음</li>
+    </ul>
+  </li>
+  <li>자유로운 구조
+    <ul>
+      <li>디렉토리부터 파일명까지 정해진 구조가 없음</li>
+      <li>상태 데이터를 로컬에 저장할지 S3에 저장할지 테라폼 엔터프라이즈에 저장할지 고민됨</li>
+      <li>어디까지 테라폼으로 관리하는 게 맞는지 고민됨</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>테라폼 팁</strong></p>
+
+<ul>
+  <li>하나의 디렉토리에 많은 리소스가 있으면 Plan이 오래 걸리고 관리도 어려움</li>
+  <li>디렉토리를 나누고 작은 단위로 관리</li>
+  <li>서로 다른 디렉토리의 상태를 공유하는 방법
+    <ul>
+      <li>backend를 s3로 하고 각각의 키를 분리 ex) <code class="highlighter-rouge">vpc/terraform.tfstate</code>, <code class="highlighter-rouge">eks/terraform.tfstate</code>
+</li>
+      <li>vpc에 output 선언 ex) <code class="highlighter-rouge">vpc_id</code>, <code class="highlighter-rouge">public_subnet_a_id</code>
+</li>
+      <li>eks에 <code class="highlighter-rouge">terraform_remote_state</code> data 선언 ex)  vpc/terraform.tfstate를 바라봄</li>
+      <li>eks에서 Plan을 하면 vpc와 관련된 데이터는 s3에서 가져오고 eks 관련 리소스만 체크함</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://www.terraform.io/">Terraform by HashiCorp</a></li>
+  <li><a href="https://www.44bits.io/ko/post/terraform_introduction_infrastrucute_as_code">테라폼(Terraform) 기초 튜토리얼: AWS로 시작하는 Infrastructure as Code | 44bits.io</a></li>
+  <li><a href="https://github.com/dtan4/terraforming">GitHub - dtan4/terraforming: Export existing AWS resources to Terraform style (tf, tfstate)</a></li>
+</ul>
+
+<h2 id="소중한-shopify-앱-개발-경험">
+<a class="anchor" href="#%EC%86%8C%EC%A4%91%ED%95%9C-shopify-%EC%95%B1-%EA%B0%9C%EB%B0%9C-%EA%B2%BD%ED%97%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>소중한 Shopify 앱 개발 경험</h2>
+
+<p>2019년 프로젝트 중에 Shopify를 사용한 것이 있습니다. Shopify는 글로벌 최대 E-커머스 플랫폼으로 플러그인이 굉장히 발달되어 있습니다. 플러그인이 페이스북 앱 같은 형태로 제공되는데 원하는 앱을 찾고 추가하면 OAuth 인증을 하고 필요한 권한을 요청합니다.</p>
+
+<p>가장 놀라고 많이 배운 점은 앱 개발 환경입니다. 기존 소스를 건드리지 않고 앱을 이용한 확장 방식은 굉장히 심플하고 강력합니다.</p>
+
+<p><strong>Shopify 앱 개발하기</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/shopify-app.png" alt=""></p>
+
+<ul>
+  <li>쇼핑몰에 등록된 상품 정보를 가져오는 앱을 한 시간 내에 만들 수 있음 - Nodejs기반의 쉬운 개발환경 + 튜토리얼</li>
+  <li>Shopify는 핵심 기능만 제공 - OAuth와 API, Webhook</li>
+  <li>기존 관리 화면에 앱을 포함 -&gt; 별도의 앱이 아닌 하나의 앱처럼 보임</li>
+  <li>Shopify 관리자 UI를 React 컴포넌트로 제공 -&gt; UI 가이드를 준수하면 기존 관리 화면과 이질감 없음. 모바일 지원 잘됨</li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://shopify.com/">Ecommerce Software - Best Ecommerce Platform Made for You - Free Trial</a></li>
+  <li><a href="https://developers.shopify.com/tutorials/build-a-shopify-app-with-node-and-react">Build a Shopify App with Node.js and React</a></li>
+</ul>
+
+<h2 id="업무-프로세스-개선">
+<a class="anchor" href="#%EC%97%85%EB%AC%B4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EA%B0%9C%EC%84%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>업무 프로세스 개선</h2>
+
+<p>업무 프로세스 개선은 최애 관심사 중 하나입니다. 다양한 방법을 시도하고 괜찮은 방법을 선택하려고 노력하지만 모든 사람을 만족시킬 순 없어 고민 중입니다.</p>
+
+<p><strong>새로 도입한 프로세스 &amp; 도구</strong></p>
+
+<ul>
+  <li>Asana - 새로운 이슈 관리 시스템
+    <ul>
+      <li>여러 이슈 관리 시스템을 돌고 돌아 <del>다시</del> Asana로 정착</li>
+      <li>모든 기능이 다 있진 않지만 꼭 필요한 기능은 있는 느낌</li>
+      <li>iOS 한글 버그 언제 고치나..</li>
+    </ul>
+  </li>
+  <li>Unito - 연동 서비스
+    <ul>
+      <li>Asana - GitLab 연동 서비스</li>
+      <li>Asana에 이슈를 등록하면 GitLab에 이슈로 등록됨</li>
+      <li>Asana - GitLab Issue - GitLab Merge Request로 연결</li>
+    </ul>
+  </li>
+  <li>Notion - 쉬운 위키
+    <ul>
+      <li>간단한 메모부터 회의록, 위키, 개발 문서 정리, 자료 공유, 데이터 정리까지 지원 - 어떻게 화면을 구성하느냐에 따라 무궁무진하게 활용할 수 있음</li>
+      <li>동시에 여러 명이 편집할 수 있고 화면이 이쁨</li>
+      <li>개발 위주의 위키로 사용 중</li>
+    </ul>
+  </li>
+  <li>Daily Standup Meeting
+    <ul>
+      <li>직접 만나서 이야기하기 전에 Asana 팀 conversation에 어제 한일/오늘 할 일/이슈를 적음</li>
+      <li>오전에 30분 이내로 이슈를 짧게 공유</li>
+      <li>확실히 직접 얼굴을 보고 얘기해야 제맛 -&gt; 안 보고 잘할 수 있는 방법은?!</li>
+    </ul>
+  </li>
+  <li>OKR
+    <ul>
+      <li>목표와 핵심 결과지표를 작성하고 결과를 추적할 수 있도록 도와주는 목표 설정 프레임워크</li>
+      <li>내용은 간단한 것 같은데 실천이 어려움</li>
+      <li>2019년엔 사실상 적용 실패 -&gt; 2020년엔 잘해보자!</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>참고링크</strong></p>
+
+<ul>
+  <li><a href="https://asana.com/">Manage your team’s work, projects, &amp; tasks online · Asana</a></li>
+  <li><a href="https://unito.io/">Unito :: Integrate Project Management Tools - Sync Trello, Jira, Asana…</a></li>
+  <li><a href="https://www.notion.so/">Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.</a></li>
+</ul>
+
+<h2 id="그래서">
+<a class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
+
+<p>그동안 사용한 기술을 빠르게 요약, 정리하려고 했는데 해가 넘어갔습니다😭 나중에 기회가 되면 요약 버전 말고 좀 더 심화 내용을 써 볼까 합니다.</p>
+
+<p>2019년은 유독 바빴던 한해였습니다. 블로그 글은 하나밖에 못썼지만.. <del>반성중 ㅠㅠ</del> <code class="highlighter-rouge">Next '19 Extended Seoul</code>과  <code class="highlighter-rouge">Open Infrastructure &amp; Cloud Native Days Korea 2019</code>에서 발표하고 <code class="highlighter-rouge">쿠버네티스 핸즈온</code>과 <code class="highlighter-rouge">도커 워크숍</code>도 진행했네요. 그리고 <a href="https://www.imaso.co.kr/archives/5443">마이크로소프트웨어 398호 클라우드의 어떤 것</a>에 <code class="highlighter-rouge">GitOps</code>라는 주제로 기고를 했습니다.</p>
+
+<p>회사에선 조직이 커지면서 코딩하는 시간보다 팀을 정비하고 생산성을 높이기 위해 부수적인 노력을 많이 한 것 같습니다. 앞으로 많은 부분에서 고민이 깊어질 것 같습니다.</p>
+
+<p>2020년도 다 같이 성장하고 즐거운 한 해가 되기를 바랍니다. 🔥</p>
+
+<hr>
+
+<p>같이 함께할 분을 찾고 있습니다. 부담 갖지 말고 연락 주세요! <a href="http://bit.ly/purpleworks-want-you">퍼플웍스 채용페이지</a></p>
+
+          <p class="tags">
+            
+              <a href="/tags#typescript-ref">Typescript</a>
+            
+              <a href="/tags#tslint-ref">TSLint</a>
+            
+              <a href="/tags#eslint-ref">ESLint</a>
+            
+              <a href="/tags#prettier-ref">Prettier</a>
+            
+              <a href="/tags#vscode-ref">VSCode</a>
+            
+              <a href="/tags#styledcomponent-ref">StyledComponent</a>
+            
+              <a href="/tags#atomicdesign-ref">AtomicDesign</a>
+            
+              <a href="/tags#storybook-ref">Storybook</a>
+            
+              <a href="/tags#antdesign-ref">AntDesign</a>
+            
+              <a href="/tags#nextjs-ref">Nextjs</a>
+            
+              <a href="/tags#graphql-ref">GraphQL</a>
+            
+              <a href="/tags#apollo-ref">Apollo</a>
+            
+              <a href="/tags#ssg-ref">SSG</a>
+            
+              <a href="/tags#googlenext-ref">GoogleNext</a>
+            
+              <a href="/tags#cloudrun-ref">CloudRun</a>
+            
+              <a href="/tags#kubernetes-ref">Kubernetes</a>
+            
+              <a href="/tags#terraform-ref">Terraform</a>
+            
+              <a href="/tags#shopify-ref">Shopify</a>
+            
+          </p>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            <div class="fb-like" data-href="https://subicura.com/2020/01/07/2019-dev-summary.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="ko"></a>
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=2019%EB%85%84+%EA%B0%9C%EB%B0%9C+%EC%9D%B4%EC%95%BC%EA%B8%B0&amp;url=https://subicura.com/2020/01/07/2019-dev-summary"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="nf nf-fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>subicura</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2020-01-07 00:00">07 Jan 2020</time></p>
+            </section>
+            <footer class="subscribe-info">
+                <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+                <a class="subscribe" href="http://bit.ly/2A8Dkav"  target="blank"><img id='feedlyFollow' src='//s3.feedly.com/img/follows/feedly-follow-logo-black_2x.png' alt='follow us in feedly' width='18' height='18'> Feedly 구독하기</a><br />
+                <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="nf nf-fa-rss"></i> RSS 구독하기</span></a><br />
+                 
+                  <a class="subscribe" href="http://eepurl.com/cywDtP" target="_blank"> <span class="tooltip"> <i class="nf nf-oct-mail"></i> Email 구독하기</span></a>
+                
+            </footer>
+          </div>
+
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <div class="googleads">
+              
+                <!-- 기본 광고 -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-2468713653725581"
+                    data-ad-slot="1015072194"
+                    data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+              
+            </div>
+          </div>
+        </div>
+
+        
+
+         
+        <div class="fb-comments-wrapper">
+          
+            <div class="fb-comments" data-href="https://subicura.com/2020/01/07/2019-dev-summary.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
+          
+        </div>
+        
+
+        
+      </article>
+    </main>
+
+    <aside class="read-next">
+      
+      
+        <a class="read-next-story prev no-cover" href="/2019/05/19/kubernetes-basic-1.html">
+          <section class="post">
+            <h2>쿠버네티스 시작하기 - Kubernetes란 무엇인가?</h2>
+            <p>쿠버네티스는 컨테이너를 쉽고 빠르게 배포/확장하고 관리를 자동화해주는 오픈소스 플랫폼입니다. 1주일에 수십억 개의 컨테이너를 생성하는 구글이...</p>
+          </section>
+        </a>
+      
+    </aside>
+    <footer class="post-site-footer clearfix">
+      <section class="copyright"><a href="/">Subicura's Blog</a> © 2020</section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js?1578332021524631000"></script>
+<script type="text/javascript" src="/assets/js/readingtime.js"></script>
+<script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+  </body>
+</html>

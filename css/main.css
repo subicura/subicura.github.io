@@ -666,6 +666,8 @@ body {
     padding-top: 2px; }
     .post .post-content li p {
       padding: 0 0 1.618rem; }
+    .post .post-content li ul, .post .post-content li ol {
+      padding: 0 0 5px; }
   .post .post-content ol li {
     list-style-type: decimal; }
   .post .post-content table.table {
@@ -1087,7 +1089,7 @@ pre {
   padding-bottom: 20px; }
 
 .highlight {
-  margin: 0 0 16px; }
+  margin: 0 0 20px; }
 
 .badge-success {
   padding: 3px 5px;

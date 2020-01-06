@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1572754409173548000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1578332021524631000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -420,7 +420,8 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 <figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre><span class="nv">$ </span>npm install <span class="nt">-g</span> eslint</pre></td>
+<td class="code"><pre><span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">-g</span> eslint
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><strong>초기설정</strong></p>
@@ -458,7 +459,8 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 ? What quotes <span class="k">do </span>you use <span class="k">for </span>strings? Single
 ? What line endings <span class="k">do </span>you use? Unix
 ? Do you require semicolons? Yes
-? What format <span class="k">do </span>you want your config file to be <span class="k">in</span>? JavaScript</pre></td>
+? What format <span class="k">do </span>you want your config file to be <span class="k">in</span>? JavaScript
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>몇가지 옵션을 물어보면서 자동으로 필요한 plugin을 추가하고 <code class="highlighter-rouge">.eslintrc.js</code>라는 설정파일을 만들어줍니다.</p>
@@ -510,7 +512,8 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 <figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre><span class="nv">$ </span>npm install <span class="nt">--save-dev</span> eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint</pre></td>
+<td class="code"><pre><span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <noscript><pre>module.exports = {
@@ -555,7 +558,8 @@ PostForm = reduxForm({
 <figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre><span class="nv">$ </span>eslint <span class="k">**</span>/<span class="k">*</span>.jsx</pre></td>
+<td class="code"><pre><span class="nv">$ </span>eslint <span class="k">**</span>/<span class="k">*</span>.jsx
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>주르륵주르륵 에러가 뜹니다. ㅠㅠ 이제 고치기만 하면 되겠네요…</p>
@@ -572,9 +576,10 @@ PostForm = reduxForm({
 2
 3
 </pre></td>
-<td class="code"><pre><span class="nv">$ </span>npm install <span class="nt">--global</span> gulp-cli
-<span class="nv">$ </span>npm install <span class="nt">--save-dev</span> gulp
-<span class="nv">$ </span>npm install <span class="nt">--save-dev</span> gulp-eslint</pre></td>
+<td class="code"><pre><span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">--global</span> gulp-cli
+<span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> gulp
+<span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">--save-dev</span> gulp-eslint
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>대부분의 linter는 <a href="https://github.com/adametry/gulp-eslint">gulp-eslint</a>와 같이 gulp용 plugin을 제공합니다. 이제 gulpfile을 설정합니다.</p>
@@ -603,7 +608,8 @@ gulp.task('default', ['watch'], function () {
 <figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre><span class="nv">$ </span>gulp</pre></td>
+<td class="code"><pre><span class="nv">$ </span>gulp
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>node_modules 디렉토리를 제외하고 js와 jsx파일을 수정하면 자동으로 eslint를 실행하고 결과를 알려줍니다. 이런식으로 scss-lint등 원하는 linter를 추가할 수 있습니다.</p>
@@ -646,7 +652,8 @@ gulp.task('default', ['watch'], function () {
 <figure class="highlight"><pre><code class="language-sh" data-lang="sh"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre><span class="nv">$ </span>eslint <span class="nt">-f</span> checkstyle <span class="k">*</span>.js <span class="o">&gt;</span> checkstyle.xml</pre></td>
+<td class="code"><pre><span class="nv">$ </span>eslint <span class="nt">-f</span> checkstyle <span class="k">*</span>.js <span class="o">&gt;</span> checkstyle.xml
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>eslint에서는 -f 옵션을 통해 output 포멧을 지정할 수 있는데 checkstyle을 내장하고 있습니다. Jenkins에서 checkstyle을 설정하면 다음과 같은 화면을 볼 수 있습니다.</p>
@@ -761,12 +768,12 @@ gulp.task('default', ['watch'], function () {
       
     </aside>
     <footer class="post-site-footer clearfix">
-      <section class="copyright"><a href="/">Subicura's Blog</a> © 2019</section>
+      <section class="copyright"><a href="/">Subicura's Blog</a> © 2020</section>
     </footer>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1572754409173548000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1578332021524631000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

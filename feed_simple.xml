@@ -6,9 +6,57 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 03 Nov 2019 13:13:29 +0900</pubDate>
-    <lastBuildDate>Sun, 03 Nov 2019 13:13:29 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Jan 2020 02:33:41 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Jan 2020 02:33:41 +0900</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>2019년 개발 이야기</title>
+        <description>2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 회고하면서 어떤 이야기를 할까 고민하다가 3년 전에 작성했던 홈쇼핑처럼 개발 후기가 생각났고 퍼플웍스에서 그동안 도입했던 기술과 유용한 개발 내용을 정리해 보았습니다.</description>
+        <pubDate>Tue, 07 Jan 2020 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2020/01/07/2019-dev-summary.html</link>
+        <guid isPermaLink="true">https://subicura.com/2020/01/07/2019-dev-summary.html</guid>
+        
+        <category>Typescript</category>
+        
+        <category>TSLint</category>
+        
+        <category>ESLint</category>
+        
+        <category>Prettier</category>
+        
+        <category>VSCode</category>
+        
+        <category>StyledComponent</category>
+        
+        <category>AtomicDesign</category>
+        
+        <category>Storybook</category>
+        
+        <category>AntDesign</category>
+        
+        <category>Nextjs</category>
+        
+        <category>GraphQL</category>
+        
+        <category>Apollo</category>
+        
+        <category>SSG</category>
+        
+        <category>GoogleNext</category>
+        
+        <category>CloudRun</category>
+        
+        <category>Kubernetes</category>
+        
+        <category>Terraform</category>
+        
+        <category>Shopify</category>
+        
+        
+        <category>Development</category>
+        
+      </item>
     
       <item>
         <title>쿠버네티스 시작하기 - Kubernetes란 무엇인가?</title>
@@ -191,26 +239,6 @@
         
         
         <category>Code</category>
-        
-      </item>
-    
-      <item>
-        <title>왜 React와 서버 사이드 렌더링인가?</title>
-        <description>홈쇼핑처럼 4번째 상품인 튀김을 기름에 튀기면서 React를 적용하느라 고생했던 순간이 떠올라 React와 서버 사이드 렌더링 적용과정을 정리해봅니다. 여기서는 어떻게보다는 왜에 대해 설명합니다.</description>
-        <pubDate>Mon, 20 Jun 2016 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/2016/06/20/server-side-rendering-with-react.html</link>
-        <guid isPermaLink="true">https://subicura.com/2016/06/20/server-side-rendering-with-react.html</guid>
-        
-        <category>FrontEnd</category>
-        
-        <category>Javascript</category>
-        
-        <category>React</category>
-        
-        <category>Angular</category>
-        
-        
-        <category>Javascript</category>
         
       </item>
     

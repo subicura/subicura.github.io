@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1572754409173548000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1578332021524631000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -452,7 +452,8 @@
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre><span class="c1">//# sourceMappingURL=bundle.js.map</span></pre></td>
+<td class="code"><pre><span class="c1">//# sourceMappingURL=bundle.js.map</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">http://localhost:3000/static/js/bundle.js.map</code>를 주소창에 입력하면 뭔가 복잡한 파일이 나타납니다. 😱 간략하게 표현하면 다음과 같은 구조로 되어 있습니다.</p>
@@ -468,13 +469,14 @@
 8
 </pre></td>
 <td class="code"><pre><span class="p">{</span><span class="w">
-  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"out.js"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sourceRoot"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"foo.js"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bar.js"</span><span class="p">],</span><span class="w">
-  </span><span class="s2">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"src"</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps"</span><span class="p">,</span><span class="w"> </span><span class="s2">"are"</span><span class="p">,</span><span class="w"> </span><span class="s2">"fun"</span><span class="p">],</span><span class="w">
-  </span><span class="s2">"mappings"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAgBC,SAAQ,CAAEA"</span><span class="w">
-</span><span class="p">}</span></pre></td>
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"out.js"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sourceRoot"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"foo.js"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bar.js"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"src"</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps"</span><span class="p">,</span><span class="w"> </span><span class="s2">"are"</span><span class="p">,</span><span class="w"> </span><span class="s2">"fun"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"mappings"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAgBC,SAAQ,CAAEA"</span><span class="w">
+</span><span class="p">}</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>이 파일을 <code class="highlighter-rouge">source map</code> 이라고 합니다.</p>
@@ -551,28 +553,29 @@
 23
 </pre></td>
 <td class="code"><pre><span class="p">{</span><span class="w">
-    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"configurations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"configurations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Launch Js Debug Example"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chrome"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"launch"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"webRoot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"pathMapping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}/src"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"js/vanilla-script.js"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}/public/js/vanilla-script.js"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"js/jq-script.js"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}/public/js/jq-script.js"</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Launch Js Debug Example"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chrome"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"launch"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"webRoot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pathMapping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}/src"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"js/vanilla-script.js"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}/public/js/vanilla-script.js"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"js/jq-script.js"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}/public/js/jq-script.js"</span><span class="w">
             </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"skipFiles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="nl">"skipFiles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="s2">"node_modules/*"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"react-dom*.js"</span><span class="w">
                 </span><span class="s2">"jquery-3.3.1.min.js"</span><span class="w">
             </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"disableNetworkCache"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="nl">"disableNetworkCache"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span></pre></td>
+</span><span class="p">}</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <blockquote>
@@ -705,12 +708,12 @@
       
     </aside>
     <footer class="post-site-footer clearfix">
-      <section class="copyright"><a href="/">Subicura's Blog</a> © 2019</section>
+      <section class="copyright"><a href="/">Subicura's Blog</a> © 2020</section>
     </footer>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1572754409173548000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1578332021524631000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1572754409173548000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1578332021524631000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -235,7 +235,8 @@
 2
 </pre></td>
 <td class="code"><pre><span class="n">source</span> <span class="s1">'https://rubygems.org'</span>
-<span class="n">gem</span> <span class="s1">'sinatra'</span></pre></td>
+<span class="n">gem</span> <span class="s1">'sinatra'</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><strong>app.rb</strong></p>
@@ -253,7 +254,8 @@
 
 <span class="n">get</span> <span class="s1">'/'</span> <span class="k">do</span>
   <span class="no">Socket</span><span class="p">.</span><span class="nf">gethostname</span>
-<span class="k">end</span></pre></td>
+<span class="k">end</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>ruby와 sinatra에 대해 전혀 모르더라도 <code class="highlighter-rouge">Gemfile</code>은 패키지를 관리하고 <code class="highlighter-rouge">app.rb</code>는 호스트명을 출력하는 웹 서버를 만들었다는 걸 예상할 수 있습니다.</p>
@@ -264,8 +266,9 @@
 <td class="gutter gl"><pre class="lineno">1
 2
 </pre></td>
-<td class="code"><pre>bundle install            <span class="c"># install package</span>
-bundle <span class="nb">exec </span>ruby app.rb   <span class="c"># Run sinatra</span></pre></td>
+<td class="code"><pre>bundle <span class="nb">install</span>            <span class="c"># install package</span>
+bundle <span class="nb">exec </span>ruby app.rb   <span class="c"># Run sinatra</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -287,7 +290,8 @@ bundle <span class="nb">exec </span>ruby app.rb   <span class="c"># Run sinatra<
 <span class="nt">-v</span> <span class="nv">$PWD</span>:/usr/src/app <span class="se">\</span>
 <span class="nt">-w</span> /usr/src/app <span class="se">\</span>
 ruby <span class="se">\</span>
-bash <span class="nt">-c</span> <span class="s2">"bundle install &amp;&amp; bundle exec ruby app.rb -o 0.0.0.0"</span></pre></td>
+bash <span class="nt">-c</span> <span class="s2">"bundle install &amp;&amp; bundle exec ruby app.rb -o 0.0.0.0"</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -370,18 +374,19 @@ bash <span class="nt">-c</span> <span class="s2">"bundle install &amp;&amp; bund
 apt-get update
 
 <span class="c"># 2. ruby 설치</span>
-apt-get install ruby
-gem install bundler
+apt-get <span class="nb">install </span>ruby
+gem <span class="nb">install </span>bundler
 
 <span class="c"># 3. 소스 복사</span>
-mkdir <span class="nt">-p</span> /usr/src/app
+<span class="nb">mkdir</span> <span class="nt">-p</span> /usr/src/app
 scp Gemfile app.rb root@ubuntu:/usr/src/app  <span class="c"># From host</span>
 
 <span class="c"># 4. Gem 패키지 설치</span>
-bundle install
+bundle <span class="nb">install</span>
 
 <span class="c"># 5. Sinatra 서버 실행</span>
-bundle <span class="nb">exec </span>ruby app.rb</pre></td>
+bundle <span class="nb">exec </span>ruby app.rb
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>ubuntu 컨테이너를 실행하고 위 명령어를 그대로 실행하면 웹 서버를 실행할 수 있습니다. 리눅스에서 테스트가 끝났으니 이 과정을 Dockerfile로 만들면 됩니다. 아직 자세한 명령어를 배우진 않았지만 일단 만들어 봅니다. 핵심 명령어는  파일을  복사하는 <code class="highlighter-rouge">COPY</code>와 명령어를 실행하는 <code class="highlighter-rouge">RUN</code>입니다.</p>
@@ -425,7 +430,8 @@ CMD    bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker build <span class="nt">-t</span> app .</pre></td>
+<td class="code"><pre>docker build <span class="nt">-t</span> app .
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -483,7 +489,8 @@ Step 10/10 : CMD bundle exec ruby app.rb -o 0.0.0.0
  ---&gt; Running in 1f7a9ba8d63c
  ---&gt; 54d239c00f11
 Removing intermediate container 1f7a9ba8d63c
-Successfully built 54d239c00f11</pre></td>
+Successfully built 54d239c00f11
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -497,7 +504,8 @@ Successfully built 54d239c00f11</pre></td>
 <figure class="highlight"><pre><code class="language-txt" data-lang="txt"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker images</pre></td>
+<td class="code"><pre>docker images
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -509,7 +517,8 @@ Successfully built 54d239c00f11</pre></td>
 </pre></td>
 <td class="code"><pre>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 app                 latest              54d239c00f11        4 minutes ago       209 MB
-ubuntu              16.04               f49eec89601e        2 weeks ago         129 MB</pre></td>
+ubuntu              16.04               f49eec89601e        2 weeks ago         129 MB
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>와..와우! 드디어 첫 번째 도커 이미지를 생성했습니다! 이미지를 생성했으니 잘 동작하는지 컨테이너를 실행해보겠습니다.</p>
@@ -521,7 +530,8 @@ ubuntu              16.04               f49eec89601e        2 weeks ago         
 </pre></td>
 <td class="code"><pre>docker run -d -p 8080:4567 app
 docker run -d -p 8081:4567 app
-docker run -d -p 8082:4567 app</pre></td>
+docker run -d -p 8082:4567 app
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test.png" alt="Container test result"></p>
@@ -645,7 +655,8 @@ Removing intermediate container f4de0c750abb      &lt;<span class="nt">--</span>
 Step 3/10 : RUN apt-get <span class="nt">-y</span> update                 &lt;<span class="nt">--</span> <span class="o">(</span>8<span class="o">)</span>
 ...
 ...
-Successfully built 20369cef9829                   &lt;<span class="nt">--</span> <span class="o">(</span>9<span class="o">)</span></pre></td>
+Successfully built 20369cef9829                   &lt;<span class="nt">--</span> <span class="o">(</span>9<span class="o">)</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1) Sending build context to Docker daemon  5.12 kB
@@ -722,12 +733,13 @@ Successfully built 20369cef9829                   &lt;<span class="nt">--</span>
 FROM ubuntu:16.04
 MAINTAINER subicura@subicura.com
 RUN apt-get <span class="nt">-y</span> update
-RUN apt-get <span class="nt">-y</span> install ruby
-RUN gem install bundler
+RUN apt-get <span class="nt">-y</span> <span class="nb">install </span>ruby
+RUN gem <span class="nb">install </span>bundler
 
 <span class="c"># after</span>
 FROM ruby:2.3
-MAINTAINER subicura@subicura.com</pre></td>
+MAINTAINER subicura@subicura.com
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>ruby외에도 nodejs, python, java, go등 다양한 베이스 이미지가 이미 존재합니다. 세부적인 설정이 필요하지 않다면 그대로 사용하는게 간편합니다.</p>
@@ -759,7 +771,8 @@ Step 3/10 : RUN apt-get <span class="nt">-y</span> update
  <span class="nt">---</span><span class="o">&gt;</span> Using cache
  <span class="nt">---</span><span class="o">&gt;</span> 61d45ce11dc6
  ....
- </pre></td>
+ 
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>한번 빌드한 이미지를 다시 빌드하면 굉장히 빠르게 완료되는 걸 알 수 있습니다. 이미지를 빌드하는 과정에서 각 단계를 이미지 레이어로 저장하고 다음 빌드에서 캐시로 사용합니다.</p>
@@ -775,7 +788,8 @@ Step 3/10 : RUN apt-get <span class="nt">-y</span> update
 </pre></td>
 <td class="code"><pre>COPY <span class="nb">.</span> /usr/src/app    <span class="c"># &lt;- 소스파일이 변경되면 캐시가 깨짐</span>
 WORKDIR /usr/src/app
-RUN bundle install     <span class="c"># 패키지를 추가하지 않았는데 또 인스톨하게 됨 ㅠㅠ</span></pre></td>
+RUN bundle <span class="nb">install</span>     <span class="c"># 패키지를 추가하지 않았는데 또 인스톨하게 됨 ㅠㅠ</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>복사하는 파일이 이전과 다르면 캐시를 사용하지 않고 그 이후 명령어는 다시 실행됩니다. ruby gem 패키지를 관리하는 파일은 Gemfile이고 Gemfile은 잘 수정되지 않으므로 다음과 같이 순서를 바꿀 수 있습니다.</p>
@@ -788,8 +802,9 @@ RUN bundle install     <span class="c"># 패키지를 추가하지 않았는데 
 </pre></td>
 <td class="code"><pre>COPY Gemfile<span class="k">*</span> /usr/src/app/ <span class="c"># Gemfile을 먼저 복사함</span>
 WORKDIR /usr/src/app
-RUN bundle install          <span class="c"># 패키지 인스톨</span>
-COPY <span class="nb">.</span> /usr/src/app         <span class="c"># &lt;- 소스가 바꼈을 때 캐시가 깨지는 시점 ^0^</span></pre></td>
+RUN bundle <span class="nb">install</span>          <span class="c"># 패키지 인스톨</span>
+COPY <span class="nb">.</span> /usr/src/app         <span class="c"># &lt;- 소스가 바꼈을 때 캐시가 깨지는 시점 ^0^</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>gem 설치 하는 부분을 소스 복사 이전으로 옮겼습니다. 이제 소스가 수정되더라도 매번 gem을 설치하지 않아 더욱 빠르게 빌드할 수 있습니다. 요즘 언어들은 대부분 패키지 매니저를 사용하므로 비슷한 전략으로 작성하면 됩니다.</p>
@@ -809,7 +824,8 @@ COPY <span class="nb">.</span> /usr/src/app         <span class="c"># &lt;- 소�
 RUN apt-get <span class="nt">-y</span> update
 
 <span class="c"># after</span>
-RUN apt-get <span class="nt">-y</span> <span class="nt">-qq</span> update</pre></td>
+RUN apt-get <span class="nt">-y</span> <span class="nt">-qq</span> update
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">-qq</code> 옵션으로 로그를 출력하지 않게 했습니다. 각종 리눅스 명령어는 보통 <code class="highlighter-rouge">quite</code> 옵션이 있으니 적절하게 적용하면 됩니다.</p>
@@ -822,10 +838,11 @@ RUN apt-get <span class="nt">-y</span> <span class="nt">-qq</span> update</pre><
 5
 </pre></td>
 <td class="code"><pre><span class="c"># before</span>
-RUN bundle install
+RUN bundle <span class="nb">install</span>
 
 <span class="c"># after</span>
-RUN bundle install <span class="nt">--no-rdoc</span> <span class="nt">--no-ri</span></pre></td>
+RUN bundle <span class="nb">install</span> <span class="nt">--no-rdoc</span> <span class="nt">--no-ri</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">--no-doc</code>과 <code class="highlighter-rouge">--no-ri</code> 옵션으로 필요 없는 문서를 생성하지 않아 이미지 용량도 줄이고 빌드 속도도 더 빠르게 했습니다.</p>
@@ -845,11 +862,12 @@ RUN bundle install <span class="nt">--no-rdoc</span> <span class="nt">--no-ri</s
 </pre></td>
 <td class="code"><pre><span class="c"># before</span>
 RUN apt-get <span class="nt">-y</span> <span class="nt">-qq</span> update
-RUN apt-get <span class="nt">-y</span> <span class="nt">-qq</span> install ruby
+RUN apt-get <span class="nt">-y</span> <span class="nt">-qq</span> <span class="nb">install </span>ruby
 
 <span class="c"># after</span>
 RUN apt-get <span class="nt">-y</span> <span class="nt">-qq</span> update <span class="o">&amp;&amp;</span> <span class="se">\</span>
-    apt-get <span class="nt">-y</span> <span class="nt">-qq</span> install ruby</pre></td>
+    apt-get <span class="nt">-y</span> <span class="nt">-qq</span> <span class="nb">install </span>ruby
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><strong>최종</strong></p>
@@ -901,7 +919,8 @@ CMD bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker login</pre></td>
+<td class="code"><pre>docker login
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -915,7 +934,8 @@ CMD bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 <td class="code"><pre>Login with your Docker ID to push and pull images from Docker Hub. If you don<span class="s1">'t have a Docker ID, head over to https://hub.docker.com to create one.
 Username: subicura
 Password:
-Login Succeeded</span></pre></td>
+Login Succeeded</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>ID와 패스워드를 입력하면 로그인이 되고 <code class="highlighter-rouge">~/.docker/config.json</code>에 인증정보가 저장되어 로그아웃하기 전까지 로그인 정보가 유지됩니다.</p>
@@ -937,7 +957,8 @@ Login Succeeded</span></pre></td>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker tag app subicura/sinatra-app:1</pre></td>
+<td class="code"><pre>docker tag app subicura/sinatra-app:1
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">subicura</code>라는 ID를 사용하고 이미지 이름을 <code class="highlighter-rouge">sinatra-app</code>으로 변경했습니다. 첫 번째 버전이므로 태그는 <code class="highlighter-rouge">1</code>을 사용합니다. 이제  <code class="highlighter-rouge">push</code>명령을 이용해 도커 허브에 이미지를 전송해 봅니다.</p>
@@ -945,7 +966,8 @@ Login Succeeded</span></pre></td>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker push subicura/sinatra-app:1</pre></td>
+<td class="code"><pre>docker push subicura/sinatra-app:1
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -975,7 +997,8 @@ d195a7a18c70: Mounted from library/ubuntu
 af605e724c5a: Mounted from library/ubuntu
 59f161c3069d: Mounted from library/ubuntu
 4f03495a4d7d: Mounted from library/ubuntu
-1: digest: sha256:af83aca920982c1fb17f08b4aa300439470349d58d63c921f67261054a0c9467 size: 2409</pre></td>
+1: digest: sha256:af83aca920982c1fb17f08b4aa300439470349d58d63c921f67261054a0c9467 size: 2409
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>성공적으로 이미지를 도커 허브에 푸시하였습니다. 도커 허브에 저장된 50만 개의 이미지에 새로운 이미지가 하나 추가되었습니다!</p>
@@ -998,7 +1021,8 @@ af605e724c5a: Mounted from library/ubuntu
 <td class="code"><pre>docker run <span class="nt">-d</span> <span class="se">\</span>
 <span class="nt">-v</span> <span class="nv">$PWD</span>/registry:/var/lib/registry <span class="se">\</span>
 <span class="nt">-p</span> 5000:5000 <span class="se">\</span>
-distribution/registry:2.6.0</pre></td>
+distribution/registry:2.6.0
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>저장된 이미지는 파일로 관리되기 때문에 호스트의 디렉토리를 마운트하였습니다. (S3 저장소를 사용할 수도 있습니다) 이제 레지스트리 서버의 아이피와 포트정보를 이미지명에 추가하면 바로 사용할 수 있습니다.</p>
@@ -1008,7 +1032,8 @@ distribution/registry:2.6.0</pre></td>
 2
 </pre></td>
 <td class="code"><pre>docker tag app localhost:5000/subicura/sinatra-app:1
-docker push localhost:5000/subicura/sinatra-app:1</pre></td>
+docker push localhost:5000/subicura/sinatra-app:1
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>앞에서 만든 이름에 <code class="highlighter-rouge">localhost:5000/</code>를 추가했습니다. 레지스트리 서버에 파일이 잘 저장되었나 마운트한 디렉토리를 한번 살펴봅니다.</p>
@@ -1016,7 +1041,8 @@ docker push localhost:5000/subicura/sinatra-app:1</pre></td>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>tree registry</pre></td>
+<td class="code"><pre>tree registry
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -1192,7 +1218,8 @@ docker push localhost:5000/subicura/sinatra-app:1</pre></td>
                         │                       └── link
                         └── _uploads
 
-56 directories, 26 files</pre></td>
+56 directories, 26 files
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>이미지가 레이어별로 이쁘게 저장된 걸 확인할 수 있습니다. 이렇게 개인 저장소를 만드는 법은 매우 간단합니다. 이제 내부적으로 이미지를 관리하고 여러 서버에 배포할 수 있습니다.</p>
@@ -1370,12 +1397,12 @@ docker push localhost:5000/subicura/sinatra-app:1</pre></td>
       
     </aside>
     <footer class="post-site-footer clearfix">
-      <section class="copyright"><a href="/">Subicura's Blog</a> © 2019</section>
+      <section class="copyright"><a href="/">Subicura's Blog</a> © 2020</section>
     </footer>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1572754409173548000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1578332021524631000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

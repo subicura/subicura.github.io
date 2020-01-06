@@ -43,7 +43,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1572754409173548000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1578332021524631000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -239,7 +239,8 @@
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>curl <span class="nt">-fsSL</span> https://get.docker.com/ | <span class="nb">sudo </span>sh</pre></td>
+<td class="code"><pre>curl <span class="nt">-fsSL</span> https://get.docker.com/ | <span class="nb">sudo </span>sh
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -255,7 +256,8 @@
 2
 </pre></td>
 <td class="code"><pre><span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="nv">$USER</span> <span class="c"># 현재 접속중인 사용자에게 권한주기</span>
-<span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker your-user <span class="c"># your-user 사용자에게 권한주기</span></pre></td>
+<span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker your-user <span class="c"># your-user 사용자에게 권한주기</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>사용자가 로그인 중이라면 다시 로그인 후 권한이 적용됩니다.</p>
@@ -292,7 +294,8 @@
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker version</pre></td>
+<td class="code"><pre>docker version
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -328,7 +331,8 @@ Server:
  Go version:   go1.6.4
  Git commit:   78d1802
  Built:        Wed Jan 11 00:23:16 2017
- OS/Arch:      linux/amd64</pre></td>
+ OS/Arch:      linux/amd64
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>Client와 Server 정보가 정상적으로 출력되었다면 설치가 완료된 것 입니다.</p>
@@ -406,7 +410,8 @@ Server:
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker run ubuntu:16.04</pre></td>
+<td class="code"><pre>docker run ubuntu:16.04
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -438,7 +443,8 @@ Ubuntu 16.04.1 LTS <span class="se">\n</span> <span class="se">\l</span>
 
 <span class="nv">$ </span><span class="nb">ls
 </span>bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
-boot  etc  lib   media  opt  root  sbin  sys  usr</pre></td>
+boot  etc  lib   media  opt  root  sbin  sys  usr
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -481,7 +487,8 @@ boot  etc  lib   media  opt  root  sbin  sys  usr</pre></td>
 +OK
 get mykey
 <span class="nv">$5</span>
-hello</pre></td>
+hello
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -544,7 +551,8 @@ mysql&gt; show databases<span class="p">;</span>
 +--------------------+
 4 rows <span class="k">in </span><span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
 
-mysql&gt; quit</pre></td>
+mysql&gt; quit
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -595,7 +603,8 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
   <span class="nt">-e</span> <span class="nv">WORDPRESS_DB_NAME</span><span class="o">=</span>wp <span class="se">\</span>
   <span class="nt">-e</span> <span class="nv">WORDPRESS_DB_USER</span><span class="o">=</span>wp <span class="se">\</span>
   <span class="nt">-e</span> <span class="nv">WORDPRESS_DB_PASSWORD</span><span class="o">=</span>wp <span class="se">\</span>
-  wordpress</pre></td>
+  wordpress
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -626,7 +635,8 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker run <span class="nt">-d</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 6006:6006 teamlab/pydata-tensorflow:0.1</pre></td>
+<td class="code"><pre>docker run <span class="nt">-d</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 6006:6006 teamlab/pydata-tensorflow:0.1
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>설치된 파일이 많아 다운로드 하는데 시간이 좀 걸립니다. 컨테이너가 실행되면 웹 브라우저에서 jupyter에 접속하여 머신러닝을 시작해 봅시다!</p>
@@ -654,7 +664,8 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker ps</pre></td>
+<td class="code"><pre>docker ps
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -670,7 +681,8 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 6a1d027b604f        teamlab/pydata-tensorflow:0.1   "/opt/start"             About a minute ago   Up About a minute   0.0.0.0:6006-&gt;6006/tcp, 22/tcp, 0.0.0.0:8888-&gt;8888/tcp   desperate_keller
 52a516f87ceb        wordpress                       "docker-entrypoint.sh"   8 minutes ago        Up 8 minutes        0.0.0.0:8080-&gt;80/tcp                                     happy_curran
 2e2c569115b9        mysql:5.7                       "docker-entrypoint.sh"   9 minutes ago        Up 9 minutes        0.0.0.0:3306-&gt;3306/tcp                                   mysql
-56341072b515        redis                           "docker-entrypoint.sh"   16 minutes ago       Up 9 minutes        0.0.0.0:1234-&gt;6379/tcp                                   furious_tesla</pre></td>
+56341072b515        redis                           "docker-entrypoint.sh"   16 minutes ago       Up 9 minutes        0.0.0.0:1234-&gt;6379/tcp                                   furious_tesla
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">ps</code> 명령어는 실행중인 컨테이너 목록을 보여줍니다. detached mode로 실행중인 컨테이너들이 보입니다. 어떤 이미지를 기반으로 만들었는지 어떤 포트와 연결이 되어있는지 등 간단한 내용을 보여줍니다.</p>
@@ -680,7 +692,8 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker ps <span class="nt">-a</span></pre></td>
+<td class="code"><pre>docker ps <span class="nt">-a</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -698,7 +711,8 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 52a516f87ceb        wordpress                       "docker-entrypoint.sh"   9 minutes ago       Up 9 minutes                0.0.0.0:8080-&gt;80/tcp                                     happy_curran
 2e2c569115b9        mysql:5.7                       "docker-entrypoint.sh"   10 minutes ago      Up 10 minutes               0.0.0.0:3306-&gt;3306/tcp                                   mysql
 56341072b515        redis                           "docker-entrypoint.sh"   18 minutes ago      Up 10 minutes               0.0.0.0:1234-&gt;6379/tcp                                   furious_tesla
-e1a00c5934a7        ubuntu:16.04                    "/bin/bash"              32 minutes ago      Exited (0) 32 minutes ago                                                            berserk_visvesvaraya</pre></td>
+e1a00c5934a7        ubuntu:16.04                    "/bin/bash"              32 minutes ago      Exited (0) 32 minutes ago                                                            berserk_visvesvaraya
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>맨 처음 실행했다가 종료된 컨테이너(Exited (0))가 추가로 보입니다. 컨테이너는 종료되어도 삭제되지 않고 남아있습니다. 종료된 건 다시 시작할 수 있고 컨테이너의 읽기/쓰기 레이어는 그대로 존재합니다. 명시적으로 삭제를 하면 깔끔하게 컨테이너가 제거됩니다.</p>
@@ -721,7 +735,8 @@ e1a00c5934a7        ubuntu:16.04                    "/bin/bash"              32 
 </pre></td>
 <td class="code"><pre>docker ps <span class="c"># get container ID</span>
 docker stop <span class="k">${</span><span class="nv">TENSORFLOW_CONTAINER_ID</span><span class="k">}</span>
-docker ps <span class="nt">-a</span> <span class="c"># show all containers</span></pre></td>
+docker ps <span class="nt">-a</span> <span class="c"># show all containers</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <blockquote>
@@ -745,8 +760,9 @@ docker ps <span class="nt">-a</span> <span class="c"># show all containers</span
 3
 </pre></td>
 <td class="code"><pre>docker ps <span class="nt">-a</span> <span class="c"># get container ID</span>
-docker rm <span class="k">${</span><span class="nv">UBUNTU_CONTAINER_ID</span><span class="k">}</span> <span class="k">${</span><span class="nv">TENSORFLOW_CONTAINER_ID</span><span class="k">}</span>
-docker ps <span class="nt">-a</span> <span class="c"># check exist</span></pre></td>
+docker <span class="nb">rm</span> <span class="k">${</span><span class="nv">UBUNTU_CONTAINER_ID</span><span class="k">}</span> <span class="k">${</span><span class="nv">TENSORFLOW_CONTAINER_ID</span><span class="k">}</span>
+docker ps <span class="nt">-a</span> <span class="c"># check exist</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>컨테이너가 말끔히 삭제되었습니다. 호스트 OS는 아무런 흔적도 남아있지 않고 컨테이너만 격리된 상태로 실행되었다가 삭제되었습니다. 시스템이 꼬일 걱정이 없습니다.</p>
@@ -767,7 +783,8 @@ docker ps <span class="nt">-a</span> <span class="c"># check exist</span></pre><
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker images</pre></td>
+<td class="code"><pre>docker images
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -785,7 +802,8 @@ wordpress                   latest              b1fe82b15de9        43 hours ago
 redis                       latest              45c3ea2cecac        44 hours ago        182.9 MB
 mysql                       5.7                 f3694c67abdb        46 hours ago        400.1 MB
 ubuntu                      16.04               104bec311bcd        4 weeks ago         129 MB
-teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago        3.081 GB</pre></td>
+teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago        3.081 GB
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>이미지 주소와 태그, ID, 생성시점, 용량이 보입니다. 이미지가 너무 많이 쌓이면 용량을 차지하기 때문에 사용하지 않는 이미지는 지우는 것이 좋습니다.</p>
@@ -802,7 +820,8 @@ teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker pull ubuntu:14.04</pre></td>
+<td class="code"><pre>docker pull ubuntu:14.04
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">run</code>명령어를 입력하면 이미지가 없을 때 자동으로 다운받으니 <code class="highlighter-rouge">pull</code>명령어를 언제 쓰는지 궁금할 수 있는데 <code class="highlighter-rouge">pull</code>은 최신버전으로 다시 다운 받습니다. 같은 태그지만 이미지가 업데이트 된 경우는 <code class="highlighter-rouge">pull</code>명령어를 통해 새로 다운받을 수 있습니다.</p>
@@ -823,7 +842,8 @@ teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago
 2
 </pre></td>
 <td class="code"><pre>docker images <span class="c"># get image ID</span>
-docker rmi <span class="k">${</span><span class="nv">TENSORFLOW_IMAGE_ID</span><span class="k">}</span></pre></td>
+docker rmi <span class="k">${</span><span class="nv">TENSORFLOW_IMAGE_ID</span><span class="k">}</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -907,7 +927,8 @@ Deleted: sha256:0ad5b9ed74fe2eee856b368d426cdd9335a6a6ecec0c4c705b5153c219a82692
 Deleted: sha256:b159c847c5b9b899c23eba59395a4d7b7b275a8c686191ed6c4ef21ceadad8a2
 Deleted: sha256:89e9f76552fd1a8d249c1e133e4c8964fe1f9104bb708db1e0ca6f6171ee4c22
 Deleted: sha256:6d31e1827ca8f5037077314b2403eabd82590f9eae8baf956a2c2a819db68d4e
-Deleted: sha256:7f4734de8e3dd402f10030f06bcb8781129b1eb6a25c58811a76d015f2a0982f</pre></td>
+Deleted: sha256:7f4734de8e3dd402f10030f06bcb8781129b1eb6a25c58811a76d015f2a0982f
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>이미지가 삭제되었습니다. 이미지는 여러개의 레이어로 구성되어 있기 때문에 모든 레이어가 삭제된 것을 알 수 있습니다.</p>
@@ -933,7 +954,8 @@ Deleted: sha256:7f4734de8e3dd402f10030f06bcb8781129b1eb6a25c58811a76d015f2a0982f
 2
 </pre></td>
 <td class="code"><pre>docker ps
-docker logs <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span></pre></td>
+docker logs <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -987,7 +1009,8 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 172.17.0.1 - - [19/Jan/2017:16:12:02 +0000] "GET /favicon.ico HTTP/1.1" 200 229 "http://localhost:8080/wp-admin/install.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
 ::1 - - [19/Jan/2017:16:12:08 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"
 ::1 - - [19/Jan/2017:16:12:09 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"
-::1 - - [19/Jan/2017:16:12:10 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"</pre></td>
+::1 - - [19/Jan/2017:16:12:10 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>컨테이너에서 실행한 로그가 쭈욱 보입니다. 아무 옵션을 주지 않았을 때는 전체 로그를 <del>무식하게</del> 전부 다 출력합니다. 너무 많으니 <code class="highlighter-rouge">--tail</code>옵션으로 마지막 10줄만 출력해 보겠습니다.</p>
@@ -995,7 +1018,8 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker logs <span class="nt">--tail</span> 10 <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span></pre></td>
+<td class="code"><pre>docker logs <span class="nt">--tail</span> 10 <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>output:</p>
@@ -1021,7 +1045,8 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 172.17.0.1 - - [19/Jan/2017:16:12:02 +0000] "GET /favicon.ico HTTP/1.1" 200 229 "http://localhost:8080/wp-admin/install.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
 ::1 - - [19/Jan/2017:16:12:08 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"
 ::1 - - [19/Jan/2017:16:12:09 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"
-::1 - - [19/Jan/2017:16:12:10 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"</pre></td>
+::1 - - [19/Jan/2017:16:12:10 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.4.10 (Debian) PHP/5.6.29 (internal dummy connection)"
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>마지막 10줄만 보니 좀 나아 보입니다. 이제 실시간으로 로그가 생성되는 걸 확인해보겠습니다. <code class="highlighter-rouge">-f</code> 옵션으로 실행합니다.</p>
@@ -1029,7 +1054,8 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker logs <span class="nt">-f</span> <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span></pre></td>
+<td class="code"><pre>docker logs <span class="nt">-f</span> <span class="k">${</span><span class="nv">WORDPRESS_CONTAINER_ID</span><span class="k">}</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -1096,7 +1122,8 @@ mysql&gt; show databases<span class="p">;</span>
 5 rows <span class="k">in </span><span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
 
 mysql&gt; quit
-<span class="nb">exit</span></pre></td>
+<span class="nb">exit</span>
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -1144,7 +1171,8 @@ mysql&gt; show databases<span class="p">;</span>
 +--------------------+
 5 rows <span class="k">in </span><span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
 
-mysql&gt; quit</pre></td>
+mysql&gt; quit
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -1193,7 +1221,8 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 3306:3306 <span
   <span class="nt">-e</span> <span class="nv">MYSQL_ALLOW_EMPTY_PASSWORD</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
   <span class="nt">--name</span> mysql <span class="se">\</span>
   <span class="nt">-v</span> /my/own/datadir:/var/lib/mysql <span class="se">\ </span><span class="c"># &lt;- volume mount</span>
-  mysql:5.7</pre></td>
+  mysql:5.7
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <p>위 샘플은 호스트의 <code class="highlighter-rouge">/my/own/datadir</code>디렉토리를 컨테이너의 <code class="highlighter-rouge">/var/lib/mysql</code>디렉토리로 마운트 하였습니다. 이제 데이터베이스 파일은 호스트의 <code class="highlighter-rouge">/my/own/datadir</code>디렉토리에 저장되고 컨테이너를 삭제해도 데이터는 사라지지 않습니다. 최신버전의 MySQL 이미지를 다운받고 다시 컨테이너를 실행할 때 동일한 디렉토리를 마운트 한다면 그대로 데이터를 사용할 수 있습니다. <del>만세!</del></p>
@@ -1216,10 +1245,11 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 3306:3306 <span
 3
 4
 </pre></td>
-<td class="code"><pre>curl <span class="nt">-L</span> <span class="s2">"https://github.com/docker/compose/releases/download/1.9.0/docker-compose-</span><span class="k">$(</span>uname <span class="nt">-s</span><span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname <span class="nt">-m</span><span class="k">)</span><span class="s2">"</span> <span class="nt">-o</span> /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+<td class="code"><pre>curl <span class="nt">-L</span> <span class="s2">"https://github.com/docker/compose/releases/download/1.9.0/docker-compose-</span><span class="si">$(</span><span class="nb">uname</span> <span class="nt">-s</span><span class="si">)</span><span class="s2">-</span><span class="si">$(</span><span class="nb">uname</span> <span class="nt">-m</span><span class="si">)</span><span class="s2">"</span> <span class="nt">-o</span> /usr/local/bin/docker-compose
+<span class="nb">chmod</span> +x /usr/local/bin/docker-compose
 <span class="c"># test</span>
-docker-compose version</pre></td>
+docker-compose version
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <h3 id="wordpress-만들기">
@@ -1265,7 +1295,8 @@ volumes:
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>docker-compose up</pre></td>
+<td class="code"><pre>docker-compose up
+</pre></td>
 </tr></tbody></table></code></pre></figure>
 
 <div class="asciinema-player-section">
@@ -1396,12 +1427,12 @@ volumes:
       
     </aside>
     <footer class="post-site-footer clearfix">
-      <section class="copyright"><a href="/">Subicura's Blog</a> © 2019</section>
+      <section class="copyright"><a href="/">Subicura's Blog</a> © 2020</section>
     </footer>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1572754409173548000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1578332021524631000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
