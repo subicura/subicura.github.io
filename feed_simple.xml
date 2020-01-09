@@ -6,12 +6,12 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 09 Jan 2020 13:55:55 +0900</pubDate>
-    <lastBuildDate>Thu, 09 Jan 2020 13:55:55 +0900</lastBuildDate>
+    <pubDate>Thu, 09 Jan 2020 18:38:29 +0900</pubDate>
+    <lastBuildDate>Thu, 09 Jan 2020 18:38:29 +0900</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>2019년 개발 이야기</title>
+        <title>알아두면 유익한 2019 개발이야기</title>
         <description>2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 회고하면서 어떤 이야기를 할까 고민하다가 3년 전에 작성했던 홈쇼핑처럼 개발 후기가 생각났고 퍼플웍스에서 그동안 도입했던 기술과 유용한 개발 내용을 정리해 보았습니다.</description>
         <pubDate>Tue, 07 Jan 2020 00:00:00 +0900</pubDate>
         <link>https://subicura.com/2020/01/07/2019-dev-summary.html</link>

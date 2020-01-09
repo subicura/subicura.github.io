@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2020-01-09T13:55:55+09:00</updated>
+ <updated>2020-01-09T18:38:29+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>2019년 개발 이야기</title>
+   <title>알아두면 유익한 2019 개발이야기</title>
    <link href="https://subicura.com/2020/01/07/2019-dev-summary.html"/>
    <updated>2020-01-07T00:00:00+09:00</updated>
    <id>https://subicura.com/2020/01/07/2019-dev-summary</id>
@@ -211,17 +211,7 @@ npm run lint
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;settings.json&lt;/code&gt; VSCode 기본설정&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;{
-  &amp;quot;editor.tabSize&amp;quot;: 2,
-  &amp;quot;editor.formatOnSave&amp;quot;: true,  
-  &amp;quot;editor.formatOnPaste&amp;quot;: true,
-  &amp;quot;editor.codeActionsOnSave&amp;quot;: {
-    &amp;quot;source.fixAll.tslint&amp;quot;: true,
-    &amp;quot;source.fixAll.eslint&amp;quot;: true
-  },
-  &amp;quot;typescript.tsdk&amp;quot;: &amp;quot;node_modules/typescript/lib&amp;quot;
-}&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/subicura/041f1ae908aa687eb1fb893f45977a17.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/subicura/041f1ae908aa687eb1fb893f45977a17.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;탭 사이즈를 2칸으로 설정하고 저장하거나 붙여넣기 할 때 자동으로 TSLint와 Prettier 규칙을 적용합니다. VSCode는 기본적으로 에디터에 내장된 타입스크립트를 사용하는데 별도의 SDK 경로를 지정하면 최신 버전을 사용할 수 있습니다.&lt;/p&gt;
 
@@ -578,7 +568,7 @@ npm run lint
 
 &lt;p&gt;여러가지 고민 끝에 최종적으로 선택한 것이 &lt;a href=&quot;https://ant.design/&quot;&gt;Ant Design&lt;/a&gt; 입니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/antd.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2020-01-07-2019-dev-summary/antd-component.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Ant Design&lt;/strong&gt;&lt;/p&gt;
 
@@ -1224,7 +1214,7 @@ npm run lint
 
 &lt;hr /&gt;
 
-&lt;p&gt;같이 함께할 분을 찾고 있습니다. 부담 갖지 말고 연락 주세요! &lt;a href=&quot;http://bit.ly/purpleworks-want-you&quot;&gt;퍼플웍스 채용페이지&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;비슷한 기술에 관심이 있으신가요? 같이 이야기해요! &lt;a href=&quot;http://bit.ly/purpleworks-want-you&quot;&gt;이야기하기 ☕️&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
