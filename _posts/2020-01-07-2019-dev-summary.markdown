@@ -5,10 +5,10 @@ categories: Development
 tags: [Typescript, TSLint, ESLint, Prettier, VSCode, StyledComponent, AtomicDesign, Storybook, AntDesign, Nextjs, GraphQL, Apollo, SSG, GoogleNext, CloudRun, Kubernetes, Terraform, Shopify]
 layout: post
 excerpt: 2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 회고하면서 어떤 이야기를 할까 고민하다가 3년 전에 작성했던 홈쇼핑처럼 개발 후기가 생각났고 퍼플웍스에서 그동안 도입했던 기술과 유용한 개발 내용을 정리해 보았습니다.
-ogimage: /assets/og/2020-01-07-2019-dev-summary-image.png
+ogimage: /assets/og/2020-01-07-2019-dev-summary-og.png
 comments: yes
 toc: true
-last_modified_at: 2020-01-09T18:40:00+09:00
+last_modified_at: 2020-01-09T18:45:00+09:00
 ---
 
 2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 회고하면서 어떤 이야기를 할까 고민하다가 3년 전에 작성했던 [홈쇼핑처럼 개발후기](https://subicura.com/2016/05/30/likehs-develop-log.html)가 생각났고 퍼플웍스에서 그동안 도입했던 기술과 유용한 개발 내용을 정리해 보았습니다.
