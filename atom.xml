@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2020-01-09T18:38:29+09:00</updated>
+ <updated>2020-01-09T18:41:44+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -211,7 +211,17 @@ npm run lint
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;settings.json&lt;/code&gt; VSCode 기본설정&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/subicura/041f1ae908aa687eb1fb893f45977a17.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;{
+  &amp;quot;editor.tabSize&amp;quot;: 2,
+  &amp;quot;editor.formatOnSave&amp;quot;: true,  
+  &amp;quot;editor.formatOnPaste&amp;quot;: true,
+  &amp;quot;editor.codeActionsOnSave&amp;quot;: {
+    &amp;quot;source.fixAll.tslint&amp;quot;: true,
+    &amp;quot;source.fixAll.eslint&amp;quot;: true
+  },
+  &amp;quot;typescript.tsdk&amp;quot;: &amp;quot;node_modules/typescript/lib&amp;quot;
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/subicura/041f1ae908aa687eb1fb893f45977a17.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;탭 사이즈를 2칸으로 설정하고 저장하거나 붙여넣기 할 때 자동으로 TSLint와 Prettier 규칙을 적용합니다. VSCode는 기본적으로 에디터에 내장된 타입스크립트를 사용하는데 별도의 SDK 경로를 지정하면 최신 버전을 사용할 수 있습니다.&lt;/p&gt;
 
