@@ -1,6 +1,6 @@
 ---
 published: true
-title: 2019년 개발 이야기
+title: 알아두면 유익한 2019 개발이야기
 categories: Development
 tags: [Typescript, TSLint, ESLint, Prettier, VSCode, StyledComponent, AtomicDesign, Storybook, AntDesign, Nextjs, GraphQL, Apollo, SSG, GoogleNext, CloudRun, Kubernetes, Terraform, Shopify]
 layout: post
@@ -8,7 +8,7 @@ excerpt: 2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 �
 ogimage: /assets/og/2020-01-07-2019-dev-summary-title.png
 comments: yes
 toc: true
-last_modified_at: 2020-01-07T01:00:00+09:00
+last_modified_at: 2020-01-09T18:30:00+09:00
 ---
 
 2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 회고하면서 어떤 이야기를 할까 고민하다가 3년 전에 작성했던 [홈쇼핑처럼 개발후기](https://subicura.com/2016/05/30/likehs-develop-log.html)가 생각났고 퍼플웍스에서 그동안 도입했던 기술과 유용한 개발 내용을 정리해 보았습니다.
@@ -366,7 +366,7 @@ React를 이용하여 관리자 화면을 만들 때 한동안 [Bootstrap](https
 
 여러가지 고민 끝에 최종적으로 선택한 것이 [Ant Design](https://ant.design/) 입니다.
 
-![]({{ site.url }}/assets/article_images/2020-01-07-2019-dev-summary/antd.png)
+![]({{ site.url }}/assets/article_images/2020-01-07-2019-dev-summary/antd-component.png)
 
 **Ant Design**
 
@@ -815,4 +815,4 @@ Cloud Run 자체도 좋았지만 Google Cloud를 이용하여 Cloud Run에 배�
 
 ---
 
-같이 함께할 분을 찾고 있습니다. 부담 갖지 말고 연락 주세요! [퍼플웍스 채용페이지](http://bit.ly/purpleworks-want-you)
+비슷한 기술에 관심이 있으신가요? 같이 이야기해요! [이야기하기 ☕️](http://bit.ly/purpleworks-want-you)
