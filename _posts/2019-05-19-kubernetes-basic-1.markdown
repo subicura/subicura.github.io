@@ -6,9 +6,10 @@ categories: Kubernetes
 tags: [Kubernetes, Docker, DevOps, Server]
 layout: post
 excerpt: 쿠버네티스는 컨테이너를 쉽고 빠르게 배포/확장하고 관리를 자동화해주는 오픈소스 플랫폼입니다. 1주일에 수십억 개의 컨테이너를 생성하는 구글이 내부 배포시스템으로 사용하던 borg를 기반으로 2014년 프로젝트를 시작했고 여러 커뮤니티의 아이디어와 좋은 사례를 모아 빠르게 발전하고 있습니다. 이 글은 쿠버네티스가 무엇인지 궁금한 엔지니어를 대상으로 쿠버네티스 세계의 입구까지 안내해 드립니다.
+ogimage: /assets/og/2019-05-19-kubernetes-basic-1-summary.png
 comments: yes
 toc: true
-last_modified_at: 2019-05-23T08:30:00+09:00
+last_modified_at: 2020-01-10T13:30:00+09:00
 ---
 
 <p align="center">
