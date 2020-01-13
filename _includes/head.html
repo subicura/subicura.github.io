@@ -32,6 +32,12 @@
   <meta property="og:description" content="{{ site.description | strip_html | strip_newlines | truncate: 200 }}" />
   {% endif %}
   <meta property="og:image" content="{% if page.ogimage %}{{ page.ogimage | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}" />
+  {% if page.ogwidth %}
+  <meta property="og:image:width" content="{{ page.ogwidth }}" />
+  {% endif %}
+  {% if page.ogheight %}
+  <meta property="og:image:height" content="{{ page.ogheight }}" />
+  {% endif %}
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:type" content="article" />
   {% if page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
