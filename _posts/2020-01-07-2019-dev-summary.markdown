@@ -8,7 +8,7 @@ excerpt: 2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 �
 ogimage: /assets/og/2020-01-07-2019-dev-summary-2.png
 comments: yes
 toc: true
-last_modified_at: 2020-01-10T13:30:00+09:00
+last_modified_at: 2020-01-13T09:30:00+09:00
 ---
 
 2020년에 작성하는 2019년 개발 이야기입니다. 2019년을 회고하면서 어떤 이야기를 할까 고민하다가 3년 전에 작성했던 [홈쇼핑처럼 개발후기](https://subicura.com/2016/05/30/likehs-develop-log.html)가 생각났고 퍼플웍스에서 그동안 도입했던 기술과 유용한 개발 내용을 정리해 보았습니다.
@@ -817,4 +817,4 @@ Cloud Run 자체도 좋았지만 Google Cloud를 이용하여 Cloud Run에 배�
 
 ---
 
-비슷한 기술에 관심이 있으신가요? 같이 이야기해요! [이야기하기 ☕️](http://bit.ly/purpleworks-want-you)
+비슷한 기술에 관심이 있으신가요? [이야기하기 ☕️](http://m.me/purpleworks.co.kr) [채용공고 👋](http://bit.ly/purpleworks-want-you)
