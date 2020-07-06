@@ -7,10 +7,18 @@ layout: post
 excerpt: macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다.
 comments: yes
 toc: true
-last_modified_at: 2019-07-22T09:00:00+09:00
+last_modified_at: 2020-07-07T01:00:00+09:00
 ---
 
-![iTerm2 + snazzy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/terminal-neofetch.png)
+### 2020/07/06 수정
+
+- macOS Catalina 10.15.5 반영
+- 명령어 및 설정 최신 내용 반영
+- 추천 프로그램 추가
+
+---
+
+![iTerm2 + snazzy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/neofetch-2.png)
 
 개발 관련 스터디 모임이나 컨퍼런스에서 발표를 듣다 보면 발표 주제와 별도로 예제 화면이나 라이브 코딩에서 사용하는 개발 도구에 관심이 가는 경우가 있습니다.
 
@@ -48,87 +56,122 @@ last_modified_at: 2019-07-22T09:00:00+09:00
 
 ## 시스템 설정
 
-본격적인 개발환경 설정에 앞서 몇 가지 유용한 시스템 설정을 확인해봅니다. macOS High Sierra를 기준으로 하였으나 다른 버전도 비슷비슷할 것으로 보입니다. 반드시 동일하게 설정할 필요는 없으며 보고 괜찮다 싶은 항목만 적용하면 됩니다.
+본격적인 개발환경 설정에 앞서 몇 가지 유용한 시스템 설정을 확인해봅니다. macOS Catalina를 기준으로 하였으나 다른 버전도 비슷비슷할 것으로 보입니다. 반드시 동일하게 설정할 필요는 없으며 보고 괜찮다 싶은 항목만 적용하면 됩니다.
 
 ### System Preferences
 
-![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/system-preferences.png)
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/system-preferences-2.png)
 
 상단 메뉴의 `` 로고를 누르고 `System Preferences...`를 선택합니다.
 
-**미션 컨트롤 창 순서 고정**
+**미션 컨트롤**
+
+![Mission Control]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/mission-control.png)
+
+미션 컨트롤 창 순서 고정
 
 - `Mission Control` > `Automatically rearrange Spaces based on most recent use`: 체크 안함
 - 미션 컨트롤 창 순서가 기본적으로 최근 사용 순으로 설정되어 있어 의도하지 않게 순서가 변경되는 것을 막음
 
-**언어 설정 영어 우선순위로 변경**
+**언어**
+
+![Language & Region]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/language-region.png)
+
+언어 설정 영어 우선순위로 변경
 
 - `Language & Region` > `Preferred languages`: English > 한국어 (드래그로 순서 조정)
 - 간혹 locale 설정 때문에 오류가 발생하는 걸 방지해주고 영어 오류 메시지가 구글검색이 잘됨
 
-**패스워드 즉시 설정**
+**보안**
+
+![Security & Privacy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/security-privacy-1.png)
+
+패스워드 즉시 설정
 
 - `Security & Privacy` > `General` > `Require password`: immediately
 - 잠자기 모드나 화면 보호기가 켜지면 즉시 패스워드 입력을 활성화하여 보안을 최대한 안전하게 유지
 
-**분실대비 패스워드 메시지 설정**
+분실대비 스크린 메시지 설정
 
 - `Security & Privacy` > `General` > `Show a message when the screen is locked`: 전화번호 / 이름
 - 혹시 분실했을 경우를 대비하여 전화번호, 이름 등을 알려줌
 
-**디스크 암호화**
+디스크 암호화
 
 - `Security & Privacy` > `FileVault`: Turn On FileVault
 - 분실 시 복구 불가능하게 디스크를 암호화
 - 파일 읽기/쓰기 퍼포먼스가 걱정되지만 최신 CPU와 SSD에서는 거의 성능 차이가 없다고 함~~믿고쓰자~~
 
-**모든 텍스트 자동 변경 옵션 끄기**
+**키보드**
+
+![Keyboard > Text]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/keyboard-1.png)
+
+모든 텍스트 자동 변경 옵션 끄기
 
 - `Keyboard` > `Text`: 모든 자동 변경 옵션 끄기
 - 입력한 단어를 컴퓨터 마음대로 바꾸는 걸 방지
 - 특히 Use smart quotes and dashes는 코드 복사하다가 따옴표가 바뀌면서 고생이 시작됨
 
-**클릭은 터치로**
+![Keyboard > Shortcuts]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/keyboard-2.png)
+
+컨트롤 버튼 키보드로 제어하기 ([@devthewild님 추천](https://twitter.com/devthewild/status/1278683719310557187))
+
+- `Keyboard` > `Shortcut` > `Use keyboard navigation to move focus between controls` : 체크함
+- 예/아니오 버튼을 키보드로 선택할 수 있음
+
+**트랙패드**
+
+![Trackpad]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/trackpad.png)
+
+클릭은 터치로
 
 - `Trackpad` > `Point & Click` > `Tab to click`: 체크함
 - 트랙패드 클릭 시 꾸욱 누를 필요 없이 톡톡 터치로 클릭해서 손의 피로를 줄임
 
-**드래그는 세손가락으로**
+**접근성**
 
-- `Accessibility` > `Mouse & Trackpad` > `Trackpad options...`:  Enable dragging - three finger drag
+![Accessibility]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/accessibility.png)
+
+드래그는 세손가락으로
+
+- `Accessibility` > `Pointer Control` > `Trackpad options...`:  Enable dragging - three finger drag
 - 창 또는 아이콘을 이동할 때 트랙패드를 누른 상태로 이동할 필요 없이 세 손가락으로 드래그 할 수 있음
 - 이건 해봐야 감이 오는데 몰랐다면 신세계가 열림
 
 ### Finder Preference
 
-<p align="center">
-    <img src="{{ "/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-preferences.png"  | prepend: site.baseurl  }}" style="width: 450px">
-</p>
-
 `Finder`를 실행하고 `⌘` + `,` (`Finder` > `Preferences...`)를 선택합니다.
 
 **파인더 기본 폴더 설정**
+
+<p align="center">
+    <img src="{{ "/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-1.png"  | prepend: site.baseurl  }}" style="width: 450px">
+</p>
 
 - `General` > `New Finder windows show`: subicura (home folder)
 - 파인더 최초 실행 시 버벅임이 없도록 기본 폴더를 홈 폴더로 설정
 
 **파일 확장자 보여주기**
 
+<p align="center">
+    <img src="{{ "/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-2.png"  | prepend: site.baseurl  }}" style="width: 450px">
+</p>
+
 - `Advanced` > `Show all filename extensions`: 체크함
 - 모든 파일의 확장자를 보여줌
 
 ### Download Folder Option
 
-<p align="center">
-    <img src="{{ "/assets/article_images/2017-11-22-mac-os-development-environment-setup/download-option.png"  | prepend: site.baseurl  }}" style="width: 250px">
-</p>
-
 `Downloads` 폴더로 이동하고 `⌘` + `J` (`View` > `Show View Options`)를 선택합니다.
 
 **날짜그룹 + 이름 정렬**
 
+<p align="center">
+    <img src="{{ "/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-3.png"  | prepend: site.baseurl  }}" style="width: 300px">
+</p>
+
 - `Arrange By`:Date added, `Sort By`:Name
-- 파일 목록을 보여줄 때 날짜별로 그룹화 하고 그룹 내에서 이름으로 다시 정렬
+- 파일 목록을 저장한 날짜별로 그룹화 하고 그룹 내에서 이름으로 다시 정렬
 - 다운로드 폴더 특성상 최근에 받은 파일들을 찾는 경우가 많으므로 유용함
 
 ### '₩' 대신 '`' 입력하기
@@ -145,7 +188,7 @@ last_modified_at: 2019-07-22T09:00:00+09:00
 }
 {% endhighlight %}
 
-프로그램 재시작이 필요합니다.
+OS 재시작이 필요합니다.
 
 ## 필수 프로그램
 
@@ -153,9 +196,11 @@ last_modified_at: 2019-07-22T09:00:00+09:00
 
 ### Xcode
 
-macOS에는 기본적으로 `gcc`, `make`와 같은 컴파일 도구가 설치되어 있지 않기 때문에 명령어 도구<sub>Command Line Tools</sub>를 설치해야 합니다. 예전에는 Xcode를 전체 설치하고 추가로 명령어 도구를 설치해야 했으나 Xcode용량이 꽤 크고 모든 사람이 IDE가 필요한 게 아니기 때문에 명령어 도구만 따로 설치할 수 있게 변경되었습니다.
+macOS는 기본적으로 `gcc`, `make`와 같은 컴파일 도구가 설치되어 있지 않기 때문에 명령어 도구<sub>Command Line Tools</sub>를 설치해야 합니다. 예전에는 Xcode를 전체 설치하고 추가로 명령어 도구를 설치해야 했으나 Xcode용량이 꽤 크고 모든 사람이 IDE가 필요한 게 아니기 때문에 명령어 도구만 따로 설치할 수 있게 변경되었습니다.
 
 **설치**
+
+> [homebrew](#homebrew)를 설치하면 자동으로 Xcode 명령어 도구를 설치합니다. 따로 설치하지 않아도 됩니다.
 
 {% highlight bash linenos %}
 xcode-select --install
@@ -173,12 +218,12 @@ clang: error: no input files
 
 ### homebrew
 
-brew<sub>homebrew</sub>는 각종 커맨드라인 프로그램(요즘은 GUI도..)을 손쉽게 설치해주는 맥용 패키지 매니저입니다. 리눅스의 `apt`나  `yum`과 비슷하며 brew외에 [MacPorts](https://www.macports.org/) 라는 패키지 메니저가 있는데 몇몇 단점으로 요즘은 거의 brew를 사용하는 추세입니다. 다양한 프로그램을 복잡한 빌드과정 없이 손쉽게 설치할 수 있고 업데이트, 관리도 간단하므로 안쓸 이유가 없는 필수 프로그램입니다. `그냥 홈페이지 가서 다운로드 하고 설치하는 게 편한데..`라고 하는분들이 있는데 나중에 업데이트나 삭제를 생각해보면 글쎄요.. brew 쓰세요!
+brew<sub>homebrew</sub>는 각종 커맨드라인 프로그램과 일반 프로그램(크롬..)을 손쉽게 설치해주는 맥용 패키지 매니저입니다.(최근에 리눅스도 지원하기 시작했습니다.) 리눅스의 `apt`나  `yum`과 비슷하며 brew외에 [MacPorts](https://www.macports.org/) 라는 패키지 메니저가 있는데 몇몇 단점으로 요즘은 거의 brew를 사용하는 추세입니다. 다양한 프로그램을 복잡한 빌드과정 없이 손쉽게 설치할 수 있고 업데이트, 관리도 간단하므로 안쓸 이유가 없는 필수 프로그램입니다. `그냥 홈페이지 가서 다운로드 하고 설치하는 게 편한데..`라고 하는분들이 있는데 나중에 업데이트나 삭제를 생각해보면 글쎄요.. brew 쓰세요!
 
 **설치**
 
 {% highlight bash linenos %}
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 {% endhighlight %}
 
 **확인**
@@ -232,7 +277,7 @@ brew cask install iterm2
 
 **테마선택**
 
-![snazzy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/snazzy-theme.png)
+![snazzy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/snazzy-theme-2.png)
 
 설치를 완료했으면 [Snazzy.itermcolors](https://github.com/sindresorhus/iterm2-snazzy/raw/master/Snazzy.itermcolors) 파일을 오른쪽 버튼 누르고 다운 받거나 [여러 개의 테마](http://iterm2colorschemes.com/)를 둘러보고 맘에드는것을 고릅니다. 다운받은 파일을 더블클릭하면 자동으로 `iTerm Color Preset`에 추가됩니다.
 
@@ -240,24 +285,43 @@ brew cask install iterm2
 
 iTerm을 실행하고 설정(`⌘` + `,`)창에서 `Profiles` 항목을 선택하고 `Colors`탭을 선택합니다. 
 
-![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-preferences.png)
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-preferences-2.png)
 
 오른쪽 하단에  `Color presets...` 선택 박스를 클릭하면 조금전에 추가한 `Snazzy` preset을 선택할 수 있습니다.
 
 음.. 그런데 테마를 바꿔도 그다지 달라지는 건 없어보입니다.. ~~이게 무슨 소리요?!~~ 제대로 색을 활용하려면 쉘<sub>shell</sub> 설정을 해야합니다.
 
-**추가설정**
+**추가 디자인 설정**
 
-- 타이틀바 배경색 어둡게 변경
-    -  `Appearance` > `Theme`: Dark
-	- High Sierra에서는 [현재](https://gitlab.com/gnachman/iterm2/issues/4080) Light/Dark 테마만 선택할 수 있으며 임의의 색은 불가능
-- 스크롤바 감추기
-	-  `Appearance` > `Hide scrollbars`: 체크함
+iTerm창을 더 단순하게 만들기 위한 추가 설정입니다.
+
+- 타이틀바 스타일 변경
+  - `Appearance` > `Theme`: Minimal
+	- 탭의 높이를 얇게 조정하고 싶다면 `Dark`를 추천
 - 타이틀바 밑에 1px 라인 제거
-	-  `Appearance` > `Show line under title bar when the tab bar is not visible`: 체크 안함
+	- `Appearance` > `Windows` >  `Show line under title bar when the tab bar is not visible`: 체크 안함
+- 폰트 크기 및 줄간격 변경
+  - `Profiles` > `Text`: 폰트사이즈 12로 변경
+  - `Profiles` > `Text`: n/n 줄간격 110으로 변경
 - 마진 수정
 	- `Advanced` > `Height of top and bottom margins in terminal panes`: 10
 	- `Advanced` > `Width of left and right margins in terminal panes`: 12
+- 탭 선 제거
+	- `Advanced` > `In minimal tab style, how prominent should the tab outline be?`: 0
+
+**상태바 추가**
+
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm2-status.png)
+
+iTerm2에 새롭게 추가된 상태바 기능입니다. 상단 또는 하단에 상태바를 추가하고 여러가지 정보를 볼 수 있습니다. 필요한 경우 활성화해서 사용합니다.
+
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm2-statusbar.png)
+
+- 상태바 추가
+  - `Profile` > `Session`: Status bar enabled 체크
+	- `Configure Status Bar` 선택하여 원하는 항목 드레그 추가
+  - `Appearance` > `Status bar location` : 상태바 위치 설정
+
 
 [iTerm2 홈페이지](https://www.iterm2.com) / [iTerm2 다운로드](https://www.iterm2.com/downloads.html) / [snazzy github](https://github.com/sindresorhus/iterm2-snazzy)
 
@@ -265,7 +329,7 @@ iTerm을 실행하고 설정(`⌘` + `,`)창에서 `Profiles` 항목을 선택�
 
 iTerm2도 설치하고 테마도 설치했으니 쉘을 바꿀 차례입니다.
 
-macOS는 기본으로 [Bash(Bourne-again) shell](https://en.wikipedia.org/wiki/Bash_(Unix_shell))을 사용하고 있습니다. bash외에 csh, ksh, sh, tcsh, zsh등을 내장하고 있는데 최근 대새는 단연 zsh입니다. zsh에 설정 관리 프레임워크인 oh-my-zsh을 사용하여 이쁜 테마를 적용하고 여러 가지 플러그인을 설치해봅니다.
+macOS는 기본으로 zsh을 사용하고 있습니다. 기존에 사용하던 bash에서 zsh로 기본 설정이 바뀐걸 보면 대세이긴 한 것 같습니다. zsh에 설정 관리 프레임워크인 oh-my-zsh을 사용하여 이쁜 테마를 적용하고 여러 가지 플러그인을 설치해봅니다.
 
 **설치**
 
@@ -278,10 +342,10 @@ brew install zsh zsh-completions
 그리고 zsh의 설정을 관리해주는 oh-my-zsh을 설치합니다.
 
 {% highlight bash linenos %}
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 {% endhighlight %}
 
-설치스크립트를 실행하면 관련 파일을 설치하고 패스워드를 물어봅니다. 계정의 패스워드를 입력하면 기본쉘을 자동으로 bash에서 zsh로 변경해줍니다. 
+설치스크립트를 실행하면 관련 파일을 설치하고 패스워드를 물어봅니다.
 
 **플러그인**
 
@@ -305,29 +369,62 @@ plugins=(
 )
 {% endhighlight %}
 
-설정 파일을 수정했으면 터미널을 재시작하거나 `source ~/.zshrc` 명령어를 실행하여 설정을 다시 불러와야 합니다. 이제 명령어를 입력할 때 존재하지 않는 명령어는 빨간색으로 뜨고 한번 입력했던 명령어를 회색으로 표현해주는 걸 확인할 수 있습니다.
+설정 파일을 수정했으면 터미널을 재시작하거나 `source ~/.zshrc` 명령어를 실행하여 설정을 다시 불러와야 합니다. 이제 명령어를 입력할 때 존재하지 않는 명령어는 빨간색으로 뜨고 한번 입력했던 명령어를 흐릿하게 표현해주는 걸 확인할 수 있습니다.
 
-**테마**
+### 쉘 프롬프트
 
 oh-my-zsh의 기본 테마인 `robbyrussell`도 깔끔하지만, 이 외에 [다양한 테마](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)가 존재합니다. 테마를 바꾸는 방법은 `~/.zshrc`파일의 `ZSH_THEME="robbyrussell"` 부분을 원하는 테마로 수정하면 됩니다.
 
-여기서는 이쁘고 단순하고 빠른 [pure](https://github.com/sindresorhus/pure) prompt를 사용합니다.
+여기서는 단순히 색상, 모양 설정을 넘어 추가적인 기능을 설치합니다. 추가적인 기능은 현재 디렉토리의 git 상태를 보여주고 사용중인 nodejs, ruby의 버전을 보여주거나 aws, kubectl 프로필을 보여주기도 합니다.
+
+대표적인 프롬프트는 [Powerlevel10k](https://github.com/romkatv/powerlevel10k), [spaceship](https://denysdovhan.com/spaceship-prompt/), [pure](https://github.com/sindresorhus/pure)가 있습니다. 취향에 맞춰서 사용하면 되고 개인적으로 예전에는 pure를 썼지만 최근에는 Powerlevel10k를 사용하고 있습니다. Powerlevel10k는 쉘응답속도와 프롬프트 초기화가 가장 빠르고 Lean테마를 사용하면 단순한 형태로 사용할 수 있습니다. 특히 `aws`, `kubectl`등 특정 명령어를 칠때만 나타나는 프로필 기능이 아주 마음에 듭니다.
+
+- 속도비교: `powerline10k >>>> spaceship, pure`
+- 기능비교: `powerline10 > spaceship >>>> pure`
+- 디자인비교 (취향탐): `spaceship, pure > powerline10k`
+
+**Powerlevel10k(추천)**
+
+{% highlight bash linenos %}
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+{% endhighlight %}
+
+설치를 완료하면 `~/.zshrc`파일에 ZSH_THEME항목을 수정합니다.
+
+{% highlight bash linenos %}
+ZSH_THEME="powerlevel10k/powerlevel10k"
+{% endhighlight %}
+
+저장 후 새로 탭을 열면, 대화형 설정창이 뜨고 상세하게 테마를 설정할 수 있습니다. 다시 설정하고 싶다면 언제든 `p10k configure`를 입력하면 됩니다.
+
+**spaceship(설정귀찮으면 추천)**
+
+{% highlight bash linenos %}
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+{% endhighlight %}
+
+설치를 완료하면 `~/.zshrc`파일에 ZSH_THEME항목을 수정합니다.
+
+{% highlight bash linenos %}
+ZSH_THEME="spaceship"
+{% endhighlight %}
+
+**pure**
 
 {% highlight bash linenos %}
 brew install nodejs # nodejs가 설치되어 있다면 skip
 npm install --global pure-prompt
 {% endhighlight %}
 
-설치를 완료했으면 `~/.zshrc`파일에 다음항목을 추가합니다.
+설치를 완료하면 `~/.zshrc`파일에 다음항목을 추가합니다.
 
 {% highlight bash linenos %}
 autoload -U promptinit; promptinit
 prompt pure
 {% endhighlight %}
 
-이제 zsh 기본 설정이 끝났습니다!
-
-**oh-my-zsh 팁**
+### oh-my-zsh 팁
 
 zsh과 oh-my-zsh의 조합으로 강력한 쉘을 사용할 수 있게 되었습니다. 여기서 모든 기능을 설명할 순 없지만 자주 사용하는 몇 가지 팁을 소개합니다.
 
@@ -347,6 +444,8 @@ zsh과 oh-my-zsh의 조합으로 강력한 쉘을 사용할 수 있게 되었습
 
 ### vim
 
+![spacevim + snazzy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/spacevim.png)
+
 vim은 기본으로 설치된 터미널용 에디터로 GUI 환경의 에디터를 사용할 수 있는 macOS 환경에서는 일부 ~~고오오급~~ 개발자를 제외하고는 잘 쓰이지 않습니다. 하지만 터미널 작업을 하다 보면 간단하게 수정할 파일이 있고 git 커밋메시지를 작성할 때 종종 사용하게 됩니다.
 
 기본으로 설정된 화면은 밋밋하기 그지 없기 때문에 강력한 기능의 플러그인을 설치해줍니다.
@@ -355,10 +454,13 @@ vim은 기본으로 설치된 터미널용 에디터로 GUI 환경의 에디터�
 
 내장된 vim대신 neovim을 설치합니다. neovim은 vim과 차이가 없어 보이는데 24bit True Color를 지원하고 오래된 vim 소스를 처음부터 다시 짜서 소스코드가 줄었다고 합니다. 저 같은 라이트 유저는 차이를 느끼진 못하지만 좋다고 해서 사용하고 있습니다. 그리고 테마에서 사용할 개발용 폰트를 설치합니다.
 
+> `Powerline10k` 프롬프트를 사용하면 개발용 폰트(MesloLGS NF)가 자동으로 설치됩니다. 따로 설치할 필요가 없습니다.
+
 {% highlight bash linenos %}
 brew install neovim
+# MesloLGS NF가 없는 경우
 brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
+brew cask install font-meslolg-nerd-font
 {% endhighlight %}
 
 기본 설치가 완료되었으면 터미널 기본 에디터로 vi대신 neovim을 사용하도록 `~/.zshrc`에 다음 항목을 추가합니다.
@@ -374,56 +476,70 @@ export EDITOR=/usr/local/bin/nvim
 
 **플러그인**
 
-vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 화면을 보는 순간 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.
+vim은 강력한 플러그인들이 많은데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 화면을 보는 순간 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.
 
 {% highlight bash linenos %}
 curl -sLf https://spacevim.org/install.sh | bash
 {% endhighlight %}
 
-설치가 완료되면 `vi`를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (`1`을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.
+설치가 완료되면 `vi`를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (잘모르면 `1`을 누릅니다) `q`를 눌러 종료했다가 다시 실행하면 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.
 
 **테마**
 
-기본 테마는 뭔가 칙칙한 느낌이 듭니다. `~/.SpaceVim.d/init.vim` 파일에 Colorscheme 설정을 추가합니다.
+기본 테마는 뭔가 칙칙한 느낌이 듭니다. snazzy colorscheme를 다운받고 `~/.SpaceVim.d/init.toml` 파일에 설정을 추가합니다.
 
 {% highlight bash linenos %}
-let g:spacevim_colorscheme = 'onedark'
+mkdir ~/.SpaceVim.d/colors
+curl https://gist.githubusercontent.com/subicura/91696d2da58ad28b5e8b2877193015e1/raw/6fb5928c9bda2040b3c9561d1e928231dbcc9184/snazzy-custom.vim -o ~/.SpaceVim.d/colors/snazzy-custom.vim
+{% endhighlight %}
+
+{% highlight bash linenos %}
+[options]
+  colorscheme = "snazzy-custom"
+  enable_guicolors = true
+  statusline_separator = "arrow"
+  enable_tabline_filetype_icon = true
+  enable_statusline_mode = true
+  statusline_unicode_symbols = true
 {% endhighlight %}
 
 설정 파일을 수정하고 다시 시작하면 좀 더 나은 화면을 볼 수 있습니다.
 
 **폰트**
 
-앗, 플러그인을 설치하고 vi를 실행하면 폰트가 깨져서 ?가 보이는 걸 알 수 있습니다.
+vi를 실행하고 폰트가 `?`로 깨져 보인다면 iTerm2에 개발 관련 폰트를 모은 NerdFont를 추가로 설정합니다.
 
-![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/nvim-question.png)
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font-2.png)
 
-iTerm2에 개발 관련 폰트를 모은 NerdFont를 추가로 설정합니다.
+iTerm을 실행하고 설정(`⌘` + `,`)창에서 `Profiles` 항목을 선택하고 `Text`탭을 선택합니다. Font항목에서 `Use a different font for non-ASCII text`를 체크하고 MesloLGS NF를 선택하면 폰트가 이쁘게 나옵니다.
 
-![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font.png)
+이제 설정이 모두 완료되었으니 vim 공부(`esc`, `:q!`)만 하면 됩니다. :)
 
-iTerm을 실행하고 설정(`⌘` + `,`)창에서 `Profiles` 항목을 선택하고 `Text`탭을 선택합니다. Font항목에서 `Use a different font for non-ASCII text`를 체크하고 다른 탭을 살짝 눌렀다 다시 돌아오면 Non-ASCII Font를 설정할 수 있습니다. 거기서 Knack Regular Nerd Font Complete를 선택하면 폰트가 이쁘게 나옵니다.
-
-이제 설정이 모두 완료되었으니 vim 공부만 하면 됩니다. :)
-
-[neovim 홈페이지](https://neovim.io/) / [Nerd Font github](https://github.com/ryanoasis/nerd-fonts) / [SpaceVim github](https://github.com/SpaceVim/SpaceVim) / [SpaceVim 설정문서](http://spacevim.org/documentation/)
+[neovim 홈페이지](https://neovim.io/) / [SpaceVim github](https://github.com/SpaceVim/SpaceVim) / [SpaceVim 설정문서](http://spacevim.org/documentation/)
 
 ### fzf
 
 fzf는 강력하고 엄청나게 빠른 fuzzy finder 도구입니다. 증분 검색을 통하여 원하는 파일이나 히스토리를 쉽고 빠르게 찾을 수 있게 해줍니다. 정확하게 원하는 값을 입력하지 않고 일부만 입력해도 실시간으로 검색 결과를 보여줍니다.
 
-![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/fzf-sample.png)
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/fzf-sample-2.png)
 
 **설치**
 
 {% highlight bash linenos %}
 brew install fzf
-
-# To install useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
 {% endhighlight %}
 
-brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 `y`를 누르면 됩니다. 설치가 완료되었으면 `source ~/.zshrc`를 입력하여 설정을 다시 불러옵니다.
+설치가 완료되었으면 `~/.zshrc`에 plugin을 추가해줍니다.
+
+{% highlight bash linenos %}
+plugins=(
+  ...
+  ...
+  fzf
+)
+{% endhighlight %}
+
+전부 완료되었으면 `source ~/.zshrc`를 입력하여 설정을 다시 불러옵니다.
 
 **명령어**
 
@@ -481,6 +597,46 @@ plugins=(
 단순한 기능만큼 굉장히 자주, 유용하게 사용하는 도구입니다.
 
 [fasd github](https://github.com/clvv/fasd)
+
+### asdf vm
+
+asdf-vm은 각종 프로그램(nodejs, ruby, python, ...)의 버전을 손쉽게 관리해주는 ~~성의 없어 보이는 이름의~~ 도구입니다. 기존에 nvm, rbenv등 언어, 프로그램별로 달랐던 관리 도구를 하나로 통합해서 사용할 수 있습니다.
+
+**설치**
+
+{% highlight bash linenos %}
+brew install asdf
+{% endhighlight %}
+
+설치가 완료되었으면 `~/.zshrc`에 plugin을 추가해줍니다.
+
+{% highlight bash linenos %}
+plugins=(
+  ...
+  ...
+  asdf
+)
+{% endhighlight %}
+
+전부 완료되었으면 `source ~/.zshrc`를 입력하여 설정을 다시 불러옵니다.
+
+**명령어**
+
+asdf는 플러그인을 이용하기 때문에 필요한 프로그램을 찾아서 설치해야 합니다.
+
+{:.table.table-key-value-60}
+명령어 | 기능
+---- | ----
+`asdf plugin list` | 설치된 플러그인 목록
+`asdf plugin add <name> [<git-ref>]` | 플러그인 설치 ex) asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
+`asdf list all <name>` | 플러그인 설치 가능한 버전 확인
+`asdf install <name> <version>` | 플러그인 버전 설치
+`asdf local <name> <version>` | 현재 경로 기준 버전 사용 설정
+`asdf global <name> <version>` | 전체 버전 사용 설정
+
+[@KrComet님 추천](https://twitter.com/KrComet/status/1278675880697425920)
+
+[asdf-vm](https://asdf-vm.com)
 
 ### tmux
 
@@ -632,33 +788,79 @@ mux start jekyll
 
 ### docker
 
-![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/docker-for-mac.png)
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/docker-desktop.png)
 
 따로 소개할 필요가 없을 정도로 유명한 가상화 프로그램입니다. MySQL, Redis와 같은 데이터베이스나 rails, php 개발환경까지 두루두루 사용하고 있습니다. 하나의 개발 피시에 여러버전의 MySQL이나 Redis를 설치하는 건 쉽지 않은데 docker를 사용하면 쉽고 간단하게 개발환경을 구축할 수 있습니다.
 
 docker에 대한 자세한 내용은 [여기](/2017/01/19/docker-guide-for-beginners-1.html)서 확인하세요.
 
+{% highlight bash linenos %}
+brew cask install docker
+{% endhighlight %}
+
 [Docker 홈페이지](https://www.docker.com/) / [Docker for mac download](https://www.docker.com/docker-mac)
 
 ### tig
 
-![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/tig.png)
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/tig-2.png)
 
 텍스트모드 git 인터페이스 프로그램입니다. git 자체 기능이 강력하긴 하지만 여러 로그를 편하게 보기는 쉽지 않습니다. tig를 사용하여 화살표 키와 `h` `j` `k` `l`키를 잘 사용하면 쉽게 로그를 볼 수 있고 메인 화면에서 `h`를 누르면 도움말을 확인할 수 있습니다.
+
+{% highlight bash linenos %}
+brew install tig
+{% endhighlight %}
 
 [tig github](https://github.com/jonas/tig)
 
 ### jq
 
-![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/jq.png)
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/jq-2.png)
 
 JSON 결과를 이쁘게 보여주고 원하는 대로 편집할 수 있는 도구입니다. 간단하게 필터를 적용하여 원하는 항목만 볼 수 있고 특정 결과를 다른 형태로 변경할 수 있습니다.
 
+{% highlight bash linenos %}
+brew install jq
+{% endhighlight %}
+
 [jq github](https://stedolan.github.io/jq/)
+
+### bat
+
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/bat.png)
+
+`cat`명령어에 코드 하이라이팅 + more 기능이 추가된 버전입니다.
+
+{% highlight bash linenos %}
+brew install bat
+{% endhighlight %}
+
+~/.zshrc에 `cat` 대신 사용하도록 설정할 수 있습니다.
+
+{% highlight bash linenos %}
+alias cat="bat"
+{% endhighlight %}
+
+[bat github](https://github.com/sharkdp/bat)
+
+### OpenInTerminal
+
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/open-in-terminal.png)
+
+파인더에서 바로 터미널을 열고 싶을 때 클릭한번으로 열 수 있는 유용한 도구 입니다. 프로그램을 설치하고 `⌘` + `드래그`로 버튼을 추가할 수 있습니다.
+
+{% highlight bash linenos %}
+brew cask install openinterminal-lite
+{% endhighlight %}
+
+[OpenInTerminal github](https://github.com/Ji4n1ng/OpenInTerminal)
 
 ### ngrok
 
 로컬 서버를 외부로 터널링을 통해 오픈해주는 도구입니다. 보통 로컬에 개발 서버를 띄우면 외부에서 접근하기가 어려운데 ngrok을 이용하여 간단하게 오픈할 수 있습니다. 사용법도 간단합니다.
+
+{% highlight bash linenos %}
+brew cask install ngrok
+{% endhighlight %}
 
 [ngrok 홈페이지](https://ngrok.com/)
 
@@ -666,13 +868,27 @@ JSON 결과를 이쁘게 보여주고 원하는 대로 편집할 수 있는 도�
 
 터미널을 **텍스트**로 녹화하는 프로그램입니다. 영상으로 녹화하는 것보다 용량이 적고 품질도 훌륭한 편입니다. 제 블로그에서 자주 볼 수 있습니다.
 
+{% highlight bash linenos %}
+brew install asciinema
+{% endhighlight %}
+
 [asciinema 홈페이지](https://asciinema.org/)
 
 ### neofetch
 
 지금 보고 있는 포스트 첫번째 이미지에서 사용한 프로그램입니다. 간단하게 시스템 상태를 보여줍니다.
 
+{% highlight bash linenos %}
+brew install neofetch
+{% endhighlight %}
+
 [neofetch github](https://github.com/dylanaraps/neofetch)
+
+### brew bundle
+
+하나하나 설치하기 귀찮다면 [brew bundle](https://github.com/Homebrew/homebrew-bundle) 기능을 이용해보세요!
+
+[@posquit0님 추천](https://twitter.com/posquit0/status/1278708552983441408)
 
 ## 그래서
 
