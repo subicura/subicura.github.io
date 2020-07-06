@@ -5,9 +5,10 @@ categories: Tool
 tags: [Mac, DevOps, Server, Development, Environment, Terminal, zsh, vi, tmux]
 layout: post
 excerpt: macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다.
+ogimage: /assets/og/2017-11-22-mac-os-development-environment-setup.png
 comments: yes
 toc: true
-last_modified_at: 2020-07-07T01:00:00+09:00
+last_modified_at: 2020-07-07T08:00:00+09:00
 ---
 
 ### 2020/07/06 수정
@@ -283,7 +284,7 @@ brew cask install iterm2
 
 **테마적용**
 
-iTerm을 실행하고 설정(`⌘` + `,`)창에서 `Profiles` 항목을 선택하고 `Colors`탭을 선택합니다. 
+iTerm2를 실행하고 설정(`⌘` + `,`)창에서 `Profiles` 항목을 선택하고 `Colors`탭을 선택합니다. 
 
 ![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-preferences-2.png)
 
@@ -511,7 +512,7 @@ vi를 실행하고 폰트가 `?`로 깨져 보인다면 iTerm2에 개발 관련 
 
 ![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font-2.png)
 
-iTerm을 실행하고 설정(`⌘` + `,`)창에서 `Profiles` 항목을 선택하고 `Text`탭을 선택합니다. Font항목에서 `Use a different font for non-ASCII text`를 체크하고 MesloLGS NF를 선택하면 폰트가 이쁘게 나옵니다.
+iTerm2를 실행하고 설정(`⌘` + `,`)창에서 `Profiles` 항목을 선택하고 `Text`탭을 선택합니다. Font항목에서 `Use a different font for non-ASCII text`를 체크하고 MesloLGS NF를 선택하면 폰트가 이쁘게 나옵니다.
 
 이제 설정이 모두 완료되었으니 vim 공부(`esc`, `:q!`)만 하면 됩니다. :)
 
@@ -600,7 +601,7 @@ plugins=(
 
 ### asdf vm
 
-asdf-vm은 각종 프로그램(nodejs, ruby, python, ...)의 버전을 손쉽게 관리해주는 ~~성의 없어 보이는 이름의~~ 도구입니다. 기존에 nvm, rbenv등 언어, 프로그램별로 달랐던 관리 도구를 하나로 통합해서 사용할 수 있습니다.
+asdf-vm은 각종 프로그램(nodejs, ruby, python, ...)의 버전을 손쉽게 관리해주는 ~~성의 없어 보이는 이름의~~ 도구입니다. 기존에 nvm, rbenv등 언어, 프로그램별로 달랐던 관리 도구를 하나로 통합해서 사용할 수 있습니다. homebrew도 일부 버전 관리 기능을 제공하지만 asdf만큼 강력하지 않습니다.
 
 **설치**
 
