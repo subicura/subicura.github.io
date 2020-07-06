@@ -18,10 +18,13 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@subicura" />
     <meta name="twitter:title" content="본격 macOS에 개발 환경 구축하기" />
-    <meta name="twitter:image" content="https://subicura.com/assets/images/df_logo.png" />
+    <meta name="twitter:image" content="https://subicura.com/assets/og/2017-11-22-mac-os-development-environment-setup.png" />
     
     <meta name="twitter:description"  content="macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다." />
     
+    
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:widgets:new-embed-design" content="on" />
     
   
   
@@ -30,7 +33,7 @@
   
   <meta property="og:description" content="macOS에서 터미널을 자주 사용하는 개발자를 대상으로 심플하고 깔끔한 테마 위주의 개발 환경을 설정하는 방법을 소개합니다. 이 글을 보고 하나하나 설정하면 어디 가서 발표할 때 고오오급 개발자처럼 보이는 효과가 있으며 개발 생산성이 조금은 높아질 거라고 생각합니다." />
   
-  <meta property="og:image" content="https://subicura.com/assets/images/df_logo.png" />
+  <meta property="og:image" content="https://subicura.com/assets/og/2017-11-22-mac-os-development-environment-setup.png" />
   <meta property="og:url" content="https://subicura.com/2017/11/22/mac-os-development-environment-setup.html" />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2017-11-22T00:00:00+09:00">
@@ -44,7 +47,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1594059035341298000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1594079207141452000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -115,7 +118,7 @@
         <meta itemprop="headline" content="본격 macOS에 개발 환경 구축하기" />
         <meta itemprop="mainEntityOfPage" content="/2017/11/22/mac-os-development-environment-setup.html" />
         <meta itemprop="datePublished" content="2017-11-22 00:00:00 +0900" />
-        <meta itemprop="dateModified" content="2020-07-07 01:00:00 +0900" />
+        <meta itemprop="dateModified" content="2020-07-07 08:00:00 +0900" />
         
         <div class="noarticleimage">
           <div class="post-meta">
@@ -602,7 +605,7 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 
 <p><strong>테마적용</strong></p>
 
-<p>iTerm을 실행하고 설정(<code class="highlighter-rouge">⌘</code> + <code class="highlighter-rouge">,</code>)창에서 <code class="highlighter-rouge">Profiles</code> 항목을 선택하고 <code class="highlighter-rouge">Colors</code>탭을 선택합니다.</p>
+<p>iTerm2를 실행하고 설정(<code class="highlighter-rouge">⌘</code> + <code class="highlighter-rouge">,</code>)창에서 <code class="highlighter-rouge">Profiles</code> 항목을 선택하고 <code class="highlighter-rouge">Colors</code>탭을 선택합니다.</p>
 
 <p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-preferences-2.png" alt=""></p>
 
@@ -953,7 +956,7 @@ curl https://gist.githubusercontent.com/subicura/91696d2da58ad28b5e8b2877193015e
 
 <p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font-2.png" alt=""></p>
 
-<p>iTerm을 실행하고 설정(<code class="highlighter-rouge">⌘</code> + <code class="highlighter-rouge">,</code>)창에서 <code class="highlighter-rouge">Profiles</code> 항목을 선택하고 <code class="highlighter-rouge">Text</code>탭을 선택합니다. Font항목에서 <code class="highlighter-rouge">Use a different font for non-ASCII text</code>를 체크하고 MesloLGS NF를 선택하면 폰트가 이쁘게 나옵니다.</p>
+<p>iTerm2를 실행하고 설정(<code class="highlighter-rouge">⌘</code> + <code class="highlighter-rouge">,</code>)창에서 <code class="highlighter-rouge">Profiles</code> 항목을 선택하고 <code class="highlighter-rouge">Text</code>탭을 선택합니다. Font항목에서 <code class="highlighter-rouge">Use a different font for non-ASCII text</code>를 체크하고 MesloLGS NF를 선택하면 폰트가 이쁘게 나옵니다.</p>
 
 <p>이제 설정이 모두 완료되었으니 vim 공부(<code class="highlighter-rouge">esc</code>, <code class="highlighter-rouge">:q!</code>)만 하면 됩니다. :)</p>
 
@@ -1104,7 +1107,7 @@ curl https://gist.githubusercontent.com/subicura/91696d2da58ad28b5e8b2877193015e
 <h3 id="asdf-vm">
 <a class="anchor" href="#asdf-vm" aria-hidden="true"><span class="octicon octicon-link"></span></a>asdf vm</h3>
 
-<p>asdf-vm은 각종 프로그램(nodejs, ruby, python, …)의 버전을 손쉽게 관리해주는 <del>성의 없어 보이는 이름의</del> 도구입니다. 기존에 nvm, rbenv등 언어, 프로그램별로 달랐던 관리 도구를 하나로 통합해서 사용할 수 있습니다.</p>
+<p>asdf-vm은 각종 프로그램(nodejs, ruby, python, …)의 버전을 손쉽게 관리해주는 <del>성의 없어 보이는 이름의</del> 도구입니다. 기존에 nvm, rbenv등 언어, 프로그램별로 달랐던 관리 도구를 하나로 통합해서 사용할 수 있습니다. homebrew도 일부 버전 관리 기능을 제공하지만 asdf만큼 강력하지 않습니다.</p>
 
 <p><strong>설치</strong></p>
 
@@ -1714,7 +1717,7 @@ gem <span class="nb">install </span>tmuxinator
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1594059035341298000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1594079207141452000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

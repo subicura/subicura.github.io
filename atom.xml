@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2020-07-07T03:10:35+09:00</updated>
+ <updated>2020-07-07T08:46:47+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -2348,7 +2348,7 @@ git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.precompos
 
 &lt;p&gt;&lt;strong&gt;테마적용&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;iTerm을 실행하고 설정(&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;)창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; 항목을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Colors&lt;/code&gt;탭을 선택합니다.&lt;/p&gt;
+&lt;p&gt;iTerm2를 실행하고 설정(&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;)창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; 항목을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Colors&lt;/code&gt;탭을 선택합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-preferences-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -2633,7 +2633,7 @@ curl https://gist.githubusercontent.com/subicura/91696d2da58ad28b5e8b2877193015e
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;iTerm을 실행하고 설정(&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;)창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; 항목을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt;탭을 선택합니다. Font항목에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Use a different font for non-ASCII text&lt;/code&gt;를 체크하고 MesloLGS NF를 선택하면 폰트가 이쁘게 나옵니다.&lt;/p&gt;
+&lt;p&gt;iTerm2를 실행하고 설정(&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;)창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; 항목을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt;탭을 선택합니다. Font항목에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Use a different font for non-ASCII text&lt;/code&gt;를 체크하고 MesloLGS NF를 선택하면 폰트가 이쁘게 나옵니다.&lt;/p&gt;
 
 &lt;p&gt;이제 설정이 모두 완료되었으니 vim 공부(&lt;code class=&quot;highlighter-rouge&quot;&gt;esc&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;:q!&lt;/code&gt;)만 하면 됩니다. :)&lt;/p&gt;
 
@@ -2759,7 +2759,7 @@ curl https://gist.githubusercontent.com/subicura/91696d2da58ad28b5e8b2877193015e
 
 &lt;h3 id=&quot;asdf-vm&quot;&gt;asdf vm&lt;/h3&gt;
 
-&lt;p&gt;asdf-vm은 각종 프로그램(nodejs, ruby, python, …)의 버전을 손쉽게 관리해주는 &lt;del&gt;성의 없어 보이는 이름의&lt;/del&gt; 도구입니다. 기존에 nvm, rbenv등 언어, 프로그램별로 달랐던 관리 도구를 하나로 통합해서 사용할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;asdf-vm은 각종 프로그램(nodejs, ruby, python, …)의 버전을 손쉽게 관리해주는 &lt;del&gt;성의 없어 보이는 이름의&lt;/del&gt; 도구입니다. 기존에 nvm, rbenv등 언어, 프로그램별로 달랐던 관리 도구를 하나로 통합해서 사용할 수 있습니다. homebrew도 일부 버전 관리 기능을 제공하지만 asdf만큼 강력하지 않습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
 
