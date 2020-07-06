@@ -692,7 +692,8 @@ body {
         text-align: left;
         margin: 0;
         padding: 6px 13px;
-        font-weight: 300; }
+        font-weight: 300;
+        line-height: 1.4; }
       .post .post-content table.table tr th :first-child, .post .post-content table.table tr td :first-child {
         margin-top: 0; }
       .post .post-content table.table tr th :last-child, .post .post-content table.table tr td :last-child {

@@ -4,9 +4,11 @@ by jekyll
 
 ## requirement
 
-- ruby 2.5
-- bundler 1.17 (`gem install bundler -v '1.17.3'`)
-  - `bundle install`
+- ruby 2.5.8 (use asdf)
+  - `asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git`
+  - `asdf install ruby 2.5.8`
+- `gem install bundler:2.1.4`
+- `bundle install`
 
 ## test
 

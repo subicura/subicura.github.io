@@ -6,9 +6,9 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 14 Jan 2020 08:53:46 +0900</pubDate>
-    <lastBuildDate>Tue, 14 Jan 2020 08:53:46 +0900</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>Tue, 07 Jul 2020 03:10:35 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Jul 2020 03:10:35 +0900</lastBuildDate>
+    <generator>Jekyll v3.8.7</generator>
     
       <item>
         <title>알아두면 유익한 2019 개발이야기</title>
@@ -2067,7 +2067,17 @@ npm run lint
     
       <item>
         <title>본격 macOS에 개발 환경 구축하기</title>
-        <description>&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/terminal-neofetch.png&quot; alt=&quot;iTerm2 + snazzy&quot; /&gt;&lt;/p&gt;
+        <description>&lt;h3 id=&quot;20200706-수정&quot;&gt;2020/07/06 수정&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;macOS Catalina 10.15.5 반영&lt;/li&gt;
+  &lt;li&gt;명령어 및 설정 최신 내용 반영&lt;/li&gt;
+  &lt;li&gt;추천 프로그램 추가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/neofetch-2.png&quot; alt=&quot;iTerm2 + snazzy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;개발 관련 스터디 모임이나 컨퍼런스에서 발표를 듣다 보면 발표 주제와 별도로 예제 화면이나 라이브 코딩에서 사용하는 개발 도구에 관심이 가는 경우가 있습니다.&lt;/p&gt;
 
@@ -2137,43 +2147,55 @@ npm run lint
 
 &lt;h2 id=&quot;시스템-설정&quot;&gt;시스템 설정&lt;/h2&gt;
 
-&lt;p&gt;본격적인 개발환경 설정에 앞서 몇 가지 유용한 시스템 설정을 확인해봅니다. macOS High Sierra를 기준으로 하였으나 다른 버전도 비슷비슷할 것으로 보입니다. 반드시 동일하게 설정할 필요는 없으며 보고 괜찮다 싶은 항목만 적용하면 됩니다.&lt;/p&gt;
+&lt;p&gt;본격적인 개발환경 설정에 앞서 몇 가지 유용한 시스템 설정을 확인해봅니다. macOS Catalina를 기준으로 하였으나 다른 버전도 비슷비슷할 것으로 보입니다. 반드시 동일하게 설정할 필요는 없으며 보고 괜찮다 싶은 항목만 적용하면 됩니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;system-preferences&quot;&gt;System Preferences&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/system-preferences.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/system-preferences-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;상단 메뉴의 &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;/code&gt; 로고를 누르고 &lt;code class=&quot;highlighter-rouge&quot;&gt;System Preferences...&lt;/code&gt;를 선택합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;미션 컨트롤 창 순서 고정&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;미션 컨트롤&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/mission-control.png&quot; alt=&quot;Mission Control&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;미션 컨트롤 창 순서 고정&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Mission Control&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Automatically rearrange Spaces based on most recent use&lt;/code&gt;: 체크 안함&lt;/li&gt;
   &lt;li&gt;미션 컨트롤 창 순서가 기본적으로 최근 사용 순으로 설정되어 있어 의도하지 않게 순서가 변경되는 것을 막음&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;언어 설정 영어 우선순위로 변경&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;언어&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/language-region.png&quot; alt=&quot;Language &amp;amp; Region&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;언어 설정 영어 우선순위로 변경&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Language &amp;amp; Region&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Preferred languages&lt;/code&gt;: English &amp;gt; 한국어 (드래그로 순서 조정)&lt;/li&gt;
   &lt;li&gt;간혹 locale 설정 때문에 오류가 발생하는 걸 방지해주고 영어 오류 메시지가 구글검색이 잘됨&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;패스워드 즉시 설정&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;보안&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/security-privacy-1.png&quot; alt=&quot;Security &amp;amp; Privacy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;패스워드 즉시 설정&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Security &amp;amp; Privacy&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;General&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Require password&lt;/code&gt;: immediately&lt;/li&gt;
   &lt;li&gt;잠자기 모드나 화면 보호기가 켜지면 즉시 패스워드 입력을 활성화하여 보안을 최대한 안전하게 유지&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;분실대비 패스워드 메시지 설정&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;분실대비 스크린 메시지 설정&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Security &amp;amp; Privacy&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;General&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Show a message when the screen is locked&lt;/code&gt;: 전화번호 / 이름&lt;/li&gt;
   &lt;li&gt;혹시 분실했을 경우를 대비하여 전화번호, 이름 등을 알려줌&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;디스크 암호화&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;디스크 암호화&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Security &amp;amp; Privacy&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;FileVault&lt;/code&gt;: Turn On FileVault&lt;/li&gt;
@@ -2181,7 +2203,11 @@ npm run lint
   &lt;li&gt;파일 읽기/쓰기 퍼포먼스가 걱정되지만 최신 CPU와 SSD에서는 거의 성능 차이가 없다고 함&lt;del&gt;믿고쓰자&lt;/del&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;모든 텍스트 자동 변경 옵션 끄기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;키보드&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/keyboard-1.png&quot; alt=&quot;Keyboard &amp;gt; Text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;모든 텍스트 자동 변경 옵션 끄기&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Keyboard&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt;: 모든 자동 변경 옵션 끄기&lt;/li&gt;
@@ -2189,30 +2215,47 @@ npm run lint
   &lt;li&gt;특히 Use smart quotes and dashes는 코드 복사하다가 따옴표가 바뀌면서 고생이 시작됨&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;클릭은 터치로&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/keyboard-2.png&quot; alt=&quot;Keyboard &amp;gt; Shortcuts&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;컨트롤 버튼 키보드로 제어하기 (&lt;a href=&quot;https://twitter.com/devthewild/status/1278683719310557187&quot;&gt;@devthewild님 추천&lt;/a&gt;)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Keyboard&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Shortcut&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Use keyboard navigation to move focus between controls&lt;/code&gt; : 체크함&lt;/li&gt;
+  &lt;li&gt;예/아니오 버튼을 키보드로 선택할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;트랙패드&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/trackpad.png&quot; alt=&quot;Trackpad&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;클릭은 터치로&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Trackpad&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Point &amp;amp; Click&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Tab to click&lt;/code&gt;: 체크함&lt;/li&gt;
   &lt;li&gt;트랙패드 클릭 시 꾸욱 누를 필요 없이 톡톡 터치로 클릭해서 손의 피로를 줄임&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;드래그는 세손가락으로&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;접근성&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/accessibility.png&quot; alt=&quot;Accessibility&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;드래그는 세손가락으로&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Accessibility&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Mouse &amp;amp; Trackpad&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Trackpad options...&lt;/code&gt;:  Enable dragging - three finger drag&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Accessibility&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Pointer Control&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Trackpad options...&lt;/code&gt;:  Enable dragging - three finger drag&lt;/li&gt;
   &lt;li&gt;창 또는 아이콘을 이동할 때 트랙패드를 누른 상태로 이동할 필요 없이 세 손가락으로 드래그 할 수 있음&lt;/li&gt;
   &lt;li&gt;이건 해봐야 감이 오는데 몰랐다면 신세계가 열림&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;finder-preference&quot;&gt;Finder Preference&lt;/h3&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-preferences.png&quot; style=&quot;width: 450px&quot; /&gt;
-&lt;/p&gt;
-
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Finder&lt;/code&gt;를 실행하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;Finder&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Preferences...&lt;/code&gt;)를 선택합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;파인더 기본 폴더 설정&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-1.png&quot; style=&quot;width: 450px&quot; /&gt;
+&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;General&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;New Finder windows show&lt;/code&gt;: subicura (home folder)&lt;/li&gt;
@@ -2221,6 +2264,10 @@ npm run lint
 
 &lt;p&gt;&lt;strong&gt;파일 확장자 보여주기&lt;/strong&gt;&lt;/p&gt;
 
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-2.png&quot; style=&quot;width: 450px&quot; /&gt;
+&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Show all filename extensions&lt;/code&gt;: 체크함&lt;/li&gt;
   &lt;li&gt;모든 파일의 확장자를 보여줌&lt;/li&gt;
@@ -2228,17 +2275,17 @@ npm run lint
 
 &lt;h3 id=&quot;download-folder-option&quot;&gt;Download Folder Option&lt;/h3&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/download-option.png&quot; style=&quot;width: 250px&quot; /&gt;
-&lt;/p&gt;
-
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Downloads&lt;/code&gt; 폴더로 이동하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;J&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Show View Options&lt;/code&gt;)를 선택합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;날짜그룹 + 이름 정렬&lt;/strong&gt;&lt;/p&gt;
 
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-3.png&quot; style=&quot;width: 300px&quot; /&gt;
+&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Arrange By&lt;/code&gt;:Date added, &lt;code class=&quot;highlighter-rouge&quot;&gt;Sort By&lt;/code&gt;:Name&lt;/li&gt;
-  &lt;li&gt;파일 목록을 보여줄 때 날짜별로 그룹화 하고 그룹 내에서 이름으로 다시 정렬&lt;/li&gt;
+  &lt;li&gt;파일 목록을 저장한 날짜별로 그룹화 하고 그룹 내에서 이름으로 다시 정렬&lt;/li&gt;
   &lt;li&gt;다운로드 폴더 특성상 최근에 받은 파일들을 찾는 경우가 많으므로 유용함&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2258,7 +2305,7 @@ npm run lint
 }&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;프로그램 재시작이 필요합니다.&lt;/p&gt;
+&lt;p&gt;OS 재시작이 필요합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;필수-프로그램&quot;&gt;필수 프로그램&lt;/h2&gt;
 
@@ -2266,9 +2313,13 @@ npm run lint
 
 &lt;h3 id=&quot;xcode&quot;&gt;Xcode&lt;/h3&gt;
 
-&lt;p&gt;macOS에는 기본적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;gcc&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;make&lt;/code&gt;와 같은 컴파일 도구가 설치되어 있지 않기 때문에 명령어 도구&lt;sub&gt;Command Line Tools&lt;/sub&gt;를 설치해야 합니다. 예전에는 Xcode를 전체 설치하고 추가로 명령어 도구를 설치해야 했으나 Xcode용량이 꽤 크고 모든 사람이 IDE가 필요한 게 아니기 때문에 명령어 도구만 따로 설치할 수 있게 변경되었습니다.&lt;/p&gt;
+&lt;p&gt;macOS는 기본적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;gcc&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;make&lt;/code&gt;와 같은 컴파일 도구가 설치되어 있지 않기 때문에 명령어 도구&lt;sub&gt;Command Line Tools&lt;/sub&gt;를 설치해야 합니다. 예전에는 Xcode를 전체 설치하고 추가로 명령어 도구를 설치해야 했으나 Xcode용량이 꽤 크고 모든 사람이 IDE가 필요한 게 아니기 때문에 명령어 도구만 따로 설치할 수 있게 변경되었습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;#homebrew&quot;&gt;homebrew&lt;/a&gt;를 설치하면 자동으로 Xcode 명령어 도구를 설치합니다. 따로 설치하지 않아도 됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;xcode-select &lt;span class=&quot;nt&quot;&gt;--install&lt;/span&gt;
@@ -2288,12 +2339,12 @@ clang: error: no input files
 
 &lt;h3 id=&quot;homebrew&quot;&gt;homebrew&lt;/h3&gt;
 
-&lt;p&gt;brew&lt;sub&gt;homebrew&lt;/sub&gt;는 각종 커맨드라인 프로그램(요즘은 GUI도..)을 손쉽게 설치해주는 맥용 패키지 매니저입니다. 리눅스의 &lt;code class=&quot;highlighter-rouge&quot;&gt;apt&lt;/code&gt;나  &lt;code class=&quot;highlighter-rouge&quot;&gt;yum&lt;/code&gt;과 비슷하며 brew외에 &lt;a href=&quot;https://www.macports.org/&quot;&gt;MacPorts&lt;/a&gt; 라는 패키지 메니저가 있는데 몇몇 단점으로 요즘은 거의 brew를 사용하는 추세입니다. 다양한 프로그램을 복잡한 빌드과정 없이 손쉽게 설치할 수 있고 업데이트, 관리도 간단하므로 안쓸 이유가 없는 필수 프로그램입니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;그냥 홈페이지 가서 다운로드 하고 설치하는 게 편한데..&lt;/code&gt;라고 하는분들이 있는데 나중에 업데이트나 삭제를 생각해보면 글쎄요.. brew 쓰세요!&lt;/p&gt;
+&lt;p&gt;brew&lt;sub&gt;homebrew&lt;/sub&gt;는 각종 커맨드라인 프로그램과 일반 프로그램(크롬..)을 손쉽게 설치해주는 맥용 패키지 매니저입니다.(최근에 리눅스도 지원하기 시작했습니다.) 리눅스의 &lt;code class=&quot;highlighter-rouge&quot;&gt;apt&lt;/code&gt;나  &lt;code class=&quot;highlighter-rouge&quot;&gt;yum&lt;/code&gt;과 비슷하며 brew외에 &lt;a href=&quot;https://www.macports.org/&quot;&gt;MacPorts&lt;/a&gt; 라는 패키지 메니저가 있는데 몇몇 단점으로 요즘은 거의 brew를 사용하는 추세입니다. 다양한 프로그램을 복잡한 빌드과정 없이 손쉽게 설치할 수 있고 업데이트, 관리도 간단하므로 안쓸 이유가 없는 필수 프로그램입니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;그냥 홈페이지 가서 다운로드 하고 설치하는 게 편한데..&lt;/code&gt;라고 하는분들이 있는데 나중에 업데이트나 삭제를 생각해보면 글쎄요.. brew 쓰세요!&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;/usr/bin/ruby &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;/bin/bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/master/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;확인&lt;/strong&gt;&lt;/p&gt;
@@ -2352,7 +2403,7 @@ git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.precompos
 
 &lt;p&gt;&lt;strong&gt;테마선택&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/snazzy-theme.png&quot; alt=&quot;snazzy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/snazzy-theme-2.png&quot; alt=&quot;snazzy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;설치를 완료했으면 &lt;a href=&quot;https://github.com/sindresorhus/iterm2-snazzy/raw/master/Snazzy.itermcolors&quot;&gt;Snazzy.itermcolors&lt;/a&gt; 파일을 오른쪽 버튼 누르고 다운 받거나 &lt;a href=&quot;http://iterm2colorschemes.com/&quot;&gt;여러 개의 테마&lt;/a&gt;를 둘러보고 맘에드는것을 고릅니다. 다운받은 파일을 더블클릭하면 자동으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;iTerm Color Preset&lt;/code&gt;에 추가됩니다.&lt;/p&gt;
 
@@ -2360,35 +2411,67 @@ git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.precompos
 
 &lt;p&gt;iTerm을 실행하고 설정(&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;)창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; 항목을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Colors&lt;/code&gt;탭을 선택합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-preferences.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-preferences-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;오른쪽 하단에  &lt;code class=&quot;highlighter-rouge&quot;&gt;Color presets...&lt;/code&gt; 선택 박스를 클릭하면 조금전에 추가한 &lt;code class=&quot;highlighter-rouge&quot;&gt;Snazzy&lt;/code&gt; preset을 선택할 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;음.. 그런데 테마를 바꿔도 그다지 달라지는 건 없어보입니다.. &lt;del&gt;이게 무슨 소리요?!&lt;/del&gt; 제대로 색을 활용하려면 쉘&lt;sub&gt;shell&lt;/sub&gt; 설정을 해야합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;추가설정&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;추가 디자인 설정&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;iTerm창을 더 단순하게 만들기 위한 추가 설정입니다.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;타이틀바 배경색 어둡게 변경
+  &lt;li&gt;타이틀바 스타일 변경
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Appearance&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Theme&lt;/code&gt;: Dark&lt;/li&gt;
-      &lt;li&gt;High Sierra에서는 &lt;a href=&quot;https://gitlab.com/gnachman/iterm2/issues/4080&quot;&gt;현재&lt;/a&gt; Light/Dark 테마만 선택할 수 있으며 임의의 색은 불가능&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;스크롤바 감추기
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Appearance&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Hide scrollbars&lt;/code&gt;: 체크함&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Appearance&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Theme&lt;/code&gt;: Minimal
+        &lt;ul&gt;
+          &lt;li&gt;탭의 높이를 얇게 조정하고 싶다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;Dark&lt;/code&gt;를 추천&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;타이틀바 밑에 1px 라인 제거
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Appearance&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Show line under title bar when the tab bar is not visible&lt;/code&gt;: 체크 안함&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Appearance&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Windows&lt;/code&gt; &amp;gt;  &lt;code class=&quot;highlighter-rouge&quot;&gt;Show line under title bar when the tab bar is not visible&lt;/code&gt;: 체크 안함&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;폰트 크기 및 줄간격 변경
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt;: 폰트사이즈 12로 변경&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt;: n/n 줄간격 110으로 변경&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;마진 수정
     &lt;ul&gt;
       &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Height of top and bottom margins in terminal panes&lt;/code&gt;: 10&lt;/li&gt;
       &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Width of left and right margins in terminal panes&lt;/code&gt;: 12&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;탭 선 제거
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;In minimal tab style, how prominent should the tab outline be?&lt;/code&gt;: 0&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;상태바 추가&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm2-status.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;iTerm2에 새롭게 추가된 상태바 기능입니다. 상단 또는 하단에 상태바를 추가하고 여러가지 정보를 볼 수 있습니다. 필요한 경우 활성화해서 사용합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm2-statusbar.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;상태바 추가
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Profile&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Session&lt;/code&gt;: Status bar enabled 체크
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Configure Status Bar&lt;/code&gt; 선택하여 원하는 항목 드레그 추가&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Appearance&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Status bar location&lt;/code&gt; : 상태바 위치 설정&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -2399,7 +2482,7 @@ git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.precompos
 
 &lt;p&gt;iTerm2도 설치하고 테마도 설치했으니 쉘을 바꿀 차례입니다.&lt;/p&gt;
 
-&lt;p&gt;macOS는 기본으로 &lt;a href=&quot;https://en.wikipedia.org/wiki/Bash_(Unix_shell)&quot;&gt;Bash(Bourne-again) shell&lt;/a&gt;을 사용하고 있습니다. bash외에 csh, ksh, sh, tcsh, zsh등을 내장하고 있는데 최근 대새는 단연 zsh입니다. zsh에 설정 관리 프레임워크인 oh-my-zsh을 사용하여 이쁜 테마를 적용하고 여러 가지 플러그인을 설치해봅니다.&lt;/p&gt;
+&lt;p&gt;macOS는 기본으로 zsh을 사용하고 있습니다. 기존에 사용하던 bash에서 zsh로 기본 설정이 바뀐걸 보면 대세이긴 한 것 같습니다. zsh에 설정 관리 프레임워크인 oh-my-zsh을 사용하여 이쁜 테마를 적용하고 여러 가지 플러그인을 설치해봅니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
 
@@ -2412,10 +2495,10 @@ git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.precompos
 &lt;p&gt;그리고 zsh의 설정을 관리해주는 oh-my-zsh을 설치합니다.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;설치스크립트를 실행하면 관련 파일을 설치하고 패스워드를 물어봅니다. 계정의 패스워드를 입력하면 기본쉘을 자동으로 bash에서 zsh로 변경해줍니다.&lt;/p&gt;
+&lt;p&gt;설치스크립트를 실행하면 관련 파일을 설치하고 패스워드를 물어봅니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;플러그인&lt;/strong&gt;&lt;/p&gt;
 
@@ -2447,13 +2530,51 @@ git clone git://github.com/zsh-users/zsh-autosuggestions &lt;span class=&quot;nv
 &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;설정 파일을 수정했으면 터미널을 재시작하거나 &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt; 명령어를 실행하여 설정을 다시 불러와야 합니다. 이제 명령어를 입력할 때 존재하지 않는 명령어는 빨간색으로 뜨고 한번 입력했던 명령어를 회색으로 표현해주는 걸 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;설정 파일을 수정했으면 터미널을 재시작하거나 &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt; 명령어를 실행하여 설정을 다시 불러와야 합니다. 이제 명령어를 입력할 때 존재하지 않는 명령어는 빨간색으로 뜨고 한번 입력했던 명령어를 흐릿하게 표현해주는 걸 확인할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;테마&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;쉘-프롬프트&quot;&gt;쉘 프롬프트&lt;/h3&gt;
 
 &lt;p&gt;oh-my-zsh의 기본 테마인 &lt;code class=&quot;highlighter-rouge&quot;&gt;robbyrussell&lt;/code&gt;도 깔끔하지만, 이 외에 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh/wiki/Themes&quot;&gt;다양한 테마&lt;/a&gt;가 존재합니다. 테마를 바꾸는 방법은 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;파일의 &lt;code class=&quot;highlighter-rouge&quot;&gt;ZSH_THEME=&quot;robbyrussell&quot;&lt;/code&gt; 부분을 원하는 테마로 수정하면 됩니다.&lt;/p&gt;
 
-&lt;p&gt;여기서는 이쁘고 단순하고 빠른 &lt;a href=&quot;https://github.com/sindresorhus/pure&quot;&gt;pure&lt;/a&gt; prompt를 사용합니다.&lt;/p&gt;
+&lt;p&gt;여기서는 단순히 색상, 모양 설정을 넘어 추가적인 기능을 설치합니다. 추가적인 기능은 현재 디렉토리의 git 상태를 보여주고 사용중인 nodejs, ruby의 버전을 보여주거나 aws, kubectl 프로필을 보여주기도 합니다.&lt;/p&gt;
+
+&lt;p&gt;대표적인 프롬프트는 &lt;a href=&quot;https://github.com/romkatv/powerlevel10k&quot;&gt;Powerlevel10k&lt;/a&gt;, &lt;a href=&quot;https://denysdovhan.com/spaceship-prompt/&quot;&gt;spaceship&lt;/a&gt;, &lt;a href=&quot;https://github.com/sindresorhus/pure&quot;&gt;pure&lt;/a&gt;가 있습니다. 취향에 맞춰서 사용하면 되고 개인적으로 예전에는 pure를 썼지만 최근에는 Powerlevel10k를 사용하고 있습니다. Powerlevel10k는 쉘응답속도와 프롬프트 초기화가 가장 빠르고 Lean테마를 사용하면 단순한 형태로 사용할 수 있습니다. 특히 &lt;code class=&quot;highlighter-rouge&quot;&gt;aws&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;kubectl&lt;/code&gt;등 특정 명령어를 칠때만 나타나는 프로필 기능이 아주 마음에 듭니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;속도비교: &lt;code class=&quot;highlighter-rouge&quot;&gt;powerline10k &amp;gt;&amp;gt;&amp;gt;&amp;gt; spaceship, pure&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;기능비교: &lt;code class=&quot;highlighter-rouge&quot;&gt;powerline10 &amp;gt; spaceship &amp;gt;&amp;gt;&amp;gt;&amp;gt; pure&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;디자인비교 (취향탐): &lt;code class=&quot;highlighter-rouge&quot;&gt;spaceship, pure &amp;gt; powerline10k&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Powerlevel10k(추천)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;git clone &lt;span class=&quot;nt&quot;&gt;--depth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 https://github.com/romkatv/powerlevel10k.git &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ZSH_CUSTOM&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;~/.oh-my-zsh/custom&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/themes/powerlevel10k
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설치를 완료하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;파일에 ZSH_THEME항목을 수정합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;ZSH_THEME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;powerlevel10k/powerlevel10k&quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;저장 후 새로 탭을 열면, 대화형 설정창이 뜨고 상세하게 테마를 설정할 수 있습니다. 다시 설정하고 싶다면 언제든 &lt;code class=&quot;highlighter-rouge&quot;&gt;p10k configure&lt;/code&gt;를 입력하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;spaceship(설정귀찮으면 추천)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;git clone https://github.com/denysdovhan/spaceship-prompt.git &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ZSH_CUSTOM&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/themes/spaceship-prompt&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ZSH_CUSTOM&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/themes/spaceship-prompt/spaceship.zsh-theme&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ZSH_CUSTOM&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/themes/spaceship.zsh-theme&quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설치를 완료하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;파일에 ZSH_THEME항목을 수정합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;ZSH_THEME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;spaceship&quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;pure&lt;/strong&gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -2461,7 +2582,7 @@ git clone git://github.com/zsh-users/zsh-autosuggestions &lt;span class=&quot;nv
 npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; pure-prompt
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;설치를 완료했으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;파일에 다음항목을 추가합니다.&lt;/p&gt;
+&lt;p&gt;설치를 완료하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;파일에 다음항목을 추가합니다.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -2469,9 +2590,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 prompt pure
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;이제 zsh 기본 설정이 끝났습니다!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;oh-my-zsh 팁&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;oh-my-zsh-팁&quot;&gt;oh-my-zsh 팁&lt;/h3&gt;
 
 &lt;p&gt;zsh과 oh-my-zsh의 조합으로 강력한 쉘을 사용할 수 있게 되었습니다. 여기서 모든 기능을 설명할 순 없지만 자주 사용하는 몇 가지 팁을 소개합니다.&lt;/p&gt;
 
@@ -2493,6 +2612,8 @@ prompt pure
 
 &lt;h3 id=&quot;vim&quot;&gt;vim&lt;/h3&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/spacevim.png&quot; alt=&quot;spacevim + snazzy&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;vim은 기본으로 설치된 터미널용 에디터로 GUI 환경의 에디터를 사용할 수 있는 macOS 환경에서는 일부 &lt;del&gt;고오오급&lt;/del&gt; 개발자를 제외하고는 잘 쓰이지 않습니다. 하지만 터미널 작업을 하다 보면 간단하게 수정할 파일이 있고 git 커밋메시지를 작성할 때 종종 사용하게 됩니다.&lt;/p&gt;
 
 &lt;p&gt;기본으로 설정된 화면은 밋밋하기 그지 없기 때문에 강력한 기능의 플러그인을 설치해줍니다.&lt;/p&gt;
@@ -2501,12 +2622,18 @@ prompt pure
 
 &lt;p&gt;내장된 vim대신 neovim을 설치합니다. neovim은 vim과 차이가 없어 보이는데 24bit True Color를 지원하고 오래된 vim 소스를 처음부터 다시 짜서 소스코드가 줄었다고 합니다. 저 같은 라이트 유저는 차이를 느끼진 못하지만 좋다고 해서 사용하고 있습니다. 그리고 테마에서 사용할 개발용 폰트를 설치합니다.&lt;/p&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Powerline10k&lt;/code&gt; 프롬프트를 사용하면 개발용 폰트(MesloLGS NF)가 자동으로 설치됩니다. 따로 설치할 필요가 없습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
+4
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;neovim
+&lt;span class=&quot;c&quot;&gt;# MesloLGS NF가 없는 경우&lt;/span&gt;
 brew tap caskroom/fonts
-brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;font-hack-nerd-font
+brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;font-meslolg-nerd-font
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;기본 설치가 완료되었으면 터미널 기본 에디터로 vi대신 neovim을 사용하도록 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;에 다음 항목을 추가합니다.&lt;/p&gt;
@@ -2525,59 +2652,81 @@ brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;font-hack-nerd-f
 
 &lt;p&gt;&lt;strong&gt;플러그인&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 화면을 보는 순간 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.&lt;/p&gt;
+&lt;p&gt;vim은 강력한 플러그인들이 많은데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 화면을 보는 순간 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;curl &lt;span class=&quot;nt&quot;&gt;-sLf&lt;/span&gt; https://spacevim.org/install.sh | bash
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;설치가 완료되면 &lt;code class=&quot;highlighter-rouge&quot;&gt;vi&lt;/code&gt;를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (&lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.&lt;/p&gt;
+&lt;p&gt;설치가 완료되면 &lt;code class=&quot;highlighter-rouge&quot;&gt;vi&lt;/code&gt;를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (잘모르면 &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;을 누릅니다) &lt;code class=&quot;highlighter-rouge&quot;&gt;q&lt;/code&gt;를 눌러 종료했다가 다시 실행하면 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;테마&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;기본 테마는 뭔가 칙칙한 느낌이 듭니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.SpaceVim.d/init.vim&lt;/code&gt; 파일에 Colorscheme 설정을 추가합니다.&lt;/p&gt;
+&lt;p&gt;기본 테마는 뭔가 칙칙한 느낌이 듭니다. snazzy colorscheme를 다운받고 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.SpaceVim.d/init.toml&lt;/code&gt; 파일에 설정을 추가합니다.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;let &lt;/span&gt;g:spacevim_colorscheme &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'onedark'&lt;/span&gt;
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; ~/.SpaceVim.d/colors
+curl https://gist.githubusercontent.com/subicura/91696d2da58ad28b5e8b2877193015e1/raw/6fb5928c9bda2040b3c9561d1e928231dbcc9184/snazzy-custom.vim &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; ~/.SpaceVim.d/colors/snazzy-custom.vim
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
+  colorscheme &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;snazzy-custom&quot;&lt;/span&gt;
+  enable_guicolors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+  &lt;/span&gt;statusline_separator &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;arrow&quot;&lt;/span&gt;
+  enable_tabline_filetype_icon &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+  &lt;/span&gt;enable_statusline_mode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+  &lt;/span&gt;statusline_unicode_symbols &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;설정 파일을 수정하고 다시 시작하면 좀 더 나은 화면을 볼 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;폰트&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;앗, 플러그인을 설치하고 vi를 실행하면 폰트가 깨져서 ?가 보이는 걸 알 수 있습니다.&lt;/p&gt;
+&lt;p&gt;vi를 실행하고 폰트가 &lt;code class=&quot;highlighter-rouge&quot;&gt;?&lt;/code&gt;로 깨져 보인다면 iTerm2에 개발 관련 폰트를 모은 NerdFont를 추가로 설정합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/nvim-question.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;iTerm2에 개발 관련 폰트를 모은 NerdFont를 추가로 설정합니다.&lt;/p&gt;
+&lt;p&gt;iTerm을 실행하고 설정(&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;)창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; 항목을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt;탭을 선택합니다. Font항목에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Use a different font for non-ASCII text&lt;/code&gt;를 체크하고 MesloLGS NF를 선택하면 폰트가 이쁘게 나옵니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;이제 설정이 모두 완료되었으니 vim 공부(&lt;code class=&quot;highlighter-rouge&quot;&gt;esc&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;:q!&lt;/code&gt;)만 하면 됩니다. :)&lt;/p&gt;
 
-&lt;p&gt;iTerm을 실행하고 설정(&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;)창에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; 항목을 선택하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt;탭을 선택합니다. Font항목에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Use a different font for non-ASCII text&lt;/code&gt;를 체크하고 다른 탭을 살짝 눌렀다 다시 돌아오면 Non-ASCII Font를 설정할 수 있습니다. 거기서 Knack Regular Nerd Font Complete를 선택하면 폰트가 이쁘게 나옵니다.&lt;/p&gt;
-
-&lt;p&gt;이제 설정이 모두 완료되었으니 vim 공부만 하면 됩니다. :)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://neovim.io/&quot;&gt;neovim 홈페이지&lt;/a&gt; / &lt;a href=&quot;https://github.com/ryanoasis/nerd-fonts&quot;&gt;Nerd Font github&lt;/a&gt; / &lt;a href=&quot;https://github.com/SpaceVim/SpaceVim&quot;&gt;SpaceVim github&lt;/a&gt; / &lt;a href=&quot;http://spacevim.org/documentation/&quot;&gt;SpaceVim 설정문서&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://neovim.io/&quot;&gt;neovim 홈페이지&lt;/a&gt; / &lt;a href=&quot;https://github.com/SpaceVim/SpaceVim&quot;&gt;SpaceVim github&lt;/a&gt; / &lt;a href=&quot;http://spacevim.org/documentation/&quot;&gt;SpaceVim 설정문서&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;fzf&quot;&gt;fzf&lt;/h3&gt;
 
 &lt;p&gt;fzf는 강력하고 엄청나게 빠른 fuzzy finder 도구입니다. 증분 검색을 통하여 원하는 파일이나 히스토리를 쉽고 빠르게 찾을 수 있게 해줍니다. 정확하게 원하는 값을 입력하지 않고 일부만 입력해도 실시간으로 검색 결과를 보여줍니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/fzf-sample.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/fzf-sample-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;fzf
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설치가 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;에 plugin을 추가해줍니다.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;fzf
-
-&lt;span class=&quot;c&quot;&gt;# To install useful key bindings and fuzzy completion:&lt;/span&gt;
-&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;brew &lt;span class=&quot;nt&quot;&gt;--prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;/opt/fzf/install
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;
+  ...
+  ...
+  fzf
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;를 누르면 됩니다. 설치가 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt;를 입력하여 설정을 다시 불러옵니다.&lt;/p&gt;
+&lt;p&gt;전부 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt;를 입력하여 설정을 다시 불러옵니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;명령어&lt;/strong&gt;&lt;/p&gt;
 
@@ -2668,6 +2817,75 @@ brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;font-hack-nerd-f
 &lt;p&gt;단순한 기능만큼 굉장히 자주, 유용하게 사용하는 도구입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/clvv/fasd&quot;&gt;fasd github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;asdf-vm&quot;&gt;asdf vm&lt;/h3&gt;
+
+&lt;p&gt;asdf-vm은 각종 프로그램(nodejs, ruby, python, …)의 버전을 손쉽게 관리해주는 &lt;del&gt;성의 없어 보이는 이름의&lt;/del&gt; 도구입니다. 기존에 nvm, rbenv등 언어, 프로그램별로 달랐던 관리 도구를 하나로 통합해서 사용할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;설치&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;asdf
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;설치가 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;에 plugin을 추가해줍니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;
+  ...
+  ...
+  asdf
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;전부 완료되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;source ~/.zshrc&lt;/code&gt;를 입력하여 설정을 다시 불러옵니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;명령어&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;asdf는 플러그인을 이용하기 때문에 필요한 프로그램을 찾아서 설치해야 합니다.&lt;/p&gt;
+
+&lt;table class=&quot;table table-key-value-60&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;명령어&lt;/th&gt;
+      &lt;th&gt;기능&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;asdf plugin list&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;설치된 플러그인 목록&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;asdf plugin add &amp;lt;name&amp;gt; [&amp;lt;git-ref&amp;gt;]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;플러그인 설치 ex) asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;asdf list all &amp;lt;name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;플러그인 설치 가능한 버전 확인&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;asdf install &amp;lt;name&amp;gt; &amp;lt;version&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;플러그인 버전 설치&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;asdf local &amp;lt;name&amp;gt; &amp;lt;version&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;현재 경로 기준 버전 사용 설정&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;asdf global &amp;lt;name&amp;gt; &amp;lt;version&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;전체 버전 사용 설정&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/KrComet/status/1278675880697425920&quot;&gt;@KrComet님 추천&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://asdf-vm.com&quot;&gt;asdf-vm&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;tmux&quot;&gt;tmux&lt;/h3&gt;
 
@@ -2893,33 +3111,79 @@ gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;tmuxinator
 
 &lt;h3 id=&quot;docker&quot;&gt;docker&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/docker-for-mac.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/docker-desktop.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;따로 소개할 필요가 없을 정도로 유명한 가상화 프로그램입니다. MySQL, Redis와 같은 데이터베이스나 rails, php 개발환경까지 두루두루 사용하고 있습니다. 하나의 개발 피시에 여러버전의 MySQL이나 Redis를 설치하는 건 쉽지 않은데 docker를 사용하면 쉽고 간단하게 개발환경을 구축할 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;docker에 대한 자세한 내용은 &lt;a href=&quot;/2017/01/19/docker-guide-for-beginners-1.html&quot;&gt;여기&lt;/a&gt;서 확인하세요.&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;docker
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker 홈페이지&lt;/a&gt; / &lt;a href=&quot;https://www.docker.com/docker-mac&quot;&gt;Docker for mac download&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;tig&quot;&gt;tig&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/tig.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/tig-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;텍스트모드 git 인터페이스 프로그램입니다. git 자체 기능이 강력하긴 하지만 여러 로그를 편하게 보기는 쉽지 않습니다. tig를 사용하여 화살표 키와 &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;j&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;k&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;l&lt;/code&gt;키를 잘 사용하면 쉽게 로그를 볼 수 있고 메인 화면에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt;를 누르면 도움말을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;tig
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/jonas/tig&quot;&gt;tig github&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;jq&quot;&gt;jq&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/jq.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/jq-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;JSON 결과를 이쁘게 보여주고 원하는 대로 편집할 수 있는 도구입니다. 간단하게 필터를 적용하여 원하는 항목만 볼 수 있고 특정 결과를 다른 형태로 변경할 수 있습니다.&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jq
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href=&quot;https://stedolan.github.io/jq/&quot;&gt;jq github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bat&quot;&gt;bat&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/bat.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt;명령어에 코드 하이라이팅 + more 기능이 추가된 버전입니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bat
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;~/.zshrc에 &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt; 대신 사용하도록 설정할 수 있습니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;alias cat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bat&quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sharkdp/bat&quot;&gt;bat github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;openinterminal&quot;&gt;OpenInTerminal&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/open-in-terminal.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;파인더에서 바로 터미널을 열고 싶을 때 클릭한번으로 열 수 있는 유용한 도구 입니다. 프로그램을 설치하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;⌘&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;드래그&lt;/code&gt;로 버튼을 추가할 수 있습니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;openinterminal-lite
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Ji4n1ng/OpenInTerminal&quot;&gt;OpenInTerminal github&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;ngrok&quot;&gt;ngrok&lt;/h3&gt;
 
 &lt;p&gt;로컬 서버를 외부로 터널링을 통해 오픈해주는 도구입니다. 보통 로컬에 개발 서버를 띄우면 외부에서 접근하기가 어려운데 ngrok을 이용하여 간단하게 오픈할 수 있습니다. 사용법도 간단합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ngrok
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok 홈페이지&lt;/a&gt;&lt;/p&gt;
 
@@ -2927,13 +3191,27 @@ gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;tmuxinator
 
 &lt;p&gt;터미널을 &lt;strong&gt;텍스트&lt;/strong&gt;로 녹화하는 프로그램입니다. 영상으로 녹화하는 것보다 용량이 적고 품질도 훌륭한 편입니다. 제 블로그에서 자주 볼 수 있습니다.&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;asciinema
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href=&quot;https://asciinema.org/&quot;&gt;asciinema 홈페이지&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;neofetch&quot;&gt;neofetch&lt;/h3&gt;
 
 &lt;p&gt;지금 보고 있는 포스트 첫번째 이미지에서 사용한 프로그램입니다. 간단하게 시스템 상태를 보여줍니다.&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;neofetch
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;a href=&quot;https://github.com/dylanaraps/neofetch&quot;&gt;neofetch github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;brew-bundle&quot;&gt;brew bundle&lt;/h3&gt;
+
+&lt;p&gt;하나하나 설치하기 귀찮다면 &lt;a href=&quot;https://github.com/Homebrew/homebrew-bundle&quot;&gt;brew bundle&lt;/a&gt; 기능을 이용해보세요!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/posquit0/status/1278708552983441408&quot;&gt;@posquit0님 추천&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;그래서&quot;&gt;그래서&lt;/h2&gt;
 
@@ -6534,86 +6812,42 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 
 &lt;p&gt;몇가지 옵션을 물어보면서 자동으로 필요한 plugin을 추가하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;.eslintrc.js&lt;/code&gt;라는 설정파일을 만들어줍니다.&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-  &amp;lt;head&amp;gt;
-    &amp;lt;meta http-equiv=&amp;quot;Content-type&amp;quot; content=&amp;quot;text/html; charset=utf-8&amp;quot;&amp;gt;
-    &amp;lt;meta http-equiv=&amp;quot;Content-Security-Policy&amp;quot; content=&amp;quot;default-src &amp;#39;none&amp;#39;; style-src &amp;#39;unsafe-inline&amp;#39;; img-src data:; connect-src &amp;#39;self&amp;#39;&amp;quot;&amp;gt;
-    &amp;lt;title&amp;gt;Site not found &amp;amp;middot; GitHub Pages&amp;lt;/title&amp;gt;
-    &amp;lt;style type=&amp;quot;text/css&amp;quot; media=&amp;quot;screen&amp;quot;&amp;gt;
-      body {
-        background-color: #f1f1f1;
-        margin: 0;
-        font-family: &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif;
-      }
-
-      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
-
-      a { color: #4183c4; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-
-      h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
-      p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
-
-      ul { list-style: none; margin: 25px 0; padding: 0; }
-      li { display: table-cell; font-weight: bold; width: 1%; }
-
-      .logo { display: inline-block; margin-top: 35px; }
-      .logo-img-2x { display: none; }
-      @media
-      only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (   min--moz-device-pixel-ratio: 2),
-      only screen and (     -o-min-device-pixel-ratio: 2/1),
-      only screen and (        min-device-pixel-ratio: 2),
-      only screen and (                min-resolution: 192dpi),
-      only screen and (                min-resolution: 2dppx) {
-        .logo-img-1x { display: none; }
-        .logo-img-2x { display: inline-block; }
-      }
-
-      #suggestions {
-        margin-top: 35px;
-        color: #ccc;
-      }
-      #suggestions a {
-        color: #666666;
-        font-weight: 200;
-        font-size: 14px;
-        margin: 0 10px;
-      }
-
-    &amp;lt;/style&amp;gt;
-  &amp;lt;/head&amp;gt;
-  &amp;lt;body&amp;gt;
-
-    &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
-
-      &amp;lt;h1&amp;gt;404&amp;lt;/h1&amp;gt;
-      &amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;There isn&amp;#39;t a GitHub Pages site here.&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;
-
-      &amp;lt;p&amp;gt;
-        If you&amp;#39;re trying to publish one,
-        &amp;lt;a href=&amp;quot;https://help.github.com/pages/&amp;quot;&amp;gt;read the full documentation&amp;lt;/a&amp;gt;
-        to learn how to set up &amp;lt;strong&amp;gt;GitHub Pages&amp;lt;/strong&amp;gt;
-        for your repository, organization, or user account.
-      &amp;lt;/p&amp;gt;
-
-      &amp;lt;div id=&amp;quot;suggestions&amp;quot;&amp;gt;
-        &amp;lt;a href=&amp;quot;https://githubstatus.com&amp;quot;&amp;gt;GitHub Status&amp;lt;/a&amp;gt; &amp;amp;mdash;
-        &amp;lt;a href=&amp;quot;https://twitter.com/githubstatus&amp;quot;&amp;gt;@githubstatus&amp;lt;/a&amp;gt;
-      &amp;lt;/div&amp;gt;
-
-      &amp;lt;a href=&amp;quot;/&amp;quot; class=&amp;quot;logo logo-img-1x&amp;quot;&amp;gt;
-        &amp;lt;img width=&amp;quot;32&amp;quot; height=&amp;quot;32&amp;quot; title=&amp;quot;&amp;quot; alt=&amp;quot;&amp;quot; src=&amp;quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFMTZCRDY3REIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFMTZCRDY3RUIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdCQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjdDQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SM9MCAAAA+5JREFUeNrEV11Ik1EY3s4+ddOp29Q5b0opCgKFsoKoi5Kg6CIhuwi6zLJLoYLopq4qsKKgi4i6CYIoU/q5iDAKs6syoS76IRWtyJ+p7cdt7sf1PGOD+e0c3dygAx/67ZzzPM95/877GYdHRg3ZjMXFxepQKNS6sLCwJxqNNuFpiMfjVs4ZjUa/pmmjeD6VlJS8NpvNT4QQ7mxwjSsJiEQim/1+/9lgMHgIr5ohuxG1WCw9Vqv1clFR0dCqBODElV6v90ogEDjGdYbVjXhpaendioqK07CIR7ZAqE49PT09BPL2PMgTByQGsYiZlQD4uMXtdr+JxWINhgINYhGT2MsKgMrm2dnZXgRXhaHAg5jEJodUAHxux4LudHJE9RdEdA+i3Juz7bGHe4mhE9FNrgwBCLirMFV9Okh5eflFh8PR5nK5nDabrR2BNJlKO0T35+Li4n4+/J+/JQCxhmu5h3uJoXNHPbmWZAHMshWB8l5/ipqammaAf0zPDDx1ONV3vurdidqwAQL+pEc8sLcAe1CCvQ3YHxIW8Pl85xSWNC1hADDIv0rIE/o4J0k3kww4xSlwIhcq3EFFOm7KN/hUGOQkt0CFa5WpNJlMvxBEz/IVQAxg/ZRZl9wiHA63yDYieM7DnLP5CiAGsC7I5sgtYKJGWe2A8seFqgFJrJjEPY1Cn3pJ8/9W1e5VWsFDTEmFrBcoDhZJEQkXuhICMyKpjhahqN21hRYATKfUOlDmkygrR4o4C0VOLGJKrOITKB4jijzdXygBKixyC5TDQdnk/Pz8qRw6oOWGlsTKGOQW6OH6FBWsyePxdOXLTgxiyebILZCjz+GLgMIKnXNzc49YMlcRdHXcSwxFVgTInQhC9G33UhNoJLuqq6t345p9y3eUy8OTk5PjAHuI9uo4b07FBaOhsu0A4Unc+T1TU1Nj3KsSSE5yJ65jqF2DDd8QqWYmAZrIM2VlZTdnZmb6AbpdV9V6ec9znf5Q7HjYumdRE0JOp3MjitO4SFa+cZz8Umqe3TCbSLvdfkR/kWDdNQl5InuTcysOcpFT35ZrbBxx4p3JAHlZVVW1D/634VRt+FvLBgK/v5LV9WS+10xMTEwtRw7XvqOL+e2Q8V3AYIOIAXQ26/heWVnZCVfcyKHg2CBgTpmPmjYM8l24GyaUHyaIh7XwfR9ErE8qHoDfn2LTNAVC0HX6MFcBIP8Bi+6F6cdW/DICkANRfx99fEYFQ7Nph5i/uQiA214gno7K+guhaiKg9gC62+M8eR7XsBsYJ4ilam60Fb7r7uAj8wFyuwM1oIOWgfmDy6RXEEQzJMPe23DXrVS7rtyD3Df8z/FPgAEAzWU5Ku59ZAUAAAAASUVORK5CYII=&amp;quot;&amp;gt;
-      &amp;lt;/a&amp;gt;
-
-      &amp;lt;a href=&amp;quot;/&amp;quot; class=&amp;quot;logo logo-img-2x&amp;quot;&amp;gt;
-        &amp;lt;img width=&amp;quot;32&amp;quot; height=&amp;quot;32&amp;quot; title=&amp;quot;&amp;quot; alt=&amp;quot;&amp;quot; src=&amp;quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQUM1QkUxRUI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQUM1QkUxRkI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdGQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjgwQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hfPRaQAAB6lJREFUeNrsW2mM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&amp;quot;&amp;gt;
-      &amp;lt;/a&amp;gt;
-    &amp;lt;/div&amp;gt;
-  &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/pre&gt;&lt;/noscript&gt;
+&lt;noscript&gt;&lt;pre&gt;module.exports = {
+    &amp;quot;env&amp;quot;: {
+        &amp;quot;browser&amp;quot;: true,
+        &amp;quot;es6&amp;quot;: true
+    },
+    &amp;quot;extends&amp;quot;: &amp;quot;eslint:recommended&amp;quot;,
+    &amp;quot;installedESLint&amp;quot;: true,
+    &amp;quot;parserOptions&amp;quot;: {
+        &amp;quot;ecmaFeatures&amp;quot;: {
+            &amp;quot;experimentalObjectRestSpread&amp;quot;: true,
+            &amp;quot;jsx&amp;quot;: true
+        },
+        &amp;quot;sourceType&amp;quot;: &amp;quot;module&amp;quot;
+    },
+    &amp;quot;plugins&amp;quot;: [
+        &amp;quot;react&amp;quot;
+    ],
+    &amp;quot;rules&amp;quot;: {
+        &amp;quot;indent&amp;quot;: [
+            &amp;quot;error&amp;quot;,
+            4
+        ],
+        &amp;quot;linebreak-style&amp;quot;: [
+            &amp;quot;error&amp;quot;,
+            &amp;quot;unix&amp;quot;
+        ],
+        &amp;quot;quotes&amp;quot;: [
+            &amp;quot;error&amp;quot;,
+            &amp;quot;single&amp;quot;
+        ],
+        &amp;quot;semi&amp;quot;: [
+            &amp;quot;error&amp;quot;,
+            &amp;quot;always&amp;quot;
+        ]
+    }
+};&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/subicura/29778c2ab4c2c4f94f29ceabe9416ae3.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;대부분의 linter는 위와 같이 세부적인 설정파일을 제공하고 보통 &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;&lt;sub&gt;dot&lt;/sub&gt;으로 시작하여 보이지 않는 파일로 관리합니다. linter에서 체크하는 규칙중에 현재 코드에 적용이 어려운 규칙등은 무시하게 설정할 수 있어 일단 툴을 돌려보고 수정하는데 무리가 있는 규칙은 제외하거나 바꾸면 됩니다.&lt;/p&gt;
@@ -6640,86 +6874,15 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 
 &lt;p&gt;Airbnb규칙중에 &lt;a href=&quot;https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md&quot;&gt;react/jsx-no-bind&lt;/a&gt;규칙은 빼는게 현재 상황에 적당할 것 같아 해당 규칙을 뺍니다.&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-  &amp;lt;head&amp;gt;
-    &amp;lt;meta http-equiv=&amp;quot;Content-type&amp;quot; content=&amp;quot;text/html; charset=utf-8&amp;quot;&amp;gt;
-    &amp;lt;meta http-equiv=&amp;quot;Content-Security-Policy&amp;quot; content=&amp;quot;default-src &amp;#39;none&amp;#39;; style-src &amp;#39;unsafe-inline&amp;#39;; img-src data:; connect-src &amp;#39;self&amp;#39;&amp;quot;&amp;gt;
-    &amp;lt;title&amp;gt;Site not found &amp;amp;middot; GitHub Pages&amp;lt;/title&amp;gt;
-    &amp;lt;style type=&amp;quot;text/css&amp;quot; media=&amp;quot;screen&amp;quot;&amp;gt;
-      body {
-        background-color: #f1f1f1;
-        margin: 0;
-        font-family: &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif;
-      }
-
-      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
-
-      a { color: #4183c4; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-
-      h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
-      p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
-
-      ul { list-style: none; margin: 25px 0; padding: 0; }
-      li { display: table-cell; font-weight: bold; width: 1%; }
-
-      .logo { display: inline-block; margin-top: 35px; }
-      .logo-img-2x { display: none; }
-      @media
-      only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (   min--moz-device-pixel-ratio: 2),
-      only screen and (     -o-min-device-pixel-ratio: 2/1),
-      only screen and (        min-device-pixel-ratio: 2),
-      only screen and (                min-resolution: 192dpi),
-      only screen and (                min-resolution: 2dppx) {
-        .logo-img-1x { display: none; }
-        .logo-img-2x { display: inline-block; }
-      }
-
-      #suggestions {
-        margin-top: 35px;
-        color: #ccc;
-      }
-      #suggestions a {
-        color: #666666;
-        font-weight: 200;
-        font-size: 14px;
-        margin: 0 10px;
-      }
-
-    &amp;lt;/style&amp;gt;
-  &amp;lt;/head&amp;gt;
-  &amp;lt;body&amp;gt;
-
-    &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
-
-      &amp;lt;h1&amp;gt;404&amp;lt;/h1&amp;gt;
-      &amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;There isn&amp;#39;t a GitHub Pages site here.&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;
-
-      &amp;lt;p&amp;gt;
-        If you&amp;#39;re trying to publish one,
-        &amp;lt;a href=&amp;quot;https://help.github.com/pages/&amp;quot;&amp;gt;read the full documentation&amp;lt;/a&amp;gt;
-        to learn how to set up &amp;lt;strong&amp;gt;GitHub Pages&amp;lt;/strong&amp;gt;
-        for your repository, organization, or user account.
-      &amp;lt;/p&amp;gt;
-
-      &amp;lt;div id=&amp;quot;suggestions&amp;quot;&amp;gt;
-        &amp;lt;a href=&amp;quot;https://githubstatus.com&amp;quot;&amp;gt;GitHub Status&amp;lt;/a&amp;gt; &amp;amp;mdash;
-        &amp;lt;a href=&amp;quot;https://twitter.com/githubstatus&amp;quot;&amp;gt;@githubstatus&amp;lt;/a&amp;gt;
-      &amp;lt;/div&amp;gt;
-
-      &amp;lt;a href=&amp;quot;/&amp;quot; class=&amp;quot;logo logo-img-1x&amp;quot;&amp;gt;
-        &amp;lt;img width=&amp;quot;32&amp;quot; height=&amp;quot;32&amp;quot; title=&amp;quot;&amp;quot; alt=&amp;quot;&amp;quot; src=&amp;quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFMTZCRDY3REIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFMTZCRDY3RUIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdCQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjdDQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SM9MCAAAA+5JREFUeNrEV11Ik1EY3s4+ddOp29Q5b0opCgKFsoKoi5Kg6CIhuwi6zLJLoYLopq4qsKKgi4i6CYIoU/q5iDAKs6syoS76IRWtyJ+p7cdt7sf1PGOD+e0c3dygAx/67ZzzPM95/877GYdHRg3ZjMXFxepQKNS6sLCwJxqNNuFpiMfjVs4ZjUa/pmmjeD6VlJS8NpvNT4QQ7mxwjSsJiEQim/1+/9lgMHgIr5ohuxG1WCw9Vqv1clFR0dCqBODElV6v90ogEDjGdYbVjXhpaendioqK07CIR7ZAqE49PT09BPL2PMgTByQGsYiZlQD4uMXtdr+JxWINhgINYhGT2MsKgMrm2dnZXgRXhaHAg5jEJodUAHxux4LudHJE9RdEdA+i3Juz7bGHe4mhE9FNrgwBCLirMFV9Okh5eflFh8PR5nK5nDabrR2BNJlKO0T35+Li4n4+/J+/JQCxhmu5h3uJoXNHPbmWZAHMshWB8l5/ipqammaAf0zPDDx1ONV3vurdidqwAQL+pEc8sLcAe1CCvQ3YHxIW8Pl85xSWNC1hADDIv0rIE/o4J0k3kww4xSlwIhcq3EFFOm7KN/hUGOQkt0CFa5WpNJlMvxBEz/IVQAxg/ZRZl9wiHA63yDYieM7DnLP5CiAGsC7I5sgtYKJGWe2A8seFqgFJrJjEPY1Cn3pJ8/9W1e5VWsFDTEmFrBcoDhZJEQkXuhICMyKpjhahqN21hRYATKfUOlDmkygrR4o4C0VOLGJKrOITKB4jijzdXygBKixyC5TDQdnk/Pz8qRw6oOWGlsTKGOQW6OH6FBWsyePxdOXLTgxiyebILZCjz+GLgMIKnXNzc49YMlcRdHXcSwxFVgTInQhC9G33UhNoJLuqq6t345p9y3eUy8OTk5PjAHuI9uo4b07FBaOhsu0A4Unc+T1TU1Nj3KsSSE5yJ65jqF2DDd8QqWYmAZrIM2VlZTdnZmb6AbpdV9V6ec9znf5Q7HjYumdRE0JOp3MjitO4SFa+cZz8Umqe3TCbSLvdfkR/kWDdNQl5InuTcysOcpFT35ZrbBxx4p3JAHlZVVW1D/634VRt+FvLBgK/v5LV9WS+10xMTEwtRw7XvqOL+e2Q8V3AYIOIAXQ26/heWVnZCVfcyKHg2CBgTpmPmjYM8l24GyaUHyaIh7XwfR9ErE8qHoDfn2LTNAVC0HX6MFcBIP8Bi+6F6cdW/DICkANRfx99fEYFQ7Nph5i/uQiA214gno7K+guhaiKg9gC62+M8eR7XsBsYJ4ilam60Fb7r7uAj8wFyuwM1oIOWgfmDy6RXEEQzJMPe23DXrVS7rtyD3Df8z/FPgAEAzWU5Ku59ZAUAAAAASUVORK5CYII=&amp;quot;&amp;gt;
-      &amp;lt;/a&amp;gt;
-
-      &amp;lt;a href=&amp;quot;/&amp;quot; class=&amp;quot;logo logo-img-2x&amp;quot;&amp;gt;
-        &amp;lt;img width=&amp;quot;32&amp;quot; height=&amp;quot;32&amp;quot; title=&amp;quot;&amp;quot; alt=&amp;quot;&amp;quot; src=&amp;quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQUM1QkUxRUI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQUM1QkUxRkI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdGQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjgwQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hfPRaQAAB6lJREFUeNrsW2mM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&amp;quot;&amp;gt;
-      &amp;lt;/a&amp;gt;
-    &amp;lt;/div&amp;gt;
-  &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/pre&gt;&lt;/noscript&gt;
+&lt;noscript&gt;&lt;pre&gt;module.exports = {
+    &amp;quot;extends&amp;quot;: &amp;quot;airbnb&amp;quot;,
+    &amp;quot;plugins&amp;quot;: [
+        &amp;quot;react&amp;quot;
+    ],
+    &amp;quot;rules&amp;quot;: {
+    	&amp;quot;react/jsx-no-bind&amp;quot;: &amp;quot;off&amp;quot;
+    }
+};&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/subicura/1b7f686371897d96823f743f1b22c496.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;inline 규칙적용&lt;/strong&gt;&lt;/p&gt;

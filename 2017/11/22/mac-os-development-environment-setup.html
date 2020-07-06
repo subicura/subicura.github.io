@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1578959626507940000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1594059035341298000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -115,7 +115,7 @@
         <meta itemprop="headline" content="본격 macOS에 개발 환경 구축하기" />
         <meta itemprop="mainEntityOfPage" content="/2017/11/22/mac-os-development-environment-setup.html" />
         <meta itemprop="datePublished" content="2017-11-22 00:00:00 +0900" />
-        <meta itemprop="dateModified" content="2019-07-22 09:00:00 +0900" />
+        <meta itemprop="dateModified" content="2020-07-07 01:00:00 +0900" />
         
         <div class="noarticleimage">
           <div class="post-meta">
@@ -159,6 +159,7 @@
           </div>
           <a name="topofpage"></a>
           <ul class="section-nav">
+<li class="toc-entry toc-h3"><a href="#20200706-수정">2020/07/06 수정</a></li>
 <li class="toc-entry toc-h2"><a href="#키보드-기호-설명">키보드 기호 설명</a></li>
 <li class="toc-entry toc-h2"><a href="#시스템-설정">시스템 설정</a>
 <ul>
@@ -179,6 +180,8 @@
 <ul>
 <li class="toc-entry toc-h3"><a href="#iterm2">iTerm2</a></li>
 <li class="toc-entry toc-h3"><a href="#zsh-with-oh-my-zsh">zsh with oh-my-zsh</a></li>
+<li class="toc-entry toc-h3"><a href="#쉘-프롬프트">쉘 프롬프트</a></li>
+<li class="toc-entry toc-h3"><a href="#oh-my-zsh-팁">oh-my-zsh 팁</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#커맨드라인-애플리케이션">커맨드라인 애플리케이션</a>
@@ -186,6 +189,7 @@
 <li class="toc-entry toc-h3"><a href="#vim">vim</a></li>
 <li class="toc-entry toc-h3"><a href="#fzf">fzf</a></li>
 <li class="toc-entry toc-h3"><a href="#fasd">fasd</a></li>
+<li class="toc-entry toc-h3"><a href="#asdf-vm">asdf vm</a></li>
 <li class="toc-entry toc-h3"><a href="#tmux">tmux</a></li>
 <li class="toc-entry toc-h3"><a href="#tmuxinator">tmuxinator</a></li>
 </ul>
@@ -195,13 +199,27 @@
 <li class="toc-entry toc-h3"><a href="#docker">docker</a></li>
 <li class="toc-entry toc-h3"><a href="#tig">tig</a></li>
 <li class="toc-entry toc-h3"><a href="#jq">jq</a></li>
+<li class="toc-entry toc-h3"><a href="#bat">bat</a></li>
+<li class="toc-entry toc-h3"><a href="#openinterminal">OpenInTerminal</a></li>
 <li class="toc-entry toc-h3"><a href="#ngrok">ngrok</a></li>
 <li class="toc-entry toc-h3"><a href="#asciinema">asciinema</a></li>
 <li class="toc-entry toc-h3"><a href="#neofetch">neofetch</a></li>
+<li class="toc-entry toc-h3"><a href="#brew-bundle">brew bundle</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#그래서">그래서</a></li>
-</ul><p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/terminal-neofetch.png" alt="iTerm2 + snazzy"></p>
+</ul><h3 id="20200706-수정">
+<a class="anchor" href="#20200706-%EC%88%98%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>2020/07/06 수정</h3>
+
+<ul>
+  <li>macOS Catalina 10.15.5 반영</li>
+  <li>명령어 및 설정 최신 내용 반영</li>
+  <li>추천 프로그램 추가</li>
+</ul>
+
+<hr>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/neofetch-2.png" alt="iTerm2 + snazzy"></p>
 
 <p>개발 관련 스터디 모임이나 컨퍼런스에서 발표를 듣다 보면 발표 주제와 별도로 예제 화면이나 라이브 코딩에서 사용하는 개발 도구에 관심이 가는 경우가 있습니다.</p>
 
@@ -275,16 +293,20 @@
 <h2 id="시스템-설정">
 <a class="anchor" href="#%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>시스템 설정</h2>
 
-<p>본격적인 개발환경 설정에 앞서 몇 가지 유용한 시스템 설정을 확인해봅니다. macOS High Sierra를 기준으로 하였으나 다른 버전도 비슷비슷할 것으로 보입니다. 반드시 동일하게 설정할 필요는 없으며 보고 괜찮다 싶은 항목만 적용하면 됩니다.</p>
+<p>본격적인 개발환경 설정에 앞서 몇 가지 유용한 시스템 설정을 확인해봅니다. macOS Catalina를 기준으로 하였으나 다른 버전도 비슷비슷할 것으로 보입니다. 반드시 동일하게 설정할 필요는 없으며 보고 괜찮다 싶은 항목만 적용하면 됩니다.</p>
 
 <h3 id="system-preferences">
 <a class="anchor" href="#system-preferences" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Preferences</h3>
 
-<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/system-preferences.png" alt=""></p>
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/system-preferences-2.png" alt=""></p>
 
 <p>상단 메뉴의 <code class="highlighter-rouge"></code> 로고를 누르고 <code class="highlighter-rouge">System Preferences...</code>를 선택합니다.</p>
 
-<p><strong>미션 컨트롤 창 순서 고정</strong></p>
+<p><strong>미션 컨트롤</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/mission-control.png" alt="Mission Control"></p>
+
+<p>미션 컨트롤 창 순서 고정</p>
 
 <ul>
   <li>
@@ -292,7 +314,11 @@
   <li>미션 컨트롤 창 순서가 기본적으로 최근 사용 순으로 설정되어 있어 의도하지 않게 순서가 변경되는 것을 막음</li>
 </ul>
 
-<p><strong>언어 설정 영어 우선순위로 변경</strong></p>
+<p><strong>언어</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/language-region.png" alt="Language &amp; Region"></p>
+
+<p>언어 설정 영어 우선순위로 변경</p>
 
 <ul>
   <li>
@@ -300,7 +326,11 @@
   <li>간혹 locale 설정 때문에 오류가 발생하는 걸 방지해주고 영어 오류 메시지가 구글검색이 잘됨</li>
 </ul>
 
-<p><strong>패스워드 즉시 설정</strong></p>
+<p><strong>보안</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/security-privacy-1.png" alt="Security &amp; Privacy"></p>
+
+<p>패스워드 즉시 설정</p>
 
 <ul>
   <li>
@@ -308,7 +338,7 @@
   <li>잠자기 모드나 화면 보호기가 켜지면 즉시 패스워드 입력을 활성화하여 보안을 최대한 안전하게 유지</li>
 </ul>
 
-<p><strong>분실대비 패스워드 메시지 설정</strong></p>
+<p>분실대비 스크린 메시지 설정</p>
 
 <ul>
   <li>
@@ -316,7 +346,7 @@
   <li>혹시 분실했을 경우를 대비하여 전화번호, 이름 등을 알려줌</li>
 </ul>
 
-<p><strong>디스크 암호화</strong></p>
+<p>디스크 암호화</p>
 
 <ul>
   <li>
@@ -326,7 +356,11 @@
 </li>
 </ul>
 
-<p><strong>모든 텍스트 자동 변경 옵션 끄기</strong></p>
+<p><strong>키보드</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/keyboard-1.png" alt="Keyboard &gt; Text"></p>
+
+<p>모든 텍스트 자동 변경 옵션 끄기</p>
 
 <ul>
   <li>
@@ -335,7 +369,21 @@
   <li>특히 Use smart quotes and dashes는 코드 복사하다가 따옴표가 바뀌면서 고생이 시작됨</li>
 </ul>
 
-<p><strong>클릭은 터치로</strong></p>
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/keyboard-2.png" alt="Keyboard &gt; Shortcuts"></p>
+
+<p>컨트롤 버튼 키보드로 제어하기 (<a href="https://twitter.com/devthewild/status/1278683719310557187">@devthewild님 추천</a>)</p>
+
+<ul>
+  <li>
+<code class="highlighter-rouge">Keyboard</code> &gt; <code class="highlighter-rouge">Shortcut</code> &gt; <code class="highlighter-rouge">Use keyboard navigation to move focus between controls</code> : 체크함</li>
+  <li>예/아니오 버튼을 키보드로 선택할 수 있음</li>
+</ul>
+
+<p><strong>트랙패드</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/trackpad.png" alt="Trackpad"></p>
+
+<p>클릭은 터치로</p>
 
 <ul>
   <li>
@@ -343,11 +391,15 @@
   <li>트랙패드 클릭 시 꾸욱 누를 필요 없이 톡톡 터치로 클릭해서 손의 피로를 줄임</li>
 </ul>
 
-<p><strong>드래그는 세손가락으로</strong></p>
+<p><strong>접근성</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/accessibility.png" alt="Accessibility"></p>
+
+<p>드래그는 세손가락으로</p>
 
 <ul>
   <li>
-<code class="highlighter-rouge">Accessibility</code> &gt; <code class="highlighter-rouge">Mouse &amp; Trackpad</code> &gt; <code class="highlighter-rouge">Trackpad options...</code>:  Enable dragging - three finger drag</li>
+<code class="highlighter-rouge">Accessibility</code> &gt; <code class="highlighter-rouge">Pointer Control</code> &gt; <code class="highlighter-rouge">Trackpad options...</code>:  Enable dragging - three finger drag</li>
   <li>창 또는 아이콘을 이동할 때 트랙패드를 누른 상태로 이동할 필요 없이 세 손가락으로 드래그 할 수 있음</li>
   <li>이건 해봐야 감이 오는데 몰랐다면 신세계가 열림</li>
 </ul>
@@ -355,13 +407,13 @@
 <h3 id="finder-preference">
 <a class="anchor" href="#finder-preference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Finder Preference</h3>
 
-<p align="center">
-    <img src="/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-preferences.png" style="width: 450px">
-</p>
-
 <p><code class="highlighter-rouge">Finder</code>를 실행하고 <code class="highlighter-rouge">⌘</code> + <code class="highlighter-rouge">,</code> (<code class="highlighter-rouge">Finder</code> &gt; <code class="highlighter-rouge">Preferences...</code>)를 선택합니다.</p>
 
 <p><strong>파인더 기본 폴더 설정</strong></p>
+
+<p align="center">
+    <img src="/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-1.png" style="width: 450px">
+</p>
 
 <ul>
   <li>
@@ -370,6 +422,10 @@
 </ul>
 
 <p><strong>파일 확장자 보여주기</strong></p>
+
+<p align="center">
+    <img src="/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-2.png" style="width: 450px">
+</p>
 
 <ul>
   <li>
@@ -380,18 +436,18 @@
 <h3 id="download-folder-option">
 <a class="anchor" href="#download-folder-option" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download Folder Option</h3>
 
-<p align="center">
-    <img src="/assets/article_images/2017-11-22-mac-os-development-environment-setup/download-option.png" style="width: 250px">
-</p>
-
 <p><code class="highlighter-rouge">Downloads</code> 폴더로 이동하고 <code class="highlighter-rouge">⌘</code> + <code class="highlighter-rouge">J</code> (<code class="highlighter-rouge">View</code> &gt; <code class="highlighter-rouge">Show View Options</code>)를 선택합니다.</p>
 
 <p><strong>날짜그룹 + 이름 정렬</strong></p>
 
+<p align="center">
+    <img src="/assets/article_images/2017-11-22-mac-os-development-environment-setup/finder-3.png" style="width: 300px">
+</p>
+
 <ul>
   <li>
 <code class="highlighter-rouge">Arrange By</code>:Date added, <code class="highlighter-rouge">Sort By</code>:Name</li>
-  <li>파일 목록을 보여줄 때 날짜별로 그룹화 하고 그룹 내에서 이름으로 다시 정렬</li>
+  <li>파일 목록을 저장한 날짜별로 그룹화 하고 그룹 내에서 이름으로 다시 정렬</li>
   <li>다운로드 폴더 특성상 최근에 받은 파일들을 찾는 경우가 많으므로 유용함</li>
 </ul>
 
@@ -415,7 +471,7 @@
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>프로그램 재시작이 필요합니다.</p>
+<p>OS 재시작이 필요합니다.</p>
 
 <h2 id="필수-프로그램">
 <a class="anchor" href="#%ED%95%84%EC%88%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>필수 프로그램</h2>
@@ -425,9 +481,13 @@
 <h3 id="xcode">
 <a class="anchor" href="#xcode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Xcode</h3>
 
-<p>macOS에는 기본적으로 <code class="highlighter-rouge">gcc</code>, <code class="highlighter-rouge">make</code>와 같은 컴파일 도구가 설치되어 있지 않기 때문에 명령어 도구<sub>Command Line Tools</sub>를 설치해야 합니다. 예전에는 Xcode를 전체 설치하고 추가로 명령어 도구를 설치해야 했으나 Xcode용량이 꽤 크고 모든 사람이 IDE가 필요한 게 아니기 때문에 명령어 도구만 따로 설치할 수 있게 변경되었습니다.</p>
+<p>macOS는 기본적으로 <code class="highlighter-rouge">gcc</code>, <code class="highlighter-rouge">make</code>와 같은 컴파일 도구가 설치되어 있지 않기 때문에 명령어 도구<sub>Command Line Tools</sub>를 설치해야 합니다. 예전에는 Xcode를 전체 설치하고 추가로 명령어 도구를 설치해야 했으나 Xcode용량이 꽤 크고 모든 사람이 IDE가 필요한 게 아니기 때문에 명령어 도구만 따로 설치할 수 있게 변경되었습니다.</p>
 
 <p><strong>설치</strong></p>
+
+<blockquote>
+  <p><a href="#homebrew">homebrew</a>를 설치하면 자동으로 Xcode 명령어 도구를 설치합니다. 따로 설치하지 않아도 됩니다.</p>
+</blockquote>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -454,14 +514,14 @@ clang: error: no input files
 <h3 id="homebrew">
 <a class="anchor" href="#homebrew" aria-hidden="true"><span class="octicon octicon-link"></span></a>homebrew</h3>
 
-<p>brew<sub>homebrew</sub>는 각종 커맨드라인 프로그램(요즘은 GUI도..)을 손쉽게 설치해주는 맥용 패키지 매니저입니다. 리눅스의 <code class="highlighter-rouge">apt</code>나  <code class="highlighter-rouge">yum</code>과 비슷하며 brew외에 <a href="https://www.macports.org/">MacPorts</a> 라는 패키지 메니저가 있는데 몇몇 단점으로 요즘은 거의 brew를 사용하는 추세입니다. 다양한 프로그램을 복잡한 빌드과정 없이 손쉽게 설치할 수 있고 업데이트, 관리도 간단하므로 안쓸 이유가 없는 필수 프로그램입니다. <code class="highlighter-rouge">그냥 홈페이지 가서 다운로드 하고 설치하는 게 편한데..</code>라고 하는분들이 있는데 나중에 업데이트나 삭제를 생각해보면 글쎄요.. brew 쓰세요!</p>
+<p>brew<sub>homebrew</sub>는 각종 커맨드라인 프로그램과 일반 프로그램(크롬..)을 손쉽게 설치해주는 맥용 패키지 매니저입니다.(최근에 리눅스도 지원하기 시작했습니다.) 리눅스의 <code class="highlighter-rouge">apt</code>나  <code class="highlighter-rouge">yum</code>과 비슷하며 brew외에 <a href="https://www.macports.org/">MacPorts</a> 라는 패키지 메니저가 있는데 몇몇 단점으로 요즘은 거의 brew를 사용하는 추세입니다. 다양한 프로그램을 복잡한 빌드과정 없이 손쉽게 설치할 수 있고 업데이트, 관리도 간단하므로 안쓸 이유가 없는 필수 프로그램입니다. <code class="highlighter-rouge">그냥 홈페이지 가서 다운로드 하고 설치하는 게 편한데..</code>라고 하는분들이 있는데 나중에 업데이트나 삭제를 생각해보면 글쎄요.. brew 쓰세요!</p>
 
 <p><strong>설치</strong></p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>/usr/bin/ruby <span class="nt">-e</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="si">)</span><span class="s2">"</span>
+<td class="code"><pre>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="si">)</span><span class="s2">"</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
@@ -536,7 +596,7 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 
 <p><strong>테마선택</strong></p>
 
-<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/snazzy-theme.png" alt="snazzy"></p>
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/snazzy-theme-2.png" alt="snazzy"></p>
 
 <p>설치를 완료했으면 <a href="https://github.com/sindresorhus/iterm2-snazzy/raw/master/Snazzy.itermcolors">Snazzy.itermcolors</a> 파일을 오른쪽 버튼 누르고 다운 받거나 <a href="http://iterm2colorschemes.com/">여러 개의 테마</a>를 둘러보고 맘에드는것을 고릅니다. 다운받은 파일을 더블클릭하면 자동으로 <code class="highlighter-rouge">iTerm Color Preset</code>에 추가됩니다.</p>
 
@@ -544,32 +604,39 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 
 <p>iTerm을 실행하고 설정(<code class="highlighter-rouge">⌘</code> + <code class="highlighter-rouge">,</code>)창에서 <code class="highlighter-rouge">Profiles</code> 항목을 선택하고 <code class="highlighter-rouge">Colors</code>탭을 선택합니다.</p>
 
-<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-preferences.png" alt=""></p>
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-preferences-2.png" alt=""></p>
 
 <p>오른쪽 하단에  <code class="highlighter-rouge">Color presets...</code> 선택 박스를 클릭하면 조금전에 추가한 <code class="highlighter-rouge">Snazzy</code> preset을 선택할 수 있습니다.</p>
 
 <p>음.. 그런데 테마를 바꿔도 그다지 달라지는 건 없어보입니다.. <del>이게 무슨 소리요?!</del> 제대로 색을 활용하려면 쉘<sub>shell</sub> 설정을 해야합니다.</p>
 
-<p><strong>추가설정</strong></p>
+<p><strong>추가 디자인 설정</strong></p>
+
+<p>iTerm창을 더 단순하게 만들기 위한 추가 설정입니다.</p>
 
 <ul>
-  <li>타이틀바 배경색 어둡게 변경
+  <li>타이틀바 스타일 변경
     <ul>
       <li>
-<code class="highlighter-rouge">Appearance</code> &gt; <code class="highlighter-rouge">Theme</code>: Dark</li>
-      <li>High Sierra에서는 <a href="https://gitlab.com/gnachman/iterm2/issues/4080">현재</a> Light/Dark 테마만 선택할 수 있으며 임의의 색은 불가능</li>
-    </ul>
-  </li>
-  <li>스크롤바 감추기
-    <ul>
-      <li>
-<code class="highlighter-rouge">Appearance</code> &gt; <code class="highlighter-rouge">Hide scrollbars</code>: 체크함</li>
+<code class="highlighter-rouge">Appearance</code> &gt; <code class="highlighter-rouge">Theme</code>: Minimal
+        <ul>
+          <li>탭의 높이를 얇게 조정하고 싶다면 <code class="highlighter-rouge">Dark</code>를 추천</li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>타이틀바 밑에 1px 라인 제거
     <ul>
       <li>
-<code class="highlighter-rouge">Appearance</code> &gt; <code class="highlighter-rouge">Show line under title bar when the tab bar is not visible</code>: 체크 안함</li>
+<code class="highlighter-rouge">Appearance</code> &gt; <code class="highlighter-rouge">Windows</code> &gt;  <code class="highlighter-rouge">Show line under title bar when the tab bar is not visible</code>: 체크 안함</li>
+    </ul>
+  </li>
+  <li>폰트 크기 및 줄간격 변경
+    <ul>
+      <li>
+<code class="highlighter-rouge">Profiles</code> &gt; <code class="highlighter-rouge">Text</code>: 폰트사이즈 12로 변경</li>
+      <li>
+<code class="highlighter-rouge">Profiles</code> &gt; <code class="highlighter-rouge">Text</code>: n/n 줄간격 110으로 변경</li>
     </ul>
   </li>
   <li>마진 수정
@@ -578,6 +645,36 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 <code class="highlighter-rouge">Advanced</code> &gt; <code class="highlighter-rouge">Height of top and bottom margins in terminal panes</code>: 10</li>
       <li>
 <code class="highlighter-rouge">Advanced</code> &gt; <code class="highlighter-rouge">Width of left and right margins in terminal panes</code>: 12</li>
+    </ul>
+  </li>
+  <li>탭 선 제거
+    <ul>
+      <li>
+<code class="highlighter-rouge">Advanced</code> &gt; <code class="highlighter-rouge">In minimal tab style, how prominent should the tab outline be?</code>: 0</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>상태바 추가</strong></p>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm2-status.png" alt=""></p>
+
+<p>iTerm2에 새롭게 추가된 상태바 기능입니다. 상단 또는 하단에 상태바를 추가하고 여러가지 정보를 볼 수 있습니다. 필요한 경우 활성화해서 사용합니다.</p>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm2-statusbar.png" alt=""></p>
+
+<ul>
+  <li>상태바 추가
+    <ul>
+      <li>
+<code class="highlighter-rouge">Profile</code> &gt; <code class="highlighter-rouge">Session</code>: Status bar enabled 체크
+        <ul>
+          <li>
+<code class="highlighter-rouge">Configure Status Bar</code> 선택하여 원하는 항목 드레그 추가</li>
+        </ul>
+      </li>
+      <li>
+<code class="highlighter-rouge">Appearance</code> &gt; <code class="highlighter-rouge">Status bar location</code> : 상태바 위치 설정</li>
     </ul>
   </li>
 </ul>
@@ -589,7 +686,7 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 
 <p>iTerm2도 설치하고 테마도 설치했으니 쉘을 바꿀 차례입니다.</p>
 
-<p>macOS는 기본으로 <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash(Bourne-again) shell</a>을 사용하고 있습니다. bash외에 csh, ksh, sh, tcsh, zsh등을 내장하고 있는데 최근 대새는 단연 zsh입니다. zsh에 설정 관리 프레임워크인 oh-my-zsh을 사용하여 이쁜 테마를 적용하고 여러 가지 플러그인을 설치해봅니다.</p>
+<p>macOS는 기본으로 zsh을 사용하고 있습니다. 기존에 사용하던 bash에서 zsh로 기본 설정이 바뀐걸 보면 대세이긴 한 것 같습니다. zsh에 설정 관리 프레임워크인 oh-my-zsh을 사용하여 이쁜 테마를 적용하고 여러 가지 플러그인을 설치해봅니다.</p>
 
 <p><strong>설치</strong></p>
 
@@ -607,11 +704,11 @@ git config <span class="nt">--global</span> core.precomposeunicode <span class="
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="code"><pre>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
+<td class="code"><pre>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>설치스크립트를 실행하면 관련 파일을 설치하고 패스워드를 물어봅니다. 계정의 패스워드를 입력하면 기본쉘을 자동으로 bash에서 zsh로 변경해줍니다.</p>
+<p>설치스크립트를 실행하면 관련 파일을 설치하고 패스워드를 물어봅니다.</p>
 
 <p><strong>플러그인</strong></p>
 
@@ -649,13 +746,67 @@ git clone git://github.com/zsh-users/zsh-autosuggestions <span class="nv">$ZSH_C
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>설정 파일을 수정했으면 터미널을 재시작하거나 <code class="highlighter-rouge">source ~/.zshrc</code> 명령어를 실행하여 설정을 다시 불러와야 합니다. 이제 명령어를 입력할 때 존재하지 않는 명령어는 빨간색으로 뜨고 한번 입력했던 명령어를 회색으로 표현해주는 걸 확인할 수 있습니다.</p>
+<p>설정 파일을 수정했으면 터미널을 재시작하거나 <code class="highlighter-rouge">source ~/.zshrc</code> 명령어를 실행하여 설정을 다시 불러와야 합니다. 이제 명령어를 입력할 때 존재하지 않는 명령어는 빨간색으로 뜨고 한번 입력했던 명령어를 흐릿하게 표현해주는 걸 확인할 수 있습니다.</p>
 
-<p><strong>테마</strong></p>
+<h3 id="쉘-프롬프트">
+<a class="anchor" href="#%EC%89%98-%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>쉘 프롬프트</h3>
 
 <p>oh-my-zsh의 기본 테마인 <code class="highlighter-rouge">robbyrussell</code>도 깔끔하지만, 이 외에 <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes">다양한 테마</a>가 존재합니다. 테마를 바꾸는 방법은 <code class="highlighter-rouge">~/.zshrc</code>파일의 <code class="highlighter-rouge">ZSH_THEME="robbyrussell"</code> 부분을 원하는 테마로 수정하면 됩니다.</p>
 
-<p>여기서는 이쁘고 단순하고 빠른 <a href="https://github.com/sindresorhus/pure">pure</a> prompt를 사용합니다.</p>
+<p>여기서는 단순히 색상, 모양 설정을 넘어 추가적인 기능을 설치합니다. 추가적인 기능은 현재 디렉토리의 git 상태를 보여주고 사용중인 nodejs, ruby의 버전을 보여주거나 aws, kubectl 프로필을 보여주기도 합니다.</p>
+
+<p>대표적인 프롬프트는 <a href="https://github.com/romkatv/powerlevel10k">Powerlevel10k</a>, <a href="https://denysdovhan.com/spaceship-prompt/">spaceship</a>, <a href="https://github.com/sindresorhus/pure">pure</a>가 있습니다. 취향에 맞춰서 사용하면 되고 개인적으로 예전에는 pure를 썼지만 최근에는 Powerlevel10k를 사용하고 있습니다. Powerlevel10k는 쉘응답속도와 프롬프트 초기화가 가장 빠르고 Lean테마를 사용하면 단순한 형태로 사용할 수 있습니다. 특히 <code class="highlighter-rouge">aws</code>, <code class="highlighter-rouge">kubectl</code>등 특정 명령어를 칠때만 나타나는 프로필 기능이 아주 마음에 듭니다.</p>
+
+<ul>
+  <li>속도비교: <code class="highlighter-rouge">powerline10k &gt;&gt;&gt;&gt; spaceship, pure</code>
+</li>
+  <li>기능비교: <code class="highlighter-rouge">powerline10 &gt; spaceship &gt;&gt;&gt;&gt; pure</code>
+</li>
+  <li>디자인비교 (취향탐): <code class="highlighter-rouge">spaceship, pure &gt; powerline10k</code>
+</li>
+</ul>
+
+<p><strong>Powerlevel10k(추천)</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>git clone <span class="nt">--depth</span><span class="o">=</span>1 https://github.com/romkatv/powerlevel10k.git <span class="k">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="k">}</span>/themes/powerlevel10k
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>설치를 완료하면 <code class="highlighter-rouge">~/.zshrc</code>파일에 ZSH_THEME항목을 수정합니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">"powerlevel10k/powerlevel10k"</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>저장 후 새로 탭을 열면, 대화형 설정창이 뜨고 상세하게 테마를 설정할 수 있습니다. 다시 설정하고 싶다면 언제든 <code class="highlighter-rouge">p10k configure</code>를 입력하면 됩니다.</p>
+
+<p><strong>spaceship(설정귀찮으면 추천)</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="code"><pre>git clone https://github.com/denysdovhan/spaceship-prompt.git <span class="s2">"</span><span class="nv">$ZSH_CUSTOM</span><span class="s2">/themes/spaceship-prompt"</span>
+<span class="nb">ln</span> <span class="nt">-s</span> <span class="s2">"</span><span class="nv">$ZSH_CUSTOM</span><span class="s2">/themes/spaceship-prompt/spaceship.zsh-theme"</span> <span class="s2">"</span><span class="nv">$ZSH_CUSTOM</span><span class="s2">/themes/spaceship.zsh-theme"</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>설치를 완료하면 <code class="highlighter-rouge">~/.zshrc</code>파일에 ZSH_THEME항목을 수정합니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">"spaceship"</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p><strong>pure</strong></p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -666,7 +817,7 @@ npm <span class="nb">install</span> <span class="nt">--global</span> pure-prompt
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>설치를 완료했으면 <code class="highlighter-rouge">~/.zshrc</code>파일에 다음항목을 추가합니다.</p>
+<p>설치를 완료하면 <code class="highlighter-rouge">~/.zshrc</code>파일에 다음항목을 추가합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -677,9 +828,8 @@ prompt pure
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>이제 zsh 기본 설정이 끝났습니다!</p>
-
-<p><strong>oh-my-zsh 팁</strong></p>
+<h3 id="oh-my-zsh-팁">
+<a class="anchor" href="#oh-my-zsh-%ED%8C%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>oh-my-zsh 팁</h3>
 
 <p>zsh과 oh-my-zsh의 조합으로 강력한 쉘을 사용할 수 있게 되었습니다. 여기서 모든 기능을 설명할 순 없지만 자주 사용하는 몇 가지 팁을 소개합니다.</p>
 
@@ -706,6 +856,8 @@ prompt pure
 <h3 id="vim">
 <a class="anchor" href="#vim" aria-hidden="true"><span class="octicon octicon-link"></span></a>vim</h3>
 
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/spacevim.png" alt="spacevim + snazzy"></p>
+
 <p>vim은 기본으로 설치된 터미널용 에디터로 GUI 환경의 에디터를 사용할 수 있는 macOS 환경에서는 일부 <del>고오오급</del> 개발자를 제외하고는 잘 쓰이지 않습니다. 하지만 터미널 작업을 하다 보면 간단하게 수정할 파일이 있고 git 커밋메시지를 작성할 때 종종 사용하게 됩니다.</p>
 
 <p>기본으로 설정된 화면은 밋밋하기 그지 없기 때문에 강력한 기능의 플러그인을 설치해줍니다.</p>
@@ -714,14 +866,20 @@ prompt pure
 
 <p>내장된 vim대신 neovim을 설치합니다. neovim은 vim과 차이가 없어 보이는데 24bit True Color를 지원하고 오래된 vim 소스를 처음부터 다시 짜서 소스코드가 줄었다고 합니다. 저 같은 라이트 유저는 차이를 느끼진 못하지만 좋다고 해서 사용하고 있습니다. 그리고 테마에서 사용할 개발용 폰트를 설치합니다.</p>
 
+<blockquote>
+  <p><code class="highlighter-rouge">Powerline10k</code> 프롬프트를 사용하면 개발용 폰트(MesloLGS NF)가 자동으로 설치됩니다. 따로 설치할 필요가 없습니다.</p>
+</blockquote>
+
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 2
 3
+4
 </pre></td>
 <td class="code"><pre>brew <span class="nb">install </span>neovim
+<span class="c"># MesloLGS NF가 없는 경우</span>
 brew tap caskroom/fonts
-brew cask <span class="nb">install </span>font-hack-nerd-font
+brew cask <span class="nb">install </span>font-meslolg-nerd-font
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
@@ -744,7 +902,7 @@ brew cask <span class="nb">install </span>font-hack-nerd-font
 
 <p><strong>플러그인</strong></p>
 
-<p>vim은 강력한 플러그인들이 많이 있는데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 화면을 보는 순간 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.</p>
+<p>vim은 강력한 플러그인들이 많은데 설치가 어렵고 어떤 게 좋은지 라이트 유저는 알 수가 없습니다. SpaceVim이라는 프로젝트는 가장 많은 사람들이 사용하는 플러그인을 자동으로 설치해줍니다. 약간 무거운 느낌이 있긴 하지만 설치가 간단하고 화면을 보는 순간 고오오급 개발자의 포스를 만들어주니 바로 설치해봅니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -753,16 +911,37 @@ brew cask <span class="nb">install </span>font-hack-nerd-font
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>설치가 완료되면 <code class="highlighter-rouge">vi</code>를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (<code class="highlighter-rouge">1</code>을 누릅니다) 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.</p>
+<p>설치가 완료되면 <code class="highlighter-rouge">vi</code>를 실행합니다. 최초 실행 시 mode 설정을 물어보고 (잘모르면 <code class="highlighter-rouge">1</code>을 누릅니다) <code class="highlighter-rouge">q</code>를 눌러 종료했다가 다시 실행하면 자동으로 플러그인을 설치합니다. 플러그인이 많아서 시간이 꽤 걸립니다.</p>
 
 <p><strong>테마</strong></p>
 
-<p>기본 테마는 뭔가 칙칙한 느낌이 듭니다. <code class="highlighter-rouge">~/.SpaceVim.d/init.vim</code> 파일에 Colorscheme 설정을 추가합니다.</p>
+<p>기본 테마는 뭔가 칙칙한 느낌이 듭니다. snazzy colorscheme를 다운받고 <code class="highlighter-rouge">~/.SpaceVim.d/init.toml</code> 파일에 설정을 추가합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
+2
 </pre></td>
-<td class="code"><pre><span class="nb">let </span>g:spacevim_colorscheme <span class="o">=</span> <span class="s1">'onedark'</span>
+<td class="code"><pre><span class="nb">mkdir</span> ~/.SpaceVim.d/colors
+curl https://gist.githubusercontent.com/subicura/91696d2da58ad28b5e8b2877193015e1/raw/6fb5928c9bda2040b3c9561d1e928231dbcc9184/snazzy-custom.vim <span class="nt">-o</span> ~/.SpaceVim.d/colors/snazzy-custom.vim
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="code"><pre><span class="o">[</span>options]
+  colorscheme <span class="o">=</span> <span class="s2">"snazzy-custom"</span>
+  enable_guicolors <span class="o">=</span> <span class="nb">true
+  </span>statusline_separator <span class="o">=</span> <span class="s2">"arrow"</span>
+  enable_tabline_filetype_icon <span class="o">=</span> <span class="nb">true
+  </span>enable_statusline_mode <span class="o">=</span> <span class="nb">true
+  </span>statusline_unicode_symbols <span class="o">=</span> <span class="nb">true</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
@@ -770,43 +949,50 @@ brew cask <span class="nb">install </span>font-hack-nerd-font
 
 <p><strong>폰트</strong></p>
 
-<p>앗, 플러그인을 설치하고 vi를 실행하면 폰트가 깨져서 ?가 보이는 걸 알 수 있습니다.</p>
+<p>vi를 실행하고 폰트가 <code class="highlighter-rouge">?</code>로 깨져 보인다면 iTerm2에 개발 관련 폰트를 모은 NerdFont를 추가로 설정합니다.</p>
 
-<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/nvim-question.png" alt=""></p>
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font-2.png" alt=""></p>
 
-<p>iTerm2에 개발 관련 폰트를 모은 NerdFont를 추가로 설정합니다.</p>
+<p>iTerm을 실행하고 설정(<code class="highlighter-rouge">⌘</code> + <code class="highlighter-rouge">,</code>)창에서 <code class="highlighter-rouge">Profiles</code> 항목을 선택하고 <code class="highlighter-rouge">Text</code>탭을 선택합니다. Font항목에서 <code class="highlighter-rouge">Use a different font for non-ASCII text</code>를 체크하고 MesloLGS NF를 선택하면 폰트가 이쁘게 나옵니다.</p>
 
-<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-font.png" alt=""></p>
+<p>이제 설정이 모두 완료되었으니 vim 공부(<code class="highlighter-rouge">esc</code>, <code class="highlighter-rouge">:q!</code>)만 하면 됩니다. :)</p>
 
-<p>iTerm을 실행하고 설정(<code class="highlighter-rouge">⌘</code> + <code class="highlighter-rouge">,</code>)창에서 <code class="highlighter-rouge">Profiles</code> 항목을 선택하고 <code class="highlighter-rouge">Text</code>탭을 선택합니다. Font항목에서 <code class="highlighter-rouge">Use a different font for non-ASCII text</code>를 체크하고 다른 탭을 살짝 눌렀다 다시 돌아오면 Non-ASCII Font를 설정할 수 있습니다. 거기서 Knack Regular Nerd Font Complete를 선택하면 폰트가 이쁘게 나옵니다.</p>
-
-<p>이제 설정이 모두 완료되었으니 vim 공부만 하면 됩니다. :)</p>
-
-<p><a href="https://neovim.io/">neovim 홈페이지</a> / <a href="https://github.com/ryanoasis/nerd-fonts">Nerd Font github</a> / <a href="https://github.com/SpaceVim/SpaceVim">SpaceVim github</a> / <a href="http://spacevim.org/documentation/">SpaceVim 설정문서</a></p>
+<p><a href="https://neovim.io/">neovim 홈페이지</a> / <a href="https://github.com/SpaceVim/SpaceVim">SpaceVim github</a> / <a href="http://spacevim.org/documentation/">SpaceVim 설정문서</a></p>
 
 <h3 id="fzf">
 <a class="anchor" href="#fzf" aria-hidden="true"><span class="octicon octicon-link"></span></a>fzf</h3>
 
 <p>fzf는 강력하고 엄청나게 빠른 fuzzy finder 도구입니다. 증분 검색을 통하여 원하는 파일이나 히스토리를 쉽고 빠르게 찾을 수 있게 해줍니다. 정확하게 원하는 값을 입력하지 않고 일부만 입력해도 실시간으로 검색 결과를 보여줍니다.</p>
 
-<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/fzf-sample.png" alt=""></p>
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/fzf-sample-2.png" alt=""></p>
 
 <p><strong>설치</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>fzf
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>설치가 완료되었으면 <code class="highlighter-rouge">~/.zshrc</code>에 plugin을 추가해줍니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
 2
 3
 4
+5
 </pre></td>
-<td class="code"><pre>brew <span class="nb">install </span>fzf
-
-<span class="c"># To install useful key bindings and fuzzy completion:</span>
-<span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/opt/fzf/install
+<td class="code"><pre><span class="nv">plugins</span><span class="o">=(</span>
+  ...
+  ...
+  fzf
+<span class="o">)</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>brew 설치 후 install 명령어를 입력하면 몇 가지를 물어보는데 전부 <code class="highlighter-rouge">y</code>를 누르면 됩니다. 설치가 완료되었으면 <code class="highlighter-rouge">source ~/.zshrc</code>를 입력하여 설정을 다시 불러옵니다.</p>
+<p>전부 완료되었으면 <code class="highlighter-rouge">source ~/.zshrc</code>를 입력하여 설정을 다시 불러옵니다.</p>
 
 <p><strong>명령어</strong></p>
 
@@ -914,6 +1100,82 @@ brew cask <span class="nb">install </span>font-hack-nerd-font
 <p>단순한 기능만큼 굉장히 자주, 유용하게 사용하는 도구입니다.</p>
 
 <p><a href="https://github.com/clvv/fasd">fasd github</a></p>
+
+<h3 id="asdf-vm">
+<a class="anchor" href="#asdf-vm" aria-hidden="true"><span class="octicon octicon-link"></span></a>asdf vm</h3>
+
+<p>asdf-vm은 각종 프로그램(nodejs, ruby, python, …)의 버전을 손쉽게 관리해주는 <del>성의 없어 보이는 이름의</del> 도구입니다. 기존에 nvm, rbenv등 언어, 프로그램별로 달랐던 관리 도구를 하나로 통합해서 사용할 수 있습니다.</p>
+
+<p><strong>설치</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>asdf
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>설치가 완료되었으면 <code class="highlighter-rouge">~/.zshrc</code>에 plugin을 추가해줍니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="code"><pre><span class="nv">plugins</span><span class="o">=(</span>
+  ...
+  ...
+  asdf
+<span class="o">)</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>전부 완료되었으면 <code class="highlighter-rouge">source ~/.zshrc</code>를 입력하여 설정을 다시 불러옵니다.</p>
+
+<p><strong>명령어</strong></p>
+
+<p>asdf는 플러그인을 이용하기 때문에 필요한 프로그램을 찾아서 설치해야 합니다.</p>
+
+<table class="table table-key-value-60">
+  <thead>
+    <tr>
+      <th>명령어</th>
+      <th>기능</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">asdf plugin list</code></td>
+      <td>설치된 플러그인 목록</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">asdf plugin add &lt;name&gt; [&lt;git-ref&gt;]</code></td>
+      <td>플러그인 설치 ex) asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">asdf list all &lt;name&gt;</code></td>
+      <td>플러그인 설치 가능한 버전 확인</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">asdf install &lt;name&gt; &lt;version&gt;</code></td>
+      <td>플러그인 버전 설치</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">asdf local &lt;name&gt; &lt;version&gt;</code></td>
+      <td>현재 경로 기준 버전 사용 설정</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">asdf global &lt;name&gt; &lt;version&gt;</code></td>
+      <td>전체 버전 사용 설정</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://twitter.com/KrComet/status/1278675880697425920">@KrComet님 추천</a></p>
+
+<p><a href="https://asdf-vm.com">asdf-vm</a></p>
 
 <h3 id="tmux">
 <a class="anchor" href="#tmux" aria-hidden="true"><span class="octicon octicon-link"></span></a>tmux</h3>
@@ -1189,36 +1451,105 @@ gem <span class="nb">install </span>tmuxinator
 <h3 id="docker">
 <a class="anchor" href="#docker" aria-hidden="true"><span class="octicon octicon-link"></span></a>docker</h3>
 
-<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/docker-for-mac.png" alt=""></p>
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/docker-desktop.png" alt=""></p>
 
 <p>따로 소개할 필요가 없을 정도로 유명한 가상화 프로그램입니다. MySQL, Redis와 같은 데이터베이스나 rails, php 개발환경까지 두루두루 사용하고 있습니다. 하나의 개발 피시에 여러버전의 MySQL이나 Redis를 설치하는 건 쉽지 않은데 docker를 사용하면 쉽고 간단하게 개발환경을 구축할 수 있습니다.</p>
 
 <p>docker에 대한 자세한 내용은 <a href="/2017/01/19/docker-guide-for-beginners-1.html">여기</a>서 확인하세요.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>brew cask <span class="nb">install </span>docker
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p><a href="https://www.docker.com/">Docker 홈페이지</a> / <a href="https://www.docker.com/docker-mac">Docker for mac download</a></p>
 
 <h3 id="tig">
 <a class="anchor" href="#tig" aria-hidden="true"><span class="octicon octicon-link"></span></a>tig</h3>
 
-<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/tig.png" alt=""></p>
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/tig-2.png" alt=""></p>
 
 <p>텍스트모드 git 인터페이스 프로그램입니다. git 자체 기능이 강력하긴 하지만 여러 로그를 편하게 보기는 쉽지 않습니다. tig를 사용하여 화살표 키와 <code class="highlighter-rouge">h</code> <code class="highlighter-rouge">j</code> <code class="highlighter-rouge">k</code> <code class="highlighter-rouge">l</code>키를 잘 사용하면 쉽게 로그를 볼 수 있고 메인 화면에서 <code class="highlighter-rouge">h</code>를 누르면 도움말을 확인할 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>tig
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p><a href="https://github.com/jonas/tig">tig github</a></p>
 
 <h3 id="jq">
 <a class="anchor" href="#jq" aria-hidden="true"><span class="octicon octicon-link"></span></a>jq</h3>
 
-<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/jq.png" alt=""></p>
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/jq-2.png" alt=""></p>
 
 <p>JSON 결과를 이쁘게 보여주고 원하는 대로 편집할 수 있는 도구입니다. 간단하게 필터를 적용하여 원하는 항목만 볼 수 있고 특정 결과를 다른 형태로 변경할 수 있습니다.</p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>jq
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
 <p><a href="https://stedolan.github.io/jq/">jq github</a></p>
+
+<h3 id="bat">
+<a class="anchor" href="#bat" aria-hidden="true"><span class="octicon octicon-link"></span></a>bat</h3>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/bat.png" alt=""></p>
+
+<p><code class="highlighter-rouge">cat</code>명령어에 코드 하이라이팅 + more 기능이 추가된 버전입니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>bat
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>~/.zshrc에 <code class="highlighter-rouge">cat</code> 대신 사용하도록 설정할 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre><span class="nb">alias cat</span><span class="o">=</span><span class="s2">"bat"</span>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p><a href="https://github.com/sharkdp/bat">bat github</a></p>
+
+<h3 id="openinterminal">
+<a class="anchor" href="#openinterminal" aria-hidden="true"><span class="octicon octicon-link"></span></a>OpenInTerminal</h3>
+
+<p><img src="https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/open-in-terminal.png" alt=""></p>
+
+<p>파인더에서 바로 터미널을 열고 싶을 때 클릭한번으로 열 수 있는 유용한 도구 입니다. 프로그램을 설치하고 <code class="highlighter-rouge">⌘</code> + <code class="highlighter-rouge">드래그</code>로 버튼을 추가할 수 있습니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>brew cask <span class="nb">install </span>openinterminal-lite
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p><a href="https://github.com/Ji4n1ng/OpenInTerminal">OpenInTerminal github</a></p>
 
 <h3 id="ngrok">
 <a class="anchor" href="#ngrok" aria-hidden="true"><span class="octicon octicon-link"></span></a>ngrok</h3>
 
 <p>로컬 서버를 외부로 터널링을 통해 오픈해주는 도구입니다. 보통 로컬에 개발 서버를 띄우면 외부에서 접근하기가 어려운데 ngrok을 이용하여 간단하게 오픈할 수 있습니다. 사용법도 간단합니다.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>brew cask <span class="nb">install </span>ngrok
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p><a href="https://ngrok.com/">ngrok 홈페이지</a></p>
 
@@ -1227,6 +1558,13 @@ gem <span class="nb">install </span>tmuxinator
 
 <p>터미널을 <strong>텍스트</strong>로 녹화하는 프로그램입니다. 영상으로 녹화하는 것보다 용량이 적고 품질도 훌륭한 편입니다. 제 블로그에서 자주 볼 수 있습니다.</p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>asciinema
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
 <p><a href="https://asciinema.org/">asciinema 홈페이지</a></p>
 
 <h3 id="neofetch">
@@ -1234,7 +1572,21 @@ gem <span class="nb">install </span>tmuxinator
 
 <p>지금 보고 있는 포스트 첫번째 이미지에서 사용한 프로그램입니다. 간단하게 시스템 상태를 보여줍니다.</p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>brew <span class="nb">install </span>neofetch
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
 <p><a href="https://github.com/dylanaraps/neofetch">neofetch github</a></p>
+
+<h3 id="brew-bundle">
+<a class="anchor" href="#brew-bundle" aria-hidden="true"><span class="octicon octicon-link"></span></a>brew bundle</h3>
+
+<p>하나하나 설치하기 귀찮다면 <a href="https://github.com/Homebrew/homebrew-bundle">brew bundle</a> 기능을 이용해보세요!</p>
+
+<p><a href="https://twitter.com/posquit0/status/1278708552983441408">@posquit0님 추천</a></p>
 
 <h2 id="그래서">
 <a class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
@@ -1362,7 +1714,7 @@ gem <span class="nb">install </span>tmuxinator
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1578959626507940000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1594059035341298000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
