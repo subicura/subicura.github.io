@@ -8,7 +8,7 @@ excerpt: macOS에서 터미널을 자주 사용하는 개발자를 대상으로 
 ogimage: /assets/og/2017-11-22-mac-os-development-environment-setup.png
 comments: yes
 toc: true
-last_modified_at: 2020-07-07T08:00:00+09:00
+last_modified_at: 2020-07-17T08:00:00+09:00
 ---
 
 ### 2020/07/06 수정
@@ -309,6 +309,15 @@ iTerm창을 더 단순하게 만들기 위한 추가 설정입니다.
 	- `Advanced` > `Width of left and right margins in terminal panes`: 12
 - 탭 선 제거
 	- `Advanced` > `In minimal tab style, how prominent should the tab outline be?`: 0
+
+**단축키 변경**
+
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-keys.png)
+
+`Option ⌥` + `←` 또는 `→`를 이용하여 단어 단위로 이동할 수 있게 단축키 설정을 변경합니다.
+
+- 단축키 변경
+  - `Profiles` > `Keys` > `Presets`: Natural Text Editing 선택
 
 **상태바 추가**
 
