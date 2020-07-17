@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Jul 2020 08:46:47 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Jul 2020 08:46:47 +0900</lastBuildDate>
+    <pubDate>Fri, 17 Jul 2020 09:29:13 +0900</pubDate>
+    <lastBuildDate>Fri, 17 Jul 2020 09:29:13 +0900</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -2451,6 +2451,20 @@ git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.precompos
   &lt;li&gt;탭 선 제거
     &lt;ul&gt;
       &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;In minimal tab style, how prominent should the tab outline be?&lt;/code&gt;: 0&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;단축키 변경&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/iterm-keys.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Option ⌥&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;←&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;→&lt;/code&gt;를 이용하여 단어 단위로 이동할 수 있게 단축키 설정을 변경합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;단축키 변경
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Keys&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Presets&lt;/code&gt;: Natural Text Editing 선택&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
