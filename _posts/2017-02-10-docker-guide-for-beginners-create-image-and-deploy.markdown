@@ -781,3 +781,5 @@ ftp, rsync, ant, gradle, capistrano, fabric, chef, puppet, ansible등 다양한 
   <iframe src="//www.slideshare.net/slideshow/embed_code/key/IylipWTfVGtdaY" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
   <div style="margin-bottom:5px; font-size: 14px"> <strong> <a href="//www.slideshare.net/MichaelDucy/the-future-of-everything-37344357" title="The Future of Everything" target="_blank">The Future of Everything</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/MichaelDucy">Michael Ducy</a></strong> </div>
 </div>
+
+[![이제 도커안내서를 영상으로 만나보세요!]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png)](http://bit.ly/inflearn-docker-guide)

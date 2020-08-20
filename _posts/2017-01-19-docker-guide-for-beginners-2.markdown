@@ -719,6 +719,8 @@ Docker Compose의 다른 기능과 생소한 설정내용은 숙제로 남겨드
 
 여기까지 도커에 대해 기본적인 내용부터 컨테이너를 실행하고 살펴보는 방법까지 알아보았습니다. 도커가 어떤건지, 컨테이너가 뭔지, 이미지가 뭔지 감이 좀 오시나요? 이제 남이 만든 이미지를 사용하는 것이 아니라 직접 이미지를 만들고 컨테이너를 여러 서버로 배포하는 방법을 알아봐야하는데... 다음글에서 알아보도록 하겠습니다.
 
+[![이제 도커안내서를 영상으로 만나보세요!]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png)](http://bit.ly/inflearn-docker-guide)
+
 ---
 
 * [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
