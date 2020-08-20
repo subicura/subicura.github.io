@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 17 Jul 2020 09:29:13 +0900</pubDate>
-    <lastBuildDate>Fri, 17 Jul 2020 09:29:13 +0900</lastBuildDate>
+    <pubDate>Thu, 20 Aug 2020 19:02:40 +0900</pubDate>
+    <lastBuildDate>Thu, 20 Aug 2020 19:02:40 +0900</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -5237,6 +5237,8 @@ docker push localhost:5000/subicura/sinatra-app:1
   &lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/IylipWTfVGtdaY&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt; 
   &lt;div style=&quot;margin-bottom:5px; font-size: 14px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/MichaelDucy/the-future-of-everything-37344357&quot; title=&quot;The Future of Everything&quot; target=&quot;_blank&quot;&gt;The Future of Everything&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a target=&quot;_blank&quot; href=&quot;//www.slideshare.net/MichaelDucy&quot;&gt;Michael Ducy&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bit.ly/inflearn-docker-guide&quot;&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png&quot; alt=&quot;이제 도커안내서를 영상으로 만나보세요!&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 10 Feb 2017 00:00:00 +0900</pubDate>
         <link>https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</link>
@@ -6222,6 +6224,8 @@ volumes:
 
 &lt;p&gt;여기까지 도커에 대해 기본적인 내용부터 컨테이너를 실행하고 살펴보는 방법까지 알아보았습니다. 도커가 어떤건지, 컨테이너가 뭔지, 이미지가 뭔지 감이 좀 오시나요? 이제 남이 만든 이미지를 사용하는 것이 아니라 직접 이미지를 만들고 컨테이너를 여러 서버로 배포하는 방법을 알아봐야하는데… 다음글에서 알아보도록 하겠습니다.&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&quot;http://bit.ly/inflearn-docker-guide&quot;&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png&quot; alt=&quot;이제 도커안내서를 영상으로 만나보세요!&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;ul&gt;
@@ -6449,6 +6453,8 @@ CMD [&amp;quot;start.sh&amp;quot;]&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;h2 id=&quot;정리&quot;&gt;정리&lt;/h2&gt;
 &lt;p&gt;여기까지 도커에 대해 기본적인 내용을 아주 얕게 살펴보았습니다. 이제 실전으로 들어가봅시다!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bit.ly/inflearn-docker-guide&quot;&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png&quot; alt=&quot;이제 도커안내서를 영상으로 만나보세요!&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
