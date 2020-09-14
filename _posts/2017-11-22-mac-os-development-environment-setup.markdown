@@ -8,7 +8,7 @@ excerpt: macOS에서 터미널을 자주 사용하는 개발자를 대상으로 
 ogimage: /assets/og/2017-11-22-mac-os-development-environment-setup.png
 comments: yes
 toc: true
-last_modified_at: 2020-07-17T08:00:00+09:00
+last_modified_at: 2020-09-15T00:00:00+09:00
 ---
 
 ### 2020/07/06 수정
@@ -309,6 +309,15 @@ iTerm창을 더 단순하게 만들기 위한 추가 설정입니다.
 	- `Advanced` > `Width of left and right margins in terminal panes`: 12
 - 탭 선 제거
 	- `Advanced` > `In minimal tab style, how prominent should the tab outline be?`: 0
+
+**한글파일 깨짐방지**
+
+![]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/text-unicode.png)
+
+파일명 또는 디렉토리명의 자/모가 분리되는 현상을 방지합니다.
+
+- Unicode 설정
+  - `Profiles` > `Text` > `Unicode normalization form`: `NFS`
 
 **단축키 변경**
 
