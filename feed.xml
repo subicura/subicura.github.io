@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 20 Aug 2020 19:02:40 +0900</pubDate>
-    <lastBuildDate>Thu, 20 Aug 2020 19:02:40 +0900</lastBuildDate>
+    <pubDate>Tue, 15 Sep 2020 00:26:12 +0900</pubDate>
+    <lastBuildDate>Tue, 15 Sep 2020 00:26:12 +0900</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -2451,6 +2451,20 @@ git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.precompos
   &lt;li&gt;탭 선 제거
     &lt;ul&gt;
       &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;In minimal tab style, how prominent should the tab outline be?&lt;/code&gt;: 0&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;한글파일 깨짐방지&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/text-unicode.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;파일명 또는 디렉토리명의 자/모가 분리되는 현상을 방지합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unicode 설정
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Unicode normalization form&lt;/code&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;NFS&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
