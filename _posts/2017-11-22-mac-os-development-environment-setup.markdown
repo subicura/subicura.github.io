@@ -317,7 +317,7 @@ iTerm창을 더 단순하게 만들기 위한 추가 설정입니다.
 파일명 또는 디렉토리명의 자/모가 분리되는 현상을 방지합니다.
 
 - Unicode 설정
-  - `Profiles` > `Text` > `Unicode normalization form`: `NFS`
+  - `Profiles` > `Text` > `Unicode normalization form`: `NFC`
 
 **단축키 변경**
 
