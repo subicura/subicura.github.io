@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1606053567423074000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1608030295159555000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -276,7 +276,7 @@
 
 <ul>
   <li>이미지만 만들어 놓으면 컨테이너는 그냥 띄우기만 하면됨</li>
-  <li>다른 서버로 서비스를 옮기거나 새로운 서버에 서비스를 하나 더 띄우는건 <code class="highlighter-rouge">docker run</code> 명령어 하나로 끝</li>
+  <li>다른 서버로 서비스를 옮기거나 새로운 서버에 서비스를 하나 더 띄우는건 <code class="language-plaintext highlighter-rouge">docker run</code> 명령어 하나로 끝</li>
   <li>개발서버 띄우기도 편하고 테스트서버 띄우기도 간편</li>
 </ul>
 
@@ -301,7 +301,7 @@
 <ul>
   <li>설정은 보통 환경변수로 제어함</li>
   <li>
-<code class="highlighter-rouge">MYSQL_PASS=password</code>와 같이 컨테이너를 띄울때 환경변수를 같이 지정</li>
+<code class="language-plaintext highlighter-rouge">MYSQL_PASS=password</code>와 같이 컨테이너를 띄울때 환경변수를 같이 지정</li>
   <li>하나의 이미지가 환경변수에 따라 동적으로 설정파일을 생성하도록 만들어져야함</li>
 </ul>
 
@@ -380,7 +380,7 @@ CMD ["start.sh"]</pre></noscript>
   </li>
   <li>base 이미지에 소스파일과 php custom 설정파일을 추가함</li>
   <li>
-<code class="highlighter-rouge">start.sh</code> 파일은 환경변수에 따라 데이터베이스 정보등을 설정하고 php7-fpm 프로세스를 실행함</li>
+<code class="language-plaintext highlighter-rouge">start.sh</code> 파일은 환경변수에 따라 데이터베이스 정보등을 설정하고 php7-fpm 프로세스를 실행함</li>
 </ul>
 
 <h2 id="컨테이너-구성">
@@ -422,9 +422,9 @@ services:
 
 <ul>
   <li>
-<code class="highlighter-rouge">likehs-app</code>컨테이너에서 <code class="highlighter-rouge">/var/www/magento</code>디렉토리와 <code class="highlighter-rouge">/var/run/php</code>디렉토리가 볼륨으로 설정되어 있으므로 마치 내 컨테이너에 있는 디렉토리처럼 자동으로 마운트됨</li>
-  <li>nginx 설정파일은 <code class="highlighter-rouge">unix:/var/run/php/php7.0-fpm.sock</code>여기를 바라보게 셋팅되어 있고 <code class="highlighter-rouge">/var/www/magento</code>디렉토리를 루트로 바라봄</li>
-  <li>컨테이너 내부의 <code class="highlighter-rouge">80포트</code>를 호스트의 <code class="highlighter-rouge">8080포트</code>로 연결함</li>
+<code class="language-plaintext highlighter-rouge">likehs-app</code>컨테이너에서 <code class="language-plaintext highlighter-rouge">/var/www/magento</code>디렉토리와 <code class="language-plaintext highlighter-rouge">/var/run/php</code>디렉토리가 볼륨으로 설정되어 있으므로 마치 내 컨테이너에 있는 디렉토리처럼 자동으로 마운트됨</li>
+  <li>nginx 설정파일은 <code class="language-plaintext highlighter-rouge">unix:/var/run/php/php7.0-fpm.sock</code>여기를 바라보게 셋팅되어 있고 <code class="language-plaintext highlighter-rouge">/var/www/magento</code>디렉토리를 루트로 바라봄</li>
+  <li>컨테이너 내부의 <code class="language-plaintext highlighter-rouge">80포트</code>를 호스트의 <code class="language-plaintext highlighter-rouge">8080포트</code>로 연결함</li>
 </ul>
 
 <p><strong>app container</strong></p>
@@ -434,7 +434,7 @@ services:
   <li>업로드 디렉토리를 호스트의 디렉토리로 연결하여 컨테이너를 새로 띄워도 파일을 유지할 수 있음</li>
 </ul>
 
-<p>이제 운영서버에 접속한 후 <code class="highlighter-rouge">docker-compose up -d</code>를 실행하면 원격에서 이미지를 다운받고 서비스가 실행됩니다. 이제 배포를 위한 모든 준비가 끝났습니다.</p>
+<p>이제 운영서버에 접속한 후 <code class="language-plaintext highlighter-rouge">docker-compose up -d</code>를 실행하면 원격에서 이미지를 다운받고 서비스가 실행됩니다. 이제 배포를 위한 모든 준비가 끝났습니다.</p>
 
 <h2 id="웹서비스-배포하기">
 <a class="anchor" href="#%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>웹서비스 배포하기</h2>
@@ -489,7 +489,7 @@ services:
 
 <p><strong>Docker 원격 API</strong></p>
 
-<p>도커는 기본적으로 원격 API를 호출하기 쉬운 구조입니다. 도커 명령어를 실행할때 의식하고 있지는 않지만 자동으로 <code class="highlighter-rouge">unix:///var/run/docker.sock</code> 여기를 바라보고 명령을 하고 있습니다. 도커 데몬을 실행할때 <code class="highlighter-rouge">-H tcp://0.0.0.0:2375</code> 옵션을 주게 되면 원격에서 명령을 보낼 준비가 완료됩니다.</p>
+<p>도커는 기본적으로 원격 API를 호출하기 쉬운 구조입니다. 도커 명령어를 실행할때 의식하고 있지는 않지만 자동으로 <code class="language-plaintext highlighter-rouge">unix:///var/run/docker.sock</code> 여기를 바라보고 명령을 하고 있습니다. 도커 데몬을 실행할때 <code class="language-plaintext highlighter-rouge">-H tcp://0.0.0.0:2375</code> 옵션을 주게 되면 원격에서 명령을 보낼 준비가 완료됩니다.</p>
 
 <blockquote>
   <p>쉽다는건 보안적으로 엄청난 구멍일 수 있다는 뜻입니다. 방화벽 정책은 필수!</p>
@@ -499,13 +499,13 @@ services:
   <li>도커 원격명령 실행
     <ul>
       <li>DOCKER_HOST 환경변수를 셋팅합니다.</li>
-      <li><code class="highlighter-rouge">DOCKER_HOST=tcp://192.168.0.100:2375 docker run</code></li>
+      <li><code class="language-plaintext highlighter-rouge">DOCKER_HOST=tcp://192.168.0.100:2375 docker run</code></li>
     </ul>
   </li>
   <li>Docker Compose 원격명령 실행
     <ul>
       <li>DOCKER_HOST 환경변수를 셋팅합니다.</li>
-      <li><code class="highlighter-rouge">DOCKER_HOST=tcp://192.168.0.100:2375 docker-compose up -d</code></li>
+      <li><code class="language-plaintext highlighter-rouge">DOCKER_HOST=tcp://192.168.0.100:2375 docker-compose up -d</code></li>
     </ul>
   </li>
 </ul>
@@ -535,7 +535,7 @@ DOCKER_HOST=${TARGET_DEPLOY_TCP} docker-compose -p ${DOCKER_APP_NAME} -f docker-
 
 <p><img src="https://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/nginx-load-balance.png" alt="nginx"></p>
 
-<p>nginx는 무료면서 훌륭한 성능을 자랑하는 로드밸런서입니다. <code class="highlighter-rouge">80포트</code>로 들어온 요청을 <code class="highlighter-rouge">8080포트</code>, <code class="highlighter-rouge">8081포트</code>로 분산할 수 있고 health check를 통해 포트가 죽어있다면 살아있는 포트로 요청을 보내게 됩니다.</p>
+<p>nginx는 무료면서 훌륭한 성능을 자랑하는 로드밸런서입니다. <code class="language-plaintext highlighter-rouge">80포트</code>로 들어온 요청을 <code class="language-plaintext highlighter-rouge">8080포트</code>, <code class="language-plaintext highlighter-rouge">8081포트</code>로 분산할 수 있고 health check를 통해 포트가 죽어있다면 살아있는 포트로 요청을 보내게 됩니다.</p>
 
 <p>보통은 서로다른 IP의 서버를 로드밸런스 하기 위해 사용하지만 한 IP에서 서로 다른 포트를 지정하는 것도 가능합니다. 도커를 사용하지 않는다면 같은 서비스를 하나의 서버에 여러개 띄운다는 걸 상상하기 어렵지만 도커이기 때문에 쉽게 적용할 수 있습니다.</p>
 
@@ -584,16 +584,16 @@ fi
 <p><img src="https://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/service-discovery.png" alt="service discovery"></p>
 
 <ol>
-  <li>새로운 서버가 추가되면 서버 정보를 <code class="highlighter-rouge">key/value store</code>에 추가함</li>
+  <li>새로운 서버가 추가되면 서버 정보를 <code class="language-plaintext highlighter-rouge">key/value store</code>에 추가함</li>
   <li>
-<code class="highlighter-rouge">key/value store</code>는 directory 형태로 값을 저장함. /services/web 하위를 읽으면 전체 web 서버 정보를 읽을 수 있음</li>
+<code class="language-plaintext highlighter-rouge">key/value store</code>는 directory 형태로 값을 저장함. /services/web 하위를 읽으면 전체 web 서버 정보를 읽을 수 있음</li>
   <li>
-<code class="highlighter-rouge">key/value store</code>를 watch하고 있던 <code class="highlighter-rouge">configuration manager</code>가 값이 추가되었다는 이벤트를 받음</li>
+<code class="language-plaintext highlighter-rouge">key/value store</code>를 watch하고 있던 <code class="language-plaintext highlighter-rouge">configuration manager</code>가 값이 추가되었다는 이벤트를 받음</li>
   <li>이벤트를 받으면 템플릿 파일을 기반으로 새로운 설정파일을 생성</li>
   <li>새로운 설정파일을 만들어 기존파일을 대체하고 서비스를 재시작함</li>
 </ol>
 
-<p>이러한 개념을 구현한 다양한 서비스와 툴이 존재하고 각기 다른 특징을 갖습니다. 여러가지 서비스에 대해선 다음기회에.. 알아보고 여기서는 <code class="highlighter-rouge">docker-gen</code>에 대해서 알아봅니다.</p>
+<p>이러한 개념을 구현한 다양한 서비스와 툴이 존재하고 각기 다른 특징을 갖습니다. 여러가지 서비스에 대해선 다음기회에.. 알아보고 여기서는 <code class="language-plaintext highlighter-rouge">docker-gen</code>에 대해서 알아봅니다.</p>
 
 <p><strong>docker-gen</strong></p>
 
@@ -605,7 +605,7 @@ fi
       <li>도커 데몬이 가지고 있는 컨테이너의 정보를 그대로 이용</li>
       <li>컨테이너를 실행할때 입력한 환경변수를 읽음</li>
       <li>
-<code class="highlighter-rouge">VIRTUAL_HOST=www.likehs.com</code>과 같이 환경변수를 지정하면 이를 보고 nginx의 virtual host 설정파일들을 구성함</li>
+<code class="language-plaintext highlighter-rouge">VIRTUAL_HOST=www.likehs.com</code>과 같이 환경변수를 지정하면 이를 보고 nginx의 virtual host 설정파일들을 구성함</li>
     </ul>
   </li>
   <li>configuration manager
@@ -615,7 +615,7 @@ fi
       <li>template은 go의 <a href="https://golang.org/pkg/text/template/">text/template language</a>을 그대로 사용하여 매우 자유롭게 구성가능</li>
       <li>조건식/반복문등을 이용하여 template 파일 구성</li>
       <li>template 파일을 가지고 설정파일을 만든 후 원하는 명령어를 수행</li>
-      <li>명령어는 보통 서비스 재시작 (<code class="highlighter-rouge">nginx -s reload</code>)</li>
+      <li>명령어는 보통 서비스 재시작 (<code class="language-plaintext highlighter-rouge">nginx -s reload</code>)</li>
     </ul>
   </li>
 </ul>
@@ -624,11 +624,11 @@ fi
 
 <p>홈쇼핑처럼의 웹서비스는 컨테이너 앞단에 nginx를 두고 docker-gen을 이용하여 nginx의 설정파일을 변경하고 프로세스를 재시작하고 있습니다.</p>
 
-<p><code class="highlighter-rouge">blue 컨테이너 실행</code> &gt; <code class="highlighter-rouge">docker-gen 이벤트 수신</code> &gt; <code class="highlighter-rouge">nginx 설정파일에 blue container 정보 추가</code> &gt; <code class="highlighter-rouge">nginx 재시작</code></p>
+<p><code class="language-plaintext highlighter-rouge">blue 컨테이너 실행</code> &gt; <code class="language-plaintext highlighter-rouge">docker-gen 이벤트 수신</code> &gt; <code class="language-plaintext highlighter-rouge">nginx 설정파일에 blue container 정보 추가</code> &gt; <code class="language-plaintext highlighter-rouge">nginx 재시작</code></p>
 
 <p>이어서,</p>
 
-<p><code class="highlighter-rouge">green 컨테이너 중지</code> &gt; <code class="highlighter-rouge">docker-gen 이벤트 수신</code> &gt; <code class="highlighter-rouge">nginx 설정파일에 green container 정보 제거</code> &gt; <code class="highlighter-rouge">nginx 재시작</code></p>
+<p><code class="language-plaintext highlighter-rouge">green 컨테이너 중지</code> &gt; <code class="language-plaintext highlighter-rouge">docker-gen 이벤트 수신</code> &gt; <code class="language-plaintext highlighter-rouge">nginx 설정파일에 green container 정보 제거</code> &gt; <code class="language-plaintext highlighter-rouge">nginx 재시작</code></p>
 
 <h2 id="자동화">
 <a class="anchor" href="#%EC%9E%90%EB%8F%99%ED%99%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>자동화</h2>
@@ -643,7 +643,7 @@ fi
   <li>기능별 브랜치
     <ul>
       <li>
-<code class="highlighter-rouge">send-sms-after-order</code>와 같이 기능별로 브랜치를 만듬</li>
+<code class="language-plaintext highlighter-rouge">send-sms-after-order</code>와 같이 기능별로 브랜치를 만듬</li>
       <li>master 브랜치로 머지 후 제거됨</li>
     </ul>
   </li>
@@ -672,7 +672,7 @@ fi
 
 <p>jenkins에 <a href="https://wiki.jenkins-ci.org/display/JENKINS/Slack+Plugin">slack플러그인</a>을 설치하면 시작, 배포 후 성공/실패 여부를 슬랙 메시지로 받을 수 있습니다.</p>
 
-<p>jenkins는 <code class="highlighter-rouge">테스트</code> &gt; <code class="highlighter-rouge">이미지 빌드</code> &gt; <code class="highlighter-rouge">배포</code> 과정을 수행합니다.</p>
+<p>jenkins는 <code class="language-plaintext highlighter-rouge">테스트</code> &gt; <code class="language-plaintext highlighter-rouge">이미지 빌드</code> &gt; <code class="language-plaintext highlighter-rouge">배포</code> 과정을 수행합니다.</p>
 
 <h2 id="롤백">
 <a class="anchor" href="#%EB%A1%A4%EB%B0%B1" aria-hidden="true"><span class="octicon octicon-link"></span></a>롤백</h2>
@@ -687,7 +687,7 @@ docker build --force-rm=true -f Dockerfile -t ${DOCKER_REGISTRY_NAME}-app:$COMMI
 docker tag -f ${DOCKER_REGISTRY_NAME}-app:$COMMIT_HASH ${DOCKER_REGISTRY_NAME}-app:latest</pre></noscript>
 <script src="https://gist.github.com/subicura/bd3b275d5330b9eef983ce4e626b6edd.js"> </script>
 
-<p>jenkins에서 이미지를 빌드할때 현재 <code class="highlighter-rouge">git commit hash</code>로 태그로 만듭니다. 그리고 해당 이미지를 다시 배포하려면 해당 git commit hash를 latest로 태그한 후 다시 배포하면 됩니다.</p>
+<p>jenkins에서 이미지를 빌드할때 현재 <code class="language-plaintext highlighter-rouge">git commit hash</code>로 태그로 만듭니다. 그리고 해당 이미지를 다시 배포하려면 해당 git commit hash를 latest로 태그한 후 다시 배포하면 됩니다.</p>
 
 <h2 id="그래서">
 <a class="anchor" href="#%EA%B7%B8%EB%9E%98%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>그래서</h2>
@@ -805,7 +805,7 @@ docker tag -f ${DOCKER_REGISTRY_NAME}-app:$COMMIT_HASH ${DOCKER_REGISTRY_NAME}-a
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1606053567423074000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1608030295159555000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

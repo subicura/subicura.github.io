@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1606053567423074000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1608030295159555000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -307,13 +307,13 @@
 <a class="anchor" href="#%EA%B2%B0%EB%A1%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>결론</h3>
 
 <ul>
-  <li>적당한 규모(수십 대 이내)에서는 <code class="highlighter-rouge">swarm</code>
+  <li>적당한 규모(수십 대 이내)에서는 <code class="language-plaintext highlighter-rouge">swarm</code>
 </li>
-  <li>큰 규모의 클러스터에서는 <code class="highlighter-rouge">kubernetes</code>
+  <li>큰 규모의 클러스터에서는 <code class="language-plaintext highlighter-rouge">kubernetes</code>
 </li>
-  <li>AWS에서 단순하게 사용한다면 <code class="highlighter-rouge">ECS</code>
+  <li>AWS에서 단순하게 사용한다면 <code class="language-plaintext highlighter-rouge">ECS</code>
 </li>
-  <li>HashiCorp팬이라면 <code class="highlighter-rouge">Nomad</code>
+  <li>HashiCorp팬이라면 <code class="language-plaintext highlighter-rouge">Nomad</code>
 </li>
 </ul>
 
@@ -413,15 +413,15 @@
 </li>
   <li>
 <a href="https://github.com/cogitatio/vagrant-hostsupdater">vagrant-hostsupdater</a> plugin 설치 
- <code class="highlighter-rouge">vagrant plugin install vagrant-hostsupdater</code>
+ <code class="language-plaintext highlighter-rouge">vagrant plugin install vagrant-hostsupdater</code>
 </li>
   <li>데모 파일 다운로드 <a href="https://github.com/subicura/docker-swarm-demo">GitHub - docker swarm demo</a>
 </li>
   <li>가상머신 생성
-데모 디렉토리에서 <code class="highlighter-rouge">vagrant up</code> 명령어 실행 -&gt; 자동으로 생성!</li>
+데모 디렉토리에서 <code class="language-plaintext highlighter-rouge">vagrant up</code> 명령어 실행 -&gt; 자동으로 생성!</li>
 </ol>
 
-<p>가상머신이 정상적으로 생성되었는지 확인하려면 <code class="highlighter-rouge">vagrant status</code>, 가상머신을 삭제하려면 <code class="highlighter-rouge">vagrant destroy</code> 를 실행합니다. 가상머신에 접속하는 명령어는  <code class="highlighter-rouge">vagrant ssh [가상머신이름]</code>입니다.</p>
+<p>가상머신이 정상적으로 생성되었는지 확인하려면 <code class="language-plaintext highlighter-rouge">vagrant status</code>, 가상머신을 삭제하려면 <code class="language-plaintext highlighter-rouge">vagrant destroy</code> 를 실행합니다. 가상머신에 접속하는 명령어는  <code class="language-plaintext highlighter-rouge">vagrant ssh [가상머신이름]</code>입니다.</p>
 
 <div class="asciinema-player-section">
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/vagrant-up.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>vagrant up</figcaption>
@@ -432,7 +432,7 @@
 
 <p>가상머신이 정상적으로 생성되었으면 스웜 클러스터를 만들어보겠습니다. 스웜 클러스터는 매니저 노드를 먼저 만들고 매니저 노드가 생성한 토큰을 가지고 워커 노드에서 매니저 노드로 접속하면 됩니다.</p>
 
-<p>먼저, <code class="highlighter-rouge">core-01</code>서버를 매니저 노드로 설정합니다. <code class="highlighter-rouge">swarm init</code>명령어를 사용합니다.</p>
+<p>먼저, <code class="language-plaintext highlighter-rouge">core-01</code>서버를 매니저 노드로 설정합니다. <code class="language-plaintext highlighter-rouge">swarm init</code>명령어를 사용합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -468,7 +468,7 @@ To add a manager to this swarm, run <span class="s1">'docker swarm join-token ma
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>순식간에 매니저 노드가 생성되었습니다. <code class="highlighter-rouge">swarm init</code>명령어를 실행하면 친절하게 워커 노드에서 실행할 명령어를 알려줍니다. <del>친절한도커씨</del> 명령어를 그대로 복사하여 2, 3번 서버에서 각각 실행합니다.</p>
+<p>순식간에 매니저 노드가 생성되었습니다. <code class="language-plaintext highlighter-rouge">swarm init</code>명령어를 실행하면 친절하게 워커 노드에서 실행할 명령어를 알려줍니다. <del>친절한도커씨</del> 명령어를 그대로 복사하여 2, 3번 서버에서 각각 실행합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -519,7 +519,7 @@ q5pa26ik11g9surws03quvrsk    core-02   Ready   Active
 <p>명령어 3줄로 클러스터가 생성되었습니다. 도커 외에 아무것도 설치하지 않았고 어떤 agent도 실행하지 않았습니다. 이렇게 쉽게 생성되는 클러스터 보셨나요?</p>
 
 <blockquote>
-  <p>매니저 노드가 관리하는 정보는  <code class="highlighter-rouge">/var/lib/docker/swarm</code>에 저장됩니다.</p>
+  <p>매니저 노드가 관리하는 정보는  <code class="language-plaintext highlighter-rouge">/var/lib/docker/swarm</code>에 저장됩니다.</p>
 </blockquote>
 
 <div class="asciinema-player-section">
@@ -531,7 +531,7 @@ q5pa26ik11g9surws03quvrsk    core-02   Ready   Active
 
 <p>클러스터가 생성되었으니 간단한 웹 애플리케이션 서비스를 생성해보겠습니다.</p>
 
-<p>서비스를 생성하려면 <code class="highlighter-rouge">service create</code>명령어를 이용합니다. <code class="highlighter-rouge">run</code>명령어와 아주 유사합니다.</p>
+<p>서비스를 생성하려면 <code class="language-plaintext highlighter-rouge">service create</code>명령어를 이용합니다. <code class="language-plaintext highlighter-rouge">run</code>명령어와 아주 유사합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -553,9 +553,9 @@ q5pa26ik11g9surws03quvrsk    core-02   Ready   Active
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">subicura/whoami:1</code> 이미지는 서버의 hostname을 출력하는 단순한 웹 애플리케이션입니다. 서비스의 이름을 <code class="highlighter-rouge">whoami</code> 로 지정했고 4567 포트를 오픈하였습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">subicura/whoami:1</code> 이미지는 서버의 hostname을 출력하는 단순한 웹 애플리케이션입니다. 서비스의 이름을 <code class="language-plaintext highlighter-rouge">whoami</code> 로 지정했고 4567 포트를 오픈하였습니다.</p>
 
-<p>서비스가 잘 생성되었는지 <code class="highlighter-rouge">service ls</code>명령어로 확인해보겠습니다.</p>
+<p>서비스가 잘 생성되었는지 <code class="language-plaintext highlighter-rouge">service ls</code>명령어로 확인해보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -575,7 +575,7 @@ beepr6q5kdm7  <span class="nb">whoami  </span>replicated  0/1       subicura/who
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">whoami</code>라는 서비스가 보입니다. 아직 컨테이너가 생성되지 않아 REPLICAS 상태가 <code class="highlighter-rouge">0/1</code>입니다. 좀 더 상세한 상태를 확인하기 위해 <code class="highlighter-rouge">service ps</code>명령어를 입력합니다.</p>
+<p><code class="language-plaintext highlighter-rouge">whoami</code>라는 서비스가 보입니다. 아직 컨테이너가 생성되지 않아 REPLICAS 상태가 <code class="language-plaintext highlighter-rouge">0/1</code>입니다. 좀 더 상세한 상태를 확인하기 위해 <code class="language-plaintext highlighter-rouge">service ps</code>명령어를 입력합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -595,7 +595,7 @@ wnt5m97ci36t  whoami.1  subicura/whoami:1  core-01  Running        Preparing 7 s
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>서비스의 상태와 어떤 노드에서 실행 중인지를 상세하게 확인할 수 있습니다. 현재 상태가 <code class="highlighter-rouge">Preparing</code>인걸 보니 이미지를 다운 받는 중인 것 같습니다. 조금만 기다리고 컨테이너가 실행되면 상태가 <code class="highlighter-rouge">Running</code>으로 바뀝니다.</p>
+<p>서비스의 상태와 어떤 노드에서 실행 중인지를 상세하게 확인할 수 있습니다. 현재 상태가 <code class="language-plaintext highlighter-rouge">Preparing</code>인걸 보니 이미지를 다운 받는 중인 것 같습니다. 조금만 기다리고 컨테이너가 실행되면 상태가 <code class="language-plaintext highlighter-rouge">Running</code>으로 바뀝니다.</p>
 
 <p>정상적으로 서비스가 실행되었는지 HTTP 요청으로 테스트해보겠습니다.</p>
 
@@ -614,7 +614,7 @@ cfb152786b87
 
 <p>와우! 첫번째 서비스를 성공적으로 생성하였습니다.</p>
 
-<p><code class="highlighter-rouge">core-01</code>에서 테스트를 했는데 다른 서버도 테스트해볼까요?</p>
+<p><code class="language-plaintext highlighter-rouge">core-01</code>에서 테스트를 했는데 다른 서버도 테스트해볼까요?</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -633,7 +633,7 @@ cfb152786b87
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>분명 컨테이너는  <code class="highlighter-rouge">core-01</code>노드에서 실행중인데 모든 노드에서 정상적으로 응답하고 있습니다. 어떻게 된일일까요?</p>
+<p>분명 컨테이너는  <code class="language-plaintext highlighter-rouge">core-01</code>노드에서 실행중인데 모든 노드에서 정상적으로 응답하고 있습니다. 어떻게 된일일까요?</p>
 
 <div class="asciinema-player-section">
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-25-container-orchestration-with-docker-swarm/basic-web-application.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>basic web application</figcaption>
@@ -665,7 +665,7 @@ cfb152786b87
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/replication.png" alt="service replication"></p>
 
-<p><code class="highlighter-rouge">service scale</code>명령어를 이용하여 서비스 개수를 늘려보겠습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">service scale</code>명령어를 이용하여 서비스 개수를 늘려보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -683,7 +683,7 @@ cfb152786b87
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">serivice ps</code>명령어를 이용하여 상태를 확인합니다.</p>
+<p><code class="language-plaintext highlighter-rouge">serivice ps</code>명령어를 이용하여 상태를 확인합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -759,7 +759,7 @@ e970ff9ed9c6
 
 <p>스웜은 컨테이너가 실행되면 ingress에서 해당 컨테이너로 요청을 보내기 시작하는데 웹 서버가 부팅되는 동안 문제가 있습니다. 바로 위에 시연 리플레이를 보면 curl 테스트를 하는 도중 에러가 발생하는 걸 확인할 수 있습니다. ingress는 컨테이너가 실행되면 요청을 보내기 때문에 문제가 없을거라고 생각할 수 있지만 컨테이너가 실행되고 웹 서버가 완전히 실행되기 전에 요청을 보내면 서버를 찾을 수 없다는 메시지를 볼 수 있고 이러한 문제를 해결하기 위해 좀 더 자세한 상태 체크 방식이 필요하게 되었습니다.</p>
 
-<p>도커 1.12버전에서  <code class="highlighter-rouge">HEALTHCHECK</code>명령어가 추가되었고 쉘 스크립트를 작성하여 좀 더 정확한 상태를 체크 할 수 있습니다.</p>
+<p>도커 1.12버전에서  <code class="language-plaintext highlighter-rouge">HEALTHCHECK</code>명령어가 추가되었고 쉘 스크립트를 작성하여 좀 더 정확한 상태를 체크 할 수 있습니다.</p>
 
 <noscript><pre>FROM ruby:2.3-alpine
 MAINTAINER subicura@subicura.com
@@ -774,9 +774,9 @@ CMD bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 
 <p>아주 익숙한 도커파일샘플에 HEALTHCHECK 명령어를 추가했습니다. HEALTHCHECK 부분을 보면 10초마다 wget을 이용하여 4567 포트를 체크하는 걸 볼 수 있습니다. 스크립트(wget)가 0을 리턴하면 정상이라고 판단하고 그때서야 요청을 보내게 됩니다.</p>
 
-<p>처음 테스트로 생성한 서비스를 <code class="highlighter-rouge">subicura/whoami:2</code>이미지로 업데이트 해보겠습니다. 버전 1과 차이점은 HEALTHCHECK 유무입니다. HEALTHCHECK 옵션이 없다면 업데이트하는 동안 순간적으로 에러가 발생할 수 있는데 그런 문제를 방지해 줍니다.</p>
+<p>처음 테스트로 생성한 서비스를 <code class="language-plaintext highlighter-rouge">subicura/whoami:2</code>이미지로 업데이트 해보겠습니다. 버전 1과 차이점은 HEALTHCHECK 유무입니다. HEALTHCHECK 옵션이 없다면 업데이트하는 동안 순간적으로 에러가 발생할 수 있는데 그런 문제를 방지해 줍니다.</p>
 
-<p><code class="highlighter-rouge">service update</code>명령어를 이용하여 서비스를 업데이트합니다.</p>
+<p><code class="language-plaintext highlighter-rouge">service update</code>명령어를 이용하여 서비스를 업데이트합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -798,7 +798,7 @@ CMD bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">service ps</code>명령어로 업데이트 상태를 확인해보겠습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">service ps</code>명령어로 업데이트 상태를 확인해보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -843,7 +843,7 @@ xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/overlay-network.png" alt="overlay network"></p>
 
-<p><code class="highlighter-rouge">network create</code>명령어로 오버레이 네트워크를 생성합니다.</p>
+<p><code class="language-plaintext highlighter-rouge">network create</code>명령어로 오버레이 네트워크를 생성합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -865,7 +865,7 @@ xga086cubnj3  whoami.5      subicura/whoami:1  core-02  Running        Running 9
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>잘 생성되었는지 <code class="highlighter-rouge">network ls</code>명령어로 확인해보겠습니다.</p>
+<p>잘 생성되었는지 <code class="language-plaintext highlighter-rouge">network ls</code>명령어로 확인해보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -919,7 +919,7 @@ f41f0c773519        none                null                <span class="nb">loc
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">--network</code> 옵션으로 어느 네트워크에 속할지 정의하였습니다. backend 네트워크에 속한 redis 서비스는 외부 네트워크에서는 접근할 수 없고 backend 네트워크 상에서 원래 포트인 6379로 접속할 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">--network</code> 옵션으로 어느 네트워크에 속할지 정의하였습니다. backend 네트워크에 속한 redis 서비스는 외부 네트워크에서는 접근할 수 없고 backend 네트워크 상에서 원래 포트인 6379로 접속할 수 있습니다.</p>
 
 <p>redis 서비스가 제대로 생성되었다면 telnet명령어로 테스트해보겠습니다.</p>
 
@@ -950,7 +950,7 @@ QUIT
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>외부 네트워크에서는 redis 서버에 접근할 수 없으므로 접속 테스트용 컨테이너를 생성하였습니다. <code class="highlighter-rouge">--network</code>옵션으로 backend 네트워크에 접속하였고 redis 서비스의 이름이 곧 도메인명이므로 바로 접속할 수 있습니다.</p>
+<p>외부 네트워크에서는 redis 서버에 접근할 수 없으므로 접속 테스트용 컨테이너를 생성하였습니다. <code class="language-plaintext highlighter-rouge">--network</code>옵션으로 backend 네트워크에 접속하였고 redis 서비스의 이름이 곧 도메인명이므로 바로 접속할 수 있습니다.</p>
 
 <blockquote>
   <p>스웜은 서비스가 실행되면 내부 DNS에 자동으로 도메인 정보를 등록합니다. 따로 IP를 관리할 필요 없이 서비스명으로 접근할 수 있습니다.</p>
@@ -986,7 +986,7 @@ QUIT
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>redis 서버와 통신해야 하므로 backend 네트워크를 지정했고 <code class="highlighter-rouge">--replicas</code>옵션을 이용하여 3개를 생성하도록 했습니다. 외부의 4568 포트로 접근할 수 있도록 포트를 오픈 했고 redis 서버의 도메인명을 환경변수로 전달했습니다.</p>
+<p>redis 서버와 통신해야 하므로 backend 네트워크를 지정했고 <code class="language-plaintext highlighter-rouge">--replicas</code>옵션을 이용하여 3개를 생성하도록 했습니다. 외부의 4568 포트로 접근할 수 있도록 포트를 오픈 했고 redis 서버의 도메인명을 환경변수로 전달했습니다.</p>
 
 <p>이제 테스트해볼까요?</p>
 
@@ -1104,7 +1104,7 @@ curl core-01:4568
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">my-passsword</code>라는 이름의 비밀키에 <code class="highlighter-rouge">this is my password!</code>라는 내용을 저장하였습니다. 이제 이 키를 사용할 서비스를 하나 생성하겠습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">my-passsword</code>라는 이름의 비밀키에 <code class="language-plaintext highlighter-rouge">this is my password!</code>라는 내용을 저장하였습니다. 이제 이 키를 사용할 서비스를 하나 생성하겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1130,7 +1130,7 @@ curl core-01:4568
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">--secret</code>옵션으로 어떤 키를 사용할지 지정하면 <code class="highlighter-rouge">/run/secrest</code>디렉토리 밑에 키 이름의 파일로 마운트 됩니다. <code class="highlighter-rouge">subicura/secret</code> 이미지는 파일의 내용을 출력해주는 웹 애플리케이션으로 4569포트로 오픈하였습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">--secret</code>옵션으로 어떤 키를 사용할지 지정하면 <code class="language-plaintext highlighter-rouge">/run/secrest</code>디렉토리 밑에 키 이름의 파일로 마운트 됩니다. <code class="language-plaintext highlighter-rouge">subicura/secret</code> 이미지는 파일의 내용을 출력해주는 웹 애플리케이션으로 4569포트로 오픈하였습니다.</p>
 
 <p>잘 동작하는지 테스트해보겠습니다.</p>
 
@@ -1161,9 +1161,9 @@ curl core-01:4568
 
 <p>스웜은 매니저 노드에서 모든 서비스를 관리할 수 있고 서비스가 생성된 것을 체크하면 무언가를 자동화할 수 있습니다. <a href="https://traefik.io/">Traefik</a>은 이러한 아이디어를 이용해 웹 애플리케이션이 생성되면 자동으로 도메인을 만들고 내부 서비스로 연결해줍니다.</p>
 
-<p>예를 들어 <code class="highlighter-rouge">whoami</code>라는 서비스를 만들면 <code class="highlighter-rouge">whoami.local.dev</code>도메인으로 접속할 수 있게 해주고 <code class="highlighter-rouge">counter</code>라는 서비스를 만들면 <code class="highlighter-rouge">counter.local.dev</code>도메인으로 접속할 수 있게 해줍니다.</p>
+<p>예를 들어 <code class="language-plaintext highlighter-rouge">whoami</code>라는 서비스를 만들면 <code class="language-plaintext highlighter-rouge">whoami.local.dev</code>도메인으로 접속할 수 있게 해주고 <code class="language-plaintext highlighter-rouge">counter</code>라는 서비스를 만들면 <code class="language-plaintext highlighter-rouge">counter.local.dev</code>도메인으로 접속할 수 있게 해줍니다.</p>
 
-<p>테스트를 위해 도메인 정보를 <code class="highlighter-rouge">/etc/hosts</code>에 추가합니다.</p>
+<p>테스트를 위해 도메인 정보를 <code class="language-plaintext highlighter-rouge">/etc/hosts</code>에 추가합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1172,7 +1172,7 @@ curl core-01:4568
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>프록시로 연결하기 위해 <code class="highlighter-rouge">frontend</code>라는 네트워크를 생성합니다.</p>
+<p>프록시로 연결하기 위해 <code class="language-plaintext highlighter-rouge">frontend</code>라는 네트워크를 생성합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1181,7 +1181,7 @@ curl core-01:4568
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>이제 <code class="highlighter-rouge">traefik</code>서비스를 frontend네트워크에 연결합니다.</p>
+<p>이제 <code class="language-plaintext highlighter-rouge">traefik</code>서비스를 frontend네트워크에 연결합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1212,7 +1212,7 @@ curl core-01:4568
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">--constraint</code> 옵션을 이용하여 매니저 노드에서 실행하게 배포를 제한하였습니다. 스웜 서비스 정보를 얻기 위해서는 반드시 매니저 노드에서 실행되어야 합니다. 그리고 <code class="highlighter-rouge">--mount</code> 옵션을 이용해 호스트의 도커 소켓을 마운트 하였습니다. <code class="highlighter-rouge">docker run -v</code> 옵션과 유사한데 service를 만들 때는 <code class="highlighter-rouge">--mount</code> 옵션을 사용합니다. 80포트는 실제 웹 서비스를 제공하기 위해 사용할 포트고 8080은 관리자용 포트입니다.</p>
+<p><code class="language-plaintext highlighter-rouge">--constraint</code> 옵션을 이용하여 매니저 노드에서 실행하게 배포를 제한하였습니다. 스웜 서비스 정보를 얻기 위해서는 반드시 매니저 노드에서 실행되어야 합니다. 그리고 <code class="language-plaintext highlighter-rouge">--mount</code> 옵션을 이용해 호스트의 도커 소켓을 마운트 하였습니다. <code class="language-plaintext highlighter-rouge">docker run -v</code> 옵션과 유사한데 service를 만들 때는 <code class="language-plaintext highlighter-rouge">--mount</code> 옵션을 사용합니다. 80포트는 실제 웹 서비스를 제공하기 위해 사용할 포트고 8080은 관리자용 포트입니다.</p>
 
 <p>관리자 페이지에 접속해보겠습니다.</p>
 
@@ -1237,19 +1237,19 @@ curl core-01:4568
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>traefik과 접속할 수 있도록 frontend네트워크에 연결했고 <code class="highlighter-rouge">--label</code>옵션으로 내부적으로 사용하는 웹 포트를 알려주었습니다. traefik은 <code class="highlighter-rouge">traefik.port</code>라벨의 값을 읽어 해당 포트로 리버스 프록시를 연결합니다. portainer는 스웜을 관리해주는 툴이기 때문에 매니저 노드에 실행하도록 했습니다.</p>
+<p>traefik과 접속할 수 있도록 frontend네트워크에 연결했고 <code class="language-plaintext highlighter-rouge">--label</code>옵션으로 내부적으로 사용하는 웹 포트를 알려주었습니다. traefik은 <code class="language-plaintext highlighter-rouge">traefik.port</code>라벨의 값을 읽어 해당 포트로 리버스 프록시를 연결합니다. portainer는 스웜을 관리해주는 툴이기 때문에 매니저 노드에 실행하도록 했습니다.</p>
 
-<p>서비스 이름을 portainer로 했기 때문에 서비스가 실행되면 traefik서비스가 자동으로 <code class="highlighter-rouge">portainer.local.dev</code>도메인 정보를 생성하고 portainer컨테이너의 9000번 포트로 연결합니다. 서비스를 생성하고 잠시 기다리면 프록시 설정이 자동으로 완료됩니다.</p>
+<p>서비스 이름을 portainer로 했기 때문에 서비스가 실행되면 traefik서비스가 자동으로 <code class="language-plaintext highlighter-rouge">portainer.local.dev</code>도메인 정보를 생성하고 portainer컨테이너의 9000번 포트로 연결합니다. 서비스를 생성하고 잠시 기다리면 프록시 설정이 자동으로 완료됩니다.</p>
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/traefik-portainer.png" alt="traefik dashboard - portainer"></p>
 
-<p>traefik 관리자 화면에 portainer가 등록된 모습이 보입니다! 이제 실제로 <code class="highlighter-rouge">portainer.local.dev</code>에 접속해보겠습니다.</p>
+<p>traefik 관리자 화면에 portainer가 등록된 모습이 보입니다! 이제 실제로 <code class="language-plaintext highlighter-rouge">portainer.local.dev</code>에 접속해보겠습니다.</p>
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/portainer-1.png" alt="portainer dashboard">
 <img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/portainer-2.png" alt="portainer services">
 <img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/portainer-3.png" alt="portainer swarm"></p>
 
-<p>portainer도 역시 접속 성공입니다! 이제 어떤 서비스도 frontend네트워크를 연결하고 <code class="highlighter-rouge">traefik.port</code> 라벨만 지정하면 자동으로 외부에 노출됩니다. 내친김에 아까 만든 <code class="highlighter-rouge">counter</code>서비스도 붙여보겠습니다.</p>
+<p>portainer도 역시 접속 성공입니다! 이제 어떤 서비스도 frontend네트워크를 연결하고 <code class="language-plaintext highlighter-rouge">traefik.port</code> 라벨만 지정하면 자동으로 외부에 노출됩니다. 내친김에 아까 만든 <code class="language-plaintext highlighter-rouge">counter</code>서비스도 붙여보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1306,7 +1306,7 @@ docker service create <span class="nt">--name</span> counter <span class="se">\<
 <h3 id="스웜-서버-모니터링">
 <a class="anchor" href="#%EC%8A%A4%EC%9B%9C-%EC%84%9C%EB%B2%84-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>스웜 서버 모니터링</h3>
 
-<p>스웜은 자체적인 모니터링 서비스를 제공하지 않습니다. 따라서 적당한 툴을 선택하여 직접 운영해야 합니다. <a href="%EF%BF%BChttps://prometheus.io/">prometheus</a>와 <a href="%EF%BF%BChttp://grafana.org/">grafana</a>를 이용하면 아주 그럴듯한 모니터링 시스템을 만들 수 있습니다. 게다가 <code class="highlighter-rouge">docker stack</code>명령어를 이용하면 여러 개의 서비스를 일일이 생성하지 않고 하나의 docker-compose 설정 파일로 관리할 수 있습니다. 명령어 한 줄로 모든 서버에 정보를 수집하는 서비스를 생성하고 모니터링 툴을 설치할 수 있습니다.</p>
+<p>스웜은 자체적인 모니터링 서비스를 제공하지 않습니다. 따라서 적당한 툴을 선택하여 직접 운영해야 합니다. <a href="%EF%BF%BChttps://prometheus.io/">prometheus</a>와 <a href="%EF%BF%BChttp://grafana.org/">grafana</a>를 이용하면 아주 그럴듯한 모니터링 시스템을 만들 수 있습니다. 게다가 <code class="language-plaintext highlighter-rouge">docker stack</code>명령어를 이용하면 여러 개의 서비스를 일일이 생성하지 않고 하나의 docker-compose 설정 파일로 관리할 수 있습니다. 명령어 한 줄로 모든 서버에 정보를 수집하는 서비스를 생성하고 모니터링 툴을 설치할 수 있습니다.</p>
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-25-container-orchestration-with-docker-swarm/grafana.png" alt="grafana"></p>
 
@@ -1433,7 +1433,7 @@ docker service create <span class="nt">--name</span> counter <span class="se">\<
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1606053567423074000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1608030295159555000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

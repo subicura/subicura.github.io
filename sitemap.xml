@@ -54,11 +54,15 @@
 </url>
 <url>
 <loc>https://subicura.com/2019/05/19/kubernetes-basic-1.html</loc>
-<lastmod>2020-01-14T08:50:00+09:00</lastmod>
+<lastmod>2020-12-14T08:50:00+09:00</lastmod>
 </url>
 <url>
 <loc>https://subicura.com/2020/01/07/2019-dev-summary.html</loc>
 <lastmod>2020-01-14T08:50:00+09:00</lastmod>
+</url>
+<url>
+<loc>https://subicura.com/2020/12/13/kubernetes-basic-2.html</loc>
+<lastmod>2020-12-13T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>https://subicura.com/404</loc>
@@ -77,6 +81,9 @@
 </url>
 <url>
 <loc>https://subicura.com/tags/</loc>
+</url>
+<url>
+<loc>https://subicura.com/page2/</loc>
 </url>
 <url>
 <loc>https://subicura.com/remark/</loc>

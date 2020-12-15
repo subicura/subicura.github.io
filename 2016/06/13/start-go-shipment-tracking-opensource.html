@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1606053567423074000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1608030295159555000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -263,7 +263,7 @@
   <li>단점으로 검색이 어렵고 (구글에서 go를 입력해보자) 패키지관리 시스템이 npm, gem처럼 안정되지 않음</li>
 </ul>
 
-<p>배송조회는 <code class="highlighter-rouge">http요청</code> &gt; <code class="highlighter-rouge">html조회</code> &gt; <code class="highlighter-rouge">parsing</code> &gt; <code class="highlighter-rouge">응답</code>하는 과정을 가진 굉장히 단순한 서비스입니다. 새로운 언어를 적용하고 배우는데 가장 좋은 방법은 프로젝트를 한번 해보는 것이고 굉장히 적절한 사이즈의 프로젝트입니다.</p>
+<p>배송조회는 <code class="language-plaintext highlighter-rouge">http요청</code> &gt; <code class="language-plaintext highlighter-rouge">html조회</code> &gt; <code class="language-plaintext highlighter-rouge">parsing</code> &gt; <code class="language-plaintext highlighter-rouge">응답</code>하는 과정을 가진 굉장히 단순한 서비스입니다. 새로운 언어를 적용하고 배우는데 가장 좋은 방법은 프로젝트를 한번 해보는 것이고 굉장히 적절한 사이즈의 프로젝트입니다.</p>
 
 <h2 id="go로-개발하기">
 <a class="anchor" href="#go%EB%A1%9C-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Go로 개발하기</h2>
@@ -287,7 +287,7 @@
 <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA Community</a> 추천</li>
       <li>무료고 일반적으로 사용하기 쉽고 기능이 강력함</li>
       <li>GO, File watchers plugin 설치 필수</li>
-      <li>File watcher는 파일을 저장할때마다 <code class="highlighter-rouge">goimports</code>를 실행하여 코드스타일을 정리함</li>
+      <li>File watcher는 파일을 저장할때마다 <code class="language-plaintext highlighter-rouge">goimports</code>를 실행하여 코드스타일을 정리함</li>
     </ul>
   </li>
 </ul>
@@ -309,7 +309,7 @@
 
 <p><strong>테스트</strong></p>
 
-<p>Go는 특별한 라이브러리를 설치하지 않아도 바로 <code class="highlighter-rouge">xxxx_test.go</code>파일을 작성해서 테스트코드를 작성할 수 있습니다. 하지만 고오급 기능을 위해 <a href="http://goconvey.co/">goconvey</a>를 사용합니다. UI도 이쁘고 코드도 간결합니다. Go언어는 나온지 얼마 되지도 않았는데 이런툴이 있다는게 놀랍..</p>
+<p>Go는 특별한 라이브러리를 설치하지 않아도 바로 <code class="language-plaintext highlighter-rouge">xxxx_test.go</code>파일을 작성해서 테스트코드를 작성할 수 있습니다. 하지만 고오급 기능을 위해 <a href="http://goconvey.co/">goconvey</a>를 사용합니다. UI도 이쁘고 코드도 간결합니다. Go언어는 나온지 얼마 되지도 않았는데 이런툴이 있다는게 놀랍..</p>
 
 <p>HTML을 파싱하는게 주임무이기 때문에 테스트코드는 직접 택배사 서버로 HTTP요청을 하지 않고 <a href="https://github.com/jarcoal/httpmock">HTTP mocking</a>을 이용합니다. 목업을 사용하면 매번 실제서버로 요청을 날리지 않아도 되고 택배정보에 있는 개인 프라이버시도 숨길 수 있어 좋습니다. 샘플을 모으는게 관건!</p>
 
@@ -332,7 +332,7 @@
 
 <p><strong>이름/로고만들기</strong></p>
 
-<p>개발자들의 코딩시간 대부분을 잡아먹는다는 이름짓기 시간입니다. <code class="highlighter-rouge">shipment tracking library</code>보다는 뭔가 그럴듯한 이름을 짓는것이 좋습니다. 개인적으로 생명체가 마스코드인것이 성공하는 오픈소스라고 생각되는데 (github의 <a href="https://octodex.github.com/">octocat</a>, golang의 <a href="https://blog.golang.org/gopher">gopher</a>, docker의 <a href="https://blog.docker.com/2013/10/call-me-moby-dock/">moby dock</a>등..) 그에 따라 적당히 동물을 가지고 이름을 지었습니다. 배송이니까 새가 생각났고 delivery와 bird의 조합인 <strong>Delibird</strong>가 탄생하였습니다.</p>
+<p>개발자들의 코딩시간 대부분을 잡아먹는다는 이름짓기 시간입니다. <code class="language-plaintext highlighter-rouge">shipment tracking library</code>보다는 뭔가 그럴듯한 이름을 짓는것이 좋습니다. 개인적으로 생명체가 마스코드인것이 성공하는 오픈소스라고 생각되는데 (github의 <a href="https://octodex.github.com/">octocat</a>, golang의 <a href="https://blog.golang.org/gopher">gopher</a>, docker의 <a href="https://blog.docker.com/2013/10/call-me-moby-dock/">moby dock</a>등..) 그에 따라 적당히 동물을 가지고 이름을 지었습니다. 배송이니까 새가 생각났고 delivery와 bird의 조합인 <strong>Delibird</strong>가 탄생하였습니다.</p>
 
 <p>이제 이름을 지었으니 로고를 만듭니다. 직접 그릴순 없으니 심플한 무료 아이콘이 많은 <a href="https://icons8.com/#/ios">icons8.com</a>에서 새 아이콘을 하나 고르고 이쁘장한 색샘플을 모아놓은 <a href="http://flatuicolors.com/">flatuicolors.com</a>에서 보라색계열을 하나 선택합니다. 폰트도 밋밋하지 않게 <a href="https://www.google.com/fonts">구글웹폰트</a>에서 하나 고릅니다.</p>
 
@@ -346,7 +346,7 @@
 
 <p>오픈소스 프로젝트는 문서가 중요합니다. 문서에 오픈소스를 소개하고 발전 의지를 잘 표현해야 다른 개발자를 참여하게 만들 수 있고 잘 운영되는 듯한 느낌을 줍니다.</p>
 
-<p>첫번째로 필요한 건 <a href="https://github.com/purpleworks/delibird/blob/master/README.md"><code class="highlighter-rouge">README.md</code></a>파일 입니다. 이 파일은 github 첫화면에 보여지기 때문에 매우 중요합니다. 다음과 같은 항목을 기본으로 넣어줍니다.</p>
+<p>첫번째로 필요한 건 <a href="https://github.com/purpleworks/delibird/blob/master/README.md"><code class="language-plaintext highlighter-rouge">README.md</code></a>파일 입니다. 이 파일은 github 첫화면에 보여지기 때문에 매우 중요합니다. 다음과 같은 항목을 기본으로 넣어줍니다.</p>
 
 <ul>
   <li>기본소개 - 어떤 프로젝트인지 소개</li>
@@ -357,9 +357,9 @@
   <li>라이센스 - 라이센스 소개</li>
 </ul>
 
-<p>두번째로 필요한 건 <a href="https://github.com/purpleworks/delibird/blob/master/LICENSE"><code class="highlighter-rouge">LICENSE</code></a>파일입니다. 라이센스는 <a href="http://choosealicense.com/">다양한것들</a>중에 선택할 수 있는데 가장 심플한 MIT 라이센스를 선택합니다.</p>
+<p>두번째로 필요한 건 <a href="https://github.com/purpleworks/delibird/blob/master/LICENSE"><code class="language-plaintext highlighter-rouge">LICENSE</code></a>파일입니다. 라이센스는 <a href="http://choosealicense.com/">다양한것들</a>중에 선택할 수 있는데 가장 심플한 MIT 라이센스를 선택합니다.</p>
 
-<p>추가적으로 <a href="https://github.com/purpleworks/delibird/blob/master/CHANGELOG.md"><code class="highlighter-rouge">CHANGELOG.md</code></a>파일등을 추가합니다.</p>
+<p>추가적으로 <a href="https://github.com/purpleworks/delibird/blob/master/CHANGELOG.md"><code class="language-plaintext highlighter-rouge">CHANGELOG.md</code></a>파일등을 추가합니다.</p>
 
 <p><strong>웹페이지</strong></p>
 
@@ -374,7 +374,7 @@ $ git rm -rf .
 rm '.gitignore'</pre></noscript>
 <script src="https://gist.github.com/subicura/56599a77c63ea929f413a7ab8052c61e.js"> </script>
 
-<p>프로젝트에 <code class="highlighter-rouge">gh-pages</code>라는 브랜치를 만들고 html파일과 js,css파일등을 넣으면 끝입니다. 인터넷에서 무료 bootstrap landing 테마를 하나 다운받아 쓱싹 만들고 push합니다. github 조직이름이 purpleworks이고 프로젝트명이 delibird라면 <a href="http://purpleworks.github.io/delibird/">purpleworks.github.io/delibird</a>라는 URL로 자동으로 연결됩니다. 이를 통해 README.md로는 부족한 내용을 보여줄 수 있습니다.</p>
+<p>프로젝트에 <code class="language-plaintext highlighter-rouge">gh-pages</code>라는 브랜치를 만들고 html파일과 js,css파일등을 넣으면 끝입니다. 인터넷에서 무료 bootstrap landing 테마를 하나 다운받아 쓱싹 만들고 push합니다. github 조직이름이 purpleworks이고 프로젝트명이 delibird라면 <a href="http://purpleworks.github.io/delibird/">purpleworks.github.io/delibird</a>라는 URL로 자동으로 연결됩니다. 이를 통해 README.md로는 부족한 내용을 보여줄 수 있습니다.</p>
 
 <p>여기서는 배송조회 테스트를 해볼수 있으면 좋을것 같아 테스트 폼을 넣었습니다.</p>
 
@@ -390,8 +390,8 @@ rm '.gitignore'</pre></noscript>
     <ul>
       <li>대표적인 Test and Deploy 서비스</li>
       <li>
-<a href="https://github.com/purpleworks/delibird/blob/master/.travis.yml"><code class="highlighter-rouge">.travis.yml</code></a> 파일을 만들고 빌드 정보 입력</li>
-      <li>매 빌드마다 <code class="highlighter-rouge">go test</code>를 수행하고 결과를 알려줌</li>
+<a href="https://github.com/purpleworks/delibird/blob/master/.travis.yml"><code class="language-plaintext highlighter-rouge">.travis.yml</code></a> 파일을 만들고 빌드 정보 입력</li>
+      <li>매 빌드마다 <code class="language-plaintext highlighter-rouge">go test</code>를 수행하고 결과를 알려줌</li>
       <li>매 빌드가 끝나면 커버리지 정보를 coveralls로 전송하게 함</li>
     </ul>
   </li>
@@ -484,7 +484,7 @@ rm '.gitignore'</pre></noscript>
 </a>
 </p>
 
-<p>게다가, 누구든 쉽게 오픈소스로 부터 서버를 만들 수 있게 <a href="https://devcenter.heroku.com/articles/heroku-button">heroku button</a> 기능을 제공합니다. 소스폴더에 <a href="https://github.com/purpleworks/delibird/blob/master/app.json"><code class="highlighter-rouge">app.json</code></a> 파일만 만들어 놓으면 됩니다. 저 버튼을 클릭하면 바로 테스트 서버를 띄워볼 수 있습니다. 언제 이렇게 서버 띄우기 쉬운 세상이 되었나요? ㄷㄷ</p>
+<p>게다가, 누구든 쉽게 오픈소스로 부터 서버를 만들 수 있게 <a href="https://devcenter.heroku.com/articles/heroku-button">heroku button</a> 기능을 제공합니다. 소스폴더에 <a href="https://github.com/purpleworks/delibird/blob/master/app.json"><code class="language-plaintext highlighter-rouge">app.json</code></a> 파일만 만들어 놓으면 됩니다. 저 버튼을 클릭하면 바로 테스트 서버를 띄워볼 수 있습니다. 언제 이렇게 서버 띄우기 쉬운 세상이 되었나요? ㄷㄷ</p>
 
 <p><strong>커뮤니티</strong></p>
 
@@ -612,7 +612,7 @@ rm '.gitignore'</pre></noscript>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1606053567423074000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1608030295159555000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

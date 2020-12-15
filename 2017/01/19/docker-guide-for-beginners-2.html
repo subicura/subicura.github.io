@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1606053567423074000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1608030295159555000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -204,7 +204,7 @@
 <li class="toc-entry toc-h2"><a href="#정리">정리</a></li>
 </ul><p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png" alt="docker logo"></p>
 
-<p>이 글은 <code class="highlighter-rouge">초보를 위한 도커 안내서 - 설치부터 배포까지</code> 2번째 글입니다. 이번엔 도커 설치부터 컨테이너를 실행하고 컨테이너를 둘러보는 방법에 대해 설명합니다. 도커에 대해 1도 모르는 분들을 위해 아주 가볍게 자주 쓰는 명령어만 다루었기 때문에 모든 명령어가 궁금하신 분은 <a href="https://docs.docker.com/engine/reference/commandline/">여기</a>를 참고해주세요.</p>
+<p>이 글은 <code class="language-plaintext highlighter-rouge">초보를 위한 도커 안내서 - 설치부터 배포까지</code> 2번째 글입니다. 이번엔 도커 설치부터 컨테이너를 실행하고 컨테이너를 둘러보는 방법에 대해 설명합니다. 도커에 대해 1도 모르는 분들을 위해 아주 가볍게 자주 쓰는 명령어만 다루었기 때문에 모든 명령어가 궁금하신 분은 <a href="https://docs.docker.com/engine/reference/commandline/">여기</a>를 참고해주세요.</p>
 
 <hr>
 
@@ -250,7 +250,7 @@
 
 <p><strong>sudo 없이 사용하기</strong></p>
 
-<p>docker는 기본적으로 root권한이 필요합니다. root가 아닌 사용자가 sudo없이 사용하려면 해당 사용자를 <code class="highlighter-rouge">docker</code>그룹에 추가합니다.</p>
+<p>docker는 기본적으로 root권한이 필요합니다. root가 아닌 사용자가 sudo없이 사용하려면 해당 사용자를 <code class="language-plaintext highlighter-rouge">docker</code>그룹에 추가합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -339,7 +339,7 @@ Server:
 <p>Client와 Server 정보가 정상적으로 출력되었다면 설치가 완료된 것 입니다.</p>
 
 <blockquote>
-  <p>Server 정보가 안나오고 <code class="highlighter-rouge">Error response from daemon: Bad response from Docker engine</code>이라는 메시지가 출력되는 경우는 보통 docker daemon이 정상적으로 실행되지 않았거나 <code class="highlighter-rouge">sudo</code>를 입력하지 않은 경우입니다.</p>
+  <p>Server 정보가 안나오고 <code class="language-plaintext highlighter-rouge">Error response from daemon: Bad response from Docker engine</code>이라는 메시지가 출력되는 경우는 보통 docker daemon이 정상적으로 실행되지 않았거나 <code class="language-plaintext highlighter-rouge">sudo</code>를 입력하지 않은 경우입니다.</p>
 </blockquote>
 
 <p>혹시, 특이한 부분을 찾으셨나요? 버전정보가 클라이언트와 서버로 나뉘어져 있습니다. 도커는 하나의 실행파일이지만 실제로 클라이언트와 서버역할을 각각 할 수 있습니다. 도커 커맨드를 입력하면 도커 클라이언트가 도커 서버로 명령을 전송하고 결과를 받아 터미널에 출력해 줍니다.</p>
@@ -419,11 +419,11 @@ Server:
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>run ubuntu 16.04 container</figcaption>
 </div>
 
-<p><code class="highlighter-rouge">run</code>명령어를 사용하면 사용할 이미지가 저장되어 있는지 확인하고 없다면 다운로드(<code class="highlighter-rouge">pull</code>)를 한 후 컨테이너를 생성(<code class="highlighter-rouge">create</code>)하고 시작(<code class="highlighter-rouge">start</code>) 합니다.</p>
+<p><code class="language-plaintext highlighter-rouge">run</code>명령어를 사용하면 사용할 이미지가 저장되어 있는지 확인하고 없다면 다운로드(<code class="language-plaintext highlighter-rouge">pull</code>)를 한 후 컨테이너를 생성(<code class="language-plaintext highlighter-rouge">create</code>)하고 시작(<code class="language-plaintext highlighter-rouge">start</code>) 합니다.</p>
 
-<p>위 예제는 <code class="highlighter-rouge">ubuntu:16.04</code> 이미지를 다운받은 적이 없기 때문에 이미지를 다운로드 한 후 컨테이너가 실행되었습니다. 컨테이너는 정상적으로 실행됐지만 뭘 하라고 명령어를 전달하지 않았기 때문에 컨테이너는 생성되자마자 종료됩니다. 컨테이너는 프로세스이기 때문에 실행중인 프로세스가 없으면 컨테이너는 종료됩니다.</p>
+<p>위 예제는 <code class="language-plaintext highlighter-rouge">ubuntu:16.04</code> 이미지를 다운받은 적이 없기 때문에 이미지를 다운로드 한 후 컨테이너가 실행되었습니다. 컨테이너는 정상적으로 실행됐지만 뭘 하라고 명령어를 전달하지 않았기 때문에 컨테이너는 생성되자마자 종료됩니다. 컨테이너는 프로세스이기 때문에 실행중인 프로세스가 없으면 컨테이너는 종료됩니다.</p>
 
-<p>이번에는 <code class="highlighter-rouge">/bin/bash</code> 명령어를 입력해서 <code class="highlighter-rouge">ubuntu:16.04</code> 컨테이너를 실행해 보겠습니다.</p>
+<p>이번에는 <code class="language-plaintext highlighter-rouge">/bin/bash</code> 명령어를 입력해서 <code class="language-plaintext highlighter-rouge">ubuntu:16.04</code> 컨테이너를 실행해 보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -452,21 +452,21 @@ boot  etc  lib   media  opt  root  sbin  sys  usr
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-ubuntu-bash.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>run ubuntu 16.04 container with /bin/bash</figcaption>
 </div>
 
-<p>컨테이너 내부에 들어가기 위해 bash 쉘을 실행하고 키보드 입력을 위해 <code class="highlighter-rouge">-it</code> 옵션을 줍니다. 추가적으로 프로세스가 종료되면 컨테이너가 자동으로 삭제되도록 <code class="highlighter-rouge">--rm</code> 옵션도 추가하였습니다.</p>
+<p>컨테이너 내부에 들어가기 위해 bash 쉘을 실행하고 키보드 입력을 위해 <code class="language-plaintext highlighter-rouge">-it</code> 옵션을 줍니다. 추가적으로 프로세스가 종료되면 컨테이너가 자동으로 삭제되도록 <code class="language-plaintext highlighter-rouge">--rm</code> 옵션도 추가하였습니다.</p>
 
-<p>이번에는 바로 전에 이미지를 다운 받았기 때문에 이미지를 다운로드 하는 화면 없이 바로 실행되었습니다. <code class="highlighter-rouge">cat /etc/issue</code>와 <code class="highlighter-rouge">ls</code>를 실행해보면 ubuntu 리눅스인걸 알 수 있습니다. 뭔가 가벼운 가상머신 같나요?</p>
+<p>이번에는 바로 전에 이미지를 다운 받았기 때문에 이미지를 다운로드 하는 화면 없이 바로 실행되었습니다. <code class="language-plaintext highlighter-rouge">cat /etc/issue</code>와 <code class="language-plaintext highlighter-rouge">ls</code>를 실행해보면 ubuntu 리눅스인걸 알 수 있습니다. 뭔가 가벼운 가상머신 같나요?</p>
 
-<p><code class="highlighter-rouge">exit</code>로 bash 쉘을 종료하면 컨테이너도 같이 종료됩니다.</p>
+<p><code class="language-plaintext highlighter-rouge">exit</code>로 bash 쉘을 종료하면 컨테이너도 같이 종료됩니다.</p>
 
 <p>도커를 이용하여 가장 기본적인 컨테이너를 순식간에 만들어 보았습니다.</p>
 
 <h3 id="redis-container">
 <a class="anchor" href="#redis-container" aria-hidden="true"><span class="octicon octicon-link"></span></a>redis container</h3>
 
-<p>2번째 컨테이너는 <code class="highlighter-rouge">redis</code> 입니다. <a href="https://redis.io/">redis</a>는 메모리기반의 다양한 기능을 가진 스토리지입니다. 6379 포트로 통신하며 telnet 명령어로 테스트해 볼 수 있습니다. redis 컨테이너는 detached mode(백그라운드 모드)로 실행하기 위해 <code class="highlighter-rouge">-d</code> 옵션을 추가하고 <code class="highlighter-rouge">-p</code> 옵션을 추가하여 컨테이너의 포트를 호스트의 포트로 연결해보겠습니다.</p>
+<p>2번째 컨테이너는 <code class="language-plaintext highlighter-rouge">redis</code> 입니다. <a href="https://redis.io/">redis</a>는 메모리기반의 다양한 기능을 가진 스토리지입니다. 6379 포트로 통신하며 telnet 명령어로 테스트해 볼 수 있습니다. redis 컨테이너는 detached mode(백그라운드 모드)로 실행하기 위해 <code class="language-plaintext highlighter-rouge">-d</code> 옵션을 추가하고 <code class="language-plaintext highlighter-rouge">-p</code> 옵션을 추가하여 컨테이너의 포트를 호스트의 포트로 연결해보겠습니다.</p>
 
 <blockquote>
-  <p><code class="highlighter-rouge">-d</code>옵션이 없다면 프로세스가 foreground로 실행되어 아무키도 입력할 수 없게 됩니다. 컨테이너를 종료하려면 <code class="highlighter-rouge">ctrl + c</code>를 입력해 주세요.</p>
+  <p><code class="language-plaintext highlighter-rouge">-d</code>옵션이 없다면 프로세스가 foreground로 실행되어 아무키도 입력할 수 없게 됩니다. 컨테이너를 종료하려면 <code class="language-plaintext highlighter-rouge">ctrl + c</code>를 입력해 주세요.</p>
 </blockquote>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
@@ -496,20 +496,20 @@ hello
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-run-redis.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>run redis container</figcaption>
 </div>
 
-<p><code class="highlighter-rouge">-d</code> 옵션을 주었기 때문에 컨테이너를 실행하자마자 컨테이너의 ID(5dff91d2…)를 보여주고 바로 쉘로 돌아왔습니다. 컨테이너는 종료된 것이 아니라 백그라운드 모드로 동작하고 있고 컨테이너 ID를 이용하여 컨테이너를 제어할 수 있습니다. <code class="highlighter-rouge">-p</code> 옵션을 이용하여 호스트의 <code class="highlighter-rouge">1234포트</code>를 컨테이너의 <code class="highlighter-rouge">6379포트</code>로 연결하였고 localhost의 1234포트로 접속하면 하면 redis를 사용할 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">-d</code> 옵션을 주었기 때문에 컨테이너를 실행하자마자 컨테이너의 ID(5dff91d2…)를 보여주고 바로 쉘로 돌아왔습니다. 컨테이너는 종료된 것이 아니라 백그라운드 모드로 동작하고 있고 컨테이너 ID를 이용하여 컨테이너를 제어할 수 있습니다. <code class="language-plaintext highlighter-rouge">-p</code> 옵션을 이용하여 호스트의 <code class="language-plaintext highlighter-rouge">1234포트</code>를 컨테이너의 <code class="language-plaintext highlighter-rouge">6379포트</code>로 연결하였고 localhost의 1234포트로 접속하면 하면 redis를 사용할 수 있습니다.</p>
 
 <p>테스트 결과 redis에 접속하여 새로운 키를 저장하고 불러오는데 성공했습니다. 실행이 간단한건 물론이고 호스트의 포트만 다르게 하면 하나의 서버에 여러개의 redis 서버를 띄우는 것도 매우 간단합니다.</p>
 
 <h3 id="mysql-57-container">
 <a class="anchor" href="#mysql-57-container" aria-hidden="true"><span class="octicon octicon-link"></span></a>MySQL 5.7 container</h3>
 
-<p>3번째 실행할 컨테이너는 <code class="highlighter-rouge">MySQL 서버</code>입니다. 가장 흔하게 사용하는 데이터베이스인데 이번에는 <code class="highlighter-rouge">-e</code> 옵션을 이용하여 환경변수를 설정하고 <code class="highlighter-rouge">--name</code> 옵션을 이용하여 컨테이너에 읽기 어려운 ID 대신 쉬운 이름을 부여할 예정입니다.</p>
+<p>3번째 실행할 컨테이너는 <code class="language-plaintext highlighter-rouge">MySQL 서버</code>입니다. 가장 흔하게 사용하는 데이터베이스인데 이번에는 <code class="language-plaintext highlighter-rouge">-e</code> 옵션을 이용하여 환경변수를 설정하고 <code class="language-plaintext highlighter-rouge">--name</code> 옵션을 이용하여 컨테이너에 읽기 어려운 ID 대신 쉬운 이름을 부여할 예정입니다.</p>
 
 <blockquote>
-  <p><code class="highlighter-rouge">--name</code>옵션을 생략하면 도커가 자동으로 이름을 지어 줍니다. 이름은 유명한 과학자나 해커의 이름과 수식어를 조합하여 랜덤으로 <a href="https://github.com/docker/docker/blob/master/pkg/namesgenerator/names-generator.go">생성</a>합니다. (ex - boring_wozniak) 우리나라 과학자 <a href="https://github.com/docker/docker/issues/8996">장영실</a>도 등록되어 있습니다.</p>
+  <p><code class="language-plaintext highlighter-rouge">--name</code>옵션을 생략하면 도커가 자동으로 이름을 지어 줍니다. 이름은 유명한 과학자나 해커의 이름과 수식어를 조합하여 랜덤으로 <a href="https://github.com/docker/docker/blob/master/pkg/namesgenerator/names-generator.go">생성</a>합니다. (ex - boring_wozniak) 우리나라 과학자 <a href="https://github.com/docker/docker/issues/8996">장영실</a>도 등록되어 있습니다.</p>
 </blockquote>
 
-<p><a href="https://hub.docker.com/_/mysql/">MySQL Docker hub</a> 페이지에 접속하면 간단한 사용법과 환경변수에 대한 설명이 있습니다. 여러가지 설정값이 있는데 패스워드 없이 root계정을 만들기 위해 <code class="highlighter-rouge">MYSQL_ALLOW_EMPTY_PASSWORD</code> 환경변수를 설정합니다. 그리고 컨테이너의 이름은 <code class="highlighter-rouge">mysql</code>로 할당하고 백그라운드 모드로 띄우기 위해 <code class="highlighter-rouge">-d</code> 옵션을 줍니다. 포트는 <code class="highlighter-rouge">3306포트</code>를 호스트에서 그대로 사용하겠습니다.</p>
+<p><a href="https://hub.docker.com/_/mysql/">MySQL Docker hub</a> 페이지에 접속하면 간단한 사용법과 환경변수에 대한 설명이 있습니다. 여러가지 설정값이 있는데 패스워드 없이 root계정을 만들기 위해 <code class="language-plaintext highlighter-rouge">MYSQL_ALLOW_EMPTY_PASSWORD</code> 환경변수를 설정합니다. 그리고 컨테이너의 이름은 <code class="language-plaintext highlighter-rouge">mysql</code>로 할당하고 백그라운드 모드로 띄우기 위해 <code class="language-plaintext highlighter-rouge">-d</code> 옵션을 줍니다. 포트는 <code class="language-plaintext highlighter-rouge">3306포트</code>를 호스트에서 그대로 사용하겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -567,11 +567,11 @@ mysql&gt; quit
 <h3 id="wordpress-container">
 <a class="anchor" href="#wordpress-container" aria-hidden="true"><span class="octicon octicon-link"></span></a>WordPress container</h3>
 
-<p>이번에는 블로그<del>보다 웹용으로 더 흔히 쓰이는</del>엔진으로 유명한 <a href="https://wordpress.com">워드프레스</a>를 실행합니다. 워드프레스는 데이터베이스가 필요하기 때문에 조금 복잡한 형태를 띄지만 크게 어렵지 않습니다. 바로 전에 생성했던 MySQL 컨테이너에 워드프레스 데이터베이스를 만들고 WordPress 컨테이너를 실행할 때 <code class="highlighter-rouge">--link</code> 옵션을 이용하여 MySQL 컨테이너를 연결하겠습니다.</p>
+<p>이번에는 블로그<del>보다 웹용으로 더 흔히 쓰이는</del>엔진으로 유명한 <a href="https://wordpress.com">워드프레스</a>를 실행합니다. 워드프레스는 데이터베이스가 필요하기 때문에 조금 복잡한 형태를 띄지만 크게 어렵지 않습니다. 바로 전에 생성했던 MySQL 컨테이너에 워드프레스 데이터베이스를 만들고 WordPress 컨테이너를 실행할 때 <code class="language-plaintext highlighter-rouge">--link</code> 옵션을 이용하여 MySQL 컨테이너를 연결하겠습니다.</p>
 
-<p><code class="highlighter-rouge">--link</code> 옵션은 환경변수와 IP정보를 공유하는데 링크한 컨테이너의 IP정보를 <code class="highlighter-rouge">/etc/hosts</code>에 자동으로 입력하므로 워드프레스 컨테이너가 MySQL 데이터베이스의 정보를 알 수 있게 됩니다.</p>
+<p><code class="language-plaintext highlighter-rouge">--link</code> 옵션은 환경변수와 IP정보를 공유하는데 링크한 컨테이너의 IP정보를 <code class="language-plaintext highlighter-rouge">/etc/hosts</code>에 자동으로 입력하므로 워드프레스 컨테이너가 MySQL 데이터베이스의 정보를 알 수 있게 됩니다.</p>
 
-<p>먼저, 워드프레스용 데이터베이스를 생성하고 워드프레스 컨테이너를 실행합니다. 호스트의 <code class="highlighter-rouge">8080포트</code>를 컨테이너의 <code class="highlighter-rouge">80포트</code>로 연결하고 MySQL 컨테이너와 연결한 후 각종 데이터베이스 설정 정보를 환경변수로 입력합니다.</p>
+<p>먼저, 워드프레스용 데이터베이스를 생성하고 워드프레스 컨테이너를 실행합니다. 호스트의 <code class="language-plaintext highlighter-rouge">8080포트</code>를 컨테이너의 <code class="language-plaintext highlighter-rouge">80포트</code>로 연결하고 MySQL 컨테이너와 연결한 후 각종 데이터베이스 설정 정보를 환경변수로 입력합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -623,7 +623,7 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 </blockquote>
 
 <blockquote>
-  <p><code class="highlighter-rouge">--link</code> 옵션은 deprecated 되어 곧 사용할 수 없습니다. 대신 Docker network 기능을 이용해야 하지만 쉬운 이해를 돕기 위해 사용하였습니다. <del>참고만 하고 실제 사용은 ㄴㄴ</del></p>
+  <p><code class="language-plaintext highlighter-rouge">--link</code> 옵션은 deprecated 되어 곧 사용할 수 없습니다. 대신 Docker network 기능을 이용해야 하지만 쉬운 이해를 돕기 위해 사용하였습니다. <del>참고만 하고 실제 사용은 ㄴㄴ</del></p>
 </blockquote>
 
 <p>이제, 원하는 서비스가 있다면 이미지를 찾거나 직접 만들고, 어디서나 손쉽게 서비스를 실행할 수 있습니다.</p>
@@ -651,7 +651,7 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 <h2 id="도커-기본-명령어">
 <a class="anchor" href="#%EB%8F%84%EC%BB%A4-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>도커 기본 명령어</h2>
 
-<p>앞에서 도커의 <code class="highlighter-rouge">run</code> 명령어를 이용하여 여러개의 컨테이너를 실행했습니다. 이제 컨테이너의 상태를 살펴보고 어떤 이미지가 설치되어 있는지 확인하는 명령어를 알아봅니다.</p>
+<p>앞에서 도커의 <code class="language-plaintext highlighter-rouge">run</code> 명령어를 이용하여 여러개의 컨테이너를 실행했습니다. 이제 컨테이너의 상태를 살펴보고 어떤 이미지가 설치되어 있는지 확인하는 명령어를 알아봅니다.</p>
 
 <h3 id="컨테이너-목록-확인하기-ps">
 <a class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%AA%A9%EB%A1%9D-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0-ps" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 목록 확인하기 (ps)</h3>
@@ -660,7 +660,7 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 
 <figure class="highlight usage"><pre><code class="language-txt" data-lang="txt">docker ps [OPTIONS]</code></pre></figure>
 
-<p>일단 기본옵션과 <code class="highlighter-rouge">-a, --all</code> 옵션만 살펴봅니다.</p>
+<p>일단 기본옵션과 <code class="language-plaintext highlighter-rouge">-a, --all</code> 옵션만 살펴봅니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -686,9 +686,9 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">ps</code> 명령어는 실행중인 컨테이너 목록을 보여줍니다. detached mode로 실행중인 컨테이너들이 보입니다. 어떤 이미지를 기반으로 만들었는지 어떤 포트와 연결이 되어있는지 등 간단한 내용을 보여줍니다.</p>
+<p><code class="language-plaintext highlighter-rouge">ps</code> 명령어는 실행중인 컨테이너 목록을 보여줍니다. detached mode로 실행중인 컨테이너들이 보입니다. 어떤 이미지를 기반으로 만들었는지 어떤 포트와 연결이 되어있는지 등 간단한 내용을 보여줍니다.</p>
 
-<p>이번에는 <code class="highlighter-rouge">-a</code> 옵션을 추가로 실행해보겠습니다.</p>
+<p>이번에는 <code class="language-plaintext highlighter-rouge">-a</code> 옵션을 추가로 실행해보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -727,7 +727,7 @@ e1a00c5934a7        ubuntu:16.04                    "/bin/bash"              32 
 
 <p>옵션은 특별한게 없고 실행중인 컨테이너를 하나 또는 여러개 (띄어쓰기로 구분) 중지할 수 있습니다.</p>
 
-<p>앞에서 실행한 tensorflow 컨테이너는 더이상 필요가 없으니 중지해 보겠습니다. 중지하려면 컨테이너의 ID 또는 이름을 입력하면 됩니다. tensorflow 컨테이너의 ID를 <code class="highlighter-rouge">ps</code>명령을 통해 확인하고 중지해 봅니다.</p>
+<p>앞에서 실행한 tensorflow 컨테이너는 더이상 필요가 없으니 중지해 보겠습니다. 중지하려면 컨테이너의 ID 또는 이름을 입력하면 됩니다. tensorflow 컨테이너의 ID를 <code class="language-plaintext highlighter-rouge">ps</code>명령을 통해 확인하고 중지해 봅니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -741,10 +741,10 @@ docker ps <span class="nt">-a</span> <span class="c"># show all containers</span
 </tr></tbody></table></code></pre></figure>
 
 <blockquote>
-  <p>도커 ID의 전체 길이는 64자리 입니다. 하지만 명령어의 인자로 전달할 때는 전부 입력하지 않아도 됩니다. 예를 들어 ID가 <code class="highlighter-rouge">abcdefgh...</code>라면 <code class="highlighter-rouge">abcd</code>만 입력해도 됩니다. 앞부분이 겹치지 않는다면 1-2자만 입력해도 됩니다.</p>
+  <p>도커 ID의 전체 길이는 64자리 입니다. 하지만 명령어의 인자로 전달할 때는 전부 입력하지 않아도 됩니다. 예를 들어 ID가 <code class="language-plaintext highlighter-rouge">abcdefgh...</code>라면 <code class="language-plaintext highlighter-rouge">abcd</code>만 입력해도 됩니다. 앞부분이 겹치지 않는다면 1-2자만 입력해도 됩니다.</p>
 </blockquote>
 
-<p>잠시 기다리면 tensorflow 컨테이너가 종료됩니다. <code class="highlighter-rouge">ps -a</code>명령어를 입력하여 종료되었는지 확인합니다.</p>
+<p>잠시 기다리면 tensorflow 컨테이너가 종료됩니다. <code class="language-plaintext highlighter-rouge">ps -a</code>명령어를 입력하여 종료되었는지 확인합니다.</p>
 
 <h3 id="컨테이너-제거하기-rm">
 <a class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0-rm" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 제거하기 (rm)</h3>
@@ -769,7 +769,7 @@ docker ps <span class="nt">-a</span> <span class="c"># check exist</span>
 <p>컨테이너가 말끔히 삭제되었습니다. 호스트 OS는 아무런 흔적도 남아있지 않고 컨테이너만 격리된 상태로 실행되었다가 삭제되었습니다. 시스템이 꼬일 걱정이 없습니다.</p>
 
 <blockquote>
-  <p>중지된 컨테이너를 일일이 삭제 하는 건 귀찮은 일입니다. <code class="highlighter-rouge">docker rm -v $(docker ps -a -q -f status=exited)</code> 명령어를 입력하면 중지된 컨테이너 ID를 가져와서 한번에 삭제합니다.</p>
+  <p>중지된 컨테이너를 일일이 삭제 하는 건 귀찮은 일입니다. <code class="language-plaintext highlighter-rouge">docker rm -v $(docker ps -a -q -f status=exited)</code> 명령어를 입력하면 중지된 컨테이너 ID를 가져와서 한번에 삭제합니다.</p>
 </blockquote>
 
 <h3 id="이미지-목록-확인하기-images">
@@ -816,7 +816,7 @@ teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago
 
 <figure class="highlight usage"><pre><code class="language-txt" data-lang="txt">docker pull [OPTIONS] NAME[:TAG|@DIGEST]</code></pre></figure>
 
-<p><code class="highlighter-rouge">ubuntu:14.04</code>를 다운받아보겠습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">ubuntu:14.04</code>를 다운받아보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -825,7 +825,7 @@ teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">run</code>명령어를 입력하면 이미지가 없을 때 자동으로 다운받으니 <code class="highlighter-rouge">pull</code>명령어를 언제 쓰는지 궁금할 수 있는데 <code class="highlighter-rouge">pull</code>은 최신버전으로 다시 다운 받습니다. 같은 태그지만 이미지가 업데이트 된 경우는 <code class="highlighter-rouge">pull</code>명령어를 통해 새로 다운받을 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">run</code>명령어를 입력하면 이미지가 없을 때 자동으로 다운받으니 <code class="language-plaintext highlighter-rouge">pull</code>명령어를 언제 쓰는지 궁금할 수 있는데 <code class="language-plaintext highlighter-rouge">pull</code>은 최신버전으로 다시 다운 받습니다. 같은 태그지만 이미지가 업데이트 된 경우는 <code class="language-plaintext highlighter-rouge">pull</code>명령어를 통해 새로 다운받을 수 있습니다.</p>
 
 <h3 id="이미지-삭제하기-rmi">
 <a class="anchor" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%82%AD%EC%A0%9C%ED%95%98%EA%B8%B0-rmi" aria-hidden="true"><span class="octicon octicon-link"></span></a>이미지 삭제하기 (rmi)</h3>
@@ -834,7 +834,7 @@ teamlab/pydata-tensorflow   0.1                 7bdf5d7e0191        6 months ago
 
 <figure class="highlight usage"><pre><code class="language-txt" data-lang="txt">docker rmi [OPTIONS] IMAGE [IMAGE...]</code></pre></figure>
 
-<p><code class="highlighter-rouge">images</code>명령어를 통해 얻은 이미지 목록에서 이미지 ID를 입력하면 삭제가 됩니다. 단, 컨테이너가 실행중인 이미지는 삭제되지 않습니다. 컨테이너는 이미지들의 레이어를 기반으로 실행중이므로 당연히 삭제할 수 없습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">images</code>명령어를 통해 얻은 이미지 목록에서 이미지 ID를 입력하면 삭제가 됩니다. 단, 컨테이너가 실행중인 이미지는 삭제되지 않습니다. 컨테이너는 이미지들의 레이어를 기반으로 실행중이므로 당연히 삭제할 수 없습니다.</p>
 
 <p>tensorflow는 더 이상 사용하지 않으니 이미지를 제거해보겠습니다.</p>
 
@@ -937,7 +937,7 @@ Deleted: sha256:7f4734de8e3dd402f10030f06bcb8781129b1eb6a25c58811a76d015f2a0982f
 <h2 id="컨테이너-둘러보기">
 <a class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%91%98%EB%9F%AC%EB%B3%B4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 둘러보기</h2>
 
-<p>도커에 대한 아주아주아주 기본적인 명령어를 살펴보았습니다. 사실 저 명령어들과 이번에 살펴볼 <code class="highlighter-rouge">log</code>, <code class="highlighter-rouge">exec</code> 명령어를 익히면 도커에서 사용하는 명령어는 거의 다 익혔다고 할 수 있습니다. 다른 명령어는 필요에 따라 하나하나 살펴보면 됩니다.</p>
+<p>도커에 대한 아주아주아주 기본적인 명령어를 살펴보았습니다. 사실 저 명령어들과 이번에 살펴볼 <code class="language-plaintext highlighter-rouge">log</code>, <code class="language-plaintext highlighter-rouge">exec</code> 명령어를 익히면 도커에서 사용하는 명령어는 거의 다 익혔다고 할 수 있습니다. 다른 명령어는 필요에 따라 하나하나 살펴보면 됩니다.</p>
 
 <h3 id="컨테이너-로그-보기-logs">
 <a class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%A1%9C%EA%B7%B8-%EB%B3%B4%EA%B8%B0-logs" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 로그 보기 (logs)</h3>
@@ -946,7 +946,7 @@ Deleted: sha256:7f4734de8e3dd402f10030f06bcb8781129b1eb6a25c58811a76d015f2a0982f
 
 <figure class="highlight usage"><pre><code class="language-txt" data-lang="txt">docker logs [OPTIONS] CONTAINER</code></pre></figure>
 
-<p>기본 옵션과, <code class="highlighter-rouge">-f</code>, <code class="highlighter-rouge">--tail</code> 옵션을 살펴봅니다.</p>
+<p>기본 옵션과, <code class="language-plaintext highlighter-rouge">-f</code>, <code class="language-plaintext highlighter-rouge">--tail</code> 옵션을 살펴봅니다.</p>
 
 <p>기존에 생성해 놓은 워드프레스 컨테이너 로그를 확인해 보겠습니다.</p>
 
@@ -1014,7 +1014,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>컨테이너에서 실행한 로그가 쭈욱 보입니다. 아무 옵션을 주지 않았을 때는 전체 로그를 <del>무식하게</del> 전부 다 출력합니다. 너무 많으니 <code class="highlighter-rouge">--tail</code>옵션으로 마지막 10줄만 출력해 보겠습니다.</p>
+<p>컨테이너에서 실행한 로그가 쭈욱 보입니다. 아무 옵션을 주지 않았을 때는 전체 로그를 <del>무식하게</del> 전부 다 출력합니다. 너무 많으니 <code class="language-plaintext highlighter-rouge">--tail</code>옵션으로 마지막 10줄만 출력해 보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1050,7 +1050,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>마지막 10줄만 보니 좀 나아 보입니다. 이제 실시간으로 로그가 생성되는 걸 확인해보겠습니다. <code class="highlighter-rouge">-f</code> 옵션으로 실행합니다.</p>
+<p>마지막 10줄만 보니 좀 나아 보입니다. 이제 실시간으로 로그가 생성되는 걸 확인해보겠습니다. <code class="language-plaintext highlighter-rouge">-f</code> 옵션으로 실행합니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1063,26 +1063,26 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-log-f.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>docker logs -f</figcaption>
 </div>
 
-<p>로그를 켜 놓은 상태에서 워드프레스 페이지를 새로고침하면 브라우저 접속 로그가 실시간으로 보입니다. 가장 흔하게 사용하는 옵션이고 로그 보기를 중지하려면 <code class="highlighter-rouge">ctrl</code> + <code class="highlighter-rouge">c</code>를 입력하면 됩니다.</p>
+<p>로그를 켜 놓은 상태에서 워드프레스 페이지를 새로고침하면 브라우저 접속 로그가 실시간으로 보입니다. 가장 흔하게 사용하는 옵션이고 로그 보기를 중지하려면 <code class="language-plaintext highlighter-rouge">ctrl</code> + <code class="language-plaintext highlighter-rouge">c</code>를 입력하면 됩니다.</p>
 
 <p><strong>로그에 대해 좀 더 자세히</strong></p>
 
-<p>프로그램마다 로그 파일은 제각각 생길텐데 어떻게 저 로그가 나올까 라는 의문이 생깁니다. 도커는 로그파일을 자동으로 알아채는게 아니라 <a href="https://en.wikipedia.org/wiki/Standard_streams">표준 스트림</a><sub>Standard streams</sub> 중 <code class="highlighter-rouge">stdout</code>, <code class="highlighter-rouge">stderr</code>를 수집합니다. 따라서 컨테이너에서 실행되는 프로그램의 로그 설정을 파일이 아닌 표준출력으로 바꾸어야 합니다. 단지 출력 방식만 바꾸는 것으로 모든 컨테이너는 로그에 대해 같은 방식으로 관리할 수 있게 됩니다.</p>
+<p>프로그램마다 로그 파일은 제각각 생길텐데 어떻게 저 로그가 나올까 라는 의문이 생깁니다. 도커는 로그파일을 자동으로 알아채는게 아니라 <a href="https://en.wikipedia.org/wiki/Standard_streams">표준 스트림</a><sub>Standard streams</sub> 중 <code class="language-plaintext highlighter-rouge">stdout</code>, <code class="language-plaintext highlighter-rouge">stderr</code>를 수집합니다. 따라서 컨테이너에서 실행되는 프로그램의 로그 설정을 파일이 아닌 표준출력으로 바꾸어야 합니다. 단지 출력 방식만 바꾸는 것으로 모든 컨테이너는 로그에 대해 같은 방식으로 관리할 수 있게 됩니다.</p>
 
 <p>또하나 중요한 점은 컨테이너의 로그파일은 json 방식으로 어딘가에 저장이 됩니다. 로그가 많으면 은근히 파일이 차지하는 용량이 커지므로 주의해야합니다. 도커는 다양한 플러그인을 지원하여 json이 아닌 특정 로그 서비스에 스트림을 전달할 수 있습니다. 어느 정도 앱의 규모가 커지면 기본적인 방식 대신 로그 서비스를 이용하는 걸 고려해야 합니다.</p>
 
 <h3 id="컨테이너-명령어-실행하기-exec">
 <a class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0-exec" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 명령어 실행하기 (exec)</h3>
 
-<p>컨테이너를 관리하다 보면 실행중인 컨테이너에 들어가보거나 컨테이너의 파일을 실행하고 싶을 때가 있습니다. 컨테이너에 <code class="highlighter-rouge">SSH</code>를 설치하면 되지 않을까? 라고 생각할 수 있지만 SSH는 권장하지 않습니다. <del>하지 말라고 하면 꼭 하는 분들이 있던데 제발..</del> 예전에는 <a href="https://github.com/jpetazzo/nsenter">nsenter</a>라는 프로그램을 이용하였는데 docker에 <code class="highlighter-rouge">exec</code>라는 명령어로 흡수되었습니다.</p>
+<p>컨테이너를 관리하다 보면 실행중인 컨테이너에 들어가보거나 컨테이너의 파일을 실행하고 싶을 때가 있습니다. 컨테이너에 <code class="language-plaintext highlighter-rouge">SSH</code>를 설치하면 되지 않을까? 라고 생각할 수 있지만 SSH는 권장하지 않습니다. <del>하지 말라고 하면 꼭 하는 분들이 있던데 제발..</del> 예전에는 <a href="https://github.com/jpetazzo/nsenter">nsenter</a>라는 프로그램을 이용하였는데 docker에 <code class="language-plaintext highlighter-rouge">exec</code>라는 명령어로 흡수되었습니다.</p>
 
 <p>컨테이너 명령어를 실행하는 방법은 다음과 같습니다.</p>
 
 <figure class="highlight usage"><pre><code class="language-txt" data-lang="txt">docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</code></pre></figure>
 
-<p><code class="highlighter-rouge">run</code> 명령어와 유사해 보입니다. 차이는 <code class="highlighter-rouge">run</code>은 새로 컨테이너를 만들어서 실행하고 <code class="highlighter-rouge">exec</code>는 실행중인 컨테이너에 명령어를 내리는 정도입니다.</p>
+<p><code class="language-plaintext highlighter-rouge">run</code> 명령어와 유사해 보입니다. 차이는 <code class="language-plaintext highlighter-rouge">run</code>은 새로 컨테이너를 만들어서 실행하고 <code class="language-plaintext highlighter-rouge">exec</code>는 실행중인 컨테이너에 명령어를 내리는 정도입니다.</p>
 
-<p>일단, 가볍게 실행중인 <code class="highlighter-rouge">MySQL</code> 컨테이너에 접속해보겠습니다.</p>
+<p>일단, 가볍게 실행중인 <code class="language-plaintext highlighter-rouge">MySQL</code> 컨테이너에 접속해보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1131,9 +1131,9 @@ mysql&gt; quit
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-bash.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>docker exec bash</figcaption>
 </div>
 
-<p>키보드 입력이 필요하니 run 명령어와 마찬가지로 <code class="highlighter-rouge">-it</code> 옵션을 주었고 bash 쉘로 접속하여 마치 가상머신에 들어온 것 같은 느낌이 듭니다. 접속한 이후에는 어떤 작업도 할 수 있고 컨테이너를 마음껏 건드릴 수 있습니다.</p>
+<p>키보드 입력이 필요하니 run 명령어와 마찬가지로 <code class="language-plaintext highlighter-rouge">-it</code> 옵션을 주었고 bash 쉘로 접속하여 마치 가상머신에 들어온 것 같은 느낌이 듭니다. 접속한 이후에는 어떤 작업도 할 수 있고 컨테이너를 마음껏 건드릴 수 있습니다.</p>
 
-<p>쉘로 완전한 권한을 얻는 방법말고 바로 <code class="highlighter-rouge">mysql</code>명령어를 실행 할 수도 있습니다.</p>
+<p>쉘로 완전한 권한을 얻는 방법말고 바로 <code class="language-plaintext highlighter-rouge">mysql</code>명령어를 실행 할 수도 있습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1180,7 +1180,7 @@ mysql&gt; quit
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-01-19-docker-guide-for-beginners-2/docker-exec-mysql.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>docker exec mysql</figcaption>
 </div>
 
-<p>이제, 호스트 OS에 mysql을 설치하지 않아도 mysql 클라이언트를 사용할 수 있습니다. 굳이 복잡한 작업이 필요 없는 경우는 <code class="highlighter-rouge">-it</code> 옵션없이 단순하게 명령을 실행하고 종료할 수도 있습니다.</p>
+<p>이제, 호스트 OS에 mysql을 설치하지 않아도 mysql 클라이언트를 사용할 수 있습니다. 굳이 복잡한 작업이 필요 없는 경우는 <code class="language-plaintext highlighter-rouge">-it</code> 옵션없이 단순하게 명령을 실행하고 종료할 수도 있습니다.</p>
 
 <h2 id="컨테이너-업데이트">
 <a class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 업데이트</h2>
@@ -1189,13 +1189,13 @@ mysql&gt; quit
 
 <p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update.png" alt="도커 컨테이너 업데이트"></p>
 
-<p>도커에서 컨테이너를 업데이트 하려면 새 버전의 이미지를 다운(<code class="highlighter-rouge">pull</code>)받고 기존 컨테이너를 삭제(<code class="highlighter-rouge">stop</code>, <code class="highlighter-rouge">rm</code>) 한 후 새 이미지를 기반으로 새 컨테이너를 실행(<code class="highlighter-rouge">run</code>)하면 됩니다. 배포와 관련된 자세한 사항은 다음글에서 이야기하고 여기선 그냥 그렇구나 하고 이해합시다.</p>
+<p>도커에서 컨테이너를 업데이트 하려면 새 버전의 이미지를 다운(<code class="language-plaintext highlighter-rouge">pull</code>)받고 기존 컨테이너를 삭제(<code class="language-plaintext highlighter-rouge">stop</code>, <code class="language-plaintext highlighter-rouge">rm</code>) 한 후 새 이미지를 기반으로 새 컨테이너를 실행(<code class="language-plaintext highlighter-rouge">run</code>)하면 됩니다. 배포와 관련된 자세한 사항은 다음글에서 이야기하고 여기선 그냥 그렇구나 하고 이해합시다.</p>
 
 <p>컨테이너를 삭제한다는 건 컨테이너에서 생성된 파일이 사라진다는 뜻입니다. 데이터베이스라면 그동안 쌓였던 데이터가 모두 사라진다는 것이고 웹 어플리케이션이라면 그동안 사용자가 업로드한 이미지가 모두 사라진다는 것입니다. ㄷㄷ</p>
 
 <p>이런 상황<del>도커 도입했다가 퇴사</del>을 방지하기 위해 컨테이너 삭제시 유지해야하는 데이터는 반드시 컨테이너 내부가 아닌 외부 스토리지에 저장해야 합니다. 가장 좋은 방법은 <a href="http://docs.aws.amazon.com/ko_kr/AmazonS3/latest/dev/Welcome.html">AWS S3</a>같은 클라우드 서비스를 이용하는 것이고 그렇지 않으면 데이터 볼륨<sub>Data volumes</sub>을 컨테이너에 추가해서 사용해야 합니다. 데이터 볼륨을 사용하면 해당 디렉토리는 컨테이너와 별도로 저장되고 컨테이너를 삭제해도 데이터가 지워지지 않습니다.</p>
 
-<p>데이터 볼륨을 사용하는 방법은 몇가지가 있는데 여기서는 호스트의 디렉토리를 마운트해서 사용하는 방법에 대해 알아봅니다. <code class="highlighter-rouge">run</code>명령어에서 소개한 옵션중에 <code class="highlighter-rouge">-v</code> 옵션을 드디어 사용해 보겠습니다. MySQL이라면 <code class="highlighter-rouge">/var/lib/mysql</code>디렉토리에 모든 데이터베이스 정보가 담기므로 호스트의 특정 디렉토리를 연결해주면 됩니다.</p>
+<p>데이터 볼륨을 사용하는 방법은 몇가지가 있는데 여기서는 호스트의 디렉토리를 마운트해서 사용하는 방법에 대해 알아봅니다. <code class="language-plaintext highlighter-rouge">run</code>명령어에서 소개한 옵션중에 <code class="language-plaintext highlighter-rouge">-v</code> 옵션을 드디어 사용해 보겠습니다. MySQL이라면 <code class="language-plaintext highlighter-rouge">/var/lib/mysql</code>디렉토리에 모든 데이터베이스 정보가 담기므로 호스트의 특정 디렉토리를 연결해주면 됩니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1226,7 +1226,7 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 3306:3306 <span
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>위 샘플은 호스트의 <code class="highlighter-rouge">/my/own/datadir</code>디렉토리를 컨테이너의 <code class="highlighter-rouge">/var/lib/mysql</code>디렉토리로 마운트 하였습니다. 이제 데이터베이스 파일은 호스트의 <code class="highlighter-rouge">/my/own/datadir</code>디렉토리에 저장되고 컨테이너를 삭제해도 데이터는 사라지지 않습니다. 최신버전의 MySQL 이미지를 다운받고 다시 컨테이너를 실행할 때 동일한 디렉토리를 마운트 한다면 그대로 데이터를 사용할 수 있습니다. <del>만세!</del></p>
+<p>위 샘플은 호스트의 <code class="language-plaintext highlighter-rouge">/my/own/datadir</code>디렉토리를 컨테이너의 <code class="language-plaintext highlighter-rouge">/var/lib/mysql</code>디렉토리로 마운트 하였습니다. 이제 데이터베이스 파일은 호스트의 <code class="language-plaintext highlighter-rouge">/my/own/datadir</code>디렉토리에 저장되고 컨테이너를 삭제해도 데이터는 사라지지 않습니다. 최신버전의 MySQL 이미지를 다운받고 다시 컨테이너를 실행할 때 동일한 디렉토리를 마운트 한다면 그대로 데이터를 사용할 수 있습니다. <del>만세!</del></p>
 
 <h2 id="docker-compose">
 <a class="anchor" href="#docker-compose" aria-hidden="true"><span class="octicon octicon-link"></span></a>Docker Compose</h2>
@@ -1258,7 +1258,7 @@ docker-compose version
 
 <p>기존에 명령어로 만들었던 wordpress를 compose를 이용해 만들어 보겠습니다.</p>
 
-<p>먼저 빈 디렉토리를 하나 만들고 <code class="highlighter-rouge">docker-compose.yml</code>파일을 만들어 설정을 입력합니다.</p>
+<p>먼저 빈 디렉토리를 하나 만들고 <code class="language-plaintext highlighter-rouge">docker-compose.yml</code>파일을 만들어 설정을 입력합니다.</p>
 
 <noscript><pre>version: '2'
 
@@ -1435,7 +1435,7 @@ volumes:
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1606053567423074000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1608030295159555000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

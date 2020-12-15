@@ -47,7 +47,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1606053567423074000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1608030295159555000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -118,14 +118,14 @@
         <meta itemprop="headline" content="쿠버네티스 시작하기 - Kubernetes란 무엇인가?" />
         <meta itemprop="mainEntityOfPage" content="/2019/05/19/kubernetes-basic-1.html" />
         <meta itemprop="datePublished" content="2019-05-19 00:00:00 +0900" />
-        <meta itemprop="dateModified" content="2020-01-14 08:50:00 +0900" />
+        <meta itemprop="dateModified" content="2020-12-14 08:50:00 +0900" />
         
         <div class="noarticleimage">
           <div class="post-meta">
             <h1 class="post-title">
               쿠버네티스 시작하기 - Kubernetes란 무엇인가?
               
-                <span class="series">SERIES 1/4</span>
+                <span class="series">SERIES 1/2</span>
               
             </h1>
             <div class="cf post-meta-text">
@@ -253,13 +253,10 @@
 <ul>
   <li><a href="/2017/01/19/docker-guide-for-beginners-1.html">도커에 대해 모른다면 → 초보를 위한 도커 안내서</a></li>
   <li>
-<strong>쿠버네티스 시작하기 - 쿠버네티스란 무엇인가? ✓</strong> <span class="series">SERIES 1/4</span>
+<strong>쿠버네티스 시작하기 - 쿠버네티스란 무엇인가? ✓</strong> <span class="series">SERIES 1/2</span>
 </li>
-  <li>쿠버네티스 시작하기 - 쿠버네티스 설치 (예정) <span class="series">SERIES 2/4</span>
-</li>
-  <li>쿠버네티스 시작하기 - 컨테이너 배포 (예정) <span class="series">SERIES 3/4</span>
-</li>
-  <li>쿠버네티스 시작하기 - 스토리지, 설정, 비밀정보 관리 (예정) <span class="series">SERIES 4/4</span>
+  <li>
+<a href="/2020/12/13/kubernetes-basic-2.html">쿠버네티스 시작하기 - 설치부터 배포까지</a> <span class="series">SERIES 2/2</span>
 </li>
 </ul>
 
@@ -316,7 +313,7 @@
 
 <p><img src="https://subicura.com/assets/article_images/2019-05-19-kubernetes-basic-1/workload.png" alt="쿠버네티스 배포 방식"></p>
 
-<p>컨테이너와 관련된 많은 예제가 웹(프론트엔드+백엔드) 애플리케이션을 다루고 있지만, 실제 세상엔 더 다양한 형태의 애플리케이션이 있습니다. 쿠버네티스는 <code class="highlighter-rouge">Deployment</code>, <code class="highlighter-rouge">StatefulSets</code>, <code class="highlighter-rouge">DaemonSet</code>, <code class="highlighter-rouge">Job</code>, <code class="highlighter-rouge">CronJob</code>등 다양한 배포 방식을 지원합니다. Deployment는 새로운 버전의 애플리케이션을 다양한 전략으로 무중단 배포할 수 있습니다. StatefulSets은 실행 순서를 보장하고 호스트 이름과 볼륨을 일정하게 사용할 수 있어 순서나 데이터가 중요한 경우에 사용할 수 있습니다. 로그나 모니터링 등 모든 노드에 설치가 필요한 경우엔 DaemonSet을 이용하고 배치성 작업은 Job이나 CronJob을 이용하면 됩니다. <del>무슨 기능을 원하는지 몰라서 다 준비해놨어</del></p>
+<p>컨테이너와 관련된 많은 예제가 웹(프론트엔드+백엔드) 애플리케이션을 다루고 있지만, 실제 세상엔 더 다양한 형태의 애플리케이션이 있습니다. 쿠버네티스는 <code class="language-plaintext highlighter-rouge">Deployment</code>, <code class="language-plaintext highlighter-rouge">StatefulSets</code>, <code class="language-plaintext highlighter-rouge">DaemonSet</code>, <code class="language-plaintext highlighter-rouge">Job</code>, <code class="language-plaintext highlighter-rouge">CronJob</code>등 다양한 배포 방식을 지원합니다. Deployment는 새로운 버전의 애플리케이션을 다양한 전략으로 무중단 배포할 수 있습니다. StatefulSets은 실행 순서를 보장하고 호스트 이름과 볼륨을 일정하게 사용할 수 있어 순서나 데이터가 중요한 경우에 사용할 수 있습니다. 로그나 모니터링 등 모든 노드에 설치가 필요한 경우엔 DaemonSet을 이용하고 배치성 작업은 Job이나 CronJob을 이용하면 됩니다. <del>무슨 기능을 원하는지 몰라서 다 준비해놨어</del></p>
 
 <h3 id="ingress-설정">
 <a class="anchor" href="#ingress-%EC%84%A4%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ingress 설정</h3>
@@ -325,7 +322,7 @@
     <img src="/assets/article_images/2019-05-19-kubernetes-basic-1/ingress.png" alt="Ingress" style="width: 550px">
 </p>
 
-<p>다양한 웹 애플리케이션을 하나의 로드 밸런서로 서비스하기 위해 Ingress<del>입장</del>기능을 제공합니다. 웹 애플리케이션을 배포하는 과정을 보면 외부에서 직접 접근할 수 없도록 애플리케이션을 내부망에 설치하고 외부에서 접근이 가능한 <code class="highlighter-rouge">ALB</code>나 <code class="highlighter-rouge">Nginx</code>, <code class="highlighter-rouge">Apache</code>를 프록시 서버로 활용합니다. 프록시 서버는 도메인과 Path 조건에 따라 등록된 서버로 요청을 전달하는데 서버가 바뀌거나 IP가 변경되면 매번 설정을 수정해줘야 합니다. 쿠버네티스의 Ingress는 이를 자동화하면서 기존 프록시 서버에서 사용하는 설정을 거의 그대로 사용할 수 있습니다. 새로운 도메인을 추가하거나 업로드 용량을 제한하기 위해 일일이 프록시 서버에 접속하여 설정할 필요가 없습니다.</p>
+<p>다양한 웹 애플리케이션을 하나의 로드 밸런서로 서비스하기 위해 Ingress<del>입장</del>기능을 제공합니다. 웹 애플리케이션을 배포하는 과정을 보면 외부에서 직접 접근할 수 없도록 애플리케이션을 내부망에 설치하고 외부에서 접근이 가능한 <code class="language-plaintext highlighter-rouge">ALB</code>나 <code class="language-plaintext highlighter-rouge">Nginx</code>, <code class="language-plaintext highlighter-rouge">Apache</code>를 프록시 서버로 활용합니다. 프록시 서버는 도메인과 Path 조건에 따라 등록된 서버로 요청을 전달하는데 서버가 바뀌거나 IP가 변경되면 매번 설정을 수정해줘야 합니다. 쿠버네티스의 Ingress는 이를 자동화하면서 기존 프록시 서버에서 사용하는 설정을 거의 그대로 사용할 수 있습니다. 새로운 도메인을 추가하거나 업로드 용량을 제한하기 위해 일일이 프록시 서버에 접속하여 설정할 필요가 없습니다.</p>
 
 <p>하나의 클러스터에 여러 개의 Ingress 설정을 할 수 있어 관리자 접속용 Ingress와 일반 접속용 Ingress를 따로 관리할 수 있습니다.</p>
 
@@ -341,7 +338,7 @@
 
 <p><img src="https://subicura.com/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label.png" alt="Namespace &amp; Label"></p>
 
-<p>하나의 클러스터를 논리적으로 구분하여 사용할 수 있습니다. 하나의 클러스터에 다양한 프레임워크와 애플리케이션을 설치하기 때문에 기본(<code class="highlighter-rouge">system</code>, <code class="highlighter-rouge">default</code>)외에 여러 개의 네임스페이스를 사용하는 것이 일반적입니다. 더 세부적인 설정으로 라벨 기능을 적극적으로 사용하여 유연하면서 확장성 있게 리소스를 관리할 수 있습니다.</p>
+<p>하나의 클러스터를 논리적으로 구분하여 사용할 수 있습니다. 하나의 클러스터에 다양한 프레임워크와 애플리케이션을 설치하기 때문에 기본(<code class="language-plaintext highlighter-rouge">system</code>, <code class="language-plaintext highlighter-rouge">default</code>)외에 여러 개의 네임스페이스를 사용하는 것이 일반적입니다. 더 세부적인 설정으로 라벨 기능을 적극적으로 사용하여 유연하면서 확장성 있게 리소스를 관리할 수 있습니다.</p>
 
 <h3 id="rbac-role-based-access-control">
 <a class="anchor" href="#rbac-role-based-access-control" aria-hidden="true"><span class="octicon octicon-link"></span></a>RBAC (role-based access control)</h3>
@@ -505,7 +502,7 @@
 <h4 id="kubectl">
 <a class="anchor" href="#kubectl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kubectl</h4>
 
-<p>API 서버는 json 또는 protobuf 형식을 이용한 http 통신을 지원합니다. 이 방식을 그대로 쓰면 불편하므로 보통 <code class="highlighter-rouge">kubectl</code>이라는 명령행 도구를 사용합니다. 앞으로 엄청나게 많이 <del>지겹게</del> 사용할 예정입니다.
+<p>API 서버는 json 또는 protobuf 형식을 이용한 http 통신을 지원합니다. 이 방식을 그대로 쓰면 불편하므로 보통 <code class="language-plaintext highlighter-rouge">kubectl</code>이라는 명령행 도구를 사용합니다. 앞으로 엄청나게 많이 <del>지겹게</del> 사용할 예정입니다.
 어떻게 읽어야 할지 난감한데 <a href="https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.9.md#kubectl">공식적</a>으로 큐브컨트롤(cube control)이라고 읽지만 큐브씨티엘, 쿱컨트롤, 쿱씨티엘등도 많이 쓰입니다.</p>
 
 <h3 id="master-구성-요소">
@@ -745,7 +742,7 @@
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1606053567423074000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1608030295159555000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1606053567423074000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1608030295159555000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -180,7 +180,7 @@
 
 <p><a href="https://en.wikipedia.org/wiki/Programming_style">코딩스타일</a>, 코딩 표준이라고도 불리는 <a href="https://en.wikipedia.org/wiki/Coding_conventions">코딩 컨벤션</a>은 코드를 작성할 때 추천하는 코딩 스타일, 괜찮은 사례등을 모아 놓은 가이드라인입니다.</p>
 
-<p><code class="highlighter-rouge">if</code>에 중괄호({)는 다음 줄에 쓰는게 좋을까요, 같은 줄에 쓰는게 좋을까요? 띄어쓰기는 스페이스랑 탭중에 어떤걸 쓸까요? 스페이스를 사용한다면 2칸? 4칸? 8칸? 몇칸을 띄우는 나을까요? 정답은 없지만 어떤게 인기 있는지는 <a href="http://sideeffect.kr/popularconvention/#java">여기</a>서 언어별 대세를 확인해 볼 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">if</code>에 중괄호({)는 다음 줄에 쓰는게 좋을까요, 같은 줄에 쓰는게 좋을까요? 띄어쓰기는 스페이스랑 탭중에 어떤걸 쓸까요? 스페이스를 사용한다면 2칸? 4칸? 8칸? 몇칸을 띄우는 나을까요? 정답은 없지만 어떤게 인기 있는지는 <a href="http://sideeffect.kr/popularconvention/#java">여기</a>서 언어별 대세를 확인해 볼 수 있습니다.</p>
 
 <p>코딩 컨벤션은 표준이라고 하지만 꼭 지켜지 않아도 프로그램은 잘 동작하고 이 방식이 좋은지 저 방식이 좋은지 백날 싸워도 결론이 없는 딱히 신경 쓰지 않아도 크게 문제 없어 보이는 가이드라인입니다.</p>
 
@@ -204,7 +204,7 @@
 
 <p>정적분석은 프로그램을 실행하지 않고 코드를 분석하는 방법입니다.</p>
 
-<p>코드를 보면 띄어쓰기나 줄바꿈이 이상한 부분을 발견할 수 있고 메소드가 너무 길거나 변수명 형식이 어떤건 언더바(form_value) 어떤건 카멜케이스(formValue)로 오락가락하면 통일하는게 좋습니다. 상수로 사용하는 변수는 변경되지 않도록 하는게 버그를 예방할 수 있기 때문에 <code class="highlighter-rouge">final</code>로 선언하는게 낫고 사용하지 않는 변수나 함수는 지우는게 나중에 코드를 볼때 훨씬 편합니다. 한 클래스는 적절한 수의 메소드를 가지고 있어야 하고 if문을 사용할때는 너무 복잡하게 중첩하면 무슨 내용인지 이해하기가 어렵죠.</p>
+<p>코드를 보면 띄어쓰기나 줄바꿈이 이상한 부분을 발견할 수 있고 메소드가 너무 길거나 변수명 형식이 어떤건 언더바(form_value) 어떤건 카멜케이스(formValue)로 오락가락하면 통일하는게 좋습니다. 상수로 사용하는 변수는 변경되지 않도록 하는게 버그를 예방할 수 있기 때문에 <code class="language-plaintext highlighter-rouge">final</code>로 선언하는게 낫고 사용하지 않는 변수나 함수는 지우는게 나중에 코드를 볼때 훨씬 편합니다. 한 클래스는 적절한 수의 메소드를 가지고 있어야 하고 if문을 사용할때는 너무 복잡하게 중첩하면 무슨 내용인지 이해하기가 어렵죠.</p>
 
 <p>이렇게 <strong>느낌적</strong>으로 알고 있는 내용을 모아모아모아서 고급 개발자들이 코딩컨벤션, 예상결함방지, 코드복잡도 메트릭스등의 이름으로 정리하였고 다양한 툴들이 유/무료로 제공되고 있습니다.</p>
 
@@ -464,7 +464,7 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>몇가지 옵션을 물어보면서 자동으로 필요한 plugin을 추가하고 <code class="highlighter-rouge">.eslintrc.js</code>라는 설정파일을 만들어줍니다.</p>
+<p>몇가지 옵션을 물어보면서 자동으로 필요한 plugin을 추가하고 <code class="language-plaintext highlighter-rouge">.eslintrc.js</code>라는 설정파일을 만들어줍니다.</p>
 
 <noscript><pre>module.exports = {
     "env": {
@@ -504,7 +504,7 @@ $admin-red-bg-color: rgba(255, 0, 0, .5);
 };</pre></noscript>
 <script src="https://gist.github.com/subicura/29778c2ab4c2c4f94f29ceabe9416ae3.js"> </script>
 
-<p>대부분의 linter는 위와 같이 세부적인 설정파일을 제공하고 보통 <code class="highlighter-rouge">.</code><sub>dot</sub>으로 시작하여 보이지 않는 파일로 관리합니다. linter에서 체크하는 규칙중에 현재 코드에 적용이 어려운 규칙등은 무시하게 설정할 수 있어 일단 툴을 돌려보고 수정하는데 무리가 있는 규칙은 제외하거나 바꾸면 됩니다.</p>
+<p>대부분의 linter는 위와 같이 세부적인 설정파일을 제공하고 보통 <code class="language-plaintext highlighter-rouge">.</code><sub>dot</sub>으로 시작하여 보이지 않는 파일로 관리합니다. linter에서 체크하는 규칙중에 현재 코드에 적용이 어려운 규칙등은 무시하게 설정할 수 있어 일단 툴을 돌려보고 수정하는데 무리가 있는 규칙은 제외하거나 바꾸면 됩니다.</p>
 
 <p><strong>Airbnb 규칙적용</strong></p>
 
@@ -639,7 +639,7 @@ gulp.task('default', ['watch'], function () {
 
 <p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/webstorm_eslint.png" alt="WebStorm ESLint"></p>
 
-<p><code class="highlighter-rouge">Languages &amp; Frameworks &gt; Javascript &gt; Code Quality Tools &gt; ESLint</code></p>
+<p><code class="language-plaintext highlighter-rouge">Languages &amp; Frameworks &gt; Javascript &gt; Code Quality Tools &gt; ESLint</code></p>
 
 <p><img src="https://subicura.com/assets/article_images/2016-07-11-coding-convention/webstorm_eslint_view.png" alt="WebStorm ESLint Check"></p>
 
@@ -774,7 +774,7 @@ gulp.task('default', ['watch'], function () {
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1606053567423074000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1608030295159555000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

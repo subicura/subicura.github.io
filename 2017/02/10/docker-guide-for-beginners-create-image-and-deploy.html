@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1606053567423074000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1608030295159555000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -187,7 +187,7 @@
 <li class="toc-entry toc-h2"><a href="#마무으리">마무으리</a></li>
 </ul><p><img src="https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png" alt="docker logo"></p>
 
-<p>이 글은 <code class="highlighter-rouge">초보를 위한 도커 안내서 - 설치부터 배포까지</code> 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.</p>
+<p>이 글은 <code class="language-plaintext highlighter-rouge">초보를 위한 도커 안내서 - 설치부터 배포까지</code> 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.</p>
 
 <hr>
 
@@ -227,7 +227,7 @@
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra.png" alt="Sinatra"></p>
 
-<p>일단 웹 애플리케이션 소스코드를 작성해야겠죠. <a href="http://www.sinatrarb.com/">Sinatra</a>라는 가벼운 웹 프레임워크를 사용하기 위해 새로운 폴더를 만들고 <code class="highlighter-rouge">Gemfile</code>과 <code class="highlighter-rouge">app.rb</code>를 만듭니다.</p>
+<p>일단 웹 애플리케이션 소스코드를 작성해야겠죠. <a href="http://www.sinatrarb.com/">Sinatra</a>라는 가벼운 웹 프레임워크를 사용하기 위해 새로운 폴더를 만들고 <code class="language-plaintext highlighter-rouge">Gemfile</code>과 <code class="language-plaintext highlighter-rouge">app.rb</code>를 만듭니다.</p>
 
 <p><strong>Gemfile</strong></p>
 
@@ -259,7 +259,7 @@
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>ruby와 sinatra에 대해 전혀 모르더라도 <code class="highlighter-rouge">Gemfile</code>은 패키지를 관리하고 <code class="highlighter-rouge">app.rb</code>는 호스트명을 출력하는 웹 서버를 만들었다는 걸 예상할 수 있습니다.</p>
+<p>ruby와 sinatra에 대해 전혀 모르더라도 <code class="language-plaintext highlighter-rouge">Gemfile</code>은 패키지를 관리하고 <code class="language-plaintext highlighter-rouge">app.rb</code>는 호스트명을 출력하는 웹 서버를 만들었다는 걸 예상할 수 있습니다.</p>
 
 <p>이제 패키지를 설치하고 서버를 실행해보겠습니다.</p>
 
@@ -305,7 +305,7 @@ bash <span class="nt">-c</span> <span class="s2">"bundle install &amp;&amp; bund
   <p>도커를 개발환경으로 사용하면 개발=테스트=운영이 동일한 환경에서 실행되는 놀라운 상황이 펼쳐집니다. 이 부분은 재미있는 내용이 많지만, 주제에서 벗어나므로 이 정도만 언급하고 다음 기회에 더 자세히 알아봅니다.</p>
 </blockquote>
 
-<p>서버가 정상적으로 실행됐으면 웹 브라우저에서 테스트해봅니다. <code class="highlighter-rouge">http://localhost:4567</code></p>
+<p>서버가 정상적으로 실행됐으면 웹 브라우저에서 테스트해봅니다. <code class="language-plaintext highlighter-rouge">http://localhost:4567</code></p>
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test.png" alt="Browser test"></p>
 
@@ -316,7 +316,7 @@ bash <span class="nt">-c</span> <span class="s2">"bundle install &amp;&amp; bund
 
 <p><img src="https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile.png" alt="Dockerfile"></p>
 
-<p>도커는 이미지를 만들기 위해 <code class="highlighter-rouge">Dockerfile</code>이라는 이미지 빌드용 DSL<sub>Domain Specific Language</sub> 파일을 사용합니다. 단순 텍스트 파일로 일반적으로 소스와 함께 관리합니다.</p>
+<p>도커는 이미지를 만들기 위해 <code class="language-plaintext highlighter-rouge">Dockerfile</code>이라는 이미지 빌드용 DSL<sub>Domain Specific Language</sub> 파일을 사용합니다. 단순 텍스트 파일로 일반적으로 소스와 함께 관리합니다.</p>
 
 <p>고오급 개발자는 바로 Dockerfile을 만들 수도 있겠지만, 일반 개발자들은 일단 리눅스 서버에서 테스트로 설치해보고 안 되면 될 때까지 삽질하면서 최적의 과정을 Dockerfile로 작성해야 합니다. 우리는 초보니까 Ruby 웹 애플리케이션을 ubuntu에 배포하는 과정을 먼저 살펴보겠습니다.</p>
 
@@ -390,7 +390,7 @@ bundle <span class="nb">exec </span>ruby app.rb
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>ubuntu 컨테이너를 실행하고 위 명령어를 그대로 실행하면 웹 서버를 실행할 수 있습니다. 리눅스에서 테스트가 끝났으니 이 과정을 Dockerfile로 만들면 됩니다. 아직 자세한 명령어를 배우진 않았지만 일단 만들어 봅니다. 핵심 명령어는  파일을  복사하는 <code class="highlighter-rouge">COPY</code>와 명령어를 실행하는 <code class="highlighter-rouge">RUN</code>입니다.</p>
+<p>ubuntu 컨테이너를 실행하고 위 명령어를 그대로 실행하면 웹 서버를 실행할 수 있습니다. 리눅스에서 테스트가 끝났으니 이 과정을 Dockerfile로 만들면 됩니다. 아직 자세한 명령어를 배우진 않았지만 일단 만들어 봅니다. 핵심 명령어는  파일을  복사하는 <code class="language-plaintext highlighter-rouge">COPY</code>와 명령어를 실행하는 <code class="language-plaintext highlighter-rouge">RUN</code>입니다.</p>
 
 <noscript><pre># 1. ubuntu 설치 (패키지 업데이트 + 만든사람 표시)
 FROM       ubuntu:16.04
@@ -413,7 +413,7 @@ EXPOSE 4567
 CMD    bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 <script src="https://gist.github.com/subicura/f3f9d9b67dc59da9bad9afe76caba824.js"> </script>
 
-<p>쉘 스크립트의 내용을 거어어어어의 그대로 Dockerfile로 옮겼습니다. 차이점은 도커 빌드 중엔 키보드를 입력할 수 없기 때문에 <code class="highlighter-rouge">(y/n)</code>을 물어보는 걸 방지하기 위해 <code class="highlighter-rouge">-y</code> 옵션을 추가한 것 정도입니다.</p>
+<p>쉘 스크립트의 내용을 거어어어어의 그대로 Dockerfile로 옮겼습니다. 차이점은 도커 빌드 중엔 키보드를 입력할 수 없기 때문에 <code class="language-plaintext highlighter-rouge">(y/n)</code>을 물어보는 걸 방지하기 위해 <code class="language-plaintext highlighter-rouge">-y</code> 옵션을 추가한 것 정도입니다.</p>
 
 <p>빌드 파일을 작성했으니 이제 이미지를 만들어 봅니다.</p>
 
@@ -424,7 +424,7 @@ CMD    bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 
 <figure class="highlight usage"><pre><code class="language-txt" data-lang="txt">docker build [OPTIONS] PATH | URL | -</code></pre></figure>
 
-<p>생성할 이미지 이름을 지정하기 위한 <code class="highlighter-rouge">-t(--tag)</code> 옵션만 알면 빌드가 가능합니다.</p>
+<p>생성할 이미지 이름을 지정하기 위한 <code class="language-plaintext highlighter-rouge">-t(--tag)</code> 옵션만 알면 빌드가 가능합니다.</p>
 
 <p>Dockerfile을 만든 디렉토리로 이동하여 다음 명령어를 입력합니다.</p>
 
@@ -498,7 +498,7 @@ Successfully built 54d239c00f11
 <asciinema-player src="https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json" poster="npt:0:15" speed="2" theme="snazzy"></asciinema-player><figcaption>docker-build</figcaption>
 </div>
 
-<p>빌드 명령어를 실행하면 Dockerfile에 정의한 내용이 한 줄 한 줄 실행되는 걸 볼 수 있습니다. 실제로 명령어를 실행하기 때문에 빌드 시간이 꽤 걸리는 걸 알 수 있습니다. 최종적으로 <code class="highlighter-rouge">Successfully built xxxxxxxx</code> 메시지가 보이면 정상적으로 이미지를 생성한 것입니다.</p>
+<p>빌드 명령어를 실행하면 Dockerfile에 정의한 내용이 한 줄 한 줄 실행되는 걸 볼 수 있습니다. 실제로 명령어를 실행하기 때문에 빌드 시간이 꽤 걸리는 걸 알 수 있습니다. 최종적으로 <code class="language-plaintext highlighter-rouge">Successfully built xxxxxxxx</code> 메시지가 보이면 정상적으로 이미지를 생성한 것입니다.</p>
 
 <p>그럼 이미지가 잘 생성되었는지 확인해보겠습니다.</p>
 
@@ -546,7 +546,7 @@ docker run -d -p 8082:4567 app
 
 <p><strong>FROM</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM &lt;image&gt;:&lt;tag&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM &lt;image&gt;:&lt;tag&gt;
 FROM ubuntu:16.04
 </code></pre></div></div>
 
@@ -555,7 +555,7 @@ FROM ubuntu:16.04
 
 <p><strong>MAINTAINER</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MAINTAINER &lt;name&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MAINTAINER &lt;name&gt;
 MAINTAINER subicura@subicura.com
 </code></pre></div></div>
 
@@ -563,48 +563,48 @@ MAINTAINER subicura@subicura.com
 
 <p><strong>COPY</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>COPY &lt;src&gt;... &lt;dest&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>COPY &lt;src&gt;... &lt;dest&gt;
 COPY . /usr/src/app
 </code></pre></div></div>
 
-<p>파일이나 디렉토리를 이미지로 복사합니다. 일반적으로 소스를 복사하는 데 사용합니다. <code class="highlighter-rouge">target</code>디렉토리가 없다면 자동으로 생성합니다.</p>
+<p>파일이나 디렉토리를 이미지로 복사합니다. 일반적으로 소스를 복사하는 데 사용합니다. <code class="language-plaintext highlighter-rouge">target</code>디렉토리가 없다면 자동으로 생성합니다.</p>
 
 <p><strong>ADD</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ADD &lt;src&gt;... &lt;dest&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ADD &lt;src&gt;... &lt;dest&gt;
 ADD . /usr/src/app
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">COPY</code>명령어와 매우 유사하나 몇가지 추가 기능이 있습니다.  <code class="highlighter-rouge">src</code>에 파일 대신 URL을 입력할 수 있고  <code class="highlighter-rouge">src</code>에 압축 파일을 입력하는 경우 자동으로 압축을 해제하면서 복사됩니다.</p>
+<p><code class="language-plaintext highlighter-rouge">COPY</code>명령어와 매우 유사하나 몇가지 추가 기능이 있습니다.  <code class="language-plaintext highlighter-rouge">src</code>에 파일 대신 URL을 입력할 수 있고  <code class="language-plaintext highlighter-rouge">src</code>에 압축 파일을 입력하는 경우 자동으로 압축을 해제하면서 복사됩니다.</p>
 
 <p><strong>RUN</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RUN &lt;command&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RUN &lt;command&gt;
 RUN ["executable", "param1", "param2"]
 RUN bundle install
 </code></pre></div></div>
 
-<p>가장 많이 사용하는 구문입니다. 명령어를 그대로 실행합니다. 내부적으로 <code class="highlighter-rouge">/bin/sh -c</code> 뒤에 명령어를 실행하는 방식입니다.</p>
+<p>가장 많이 사용하는 구문입니다. 명령어를 그대로 실행합니다. 내부적으로 <code class="language-plaintext highlighter-rouge">/bin/sh -c</code> 뒤에 명령어를 실행하는 방식입니다.</p>
 
 <p><strong>CMD</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CMD ["executable","param1","param2"]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CMD ["executable","param1","param2"]
 CMD command param1 param2
 CMD bundle exec ruby app.rb
 </code></pre></div></div>
 
-<p>도커 컨테이너가 실행되었을 때 실행되는 명령어를 정의합니다. 빌드할 때는 실행되지 않으며 여러 개의 <code class="highlighter-rouge">CMD</code>가 존재할 경우 가장 마지막 <code class="highlighter-rouge">CMD</code>만 실행됩니다. 한꺼번에 여러 개의 프로그램을 실행하고 싶은 경우에는 <code class="highlighter-rouge">run.sh</code>파일을 작성하여 데몬으로 실행하거나 <a href="http://supervisord.org/">supervisord</a>나 <a href="https://github.com/ddollar/forego">forego</a>와 같은 여러 개의 프로그램을 실행하는 프로그램을 사용합니다.</p>
+<p>도커 컨테이너가 실행되었을 때 실행되는 명령어를 정의합니다. 빌드할 때는 실행되지 않으며 여러 개의 <code class="language-plaintext highlighter-rouge">CMD</code>가 존재할 경우 가장 마지막 <code class="language-plaintext highlighter-rouge">CMD</code>만 실행됩니다. 한꺼번에 여러 개의 프로그램을 실행하고 싶은 경우에는 <code class="language-plaintext highlighter-rouge">run.sh</code>파일을 작성하여 데몬으로 실행하거나 <a href="http://supervisord.org/">supervisord</a>나 <a href="https://github.com/ddollar/forego">forego</a>와 같은 여러 개의 프로그램을 실행하는 프로그램을 사용합니다.</p>
 
 <p><strong>WORKDIR</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WORKDIR /path/to/workdir
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WORKDIR /path/to/workdir
 </code></pre></div></div>
 
-<p>RUN, CMD, ADD, COPY등이 이루어질 기본 디렉토리를 설정합니다. 각 명령어의 현재 디렉토리는 한 줄 한 줄마다 초기화되기 때문에  <code class="highlighter-rouge">RUN cd /path</code>를 하더라도 다음 명령어에선 다시 위치가 초기화 됩니다. 같은 디렉토리에서 계속 작업하기 위해서 <code class="highlighter-rouge">WORKDIR</code>을 사용합니다.</p>
+<p>RUN, CMD, ADD, COPY등이 이루어질 기본 디렉토리를 설정합니다. 각 명령어의 현재 디렉토리는 한 줄 한 줄마다 초기화되기 때문에  <code class="language-plaintext highlighter-rouge">RUN cd /path</code>를 하더라도 다음 명령어에선 다시 위치가 초기화 됩니다. 같은 디렉토리에서 계속 작업하기 위해서 <code class="language-plaintext highlighter-rouge">WORKDIR</code>을 사용합니다.</p>
 
 <p><strong>EXPOSE</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>EXPOSE &lt;port&gt; [&lt;port&gt;...]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>EXPOSE &lt;port&gt; [&lt;port&gt;...]
 EXPOSE 4567
 </code></pre></div></div>
 
@@ -612,19 +612,19 @@ EXPOSE 4567
 
 <p><strong>VOLUME</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VOLUME ["/data"]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VOLUME ["/data"]
 </code></pre></div></div>
 
 <p>컨테이너 외부에 파일시스템을 마운트 할 때 사용합니다. 반드시 지정하지 않아도 마운트 할 수 있지만, 기본적으로 지정하는 것이 좋습니다.</p>
 
 <p><strong>ENV</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ENV &lt;key&gt; &lt;value&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ENV &lt;key&gt; &lt;value&gt;
 ENV &lt;key&gt;=&lt;value&gt; ...
 ENV DB_URL mysql
 </code></pre></div></div>
 
-<p>컨테이너에서 사용할 환경변수를 지정합니다. 컨테이너를 실행할 때 <code class="highlighter-rouge">-e</code>옵션을 사용하면 기존 값을 오버라이딩 하게 됩니다.</p>
+<p>컨테이너에서 사용할 환경변수를 지정합니다. 컨테이너를 실행할 때 <code class="language-plaintext highlighter-rouge">-e</code>옵션을 사용하면 기존 값을 오버라이딩 하게 됩니다.</p>
 
 <p>여기까지 Dockerfile에서 가장 많이 사용하는 명령어에 대해 알아보았습니다. 모든 명령어가 궁금하신 분은 <a href="https://docs.docker.com/engine/reference/builder/">공식문서</a>를 참고하세요.</p>
 
@@ -660,52 +660,52 @@ Successfully built 20369cef9829                   &lt;<span class="nt">--</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1) Sending build context to Docker daemon  5.12 kB
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1) Sending build context to Docker daemon  5.12 kB
 </code></pre></div></div>
 
 <p>빌드 명령어를 실행한 디렉토리의 파일들을 빌드컨텍스트<sub>build context</sub>라고 하고 이 파일들을 도커 서버(daemon)로 전송합니다. 도커는 서버-클라이언트 구조이므로 도커 서버가 작업하려면 미리 파일을 전송해야 합니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(2) Step 1/10 : FROM ubuntu:16.04
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(2) Step 1/10 : FROM ubuntu:16.04
 </code></pre></div></div>
 
 <p>Dockerfile을 한 줄 한 줄 수행합니다. 첫 번째로 FROM 명령어를 수행합니다. ubuntu:16.04 이미지를 다운받는 작업입니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(3) ---&gt; f49eec89601e
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(3) ---&gt; f49eec89601e
 </code></pre></div></div>
 
 <p>명령어 수행 결과를 이미지로 저장합니다. 여기서는 ubuntu:16.04를 사용하기로 했기 때문에 ubuntu 이미지의 ID가 표시됩니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(4) Step 2/10 : MAINTAINER subicura@subicura.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(4) Step 2/10 : MAINTAINER subicura@subicura.com
 </code></pre></div></div>
 
 <p>Dockerfile의 두 번째 명령어인 MAINTAINER 명령어를 수행합니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(5) ---&gt; Running in f4de0c750abb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(5) ---&gt; Running in f4de0c750abb
 </code></pre></div></div>
 
-<p>명령어를 수행하기 위해 바로 이전에 생성된 <code class="highlighter-rouge">f49eec89601e</code> 이미지를 기반으로 <code class="highlighter-rouge">f4de0c750abb</code>컨테이너를 임시로 생성하여 실행합니다.</p>
+<p>명령어를 수행하기 위해 바로 이전에 생성된 <code class="language-plaintext highlighter-rouge">f49eec89601e</code> 이미지를 기반으로 <code class="language-plaintext highlighter-rouge">f4de0c750abb</code>컨테이너를 임시로 생성하여 실행합니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(6) ---&gt; 4a400609ff73
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(6) ---&gt; 4a400609ff73
 </code></pre></div></div>
 
 <p>명령어 수행 결과를 이미지로 저장합니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(7) Removing intermediate container f4de0c750abb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(7) Removing intermediate container f4de0c750abb
 </code></pre></div></div>
 
 <p>명령어를 수행하기 위해 임시로 만들었던 컨테이너를 제거합니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(8) Step 3/10 : RUN apt-get -y update
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(8) Step 3/10 : RUN apt-get -y update
 </code></pre></div></div>
 
 <p>Dockerfile의 세 번째 명령어를 수행합니다. 이전 단계와 마찬가지로 바로 전에 만들어진 이미지를 기반으로 임시 컨테이너를 만들어 명령어를 실행하고 그 결과 상태를 이미지로 만듭니다. 이 과정을 마지막 줄까지 무한 반복합니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(9) Successfully built 20369cef9829
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(9) Successfully built 20369cef9829
 </code></pre></div></div>
 
 <p>최종 성공한 이미지 ID를 출력합니다.</p>
 
-<p>결론적으로 도커 빌드는 <code class="highlighter-rouge">임시 컨테이너 생성</code> &gt; <code class="highlighter-rouge">명령어 수행</code> &gt; <code class="highlighter-rouge">이미지로 저장</code> &gt; <code class="highlighter-rouge">임시 컨테이너 삭제</code> &gt; <code class="highlighter-rouge">새로 만든 이미지 기반 임시 컨테이너 생성</code> &gt; <code class="highlighter-rouge">명령어 수행</code> &gt; <code class="highlighter-rouge">이미지로 저장</code> &gt; <code class="highlighter-rouge">임시 컨테이너 삭제</code> &gt; … 의 과정을 계속해서 반복한다고 볼 수 있습니다. 명령어를 실행할 때마다 이미지 레이어를 저장하고 다시 빌드할 때 Dockerfile이 변경되지 않았다면 기존에 저장된 이미지를 그대로 캐시처럼 사용합니다.</p>
+<p>결론적으로 도커 빌드는 <code class="language-plaintext highlighter-rouge">임시 컨테이너 생성</code> &gt; <code class="language-plaintext highlighter-rouge">명령어 수행</code> &gt; <code class="language-plaintext highlighter-rouge">이미지로 저장</code> &gt; <code class="language-plaintext highlighter-rouge">임시 컨테이너 삭제</code> &gt; <code class="language-plaintext highlighter-rouge">새로 만든 이미지 기반 임시 컨테이너 생성</code> &gt; <code class="language-plaintext highlighter-rouge">명령어 수행</code> &gt; <code class="language-plaintext highlighter-rouge">이미지로 저장</code> &gt; <code class="language-plaintext highlighter-rouge">임시 컨테이너 삭제</code> &gt; … 의 과정을 계속해서 반복한다고 볼 수 있습니다. 명령어를 실행할 때마다 이미지 레이어를 저장하고 다시 빌드할 때 Dockerfile이 변경되지 않았다면 기존에 저장된 이미지를 그대로 캐시처럼 사용합니다.</p>
 
 <p>이러한 레이어 개념을 잘 이해하고 있어야 최적화된 이미지를 생성할 수 있습니다.</p>
 
@@ -716,7 +716,7 @@ Successfully built 20369cef9829                   &lt;<span class="nt">--</span>
 
 <p><strong>Base Image</strong></p>
 
-<p>위에서 만든 Ruby 애플리케이션 이미지는 <code class="highlighter-rouge">ubuntu</code>를 베이스로 만들었지만 사실 훠어어얼씬 간단한  <code class="highlighter-rouge">ruby</code> 베이스 이미지가 존재합니다. <del>미리 이야기하지 않아 죄송..</del> 기존에 ruby를 설치했던 명령어는 ruby 이미지를 사용하는 것으로 간단하게 생략할 수 있습니다.</p>
+<p>위에서 만든 Ruby 애플리케이션 이미지는 <code class="language-plaintext highlighter-rouge">ubuntu</code>를 베이스로 만들었지만 사실 훠어어얼씬 간단한  <code class="language-plaintext highlighter-rouge">ruby</code> 베이스 이미지가 존재합니다. <del>미리 이야기하지 않아 죄송..</del> 기존에 ruby를 설치했던 명령어는 ruby 이미지를 사용하는 것으로 간단하게 생략할 수 있습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -829,7 +829,7 @@ RUN apt-get <span class="nt">-y</span> <span class="nt">-qq</span> update
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">-qq</code> 옵션으로 로그를 출력하지 않게 했습니다. 각종 리눅스 명령어는 보통 <code class="highlighter-rouge">quite</code> 옵션이 있으니 적절하게 적용하면 됩니다.</p>
+<p><code class="language-plaintext highlighter-rouge">-qq</code> 옵션으로 로그를 출력하지 않게 했습니다. 각종 리눅스 명령어는 보통 <code class="language-plaintext highlighter-rouge">quite</code> 옵션이 있으니 적절하게 적용하면 됩니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -846,7 +846,7 @@ RUN bundle <span class="nb">install</span> <span class="nt">--no-rdoc</span> <sp
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">--no-doc</code>과 <code class="highlighter-rouge">--no-ri</code> 옵션으로 필요 없는 문서를 생성하지 않아 이미지 용량도 줄이고 빌드 속도도 더 빠르게 했습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">--no-doc</code>과 <code class="language-plaintext highlighter-rouge">--no-ri</code> 옵션으로 필요 없는 문서를 생성하지 않아 이미지 용량도 줄이고 빌드 속도도 더 빠르게 했습니다.</p>
 
 <p><strong>이쁘게</strong></p>
 
@@ -939,7 +939,7 @@ Login Succeeded</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>ID와 패스워드를 입력하면 로그인이 되고 <code class="highlighter-rouge">~/.docker/config.json</code>에 인증정보가 저장되어 로그아웃하기 전까지 로그인 정보가 유지됩니다.</p>
+<p>ID와 패스워드를 입력하면 로그인이 되고 <code class="language-plaintext highlighter-rouge">~/.docker/config.json</code>에 인증정보가 저장되어 로그아웃하기 전까지 로그인 정보가 유지됩니다.</p>
 
 <p><strong>이미지 태그</strong></p>
 
@@ -947,13 +947,13 @@ Login Succeeded</span>
 
 <figure class="highlight usage"><pre><code class="language-txt" data-lang="txt">[Registry URL]/[사용자 ID]/[이미지명]:[tag]</code></pre></figure>
 
-<p>Registry URL은 기본적으로 도커 허브를 바라보고 있고 사용자 ID를 지정하지 않으면 기본값(library)을 사용합니다. 따라서 <code class="highlighter-rouge">ubuntu</code> = <code class="highlighter-rouge">library/ubuntu</code> = <code class="highlighter-rouge">docker.io/library/ubuntu</code> 는 모두 동일한 표현입니다.</p>
+<p>Registry URL은 기본적으로 도커 허브를 바라보고 있고 사용자 ID를 지정하지 않으면 기본값(library)을 사용합니다. 따라서 <code class="language-plaintext highlighter-rouge">ubuntu</code> = <code class="language-plaintext highlighter-rouge">library/ubuntu</code> = <code class="language-plaintext highlighter-rouge">docker.io/library/ubuntu</code> 는 모두 동일한 표현입니다.</p>
 
-<p>도커의 <code class="highlighter-rouge">tag</code>명령어를 이용하여 기존에 만든 이미지에 추가로 이름을 지어줄 수 있습니다.</p>
+<p>도커의 <code class="language-plaintext highlighter-rouge">tag</code>명령어를 이용하여 기존에 만든 이미지에 추가로 이름을 지어줄 수 있습니다.</p>
 
 <figure class="highlight usage"><pre><code class="language-txt" data-lang="txt">docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]</code></pre></figure>
 
-<p>앞에서 만든 <code class="highlighter-rouge">app</code>이미지에 계정정보와 버전 정보를 추가해보겠습니다.</p>
+<p>앞에서 만든 <code class="language-plaintext highlighter-rouge">app</code>이미지에 계정정보와 버전 정보를 추가해보겠습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -962,7 +962,7 @@ Login Succeeded</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="highlighter-rouge">subicura</code>라는 ID를 사용하고 이미지 이름을 <code class="highlighter-rouge">sinatra-app</code>으로 변경했습니다. 첫 번째 버전이므로 태그는 <code class="highlighter-rouge">1</code>을 사용합니다. 이제  <code class="highlighter-rouge">push</code>명령을 이용해 도커 허브에 이미지를 전송해 봅니다.</p>
+<p><code class="language-plaintext highlighter-rouge">subicura</code>라는 ID를 사용하고 이미지 이름을 <code class="language-plaintext highlighter-rouge">sinatra-app</code>으로 변경했습니다. 첫 번째 버전이므로 태그는 <code class="language-plaintext highlighter-rouge">1</code>을 사용합니다. 이제  <code class="language-plaintext highlighter-rouge">push</code>명령을 이용해 도커 허브에 이미지를 전송해 봅니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1004,7 +1004,7 @@ af605e724c5a: Mounted from library/ubuntu
 
 <p>성공적으로 이미지를 도커 허브에 푸시하였습니다. 도커 허브에 저장된 50만 개의 이미지에 새로운 이미지가 하나 추가되었습니다!</p>
 
-<p>이제 어디서든 <code class="highlighter-rouge">subicura/sinatra-app:1</code>이미지를 사용할 수 있습니다.</p>
+<p>이제 어디서든 <code class="language-plaintext highlighter-rouge">subicura/sinatra-app:1</code>이미지를 사용할 수 있습니다.</p>
 
 <h3 id="private-docker-registry">
 <a class="anchor" href="#private-docker-registry" aria-hidden="true"><span class="octicon octicon-link"></span></a>Private Docker Registry</h3>
@@ -1037,7 +1037,7 @@ docker push localhost:5000/subicura/sinatra-app:1
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>앞에서 만든 이름에 <code class="highlighter-rouge">localhost:5000/</code>를 추가했습니다. 레지스트리 서버에 파일이 잘 저장되었나 마운트한 디렉토리를 한번 살펴봅니다.</p>
+<p>앞에서 만든 이름에 <code class="language-plaintext highlighter-rouge">localhost:5000/</code>를 추가했습니다. 레지스트리 서버에 파일이 잘 저장되었나 마운트한 디렉토리를 한번 살펴봅니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1405,7 +1405,7 @@ docker push localhost:5000/subicura/sinatra-app:1
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1606053567423074000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1608030295159555000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
