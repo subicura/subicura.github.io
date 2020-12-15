@@ -21,7 +21,7 @@ toc: true
     </a>
 </p>
 
-그리고 실습 영상과 함께 자세한 설명을 들을 수 있는 [온라인 강의](./)도 준비되어 있습니다.
+그리고 실습 영상과 함께 자세한 설명을 들을 수 있는 [온라인 강의](https://bit.ly/inflearn-k8s-link)도 준비되어 있습니다.
 
 [![초보를 위한 쿠버네티스 안내서 - 인프런]({{ site.url }}/assets/article_images/2020-12-14-kubernetes-basic-2/inflearn-k8s.png)](https://bit.ly/inflearn-k8s-link)
 
