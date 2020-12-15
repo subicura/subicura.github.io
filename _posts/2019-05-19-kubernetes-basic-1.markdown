@@ -1,7 +1,7 @@
 ---
 published: true
 title: 쿠버네티스 시작하기 - Kubernetes란 무엇인가?
-series: 1/4
+series: 1/2
 categories: Kubernetes
 tags: [Kubernetes, Docker, DevOps, Server]
 layout: post
@@ -9,7 +9,7 @@ excerpt: 쿠버네티스는 컨테이너를 쉽고 빠르게 배포/확장하고
 ogimage: /assets/og/2019-05-19-kubernetes-basic-1-summary.png
 comments: yes
 toc: true
-last_modified_at: 2020-01-14T08:50:00+09:00
+last_modified_at: 2020-12-14T08:50:00+09:00
 ---
 
 <p align="center">
@@ -39,10 +39,8 @@ last_modified_at: 2020-01-14T08:50:00+09:00
 ---
 
 * [도커에 대해 모른다면 → 초보를 위한 도커 안내서]({% post_url 2017-01-19-docker-guide-for-beginners-1 %})
-* **쿠버네티스 시작하기 - 쿠버네티스란 무엇인가? ✓** <span class="series">SERIES 1/4</span>
-* 쿠버네티스 시작하기 - 쿠버네티스 설치 (예정) <span class="series">SERIES 2/4</span>
-* 쿠버네티스 시작하기 - 컨테이너 배포 (예정) <span class="series">SERIES 3/4</span>
-* 쿠버네티스 시작하기 - 스토리지, 설정, 비밀정보 관리 (예정) <span class="series">SERIES 4/4</span>
+* **쿠버네티스 시작하기 - 쿠버네티스란 무엇인가? ✓** <span class="series">SERIES 1/2</span>
+* [쿠버네티스 시작하기 - 설치부터 배포까지]({% post_url 2020-12-13-kubernetes-basic-2 %}) <span class="series">SERIES 2/2</span>
 
 {% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
 
