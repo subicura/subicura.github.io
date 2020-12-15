@@ -9,11 +9,11 @@ permalink: /about/
     <div class="name"><b>김충섭</b>/subicura/서비큐라</div>
 </div>
 
-[PURPLEWORKS](http://purpleworks.co.kr)+CREATIVE LAB / [remotty](http://blog.remotty.com/blog/)
+[purpleworks](http://purpleworks.co.kr) > [purple io](http://purple.io)
 
-`ruby` `rails` `go` `react` `devops` `docker` `openframeworks` `newmedia`
+`react` `jamstack` `devops` `docker` `kubernetes` `live` `newmedia` `10000x`
 
-퍼플웍스에서 소프트웨어 엔지니어로 서버관리부터 개발까지 여러가지 일을 하고 있습니다. 개발자를 편하게 해주는 자동화 기술과 효율적인 개발 프로세스에 관심이 많습니다. DevOps와 관련된 툴에 관심이 많고 ruby on rails와 go언어를 좋아합니다. 최근 관심사는 [typescript](https://www.typescriptlang.org/), [kubernetes](https://kubernetes.io/), [aspnetboilerplate](https://aspnetboilerplate.com/), glsl(shader)입니다.
+퍼플아이오에서 소프트웨어 엔지니어로 서버관리부터 개발까지 여러가지 일을 하고 있습니다. 개발자를 편하게 해주는 자동화 기술과 효율적인 개발 프로세스에 관심이 많습니다. DevOps와 관련된 툴에 관심이 많고 ruby on rails와 go언어를 좋아합니다. 최근 관심사는 [typescript](https://www.typescriptlang.org/), [kubernetes](https://kubernetes.io/), [jamstack](https://jamstack.org/), 라이브커머스입니다.
 
 
 > Do, or do not. There is no try.
@@ -29,7 +29,10 @@ permalink: /about/
 
 ## Work
 
-- 퍼플웍스 / Software Engineer (2010~)
+- 퍼플아이오(퍼플웍스 분사) / Software Engineer (2020~)
+  - [코오롱몰](https://kolonmall.com) 개발
+  - 썸띵뉴?
+- 퍼플웍스 / Software Engineer (2010~2020)
   - .NET MVC/Java(spring)/Ruby on rails/Go를 이용한 백엔드 개발
   - AngularJS/ReactJS를 이용한 프론트엔드 개발, iOS/android 앱 개발
   - Docker, Kubernetes, AWS를 이용한 서버 인프라 관리
@@ -66,9 +69,5 @@ permalink: /about/
 
 ## Activity
 
+- [44bits](https://www.44bits.io/ko) 멤버
 - OpenContainer Korea 운영멤버
-
-## Repository
-
-- [delibird](https://github.com/purpleworks/delibird) 배송조회 서비스 / golang
-- [angular-ladda](https://github.com/remotty/angular-ladda) angularjs ladda plugin / angularjs(v1)
