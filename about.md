@@ -9,12 +9,15 @@ permalink: /about/
     <div class="name"><b>김충섭</b>/subicura/서비큐라</div>
 </div>
 
-[purpleworks](http://purpleworks.co.kr) > [purple io](http://purple.io)
+[퍼플웍스](http://purpleworks.co.kr) > (분사) > [퍼플아이오](http://purple.io) Software Engineer
 
 `react` `jamstack` `devops` `docker` `kubernetes` `live` `newmedia` `10000x`
 
 퍼플아이오에서 소프트웨어 엔지니어로 서버관리부터 개발까지 여러가지 일을 하고 있습니다. 개발자를 편하게 해주는 자동화 기술과 효율적인 개발 프로세스에 관심이 많습니다. DevOps와 관련된 툴에 관심이 많고 ruby on rails와 go언어를 좋아합니다. 최근 관심사는 [typescript](https://www.typescriptlang.org/), [kubernetes](https://kubernetes.io/), [jamstack](https://jamstack.org/), 라이브커머스입니다.
 
+프론트, 백엔드, 인프라쪽에 관심이 많고 디자인, 고객경험, 마케팅도 좋아합니다. 함께 자라기.. 어떻게 하면 조직 전체가 즐겁게 일하고 개인도 발전할 수 있을까에 고민이 많습니다.
+
+우리만의 뾰족함을 가지고 일반적인(보편적인) 기술을 사용하지만 일부 영역은 더 디테일하고 로우레벨 지식이 필요한 프로젝트를 진행합니다. 어제 보다 나은 오늘, 전보다 나은 미래가 중요하고 조금씩.. 꾸준히 발전하다보면 나중에 크게 성장할거라는 확신이 있습니다. 레거시 프로젝트라도 개선할 점을 찾고 더 낫게 바꾸려고 합니다.
 
 > Do, or do not. There is no try.
 
