@@ -35,19 +35,15 @@ permalink: /about/
 
 처음 회사를 창업했을 때, 뉴 미디어 아트를 이용한 체험형 광고를 만들었습니다. 그 때 만난 인연으로 작가님과 간간히 미디어 아트 작업을 합니다.
 
-<img class="profile-img" src="/assets/images/evermore.jpg" />
-
-\# Art Basel in Hong Kong
+<img class="profile-img" src="/assets/images/evermore.jpg" alt="# Art Basel in Hong Kong"/>
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/277851921" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
-<img class="profile-img" src="/assets/images/rysehotel.jpg" />
-
-\# RYSE, Autograph Collection
+<img class="profile-img" src="/assets/images/rysehotel.jpg" alt="# RYSE, Autograph Collection" />
 
 <iframe src="https://player.vimeo.com/video/30174338" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-\# MCM
+<figcaption style="margin-top: 5px"># MCM, HK</figcaption>
 
 
 ---
