@@ -332,10 +332,15 @@ CRI 외에 CNI(네트워크), CSI(스토리지)를 지원하여 인터페이스�
 
 ---
 
-* [도커에 대해 모른다면 → 초보를 위한 도커 안내서]({% post_url 2017-01-19-docker-guide-for-beginners-1 %})
-* **쿠버네티스 시작하기 - 쿠버네티스란 무엇인가? ✓** <span class="series">SERIES 1/4</span>
-* 쿠버네티스 시작하기 - 쿠버네티스 설치 (예정) <span class="series">SERIES 2/4</span>
-* 쿠버네티스 시작하기 - 컨테이너 배포 (예정) <span class="series">SERIES 3/4</span>
-* 쿠버네티스 시작하기 - 스토리지, 설정, 비밀정보 관리 (예정) <span class="series">SERIES 4/4</span>
+실습은 👇 하단 링크를 클릭해 주세요!
 
----
+<p align="center">
+    <a href="https://subicura.com/k8s/" target="_blank">
+        <img src="{{ "/assets/article_images/2020-12-14-kubernetes-basic-2/subicura-k8s.png"  | prepend: site.baseurl  }}" alt="초보를 위한 쿠버네티스 안내서" style="width: 350px">
+    </a>
+</p>
+
+그리고 실습 영상과 함께 자세한 설명을 들을 수 있는 [온라인 강의](https://bit.ly/inflearn-k8s-link)도 준비되어 있습니다.
+
+[![초보를 위한 쿠버네티스 안내서 - 인프런]({{ site.url }}/assets/article_images/2020-12-14-kubernetes-basic-2/inflearn-k8s.png)](https://bit.ly/inflearn-k8s-link)
+
