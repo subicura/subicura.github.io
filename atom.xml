@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2020-12-19T10:59:33+09:00</updated>
+ <updated>2020-12-21T10:41:09+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -1715,15 +1715,18 @@ npm run lint
 
 &lt;hr /&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/2017/01/19/docker-guide-for-beginners-1.html&quot;&gt;도커에 대해 모른다면 → 초보를 위한 도커 안내서&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;쿠버네티스 시작하기 - 쿠버네티스란 무엇인가? ✓&lt;/strong&gt; &lt;span class=&quot;series&quot;&gt;SERIES 1/4&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;쿠버네티스 시작하기 - 쿠버네티스 설치 (예정) &lt;span class=&quot;series&quot;&gt;SERIES 2/4&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;쿠버네티스 시작하기 - 컨테이너 배포 (예정) &lt;span class=&quot;series&quot;&gt;SERIES 3/4&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;쿠버네티스 시작하기 - 스토리지, 설정, 비밀정보 관리 (예정) &lt;span class=&quot;series&quot;&gt;SERIES 4/4&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;실습은 👇 하단 링크를 클릭해 주세요!&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;a href=&quot;https://subicura.com/k8s/&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;/assets/article_images/2020-12-14-kubernetes-basic-2/subicura-k8s.png&quot; alt=&quot;초보를 위한 쿠버네티스 안내서&quot; style=&quot;width: 350px&quot; /&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;그리고 실습 영상과 함께 자세한 설명을 들을 수 있는 &lt;a href=&quot;https://bit.ly/inflearn-k8s-link&quot;&gt;온라인 강의&lt;/a&gt;도 준비되어 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bit.ly/inflearn-k8s-link&quot;&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2020-12-14-kubernetes-basic-2/inflearn-k8s.png&quot; alt=&quot;초보를 위한 쿠버네티스 안내서 - 인프런&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 </content>
  </entry>
  
