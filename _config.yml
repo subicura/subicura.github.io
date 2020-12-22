@@ -78,6 +78,6 @@ social:
 #    share_title:
 #    share_link:
 
-_top_banner:
-  title: 44bits과 함께하는 도커 워크숍
-  link: http://bit.ly/44-docker-workshop
+top_banner:
+  title: 📔 쿠버네티스 안내서
+  link: https://subicura.com/k8s/
