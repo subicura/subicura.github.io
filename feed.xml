@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Jan 2021 02:06:22 +0900</pubDate>
-    <lastBuildDate>Mon, 04 Jan 2021 02:06:22 +0900</lastBuildDate>
+    <pubDate>Mon, 04 Jan 2021 02:11:28 +0900</pubDate>
+    <lastBuildDate>Mon, 04 Jan 2021 02:11:28 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -104,20 +104,6 @@
 
 &lt;p&gt;새로운 개발자들도 많이 합류하였는데, 다들 좋은 분들이고 열정이 있어 앞으로가 기대됩니다.&lt;/p&gt;
 
-&lt;h2 id=&quot;유투브&quot;&gt;유투브&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2021-01-03-remember-2020/youtube.jpg&quot; alt=&quot;youtube&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;직장인 2대 허언이 “퇴사 할 거다” + “유튜브 할 거다” 라는데 드디어 유튜브를 찍었습니다.&lt;/p&gt;
-
-&lt;p&gt;아무래도 혼자 하기는 부담이 되어서 &lt;a href=&quot;https://www.44bits.io/ko&quot;&gt;44bits&lt;/a&gt;멤버들과 함께 &lt;a href=&quot;http://44bits.tv/&quot;&gt;채널&lt;/a&gt;을 만들었고 보이는 팟캐스트, 쿠버네티스 안내서, 4분코딩, Startup53등 다양한 영상을 만들었습니다. Startup53은 나름 재밌을 것 같았는데 코로나 때문에 잠정 중단되어 많이 아쉽습니다.&lt;/p&gt;
-
-&lt;p&gt;개발 이야기만 해서 구독자와 시청 시간을 모을 수 있을까 걱정했는데 결국 10월 즈음 수익 창출 조건(구독자 1000명과 1년간 4천시간 시청)을 만족했습니다. 아직 광고수익은 거~의 없습니다. 아마 조회 수가 수만~수십만은 되어야 수익이 조금씩 나오지 않을까 생각이 듭니다. &lt;del&gt;자극적인 영상을 올려야 하나..&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;영상을 찍으면서 익힌 스킬은 어색하지 않게 이야기하기, 편집 포인트 잡기, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;음... 어...&lt;/code&gt;같은 말 덜 쓰기이고 프리미어 자르고 붙이기 단축키 입니다.&lt;/p&gt;
-
-&lt;p&gt;참고로, 개인 영상을 찍을 때 사용하는 프로그램은 &lt;a href=&quot;https://www.telestream.net/screenflow/overview.htm&quot;&gt;Screenflow&lt;/a&gt;로 $129인데 중간에 다운되는 일은 아직 없었고 나름 가볍습니다. 캠과 화면이 동시에 따로 녹화되어 편집하기 좋습니다. 편집은 Adobe Premiere Pro를 쓰고 장비는 맥북과 블루 예티 마이크를 사용합니다.&lt;/p&gt;
-
 &lt;h2 id=&quot;블로그&quot;&gt;블로그&lt;/h2&gt;
 
 &lt;p&gt;2020년 블로그 가장 큰 성과는 쿠버네티스 시작하기 글을 마무리한 점입니다. 여러 가지 고민만 하다가 글을 못 쓰고 있었는데 결국 &lt;a href=&quot;https://subicura.com/k8s/&quot;&gt;쿠버네티스 안내서&lt;/a&gt;로 우회하여 마무리하였습니다.&lt;/p&gt;
@@ -145,6 +131,20 @@
 &lt;p&gt;글을 자주 쓰진 않지만, 꾸준히 방문자 수가 나오는 이유는 도커와 macOS 설정글 덕분입니다. 그리고 구글 검색의 힘이 얼마나 큰지, SEO가 얼마나 중요한지 알 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;2021년도엔 좀 더 여유를 가지고 블로그 글을 더 작성할 수 있었으면 좋겠습니다. 우선은 &lt;a href=&quot;https://subicura.com/k8s/&quot;&gt;쿠버네티스 안내서&lt;/a&gt;와 &lt;a href=&quot;https://subicura.com/k8s/archive/&quot;&gt;쿠버네티스 관련 글&lt;/a&gt;을 좀 더 신경 쓸 것 같습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;유투브&quot;&gt;유투브&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2021-01-03-remember-2020/youtube.jpg&quot; alt=&quot;youtube&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;직장인 2대 허언이 “퇴사 할 거다” + “유튜브 할 거다” 라는데 드디어 유튜브를 찍었습니다.&lt;/p&gt;
+
+&lt;p&gt;아무래도 혼자 하기는 부담이 되어서 &lt;a href=&quot;https://www.44bits.io/ko&quot;&gt;44bits&lt;/a&gt;멤버들과 함께 &lt;a href=&quot;http://44bits.tv/&quot;&gt;채널&lt;/a&gt;을 만들었고 보이는 팟캐스트, 쿠버네티스 안내서, 4분코딩, Startup53등 다양한 영상을 만들었습니다. Startup53은 나름 재밌을 것 같았는데 코로나 때문에 잠정 중단되어 많이 아쉽습니다.&lt;/p&gt;
+
+&lt;p&gt;개발 이야기만 해서 구독자와 시청 시간을 모을 수 있을까 걱정했는데 결국 10월 즈음 수익 창출 조건(구독자 1000명과 1년간 4천시간 시청)을 만족했습니다. 아직 광고수익은 거~의 없습니다. 아마 조회 수가 수만~수십만은 되어야 수익이 조금씩 나오지 않을까 생각이 듭니다. &lt;del&gt;자극적인 영상을 올려야 하나..&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;영상을 찍으면서 익힌 스킬은 어색하지 않게 이야기하기, 편집 포인트 잡기, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;음... 어...&lt;/code&gt;같은 말 덜 쓰기이고 프리미어 자르고 붙이기 단축키 입니다.&lt;/p&gt;
+
+&lt;p&gt;참고로, 개인 영상을 찍을 때 사용하는 프로그램은 &lt;a href=&quot;https://www.telestream.net/screenflow/overview.htm&quot;&gt;Screenflow&lt;/a&gt;로 $129인데 중간에 다운되는 일은 아직 없었고 나름 가볍습니다. 캠과 화면이 동시에 따로 녹화되어 편집하기 좋습니다. 편집은 Adobe Premiere Pro를 쓰고 장비는 맥북과 블루 예티 마이크를 사용합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;강의&quot;&gt;강의&lt;/h2&gt;
 
