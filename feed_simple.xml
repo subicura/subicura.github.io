@@ -6,9 +6,23 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 22 Dec 2020 21:26:26 +0900</pubDate>
-    <lastBuildDate>Tue, 22 Dec 2020 21:26:26 +0900</lastBuildDate>
+    <pubDate>Mon, 04 Jan 2021 02:06:22 +0900</pubDate>
+    <lastBuildDate>Mon, 04 Jan 2021 02:06:22 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>2020년 회고</title>
+        <description>어느덧 2016년 마지막 날입니다. 올 한해 역시 정신없이 지나갔고 작년에 태어난 딸도 돌을 지나고 어느새 python 개발 서적을 읽을 정도의 나이가 되었습니다. 회사는 6주년을 맞이했고 올해 처음으로 일반 고객을 대상으로한 서비스를 오픈했습니다. 서비스를 운영하면서 느낀 점도 많지만 일단은 블로그에 대해 한해를 마무리하는 회고를 하려고 합니다.</description>
+        <pubDate>Sun, 03 Jan 2021 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2021/01/03/remember-2020.html</link>
+        <guid isPermaLink="true">https://subicura.com/2021/01/03/remember-2020.html</guid>
+        
+        <category>Blog</category>
+        
+        
+        <category>Talk</category>
+        
+      </item>
     
       <item>
         <title>쿠버네티스 시작하기 - 설치부터 배포까지</title>
@@ -229,20 +243,6 @@
         
         
         <category>Docker</category>
-        
-      </item>
-    
-      <item>
-        <title>2016년 블로그 회고</title>
-        <description>어느덧 2016년 마지막 날입니다. 올 한해 역시 정신없이 지나갔고 작년에 태어난 딸도 돌을 지나고 어느새 python 개발 서적을 읽을 정도의 나이가 되었습니다. 회사는 6주년을 맞이했고 올해 처음으로 일반 고객을 대상으로한 서비스를 오픈했습니다. 서비스를 운영하면서 느낀 점도 많지만 일단은 블로그에 대해 한해를 마무리하는 회고를 하려고 합니다.</description>
-        <pubDate>Sat, 31 Dec 2016 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/2016/12/31/remember-2016.html</link>
-        <guid isPermaLink="true">https://subicura.com/2016/12/31/remember-2016.html</guid>
-        
-        <category>Blog</category>
-        
-        
-        <category>Talk</category>
         
       </item>
     
