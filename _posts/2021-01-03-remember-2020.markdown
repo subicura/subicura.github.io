@@ -5,12 +5,14 @@ categories: Talk
 excerpt: 2020년은 다른 해보다 더 특별한 한해였던 것 같습니다. 새로운 회사인 퍼플아이오 소속이 되었습니다. 회사 / 팀 / 제품에 고민이 많았고 유투브와 온라인 강의를 시작했습니다.
 tags: [Blog]
 layout: post
+ogimage: /assets/og/2021-01-03-remember-2020-summary.png
 comments: yes
+toc: true
 ---
 
 오랜만에 회고입니다. 2020년은 다른 해보다 더 특별한 한해였던 것 같습니다.
 
-## 이직(?) / 퍼플아이오
+## 퍼플아이오
 
 2020년 "퍼플웍스"를 시작하고 10년만에 새로운 회사인 "퍼플아이오" 소속이 되었습니다. 퍼플아이오<sup>purpleio</sup>는 퍼플웍스 자회사로 시작하여 코오롱FnC의 투자를 받았고 [코오롱몰](https://kolonmall.com)을 중심으로 한 온라인 이커머스 개발을 주로 하고 있습니다.
 
@@ -48,6 +50,10 @@ comments: yes
 조직이 커지고 팀원이 많아지면서 한명 한명의 역할이 중요해지고 시간이 소중해졌습니다. 최대한 비효율을 줄이려고 노력했고 자연스레 개발 프로세스를 손보았습니다.
 
 **[Danger JS](https://danger.systems/js/)도입**
+
+<p align="center">
+    <img src="{{ "/assets/article_images/2021-01-03-remember-2020/bot.jpg"  | prepend: site.baseurl  }}" alt="GitLab danger bot" style="width: 350px">
+</p>
 
 GitHub이나 GitLab에 붙일 수 있는 bot 입니다. PR 제목이나 내용이 규칙에 맞지 않으면 댓글로 알려주고 코드 리뷰할 사람을 랜덤으로 뽑아주는 기능도 있습니다.
 
@@ -101,6 +107,8 @@ Nextjs를 도입하여 드디어 Rails + AngularJS + React가 공존하는 프�
 
 2020년 블로그 가장 큰 성과는 쿠버네티스 시작하기 글을 마무리한 점입니다. 여러 가지 고민만 하다가 글을 못 쓰고 있었는데 결국 [쿠버네티스 안내서](https://subicura.com/k8s/)로 우회하여 마무리하였습니다.
 
+![PageView]({{ site.url }}/assets/article_images/2021-01-03-remember-2020/ga.jpg)
+
 올 한 해 가장 많이 본 글을 뽑아봤습니다.
 
 1. [초보를 위한 도커 안내서 2/3 - 설치하고 컨테이너 실행하기](https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html) / 162,493 페이지뷰
@@ -136,6 +144,12 @@ Nextjs를 도입하여 드디어 Rails + AngularJS + React가 공존하는 프�
 참고로, 개인 영상을 찍을 때 사용하는 프로그램은 [Screenflow](https://www.telestream.net/screenflow/overview.htm)로 $129인데 중간에 다운되는 일은 아직 없었고 나름 가볍습니다. 캠과 화면이 동시에 따로 녹화되어 편집하기 좋습니다. 편집은 Adobe Premiere Pro를 쓰고 장비는 맥북과 블루 예티 마이크를 사용합니다.
 
 ## 강의
+
+<p align="center">
+    <a href="https://www.inflearn.com/instructors/209928/courses" target="_blank">
+        <img src="{{ "/assets/article_images/2021-01-03-remember-2020/inf.jpg"  | prepend: site.baseurl  }}" alt="인프런" style="width: 350px">
+    </a>
+</p>
 
 계속 고민하던 온라인 강의를 2020년에 드디어 만들었습니다.
 
