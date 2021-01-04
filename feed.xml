@@ -6,15 +6,15 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Jan 2021 02:11:28 +0900</pubDate>
-    <lastBuildDate>Mon, 04 Jan 2021 02:11:28 +0900</lastBuildDate>
+    <pubDate>Mon, 04 Jan 2021 09:36:52 +0900</pubDate>
+    <lastBuildDate>Mon, 04 Jan 2021 09:36:52 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>2020년 회고</title>
         <description>&lt;p&gt;오랜만에 회고입니다. 2020년은 다른 해보다 더 특별한 한해였던 것 같습니다.&lt;/p&gt;
 
-&lt;h2 id=&quot;이직--퍼플아이오&quot;&gt;이직(?) / 퍼플아이오&lt;/h2&gt;
+&lt;h2 id=&quot;퍼플아이오&quot;&gt;퍼플아이오&lt;/h2&gt;
 
 &lt;p&gt;2020년 “퍼플웍스”를 시작하고 10년만에 새로운 회사인 “퍼플아이오” 소속이 되었습니다. 퍼플아이오&lt;sup&gt;purpleio&lt;/sup&gt;는 퍼플웍스 자회사로 시작하여 코오롱FnC의 투자를 받았고 &lt;a href=&quot;https://kolonmall.com&quot;&gt;코오롱몰&lt;/a&gt;을 중심으로 한 온라인 이커머스 개발을 주로 하고 있습니다.&lt;/p&gt;
 
@@ -53,6 +53,10 @@
 &lt;p&gt;조직이 커지고 팀원이 많아지면서 한명 한명의 역할이 중요해지고 시간이 소중해졌습니다. 최대한 비효율을 줄이려고 노력했고 자연스레 개발 프로세스를 손보았습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://danger.systems/js/&quot;&gt;Danger JS&lt;/a&gt;도입&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/assets/article_images/2021-01-03-remember-2020/bot.jpg&quot; alt=&quot;GitLab danger bot&quot; style=&quot;width: 350px&quot; /&gt;
+&lt;/p&gt;
 
 &lt;p&gt;GitHub이나 GitLab에 붙일 수 있는 bot 입니다. PR 제목이나 내용이 규칙에 맞지 않으면 댓글로 알려주고 코드 리뷰할 사람을 랜덤으로 뽑아주는 기능도 있습니다.&lt;/p&gt;
 
@@ -108,6 +112,8 @@
 
 &lt;p&gt;2020년 블로그 가장 큰 성과는 쿠버네티스 시작하기 글을 마무리한 점입니다. 여러 가지 고민만 하다가 글을 못 쓰고 있었는데 결국 &lt;a href=&quot;https://subicura.com/k8s/&quot;&gt;쿠버네티스 안내서&lt;/a&gt;로 우회하여 마무리하였습니다.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2021-01-03-remember-2020/ga.jpg&quot; alt=&quot;PageView&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;올 한 해 가장 많이 본 글을 뽑아봤습니다.&lt;/p&gt;
 
 &lt;ol&gt;
@@ -147,6 +153,12 @@
 &lt;p&gt;참고로, 개인 영상을 찍을 때 사용하는 프로그램은 &lt;a href=&quot;https://www.telestream.net/screenflow/overview.htm&quot;&gt;Screenflow&lt;/a&gt;로 $129인데 중간에 다운되는 일은 아직 없었고 나름 가볍습니다. 캠과 화면이 동시에 따로 녹화되어 편집하기 좋습니다. 편집은 Adobe Premiere Pro를 쓰고 장비는 맥북과 블루 예티 마이크를 사용합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;강의&quot;&gt;강의&lt;/h2&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+    &lt;a href=&quot;https://www.inflearn.com/instructors/209928/courses&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;/assets/article_images/2021-01-03-remember-2020/inf.jpg&quot; alt=&quot;인프런&quot; style=&quot;width: 350px&quot; /&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
 
 &lt;p&gt;계속 고민하던 온라인 강의를 2020년에 드디어 만들었습니다.&lt;/p&gt;
 
