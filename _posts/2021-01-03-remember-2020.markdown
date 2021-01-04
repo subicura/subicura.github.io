@@ -16,7 +16,7 @@ toc: true
 
 2020년 "퍼플웍스"를 시작하고 10년만에 새로운 회사인 "퍼플아이오" 소속이 되었습니다. 퍼플아이오<sup>purpleio</sup>는 퍼플웍스 자회사로 시작하여 코오롱FnC의 투자를 받았고 [코오롱몰](https://kolonmall.com)을 중심으로 한 온라인 이커머스 개발을 주로 하고 있습니다.
 
-![purpleio]({{ site.url }}/assets/article_images/2021-01-03-remember-2020/purpleio.jpg)
+[![purpleio]({{ site.url }}/assets/article_images/2021-01-03-remember-2020/purpleio.jpg)](https://purple.io)
 
 하는 일 자체는 크게 달라지지 않았지만, 달라진 점을 찾아보면 각종 계정, 자원을 좀 더 체계적~~빡빡해짐~~으로 관리하고 여러 가지로 면에서 안정된 환경이 되었습니다.
 
@@ -77,7 +77,7 @@ GitHub이나 GitLab에 붙일 수 있는 bot 입니다. PR 제목이나 내용�
 
 ### 코오롱몰 3.0
 
-![kolonmall]({{ site.url }}/assets/article_images/2021-01-03-remember-2020/kolonmall.jpg)
+[![kolonmall]({{ site.url }}/assets/article_images/2021-01-03-remember-2020/kolonmall.jpg)](https://www.kolonmall.com)
 
 코오롱몰 3.0은 2020년 4월에 오픈했는데 사실 너무 부담스러웠습니다. 오픈을 몇 달 앞두고 갑자기 코로나가 터지면서 재택근무가 시작되었고 `과연 이러한 상황에서 제대로 오픈할 수 있을까?` 라는 걱정이 많았습니다.
 
@@ -93,7 +93,7 @@ RubyOnRails의 DHH가 쓴 [rework](https://basecamp.com/books/rework)(번역 - [
 
 ### 스테이폴리오 3.0
 
-![stayfolio]({{ site.url }}/assets/article_images/2021-01-03-remember-2020/stayfolio.jpg)
+[![stayfolio]({{ site.url }}/assets/article_images/2021-01-03-remember-2020/stayfolio.jpg)](https://www.stayfolio.com)
 
 스테이폴리오는 오픈 후 새로운 기능과 페이지가 조금씩 추가되었지만, 완전히 리뉴얼한 적은 이번이 처음입니다.
 
@@ -131,7 +131,7 @@ Nextjs를 도입하여 드디어 Rails + AngularJS + React가 공존하는 프�
 
 ## 유투브
 
-![youtube]({{ site.url }}/assets/article_images/2021-01-03-remember-2020/youtube.jpg)
+[![youtube]({{ site.url }}/assets/article_images/2021-01-03-remember-2020/youtube.jpg)](http://44bits.tv/)
 
 직장인 2대 허언이 "퇴사 할 거다" + "유튜브 할 거다" 라는데 드디어 유튜브를 찍었습니다.
 
