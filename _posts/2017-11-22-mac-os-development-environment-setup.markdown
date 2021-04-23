@@ -479,7 +479,7 @@ vim은 기본으로 설치된 터미널용 에디터로 GUI 환경의 에디터�
 brew install neovim
 # MesloLGS NF가 없는 경우
 brew tap homebrew/cask-fonts
-brew install font-meslolg-nerd-font
+brew install font-meslo-lg-nerd-font
 {% endhighlight %}
 
 기본 설치가 완료되었으면 터미널 기본 에디터로 vi대신 neovim을 사용하도록 `~/.zshrc`에 다음 항목을 추가합니다.
