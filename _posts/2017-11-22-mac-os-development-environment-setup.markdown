@@ -8,7 +8,7 @@ excerpt: macOS에서 터미널을 자주 사용하는 개발자를 대상으로 
 ogimage: /assets/og/2017-11-22-mac-os-development-environment-setup.png
 comments: yes
 toc: true
-last_modified_at: 2020-09-15T00:00:00+09:00
+last_modified_at: 2021-04-22T00:00:00+09:00
 ---
 
 ### 2020/07/06 수정
@@ -478,8 +478,8 @@ vim은 기본으로 설치된 터미널용 에디터로 GUI 환경의 에디터�
 {% highlight bash linenos %}
 brew install neovim
 # MesloLGS NF가 없는 경우
-brew tap caskroom/fonts
-brew cask install font-meslolg-nerd-font
+brew tap homebrew/cask-fonts
+brew install font-meslolg-nerd-font
 {% endhighlight %}
 
 기본 설치가 완료되었으면 터미널 기본 에디터로 vi대신 neovim을 사용하도록 `~/.zshrc`에 다음 항목을 추가합니다.
