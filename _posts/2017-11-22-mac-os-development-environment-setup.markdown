@@ -280,7 +280,7 @@ brew cask install iterm2
 
 ![snazzy]({{ site.url }}/assets/article_images/2017-11-22-mac-os-development-environment-setup/snazzy-theme-2.png)
 
-설치를 완료했으면 [Snazzy.itermcolors](https://github.com/sindresorhus/iterm2-snazzy/raw/master/Snazzy.itermcolors) 파일을 오른쪽 버튼 누르고 다운 받거나 [여러 개의 테마](http://iterm2colorschemes.com/)를 둘러보고 맘에드는것을 고릅니다. 다운받은 파일을 더블클릭하면 자동으로 `iTerm Color Preset`에 추가됩니다.
+설치를 완료했으면 [Snazzy.itermcolors](https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors) 파일을 오른쪽 버튼 누르고 다운 받거나 [여러 개의 테마](http://iterm2colorschemes.com/)를 둘러보고 맘에드는것을 고릅니다. 다운받은 파일을 더블클릭하면 자동으로 `iTerm Color Preset`에 추가됩니다.
 
 **테마적용**
 
