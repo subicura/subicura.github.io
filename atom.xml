@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2021-04-09T13:07:54+09:00</updated>
+ <updated>2021-04-24T09:05:46+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -2654,7 +2654,7 @@ git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; core.precompos
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-11-22-mac-os-development-environment-setup/snazzy-theme-2.png&quot; alt=&quot;snazzy&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;설치를 완료했으면 &lt;a href=&quot;https://github.com/sindresorhus/iterm2-snazzy/raw/master/Snazzy.itermcolors&quot;&gt;Snazzy.itermcolors&lt;/a&gt; 파일을 오른쪽 버튼 누르고 다운 받거나 &lt;a href=&quot;http://iterm2colorschemes.com/&quot;&gt;여러 개의 테마&lt;/a&gt;를 둘러보고 맘에드는것을 고릅니다. 다운받은 파일을 더블클릭하면 자동으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iTerm Color Preset&lt;/code&gt;에 추가됩니다.&lt;/p&gt;
+&lt;p&gt;설치를 완료했으면 &lt;a href=&quot;https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors&quot;&gt;Snazzy.itermcolors&lt;/a&gt; 파일을 오른쪽 버튼 누르고 다운 받거나 &lt;a href=&quot;http://iterm2colorschemes.com/&quot;&gt;여러 개의 테마&lt;/a&gt;를 둘러보고 맘에드는것을 고릅니다. 다운받은 파일을 더블클릭하면 자동으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iTerm Color Preset&lt;/code&gt;에 추가됩니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;테마적용&lt;/strong&gt;&lt;/p&gt;
 
@@ -2909,8 +2909,8 @@ prompt pure
 4
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;neovim
 &lt;span class=&quot;c&quot;&gt;# MesloLGS NF가 없는 경우&lt;/span&gt;
-brew tap caskroom/fonts
-brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;font-meslolg-nerd-font
+brew tap homebrew/cask-fonts
+brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;font-meslo-lg-nerd-font
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;기본 설치가 완료되었으면 터미널 기본 에디터로 vi대신 neovim을 사용하도록 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;에 다음 항목을 추가합니다.&lt;/p&gt;
