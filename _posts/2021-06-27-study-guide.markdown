@@ -142,7 +142,7 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
 
 ### 클론코딩
 
-![Clone Coding]({{ site.url }}/assets/article_images/2021-06-27-study-guide/clone.png)
+![Clone Coding]({{ site.url }}/assets/article_images/2021-06-27-study-guide/clone.jpg)
 
 클론코딩은 페이스북, 트위터 같은 서비스를 따라 만들면서 배우는 학습 방법입니다. 내가 사용하는 서비스를 내 손으로 직접 만들면서 오는 흥미와 실용적인 방법, 포트폴리오로 제출하기도 좋아 많이 사용하는 방법입니다.
 
