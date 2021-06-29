@@ -6,9 +6,27 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 24 Apr 2021 09:05:46 +0900</pubDate>
-    <lastBuildDate>Sat, 24 Apr 2021 09:05:46 +0900</lastBuildDate>
+    <pubDate>Wed, 30 Jun 2021 08:45:43 +0900</pubDate>
+    <lastBuildDate>Wed, 30 Jun 2021 08:45:43 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>초보 웹 개발자를 위한 학습 안내서</title>
+        <description>개발자로 취업을 준비 중이거나 좀 더 성장하고 싶은 초보 개발자를 위한 내용을 담고 있습니다. 그동안의 경험과 이력서를 검토하고 면접을 진행하면서 느낀 점, 개발자로 취업을 준비 중인 사촌 동생에게 했던 조언, 개인적으로 멘토링을 하면서 했던 이야기를 모았습니다.</description>
+        <pubDate>Sun, 27 Jun 2021 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2021/06/27/study-guide.html</link>
+        <guid isPermaLink="true">https://subicura.com/2021/06/27/study-guide.html</guid>
+        
+        <category>Beginner</category>
+        
+        <category>Developer</category>
+        
+        <category>Study</category>
+        
+        
+        <category>Talk</category>
+        
+      </item>
     
       <item>
         <title>2020년 회고</title>
@@ -222,24 +240,6 @@
         <category>Server</category>
         
         <category>Container</category>
-        
-        
-        <category>Docker</category>
-        
-      </item>
-    
-      <item>
-        <title>초보를 위한 도커 안내서 - 도커란 무엇인가?</title>
-        <description>도커를 처음 접하는 시스템 관리자나 서버 개발자를 대상으로 도커 전반에 대해 얕고 넓은 지식을 담고 있습니다. 도커가 등장한 배경과 도커의 역사, 그리고 도커의 핵심 개념인 컨테이너와 이미지에 대해 알아보고 왜 이렇게 도커가 인기 인지 하나하나 살펴보겠습니다.</description>
-        <pubDate>Thu, 19 Jan 2017 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html</link>
-        <guid isPermaLink="true">https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html</guid>
-        
-        <category>Docker</category>
-        
-        <category>DevOps</category>
-        
-        <category>Server</category>
         
         
         <category>Docker</category>
