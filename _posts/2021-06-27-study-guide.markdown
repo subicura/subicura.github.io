@@ -28,6 +28,9 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
     <a href="https://purple.io" target="_blank"><img src="{{ "/assets/article_images/2021-06-27-study-guide/purpleio_bookmark.png"  | prepend: site.baseurl  }}" style="width: 420px"></a>
 </p>
 
+{% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
+
+---
 
 ## 어떤 개발자가 있나요?
 
