@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2021-08-31T23:39:11+09:00</updated>
+ <updated>2021-09-01T00:41:36+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -2910,7 +2910,15 @@ npm run lint
    <link href="https://subicura.com/2017/11/22/mac-os-development-environment-setup.html"/>
    <updated>2017-11-22T00:00:00+09:00</updated>
    <id>https://subicura.com/2017/11/22/mac-os-development-environment-setup</id>
-   <content type="html">&lt;h3 id=&quot;20200706-수정&quot;&gt;2020/07/06 수정&lt;/h3&gt;
+   <content type="html">&lt;h3 id=&quot;20210901-수정&quot;&gt;2021/09/01 수정&lt;/h3&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/assets/images/mac_hero.png&quot; style=&quot;width: 350px&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Mac을 처음 접하는 분을 위한 설명을 대폭 추가하고 Apple Silicon (M1) 개발 환경 설정을 추가한 &lt;a href=&quot;/mac&quot;&gt;macOS 안내서&lt;/a&gt;를 새로운 페이지로 업데이트하였습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;20200706-수정&quot;&gt;2020/07/06 수정&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;macOS Catalina 10.15.5 반영&lt;/li&gt;
