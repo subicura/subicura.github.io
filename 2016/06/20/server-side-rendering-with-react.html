@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1625182675096441000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1630420751455695000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -163,7 +163,7 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <ul class="section-nav">
+          <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h3"><a href="#20161229-수정">2016/12/29 수정</a></li>
 <li class="toc-entry toc-h2"><a href="#ajax가-없던-시절">ajax가 없던 시절</a></li>
 <li class="toc-entry toc-h2"><a href="#ajax의-등장">ajax의 등장</a></li>
@@ -386,16 +386,16 @@ angular.module('myApp', [])
 
 <ul>
   <li>속도가 느림. 특히 모바일</li>
-  <li>IE8지원안함 <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>
+  <li>IE8지원안함 <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>
 </li>
   <li>러닝커브가 높음. 특히 Directive는 공부할수록 헬</li>
   <li>비표준 태그 사용의 찝찝함. (대부분의 브라우져가 잘 처리하긴 하지만서도..)</li>
-  <li>페이지 깜빡임 이슈(<a href="https://en.wikipedia.org/wiki/Flash_of_unstyled_content">FOUC</a><sub>Flash of unstyled content</sub>) <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>
+  <li>페이지 깜빡임 이슈(<a href="https://en.wikipedia.org/wiki/Flash_of_unstyled_content">FOUC</a><sub>Flash of unstyled content</sub>) <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>
 </li>
   <li>묘한 애니메이션 적용. 컨텐츠가 그려지는 시점을 정확하게 제어하기 어려워 애니메이션 적용이 쉽지 않음</li>
-  <li>SEO 이슈. 크롤링 봇은 컨텐츠 로딩전 빈페이지만 바라봄. title, meta tag도 처음 페이지것만 바라봄 <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>
+  <li>SEO 이슈. 크롤링 봇은 컨텐츠 로딩전 빈페이지만 바라봄. title, meta tag도 처음 페이지것만 바라봄 <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>
 </li>
-  <li>뒤로가기 하면 페이지 새로 로딩함. history API를 이용한 페이지 이동이 실제로는 페이지를 동적으로 로딩하는 구조. 스크롤도 최상단으로 이동 <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">4</a></sup>
+  <li>뒤로가기 하면 페이지 새로 로딩함. history API를 이용한 페이지 이동이 실제로는 페이지를 동적으로 로딩하는 구조. 스크롤도 최상단으로 이동 <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>
 </li>
   <li>외부 서비스 콜백처리
     <ul>
@@ -702,7 +702,7 @@ foreach($talks as $talk) {
 
     <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1625182675096441000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1630420751455695000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>

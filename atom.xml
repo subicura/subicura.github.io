@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2021-07-02T08:37:55+09:00</updated>
+ <updated>2021-08-31T23:39:11+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -157,7 +157,7 @@
 
 &lt;p&gt;기본기를 익히는 것은 아쉽게도 지름길이 없습니다. 내용이 너무 방대하고 따로 CS 학습을 하려면 시간이 부족하기 때문에, 평소에 틈틈이 호기심을 가지고 더 많이 찾아보고 더 깊이 학습하는 방법이 최선인 것 같습니다.&lt;/p&gt;
 
-&lt;p&gt;예를 들어, 자주 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rand()&lt;/code&gt; 함수를 그냥 사용만 하지 않고, “0, 1밖에 모르는 컴퓨터가 어떻게 “랜덤”한 숫자를 임의로 고르는 걸까?”, “진짜 랜덤한가?”, “특정 조건에서 원하는 값을 구할 수 없을까?” 하고 궁금할 수 있습니다. Hash/Map 같은 구조(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data['key'] = value&lt;/code&gt;)를 쓰다 보면 “이런 데이터는 메모리에서 어떻게 관리될까?” 궁금할 수 있습니다. 일반적인 배열은 0, 1, 2, 3 순차적으로 저장이 될 텐데 key는 순서랑 상관없는 문자열이기 때문에 뭔가 다르게 저장될 것 같은 거죠. 미리 메모리 영역을 잡아 놓을까? 어느 정도 크기로 잡을까? 중복은 어떻게 처리하지? 같은 궁금증이 막 생기죠? &lt;del&gt;나만 생기나요? ㅠㅠ&lt;/del&gt; React를 공부하고 있다면 “이런 라이브러리를 처음부터 만들려면 어떻게 해야 할까?” 하고 원리를 궁금해할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;예를 들어, 자주 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rand()&lt;/code&gt; 함수를 그냥 사용만 하지 않고, “0, 1밖에 모르는 컴퓨터가 어떻게 “랜덤”한 숫자를 임의로 고르는 걸까?”, “진짜 랜덤한가?”, “특정 조건에서 원하는 값을 구할 수 없을까?” 하고 궁금할 수 있습니다. Hash/Map 같은 구조(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data[&apos;key&apos;] = value&lt;/code&gt;)를 쓰다 보면 “이런 데이터는 메모리에서 어떻게 관리될까?” 궁금할 수 있습니다. 일반적인 배열은 0, 1, 2, 3 순차적으로 저장이 될 텐데 key는 순서랑 상관없는 문자열이기 때문에 뭔가 다르게 저장될 것 같은 거죠. 미리 메모리 영역을 잡아 놓을까? 어느 정도 크기로 잡을까? 중복은 어떻게 처리하지? 같은 궁금증이 막 생기죠? &lt;del&gt;나만 생기나요? ㅠㅠ&lt;/del&gt; React를 공부하고 있다면 “이런 라이브러리를 처음부터 만들려면 어떻게 해야 할까?” 하고 원리를 궁금해할 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;다행히 요즘은 인터넷에 검색하면 상세한 답변을 쉽게 찾을 수 있어 지하철을 타고 이동하거나 중간중간 짬이 나는 시간에 호기심을 해결하다 보면 자기도 모르게 기본 지식을 쌓을 수 있습니다.&lt;/p&gt;
 
@@ -1161,7 +1161,7 @@ npm run lint
 9
 10
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;// 항상 작성하는 React 코드&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;IHelloProps&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
 
@@ -1252,8 +1252,8 @@ npm run lint
 5
 6
 7
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;lt;Coupon /&amp;gt;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;matches snapshot with mount&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;lt;Coupon /&amp;gt;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;matches snapshot with mount&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MockedCoupon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toMatchSnapshot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
@@ -2121,7 +2121,7 @@ npm run lint
 
 &lt;p&gt;그동안 사용한 기술을 빠르게 요약, 정리하려고 했는데 해가 넘어갔습니다😭 나중에 기회가 되면 요약 버전 말고 좀 더 심화 내용을 써 볼까 합니다.&lt;/p&gt;
 
-&lt;p&gt;2019년은 유독 바빴던 한해였습니다. 블로그 글은 하나밖에 못썼지만.. &lt;del&gt;반성중 ㅠㅠ&lt;/del&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Next '19 Extended Seoul&lt;/code&gt;과  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Open Infrastructure &amp;amp; Cloud Native Days Korea 2019&lt;/code&gt;에서 발표하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;쿠버네티스 핸즈온&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;도커 워크숍&lt;/code&gt;도 진행했네요. 그리고 &lt;a href=&quot;https://www.imaso.co.kr/archives/5443&quot;&gt;마이크로소프트웨어 398호 클라우드의 어떤 것&lt;/a&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GitOps&lt;/code&gt;라는 주제로 기고를 했습니다.&lt;/p&gt;
+&lt;p&gt;2019년은 유독 바빴던 한해였습니다. 블로그 글은 하나밖에 못썼지만.. &lt;del&gt;반성중 ㅠㅠ&lt;/del&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Next &apos;19 Extended Seoul&lt;/code&gt;과  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Open Infrastructure &amp;amp; Cloud Native Days Korea 2019&lt;/code&gt;에서 발표하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;쿠버네티스 핸즈온&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;도커 워크숍&lt;/code&gt;도 진행했네요. 그리고 &lt;a href=&quot;https://www.imaso.co.kr/archives/5443&quot;&gt;마이크로소프트웨어 398호 클라우드의 어떤 것&lt;/a&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GitOps&lt;/code&gt;라는 주제로 기고를 했습니다.&lt;/p&gt;
 
 &lt;p&gt;회사에선 조직이 커지면서 코딩하는 시간보다 팀을 정비하고 생산성을 높이기 위해 부수적인 노력을 많이 한 것 같습니다. 앞으로 많은 부분에서 고민이 깊어질 것 같습니다.&lt;/p&gt;
 
@@ -2521,7 +2521,7 @@ npm run lint
 
 &lt;h2 id=&quot;디버깅이란&quot;&gt;디버깅이란&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/google-debug-doodle.gif&quot; alt=&quot;Grace Hopper's 107th Birthday - 나방(버그) 디테일에 주목&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/google-debug-doodle.gif&quot; alt=&quot;Grace Hopper&apos;s 107th Birthday - 나방(버그) 디테일에 주목&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;버그란 프로그램 내의 결함이나 문제점을 이야기하는 것으로 프로그래밍 언어 COBOL의 개발을 주도한 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%8A%A4_%ED%98%B8%ED%8D%BC&quot;&gt;그레이스 호퍼&lt;/a&gt;가 1945년 Mark II의 오작동 원인을 찾다가 컴퓨터에 나방이 껴있는 걸 발견한 것을 최초의 버그라고 기록하고 있습니다.&lt;/p&gt;
 
@@ -2798,7 +2798,7 @@ npm run lint
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2018-02-14-javascript-debugging/devtool-conditional.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;조금 전 생성한 중단점에 오른쪽 버튼을 누르면 중단점을 수정할 수 있고 조건절에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action.type == 'DELETE_TODO'&lt;/code&gt; 를 입력합니다. 새로운 할일을 등록하면 중단이 안되지만 삭제를 하면 중단점에 걸립니다. 이렇게 중단점에 조건을 걸면 조건에 맞는 요청만 체크할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;조금 전 생성한 중단점에 오른쪽 버튼을 누르면 중단점을 수정할 수 있고 조건절에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action.type == &apos;DELETE_TODO&apos;&lt;/code&gt; 를 입력합니다. 새로운 할일을 등록하면 중단이 안되지만 삭제를 하면 중단점에 걸립니다. 이렇게 중단점에 조건을 걸면 조건에 맞는 요청만 체크할 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Store as Global Variable&lt;/strong&gt;&lt;/p&gt;
 
@@ -4336,7 +4336,7 @@ To add a worker to this swarm, run the following &lt;span class=&quot;nb&quot;&g
     &lt;span class=&quot;nt&quot;&gt;--token&lt;/span&gt; SWMTKN-1-1la23f7y6y8joqxz27hac4j79yffyixcp15tjtlrnei14wwd1t-5tlmx4q9fm46drjzzd95g1l4q &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
     172.17.8.101:2377
 
-To add a manager to this swarm, run &lt;span class=&quot;s1&quot;&gt;'docker swarm join-token manager'&lt;/span&gt; and follow the instructions.
+To add a manager to this swarm, run &lt;span class=&quot;s1&quot;&gt;&apos;docker swarm join-token manager&apos;&lt;/span&gt; and follow the instructions.
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;순식간에 매니저 노드가 생성되었습니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swarm init&lt;/code&gt;명령어를 실행하면 친절하게 워커 노드에서 실행할 명령어를 알려줍니다. &lt;del&gt;친절한도커씨&lt;/del&gt; 명령어를 그대로 복사하여 2, 3번 서버에서 각각 실행합니다.&lt;/p&gt;
@@ -4931,7 +4931,7 @@ curl core-01:4568
 11
 12
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker service create &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; traefik &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;--constraint&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'node.role == manager'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;--constraint&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;node.role == manager&apos;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 80:80 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8080:8080 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;--mount&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt;,source&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/var/run/docker.sock,target&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/var/run/docker.sock &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -4961,7 +4961,7 @@ curl core-01:4568
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker service create &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; portainer &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;--network&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;frontend &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;--label&lt;/span&gt; traefik.port&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;9000 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;--constraint&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'node.role == manager'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;--constraint&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;node.role == manager&apos;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;--mount&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
   portainer/portainer
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -5091,8 +5091,8 @@ docker service create &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; count
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://rubygems.org'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'sinatra'&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;https://rubygems.org&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;sinatra&apos;&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;app.rb&lt;/strong&gt;&lt;/p&gt;
@@ -5103,10 +5103,10 @@ docker service create &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; count
 4
 5
 6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'sinatra'&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'socket'&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;sinatra&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;socket&apos;&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;/&apos;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
   &lt;span class=&quot;no&quot;&gt;Socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;gethostname&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -5718,7 +5718,7 @@ CMD bundle exec ruby app.rb -o 0.0.0.0&lt;/pre&gt;&lt;/noscript&gt;
 2
 3
 4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;Login with your Docker ID to push and pull images from Docker Hub. If you don&lt;span class=&quot;s1&quot;&gt;'t have a Docker ID, head over to https://hub.docker.com to create one.
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;Login with your Docker ID to push and pull images from Docker Hub. If you don&lt;span class=&quot;s1&quot;&gt;&apos;t have a Docker ID, head over to https://hub.docker.com to create one.
 Username: subicura
 Password:
 Login Succeeded&lt;/span&gt;
@@ -6404,7 +6404,7 @@ mysql&amp;gt; quit
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# create mysql database&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mysql &lt;span class=&quot;nt&quot;&gt;-h127&lt;/span&gt;.0.0.1 &lt;span class=&quot;nt&quot;&gt;-uroot&lt;/span&gt;
 create database wp CHARACTER SET utf8&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-grant all privileges on wp.&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; to wp@&lt;span class=&quot;s1&quot;&gt;'%'&lt;/span&gt; identified by &lt;span class=&quot;s1&quot;&gt;'wp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+grant all privileges on wp.&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; to wp@&lt;span class=&quot;s1&quot;&gt;&apos;%&apos;&lt;/span&gt; identified by &lt;span class=&quot;s1&quot;&gt;&apos;wp&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 flush privileges&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 quit
 
@@ -6746,10 +6746,10 @@ docker logs &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;
 24
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;WordPress not found in /var/www/html - copying now...
 Complete! WordPress has been successfully copied to /var/www/html
-AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.4. Set the 'ServerName' directive globally to suppress this message
-AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.4. Set the 'ServerName' directive globally to suppress this message
+AH00558: apache2: Could not reliably determine the server&apos;s fully qualified domain name, using 172.17.0.4. Set the &apos;ServerName&apos; directive globally to suppress this message
+AH00558: apache2: Could not reliably determine the server&apos;s fully qualified domain name, using 172.17.0.4. Set the &apos;ServerName&apos; directive globally to suppress this message
 [Thu Jan 19 16:10:16.507735 2017] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.10 (Debian) PHP/5.6.29 configured -- resuming normal operations
-[Thu Jan 19 16:10:16.507776 2017] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Jan 19 16:10:16.507776 2017] [core:notice] [pid 1] AH00094: Command line: &apos;apache2 -D FOREGROUND&apos;
 172.17.0.1 - - [19/Jan/2017:16:11:54 +0000] &quot;GET / HTTP/1.1&quot; 302 379 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12&quot;
 172.17.0.1 - - [19/Jan/2017:16:11:54 +0000] &quot;GET /wp-admin/install.php HTTP/1.1&quot; 200 2513 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12&quot;
 172.17.0.1 - - [19/Jan/2017:16:12:01 +0000] &quot;GET /wp-includes/css/buttons.min.css?ver=4.7.1 HTTP/1.1&quot; 200 1698 &quot;http://localhost:8080/wp-admin/install.php&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12&quot;
@@ -8000,13 +8000,13 @@ angular.module(&amp;#39;myApp&amp;#39;, [])
 
 &lt;ul&gt;
   &lt;li&gt;속도가 느림. 특히 모바일&lt;/li&gt;
-  &lt;li&gt;IE8지원안함 &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;IE8지원안함 &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
   &lt;li&gt;러닝커브가 높음. 특히 Directive는 공부할수록 헬&lt;/li&gt;
   &lt;li&gt;비표준 태그 사용의 찝찝함. (대부분의 브라우져가 잘 처리하긴 하지만서도..)&lt;/li&gt;
-  &lt;li&gt;페이지 깜빡임 이슈(&lt;a href=&quot;https://en.wikipedia.org/wiki/Flash_of_unstyled_content&quot;&gt;FOUC&lt;/a&gt;&lt;sub&gt;Flash of unstyled content&lt;/sub&gt;) &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;페이지 깜빡임 이슈(&lt;a href=&quot;https://en.wikipedia.org/wiki/Flash_of_unstyled_content&quot;&gt;FOUC&lt;/a&gt;&lt;sub&gt;Flash of unstyled content&lt;/sub&gt;) &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
   &lt;li&gt;묘한 애니메이션 적용. 컨텐츠가 그려지는 시점을 정확하게 제어하기 어려워 애니메이션 적용이 쉽지 않음&lt;/li&gt;
-  &lt;li&gt;SEO 이슈. 크롤링 봇은 컨텐츠 로딩전 빈페이지만 바라봄. title, meta tag도 처음 페이지것만 바라봄 &lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;뒤로가기 하면 페이지 새로 로딩함. history API를 이용한 페이지 이동이 실제로는 페이지를 동적으로 로딩하는 구조. 스크롤도 최상단으로 이동 &lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;SEO 이슈. 크롤링 봇은 컨텐츠 로딩전 빈페이지만 바라봄. title, meta tag도 처음 페이지것만 바라봄 &lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;뒤로가기 하면 페이지 새로 로딩함. history API를 이용한 페이지 이동이 실제로는 페이지를 동적으로 로딩하는 구조. 스크롤도 최상단으로 이동 &lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
   &lt;li&gt;외부 서비스 콜백처리
     &lt;ul&gt;
       &lt;li&gt;외부(페이스북, 구글, …) 로그인 후 돌아오는 페이지는 어떻게 처리하나?&lt;/li&gt;

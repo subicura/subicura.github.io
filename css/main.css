@@ -293,6 +293,16 @@ body {
       color: #999; }
       .blog-header .custom-links a:hover {
         color: #333; }
+  .blog-header .index-banner {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f0; }
+    .blog-header .index-banner .index-banner-item {
+      max-width: 48%;
+      width: 300px;
+      display: inline-block; }
+      .blog-header .index-banner .index-banner-item img {
+        width: 100%; }
 
 .content {
   width: 100%;
