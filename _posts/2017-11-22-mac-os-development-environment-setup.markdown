@@ -8,8 +8,17 @@ excerpt: macOS에서 터미널을 자주 사용하는 개발자를 대상으로 
 ogimage: /assets/og/2017-11-22-mac-os-development-environment-setup.png
 comments: yes
 toc: true
-last_modified_at: 2021-04-22T00:00:00+09:00
+last_modified_at: 2021-09-01T00:00:00+09:00
 ---
+
+### 2021/09/01 수정
+
+<p align="center">
+    <img src="{{ "/assets/images/mac_hero.png"  | prepend: site.baseurl  }}" style="width: 350px">
+</p>
+
+Mac을 처음 접하는 분을 위한 설명을 대폭 추가하고 Apple Silicon (M1) 개발 환경 설정을 추가한 [macOS 안내서](/mac)를 새로운 페이지로 업데이트하였습니다.
+
 
 ### 2020/07/06 수정
 
