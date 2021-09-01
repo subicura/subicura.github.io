@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Sep 2021 00:41:36 +0900</pubDate>
-    <lastBuildDate>Wed, 01 Sep 2021 00:41:36 +0900</lastBuildDate>
+    <pubDate>Wed, 01 Sep 2021 10:15:33 +0900</pubDate>
+    <lastBuildDate>Wed, 01 Sep 2021 10:15:33 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -3002,7 +3002,7 @@ npm run lint
         <description>&lt;h3 id=&quot;20210901-수정&quot;&gt;2021/09/01 수정&lt;/h3&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/images/mac_hero.png&quot; style=&quot;width: 350px&quot; /&gt;
+    &lt;a href=&quot;/mac&quot;&gt;&lt;img src=&quot;/assets/images/mac_hero.png&quot; style=&quot;width: 350px&quot; /&gt;&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Mac을 처음 접하는 분을 위한 설명을 대폭 추가하고 Apple Silicon (M1) 개발 환경 설정을 추가한 &lt;a href=&quot;/mac&quot;&gt;macOS 안내서&lt;/a&gt;를 새로운 페이지로 업데이트하였습니다.&lt;/p&gt;
