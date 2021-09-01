@@ -14,7 +14,7 @@ last_modified_at: 2021-09-01T00:00:00+09:00
 ### 2021/09/01 수정
 
 <p align="center">
-    <img src="{{ "/assets/images/mac_hero.png"  | prepend: site.baseurl  }}" style="width: 350px">
+    <a href="/mac"><img src="{{ "/assets/images/mac_hero.png"  | prepend: site.baseurl  }}" style="width: 350px"></a>
 </p>
 
 Mac을 처음 접하는 분을 위한 설명을 대폭 추가하고 Apple Silicon (M1) 개발 환경 설정을 추가한 [macOS 안내서](/mac)를 새로운 페이지로 업데이트하였습니다.
