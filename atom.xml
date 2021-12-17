@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2021-09-01T10:15:33+09:00</updated>
+ <updated>2021-12-18T05:18:53+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -2381,7 +2381,7 @@ npm run lint
 &lt;h4 id=&quot;kubectl&quot;&gt;Kubectl&lt;/h4&gt;
 
 &lt;p&gt;API 서버는 json 또는 protobuf 형식을 이용한 http 통신을 지원합니다. 이 방식을 그대로 쓰면 불편하므로 보통 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kubectl&lt;/code&gt;이라는 명령행 도구를 사용합니다. 앞으로 엄청나게 많이 &lt;del&gt;지겹게&lt;/del&gt; 사용할 예정입니다.
-어떻게 읽어야 할지 난감한데 &lt;a href=&quot;https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.9.md#kubectl&quot;&gt;공식적&lt;/a&gt;으로 큐브컨트롤(cube control)이라고 읽지만 큐브씨티엘, 쿱컨트롤, 쿱씨티엘등도 많이 쓰입니다.&lt;/p&gt;
+어떻게 읽어야 할지 난감한데 &lt;a href=&quot;https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.9.md#kubectl&quot;&gt;공식적&lt;/a&gt;으로 큐브컨트롤(cube control)이라고 읽지만 큐브씨티엘, 쿱컨트롤, 쿱씨티엘등도 많이 쓰입니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;master-구성-요소&quot;&gt;Master 구성 요소&lt;/h3&gt;
 
@@ -2917,6 +2917,10 @@ npm run lint
 &lt;/p&gt;
 
 &lt;p&gt;Mac을 처음 접하는 분을 위한 설명을 대폭 추가하고 Apple Silicon (M1) 개발 환경 설정을 추가한 &lt;a href=&quot;/mac&quot;&gt;macOS 안내서&lt;/a&gt;를 새로운 페이지로 업데이트하였습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/mac&quot;&gt;👉 본격 macOS에 개발 환경 구축하기 바로가기 (NEW!!)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;👇 기존 macOS에 개발 환경 구축하기&lt;/p&gt;
 
 &lt;h3 id=&quot;20200706-수정&quot;&gt;2020/07/06 수정&lt;/h3&gt;
 
