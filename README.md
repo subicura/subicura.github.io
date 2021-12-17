@@ -4,9 +4,10 @@ by jekyll
 
 ## requirement
 
-- ruby 2.5.8 (use asdf)
+- asdf
+  - `asdf plugin add nodejs`
   - `asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git`
-  - `asdf install ruby 2.5.8`
+  - `asdf install`
 - `gem install bundler:2.1.4`
 - `bundle install`
 

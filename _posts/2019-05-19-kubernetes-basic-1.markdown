@@ -239,7 +239,7 @@ spec:
 #### Kubectl
 
 API 서버는 json 또는 protobuf 형식을 이용한 http 통신을 지원합니다. 이 방식을 그대로 쓰면 불편하므로 보통 `kubectl`이라는 명령행 도구를 사용합니다. 앞으로 엄청나게 많이 ~~지겹게~~ 사용할 예정입니다.
-어떻게 읽어야 할지 난감한데 [공식적](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.9.md#kubectl)으로 큐브컨트롤(cube control)이라고 읽지만 큐브씨티엘, 쿱컨트롤, 쿱씨티엘등도 많이 쓰입니다.
+어떻게 읽어야 할지 난감한데 [공식적](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.9.md#kubectl)으로 큐브컨트롤(cube control)이라고 읽지만 큐브씨티엘, 쿱컨트롤, 쿱씨티엘등도 많이 쓰입니다.
 
 ### Master 구성 요소
 
