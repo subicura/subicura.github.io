@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 30 Mar 2022 15:11:49 +0900</pubDate>
-    <lastBuildDate>Wed, 30 Mar 2022 15:11:49 +0900</lastBuildDate>
+    <pubDate>Wed, 30 Mar 2022 23:52:56 +0900</pubDate>
+    <lastBuildDate>Wed, 30 Mar 2022 23:52:56 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -3002,7 +3002,7 @@ npm run lint
         <description>&lt;h3 id=&quot;20210901-수정&quot;&gt;2021/09/01 수정&lt;/h3&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-    &lt;a href=&quot;/mac&quot;&gt;&lt;img src=&quot;/assets/images/mac_hero.png&quot; style=&quot;width: 350px&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/mac&quot;&gt;&lt;img src=&quot;/assets/images/mac_hero.png&quot; style=&quot;width: 350px; height: 350px&quot; /&gt;&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Mac을 처음 접하는 분을 위한 설명을 대폭 추가하고 Apple Silicon (M1) 개발 환경 설정을 추가한 &lt;a href=&quot;/mac&quot;&gt;macOS 안내서&lt;/a&gt;를 새로운 페이지로 업데이트하였습니다.&lt;/p&gt;
@@ -6217,7 +6217,9 @@ docker push localhost:5000/subicura/sinatra-app:1
     
       <item>
         <title>초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기</title>
-        <description>&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png&quot; alt=&quot;docker logo&quot; /&gt;&lt;/p&gt;
+        <description>&lt;div class=&quot;image-container&quot; style=&quot;padding-top: 88.97435%&quot;&gt;
+  &lt;img src=&quot;/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;이 글은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;초보를 위한 도커 안내서 - 설치부터 배포까지&lt;/code&gt; 2번째 글입니다. 이번엔 도커 설치부터 컨테이너를 실행하고 컨테이너를 둘러보는 방법에 대해 설명합니다. 도커에 대해 1도 모르는 분들을 위해 아주 가볍게 자주 쓰는 명령어만 다루었기 때문에 모든 명령어가 궁금하신 분은 &lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/&quot;&gt;여기&lt;/a&gt;를 참고해주세요.&lt;/p&gt;
 

@@ -371,6 +371,7 @@ body {
         .content article .post-meta a:hover {
           text-decoration: underline; }
       .content article .post-meta .share {
+        height: 25px;
         float: right;
         padding: 5px 0 0; }
         @media only screen and (max-width: 500px) {
@@ -635,6 +636,12 @@ body {
     margin: 0;
     padding: 10px 0 20px;
     text-align: center; }
+  .post .post-content .image-container {
+    position: relative;
+    width: 100%; }
+    .post .post-content .image-container img {
+      position: absolute;
+      top: 0; }
   .post .post-content figcaption {
     font-weight: 400;
     font-style: italic;
