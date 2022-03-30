@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2022-03-30T09:44:10+09:00</updated>
+ <updated>2022-03-30T15:11:49+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -709,7 +709,7 @@
 
 &lt;h2 id=&quot;블로그&quot;&gt;블로그&lt;/h2&gt;
 
-&lt;p&gt;2020년 블로그 가장 큰 성과는 쿠버네티스 시작하기 글을 마무리한 점입니다. 여러 가지 고민만 하다가 글을 못 쓰고 있었는데 결국 &lt;a href=&quot;https://subicura.com/k8s/&quot;&gt;쿠버네티스 안내서&lt;/a&gt;로 우회하여 마무리하였습니다.&lt;/p&gt;
+&lt;p&gt;2020년 블로그 가장 큰 성과는 쿠버네티스 시작하기 글을 마무리한 점입니다. 여러 가지 고민만 하다가 글을 못 쓰고 있었는데 결국 &lt;a href=&quot;https://subicura.com/k8s/?utm_source=subicura.com&amp;amp;utm_medium=referral&amp;amp;utm_campaign=blog&quot;&gt;쿠버네티스 안내서&lt;/a&gt;로 우회하여 마무리하였습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2021-01-03-remember-2020/ga.jpg&quot; alt=&quot;PageView&quot; /&gt;&lt;/p&gt;
 
@@ -789,7 +789,7 @@
 &lt;p&gt;👇 하단 링크를 클릭해 주세요!&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-    &lt;a href=&quot;https://subicura.com/k8s/&quot; target=&quot;_blank&quot;&gt;
+    &lt;a href=&quot;https://subicura.com/k8s/?utm_source=subicura.com&amp;amp;utm_medium=referral&amp;amp;utm_campaign=blog&quot; target=&quot;_blank&quot;&gt;
         &lt;img src=&quot;/assets/article_images/2020-12-14-kubernetes-basic-2/subicura-k8s.png&quot; alt=&quot;초보를 위한 쿠버네티스 안내서&quot; style=&quot;width: 350px&quot; /&gt;
     &lt;/a&gt;
 &lt;/p&gt;
@@ -2485,7 +2485,7 @@ npm run lint
 &lt;p&gt;실습은 👇 하단 링크를 클릭해 주세요!&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-    &lt;a href=&quot;https://subicura.com/k8s/&quot; target=&quot;_blank&quot;&gt;
+    &lt;a href=&quot;https://subicura.com/k8s/?utm_source=subicura.com&amp;amp;utm_medium=referral&amp;amp;utm_campaign=blog&quot; target=&quot;_blank&quot;&gt;
         &lt;img src=&quot;/assets/article_images/2020-12-14-kubernetes-basic-2/subicura-k8s.png&quot; alt=&quot;초보를 위한 쿠버네티스 안내서&quot; style=&quot;width: 350px&quot; /&gt;
     &lt;/a&gt;
 &lt;/p&gt;
