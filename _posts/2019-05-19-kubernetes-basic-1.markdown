@@ -335,7 +335,7 @@ CRI 외에 CNI(네트워크), CSI(스토리지)를 지원하여 인터페이스�
 실습은 👇 하단 링크를 클릭해 주세요!
 
 <p align="center">
-    <a href="https://subicura.com/k8s/" target="_blank">
+    <a href="https://subicura.com/k8s/?utm_source=subicura.com&utm_medium=referral&utm_campaign=blog" target="_blank">
         <img src="{{ "/assets/article_images/2020-12-14-kubernetes-basic-2/subicura-k8s.png"  | prepend: site.baseurl  }}" alt="초보를 위한 쿠버네티스 안내서" style="width: 350px">
     </a>
 </p>

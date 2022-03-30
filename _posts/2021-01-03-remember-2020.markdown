@@ -109,7 +109,7 @@ Nextjs를 도입하여 드디어 Rails + AngularJS + React가 공존하는 프�
 
 ## 블로그
 
-2020년 블로그 가장 큰 성과는 쿠버네티스 시작하기 글을 마무리한 점입니다. 여러 가지 고민만 하다가 글을 못 쓰고 있었는데 결국 [쿠버네티스 안내서](https://subicura.com/k8s/)로 우회하여 마무리하였습니다.
+2020년 블로그 가장 큰 성과는 쿠버네티스 시작하기 글을 마무리한 점입니다. 여러 가지 고민만 하다가 글을 못 쓰고 있었는데 결국 [쿠버네티스 안내서](https://subicura.com/k8s/?utm_source=subicura.com&utm_medium=referral&utm_campaign=blog)로 우회하여 마무리하였습니다.
 
 ![PageView]({{ site.url }}/assets/article_images/2021-01-03-remember-2020/ga.jpg)
 
