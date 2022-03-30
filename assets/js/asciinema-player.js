@@ -1217,5 +1217,3 @@ fb=function(){function b(b){var c=null;if(0<arguments.length){for(var c=0,e=Arra
 oB.l=function(b,a,c){a=Zi(a);c=zo(Zi(c));b=nB(b,a,c);return Wi(new r(null,5,[Dn,function(a,b,c){return function(){return Oj.h(B(c))}}(a,c,b),uj,function(a,b,c){return function(a){var b=B(c),b=null!=b&&(b.m&64||q===b.G)?S(V,b):b;C.c(b,sl);b=C.c(b,Dl);return Ey(b,a)}}(a,c,b),Ym,function(a,b,c){return function(){return sl.h(B(c))}}(a,c,b),In,function(a,b,c){return function(){var a=B(c),a=null!=a&&(a.m&64||q===a.G)?S(V,a):a,a=C.c(a,Dl);return By(a)}}(a,c,b),qn,function(a,b,c){return function(){var a=
 B(c),a=null!=a&&(a.m&64||q===a.G)?S(V,a):a,a=C.c(a,Dl);return Cy(a)}}(a,c,b)],null))};oB.L=3;da("asciinema.player.js.UnmountPlayer",function(b){b="string"===typeof b?document.getElementById(b):b;ag.l(Wq,L,b);return Vq().unmountComponentAtNode(b)});registerAsciinemaPlayerElement();
 })();
-
-//# sourceMappingURL=asciinema-player.js.map
