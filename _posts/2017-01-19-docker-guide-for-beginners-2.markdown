@@ -11,7 +11,9 @@ toc: true
 last_modified_at: 2017-02-10T01:00:00+09:00
 ---
 
-![docker logo]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
+<div class="image-container" style="padding-top: 88.97435%">
+  <img src="/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png">
+</div>
 
 이 글은 `초보를 위한 도커 안내서 - 설치부터 배포까지` 2번째 글입니다. 이번엔 도커 설치부터 컨테이너를 실행하고 컨테이너를 둘러보는 방법에 대해 설명합니다. 도커에 대해 1도 모르는 분들을 위해 아주 가볍게 자주 쓰는 명령어만 다루었기 때문에 모든 명령어가 궁금하신 분은 [여기](https://docs.docker.com/engine/reference/commandline/)를 참고해주세요.
 

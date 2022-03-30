@@ -206,6 +206,7 @@ body
         &:hover
           text-decoration: underline
       .share
+        height: 25px
         float: right
         padding: 5px 0 0
         @include respond-to(500)
@@ -465,6 +466,12 @@ body
       margin: 0
       padding: 10px 0 20px
       text-align: center
+    .image-container
+      position: relative
+      width: 100%
+      img
+        position: absolute
+        top: 0
     figcaption
       font-weight: 400
       font-style: italic

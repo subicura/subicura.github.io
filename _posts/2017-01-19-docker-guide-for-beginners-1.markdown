@@ -12,7 +12,9 @@ fb_social_baseurl: http://subicura.com
 last_modified_at: 2018-01-12T20:00:00+09:00
 ---
 
-![docker logo]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
+<div class="image-container" style="padding-top: 88.97435%">
+  <img src="/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png">
+</div>
 
 어느날 친구한테 메시지를 받았습니다.
 
