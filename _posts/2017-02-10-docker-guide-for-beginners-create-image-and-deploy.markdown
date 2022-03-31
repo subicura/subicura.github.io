@@ -10,7 +10,9 @@ comments: yes
 toc: true
 ---
 
-![docker logo]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png)
+<div class="image-container" style="padding-top: 88.97435%">
+  {% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png %}
+</div>
 
 이 글은 `초보를 위한 도커 안내서 - 설치부터 배포까지` 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.
 
@@ -25,9 +27,10 @@ toc: true
 ---
 
 ## 도커 이미지 만들기
+
 도커는 이미지를 만들기 위해 **컨테이너의 상태를 그대로 이미지로 저장**하는 단순하고 무식(?)한 방법을 사용합니다.
 
-![create docker image]({{ site.url }}/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image.png)
+{% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image.png --alt create docker image %}
 
 예를 들어, 어떤 애플리케이션을 이미지로 만든다면 리눅스만 설치된 컨테이너에 애플리케이션을 설치하고 그 상태를 그대로 이미지로 저장합니다. 가상머신의 스냅샷과 비스므리한 방식입니다.
 
@@ -37,7 +40,9 @@ toc: true
 
 ### Sinatra 웹 애플리케이션 샘플
 
-![Sinatra]({{ site.url }}/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra.png)
+<div style="max-width: 250px" class="small-image">
+  {% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra.png --alt Sinatra %}
+</div>
 
 일단 웹 애플리케이션 소스코드를 작성해야겠죠. [Sinatra](http://www.sinatrarb.com/)라는 가벼운 웹 프레임워크를 사용하기 위해 새로운 폴더를 만들고 `Gemfile`과 `app.rb`를 만듭니다.
 
@@ -90,13 +95,15 @@ bash -c "bundle install && bundle exec ruby app.rb -o 0.0.0.0"
 
 서버가 정상적으로 실행됐으면 웹 브라우저에서 테스트해봅니다. `http://localhost:4567`
 
-![Browser test]({{ site.url }}/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test.png)
+<div style="max-width: 500px" class="small-image">
+  {% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test.png --alt Browser test %}
+</div>
 
 도커 컨테이너의 호스트명이 보입니다. 소스는 잘 작성한 것 같네요! 이제 도커 이미지를 만들 준비가 완료됐습니다.
 
 ### Ruby Application Dockerfile
 
-![Dockerfile]({{ site.url }}/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile.png)
+{% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile.png --alt Dockerfile %}
 
 도커는 이미지를 만들기 위해 `Dockerfile`이라는 이미지 빌드용 DSL<sub>Domain Specific Language</sub> 파일을 사용합니다. 단순 텍스트 파일로 일반적으로 소스와 함께 관리합니다.
 
@@ -214,7 +221,7 @@ docker run -d -p 8081:4567 app
 docker run -d -p 8082:4567 app
 {% endhighlight %}
 
-![Container test result]({{ site.url }}/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test.png)
+{% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test.png --alt Container test result %}
 
 접속 성공입니다. 기분이 좋아서 호스트 네임을 출력하는 ~~무쓸모~~ 웹서버를 3개나 만들었습니다. 이미지가 잘 만들어졌네요.
 
@@ -507,7 +514,7 @@ RUN apt-get -y -qq update && \
 
 ## 이미지 저장소
 
-![Docker Registry]({{ site.url }}/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry.png)
+{% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry.png --alt Docker Registry %}
 
 도커는 빌드한 이미지를 서버에 배포하기 위해 직접 파일을 복사하는 방법 대신 [도커 레지스트리](https://docs.docker.com/registry/)<sub>Docker Registry</sub>라는 이미지 저장소를 사용합니다. 도커 명령어를 이용하여 이미지를 레지스트리에 푸시<sub>push</sub>하고 다른 서버에서 풀<sub>pull</sub>받아 사용하는 구조입니다. ~~git을 사용하는 느낌?~~
 
@@ -523,7 +530,7 @@ RUN apt-get -y -qq update && \
 
 **회원가입**
 
-![Docker Hub]({{ site.url }}/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub.png)
+{% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub.png --alt Docker Hub %}
 
 [도커 허브](https://hub.docker.com/)사이트에 접속하면 쉽게 회원가입을 할 수 있습니다. 디자인이 참 마음에 들지 않는데... 처음부터 지금까지 업데이트한 모습이 이 모양이라 앞으로도 크게 기대되지 않습니다. ~~다른 페이지는 다 이쁜데 ㅠㅠ~~
 
@@ -744,7 +751,7 @@ ftp, rsync, ant, gradle, capistrano, fabric, chef, puppet, ansible등 다양한 
 
 ### 컨테이너 업데이트
 
-![Update]({{ site.url }}/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update.png)
+{% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update.png --alt Update %}
 
 도커를 사용하면 업데이트하는 방식도 배포와 큰 차이가 없습니다.
 
