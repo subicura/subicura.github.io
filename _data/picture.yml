@@ -1,0 +1,3 @@
+presets:
+  default:
+    formats: [webp, original]
