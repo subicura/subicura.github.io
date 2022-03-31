@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2022-03-31T14:18:00+09:00</updated>
+ <updated>2022-03-31T15:20:21+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -7065,7 +7065,8 @@ volumes:
    <updated>2017-01-19T00:00:00+09:00</updated>
    <id>https://subicura.com/2017/01/19/docker-guide-for-beginners-1</id>
    <content type="html">&lt;div class=&quot;image-container&quot; style=&quot;padding-top: 88.97435%&quot;&gt;
-  &lt;img src=&quot;/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png&quot; /&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-a9ab7503a.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-a9ab7503a.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-a9ab7503a.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-a9ab7503a.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-b3c79c1cb.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-b3c79c1cb.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-b3c79c1cb.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png&quot; /&gt;&lt;/picture&gt;
+
 &lt;/div&gt;
 
 &lt;p&gt;어느날 친구한테 메시지를 받았습니다.&lt;/p&gt;
@@ -7095,7 +7096,7 @@ volumes:
 
 &lt;h2 id=&quot;서버를-관리한다는-것&quot;&gt;서버를 관리한다는 것&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration.jpg&quot; alt=&quot;복잡하고 어려운 서버관리&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration-400-f9960d066.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration-600-f9960d066.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration-700-f9960d066.webp 700w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration-400-0fe83e4ed.jpg 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration-600-0fe83e4ed.jpg 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration-700-0fe83e4ed.jpg 700w&quot; type=&quot;image/jpeg&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/contraption-illustration-700-0fe83e4ed.jpg&quot; alt=&quot;복잡하고 어려운 서버관리&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;일반적으로 서버를 관리한다는 건 복잡하고 어려우며 고오급 개발자들의 섬세한 작업이 필요한 영역입니다.&lt;/p&gt;
 
@@ -7111,19 +7112,25 @@ volumes:
 
 &lt;h2 id=&quot;도커의-역사&quot;&gt;도커의 역사&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers.png&quot; alt=&quot;The future of Linux Containers&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;max-width: 450px&quot; class=&quot;small-image&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers-400-6467c2a60.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers-480-6467c2a60.webp 480w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers-400-ac5ac3735.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers-480-ac5ac3735.png 480w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers-480-ac5ac3735.png&quot; alt=&quot;The future of Linux Containers&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;도커는 2013년 3월 산타클라라에서 열린 Pycon Conference에서 dotCloud의 창업자인 Solomon Hykes가 &lt;a href=&quot;https://youtu.be/wW9CAH9nSLs&quot;&gt;The future of Linux Containers&lt;/a&gt; 라는 세션을 발표하면서 처음 세상에 알려졌습니다.&lt;/p&gt;
 
 &lt;p&gt;이 발표 이후 도커가 인기를 얻으면서 2013년 10월 아예 회사이름을 도커(Docker Inc.)로 바꾸고 2014년 6월 도커 1.0을 발표합니다. 2014년 8월 도커에 집중하기 위해 dotCloud 플랫폼을 매각하고 2015년 4월 $95M(약 1,100억원) 투자를 유치한 후 계속해서 빠르게 성장하고 있습니다. (현재까지 총 투자액은 $180M이며 2016년 6월 MS에서 $4B/₩4조에 인수하려 했다는 &lt;a href=&quot;https://www.sdxcentral.com/articles/news/sources-microsoft-tried-to-buy-docker-for-4b/2016/06/&quot;&gt;기사&lt;/a&gt;가 있습니다.) &lt;del&gt;누가 오픈소스는 돈이 되지 않는다고 했는가?!&lt;/del&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey.png&quot; alt=&quot;The Evolution of the Modern Software Supply Chain - The Docker Survey, 2016&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey-400-911254046.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey-600-911254046.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey-800-911254046.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey-1000-911254046.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey-400-8565ed8cc.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey-600-8565ed8cc.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey-800-8565ed8cc.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey-1000-8565ed8cc.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-survey-800-8565ed8cc.png&quot; alt=&quot;The Evolution of the Modern Software Supply Chain - The Docker Survey, 2016&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;&lt;del&gt;도커에서한&lt;/del&gt; 2016년 설문조사에서 90%가 개발에 사용중이고 80%가 DevOps에 사용할 예정이며 58%가 운영환경에서 사용중이라고 합니다. 2014년 도커 서울 밋업을 시작할 때만 해도 대부분의 사람들이 도커를 잘 모르고 개념도 이해하지 못했는데 이제는 거의 모르는 사람이 없을 정도로 널리 쓰이고 있습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;도커란&quot;&gt;도커란?&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works.png&quot; alt=&quot;도커는 컨테이너를 관리하는 플랫폼&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;max-width: 450px&quot; class=&quot;small-image&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works-400-de285baca.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works-456-de285baca.webp 456w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works-400-0c70add44.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works-456-0c70add44.png 456w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works-456-0c70add44.png&quot; alt=&quot;도커는 컨테이너를 관리하는 플랫폼&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;도커는 &lt;strong&gt;컨테이너 기반의 오픈소스 가상화 플랫폼&lt;/strong&gt;입니다.&lt;/p&gt;
 
@@ -7135,7 +7142,10 @@ volumes:
 
 &lt;p&gt;&lt;strong&gt;컨테이너(Container)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container.png&quot; alt=&quot;docker container&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;max-width: 350px&quot; class=&quot;small-image&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container-400-a9228a261.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container-500-a9228a261.webp 500w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container-400-3cac1b6a4.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container-500-3cac1b6a4.png 500w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container-500-3cac1b6a4.png&quot; alt=&quot;docker container&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;컨테이너는 격리된 공간에서 프로세스가 동작하는 기술입니다. 가상화 기술의 하나지만 기존방식과는 차이가 있습니다.&lt;/p&gt;
 
@@ -7145,7 +7155,7 @@ volumes:
 
 &lt;p&gt;이러한 상황을 개선하기 위해 CPU의 가상화 기술(&lt;a href=&quot;https://en.wikipedia.org/wiki/Hardware-assisted_virtualization&quot;&gt;HVM&lt;/a&gt;)을 이용한 &lt;a href=&quot;http://www.linux-kvm.org/&quot;&gt;KVM&lt;/a&gt;&lt;sub&gt;Kernel-based Virtual Machine&lt;/sub&gt;과 &lt;a href=&quot;https://en.wikipedia.org/wiki/Paravirtualization&quot;&gt;반가상화&lt;/a&gt; &lt;sub&gt;Paravirtualization&lt;/sub&gt;방식의 &lt;a href=&quot;https://www.xenproject.org/&quot;&gt;Xen&lt;/a&gt;이 등장합니다. 이러한 방식은 게스트 OS가 필요하긴 하지만 전체OS를 가상화하는 방식이 아니였기 때문에 호스트형 가상화 방식에 비해 성능이 향상되었습니다. 이러한 기술들은 &lt;a href=&quot;https://www.openstack.org/&quot;&gt;OpenStack&lt;/a&gt;이나 AWS, &lt;a href=&quot;https://www.rackspace.com/&quot;&gt;Rackspace&lt;/a&gt;같은 클라우드 서비스에서 가상 컴퓨팅 기술의 기반이 되었습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker.png&quot; alt=&quot;가상머신과 도커&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker-400-895d2c06e.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker-600-895d2c06e.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker-800-895d2c06e.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker-1000-895d2c06e.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker-400-d25e1cf4c.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker-600-d25e1cf4c.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker-800-d25e1cf4c.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker-1000-d25e1cf4c.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/vm-vs-docker-800-d25e1cf4c.png&quot; alt=&quot;가상머신과 도커&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;전가상화든 반가상화든 추가적인 OS를 설치하여 가상화하는 방법은 어쨋든 성능문제가 있었고 이를 개선하기 위해 &lt;strong&gt;프로세스를 격리&lt;/strong&gt; 하는 방식이 등장합니다.&lt;/p&gt;
 
@@ -7165,7 +7175,7 @@ volumes:
 
 &lt;p&gt;&lt;strong&gt;이미지(Image)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image.png&quot; alt=&quot;Docker image&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image-400-a3fada0fd.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image-600-a3fada0fd.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image-800-a3fada0fd.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image-1000-a3fada0fd.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image-400-c73a1a8a8.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image-600-c73a1a8a8.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image-800-c73a1a8a8.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image-1000-c73a1a8a8.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-image-800-c73a1a8a8.png&quot; alt=&quot;Docker image&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;도커에서 가장 중요한 개념은 컨테이너와 함께 이미지라는 개념입니다.&lt;/p&gt;
 
@@ -7175,7 +7185,7 @@ volumes:
 
 &lt;p&gt;말그대로 이미지는 컨테이너를 실행하기 위한 모오오오오든 정보를 가지고 있기 때문에 더 이상 의존성 파일을 컴파일하고 이것저것 설치할 필요가 없습니다. 이제 새로운 서버가 추가되면 미리 만들어 놓은 이미지를 다운받고 컨테이너를 생성만 하면 됩니다. 한 서버에 여러개의 컨테이너를 실행할 수 있고, 수십, 수백, 수천대의 서버도 문제없습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store.png&quot; alt=&quot;Docker Store&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store-400-3cbd316b0.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store-600-3cbd316b0.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store-800-3cbd316b0.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store-1000-3cbd316b0.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store-400-d1041f332.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store-600-d1041f332.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store-800-d1041f332.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store-1000-d1041f332.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-store-800-d1041f332.png&quot; alt=&quot;Docker Store&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;도커 이미지는 &lt;a href=&quot;https://hub.docker.com/&quot;&gt;Docker hub&lt;/a&gt;에 등록하거나 &lt;a href=&quot;https://docs.docker.com/registry/&quot;&gt;Docker Registry&lt;/a&gt; 저장소를 직접 만들어 관리할 수 있습니다. 현재 공개된 도커 이미지는 50만개가 넘고 Docker hub의 이미지 다운로드 수는 80억회에 이릅니다. 누구나 쉽게 이미지를 만들고 배포할 수 있습니다.&lt;/p&gt;
 
@@ -7187,7 +7197,7 @@ volumes:
 
 &lt;h3 id=&quot;레이어-저장방식&quot;&gt;레이어 저장방식&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer.png&quot; alt=&quot;Docker Layer&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer-400-d301d8998.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer-600-d301d8998.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer-800-d301d8998.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer-1000-d301d8998.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer-400-aac2d92ea.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer-600-aac2d92ea.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer-800-aac2d92ea.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer-1000-aac2d92ea.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-layer-800-aac2d92ea.png&quot; alt=&quot;Docker Layer&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;도커 이미지는 컨테이너를 실행하기 위한 모든 정보를 가지고 있기 때문에 보통 용량이 수백메가&lt;sub&gt;MB&lt;/sub&gt;에 이릅니다. 처음 이미지를 다운받을 땐 크게 부담이 안되지만 기존 이미지에 파일 하나 추가했다고 수백메가를 다시 다운받는다면 매우 비효율적일 수 밖에 없습니다.&lt;/p&gt;
 
@@ -7199,7 +7209,7 @@ volumes:
 
 &lt;h3 id=&quot;이미지-경로&quot;&gt;이미지 경로&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url.png&quot; alt=&quot;Docker image url&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url-400-7b9535c45.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url-600-7b9535c45.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url-800-7b9535c45.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url-1000-7b9535c45.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url-400-5b343fd4b.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url-600-5b343fd4b.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url-800-5b343fd4b.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url-1000-5b343fd4b.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/image-url-800-5b343fd4b.png&quot; alt=&quot;Docker image url&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;이미지는 url 방식으로 관리하며 태그를 붙일 수 있습니다. ubuntu 14.04 이미지는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker.io/library/ubuntu:14.04&lt;/code&gt; 또는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker.io/library/ubuntu:trusty&lt;/code&gt; 이고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker.io/library&lt;/code&gt;는 생략가능하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ubuntu:14.04&lt;/code&gt; 로 사용할 수 있습니다. 이러한 방식은 이해하기 쉽고 편리하게 사용할 수 있으며 태그 기능을 잘 이용하면 테스트나 롤백도 쉽게 할 수 있습니다.&lt;/p&gt;
 
@@ -7226,7 +7236,7 @@ CMD [&amp;quot;start.sh&amp;quot;]&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;h3 id=&quot;docker-hub&quot;&gt;Docker Hub&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull.png&quot; alt=&quot;Docker Hub Hits 5 Billion Pulls(2016/08)&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull-400-510744ddf.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull-600-510744ddf.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull-800-510744ddf.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull-1000-510744ddf.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull-400-4d57726f5.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull-600-4d57726f5.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull-800-4d57726f5.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull-1000-4d57726f5.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-pull-800-4d57726f5.png&quot; alt=&quot;Docker Hub Hits 5 Billion Pulls(2016/08)&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;도커 이미지의 용량은 보통 수백메가로 수기가가 넘는 경우도 흔합니다. 이렇게 큰 용량의 이미지를 서버에 저장하고 관리하는 것은 쉽지 않은데 도커는 Docker hub를 통해 공개 이미지를 무료로 관리해 줍니다. 하루에도 엄청난 용량의 이미지가 전세계에서 다운로드 되고 트래픽 비용만 해도 어마어마 할 것 같은데 그것이 다 무료!입니다.&lt;/p&gt;
 
@@ -7252,13 +7262,13 @@ CMD [&amp;quot;start.sh&amp;quot;]&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;도커는 기술기업답지 않게 홍보와 커뮤니티 관리에 굉장히 신경쓰고 있습니다. 커뮤니티를 위한 스티커나 티셔츠를 무료로 제공하고 필요하면 연사요청도 할 수 있습니다. 홈페이지에서는 전세계에서 열리는 밋업 상황을 볼 수 있고 일주일마다 발송되는 &lt;a href=&quot;https://blog.docker.com/docker-weekly-archives/&quot;&gt;뉴스레터&lt;/a&gt;에는 다양한 개발자들의 글이 실려있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo.jpg&quot; alt=&quot;Docker office에서 만난 Jérôme Petazzoni&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo-400-655114e85.webp 400w, /generated/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo-600-655114e85.webp 600w, /generated/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo-800-655114e85.webp 800w, /generated/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo-1000-655114e85.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo-400-50e233c39.jpg 400w, /generated/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo-600-50e233c39.jpg 600w, /generated/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo-800-50e233c39.jpg 800w, /generated/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo-1000-50e233c39.jpg 1000w&quot; type=&quot;image/jpeg&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2016-06-07-zero-downtime-docker-deployment/docker-jpetazzo-800-50e233c39.jpg&quot; alt=&quot;Docker office에서 만난 Jérôme Petazzoni&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;운이 좋았지만 도커 오피스에 방문해서 사무실을 구경할 수도 있었고 고오오오급 개발자 &lt;a href=&quot;https://twitter.com/jpetazzo&quot;&gt;Jérôme Petazzoni&lt;/a&gt;와 직접 이야기를 나눌수 있었습니다! &lt;del&gt;아 또 가고 싶다&lt;/del&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;moby-dock&quot;&gt;moby dock&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals.jpg&quot; alt=&quot;Tux(linux) - Moby Dock(docker) - Gopher (golang)&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals-400-1e688eebb.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals-600-1e688eebb.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals-800-1e688eebb.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals-1000-1e688eebb.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals-400-488d4e7d3.jpg 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals-600-488d4e7d3.jpg 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals-800-488d4e7d3.jpg 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals-1000-488d4e7d3.jpg 1000w&quot; type=&quot;image/jpeg&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/animals-800-488d4e7d3.jpg&quot; alt=&quot;Tux(linux) - Moby Dock(docker) - Gopher (golang)&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;도커는 넘나 귀여운 고래를 로고로 하고 있습니다. 로고 스티커는 항상 인기가 넘치고 로고가 그려진 티셔츠는 입고 돌아다녀도 개발자처럼 보이지 않습니다. 도커가 성공한 가장 큰 이유는 귀여운 고래 덕분이라고 생각합니다.(엄근진) &lt;del&gt;오픈소스가 성공하려면 귀여운 동물 캐릭터를 사용하세요!&lt;/del&gt;&lt;/p&gt;
 

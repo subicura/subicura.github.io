@@ -310,6 +310,8 @@ body { font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "ë‚
 
 .post .post-content a { color: #db4d5e; text-decoration: underline; }
 
+.post .post-content .small-image { margin: 0 auto; text-align: center; }
+
 .post .post-content img { max-width: 100%; margin: 0 auto; }
 
 .post .post-content figure.image { margin: 0; padding: 10px 0 20px; text-align: center; }
