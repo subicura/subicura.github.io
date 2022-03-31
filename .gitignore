@@ -42,3 +42,4 @@ node_modules
 .jekyll-metadata
 
 .publish
+.jekyll-cache
