@@ -30,7 +30,9 @@ last_modified_at: 2020-12-14T08:50:00+09:00
 - 클러스터 하나는 불안한데 멀티 클러스터 구성해야 하지 않을까? [Anthos](https://cloud.google.com/anthos/)?
 - 클라우드 네이티브<sub>Cloud Native</sub> 애플리케이션 만들어서 쿠버네티스에 배포하자.
 
-{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know.png --alt 무슨 이야기인지.. %}
+<div style="max-width: 350px" class="small-image">
+  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know.png --alt 무슨 이야기인지.. %}
+</div>
 
 이 모든 것들이 불과 2~3년 이내에 나온 것들로 인프라 세계가 이렇게 빨리 변한적이 있었나 싶습니다. 예전에는 일부 고오오급 회사에서만 썼던 것 같은데 이제 여기저기서 ~~나만 빼고~~ 다 쓰는 거 같고 뭔가 좀 해보고 싶어도 설치부터 어렵고 내용이 복잡해서 배우기가 쉽지 않습니다.
 
