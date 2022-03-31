@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2022-03-30T23:52:56+09:00</updated>
+ <updated>2022-03-31T14:18:00+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -2334,7 +2334,7 @@ npm run lint
 &lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;containers&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;busybox&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;busybox:1.25&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;busybox:1.25&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;오브젝트의 명세&lt;sub&gt;Spec&lt;/sub&gt;는 YAML 파일(JSON도 가능하다고 하지만 잘 안 씀)로 정의하고 여기에 오브젝트의 종류와 원하는 상태를 입력합니다. 이러한 명세는 생성, 조회, 삭제로 관리할 수 있기 때문에 REST API로 쉽게 노출할 수 있습니다. 접근 권한 설정도 같은 개념을 적용하여 누가 어떤 오브젝트에 어떤 요청을 할 수 있는지 정의할 수 있습니다.&lt;/p&gt;
