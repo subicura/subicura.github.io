@@ -30,7 +30,7 @@ last_modified_at: 2020-12-14T08:50:00+09:00
 - 클러스터 하나는 불안한데 멀티 클러스터 구성해야 하지 않을까? [Anthos](https://cloud.google.com/anthos/)?
 - 클라우드 네이티브<sub>Cloud Native</sub> 애플리케이션 만들어서 쿠버네티스에 배포하자.
 
-![무슨 이야기인지..]({{ site.url }}/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know.png)
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know.png --alt 무슨 이야기인지.. %}
 
 이 모든 것들이 불과 2~3년 이내에 나온 것들로 인프라 세계가 이렇게 빨리 변한적이 있었나 싶습니다. 예전에는 일부 고오오급 회사에서만 썼던 것 같은데 이제 여기저기서 ~~나만 빼고~~ 다 쓰는 거 같고 뭔가 좀 해보고 싶어도 설치부터 어렵고 내용이 복잡해서 배우기가 쉽지 않습니다.
 
@@ -78,7 +78,7 @@ Rancher 2.0, OpenShift(Red Hat), Tectonic(CoreOS), Docker Enterprise Edition등�
 
 ### 갓구글 + 고오오오급 회사들의 참여 <sub>ECO System</sub>
 
-[![Cloud Native Landscape]({{ site.url }}/assets/article_images/2019-05-19-kubernetes-basic-1/cncf-map.png)](https://landscape.cncf.io/)
+<a href="https://landscape.cncf.io/" target="_blank">{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/cncf-map.png --alt Cloud Native Landscape %}</a>
 
 전 세계적 스케일의 경험과 기술이 고스란히 녹아들어 있습니다. 거대한 커뮤니티와 생태계가 있어 잘 안 되는 건 찾아보면 되고 이런 거 만들어 볼까 하면 누군가 만들어 놨습니다. 서비스메시(Istio, linkerd), CI(Tekton, Spinnaker), 컨테이너 서버리스(Knative), 머신러닝(kubeflow)이 모두 쿠버네티스 환경에서 돌아갑니다. 클라우드 네이티브 애플리케이션 대부분이 쿠버네티스와 찰떡궁합입니다.
 
@@ -339,13 +339,10 @@ CRI 외에 CNI(네트워크), CSI(스토리지)를 지원하여 인터페이스�
 
 실습은 👇 하단 링크를 클릭해 주세요!
 
-<p align="center">
-    <a href="https://subicura.com/k8s/?utm_source=subicura.com&utm_medium=referral&utm_campaign=blog" target="_blank">
-        <img src="{{ "/assets/article_images/2020-12-14-kubernetes-basic-2/subicura-k8s.png"  | prepend: site.baseurl  }}" alt="초보를 위한 쿠버네티스 안내서" style="width: 350px">
-    </a>
-</p>
+<div style="max-width: 350px" class="small-image">
+  <a href="https://subicura.com/k8s/?utm_source=subicura.com&utm_medium=referral&utm_campaign=blog" target="_blank">{% picture /assets/article_images/2020-12-14-kubernetes-basic-2/subicura-k8s.png --alt 초보를 위한 쿠버네티스 안내서 %}</a>
+</div>
 
 그리고 실습 영상과 함께 자세한 설명을 들을 수 있는 [온라인 강의](https://bit.ly/inflearn-k8s-link)도 준비되어 있습니다.
 
-[![초보를 위한 쿠버네티스 안내서 - 인프런]({{ site.url }}/assets/article_images/2020-12-14-kubernetes-basic-2/inflearn-k8s.png)](https://bit.ly/inflearn-k8s-link)
-
+<a href="https://bit.ly/inflearn-k8s-link" target="_blank">{% picture /assets/article_images/2020-12-14-kubernetes-basic-2/inflearn-k8s.png --alt 초보를 위한 쿠버네티스 안내서 - 인프런 %}</a>

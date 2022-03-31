@@ -197,8 +197,7 @@ ubuntu이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있�
 ## 정리
 여기까지 도커에 대해 기본적인 내용을 아주 얕게 살펴보았습니다. 이제 실전으로 들어가봅시다!
 
-[![이제 도커안내서를 영상으로 만나보세요!]({{ site.url }}/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png)](https://bit.ly/inflearn-docker)
-
+<a href="https://bit.ly/inflearn-docker" target="_blank">{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png --alt 이제 도커안내서를 영상으로 만나보세요! %}</a>
 
 ---
 
