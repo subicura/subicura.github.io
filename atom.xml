@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2022-03-31T20:09:44+09:00</updated>
+ <updated>2022-03-31T20:13:41+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -2206,7 +2206,10 @@ npm run lint
   &lt;li&gt;클라우드 네이티브&lt;sub&gt;Cloud Native&lt;/sub&gt; 애플리케이션 만들어서 쿠버네티스에 배포하자.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know-400-75b422261.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know-448-75b422261.webp 448w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know-400-206f7a8c6.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know-448-206f7a8c6.png 448w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know-448-206f7a8c6.png&quot; alt=&quot;무슨 이야기인지..&quot; /&gt;&lt;/picture&gt;
+&lt;div style=&quot;max-width: 350px&quot; class=&quot;small-image&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know-400-75b422261.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know-448-75b422261.webp 448w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know-400-206f7a8c6.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know-448-206f7a8c6.png 448w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know-448-206f7a8c6.png&quot; alt=&quot;무슨 이야기인지..&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;이 모든 것들이 불과 2~3년 이내에 나온 것들로 인프라 세계가 이렇게 빨리 변한적이 있었나 싶습니다. 예전에는 일부 고오오급 회사에서만 썼던 것 같은데 이제 여기저기서 &lt;del&gt;나만 빼고&lt;/del&gt; 다 쓰는 거 같고 뭔가 좀 해보고 싶어도 설치부터 어렵고 내용이 복잡해서 배우기가 쉽지 않습니다.&lt;/p&gt;
 
