@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1648707621911427000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1648708600515172000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -1443,9 +1443,8 @@ volumes:
     <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
 
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1648707621911427000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1648708600515172000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
-<script type="text/javascript" src="/assets/js/asciinema-player.js"></script>
 <script>
 (function ($) {
   "use strict";
@@ -1454,31 +1453,38 @@ volumes:
     var $window = $(window),
     $image = $('.post-image-image, .teaserimage-image');
 
-      $window.on('scroll', function() {
-        var top = $window.scrollTop();
+    $window.on('scroll', function() {
+      var top = $window.scrollTop();
 
-        if (top < 0 || top > 1500) { return; }
-        $image
-          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
-          .css('opacity', 1-Math.max(top/700, 0));
-      });
-      $window.trigger('scroll');
+      if (top < 0 || top > 1500) { return; }
+      $image
+        .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+        .css('opacity', 1-Math.max(top/700, 0));
+    });
+    $window.trigger('scroll');
 
-      var height = $('.article-image').height();
-      $('.post-content').css('padding-top', height + 'px');
+    var height = $('.article-image').height();
+    $('.post-content').css('padding-top', height + 'px');
 
-      $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-         && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({ scrollTop: target.offset().top }, 500);
-            return false;
-          }
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({ scrollTop: target.offset().top }, 500);
+          return false;
         }
-      });
+      }
+    });
 
+    // asciinema 로딩
+    if($('.asciinema-player-section').length) {
+      var js = document.createElement("script");
+      js.type = "text/javascript";
+      js.src = '/assets/js/asciinema-player.js';
+      document.body.appendChild(js);
+    }
   });
 }(jQuery));
 </script>
