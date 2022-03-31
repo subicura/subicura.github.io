@@ -4,7 +4,7 @@
  <title>Subicura's Blog</title>
  <link href="https://subicura.com/atom.xml" rel="self"/>
  <link href="https://subicura.com/"/>
- <updated>2022-03-31T15:36:40+09:00</updated>
+ <updated>2022-03-31T16:56:56+09:00</updated>
  <id>https://subicura.com</id>
  <author>
    <name></name>
@@ -2138,9 +2138,10 @@ npm run lint
    <link href="https://subicura.com/2019/05/19/kubernetes-basic-1.html"/>
    <updated>2019-05-19T00:00:00+09:00</updated>
    <id>https://subicura.com/2019/05/19/kubernetes-basic-1</id>
-   <content type="html">&lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo.png&quot; alt=&quot;docker logo&quot; style=&quot;width: 450px&quot; /&gt;
-&lt;/p&gt;
+   <content type="html">&lt;div class=&quot;small-image&quot; style=&quot;max-width: 450px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo-400-87ea3e163.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo-600-87ea3e163.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo-800-87ea3e163.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo-1000-87ea3e163.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo-400-0e2303996.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo-600-0e2303996.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo-800-0e2303996.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo-1000-0e2303996.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo-800-0e2303996.png&quot; alt=&quot;docker logo&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;2013년 등장한 도커&lt;sub&gt;docker&lt;/sub&gt;는 인프라 세계를 컨테이너&lt;sub&gt;container&lt;/sub&gt; 세상으로 바꿔버렸습니다. 수많은 애플리케이션이 컨테이너로 배포되고 도커파일을 만들어 이미지를 빌드하고 컨테이너를 배포하는 게 흔한 개발 프로세스가 되었습니다. 2019년 DockerCon 발표에선 무려 &lt;a href=&quot;https://twitter.com/ajeetsraina/status/1123258872443990017&quot;&gt;1052억번의 컨테이너 image pull&lt;/a&gt;이 발생했다고 합니다.&lt;/p&gt;
 
@@ -2181,9 +2182,10 @@ npm run lint
 
 &lt;h2 id=&quot;쿠버네티스의-과거-현재-미래&quot;&gt;쿠버네티스의 과거, 현재, 미래&lt;/h2&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2019-05-19-kubernetes-basic-1/container-orchestration.png&quot; alt=&quot;container orchestration&quot; style=&quot;width: 450px&quot; /&gt;
-&lt;/p&gt;
+&lt;div class=&quot;small-image&quot; style=&quot;max-width: 450px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/container-orchestration-400-3603f800f.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/container-orchestration-600-3603f800f.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/container-orchestration-700-3603f800f.webp 700w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/container-orchestration-400-25ce718c7.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/container-orchestration-600-25ce718c7.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/container-orchestration-700-25ce718c7.png 700w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/container-orchestration-700-25ce718c7.png&quot; alt=&quot;container orchestration&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;쿠버네티스는 다른 컨테이너 오케스트레이션 도구보다 비교적 늦게 등장했습니다. &lt;a href=&quot;https://docs.docker.com/engine/swarm/&quot;&gt;도커 스웜&lt;/a&gt;이 쉽고 간단한 사용법&lt;del&gt;끼워팔기&lt;/del&gt;을 앞세워 세력을 넓히고 있었고 AWS에서 &lt;a href=&quot;https://aws.amazon.com/ecs/&quot;&gt;ECS&lt;/a&gt;, 하시코프에서 &lt;a href=&quot;https://www.nomadproject.io/&quot;&gt;Nomad&lt;/a&gt;, 전통의 강호 &lt;a href=&quot;http://mesos.apache.org/&quot;&gt;Mesos&lt;/a&gt;에서 &lt;a href=&quot;https://mesosphere.github.io/marathon/&quot;&gt;Marathon&lt;/a&gt;을 발표했습니다.&lt;/p&gt;
 
@@ -2195,9 +2197,10 @@ npm run lint
 
 &lt;h2 id=&quot;쿠버네티스란&quot;&gt;쿠버네티스란?&lt;/h2&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo.png&quot; alt=&quot;kubernetes logo&quot; style=&quot;width: 450px&quot; /&gt;
-&lt;/p&gt;
+&lt;div class=&quot;small-image&quot; style=&quot;max-width: 450px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo-400-9853f3294.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo-600-9853f3294.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo-800-9853f3294.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo-1000-9853f3294.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo-400-9d2b7f254.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo-600-9d2b7f254.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo-800-9d2b7f254.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo-1000-9d2b7f254.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo-800-9d2b7f254.png&quot; alt=&quot;kubernetes logo&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;쿠버네티스는 컨테이너를 쉽고 빠르게 배포/확장하고 관리를 자동화해주는 오픈소스 플랫폼입니다.&lt;/strong&gt; 몇 가지 수식어로 “운영환경에서 사용 가능한(production ready)”, “de facto(사실상 표준)”, “조타수(helmsman)”, “조종사(pilot)”, “행성 스케일(Planet Scale)”, “&lt;del&gt;갓(god)&lt;/del&gt;” 등을 가지고 있습니다. 쿠버네티스&lt;sub&gt;kubernetes&lt;/sub&gt;가 너무 길어서 &lt;del&gt;오타가 많아서&lt;/del&gt; 흔히 케이(에이)츠&lt;sub&gt;k8s&lt;/sub&gt; 또는 큐브&lt;sub&gt;kube&lt;/sub&gt;라고 줄여서 부릅니다.&lt;/p&gt;
 
@@ -2217,15 +2220,19 @@ npm run lint
 
 &lt;h3 id=&quot;다양한-배포-방식&quot;&gt;다양한 배포 방식&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2019-05-19-kubernetes-basic-1/workload.png&quot; alt=&quot;쿠버네티스 배포 방식&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;small-image&quot; style=&quot;max-width: 450px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/workload-400-31603c6e6.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/workload-600-31603c6e6.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/workload-800-31603c6e6.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/workload-1000-31603c6e6.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/workload-400-8706a141f.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/workload-600-8706a141f.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/workload-800-8706a141f.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/workload-1000-8706a141f.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/workload-800-8706a141f.png&quot; alt=&quot;쿠버네티스 배포 방식&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;컨테이너와 관련된 많은 예제가 웹(프론트엔드+백엔드) 애플리케이션을 다루고 있지만, 실제 세상엔 더 다양한 형태의 애플리케이션이 있습니다. 쿠버네티스는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Deployment&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StatefulSets&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DaemonSet&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Job&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CronJob&lt;/code&gt;등 다양한 배포 방식을 지원합니다. Deployment는 새로운 버전의 애플리케이션을 다양한 전략으로 무중단 배포할 수 있습니다. StatefulSets은 실행 순서를 보장하고 호스트 이름과 볼륨을 일정하게 사용할 수 있어 순서나 데이터가 중요한 경우에 사용할 수 있습니다. 로그나 모니터링 등 모든 노드에 설치가 필요한 경우엔 DaemonSet을 이용하고 배치성 작업은 Job이나 CronJob을 이용하면 됩니다. &lt;del&gt;무슨 기능을 원하는지 몰라서 다 준비해놨어&lt;/del&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;ingress-설정&quot;&gt;Ingress 설정&lt;/h3&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2019-05-19-kubernetes-basic-1/ingress.png&quot; alt=&quot;Ingress&quot; style=&quot;width: 550px&quot; /&gt;
-&lt;/p&gt;
+&lt;div class=&quot;small-image&quot; style=&quot;max-width: 550px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/ingress-400-6431193ae.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/ingress-600-6431193ae.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/ingress-800-6431193ae.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/ingress-1000-6431193ae.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/ingress-400-5fd6645d6.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/ingress-600-5fd6645d6.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/ingress-800-5fd6645d6.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/ingress-1000-5fd6645d6.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/ingress-800-5fd6645d6.png&quot; alt=&quot;Ingress&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;다양한 웹 애플리케이션을 하나의 로드 밸런서로 서비스하기 위해 Ingress&lt;del&gt;입장&lt;/del&gt;기능을 제공합니다. 웹 애플리케이션을 배포하는 과정을 보면 외부에서 직접 접근할 수 없도록 애플리케이션을 내부망에 설치하고 외부에서 접근이 가능한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ALB&lt;/code&gt;나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Nginx&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Apache&lt;/code&gt;를 프록시 서버로 활용합니다. 프록시 서버는 도메인과 Path 조건에 따라 등록된 서버로 요청을 전달하는데 서버가 바뀌거나 IP가 변경되면 매번 설정을 수정해줘야 합니다. 쿠버네티스의 Ingress는 이를 자동화하면서 기존 프록시 서버에서 사용하는 설정을 거의 그대로 사용할 수 있습니다. 새로운 도메인을 추가하거나 업로드 용량을 제한하기 위해 일일이 프록시 서버에 접속하여 설정할 필요가 없습니다.&lt;/p&gt;
 
@@ -2233,19 +2240,19 @@ npm run lint
 
 &lt;h3 id=&quot;클라우드-지원&quot;&gt;클라우드 지원&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2019-05-19-kubernetes-basic-1/cloud-company.png&quot; alt=&quot;Cloud&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/cloud-company-400-d82630d8f.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/cloud-company-600-d82630d8f.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/cloud-company-800-d82630d8f.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/cloud-company-1000-d82630d8f.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/cloud-company-400-9087268db.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/cloud-company-600-9087268db.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/cloud-company-800-9087268db.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/cloud-company-1000-9087268db.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/cloud-company-800-9087268db.png&quot; alt=&quot;Cloud&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;쿠버네티스는 부하에 따라 자동으로 서버를 늘리는 기능&lt;sub&gt;AutoScaling&lt;/sub&gt;이 있고 IP를 할당받아 로드밸런스&lt;sub&gt;LoadBalancer&lt;/sub&gt;로 사용할 수 있습니다. 외부 스토리지를 컨테이너 내부 디렉토리에 마운트하여 사용하는 것도 일반적인데 이를 위해 클라우드 별로 적절한 API를 사용하는 모듈이 필요합니다. 쿠버네티스는 Cloud Controller를 이용하여 클라우드 연동을 손쉽게 확장할 수 있습니다. AWS, 구글 클라우드, 마이크로소프트 애저는 물론 수십 개의 클라우드 업체에서 모듈을 제공하여 관리자는 동일한 설정 파일을 서로 다른 클라우드에서 동일하게 사용할 수 있습니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;namespace--label&quot;&gt;Namespace &amp;amp; Label&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label.png&quot; alt=&quot;Namespace &amp;amp; Label&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label-400-d53a0c78e.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label-600-d53a0c78e.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label-800-d53a0c78e.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label-1000-d53a0c78e.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label-400-19b15022d.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label-600-19b15022d.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label-800-19b15022d.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label-1000-19b15022d.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/namespace-label-800-19b15022d.png&quot; alt=&quot;Namespace &amp;amp; Label&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;하나의 클러스터를 논리적으로 구분하여 사용할 수 있습니다. 하나의 클러스터에 다양한 프레임워크와 애플리케이션을 설치하기 때문에 기본(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;system&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default&lt;/code&gt;)외에 여러 개의 네임스페이스를 사용하는 것이 일반적입니다. 더 세부적인 설정으로 라벨 기능을 적극적으로 사용하여 유연하면서 확장성 있게 리소스를 관리할 수 있습니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;rbac-role-based-access-control&quot;&gt;RBAC (role-based access control)&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2019-05-19-kubernetes-basic-1/rbac.png&quot; alt=&quot;Role based access control&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/rbac-400-48e7a8fce.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/rbac-600-48e7a8fce.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/rbac-800-48e7a8fce.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/rbac-1000-48e7a8fce.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/rbac-400-945c6ee94.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/rbac-600-945c6ee94.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/rbac-800-945c6ee94.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/rbac-1000-945c6ee94.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/rbac-800-945c6ee94.png&quot; alt=&quot;Role based access control&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;접근 권한 시스템입니다. 각각의 리소스에 대해 유저별로 CRUD스런 권한을 손쉽게 지정할 수 있습니다. 클러스터 전체에 적용하거나 특정 네임스페이스에 적용할 수 있습니다. AWS의 경우 IAM을 &lt;a href=&quot;https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html&quot;&gt;연동&lt;/a&gt;해서 사용할 수도 있습니다.&lt;/p&gt;
 
@@ -2271,7 +2278,7 @@ npm run lint
 
 &lt;h3 id=&quot;desired-state&quot;&gt;Desired State&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2019-05-19-kubernetes-basic-1/desired-state.png&quot; alt=&quot;Desired state&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/desired-state-400-9c708dab6.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/desired-state-600-9c708dab6.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/desired-state-800-9c708dab6.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/desired-state-1000-9c708dab6.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/desired-state-400-da8ec4515.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/desired-state-600-da8ec4515.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/desired-state-800-da8ec4515.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/desired-state-1000-da8ec4515.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/desired-state-800-da8ec4515.png&quot; alt=&quot;Desired state&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;쿠버네티스에서 가장 중요한 것은 &lt;strong&gt;desired state - 원하는 상태&lt;/strong&gt; 라는 개념입니다. 원하는 상태라 함은 관리자가 바라는 환경을 의미하고 좀 더 구체적으로는 얼마나 많은 웹서버가 떠 있으면 좋은지, 몇 번 포트로 서비스하기를 원하는지 등을 말합니다.&lt;/p&gt;
 
@@ -2295,17 +2302,19 @@ npm run lint
 
 &lt;h4 id=&quot;pod&quot;&gt;Pod&lt;/h4&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2019-05-19-kubernetes-basic-1/pod.png&quot; alt=&quot;Pod&quot; style=&quot;width: 350px&quot; /&gt;
-&lt;/p&gt;
+&lt;div class=&quot;small-image&quot; style=&quot;max-width: 350px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/pod-400-c70f76ba0.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/pod-600-c70f76ba0.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/pod-800-c70f76ba0.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/pod-958-c70f76ba0.webp 958w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/pod-400-6721d675b.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/pod-600-6721d675b.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/pod-800-6721d675b.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/pod-958-6721d675b.png 958w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/pod-800-6721d675b.png&quot; alt=&quot;Pod&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;쿠버네티스에서 배포할 수 있는 가장 작은 단위로 한 개 이상의 컨테이너와 스토리지, 네트워크 속성을 가집니다. Pod에 속한 컨테이너는 스토리지와 네트워크를 공유하고 서로 localhost로 접근할 수 있습니다. 컨테이너를 하나만 사용하는 경우도 반드시 Pod으로 감싸서 관리합니다.&lt;/p&gt;
 
 &lt;h4 id=&quot;replicaset&quot;&gt;ReplicaSet&lt;/h4&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2019-05-19-kubernetes-basic-1/replicaset.png&quot; alt=&quot;ReplicaSet&quot; style=&quot;width: 350px&quot; /&gt;
-&lt;/p&gt;
+&lt;div class=&quot;small-image&quot; style=&quot;max-width: 350px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/replicaset-400-4745158af.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/replicaset-600-4745158af.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/replicaset-692-4745158af.webp 692w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/replicaset-400-dd2459c02.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/replicaset-600-dd2459c02.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/replicaset-692-dd2459c02.png 692w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/replicaset-692-dd2459c02.png&quot; alt=&quot;ReplicaSet&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;Pod을 여러 개(한 개 이상) 복제하여 관리하는 오브젝트입니다. Pod을 생성하고 개수를 유지하려면 반드시 ReplicaSet을 사용해야 합니다. ReplicaSet은 복제할 개수, 개수를 체크할 라벨 선택자, 생성할 Pod의 설정값(템플릿)등을 가지고 있습니다. 직접적으로 ReplicaSet을 사용하기보다는 Deployment등 다른 오브젝트에 의해서 사용되는 경우가 많습니다.&lt;/p&gt;
 
@@ -2356,17 +2365,19 @@ npm run lint
 
 &lt;p&gt;컨테이너는 아주 심플하고 우아하게 동작합니다. run을 하면 실행되고 stop을 하면 멈춥니다. 서버-클라이언트 구조를 안다면 컨테이너를 관리하는 에이전트를 만들고 중앙에서 API를 이용하여 원격으로 관리하는 모습을 쉽게 그려볼 수 있습니다.&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2019-05-19-kubernetes-basic-1/server-agent.png&quot; alt=&quot;Server - Agent&quot; style=&quot;width: 350px&quot; /&gt;
-&lt;/p&gt;
+&lt;div class=&quot;small-image&quot; style=&quot;max-width: 350px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/server-agent-400-8ca8dd32e.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/server-agent-600-8ca8dd32e.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/server-agent-800-8ca8dd32e.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/server-agent-1000-8ca8dd32e.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/server-agent-400-93edb17a5.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/server-agent-600-93edb17a5.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/server-agent-800-93edb17a5.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/server-agent-1000-93edb17a5.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/server-agent-800-93edb17a5.png&quot; alt=&quot;Server - Agent&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;쿠버네티스 또한 중앙(Master)에 API 서버와 상태 저장소를 두고 각 서버(Node)의 에이전트(kubelet)와 통신하는 단순한 구조입니다. 하지만, 앞에서 얘기한 개념을 여러 모듈로 쪼개어 구현하고 다양한 오픈소스를 사용하기 때문에 설치가 까다롭고 언뜻 구성이 복잡해 보입니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;마스터---노드-구조&quot;&gt;마스터 - 노드 구조&lt;/h3&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/assets/article_images/2019-05-19-kubernetes-basic-1/master-node.png&quot; alt=&quot;Master - Node&quot; style=&quot;width: 600px&quot; /&gt;
-&lt;/p&gt;
+&lt;div class=&quot;small-image&quot; style=&quot;max-width: 600px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/master-node-400-6733a2c1e.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/master-node-600-6733a2c1e.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/master-node-800-6733a2c1e.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/master-node-1000-6733a2c1e.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/master-node-400-11778dccb.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/master-node-600-11778dccb.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/master-node-800-11778dccb.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/master-node-1000-11778dccb.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/master-node-800-11778dccb.png&quot; alt=&quot;Master - Node&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;쿠버네티스는 전체 클러스터를 관리하는 &lt;strong&gt;마스터&lt;/strong&gt;와 컨테이너가 배포되는 &lt;strong&gt;노드&lt;/strong&gt;로 구성되어 있습니다. 모든 명령은 마스터의 API 서버를 호출하고 노드는 마스터와 통신하면서 필요한 작업을 수행합니다. 특정 노드의 컨테이너에 명령하거나 로그를 조회할 때도 노드에 직접 명령하는 게 아니라 마스터에 명령을 내리고 마스터가 노드에 접속하여 대신 결과를 응답합니다.&lt;/p&gt;
 
@@ -2385,7 +2396,10 @@ npm run lint
 
 &lt;h3 id=&quot;master-구성-요소&quot;&gt;Master 구성 요소&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master.png&quot; alt=&quot;Master Component&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;small-image&quot; style=&quot;max-width: 600px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master-400-0b8b00bcb.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master-600-0b8b00bcb.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master-800-0b8b00bcb.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master-1000-0b8b00bcb.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master-400-7cc2c1a73.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master-600-7cc2c1a73.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master-800-7cc2c1a73.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master-1000-7cc2c1a73.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master-800-7cc2c1a73.png&quot; alt=&quot;Master Component&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;h4 id=&quot;api-서버-kube-apiserver&quot;&gt;API 서버 kube-apiserver&lt;/h4&gt;
 
@@ -2415,7 +2429,10 @@ npm run lint
 
 &lt;h3 id=&quot;node-구성-요소&quot;&gt;Node 구성 요소&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node.png&quot; alt=&quot;Node Component&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;small-image&quot; style=&quot;max-width: 600px&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node-400-f56fb7943.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node-600-f56fb7943.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node-800-f56fb7943.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node-1000-f56fb7943.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node-400-d2cc152a4.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node-600-d2cc152a4.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node-800-d2cc152a4.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node-1000-d2cc152a4.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node-800-d2cc152a4.png&quot; alt=&quot;Node Component&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;h4 id=&quot;큐블릿-kubelet&quot;&gt;큐블릿 kubelet&lt;/h4&gt;
 
@@ -2435,7 +2452,7 @@ npm run lint
 
 &lt;p&gt;위에서 이야기한 조각을 하나하나 모아서 전체적인 흐름을 살펴보겠습니다. 관리자가 애플리케이션을 배포하기 위해 ReplicaSet을 생성하면 다음과 같은 과정을 거쳐 Pod을 생성합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2019-05-19-kubernetes-basic-1/create-replicaset.png&quot; alt=&quot;ReplicaSet 만들기&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/create-replicaset-400-9947c6c3a.webp 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/create-replicaset-600-9947c6c3a.webp 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/create-replicaset-800-9947c6c3a.webp 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/create-replicaset-1000-9947c6c3a.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/create-replicaset-400-60fcc48a9.png 400w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/create-replicaset-600-60fcc48a9.png 600w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/create-replicaset-800-60fcc48a9.png 800w, /generated/assets/article_images/2019-05-19-kubernetes-basic-1/create-replicaset-1000-60fcc48a9.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2019-05-19-kubernetes-basic-1/create-replicaset-800-60fcc48a9.png&quot; alt=&quot;ReplicaSet 만들기&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;흐름을 보면 각 모듈은 서로 통신하지 않고 오직 API Server와 통신하는 것을 알 수 있습니다. API Server를 통해 etcd에 저장된 상태를 체크하고 현재 상태와 원하는 상태가 다르면 필요한 작업을 수행합니다. 각 모듈이 하는 일을 보면 다음과 같습니다.&lt;/p&gt;
 
@@ -5063,7 +5080,10 @@ docker service create &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; count
    <link href="https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html"/>
    <updated>2017-02-10T00:00:00+09:00</updated>
    <id>https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png&quot; alt=&quot;docker logo&quot; /&gt;&lt;/p&gt;
+   <content type="html">&lt;div class=&quot;image-container&quot; style=&quot;padding-top: 88.97435%&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-a9ab7503a.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-a9ab7503a.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-a9ab7503a.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-a9ab7503a.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-b3c79c1cb.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-b3c79c1cb.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-b3c79c1cb.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;이 글은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;초보를 위한 도커 안내서 - 설치부터 배포까지&lt;/code&gt; 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.&lt;/p&gt;
 
@@ -5083,9 +5103,10 @@ docker service create &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; count
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;도커-이미지-만들기&quot;&gt;도커 이미지 만들기&lt;/h2&gt;
+
 &lt;p&gt;도커는 이미지를 만들기 위해 &lt;strong&gt;컨테이너의 상태를 그대로 이미지로 저장&lt;/strong&gt;하는 단순하고 무식(?)한 방법을 사용합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image.png&quot; alt=&quot;create docker image&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-400-93eeb6052.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-600-93eeb6052.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-93eeb6052.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-1000-93eeb6052.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-400-eb276ad60.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-600-eb276ad60.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-eb276ad60.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-1000-eb276ad60.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-eb276ad60.png&quot; alt=&quot;create docker image&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;예를 들어, 어떤 애플리케이션을 이미지로 만든다면 리눅스만 설치된 컨테이너에 애플리케이션을 설치하고 그 상태를 그대로 이미지로 저장합니다. 가상머신의 스냅샷과 비스므리한 방식입니다.&lt;/p&gt;
 
@@ -5095,7 +5116,10 @@ docker service create &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; count
 
 &lt;h3 id=&quot;sinatra-웹-애플리케이션-샘플&quot;&gt;Sinatra 웹 애플리케이션 샘플&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra.png&quot; alt=&quot;Sinatra&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;max-width: 250px&quot; class=&quot;small-image&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-ef6a106ba.webp 400w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-72fa34ec1.png 400w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-72fa34ec1.png&quot; alt=&quot;Sinatra&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;일단 웹 애플리케이션 소스코드를 작성해야겠죠. &lt;a href=&quot;http://www.sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;라는 가벼운 웹 프레임워크를 사용하기 위해 새로운 폴더를 만들고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.rb&lt;/code&gt;를 만듭니다.&lt;/p&gt;
 
@@ -5161,13 +5185,16 @@ bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&qu
 
 &lt;p&gt;서버가 정상적으로 실행됐으면 웹 브라우저에서 테스트해봅니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:4567&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test.png&quot; alt=&quot;Browser test&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;max-width: 500px&quot; class=&quot;small-image&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-400-8975438a5.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-600-8975438a5.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-8975438a5.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-1000-8975438a5.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-400-c34e4f9ee.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-600-c34e4f9ee.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-c34e4f9ee.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-1000-c34e4f9ee.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-c34e4f9ee.png&quot; alt=&quot;Browser test&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;도커 컨테이너의 호스트명이 보입니다. 소스는 잘 작성한 것 같네요! 이제 도커 이미지를 만들 준비가 완료됐습니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;ruby-application-dockerfile&quot;&gt;Ruby Application Dockerfile&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile.png&quot; alt=&quot;Dockerfile&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-400-f96b022fb.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-600-f96b022fb.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-f96b022fb.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-1000-f96b022fb.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-400-fc4d28615.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-600-fc4d28615.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-fc4d28615.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-1000-fc4d28615.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-fc4d28615.png&quot; alt=&quot;Dockerfile&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;도커는 이미지를 만들기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;이라는 이미지 빌드용 DSL&lt;sub&gt;Domain Specific Language&lt;/sub&gt; 파일을 사용합니다. 단순 텍스트 파일로 일반적으로 소스와 함께 관리합니다.&lt;/p&gt;
 
@@ -5367,7 +5394,7 @@ docker run -d -p 8081:4567 app
 docker run -d -p 8082:4567 app
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test.png&quot; alt=&quot;Container test result&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-400-fda860cea.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-600-fda860cea.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-fda860cea.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-1000-fda860cea.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-400-96f499f99.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-600-96f499f99.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-96f499f99.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-1000-96f499f99.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-96f499f99.png&quot; alt=&quot;Container test result&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;접속 성공입니다. 기분이 좋아서 호스트 네임을 출력하는 &lt;del&gt;무쓸모&lt;/del&gt; 웹서버를 3개나 만들었습니다. 이미지가 잘 만들어졌네요.&lt;/p&gt;
 
@@ -5696,7 +5723,7 @@ CMD bundle exec ruby app.rb -o 0.0.0.0&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;h2 id=&quot;이미지-저장소&quot;&gt;이미지 저장소&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry.png&quot; alt=&quot;Docker Registry&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-400-983cd6f84.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-600-983cd6f84.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-983cd6f84.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-1000-983cd6f84.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-400-4ac5ce74c.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-600-4ac5ce74c.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-4ac5ce74c.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-1000-4ac5ce74c.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-4ac5ce74c.png&quot; alt=&quot;Docker Registry&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;도커는 빌드한 이미지를 서버에 배포하기 위해 직접 파일을 복사하는 방법 대신 &lt;a href=&quot;https://docs.docker.com/registry/&quot;&gt;도커 레지스트리&lt;/a&gt;&lt;sub&gt;Docker Registry&lt;/sub&gt;라는 이미지 저장소를 사용합니다. 도커 명령어를 이용하여 이미지를 레지스트리에 푸시&lt;sub&gt;push&lt;/sub&gt;하고 다른 서버에서 풀&lt;sub&gt;pull&lt;/sub&gt;받아 사용하는 구조입니다. &lt;del&gt;git을 사용하는 느낌?&lt;/del&gt;&lt;/p&gt;
 
@@ -5712,7 +5739,7 @@ CMD bundle exec ruby app.rb -o 0.0.0.0&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;&lt;strong&gt;회원가입&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub.png&quot; alt=&quot;Docker Hub&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-400-571560ae2.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-600-571560ae2.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-571560ae2.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-1000-571560ae2.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-400-e7543e83c.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-600-e7543e83c.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-e7543e83c.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-1000-e7543e83c.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-e7543e83c.png&quot; alt=&quot;Docker Hub&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://hub.docker.com/&quot;&gt;도커 허브&lt;/a&gt;사이트에 접속하면 쉽게 회원가입을 할 수 있습니다. 디자인이 참 마음에 들지 않는데… 처음부터 지금까지 업데이트한 모습이 이 모양이라 앞으로도 크게 기대되지 않습니다. &lt;del&gt;다른 페이지는 다 이쁜데 ㅠㅠ&lt;/del&gt;&lt;/p&gt;
 
@@ -6029,7 +6056,7 @@ docker push localhost:5000/subicura/sinatra-app:1
 
 &lt;h3 id=&quot;컨테이너-업데이트&quot;&gt;컨테이너 업데이트&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update.png&quot; alt=&quot;Update&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-400-9d4cedfd6.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-600-9d4cedfd6.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-9d4cedfd6.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-1000-9d4cedfd6.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-400-bcd3f08c3.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-600-bcd3f08c3.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-bcd3f08c3.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-1000-bcd3f08c3.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-bcd3f08c3.png&quot; alt=&quot;Update&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;도커를 사용하면 업데이트하는 방식도 배포와 큰 차이가 없습니다.&lt;/p&gt;
 
@@ -6079,7 +6106,8 @@ docker push localhost:5000/subicura/sinatra-app:1
    <updated>2017-01-19T00:00:00+09:00</updated>
    <id>https://subicura.com/2017/01/19/docker-guide-for-beginners-2</id>
    <content type="html">&lt;div class=&quot;image-container&quot; style=&quot;padding-top: 88.97435%&quot;&gt;
-  &lt;img src=&quot;/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png&quot; /&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-a9ab7503a.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-a9ab7503a.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-a9ab7503a.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-a9ab7503a.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-b3c79c1cb.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-b3c79c1cb.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-b3c79c1cb.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png&quot; /&gt;&lt;/picture&gt;
+
 &lt;/div&gt;
 
 &lt;p&gt;이 글은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;초보를 위한 도커 안내서 - 설치부터 배포까지&lt;/code&gt; 2번째 글입니다. 이번엔 도커 설치부터 컨테이너를 실행하고 컨테이너를 둘러보는 방법에 대해 설명합니다. 도커에 대해 1도 모르는 분들을 위해 아주 가볍게 자주 쓰는 명령어만 다루었기 때문에 모든 명령어가 궁금하신 분은 &lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/&quot;&gt;여기&lt;/a&gt;를 참고해주세요.&lt;/p&gt;
@@ -6136,7 +6164,10 @@ docker push localhost:5000/subicura/sinatra-app:1
 
 &lt;p&gt;도커를 맥이나 윈도우즈에 설치하려면 &lt;a href=&quot;https://docs.docker.com/docker-for-mac&quot;&gt;Docker for mac&lt;/a&gt; 또는 &lt;a href=&quot;https://docs.docker.com/docker-for-windows&quot;&gt;Docker for windows&lt;/a&gt;를 설치하면 됩니다. 파일을 다운받고 설치하고 재부팅하면 대부분 문제없이 완료됩니다. 소소한 옵션들이 있는데 특별히 건드릴 부분은 없으나 한번 살펴보고 적절하게 설정하시면 됩니다. (windows는 공유 드라이브를 선택해주세요)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac.png&quot; alt=&quot;Docker for Mac&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;max-width: 450px&quot; class=&quot;small-image&quot;&gt;
+  &lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-400-1269eb776.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-600-1269eb776.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-800-1269eb776.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-984-1269eb776.webp 984w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-400-4582aa0cf.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-600-4582aa0cf.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-800-4582aa0cf.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-984-4582aa0cf.png 984w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-800-4582aa0cf.png&quot; alt=&quot;Docker for Mac&quot; /&gt;&lt;/picture&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;마치 네이티브스럽게 설치된 것 같지만 도커는 리눅스 컨테이너이므로 실제로는 가상머신에 설치가 되었습니다. 사용자는 가상머신을 사용한다는 느낌이 전혀 안드는데 그런부분을 굉장히 신경써서 설계하였습니다. 예를 들면, 포트를 연결하기 위해 도커 컨테이너의 특정 포트를 가상머신에 연결하고 다시 mac이나 windows의 포트와 연결해야 합니다. 디렉토리를 연결한다면 디렉토리를 가상머신과 공유하고 그 디렉토리를 다시 컨테이너와 연결해야 합니다. 이런 한단계 추가적으로 거쳐야하는 부분을 자연스럽게 처리해줍니다.&lt;/p&gt;
 
@@ -6196,7 +6227,7 @@ Server:
 
 &lt;p&gt;혹시, 특이한 부분을 찾으셨나요? 버전정보가 클라이언트와 서버로 나뉘어져 있습니다. 도커는 하나의 실행파일이지만 실제로 클라이언트와 서버역할을 각각 할 수 있습니다. 도커 커맨드를 입력하면 도커 클라이언트가 도커 서버로 명령을 전송하고 결과를 받아 터미널에 출력해 줍니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host.png&quot; alt=&quot;docker client-host&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-400-a771b9efd.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-600-a771b9efd.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-800-a771b9efd.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-1000-a771b9efd.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-400-cc1fdb91b.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-600-cc1fdb91b.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-800-cc1fdb91b.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-1000-cc1fdb91b.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-800-cc1fdb91b.png&quot; alt=&quot;docker client-host&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;기본값이 도커 서버의 소켓을 바라보고 있기 때문에 사용자는 의식하지 않고 마치 바로 명령을 내리는 것 같은 느낌을 받습니다. 이러한 설계가 mac이나 windows의 터미널에서 명령어를 입력했을때 가상 서버에 설치된 도커가 동작하는 이유입니다.&lt;/p&gt;
 
@@ -6436,7 +6467,7 @@ docker run &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot
 
 &lt;p&gt;컨테이너가 제대로 실행되었는지 웹 브라우저로 확인해봅니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp.png&quot; alt=&quot;wordpress setup&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-400-1bc4e2791.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-600-1bc4e2791.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-800-1bc4e2791.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-1000-1bc4e2791.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-400-dd40ceb52.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-600-dd40ceb52.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-800-dd40ceb52.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-1000-dd40ceb52.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-800-dd40ceb52.png&quot; alt=&quot;wordpress setup&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;워드프레스가 실행되었습니다! 단지 이미지를 다운받고 적절한 환경변수를 입력하여 컨테이너를 실행했을 뿐입니다. 워드프레스 컨테이너 내부는 apache2와 php가 설치되어 있지만 추상화되어 있어 실행과정에선 드러나지 않습니다.&lt;/p&gt;
 
@@ -6460,7 +6491,7 @@ docker run &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot
 
 &lt;p&gt;설치된 파일이 많아 다운로드 하는데 시간이 좀 걸립니다. 컨테이너가 실행되면 웹 브라우저에서 jupyter에 접속하여 머신러닝을 시작해 봅시다!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow.png&quot; alt=&quot;Hello, Tensorflow!&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-400-267f6dd23.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-600-267f6dd23.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-800-267f6dd23.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-1000-267f6dd23.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-400-bbffa587f.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-600-bbffa587f.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-800-bbffa587f.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-1000-bbffa587f.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-800-bbffa587f.png&quot; alt=&quot;Hello, Tensorflow!&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;와우! 성공적으로 tensorflow 테스트를 마쳤습니다. 이제 조금 있으면 A.I를 만들 수 있을 것 같습니다.(?!)&lt;/p&gt;
 
@@ -6934,7 +6965,7 @@ mysql&amp;gt; quit
 
 &lt;p&gt;이제 지금까지 배운 모든걸 정리해서 컨테이너를 새로운 버전으로 업데이트 하는 과정을 살펴보겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://subicura.com/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update.png&quot; alt=&quot;도커 컨테이너 업데이트&quot; /&gt;&lt;/p&gt;
+&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-400-15d6ecedc.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-600-15d6ecedc.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-800-15d6ecedc.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-1000-15d6ecedc.webp 1000w&quot; type=&quot;image/webp&quot; /&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-400-ef42b1825.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-600-ef42b1825.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-800-ef42b1825.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-1000-ef42b1825.png 1000w&quot; type=&quot;image/png&quot; /&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-800-ef42b1825.png&quot; alt=&quot;도커 컨테이너 업데이트&quot; /&gt;&lt;/picture&gt;
 
 &lt;p&gt;도커에서 컨테이너를 업데이트 하려면 새 버전의 이미지를 다운(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pull&lt;/code&gt;)받고 기존 컨테이너를 삭제(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stop&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rm&lt;/code&gt;) 한 후 새 이미지를 기반으로 새 컨테이너를 실행(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run&lt;/code&gt;)하면 됩니다. 배포와 관련된 자세한 사항은 다음글에서 이야기하고 여기선 그냥 그렇구나 하고 이해합시다.&lt;/p&gt;
 
