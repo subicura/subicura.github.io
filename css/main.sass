@@ -205,11 +205,15 @@ body
         &:hover
           text-decoration: underline
       .share
+        display: flex
+        align-items: end
         height: 25px
         float: right
-        padding: 5px 0 0
+        padding: 0
         @include respond-to(500)
           float: none
+        .fb-like
+          height: 22px
       .author-info
         @include respond-to(500)
           margin-top: 10px
@@ -679,9 +683,12 @@ body
   .fb-comments-wrapper
     padding-top: 30px
 .share
+  display: flex
+  align-items: end
   padding: 20px 0 0
   line-height: 22px
   .fb_iframe_widget
+    height: 22px
     float: left
   .pocket-btn
     float: left
