@@ -214,9 +214,11 @@ body { font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "ë‚
 
 .content article .post-meta a:hover { text-decoration: underline; }
 
-.content article .post-meta .share { height: 25px; float: right; padding: 5px 0 0; }
+.content article .post-meta .share { display: flex; align-items: end; height: 25px; float: right; padding: 0; }
 
 @media only screen and (max-width: 500px) { .content article .post-meta .share { float: none; } }
+
+.content article .post-meta .share .fb-like { height: 22px; }
 
 @media only screen and (max-width: 500px) { .content article .post-meta .author-info { margin-top: 10px; clear: both; } }
 
@@ -416,9 +418,9 @@ body { font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "ë‚
 
 .post .fb-comments-wrapper { padding-top: 30px; }
 
-.share { padding: 20px 0 0; line-height: 22px; }
+.share { display: flex; align-items: end; padding: 20px 0 0; line-height: 22px; }
 
-.share .fb_iframe_widget { float: left; }
+.share .fb_iframe_widget { height: 22px; float: left; }
 
 .share .pocket-btn { float: left; margin-left: 3px; }
 
