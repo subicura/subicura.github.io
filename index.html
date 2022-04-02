@@ -83,12 +83,6 @@ layout: default
             </section>
             <div class="post-meta">
               <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-              <i class="nf nf-fa-comment" aria-hidden="true"></i>
-              {% if post.fb_social_baseurl %} 
-                <span class="fb-comments-count" data-href="{{ post.fb_social_baseurl }}{{ post.url }}"></span>
-              {% else %}
-                <span class="fb-comments-count" data-href="{{ site.url }}{{ post.url }}"></span>
-              {% endif %}
             </div>
           </div>
         </article>
@@ -135,12 +129,6 @@ layout: default
             </section>
             <div class="post-meta">
               <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-              <i class="nf nf-fa-comment" aria-hidden="true"></i>
-              {% if post.fb_social_baseurl %} 
-                <span class="fb-comments-count" data-href="{{ post.fb_social_baseurl }}{{ post.url }}"></span>
-              {% else %}
-                <span class="fb-comments-count" data-href="{{ site.url }}{{ post.url }}"></span>
-              {% endif %}
             </div>
           </div>
         </article>
