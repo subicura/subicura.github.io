@@ -416,6 +416,8 @@ body { font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Gothic", "ë‚
 
 .post .page-navigation a:hover { text-decoration: underline; }
 
+.post .fb-comments-toggle { font-size: 14px; color: #999; }
+
 .post .fb-comments-wrapper { padding-top: 30px; }
 
 .share { display: flex; align-items: end; padding: 20px 0 0; line-height: 22px; }

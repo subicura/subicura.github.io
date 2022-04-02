@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1648871220517729000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1648873567063545000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -257,10 +257,21 @@
           </div>
         </div>
 
-        
-
          
-        <div class="fb-comments-wrapper">
+          
+          <div class="utterances-wrapper">
+            <script src="https://utteranc.es/client.js"
+                    repo="subicura/subicura.github.io"
+                    issue-term="pathname"
+                    theme="github-light"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+          </div>
+          
+
+        <a class="fb-comments-toggle">💬 페이스북 댓글 보기</a>
+        <div class="fb-comments-wrapper" style="display:none">
           
             <div class="fb-comments" data-href="https://subicura.com/2016/03/23/hello.html" data-num-posts="5" data-order-by="social" data-width="100%"></div>
           
@@ -291,7 +302,7 @@
 <script src="/assets/js/jquery-1.11.1.min.js"></script>
 <![endif]-->
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1648871220517729000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1648873567063545000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script>
 (function ($) {
@@ -333,6 +344,11 @@
       js.src = '/assets/js/asciinema-player.js';
       document.body.appendChild(js);
     }
+
+    // fb comment
+    $('.fb-comments-toggle').click(function() {
+      $('.fb-comments-wrapper').show();
+    });
   });
 }(jQuery));
 </script>
