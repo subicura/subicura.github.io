@@ -44,7 +44,7 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1648860257756430000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1648871220517729000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
@@ -553,10 +553,12 @@ CMD ["start.sh"]</pre></noscript>
       <section class="copyright"><a href="/">Subicura's Blog</a> © 2022</section>
     </footer>
 
-    <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
-
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+<!--[if !IE]>
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
+<![endif]-->
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1648860257756430000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1648871220517729000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script>
 (function ($) {
@@ -579,11 +581,11 @@ CMD ["start.sh"]</pre></noscript>
     var height = $('.article-image').height();
     $('.post-content').css('padding-top', height + 'px');
 
-    $('a[href*=#]:not([href=#])').click(function() {
+    $('a[href^="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
         && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        var target = $(decodeURIComponent(this.hash));
+        target = target.length ? target : $('[name="' + this.hash.slice(1) +'"]');
         if (target.length) {
           $('html,body').animate({ scrollTop: target.offset().top }, 500);
           return false;
