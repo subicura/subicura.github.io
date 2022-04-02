@@ -57,7 +57,7 @@
 
                 for (let i = 1; i < affixList.length; i++) {
                     if(scrollTop < $(affixList[i]).offset().top - 10) {
-                        var activeLi = $('.section-nav li a[href=' + affixList[i-1] + ']');
+                        var activeLi = $('.section-nav li a[href="' + affixList[i-1] + '"]');
                         if (!activeLi.hasClass('active')) {
                             $('.section-nav li a').removeClass('active');
                             activeLi.addClass('active');
@@ -66,7 +66,7 @@
                     }
 
                     if (i == affixList.length - 1) {
-                        var activeLi = $('.section-nav li a[href=' + affixList[i] + ']');
+                        var activeLi = $('.section-nav li a[href="' + affixList[i] + '"]');
                         if (!activeLi.hasClass('active')) {
                             $('.section-nav li a').removeClass('active');
                             activeLi.addClass('active');

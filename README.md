@@ -4,6 +4,7 @@ by jekyll
 
 ## requirement
 
+- `brew install vips`
 - asdf
   - `asdf plugin add nodejs`
   - `asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git`
