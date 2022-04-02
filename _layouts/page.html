@@ -54,5 +54,9 @@
       </div>
     </div>
     {% include javascripts.html %}
+    <script type="text/javascript" src="{{ "/assets/js/jquery.fitvids.js" | prepend: site.baseurl  }}"></script>
+    <script>
+      $(".post-content").fitVids();
+    </script>
   </body>
 </html>
