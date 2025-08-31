@@ -9,7 +9,7 @@ by jekyll
   - `asdf plugin add nodejs`
   - `asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git`
   - `asdf install`
-- `gem install bundler:2.1.4`
+- `gem install bundler:2.7`
 - `bundle install`
 
 ## test
