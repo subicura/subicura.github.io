@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "bundle exec jekyll build",
-    "deploy": "gh-pages -d _site -b master"
+    "deploy": "npm run predeploy && gh-pages -d _site -b master"
   },
   "repository": {
     "type": "git",

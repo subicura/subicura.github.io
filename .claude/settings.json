@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": ["Read(./**)", "Write(./**)"],
+    "deny": [
+      "Read(./node_modules/**)",
+      "Write(./node_modules/**)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Write(./.env)",
+      "Write(./.git/**)"
+    ],
+    "ask": []
+  }
+}

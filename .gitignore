@@ -43,3 +43,6 @@ node_modules
 
 .publish
 .jekyll-cache
+
+# Claude
+.claude/settings.local.json
