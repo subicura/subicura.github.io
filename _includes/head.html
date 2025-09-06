@@ -53,6 +53,7 @@
   <link rel="stylesheet" type="text/css" href="{{ "/css/asciinema-player.css"  | prepend: site.baseurl  }}" />
   <link rel="stylesheet" type="text/css" href="{{ "/css/asciinema-theme-snazzy.css"  | prepend: site.baseurl  }}" />
   <link rel="stylesheet" type="text/css" href="{{ "/css/nerd-fonts-generated.css"  | prepend: site.baseurl  }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/css/d2coding.css"  | prepend: site.baseurl  }}" />
   <link rel="stylesheet" type="text/css" href="{{ "/css/custom.css"  | prepend: site.baseurl  }}" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="{{ "/css/print.css"  | prepend: site.baseurl  }}" />-->
   
@@ -62,8 +63,8 @@
     if (!navigator.userAgent.match(toMatchItem)) {
       WebFont.load({
         custom: {
-          families: ['Spoqa Han Sans'],
-          urls: ['/css/spoqa-han-sans-font.css']
+          families: ['Spoqa Han Sans', 'D2Coding'],
+          urls: ['/css/spoqa-han-sans-font.css', '/css/d2coding.css']
         }
       });
     }

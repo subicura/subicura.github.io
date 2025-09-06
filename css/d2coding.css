@@ -1,0 +1,26 @@
+/**
+ * D2Coding Web Font
+ * https://github.com/naver/d2codingfont
+ */
+
+@font-face {
+  font-family: "D2Coding";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/D2Coding.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/D2Coding.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "D2Coding";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/D2CodingBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/D2CodingBold.ttf")
+      format("truetype");
+}
