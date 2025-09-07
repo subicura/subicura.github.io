@@ -45,10 +45,12 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1756644796848438000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1757262458936841000" />
+  <link rel="stylesheet" type="text/css" href="/css/syntax-highlighting.css?1757262458936841000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/d2coding.css" />
   <link rel="stylesheet" type="text/css" href="/css/custom.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -58,8 +60,8 @@
     if (!navigator.userAgent.match(toMatchItem)) {
       WebFont.load({
         custom: {
-          families: ['Spoqa Han Sans'],
-          urls: ['/css/spoqa-han-sans-font.css']
+          families: ['Spoqa Han Sans', 'D2Coding'],
+          urls: ['/css/spoqa-han-sans-font.css', '/css/d2coding.css']
         }
       });
     }
@@ -192,6 +194,43 @@
     
 
     <div class="cf frame">
+      
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop="name" content="Subicura's Blog" />
+            <meta itemprop="url" content="https://subicura.com" />
+            <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="https://subicura.com/assets/images/df_logo.png" />
+            </div>
+          </div>
+          <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="name" content="subicura" />
+            <meta itemprop="url" content="https://subicura.com/about" />
+          </div>
+          <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="url" content="https://subicura.com/assets/images/author.jpg" />
+          </div>
+          <meta itemprop="headline" content="초보를 위한 Claude Code 안내서" />
+          <meta itemprop="mainEntityOfPage" content="/2025/09/08/ai-coding.html" />
+          <meta itemprop="datePublished" content="2025-09-08 00:00:00 +0900" />
+          <meta itemprop="dateModified" content="2025-09-08 00:00:00 +0900" />
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name">
+                <a href="/2025/09/08/ai-coding.html" itemprop="url">
+                  초보를 위한 Claude Code 안내서
+                  
+                </a>
+              </h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>Claude Code의 등장으로 코딩의 패러다임이 완전히 바뀌었습니다. AI 시대의 개발이란? 개발자의 역할은 무엇일까요?</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="08 September 2025">08 September 2025</time>
+            </div>
+          </div>
+        </article>
       
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -721,43 +760,6 @@
           </div>
         </article>
       
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-            <meta itemprop="name" content="Subicura's Blog" />
-            <meta itemprop="url" content="https://subicura.com" />
-            <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-              <meta itemprop="url" content="https://subicura.com/assets/images/df_logo.png" />
-            </div>
-          </div>
-          <div itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="name" content="subicura" />
-            <meta itemprop="url" content="https://subicura.com/about" />
-          </div>
-          <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop="url" content="https://subicura.com/assets/images/author.jpg" />
-          </div>
-          <meta itemprop="headline" content="Go언어로 오픈소스 배송조회 서비스 만들기" />
-          <meta itemprop="mainEntityOfPage" content="/2016/06/13/start-go-shipment-tracking-opensource.html" />
-          <meta itemprop="datePublished" content="2016-06-13 00:00:00 +0900" />
-          <meta itemprop="dateModified" content="2017-01-21 10:00:00 +0900" />
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name">
-                <a href="/2016/06/13/start-go-shipment-tracking-opensource.html" itemprop="url">
-                  Go언어로 오픈소스 배송조회 서비스 만들기
-                  
-                </a>
-              </h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>홈쇼핑처럼에서 세번째로 런칭한 돈까스를 구매해 주시는 분들을 보면서 *아.. 받은 만큼 나도 뭔가 베풀어야겠구나* 라는 생각에 배송조회 서비스를 오픈소스로 공개하는 과정을 정리해봅니다. github이라는 소셜코딩 플랫폼이 등장하면서 오픈소스에 참여할 수 있는 장벽이 많이 낮아졌습니다. 사용하던 오픈소스에서 버그를 발견하면 이슈를 살펴보고 수정한 소스를 슬쩍 풀 리퀘스트 하면 됩니다. 내가 작성한 소스가 커미터...</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="13 June 2016">13 June 2016</time>
-            </div>
-          </div>
-        </article>
-      
     </div>
 
     <nav class="pagination" role="navigation">
@@ -792,6 +794,7 @@
 <!--[if !IE]>
 <script src="/assets/js/jquery-1.11.1.min.js"></script>
 <![endif]-->
+
 
   </body>
 

@@ -1,12 +1,29 @@
+.asciinema-terminal.font-small {
+  font-size: 12px;
+}
+
+@media (min-width: 640px) {
+  .asciinema-terminal.font-small {
+    font-size: 0.9em;
+  }
+}
+.asciinema-player-wrapper .asciinema-player.asciinema-theme-snazzy {
+  padding: 6px;
+  background-color: #282a36; /* terminal background color */
+  overflow: hidden;
+  border-radius: 6px;
+}
 .asciinema-theme-snazzy .asciinema-terminal {
-  color: #eff0eb;                    /* default text color */
-  background-color: #282a36;         /* terminal background color */
+  color: #eff0eb; /* default text color */
+  background-color: #282a36; /* terminal background color */
   border-color: #282a36;
 }
-.asciinema-theme-snazzy .fg-bg {    /* inverse for default text color */
+.asciinema-theme-snazzy .fg-bg {
+  /* inverse for default text color */
   color: #282a36;
 }
-.asciinema-theme-snazzy .bg-fg {    /* inverse for terminal background color */
+.asciinema-theme-snazzy .bg-fg {
+  /* inverse for terminal background color */
   background-color: #eff0eb;
 }
 .asciinema-theme-snazzy .fg-0 {

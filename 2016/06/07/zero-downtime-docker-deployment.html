@@ -44,10 +44,12 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1756644796848438000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1757262458936841000" />
+  <link rel="stylesheet" type="text/css" href="/css/syntax-highlighting.css?1757262458936841000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/d2coding.css" />
   <link rel="stylesheet" type="text/css" href="/css/custom.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -57,8 +59,8 @@
     if (!navigator.userAgent.match(toMatchItem)) {
       WebFont.load({
         custom: {
-          families: ['Spoqa Han Sans'],
-          urls: ['/css/spoqa-han-sans-font.css']
+          families: ['Spoqa Han Sans', 'D2Coding'],
+          urls: ['/css/spoqa-han-sans-font.css', '/css/d2coding.css']
         }
       });
     }
@@ -851,8 +853,9 @@ docker tag -f ${DOCKER_REGISTRY_NAME}-app:$COMMIT_HASH ${DOCKER_REGISTRY_NAME}-a
 <!--[if !IE]>
 <script src="/assets/js/jquery-1.11.1.min.js"></script>
 <![endif]-->
+
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1756644796848438000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1757262458936841000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script>
 (function ($) {

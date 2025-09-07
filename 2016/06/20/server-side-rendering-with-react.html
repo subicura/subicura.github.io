@@ -44,10 +44,12 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1756644796848438000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1757262458936841000" />
+  <link rel="stylesheet" type="text/css" href="/css/syntax-highlighting.css?1757262458936841000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/d2coding.css" />
   <link rel="stylesheet" type="text/css" href="/css/custom.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -57,8 +59,8 @@
     if (!navigator.userAgent.match(toMatchItem)) {
       WebFont.load({
         custom: {
-          families: ['Spoqa Han Sans'],
-          urls: ['/css/spoqa-han-sans-font.css']
+          families: ['Spoqa Han Sans', 'D2Coding'],
+          urls: ['/css/spoqa-han-sans-font.css', '/css/d2coding.css']
         }
       });
     }
@@ -297,7 +299,8 @@ $conn-&gt;close();
 <h3 id="string-concatenation">
 <a class="anchor" href="#string-concatenation" aria-hidden="true"><span class="octicon octicon-link"></span></a>String concatenation</h3>
 
-<p>true<script src="https://gist.github.com/subicura/dc7630ef6346f5108e2c5fc789615387.js"> </script></p>
+<noscript><pre>$('#profile').append('&lt;p&gt;' + data.name + '님 안녕하세요.&lt;/p&gt;');</pre></noscript>
+<script src="https://gist.github.com/subicura/dc7630ef6346f5108e2c5fc789615387.js"> </script>
 
 <p>가장 쉬운방법은 HTML을 string을 붙이고 붙이고 붙여서 특정 DOM에 넣는 것 입니다. 굉장히 심플하고 잘 동작합니다. 그런데 쓰다보니 몇가지 문제가 있습니다. <code class="language-plaintext highlighter-rouge">data.name</code>에 태그(<code class="language-plaintext highlighter-rouge">&lt;script&gt;</code>)가 들어갈 수 있어 XSS<sub>Cross-Site Scripting</sub> Injection에 노출되어 있습니다. 이를 보완한 좀더 복잡해진 예를 봅니다.</p>
 
@@ -742,8 +745,9 @@ foreach($talks as $talk) {
 <!--[if !IE]>
 <script src="/assets/js/jquery-1.11.1.min.js"></script>
 <![endif]-->
+
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1756644796848438000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1757262458936841000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script>
 (function ($) {

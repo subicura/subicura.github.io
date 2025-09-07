@@ -44,10 +44,12 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1756644796848438000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1757262458936841000" />
+  <link rel="stylesheet" type="text/css" href="/css/syntax-highlighting.css?1757262458936841000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/d2coding.css" />
   <link rel="stylesheet" type="text/css" href="/css/custom.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -57,8 +59,8 @@
     if (!navigator.userAgent.match(toMatchItem)) {
       WebFont.load({
         custom: {
-          families: ['Spoqa Han Sans'],
-          urls: ['/css/spoqa-han-sans-font.css']
+          families: ['Spoqa Han Sans', 'D2Coding'],
+          urls: ['/css/spoqa-han-sans-font.css', '/css/d2coding.css']
         }
       });
     }
@@ -235,10 +237,7 @@
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#정리">정리</a></li>
-</ul><div class="image-container" style="padding-top: 88.97435%">
-  <picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-a9ab7503a.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-a9ab7503a.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-a9ab7503a.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-a9ab7503a.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-b3c79c1cb.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-b3c79c1cb.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-b3c79c1cb.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png"></picture>
-
-</div>
+</ul><p><a class="small-image" href="/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-a9ab7503a.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-a9ab7503a.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-a9ab7503a.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-a9ab7503a.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-b3c79c1cb.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-b3c79c1cb.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-b3c79c1cb.png 1000w" type="image/png"><img style="max-width: 450px" src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png"></source></source></picture></a></p>
 
 <p>이 글은 <code class="language-plaintext highlighter-rouge">초보를 위한 도커 안내서 - 설치부터 배포까지</code> 2번째 글입니다. 이번엔 도커 설치부터 컨테이너를 실행하고 컨테이너를 둘러보는 방법에 대해 설명합니다. 도커에 대해 1도 모르는 분들을 위해 아주 가볍게 자주 쓰는 명령어만 다루었기 때문에 모든 명령어가 궁금하신 분은 <a href="https://docs.docker.com/engine/reference/commandline/">여기</a>를 참고해주세요.</p>
 
@@ -312,10 +311,7 @@
 
 <p>도커를 맥이나 윈도우즈에 설치하려면 <a href="https://docs.docker.com/docker-for-mac">Docker for mac</a> 또는 <a href="https://docs.docker.com/docker-for-windows">Docker for windows</a>를 설치하면 됩니다. 파일을 다운받고 설치하고 재부팅하면 대부분 문제없이 완료됩니다. 소소한 옵션들이 있는데 특별히 건드릴 부분은 없으나 한번 살펴보고 적절하게 설정하시면 됩니다. (windows는 공유 드라이브를 선택해주세요)</p>
 
-<div style="max-width: 450px" class="small-image">
-  <picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-400-1269eb776.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-600-1269eb776.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-800-1269eb776.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-984-1269eb776.webp 984w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-400-4582aa0cf.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-600-4582aa0cf.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-800-4582aa0cf.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-984-4582aa0cf.png 984w" type="image/png"></source><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-800-4582aa0cf.png" alt="Docker for Mac"></picture>
-
-</div>
+<p><a href="/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac.png"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-400-1269eb776.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-600-1269eb776.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-800-1269eb776.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-984-1269eb776.webp 984w" type="image/webp"><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-400-4582aa0cf.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-600-4582aa0cf.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-800-4582aa0cf.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-984-4582aa0cf.png 984w" type="image/png"><img style="max-width: 450px" class="small-image" src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac-800-4582aa0cf.png" alt="Docker for Mac"></source></source></picture></a></p>
 
 <p>마치 네이티브스럽게 설치된 것 같지만 도커는 리눅스 컨테이너이므로 실제로는 가상머신에 설치가 되었습니다. 사용자는 가상머신을 사용한다는 느낌이 전혀 안드는데 그런부분을 굉장히 신경써서 설계하였습니다. 예를 들면, 포트를 연결하기 위해 도커 컨테이너의 특정 포트를 가상머신에 연결하고 다시 mac이나 windows의 포트와 연결해야 합니다. 디렉토리를 연결한다면 디렉토리를 가상머신과 공유하고 그 디렉토리를 다시 컨테이너와 연결해야 합니다. 이런 한단계 추가적으로 거쳐야하는 부분을 자연스럽게 처리해줍니다.</p>
 
@@ -383,12 +379,13 @@ Server:
 
 <p>혹시, 특이한 부분을 찾으셨나요? 버전정보가 클라이언트와 서버로 나뉘어져 있습니다. 도커는 하나의 실행파일이지만 실제로 클라이언트와 서버역할을 각각 할 수 있습니다. 도커 커맨드를 입력하면 도커 클라이언트가 도커 서버로 명령을 전송하고 결과를 받아 터미널에 출력해 줍니다.</p>
 
-<picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-400-a771b9efd.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-600-a771b9efd.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-800-a771b9efd.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-1000-a771b9efd.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-400-cc1fdb91b.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-600-cc1fdb91b.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-800-cc1fdb91b.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-1000-cc1fdb91b.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-800-cc1fdb91b.png" alt="docker client-host"></picture>
+<p><a href="/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host.png"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-400-a771b9efd.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-600-a771b9efd.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-800-a771b9efd.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-1000-a771b9efd.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-400-cc1fdb91b.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-600-cc1fdb91b.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-800-cc1fdb91b.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-1000-cc1fdb91b.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-host-800-cc1fdb91b.png" alt="docker client-host"></source></source></picture></a></p>
 
 <p>기본값이 도커 서버의 소켓을 바라보고 있기 때문에 사용자는 의식하지 않고 마치 바로 명령을 내리는 것 같은 느낌을 받습니다. 이러한 설계가 mac이나 windows의 터미널에서 명령어를 입력했을때 가상 서버에 설치된 도커가 동작하는 이유입니다.</p>
 
 <h2 id="컨테이너-실행하기">
 <a class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 실행하기</h2>
+
 <p>이제! 드디어! 컨테이너를 실행해 보려고 합니다. 손이 근질근질하고 컨테이너의 강려크함을 보여드리고 싶기 때문에 여러개의 프로그램을 마구잡이로 손쉽게 띄워보겠습니다.</p>
 
 <p>도커를 실행하는 명령어는 다음과 같습니다.</p>
@@ -474,10 +471,12 @@ Server:
 7
 8
 9
+10
 </pre></td>
 <td class="code"><pre>docker run <span class="nt">--rm</span> <span class="nt">-it</span> ubuntu:16.04 /bin/bash
 
 <span class="c"># in container</span>
+
 <span class="nv">$ </span><span class="nb">cat</span> /etc/issue
 Ubuntu 16.04.1 LTS <span class="se">\n</span> <span class="se">\l</span>
 
@@ -518,10 +517,12 @@ boot  etc  lib   media  opt  root  sbin  sys  usr
 7
 8
 9
+10
 </pre></td>
 <td class="code"><pre>docker run <span class="nt">-d</span> <span class="nt">-p</span> 1234:6379 redis
 
 <span class="c"># redis test</span>
+
 <span class="nv">$ </span>telnet localhost 1234
 <span class="nb">set </span>mykey hello
 +OK
@@ -571,13 +572,15 @@ hello
 18
 19
 20
+21
 </pre></td>
 <td class="code"><pre>docker run <span class="nt">-d</span> <span class="nt">-p</span> 3306:3306 <span class="se">\</span>
-  <span class="nt">-e</span> <span class="nv">MYSQL_ALLOW_EMPTY_PASSWORD</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
-  <span class="nt">--name</span> mysql <span class="se">\</span>
-  mysql:5.7
+ <span class="nt">-e</span> <span class="nv">MYSQL_ALLOW_EMPTY_PASSWORD</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+ <span class="nt">--name</span> mysql <span class="se">\</span>
+ mysql:5.7
 
 <span class="c"># MySQL test</span>
+
 <span class="nv">$ </span>mysql <span class="nt">-h127</span>.0.0.1 <span class="nt">-uroot</span>
 
 mysql&gt; show databases<span class="p">;</span>
@@ -628,8 +631,10 @@ mysql&gt; quit
 13
 14
 15
+16
 </pre></td>
 <td class="code"><pre><span class="c"># create mysql database</span>
+
 <span class="nv">$ </span>mysql <span class="nt">-h127</span>.0.0.1 <span class="nt">-uroot</span>
 create database wp CHARACTER SET utf8<span class="p">;</span>
 grant all privileges on wp.<span class="k">*</span> to wp@<span class="s1">'%'</span> identified by <span class="s1">'wp'</span><span class="p">;</span>
@@ -653,7 +658,7 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 
 <p>컨테이너가 제대로 실행되었는지 웹 브라우저로 확인해봅니다.</p>
 
-<picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-400-1bc4e2791.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-600-1bc4e2791.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-800-1bc4e2791.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-1000-1bc4e2791.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-400-dd40ceb52.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-600-dd40ceb52.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-800-dd40ceb52.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-1000-dd40ceb52.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-800-dd40ceb52.png" alt="wordpress setup"></picture>
+<p><a href="/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp.png"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-400-1bc4e2791.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-600-1bc4e2791.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-800-1bc4e2791.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-1000-1bc4e2791.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-400-dd40ceb52.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-600-dd40ceb52.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-800-dd40ceb52.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-1000-dd40ceb52.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/wp-800-dd40ceb52.png" alt="wordpress setup"></source></source></picture></a></p>
 
 <p>워드프레스가 실행되었습니다! 단지 이미지를 다운받고 적절한 환경변수를 입력하여 컨테이너를 실행했을 뿐입니다. 워드프레스 컨테이너 내부는 apache2와 php가 설치되어 있지만 추상화되어 있어 실행과정에선 드러나지 않습니다.</p>
 
@@ -681,7 +686,7 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span c
 
 <p>설치된 파일이 많아 다운로드 하는데 시간이 좀 걸립니다. 컨테이너가 실행되면 웹 브라우저에서 jupyter에 접속하여 머신러닝을 시작해 봅시다!</p>
 
-<picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-400-267f6dd23.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-600-267f6dd23.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-800-267f6dd23.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-1000-267f6dd23.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-400-bbffa587f.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-600-bbffa587f.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-800-bbffa587f.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-1000-bbffa587f.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-800-bbffa587f.png" alt="Hello, Tensorflow!"></picture>
+<p><a href="/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow.png"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-400-267f6dd23.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-600-267f6dd23.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-800-267f6dd23.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-1000-267f6dd23.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-400-bbffa587f.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-600-bbffa587f.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-800-bbffa587f.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-1000-bbffa587f.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/tensorflow-800-bbffa587f.png" alt="Hello, Tensorflow!"></source></source></picture></a></p>
 
 <p>와우! 성공적으로 tensorflow 테스트를 마쳤습니다. 이제 조금 있으면 A.I를 만들 수 있을 것 같습니다.(?!)</p>
 
@@ -1143,10 +1148,12 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 17
 18
 19
+20
 </pre></td>
 <td class="code"><pre>docker <span class="nb">exec</span> <span class="nt">-it</span> mysql /bin/bash
 
 <span class="c"># MySQL test</span>
+
 <span class="nv">$ </span>mysql <span class="nt">-uroot</span>
 
 mysql&gt; show databases<span class="p">;</span>
@@ -1193,10 +1200,12 @@ mysql&gt; quit
 16
 17
 18
+19
 </pre></td>
 <td class="code"><pre>docker <span class="nb">exec</span> <span class="nt">-it</span> mysql mysql <span class="nt">-uroot</span>
 
 <span class="c"># MySQL test</span>
+
 <span class="nv">$ </span>mysql <span class="nt">-uroot</span>
 
 mysql&gt; show databases<span class="p">;</span>
@@ -1226,7 +1235,7 @@ mysql&gt; quit
 
 <p>이제 지금까지 배운 모든걸 정리해서 컨테이너를 새로운 버전으로 업데이트 하는 과정을 살펴보겠습니다.</p>
 
-<picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-400-15d6ecedc.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-600-15d6ecedc.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-800-15d6ecedc.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-1000-15d6ecedc.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-400-ef42b1825.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-600-ef42b1825.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-800-ef42b1825.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-1000-ef42b1825.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-800-ef42b1825.png" alt="도커 컨테이너 업데이트"></picture>
+<p><a href="/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update.png"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-400-15d6ecedc.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-600-15d6ecedc.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-800-15d6ecedc.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-1000-15d6ecedc.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-400-ef42b1825.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-600-ef42b1825.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-800-ef42b1825.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-1000-ef42b1825.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-2/container-update-800-ef42b1825.png" alt="도커 컨테이너 업데이트"></source></source></picture></a></p>
 
 <p>도커에서 컨테이너를 업데이트 하려면 새 버전의 이미지를 다운(<code class="language-plaintext highlighter-rouge">pull</code>)받고 기존 컨테이너를 삭제(<code class="language-plaintext highlighter-rouge">stop</code>, <code class="language-plaintext highlighter-rouge">rm</code>) 한 후 새 이미지를 기반으로 새 컨테이너를 실행(<code class="language-plaintext highlighter-rouge">run</code>)하면 됩니다. 배포와 관련된 자세한 사항은 다음글에서 이야기하고 여기선 그냥 그렇구나 하고 이해합시다.</p>
 
@@ -1249,8 +1258,10 @@ mysql&gt; quit
 10
 11
 12
+13
 </pre></td>
 <td class="code"><pre><span class="c"># before</span>
+
 docker run <span class="nt">-d</span> <span class="nt">-p</span> 3306:3306 <span class="se">\</span>
   <span class="nt">-e</span> <span class="nv">MYSQL_ALLOW_EMPTY_PASSWORD</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
   <span class="nt">--name</span> mysql <span class="se">\</span>
@@ -1284,10 +1295,14 @@ docker run <span class="nt">-d</span> <span class="nt">-p</span> 3306:3306 <span
 2
 3
 4
+5
+6
 </pre></td>
 <td class="code"><pre>curl <span class="nt">-L</span> <span class="s2">"https://github.com/docker/compose/releases/download/1.9.0/docker-compose-</span><span class="si">$(</span><span class="nb">uname</span> <span class="nt">-s</span><span class="si">)</span><span class="s2">-</span><span class="si">$(</span><span class="nb">uname</span> <span class="nt">-m</span><span class="si">)</span><span class="s2">"</span> <span class="nt">-o</span> /usr/local/bin/docker-compose
 <span class="nb">chmod</span> +x /usr/local/bin/docker-compose
+
 <span class="c"># test</span>
+
 docker-compose version
 </pre></td>
 </tr></tbody></table></code></pre></figure>
@@ -1352,8 +1367,7 @@ volumes:
 
 <p>여기까지 도커에 대해 기본적인 내용부터 컨테이너를 실행하고 살펴보는 방법까지 알아보았습니다. 도커가 어떤건지, 컨테이너가 뭔지, 이미지가 뭔지 감이 좀 오시나요? 이제 남이 만든 이미지를 사용하는 것이 아니라 직접 이미지를 만들고 컨테이너를 여러 서버로 배포하는 방법을 알아봐야하는데… 다음글에서 알아보도록 하겠습니다.</p>
 
-<p><a href="https://bit.ly/inflearn-docker" target="_blank"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-400-089167e74.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-600-089167e74.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-089167e74.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-1000-089167e74.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-400-2e52e8f51.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-600-2e52e8f51.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-2e52e8f51.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-1000-2e52e8f51.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-2e52e8f51.png" alt="이제 도커안내서를 영상으로 만나보세요!"></picture>
-</a></p>
+<p><a href="https://bit.ly/inflearn-docker"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-400-089167e74.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-600-089167e74.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-089167e74.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-1000-089167e74.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-400-2e52e8f51.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-600-2e52e8f51.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-2e52e8f51.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-1000-2e52e8f51.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-2e52e8f51.png" alt="이제 도커안내서를 영상으로 만나보세요!"></source></source></picture></a></p>
 
 <hr>
 
@@ -1488,8 +1502,9 @@ volumes:
 <!--[if !IE]>
 <script src="/assets/js/jquery-1.11.1.min.js"></script>
 <![endif]-->
+
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1756644796848438000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1757262458936841000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script>
 (function ($) {

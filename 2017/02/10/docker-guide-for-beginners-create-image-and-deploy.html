@@ -44,10 +44,12 @@
   <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i" /> -->
   <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css?1756644796848438000" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css?1757262458936841000" />
+  <link rel="stylesheet" type="text/css" href="/css/syntax-highlighting.css?1757262458936841000" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <link rel="stylesheet" type="text/css" href="/css/asciinema-theme-snazzy.css" />
   <link rel="stylesheet" type="text/css" href="/css/nerd-fonts-generated.css" />
+  <link rel="stylesheet" type="text/css" href="/css/d2coding.css" />
   <link rel="stylesheet" type="text/css" href="/css/custom.css" />
   <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />-->
   
@@ -57,8 +59,8 @@
     if (!navigator.userAgent.match(toMatchItem)) {
       WebFont.load({
         custom: {
-          families: ['Spoqa Han Sans'],
-          urls: ['/css/spoqa-han-sans-font.css']
+          families: ['Spoqa Han Sans', 'D2Coding'],
+          urls: ['/css/spoqa-han-sans-font.css', '/css/d2coding.css']
         }
       });
     }
@@ -218,10 +220,7 @@
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#마무으리">마무으리</a></li>
-</ul><div class="image-container" style="padding-top: 88.97435%">
-  <picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-a9ab7503a.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-a9ab7503a.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-a9ab7503a.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-a9ab7503a.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-b3c79c1cb.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-b3c79c1cb.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-b3c79c1cb.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png"></picture>
-
-</div>
+</ul><p><a class="small-image" href="/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-a9ab7503a.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-a9ab7503a.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-a9ab7503a.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-a9ab7503a.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-b3c79c1cb.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-b3c79c1cb.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-b3c79c1cb.png 1000w" type="image/png"><img style="max-width: 450px" src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png"></source></source></picture></a></p>
 
 <p>이 글은 <code class="language-plaintext highlighter-rouge">초보를 위한 도커 안내서 - 설치부터 배포까지</code> 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.</p>
 
@@ -251,7 +250,7 @@
 
 <p>도커는 이미지를 만들기 위해 <strong>컨테이너의 상태를 그대로 이미지로 저장</strong>하는 단순하고 무식(?)한 방법을 사용합니다.</p>
 
-<picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-400-93eeb6052.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-600-93eeb6052.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-93eeb6052.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-1000-93eeb6052.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-400-eb276ad60.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-600-eb276ad60.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-eb276ad60.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-1000-eb276ad60.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-eb276ad60.png" alt="create docker image"></picture>
+<p><a href="/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image.png"><picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-400-93eeb6052.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-600-93eeb6052.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-93eeb6052.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-1000-93eeb6052.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-400-eb276ad60.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-600-eb276ad60.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-eb276ad60.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-1000-eb276ad60.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-eb276ad60.png" alt="create docker image"></source></source></picture></a></p>
 
 <p>예를 들어, 어떤 애플리케이션을 이미지로 만든다면 리눅스만 설치된 컨테이너에 애플리케이션을 설치하고 그 상태를 그대로 이미지로 저장합니다. 가상머신의 스냅샷과 비스므리한 방식입니다.</p>
 
@@ -262,10 +261,7 @@
 <h3 id="sinatra-웹-애플리케이션-샘플">
 <a class="anchor" href="#sinatra-%EC%9B%B9-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%83%98%ED%94%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sinatra 웹 애플리케이션 샘플</h3>
 
-<div style="max-width: 250px" class="small-image">
-  <picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-ef6a106ba.webp 400w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-72fa34ec1.png 400w" type="image/png"></source><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-72fa34ec1.png" alt="Sinatra"></picture>
-
-</div>
+<p><a href="/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra.png"><picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-ef6a106ba.webp 400w" type="image/webp"><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-72fa34ec1.png 400w" type="image/png"><img style="max-width: 250px" class="small-image" src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-72fa34ec1.png" alt="Sinatra"></source></source></picture></a></p>
 
 <p>일단 웹 애플리케이션 소스코드를 작성해야겠죠. <a href="http://www.sinatrarb.com/">Sinatra</a>라는 가벼운 웹 프레임워크를 사용하기 위해 새로운 폴더를 만들고 <code class="language-plaintext highlighter-rouge">Gemfile</code>과 <code class="language-plaintext highlighter-rouge">app.rb</code>를 만듭니다.</p>
 
@@ -347,17 +343,14 @@ bash <span class="nt">-c</span> <span class="s2">"bundle install &amp;&amp; bund
 
 <p>서버가 정상적으로 실행됐으면 웹 브라우저에서 테스트해봅니다. <code class="language-plaintext highlighter-rouge">http://localhost:4567</code></p>
 
-<div style="max-width: 500px" class="small-image">
-  <picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-400-8975438a5.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-600-8975438a5.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-8975438a5.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-1000-8975438a5.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-400-c34e4f9ee.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-600-c34e4f9ee.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-c34e4f9ee.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-1000-c34e4f9ee.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-c34e4f9ee.png" alt="Browser test"></picture>
-
-</div>
+<p><a href="/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test.png"><picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-400-8975438a5.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-600-8975438a5.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-8975438a5.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-1000-8975438a5.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-400-c34e4f9ee.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-600-c34e4f9ee.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-c34e4f9ee.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-1000-c34e4f9ee.png 1000w" type="image/png"><img style="max-width: 500px" class="small-image" src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-c34e4f9ee.png" alt="Browser test"></source></source></picture></a></p>
 
 <p>도커 컨테이너의 호스트명이 보입니다. 소스는 잘 작성한 것 같네요! 이제 도커 이미지를 만들 준비가 완료됐습니다.</p>
 
 <h3 id="ruby-application-dockerfile">
 <a class="anchor" href="#ruby-application-dockerfile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ruby Application Dockerfile</h3>
 
-<picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-400-f96b022fb.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-600-f96b022fb.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-f96b022fb.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-1000-f96b022fb.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-400-fc4d28615.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-600-fc4d28615.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-fc4d28615.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-1000-fc4d28615.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-fc4d28615.png" alt="Dockerfile"></picture>
+<p><a href="/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile.png"><picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-400-f96b022fb.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-600-f96b022fb.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-f96b022fb.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-1000-f96b022fb.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-400-fc4d28615.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-600-fc4d28615.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-fc4d28615.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-1000-fc4d28615.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-fc4d28615.png" alt="Dockerfile"></source></source></picture></a></p>
 
 <p>도커는 이미지를 만들기 위해 <code class="language-plaintext highlighter-rouge">Dockerfile</code>이라는 이미지 빌드용 DSL<sub>Domain Specific Language</sub> 파일을 사용합니다. 단순 텍스트 파일로 일반적으로 소스와 함께 관리합니다.</p>
 
@@ -413,27 +406,37 @@ bash <span class="nt">-c</span> <span class="s2">"bundle install &amp;&amp; bund
 14
 15
 16
+17
+18
+19
+20
+21
 </pre></td>
 <td class="code"><pre><span class="c"># 1. ubuntu 설치 (패키지 업데이트)</span>
+
 apt-get update
 
 <span class="c"># 2. ruby 설치</span>
+
 apt-get <span class="nb">install </span>ruby
 gem <span class="nb">install </span>bundler
 
 <span class="c"># 3. 소스 복사</span>
+
 <span class="nb">mkdir</span> <span class="nt">-p</span> /usr/src/app
-scp Gemfile app.rb root@ubuntu:/usr/src/app  <span class="c"># From host</span>
+scp Gemfile app.rb root@ubuntu:/usr/src/app <span class="c"># From host</span>
 
 <span class="c"># 4. Gem 패키지 설치</span>
+
 bundle <span class="nb">install</span>
 
 <span class="c"># 5. Sinatra 서버 실행</span>
+
 bundle <span class="nb">exec </span>ruby app.rb
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p>ubuntu 컨테이너를 실행하고 위 명령어를 그대로 실행하면 웹 서버를 실행할 수 있습니다. 리눅스에서 테스트가 끝났으니 이 과정을 Dockerfile로 만들면 됩니다. 아직 자세한 명령어를 배우진 않았지만 일단 만들어 봅니다. 핵심 명령어는  파일을  복사하는 <code class="language-plaintext highlighter-rouge">COPY</code>와 명령어를 실행하는 <code class="language-plaintext highlighter-rouge">RUN</code>입니다.</p>
+<p>ubuntu 컨테이너를 실행하고 위 명령어를 그대로 실행하면 웹 서버를 실행할 수 있습니다. 리눅스에서 테스트가 끝났으니 이 과정을 Dockerfile로 만들면 됩니다. 아직 자세한 명령어를 배우진 않았지만 일단 만들어 봅니다. 핵심 명령어는 파일을 복사하는 <code class="language-plaintext highlighter-rouge">COPY</code>와 명령어를 실행하는 <code class="language-plaintext highlighter-rouge">RUN</code>입니다.</p>
 
 <noscript><pre># 1. ubuntu 설치 (패키지 업데이트 + 만든사람 표시)
 FROM       ubuntu:16.04
@@ -578,7 +581,7 @@ docker run -d -p 8082:4567 app
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-400-fda860cea.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-600-fda860cea.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-fda860cea.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-1000-fda860cea.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-400-96f499f99.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-600-96f499f99.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-96f499f99.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-1000-96f499f99.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-96f499f99.png" alt="Container test result"></picture>
+<p><a href="/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test.png"><picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-400-fda860cea.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-600-fda860cea.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-fda860cea.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-1000-fda860cea.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-400-96f499f99.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-600-96f499f99.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-96f499f99.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-1000-96f499f99.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-96f499f99.png" alt="Container test result"></source></source></picture></a></p>
 
 <p>접속 성공입니다. 기분이 좋아서 호스트 네임을 출력하는 <del>무쓸모</del> 웹서버를 3개나 만들었습니다. 이미지가 잘 만들어졌네요.</p>
 
@@ -618,7 +621,7 @@ COPY . /usr/src/app
 ADD . /usr/src/app
 </code></pre></div></div>
 
-<p><code class="language-plaintext highlighter-rouge">COPY</code>명령어와 매우 유사하나 몇가지 추가 기능이 있습니다.  <code class="language-plaintext highlighter-rouge">src</code>에 파일 대신 URL을 입력할 수 있고  <code class="language-plaintext highlighter-rouge">src</code>에 압축 파일을 입력하는 경우 자동으로 압축을 해제하면서 복사됩니다.</p>
+<p><code class="language-plaintext highlighter-rouge">COPY</code>명령어와 매우 유사하나 몇가지 추가 기능이 있습니다. <code class="language-plaintext highlighter-rouge">src</code>에 파일 대신 URL을 입력할 수 있고 <code class="language-plaintext highlighter-rouge">src</code>에 압축 파일을 입력하는 경우 자동으로 압축을 해제하면서 복사됩니다.</p>
 
 <p><strong>RUN</strong></p>
 
@@ -643,7 +646,7 @@ CMD bundle exec ruby app.rb
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WORKDIR /path/to/workdir
 </code></pre></div></div>
 
-<p>RUN, CMD, ADD, COPY등이 이루어질 기본 디렉토리를 설정합니다. 각 명령어의 현재 디렉토리는 한 줄 한 줄마다 초기화되기 때문에  <code class="language-plaintext highlighter-rouge">RUN cd /path</code>를 하더라도 다음 명령어에선 다시 위치가 초기화 됩니다. 같은 디렉토리에서 계속 작업하기 위해서 <code class="language-plaintext highlighter-rouge">WORKDIR</code>을 사용합니다.</p>
+<p>RUN, CMD, ADD, COPY등이 이루어질 기본 디렉토리를 설정합니다. 각 명령어의 현재 디렉토리는 한 줄 한 줄마다 초기화되기 때문에 <code class="language-plaintext highlighter-rouge">RUN cd /path</code>를 하더라도 다음 명령어에선 다시 위치가 초기화 됩니다. 같은 디렉토리에서 계속 작업하기 위해서 <code class="language-plaintext highlighter-rouge">WORKDIR</code>을 사용합니다.</p>
 
 <p><strong>EXPOSE</strong></p>
 
@@ -759,7 +762,7 @@ Successfully built 20369cef9829                   &lt;<span class="nt">--</span>
 
 <p><strong>Base Image</strong></p>
 
-<p>위에서 만든 Ruby 애플리케이션 이미지는 <code class="language-plaintext highlighter-rouge">ubuntu</code>를 베이스로 만들었지만 사실 훠어어얼씬 간단한  <code class="language-plaintext highlighter-rouge">ruby</code> 베이스 이미지가 존재합니다. <del>미리 이야기하지 않아 죄송..</del> 기존에 ruby를 설치했던 명령어는 ruby 이미지를 사용하는 것으로 간단하게 생략할 수 있습니다.</p>
+<p>위에서 만든 Ruby 애플리케이션 이미지는 <code class="language-plaintext highlighter-rouge">ubuntu</code>를 베이스로 만들었지만 사실 훠어어얼씬 간단한 <code class="language-plaintext highlighter-rouge">ruby</code> 베이스 이미지가 존재합니다. <del>미리 이야기하지 않아 죄송..</del> 기존에 ruby를 설치했던 명령어는 ruby 이미지를 사용하는 것으로 간단하게 생략할 수 있습니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -935,11 +938,11 @@ CMD bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 <h2 id="이미지-저장소">
 <a class="anchor" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%A0%80%EC%9E%A5%EC%86%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>이미지 저장소</h2>
 
-<picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-400-983cd6f84.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-600-983cd6f84.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-983cd6f84.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-1000-983cd6f84.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-400-4ac5ce74c.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-600-4ac5ce74c.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-4ac5ce74c.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-1000-4ac5ce74c.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-4ac5ce74c.png" alt="Docker Registry"></picture>
+<p><a href="/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry.png"><picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-400-983cd6f84.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-600-983cd6f84.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-983cd6f84.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-1000-983cd6f84.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-400-4ac5ce74c.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-600-4ac5ce74c.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-4ac5ce74c.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-1000-4ac5ce74c.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-4ac5ce74c.png" alt="Docker Registry"></source></source></picture></a></p>
 
 <p>도커는 빌드한 이미지를 서버에 배포하기 위해 직접 파일을 복사하는 방법 대신 <a href="https://docs.docker.com/registry/">도커 레지스트리</a><sub>Docker Registry</sub>라는 이미지 저장소를 사용합니다. 도커 명령어를 이용하여 이미지를 레지스트리에 푸시<sub>push</sub>하고 다른 서버에서 풀<sub>pull</sub>받아 사용하는 구조입니다. <del>git을 사용하는 느낌?</del></p>
 
-<p>도커 레지스트리는  <a href="https://github.com/docker/distribution">오픈소스</a>로 무료로 설치할 수 있고 설치형이 싫다면 도커(Docker Inc.)에서 서비스 중인 <a href="https://hub.docker.com/">도커 허브</a><sub>Docker Hub</sub>를 사용할 수 있습니다.</p>
+<p>도커 레지스트리는 <a href="https://github.com/docker/distribution">오픈소스</a>로 무료로 설치할 수 있고 설치형이 싫다면 도커(Docker Inc.)에서 서비스 중인 <a href="https://hub.docker.com/">도커 허브</a><sub>Docker Hub</sub>를 사용할 수 있습니다.</p>
 
 <h3 id="docker-hub">
 <a class="anchor" href="#docker-hub" aria-hidden="true"><span class="octicon octicon-link"></span></a>Docker Hub</h3>
@@ -952,7 +955,7 @@ CMD bundle exec ruby app.rb -o 0.0.0.0</pre></noscript>
 
 <p><strong>회원가입</strong></p>
 
-<picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-400-571560ae2.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-600-571560ae2.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-571560ae2.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-1000-571560ae2.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-400-e7543e83c.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-600-e7543e83c.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-e7543e83c.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-1000-e7543e83c.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-e7543e83c.png" alt="Docker Hub"></picture>
+<p><a href="/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub.png"><picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-400-571560ae2.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-600-571560ae2.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-571560ae2.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-1000-571560ae2.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-400-e7543e83c.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-600-e7543e83c.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-e7543e83c.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-1000-e7543e83c.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-e7543e83c.png" alt="Docker Hub"></source></source></picture></a></p>
 
 <p><a href="https://hub.docker.com/">도커 허브</a>사이트에 접속하면 쉽게 회원가입을 할 수 있습니다. 디자인이 참 마음에 들지 않는데… 처음부터 지금까지 업데이트한 모습이 이 모양이라 앞으로도 크게 기대되지 않습니다. <del>다른 페이지는 다 이쁜데 ㅠㅠ</del></p>
 
@@ -1005,7 +1008,7 @@ Login Succeeded</span>
 </pre></td>
 </tr></tbody></table></code></pre></figure>
 
-<p><code class="language-plaintext highlighter-rouge">subicura</code>라는 ID를 사용하고 이미지 이름을 <code class="language-plaintext highlighter-rouge">sinatra-app</code>으로 변경했습니다. 첫 번째 버전이므로 태그는 <code class="language-plaintext highlighter-rouge">1</code>을 사용합니다. 이제  <code class="language-plaintext highlighter-rouge">push</code>명령을 이용해 도커 허브에 이미지를 전송해 봅니다.</p>
+<p><code class="language-plaintext highlighter-rouge">subicura</code>라는 ID를 사용하고 이미지 이름을 <code class="language-plaintext highlighter-rouge">sinatra-app</code>으로 변경했습니다. 첫 번째 버전이므로 태그는 <code class="language-plaintext highlighter-rouge">1</code>을 사용합니다. 이제 <code class="language-plaintext highlighter-rouge">push</code>명령을 이용해 도커 허브에 이미지를 전송해 봅니다.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
 <td class="gutter gl"><pre class="lineno">1
@@ -1052,7 +1055,7 @@ af605e724c5a: Mounted from library/ubuntu
 <h3 id="private-docker-registry">
 <a class="anchor" href="#private-docker-registry" aria-hidden="true"><span class="octicon octicon-link"></span></a>Private Docker Registry</h3>
 
-<p>도커 이미지를 비공개로 저장하려면  <a href="https://www.docker.com/products/docker-cloud">Docker Cloud</a>를 유료($7 for 5 repos/month)로 사용하거나 레지스트리 서버를 자체적으로 구축해야합니다.</p>
+<p>도커 이미지를 비공개로 저장하려면 <a href="https://www.docker.com/products/docker-cloud">Docker Cloud</a>를 유료($7 for 5 repos/month)로 사용하거나 레지스트리 서버를 자체적으로 구축해야합니다.</p>
 
 <p>도커 레지스트리는 도커를 이용하여 쉽게 만들 수 있습니다. 도커 이미지를 저장할 서버를 도커 스스로 만들어서 도커 이미지를 관리하다니 뭔가 므-_-흣합니다. <del>도커로 다하는 느낌</del></p>
 
@@ -1276,6 +1279,7 @@ docker push localhost:5000/subicura/sinatra-app:1
 
 <h2 id="배포하기">
 <a class="anchor" href="#%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>배포하기</h2>
+
 <p>드디어 도커 안내서의 마지막 주제, 서버관리의 꽃! 배포<sub>deploy</sub>에 대해 알아보겠습니다.</p>
 
 <h3 id="컨테이너-배포-방식으로">
@@ -1295,12 +1299,12 @@ docker push localhost:5000/subicura/sinatra-app:1
 
 <p><em>네, 그게 답니다.</em></p>
 
-<p>서버에 접속해서 컨테이너를 실행할 줄 안다면 이미 배포하는 법을 알고 있는 겁니다.  참 쉽죠?</p>
+<p>서버에 접속해서 컨테이너를 실행할 줄 안다면 이미 배포하는 법을 알고 있는 겁니다. 참 쉽죠?</p>
 
 <h3 id="컨테이너-업데이트">
 <a class="anchor" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>컨테이너 업데이트</h3>
 
-<picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-400-9d4cedfd6.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-600-9d4cedfd6.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-9d4cedfd6.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-1000-9d4cedfd6.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-400-bcd3f08c3.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-600-bcd3f08c3.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-bcd3f08c3.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-1000-bcd3f08c3.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-bcd3f08c3.png" alt="Update"></picture>
+<p><a href="/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update.png"><picture><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-400-9d4cedfd6.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-600-9d4cedfd6.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-9d4cedfd6.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-1000-9d4cedfd6.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-400-bcd3f08c3.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-600-bcd3f08c3.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-bcd3f08c3.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-1000-bcd3f08c3.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-bcd3f08c3.png" alt="Update"></source></source></picture></a></p>
 
 <p>도커를 사용하면 업데이트하는 방식도 배포와 큰 차이가 없습니다.</p>
 
@@ -1327,6 +1331,7 @@ docker push localhost:5000/subicura/sinatra-app:1
 
 <h2 id="마무으리">
 <a class="anchor" href="#%EB%A7%88%EB%AC%B4%EC%9C%BC%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>마무으리</h2>
+
 <p>클라우드가 발전하면서 언제든 원하는 장소에 수십 대의 서버를 클릭 한 번으로 생성하는 시대가 되었습니다. 서버는 구입하는것이 아니라 필요한 만큼 잠시 <strong>대여</strong>하는 개념이 되었고 오토 스케일링이라는 환상적인 기능은 부하에 따라 자동으로 서버 개수를 늘리고 줄여줍니다.</p>
 
 <p>이러한 흐름 속에서 아무 문제 없이 서비스를 배포하고 운영하는 것은 사실 기적이라고 할 수 있습니다. 도커가 등장하여 복잡한 부분을 단순하게 하고 많은 문제를 해결해 주고 있지만 도커도 모든 문제를 해결해 주지는 않습니다. (대표적으로 데이터베이스처럼 stateful한 애플리케이션은 관리가 어렵습니다) 다만, 현재 시점에서 그 어떤 방법보다도 <strong>좀 더 나은 방법</strong>인 건 확실합니다.</p>
@@ -1342,8 +1347,7 @@ docker push localhost:5000/subicura/sinatra-app:1
   <div style="margin-bottom:5px; font-size: 14px"> <strong> <a href="//www.slideshare.net/MichaelDucy/the-future-of-everything-37344357" title="The Future of Everything" target="_blank">The Future of Everything</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/MichaelDucy">Michael Ducy</a></strong> </div>
 </div>
 
-<p><a href="https://bit.ly/inflearn-docker" target="_blank"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-400-089167e74.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-600-089167e74.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-089167e74.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-1000-089167e74.webp 1000w" type="image/webp"></source><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-400-2e52e8f51.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-600-2e52e8f51.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-2e52e8f51.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-1000-2e52e8f51.png 1000w" type="image/png"></source><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-2e52e8f51.png" alt="이제 도커안내서를 영상으로 만나보세요!"></picture>
-</a></p>
+<p><a href="https://bit.ly/inflearn-docker"><picture><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-400-089167e74.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-600-089167e74.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-089167e74.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-1000-089167e74.webp 1000w" type="image/webp"><source srcset="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-400-2e52e8f51.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-600-2e52e8f51.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-2e52e8f51.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-1000-2e52e8f51.png 1000w" type="image/png"><img src="/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-2e52e8f51.png" alt="이제 도커안내서를 영상으로 만나보세요!"></source></source></picture></a></p>
 
           <p class="tags">
             
@@ -1462,8 +1466,9 @@ docker push localhost:5000/subicura/sinatra-app:1
 <!--[if !IE]>
 <script src="/assets/js/jquery-1.11.1.min.js"></script>
 <![endif]-->
+
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/assets/js/index.js?1756644796848438000"></script>
+<script type="text/javascript" src="/assets/js/index.js?1757262458936841000"></script>
 <script type="text/javascript" src="/assets/js/readingtime.js"></script>
 <script>
 (function ($) {
