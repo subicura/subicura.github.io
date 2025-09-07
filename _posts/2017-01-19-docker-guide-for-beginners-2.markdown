@@ -11,17 +11,15 @@ toc: true
 last_modified_at: 2017-02-10T01:00:00+09:00
 ---
 
-<div class="image-container" style="padding-top: 88.97435%">
-  {% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png %}
-</div>
+{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png --a class="small-image" --img style="max-width: 450px" %}
 
 이 글은 `초보를 위한 도커 안내서 - 설치부터 배포까지` 2번째 글입니다. 이번엔 도커 설치부터 컨테이너를 실행하고 컨테이너를 둘러보는 방법에 대해 설명합니다. 도커에 대해 1도 모르는 분들을 위해 아주 가볍게 자주 쓰는 명령어만 다루었기 때문에 모든 명령어가 궁금하신 분은 [여기](https://docs.docker.com/engine/reference/commandline/)를 참고해주세요.
 
 ---
 
-* [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
-* **초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기 ✓** <span class="series">SERIES 2/3</span>
-* [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
+- [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
+- **초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기 ✓** <span class="series">SERIES 2/3</span>
+- [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
 
 {% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
 
@@ -54,16 +52,14 @@ sudo usermod -aG docker your-user # your-user 사용자에게 권한주기
 
 **주의사항**
 
-* 도커를 실행하기 위한 kernel 버전은 3.10.x 이상입니다. ubuntu 14.04 이상을 사용하면 큰 문제가 없고 kernel의 버전이 낮을 경우 제대로 동작을 안하거나 문제가 생길 수 있습니다. 가급적 최신버전으로 업데이트 해주세요.
-* ubuntu나 centos가 아닌 경우는 다른 방법이 필요합니다. 다른 리눅스를 쓰시는 분은 대부분 고오오급 개발자 분이시니 따로 설명하지 않아도 될 것 같아 [링크](https://docs.docker.com/engine/installation/)로 대신하겠습니다. <del>절대 귀찮아서가 아님</del>
+- 도커를 실행하기 위한 kernel 버전은 3.10.x 이상입니다. ubuntu 14.04 이상을 사용하면 큰 문제가 없고 kernel의 버전이 낮을 경우 제대로 동작을 안하거나 문제가 생길 수 있습니다. 가급적 최신버전으로 업데이트 해주세요.
+- ubuntu나 centos가 아닌 경우는 다른 방법이 필요합니다. 다른 리눅스를 쓰시는 분은 대부분 고오오급 개발자 분이시니 따로 설명하지 않아도 될 것 같아 [링크](https://docs.docker.com/engine/installation/)로 대신하겠습니다. <del>절대 귀찮아서가 아님</del>
 
 ### Docker for Mac / Docker for Windows
 
 도커를 맥이나 윈도우즈에 설치하려면 [Docker for mac](https://docs.docker.com/docker-for-mac) 또는 [Docker for windows](https://docs.docker.com/docker-for-windows)를 설치하면 됩니다. 파일을 다운받고 설치하고 재부팅하면 대부분 문제없이 완료됩니다. 소소한 옵션들이 있는데 특별히 건드릴 부분은 없으나 한번 살펴보고 적절하게 설정하시면 됩니다. (windows는 공유 드라이브를 선택해주세요)
 
-<div style="max-width: 450px" class="small-image">
-  {% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac.png --alt Docker for Mac %}
-</div>
+{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-2/docker-for-mac.png --alt Docker for Mac --img style="max-width: 450px" class="small-image" %}
 
 마치 네이티브스럽게 설치된 것 같지만 도커는 리눅스 컨테이너이므로 실제로는 가상머신에 설치가 되었습니다. 사용자는 가상머신을 사용한다는 느낌이 전혀 안드는데 그런부분을 굉장히 신경써서 설계하였습니다. 예를 들면, 포트를 연결하기 위해 도커 컨테이너의 특정 포트를 가상머신에 연결하고 다시 mac이나 windows의 포트와 연결해야 합니다. 디렉토리를 연결한다면 디렉토리를 가상머신과 공유하고 그 디렉토리를 다시 컨테이너와 연결해야 합니다. 이런 한단계 추가적으로 거쳐야하는 부분을 자연스럽게 처리해줍니다.
 
@@ -112,6 +108,7 @@ Client와 Server 정보가 정상적으로 출력되었다면 설치가 완료�
 기본값이 도커 서버의 소켓을 바라보고 있기 때문에 사용자는 의식하지 않고 마치 바로 명령을 내리는 것 같은 느낌을 받습니다. 이러한 설계가 mac이나 windows의 터미널에서 명령어를 입력했을때 가상 서버에 설치된 도커가 동작하는 이유입니다.
 
 ## 컨테이너 실행하기
+
 이제! 드디어! 컨테이너를 실행해 보려고 합니다. 손이 근질근질하고 컨테이너의 강려크함을 보여드리고 싶기 때문에 여러개의 프로그램을 마구잡이로 손쉽게 띄워보겠습니다.
 
 도커를 실행하는 명령어는 다음과 같습니다.
@@ -157,6 +154,7 @@ docker run ubuntu:16.04
 docker run --rm -it ubuntu:16.04 /bin/bash
 
 # in container
+
 $ cat /etc/issue
 Ubuntu 16.04.1 LTS \n \l
 
@@ -185,6 +183,7 @@ boot  etc  lib   media  opt  root  sbin  sys  usr
 docker run -d -p 1234:6379 redis
 
 # redis test
+
 $ telnet localhost 1234
 set mykey hello
 +OK
@@ -209,11 +208,12 @@ hello
 
 {% highlight bash linenos %}
 docker run -d -p 3306:3306 \
-  -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
-  --name mysql \
-  mysql:5.7
+ -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
+ --name mysql \
+ mysql:5.7
 
 # MySQL test
+
 $ mysql -h127.0.0.1 -uroot
 
 mysql> show databases;
@@ -245,7 +245,9 @@ mysql> quit
 먼저, 워드프레스용 데이터베이스를 생성하고 워드프레스 컨테이너를 실행합니다. 호스트의 `8080포트`를 컨테이너의 `80포트`로 연결하고 MySQL 컨테이너와 연결한 후 각종 데이터베이스 설정 정보를 환경변수로 입력합니다.
 
 {% highlight bash linenos %}
+
 # create mysql database
+
 $ mysql -h127.0.0.1 -uroot
 create database wp CHARACTER SET utf8;
 grant all privileges on wp.* to wp@'%' identified by 'wp';
@@ -602,6 +604,7 @@ docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 docker exec -it mysql /bin/bash
 
 # MySQL test
+
 $ mysql -uroot
 
 mysql> show databases;
@@ -630,6 +633,7 @@ exit
 docker exec -it mysql mysql -uroot
 
 # MySQL test
+
 $ mysql -uroot
 
 mysql> show databases;
@@ -666,7 +670,9 @@ mysql> quit
 데이터 볼륨을 사용하는 방법은 몇가지가 있는데 여기서는 호스트의 디렉토리를 마운트해서 사용하는 방법에 대해 알아봅니다. `run`명령어에서 소개한 옵션중에 `-v` 옵션을 드디어 사용해 보겠습니다. MySQL이라면 `/var/lib/mysql`디렉토리에 모든 데이터베이스 정보가 담기므로 호스트의 특정 디렉토리를 연결해주면 됩니다.
 
 {% highlight bash linenos %}
+
 # before
+
 docker run -d -p 3306:3306 \
   -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
   --name mysql \
@@ -695,7 +701,9 @@ Docker for Mac 또는 Docker for Windows를 설치했다면 자동으로 설치�
 {% highlight bash linenos %}
 curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
+
 # test
+
 docker-compose version
 {% endhighlight %}
 
@@ -723,12 +731,12 @@ Docker Compose의 다른 기능과 생소한 설정내용은 숙제로 남겨드
 
 여기까지 도커에 대해 기본적인 내용부터 컨테이너를 실행하고 살펴보는 방법까지 알아보았습니다. 도커가 어떤건지, 컨테이너가 뭔지, 이미지가 뭔지 감이 좀 오시나요? 이제 남이 만든 이미지를 사용하는 것이 아니라 직접 이미지를 만들고 컨테이너를 여러 서버로 배포하는 방법을 알아봐야하는데... 다음글에서 알아보도록 하겠습니다.
 
-<a href="https://bit.ly/inflearn-docker" target="_blank">{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png --alt 이제 도커안내서를 영상으로 만나보세요! %}</a>
+{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png --alt 이제 도커안내서를 영상으로 만나보세요! --link https://bit.ly/inflearn-docker %}
 
 ---
 
-* [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
-* **초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기 ✓** <span class="series">SERIES 2/3</span>
-* [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
+- [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
+- **초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기 ✓** <span class="series">SERIES 2/3</span>
+- [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
 
 ---

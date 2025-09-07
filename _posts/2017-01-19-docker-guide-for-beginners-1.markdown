@@ -12,13 +12,11 @@ fb_social_baseurl: http://subicura.com
 last_modified_at: 2018-01-12T20:00:00+09:00
 ---
 
-<div class="image-container" style="padding-top: 88.97435%">
-  {% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png %}
-</div>
+{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png --a class="small-image" --img style="max-width: 450px" %}
 
 어느날 친구한테 메시지를 받았습니다.
 
-> 도커 공부 좀 하려는데 `hello world` 문서 어떤 거 보면서 시작하는 게 좋음?    
+> 도커 공부 좀 하려는데 `hello world` 문서 어떤 거 보면서 시작하는 게 좋음?
 
 `구글에서 docker 검색ㄱㄱ`라고 말하려다 인터넷에 있는 [도커 관련 글](https://github.com/remotty/documents.docker.co.kr)과 [동영상](http://youtube.opencontainer.co.kr) 중에 입문자용 링크를 몇 개 전달해 주었습니다. 이후에도 몇 번 비슷한 요청을 받으면서 `도커에 대해 가볍게 정리해보자`라는 생각이 들었고 [예전 글(도커를 이용한 웹서비스 무중단 배포하기)]({% post_url 2016-06-07-zero-downtime-docker-deployment %})과 밋업 때 발표했던 내용, 그리고 그동안의 사용경험을 모아 글을 작성하게 되었습니다.
 
@@ -26,9 +24,9 @@ last_modified_at: 2018-01-12T20:00:00+09:00
 
 ---
 
-* **초보를 위한 도커 안내서 - 도커란 무엇인가? ✓** <span class="series">SERIES 1/3</span>
-* [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기]({% post_url 2017-01-19-docker-guide-for-beginners-2 %}) <span class="series">SERIES 2/3</span>
-* [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
+- **초보를 위한 도커 안내서 - 도커란 무엇인가? ✓** <span class="series">SERIES 1/3</span>
+- [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기]({% post_url 2017-01-19-docker-guide-for-beginners-2 %}) <span class="series">SERIES 2/3</span>
+- [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
 
 {% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
 
@@ -52,9 +50,7 @@ last_modified_at: 2018-01-12T20:00:00+09:00
 
 ## 도커의 역사
 
-<div style="max-width: 450px" class="small-image">
-  {% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers.png --alt The future of Linux Containers %}
-</div>
+{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/the-future-of-linux-containers.png --alt The future of Linux Containers --img style="max-width: 450px" class="small-image" %}
 
 도커는 2013년 3월 산타클라라에서 열린 Pycon Conference에서 dotCloud의 창업자인 Solomon Hykes가 [The future of Linux Containers](https://youtu.be/wW9CAH9nSLs) 라는 세션을 발표하면서 처음 세상에 알려졌습니다.
 
@@ -66,9 +62,7 @@ last_modified_at: 2018-01-12T20:00:00+09:00
 
 ## 도커란?
 
-<div style="max-width: 450px" class="small-image">
-  {% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works.png --alt 도커는 컨테이너를 관리하는 플랫폼 %}
-</div>
+{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-works.png --alt 도커는 컨테이너를 관리하는 플랫폼 --img style="max-width: 450px" class="small-image" %}
 
 도커는 **컨테이너 기반의 오픈소스 가상화 플랫폼**입니다.
 
@@ -80,9 +74,7 @@ last_modified_at: 2018-01-12T20:00:00+09:00
 
 **컨테이너(Container)**
 
-<div style="max-width: 350px" class="small-image">
-  {% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container.png --alt docker container %}
-</div>
+{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-container.png --alt docker container --img style="max-width: 350px" class="small-image" %}
 
 컨테이너는 격리된 공간에서 프로세스가 동작하는 기술입니다. 가상화 기술의 하나지만 기존방식과는 차이가 있습니다.
 
@@ -195,14 +187,15 @@ ubuntu이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있�
 도커는 넘나 귀여운 고래를 로고로 하고 있습니다. 로고 스티커는 항상 인기가 넘치고 로고가 그려진 티셔츠는 입고 돌아다녀도 개발자처럼 보이지 않습니다. 도커가 성공한 가장 큰 이유는 귀여운 고래 덕분이라고 생각합니다.(엄근진) <del>오픈소스가 성공하려면 귀여운 동물 캐릭터를 사용하세요!</del>
 
 ## 정리
+
 여기까지 도커에 대해 기본적인 내용을 아주 얕게 살펴보았습니다. 이제 실전으로 들어가봅시다!
 
-<a href="https://bit.ly/inflearn-docker" target="_blank">{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png --alt 이제 도커안내서를 영상으로 만나보세요! %}</a>
+{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png --alt 이제 도커안내서를 영상으로 만나보세요! --link https://bit.ly/inflearn-docker %}
 
 ---
 
-* **초보를 위한 도커 안내서 - 도커란 무엇인가? ✓** <span class="series">SERIES 1/3</span>
-* [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기]({% post_url 2017-01-19-docker-guide-for-beginners-2 %}) <span class="series">SERIES 2/3</span>
-* [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
+- **초보를 위한 도커 안내서 - 도커란 무엇인가? ✓** <span class="series">SERIES 1/3</span>
+- [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기]({% post_url 2017-01-19-docker-guide-for-beginners-2 %}) <span class="series">SERIES 2/3</span>
+- [초보를 위한 도커 안내서 - 이미지 만들고 배포하기]({% post_url 2017-02-10-docker-guide-for-beginners-create-image-and-deploy %}) <span class="series">SERIES 3/3</span>
 
 ---

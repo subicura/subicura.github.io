@@ -10,17 +10,15 @@ comments: yes
 toc: true
 ---
 
-<div class="image-container" style="padding-top: 88.97435%">
-  {% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png %}
-</div>
+{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png --a class="small-image" --img style="max-width: 450px" %}
 
 이 글은 `초보를 위한 도커 안내서 - 설치부터 배포까지` 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.
 
 ---
 
-* [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
-* [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기]({% post_url 2017-01-19-docker-guide-for-beginners-2 %}) <span class="series">SERIES 2/3</span>
-* **초보를 위한 도커 안내서 - 이미지 만들고 배포하기 ✓** <span class="series">SERIES 3/3</span>
+- [초보를 위한 도커 안내서 - 도커란 무엇인가?]({% post_url 2017-01-19-docker-guide-for-beginners-1 %}) <span class="series">SERIES 1/3</span>
+- [초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기]({% post_url 2017-01-19-docker-guide-for-beginners-2 %}) <span class="series">SERIES 2/3</span>
+- **초보를 위한 도커 안내서 - 이미지 만들고 배포하기 ✓** <span class="series">SERIES 3/3</span>
 
 {% googleads class_name: 'googleads-content', ads_id: 'google_ad_slot_2_id' %}
 
@@ -40,9 +38,7 @@ toc: true
 
 ### Sinatra 웹 애플리케이션 샘플
 
-<div style="max-width: 250px" class="small-image">
-  {% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra.png --alt Sinatra %}
-</div>
+{% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra.png --alt Sinatra --img style="max-width: 250px" class="small-image" %}
 
 일단 웹 애플리케이션 소스코드를 작성해야겠죠. [Sinatra](http://www.sinatrarb.com/)라는 가벼운 웹 프레임워크를 사용하기 위해 새로운 폴더를 만들고 `Gemfile`과 `app.rb`를 만듭니다.
 
@@ -52,7 +48,6 @@ toc: true
 source 'https://rubygems.org'
 gem 'sinatra'
 {% endhighlight %}
-
 
 **app.rb**
 
@@ -72,7 +67,6 @@ ruby와 sinatra에 대해 전혀 모르더라도 `Gemfile`은 패키지를 관�
 {% highlight bash linenos %}
 bundle install            # install package
 bundle exec ruby app.rb   # Run sinatra
-{% endhighlight %}
 
 {% asciinema path: 'asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json', title: 'run-sinatra' %}
 
@@ -89,15 +83,13 @@ bash -c "bundle install && bundle exec ruby app.rb -o 0.0.0.0"
 
 {% asciinema path: 'asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json', title: 'run-docker-sinatra' %}
 
-호스트의 디렉토리를 루비가 설치된 컨테이너의 디렉토리에 마운트한다음 그대로 명령어를 실행하면 로컬에 개발 환경을 구축하지 않고 도커 컨테이너를 개발환경으로 사용할 수 있습니다. ~~어으썸!~~ 
+호스트의 디렉토리를 루비가 설치된 컨테이너의 디렉토리에 마운트한다음 그대로 명령어를 실행하면 로컬에 개발 환경을 구축하지 않고 도커 컨테이너를 개발환경으로 사용할 수 있습니다. ~~어으썸!~~
 
-> 도커를 개발환경으로 사용하면 개발=테스트=운영이 동일한 환경에서 실행되는 놀라운 상황이 펼쳐집니다. 이 부분은 재미있는 내용이 많지만, 주제에서 벗어나므로 이 정도만 언급하고 다음 기회에 더 자세히 알아봅니다.  
+> 도커를 개발환경으로 사용하면 개발=테스트=운영이 동일한 환경에서 실행되는 놀라운 상황이 펼쳐집니다. 이 부분은 재미있는 내용이 많지만, 주제에서 벗어나므로 이 정도만 언급하고 다음 기회에 더 자세히 알아봅니다.
 
 서버가 정상적으로 실행됐으면 웹 브라우저에서 테스트해봅니다. `http://localhost:4567`
 
-<div style="max-width: 500px" class="small-image">
-  {% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test.png --alt Browser test %}
-</div>
+{% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test.png --alt Browser test --img style="max-width: 500px" class="small-image" %}
 
 도커 컨테이너의 호스트명이 보입니다. 소스는 잘 작성한 것 같네요! 이제 도커 이미지를 만들 준비가 완료됐습니다.
 
@@ -121,25 +113,31 @@ bash -c "bundle install && bundle exec ruby app.rb -o 0.0.0.0"
 이 과정을 그대로 쉘 스크립트로 옮겨봅니다.
 
 {% highlight bash linenos %}
+
 # 1. ubuntu 설치 (패키지 업데이트)
+
 apt-get update
 
 # 2. ruby 설치
+
 apt-get install ruby
 gem install bundler
 
 # 3. 소스 복사
+
 mkdir -p /usr/src/app
-scp Gemfile app.rb root@ubuntu:/usr/src/app  # From host
+scp Gemfile app.rb root@ubuntu:/usr/src/app # From host
 
 # 4. Gem 패키지 설치
+
 bundle install
 
 # 5. Sinatra 서버 실행
+
 bundle exec ruby app.rb
 {% endhighlight %}
 
-ubuntu 컨테이너를 실행하고 위 명령어를 그대로 실행하면 웹 서버를 실행할 수 있습니다. 리눅스에서 테스트가 끝났으니 이 과정을 Dockerfile로 만들면 됩니다. 아직 자세한 명령어를 배우진 않았지만 일단 만들어 봅니다. 핵심 명령어는  파일을  복사하는 `COPY`와 명령어를 실행하는 `RUN`입니다.
+ubuntu 컨테이너를 실행하고 위 명령어를 그대로 실행하면 웹 서버를 실행할 수 있습니다. 리눅스에서 테스트가 끝났으니 이 과정을 Dockerfile로 만들면 됩니다. 아직 자세한 명령어를 배우진 않았지만 일단 만들어 봅니다. 핵심 명령어는 파일을 복사하는 `COPY`와 명령어를 실행하는 `RUN`입니다.
 
 {% gist subicura/f3f9d9b67dc59da9bad9afe76caba824 %}
 
@@ -229,7 +227,7 @@ docker run -d -p 8082:4567 app
 
 이미지를 만드는 데 사용한 Dockerfile의 기본적인 명령어를 살펴보겠습니다.
 
-**FROM** 
+**FROM**
 
 ```
 FROM <image>:<tag>
@@ -239,7 +237,7 @@ FROM ubuntu:16.04
 베이스 이미지를 지정합니다. 반드시 지정해야 하며 어떤 이미지도 베이스 이미지가 될 수 있습니다. tag는 될 수 있으면 latest(기본값)보다 구체적인 버전(16.04등)을 지정하는 것이 좋습니다.
 이미 만들어진 다양한 베이스 이미지는 [Docker hub](https://hub.docker.com/explore/)에서 확인할 수 있습니다.
 
-**MAINTAINER** 
+**MAINTAINER**
 
 ```
 MAINTAINER <name>
@@ -248,7 +246,7 @@ MAINTAINER subicura@subicura.com
 
 Dockerfile을 관리하는 사람의 이름 또는 이메일 정보를 적습니다. 빌드에 딱히 영향을 주지는 않습니다.
 
-**COPY** 
+**COPY**
 
 ```
 COPY <src>... <dest>
@@ -257,16 +255,16 @@ COPY . /usr/src/app
 
 파일이나 디렉토리를 이미지로 복사합니다. 일반적으로 소스를 복사하는 데 사용합니다. `target`디렉토리가 없다면 자동으로 생성합니다.
 
- **ADD**
+**ADD**
 
 ```
 ADD <src>... <dest>
 ADD . /usr/src/app
 ```
 
-`COPY`명령어와 매우 유사하나 몇가지 추가 기능이 있습니다.  `src`에 파일 대신 URL을 입력할 수 있고  `src`에 압축 파일을 입력하는 경우 자동으로 압축을 해제하면서 복사됩니다.
+`COPY`명령어와 매우 유사하나 몇가지 추가 기능이 있습니다. `src`에 파일 대신 URL을 입력할 수 있고 `src`에 압축 파일을 입력하는 경우 자동으로 압축을 해제하면서 복사됩니다.
 
-**RUN** 
+**RUN**
 
 ```
 RUN <command>
@@ -276,7 +274,7 @@ RUN bundle install
 
 가장 많이 사용하는 구문입니다. 명령어를 그대로 실행합니다. 내부적으로 `/bin/sh -c` 뒤에 명령어를 실행하는 방식입니다.
 
-**CMD** 
+**CMD**
 
 ```
 CMD ["executable","param1","param2"]
@@ -286,15 +284,15 @@ CMD bundle exec ruby app.rb
 
 도커 컨테이너가 실행되었을 때 실행되는 명령어를 정의합니다. 빌드할 때는 실행되지 않으며 여러 개의 `CMD`가 존재할 경우 가장 마지막 `CMD`만 실행됩니다. 한꺼번에 여러 개의 프로그램을 실행하고 싶은 경우에는 `run.sh`파일을 작성하여 데몬으로 실행하거나 [supervisord](http://supervisord.org/)나 [forego](https://github.com/ddollar/forego)와 같은 여러 개의 프로그램을 실행하는 프로그램을 사용합니다.
 
-**WORKDIR** 
+**WORKDIR**
 
 ```
 WORKDIR /path/to/workdir
 ```
 
-RUN, CMD, ADD, COPY등이 이루어질 기본 디렉토리를 설정합니다. 각 명령어의 현재 디렉토리는 한 줄 한 줄마다 초기화되기 때문에  `RUN cd /path`를 하더라도 다음 명령어에선 다시 위치가 초기화 됩니다. 같은 디렉토리에서 계속 작업하기 위해서 `WORKDIR`을 사용합니다.
+RUN, CMD, ADD, COPY등이 이루어질 기본 디렉토리를 설정합니다. 각 명령어의 현재 디렉토리는 한 줄 한 줄마다 초기화되기 때문에 `RUN cd /path`를 하더라도 다음 명령어에선 다시 위치가 초기화 됩니다. 같은 디렉토리에서 계속 작업하기 위해서 `WORKDIR`을 사용합니다.
 
-**EXPOSE** 
+**EXPOSE**
 
 ```
 EXPOSE <port> [<port>...]
@@ -359,7 +357,6 @@ Dockerfile을 한 줄 한 줄 수행합니다. 첫 번째로 FROM 명령어를 �
 
 명령어 수행 결과를 이미지로 저장합니다. 여기서는 ubuntu:16.04를 사용하기로 했기 때문에 ubuntu 이미지의 ID가 표시됩니다.
 
-
 ```
 (4) Step 2/10 : MAINTAINER subicura@subicura.com
 ```
@@ -396,7 +393,7 @@ Dockerfile의 세 번째 명령어를 수행합니다. 이전 단계와 마찬�
 
 최종 성공한 이미지 ID를 출력합니다.
 
-결론적으로 도커 빌드는 `임시 컨테이너 생성` > `명령어 수행` > `이미지로 저장` > `임시 컨테이너 삭제` > `새로 만든 이미지 기반 임시 컨테이너 생성` > `명령어 수행` > `이미지로 저장` > `임시 컨테이너 삭제` > ... 의 과정을 계속해서 반복한다고 볼 수 있습니다. 명령어를 실행할 때마다 이미지 레이어를 저장하고 다시 빌드할 때 Dockerfile이 변경되지 않았다면 기존에 저장된 이미지를 그대로 캐시처럼 사용합니다. 
+결론적으로 도커 빌드는 `임시 컨테이너 생성` > `명령어 수행` > `이미지로 저장` > `임시 컨테이너 삭제` > `새로 만든 이미지 기반 임시 컨테이너 생성` > `명령어 수행` > `이미지로 저장` > `임시 컨테이너 삭제` > ... 의 과정을 계속해서 반복한다고 볼 수 있습니다. 명령어를 실행할 때마다 이미지 레이어를 저장하고 다시 빌드할 때 Dockerfile이 변경되지 않았다면 기존에 저장된 이미지를 그대로 캐시처럼 사용합니다.
 
 이러한 레이어 개념을 잘 이해하고 있어야 최적화된 이미지를 생성할 수 있습니다.
 
@@ -406,7 +403,7 @@ Dockerfile의 세 번째 명령어를 수행합니다. 이전 단계와 마찬�
 
 **Base Image**
 
-위에서 만든 Ruby 애플리케이션 이미지는 `ubuntu`를 베이스로 만들었지만 사실 훠어어얼씬 간단한  `ruby` 베이스 이미지가 존재합니다. ~~미리 이야기하지 않아 죄송..~~ 기존에 ruby를 설치했던 명령어는 ruby 이미지를 사용하는 것으로 간단하게 생략할 수 있습니다.
+위에서 만든 Ruby 애플리케이션 이미지는 `ubuntu`를 베이스로 만들었지만 사실 훠어어얼씬 간단한 `ruby` 베이스 이미지가 존재합니다. ~~미리 이야기하지 않아 죄송..~~ 기존에 ruby를 설치했던 명령어는 ruby 이미지를 사용하는 것으로 간단하게 생략할 수 있습니다.
 
 {% highlight bash linenos %}
 # before
@@ -511,14 +508,13 @@ RUN apt-get -y -qq update && \
 
 이 외에도 다양한 이미지 생성팁이 있지만 일단 이 정도면 꽤 이쁘게 만들어진 것 같습니다.
 
-
 ## 이미지 저장소
 
 {% picture /assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry.png --alt Docker Registry %}
 
 도커는 빌드한 이미지를 서버에 배포하기 위해 직접 파일을 복사하는 방법 대신 [도커 레지스트리](https://docs.docker.com/registry/)<sub>Docker Registry</sub>라는 이미지 저장소를 사용합니다. 도커 명령어를 이용하여 이미지를 레지스트리에 푸시<sub>push</sub>하고 다른 서버에서 풀<sub>pull</sub>받아 사용하는 구조입니다. ~~git을 사용하는 느낌?~~
 
-도커 레지스트리는  [오픈소스](https://github.com/docker/distribution)로 무료로 설치할 수 있고 설치형이 싫다면 도커(Docker Inc.)에서 서비스 중인 [도커 허브](https://hub.docker.com/)<sub>Docker Hub</sub>를 사용할 수 있습니다.
+도커 레지스트리는 [오픈소스](https://github.com/docker/distribution)로 무료로 설치할 수 있고 설치형이 싫다면 도커(Docker Inc.)에서 서비스 중인 [도커 허브](https://hub.docker.com/)<sub>Docker Hub</sub>를 사용할 수 있습니다.
 
 ### Docker Hub
 
@@ -526,7 +522,7 @@ RUN apt-get -y -qq update && \
 
 회원가입만 하면 대용량의 이미지를 무료로 저장할 수 있고 다운로드 트래픽 또한 무료입니다. 단, 기본적으로 모든 이미지는 공개되어 누구나 접근 가능하므로 비공개로 사용하려면 유료 서비스를 이용해야 합니다. (한 개는 무료)
 
-회원가입을 하고 앞에서 만든 Ruby 웹 애플리케이션 이미지를 저장해보겠습니다. 
+회원가입을 하고 앞에서 만든 Ruby 웹 애플리케이션 이미지를 저장해보겠습니다.
 
 **회원가입**
 
@@ -577,7 +573,7 @@ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 docker tag app subicura/sinatra-app:1
 {% endhighlight %}
 
-`subicura`라는 ID를 사용하고 이미지 이름을 `sinatra-app`으로 변경했습니다. 첫 번째 버전이므로 태그는 `1`을 사용합니다. 이제  `push`명령을 이용해 도커 허브에 이미지를 전송해 봅니다.
+`subicura`라는 ID를 사용하고 이미지 이름을 `sinatra-app`으로 변경했습니다. 첫 번째 버전이므로 태그는 `1`을 사용합니다. 이제 `push`명령을 이용해 도커 허브에 이미지를 전송해 봅니다.
 
 {% highlight bash linenos %}
 docker push subicura/sinatra-app:1
@@ -606,9 +602,9 @@ af605e724c5a: Mounted from library/ubuntu
 
 ### Private Docker Registry
 
-도커 이미지를 비공개로 저장하려면  [Docker Cloud](https://www.docker.com/products/docker-cloud)를 유료($7 for 5 repos/month)로 사용하거나 레지스트리 서버를 자체적으로 구축해야합니다.
+도커 이미지를 비공개로 저장하려면 [Docker Cloud](https://www.docker.com/products/docker-cloud)를 유료($7 for 5 repos/month)로 사용하거나 레지스트리 서버를 자체적으로 구축해야합니다.
 
-도커 레지스트리는 도커를 이용하여 쉽게 만들 수 있습니다. 도커 이미지를 저장할 서버를 도커 스스로 만들어서 도커 이미지를 관리하다니 뭔가 므-_-흣합니다. ~~도커로 다하는 느낌~~
+도커 레지스트리는 도커를 이용하여 쉽게 만들 수 있습니다. 도커 이미지를 저장할 서버를 도커 스스로 만들어서 도커 이미지를 관리하다니 뭔가 므-\_-흣합니다. ~~도커로 다하는 느낌~~
 
 {% highlight bash linenos %}
 docker run -d \
@@ -729,6 +725,7 @@ registry
 관련 설정은 [문서](https://docs.docker.com/registry/insecure/)를 참고하시기 바랍니다.
 
 ## 배포하기
+
 드디어 도커 안내서의 마지막 주제, 서버관리의 꽃! 배포<sub>deploy</sub>에 대해 알아보겠습니다.
 
 ### 컨테이너 배포 방식으로
@@ -745,9 +742,9 @@ ftp, rsync, ant, gradle, capistrano, fabric, chef, puppet, ansible등 다양한 
 
 음...
 
-*네, 그게 답니다.*
+_네, 그게 답니다._
 
-서버에 접속해서 컨테이너를 실행할 줄 안다면 이미 배포하는 법을 알고 있는 겁니다.  참 쉽죠?
+서버에 접속해서 컨테이너를 실행할 줄 안다면 이미 배포하는 법을 알고 있는 겁니다. 참 쉽죠?
 
 ### 컨테이너 업데이트
 
@@ -759,7 +756,7 @@ ftp, rsync, ant, gradle, capistrano, fabric, chef, puppet, ansible등 다양한 
 
 단, 컨테이너를 중지하지 않고 graceful~~스무스~~하게 샤샤샥 교체하는 방법은 아쉽지만 존재하지 않습니다.
 
-> 컨테이너를 중지하지 않고 컨테이너 내부에 접속하여 소스를 업데이트하는 방법도 "가능"은 하지만 컨테이너의 장점을 살릴 수 없는 "잘못된 패턴"입니다.  
+> 컨테이너를 중지하지 않고 컨테이너 내부에 접속하여 소스를 업데이트하는 방법도 "가능"은 하지만 컨테이너의 장점을 살릴 수 없는 "잘못된 패턴"입니다.
 
 이런 방식은 매우 단순하지만, 컨테이너가 멈추는 순간 실행 중인 프로세스가 **종료**되고 프로세스가 종료되면 고객들은 접속이 안 되고 접속이 안 되면 매출이 떨어지고 매출이 떨어지면 월급이 안나오기 때문에 무중단을 고려한 [nginx](http://nginx.org/)나 [HAProxy](http://www.haproxy.org/)같은 로드 발란서<sub>Load Balancer</sub>와 2대 이상의 컨테이너를 사용해야 합니다.
 
@@ -774,11 +771,12 @@ ftp, rsync, ant, gradle, capistrano, fabric, chef, puppet, ansible등 다양한 
 자세한 내용은 초보를 위한 안내서의 범위를 벗어나므로 더 많은 내용이 궁금하신 분은 각자 공부하는 것으로... ~~화이팅!!~~
 
 ## 마무으리
+
 클라우드가 발전하면서 언제든 원하는 장소에 수십 대의 서버를 클릭 한 번으로 생성하는 시대가 되었습니다. 서버는 구입하는것이 아니라 필요한 만큼 잠시 **대여**하는 개념이 되었고 오토 스케일링이라는 환상적인 기능은 부하에 따라 자동으로 서버 개수를 늘리고 줄여줍니다.
 
 이러한 흐름 속에서 아무 문제 없이 서비스를 배포하고 운영하는 것은 사실 기적이라고 할 수 있습니다. 도커가 등장하여 복잡한 부분을 단순하게 하고 많은 문제를 해결해 주고 있지만 도커도 모든 문제를 해결해 주지는 않습니다. (대표적으로 데이터베이스처럼 stateful한 애플리케이션은 관리가 어렵습니다) 다만, 현재 시점에서 그 어떤 방법보다도 **좀 더 나은 방법**인 건 확실합니다.
 
-초보를 위한 도커 안내서는 오늘도 서버운영으로 고통받고 있는 개발자분께 도커를 소개하고 전반적인 내용을 전달하기 위해 작성하였습니다. 길다면 길고 짧다면 짧은 글을 통해 아무쪼록 초보분들에게 많은 도움이 되었으면 좋겠습니다. 
+초보를 위한 도커 안내서는 오늘도 서버운영으로 고통받고 있는 개발자분께 도커를 소개하고 전반적인 내용을 전달하기 위해 작성하였습니다. 길다면 길고 짧다면 짧은 글을 통해 아무쪼록 초보분들에게 많은 도움이 되었으면 좋겠습니다.
 
 도커에 대해 궁금한 점은 [오픈컨테이너 슬랙](http://slack.opencontainer.co.kr)으로 오시면 많은 도움을 받을 수 있습니다. 내용에 대한 다양한 피드백도 환영합니다. 읽어주셔서 감사합니다~
 
@@ -789,4 +787,4 @@ ftp, rsync, ant, gradle, capistrano, fabric, chef, puppet, ansible등 다양한 
   <div style="margin-bottom:5px; font-size: 14px"> <strong> <a href="//www.slideshare.net/MichaelDucy/the-future-of-everything-37344357" title="The Future of Everything" target="_blank">The Future of Everything</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/MichaelDucy">Michael Ducy</a></strong> </div>
 </div>
 
-<a href="https://bit.ly/inflearn-docker" target="_blank">{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png --alt 이제 도커안내서를 영상으로 만나보세요! %}</a>
+{% picture /assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn.png --alt 이제 도커안내서를 영상으로 만나보세요! --link https://bit.ly/inflearn-docker %}

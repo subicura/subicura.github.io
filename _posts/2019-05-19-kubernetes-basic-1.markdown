@@ -12,9 +12,7 @@ toc: true
 last_modified_at: 2020-12-14T08:50:00+09:00
 ---
 
-<div class="small-image" style="max-width: 450px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo.png --alt docker logo %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/docker-logo.png --alt docker logo --a class="small-image" --img style="max-width: 450px" %}
 
 2013년 등장한 도커<sub>docker</sub>는 인프라 세계를 컨테이너<sub>container</sub> 세상으로 바꿔버렸습니다. 수많은 애플리케이션이 컨테이너로 배포되고 도커파일을 만들어 이미지를 빌드하고 컨테이너를 배포하는 게 흔한 개발 프로세스가 되었습니다. 2019년 DockerCon 발표에선 무려 [1052억번의 컨테이너 image pull](https://twitter.com/ajeetsraina/status/1123258872443990017)이 발생했다고 합니다.
 
@@ -30,9 +28,7 @@ last_modified_at: 2020-12-14T08:50:00+09:00
 - 클러스터 하나는 불안한데 멀티 클러스터 구성해야 하지 않을까? [Anthos](https://cloud.google.com/anthos/)?
 - 클라우드 네이티브<sub>Cloud Native</sub> 애플리케이션 만들어서 쿠버네티스에 배포하자.
 
-<div style="max-width: 350px" class="small-image">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know.png --alt 무슨 이야기인지.. %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/i-dont-know.png --alt 무슨 이야기인지.. --img style="max-width: 350px" class="small-image" %}
 
 이 모든 것들이 불과 2~3년 이내에 나온 것들로 인프라 세계가 이렇게 빨리 변한적이 있었나 싶습니다. 예전에는 일부 고오오급 회사에서만 썼던 것 같은데 이제 여기저기서 ~~나만 빼고~~ 다 쓰는 거 같고 뭔가 좀 해보고 싶어도 설치부터 어렵고 내용이 복잡해서 배우기가 쉽지 않습니다.
 
@@ -50,9 +46,7 @@ last_modified_at: 2020-12-14T08:50:00+09:00
 
 ## 쿠버네티스의 과거, 현재, 미래
 
-<div class="small-image" style="max-width: 450px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/container-orchestration.png --alt container orchestration %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/container-orchestration.png --alt container orchestration --a class="small-image" --img style="max-width: 450px" %}
 
 쿠버네티스는 다른 컨테이너 오케스트레이션 도구보다 비교적 늦게 등장했습니다. [도커 스웜](https://docs.docker.com/engine/swarm/)이 쉽고 간단한 사용법~~끼워팔기~~을 앞세워 세력을 넓히고 있었고 AWS에서 [ECS](https://aws.amazon.com/ecs/), 하시코프에서 [Nomad](https://www.nomadproject.io/), 전통의 강호 [Mesos](http://mesos.apache.org/)에서 [Marathon](https://mesosphere.github.io/marathon/)을 발표했습니다.
 
@@ -64,9 +58,7 @@ Rancher 2.0, OpenShift(Red Hat), Tectonic(CoreOS), Docker Enterprise Edition등�
 
 ## 쿠버네티스란?
 
-<div class="small-image" style="max-width: 450px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo.png --alt kubernetes logo %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-logo.png --alt kubernetes logo --a class="small-image" --img style="max-width: 450px" %}
 
 **쿠버네티스는 컨테이너를 쉽고 빠르게 배포/확장하고 관리를 자동화해주는 오픈소스 플랫폼입니다.** 몇 가지 수식어로 "운영환경에서 사용 가능한(production ready)", "de facto(사실상 표준)", "조타수(helmsman)", "조종사(pilot)", "행성 스케일(Planet Scale)", "~~갓(god)~~" 등을 가지고 있습니다. 쿠버네티스<sub>kubernetes</sub>가 너무 길어서 ~~오타가 많아서~~ 흔히 케이(에이)츠<sub>k8s</sub> 또는 큐브<sub>kube</sub>라고 줄여서 부릅니다.
 
@@ -80,23 +72,19 @@ Rancher 2.0, OpenShift(Red Hat), Tectonic(CoreOS), Docker Enterprise Edition등�
 
 ### 갓구글 + 고오오오급 회사들의 참여 <sub>ECO System</sub>
 
-<a href="https://landscape.cncf.io/" target="_blank">{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/cncf-map.png --alt Cloud Native Landscape %}</a>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/cncf-map.png --alt Cloud Native Landscape --link https://landscape.cncf.io/ %}
 
 전 세계적 스케일의 경험과 기술이 고스란히 녹아들어 있습니다. 거대한 커뮤니티와 생태계가 있어 잘 안 되는 건 찾아보면 되고 이런 거 만들어 볼까 하면 누군가 만들어 놨습니다. 서비스메시(Istio, linkerd), CI(Tekton, Spinnaker), 컨테이너 서버리스(Knative), 머신러닝(kubeflow)이 모두 쿠버네티스 환경에서 돌아갑니다. 클라우드 네이티브 애플리케이션 대부분이 쿠버네티스와 찰떡궁합입니다.
 
 ### 다양한 배포 방식
 
-<div class="small-image" style="max-width: 450px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/workload.png --alt 쿠버네티스 배포 방식 %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/workload.png --alt 쿠버네티스 배포 방식 --a class="small-image" --img style="max-width: 450px" %}
 
 컨테이너와 관련된 많은 예제가 웹(프론트엔드+백엔드) 애플리케이션을 다루고 있지만, 실제 세상엔 더 다양한 형태의 애플리케이션이 있습니다. 쿠버네티스는 `Deployment`, `StatefulSets`, `DaemonSet`, `Job`, `CronJob`등 다양한 배포 방식을 지원합니다. Deployment는 새로운 버전의 애플리케이션을 다양한 전략으로 무중단 배포할 수 있습니다. StatefulSets은 실행 순서를 보장하고 호스트 이름과 볼륨을 일정하게 사용할 수 있어 순서나 데이터가 중요한 경우에 사용할 수 있습니다. 로그나 모니터링 등 모든 노드에 설치가 필요한 경우엔 DaemonSet을 이용하고 배치성 작업은 Job이나 CronJob을 이용하면 됩니다. ~~무슨 기능을 원하는지 몰라서 다 준비해놨어~~
 
 ### Ingress 설정
 
-<div class="small-image" style="max-width: 550px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/ingress.png --alt Ingress %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/ingress.png --alt Ingress --a class="small-image" --img style="max-width: 550px" %}
 
 다양한 웹 애플리케이션을 하나의 로드 밸런서로 서비스하기 위해 Ingress~~입장~~기능을 제공합니다. 웹 애플리케이션을 배포하는 과정을 보면 외부에서 직접 접근할 수 없도록 애플리케이션을 내부망에 설치하고 외부에서 접근이 가능한 `ALB`나 `Nginx`, `Apache`를 프록시 서버로 활용합니다. 프록시 서버는 도메인과 Path 조건에 따라 등록된 서버로 요청을 전달하는데 서버가 바뀌거나 IP가 변경되면 매번 설정을 수정해줘야 합니다. 쿠버네티스의 Ingress는 이를 자동화하면서 기존 프록시 서버에서 사용하는 설정을 거의 그대로 사용할 수 있습니다. 새로운 도메인을 추가하거나 업로드 용량을 제한하기 위해 일일이 프록시 서버에 접속하여 설정할 필요가 없습니다.
 
@@ -165,17 +153,13 @@ $ kubectl create # 상태 생성 (물론 kubectl run 명령어도 있지만 잘 
 
 #### Pod
 
-<div class="small-image" style="max-width: 350px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/pod.png --alt Pod %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/pod.png --alt Pod --a class="small-image" --img style="max-width: 350px" %}
 
 쿠버네티스에서 배포할 수 있는 가장 작은 단위로 한 개 이상의 컨테이너와 스토리지, 네트워크 속성을 가집니다. Pod에 속한 컨테이너는 스토리지와 네트워크를 공유하고 서로 localhost로 접근할 수 있습니다. 컨테이너를 하나만 사용하는 경우도 반드시 Pod으로 감싸서 관리합니다.
 
 #### ReplicaSet
 
-<div class="small-image" style="max-width: 350px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/replicaset.png --alt ReplicaSet %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/replicaset.png --alt ReplicaSet --a class="small-image" --img style="max-width: 350px" %}
 
 Pod을 여러 개(한 개 이상) 복제하여 관리하는 오브젝트입니다. Pod을 생성하고 개수를 유지하려면 반드시 ReplicaSet을 사용해야 합니다. ReplicaSet은 복제할 개수, 개수를 체크할 라벨 선택자, 생성할 Pod의 설정값(템플릿)등을 가지고 있습니다. 직접적으로 ReplicaSet을 사용하기보다는 Deployment등 다른 오브젝트에 의해서 사용되는 경우가 많습니다.
 
@@ -217,17 +201,13 @@ spec:
 
 컨테이너는 아주 심플하고 우아하게 동작합니다. run을 하면 실행되고 stop을 하면 멈춥니다. 서버-클라이언트 구조를 안다면 컨테이너를 관리하는 에이전트를 만들고 중앙에서 API를 이용하여 원격으로 관리하는 모습을 쉽게 그려볼 수 있습니다.
 
-<div class="small-image" style="max-width: 350px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/server-agent.png --alt Server - Agent %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/server-agent.png --alt Server - Agent --a class="small-image" --img style="max-width: 350px" %}
 
 쿠버네티스 또한 중앙(Master)에 API 서버와 상태 저장소를 두고 각 서버(Node)의 에이전트(kubelet)와 통신하는 단순한 구조입니다. 하지만, 앞에서 얘기한 개념을 여러 모듈로 쪼개어 구현하고 다양한 오픈소스를 사용하기 때문에 설치가 까다롭고 언뜻 구성이 복잡해 보입니다.
 
 ### 마스터 - 노드 구조
 
-<div class="small-image" style="max-width: 600px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/master-node.png --alt Master - Node %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/master-node.png --alt Master - Node --a class="small-image" --img style="max-width: 600px" %}
 
 쿠버네티스는 전체 클러스터를 관리하는 **마스터**와 컨테이너가 배포되는 **노드**로 구성되어 있습니다. 모든 명령은 마스터의 API 서버를 호출하고 노드는 마스터와 통신하면서 필요한 작업을 수행합니다. 특정 노드의 컨테이너에 명령하거나 로그를 조회할 때도 노드에 직접 명령하는 게 아니라 마스터에 명령을 내리고 마스터가 노드에 접속하여 대신 결과를 응답합니다.
 
@@ -246,9 +226,7 @@ API 서버는 json 또는 protobuf 형식을 이용한 http 통신을 지원합�
 
 ### Master 구성 요소
 
-<div class="small-image" style="max-width: 600px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master.png --alt Master Component %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-master.png --alt Master Component --a class="small-image" --img style="max-width: 600px" %}
 
 #### API 서버 kube-apiserver
 
@@ -278,9 +256,7 @@ API 서버는 요청을 받으면 etcd 저장소와 통신할 뿐 실제로 상�
 
 ### Node 구성 요소
 
-<div class="small-image" style="max-width: 600px">
-  {% picture /assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node.png --alt Node Component %}
-</div>
+{% picture /assets/article_images/2019-05-19-kubernetes-basic-1/kubernetes-node.png --alt Node Component --a class="small-image" --img style="max-width: 600px" %}
 
 #### 큐블릿 kubelet
 
@@ -341,10 +317,8 @@ CRI 외에 CNI(네트워크), CSI(스토리지)를 지원하여 인터페이스�
 
 실습은 👇 하단 링크를 클릭해 주세요!
 
-<div style="max-width: 350px" class="small-image">
-  <a href="https://subicura.com/k8s/?utm_source=subicura.com&utm_medium=referral&utm_campaign=blog" target="_blank">{% picture /assets/article_images/2020-12-14-kubernetes-basic-2/subicura-k8s.png --alt 초보를 위한 쿠버네티스 안내서 %}</a>
-</div>
+{% picture /assets/article_images/2020-12-14-kubernetes-basic-2/subicura-k8s.png --alt 초보를 위한 쿠버네티스 안내서 --link https://subicura.com/k8s/?utm_source=subicura.com&utm_medium=referral&utm_campaign=blog --img style="max-width: 350px" class="small-image" %}
 
 그리고 실습 영상과 함께 자세한 설명을 들을 수 있는 [온라인 강의](https://bit.ly/inflearn-k8s-link)도 준비되어 있습니다.
 
-<a href="https://bit.ly/inflearn-k8s-link" target="_blank">{% picture /assets/article_images/2020-12-14-kubernetes-basic-2/inflearn-k8s.png --alt 초보를 위한 쿠버네티스 안내서 - 인프런 %}</a>
+{% picture /assets/article_images/2020-12-14-kubernetes-basic-2/inflearn-k8s.png --alt 초보를 위한 쿠버네티스 안내서 - 인프런 --link https://bit.ly/inflearn-k8s-link %}

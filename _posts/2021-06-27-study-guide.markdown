@@ -10,9 +10,7 @@ comments: yes
 toc: true
 ---
 
-<div class="small-image" style="max-width: 500px">
-  {% picture /assets/article_images/2021-06-27-study-guide/interview.jpg --alt 경력있는 신입 %}
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/interview.jpg --alt 경력있는 신입 --a class="small-image" --img style="max-width: 500px" %}
 
 많은 회사가 개발자가 부족하다고 하는데, 신입 개발자는 취업이 어려운 게 현실입니다. 아무래도 예전보다 개발자에게 원하는 요구사항이 많아졌고, 경력 있는(?) 신입이나 특별한 교육이 필요 없는 개발자를 찾기 때문인 것 같습니다.
 
@@ -48,23 +46,21 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
 
 ### 웹 개발자 학습 로드맵
 
-<a href="https://roadmap.sh/" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/intro.png --alt intro %}</a>
+{% picture /assets/article_images/2021-06-27-study-guide/intro.png --alt intro --link https://roadmap.sh/ %}
 
 [![]({{ site.url }})](https://github.com/kamranahmedse/developer-roadmap/tree/master/translations/korean)
 
 [Kamran Ahmed가 만든 웹 개발자 로드맵](https://github.com/kamranahmedse/developer-roadmap/tree/master/translations/korean)은 웹 개발자가 되기 위해 선택하고 거쳐야 할 기술을 프론트엔드, 백엔드, 데브옵스별로 나누어 제공합니다. 필수적인 내용이 빠짐없이 정리되어 있고 최신 트랜드가 포함되어 있어 어떤 걸 공부할지 갈피를 못 잡고 있다면 방향을 잡기에 좋습니다.
 
-<a href="https://roadmap.sh/frontend" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/frontend.png --alt frontend %}</a>
+{% picture /assets/article_images/2021-06-27-study-guide/frontend.png --alt frontend --link https://roadmap.sh/frontend %}
 
 프론트엔드를 살펴보면 인터넷, HTML/CSS/JavaScript부터 패키지 관리자, React와 같은 프레임워크, CSS 프레임워크를 거쳐 서버사이드 렌더링, 정적 사이트 생성기, 웹어셈블리까지 정리가 되어 있습니다. 깔-끔
 
-<a href="https://roadmap.sh/backend" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/backend.png --alt backend %}</a>
+{% picture /assets/article_images/2021-06-27-study-guide/backend.png --alt backend --link https://roadmap.sh/backend %}
 
 백엔드는 인터넷, 프론트엔드 기본 지식(?!), OS에 대한 전반적인 지식, 언어, 데이터베이스, 캐시, CI/CD, 컨테이너, 웹서버를 소개합니다. 역시 깔-끔
 
-<div class="small-image" style="max-width: 350px">
-  {% picture /assets/article_images/2021-06-27-study-guide/legend.png %}
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/legend.png --a class="small-image" --img style="max-width: 350px" %}
 
 항목마다 중요도가 표시되어 있는데, `추천/개인적인 의견` 항목은 조금 더 자세히 공부하고 `대체 가능한 옵션`은 적어도 어떤 기술인지 기본적인 내용은 알아두는 것이 좋습니다. `선택사항`이나 `추천하지 않음` 항목은 반드시 공부해야 하는 건 아니고 이런 게 있구나! 정도는 알면 좋을 것 같습니다.
 
@@ -88,21 +84,15 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
 
 다음은 코딩테스트를 준비할 수 있는 사이트입니다.
 
-<div class="small-image" style="max-width: 420px">
-  <a href="https://www.acmicpc.net/" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/baekjoon_bookmark.png --alt Baekjoon Online Judge %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/baekjoon_bookmark.png --alt Baekjoon Online Judge --link https://www.acmicpc.net/ --a class="small-image" --img style="max-width: 420px" %}
 
 > 국내 서비스 중 가장 유명한 온라인 코딩테스트 서비스 / 수많은 프로그래밍 문제를 풀고 온라인으로 채점 받을 수 있음
 
-<div class="small-image" style="max-width: 420px">
-  <a href="https://programmers.co.kr/" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/programmers_bookmark.png --alt 프로그래머스 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/programmers_bookmark.png --alt 프로그래머스 --link https://programmers.co.kr/ --a class="small-image" --img style="max-width: 420px" %}
 
 > Kakao/Line/Naver 등 많은 회사에서 사용 중인 코딩테스트 서비스
 
-<div class="small-image" style="max-width: 420px">
-  <a href="https://leetcode.com/" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/leetcode_bookmark.png --alt LeetCode %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/leetcode_bookmark.png --alt LeetCode --link https://leetcode.com/ --a class="small-image" --img style="max-width: 420px" %}
 
 > 글로벌에서 가장 유명한 코딩테스트 서비스
 
@@ -113,7 +103,7 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
 조금 더 구체적인 예를 위해 22년 동안 개발자 지원 서류를 수천 건은 검토하고, 면접을 최소 일천 번 이상 보신 [남세동님께서 작성하신 기초 질문들](https://www.facebook.com/dgtgrade/posts/3654195844639255)을 볼까요? 
 
 
-<a href="https://www.facebook.com/dgtgrade/posts/3654195844639255" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/question.png --alt 남세동님 글 %}</a>
+{% picture /assets/article_images/2021-06-27-study-guide/question.png --alt 남세동님 글 --link https://www.facebook.com/dgtgrade/posts/3654195844639255 %}
 
 1. 1바이트는 몇 비트인가요?
 2. 1픽셀은 몇바이트인가요?
@@ -200,13 +190,9 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
 
 다음은 스터디 모임/모각코를 찾을 수 있는 서비스입니다.
 
-<div class="small-image" style="max-width: 420px">
-  <a href="https://okky.kr/articles/gathering" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/okky_study_bookmark.png --alt OKKY - 정기모임/스터디 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/okky_study_bookmark.png --alt OKKY - 정기모임/스터디 --link https://okky.kr/articles/gathering --a class="small-image" --img style="max-width: 420px" %}
 
-<div class="small-image" style="max-width: 420px">
-  <a href="https://www.facebook.com/search/top/?q=%EB%AA%A8%EA%B0%81%EC%BD%94" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/fb_study_bookmark.png --alt 페이스북 - 모각코 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/fb_study_bookmark.png --alt 페이스북 - 모각코 --link https://www.facebook.com/search/top/?q=%EB%AA%A8%EA%B0%81%EC%BD%94 --a class="small-image" --img style="max-width: 420px" %}
 
 ### 온라인 강의
 
@@ -216,21 +202,15 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
 
 요즘 부쩍 온라인 강의 서비스들이 많아졌는데, 경험했던 서비스 위주로 소개합니다.
 
-<div class="small-image" style="max-width: 420px">
-  <a href="https://opentutorials.org/course/1" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/open_bookmark.png --alt 생활코딩 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/open_bookmark.png --alt 생활코딩 --link https://opentutorials.org/course/1 --a class="small-image" --img style="max-width: 420px" %}
 
 > 초보자를 대상으로 개발의 기초가 되는 부분을 자세히 설명해줌
 
-<div class="small-image" style="max-width: 420px">
-  <a href="https://tacademy.skplanet.com" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/tacademy_bookmark.png --alt T 아카데미 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/tacademy_bookmark.png --alt T 아카데미 --link https://tacademy.skplanet.com --a class="small-image" --img style="max-width: 420px" %}
 
 > 인공지능, 데이터 사이언스, 프로그램 관련 양질의 강의를 무료로 들을 수 있음
 
-<div class="small-image" style="max-width: 420px">
-  <a href="https://www.inflearn.com/" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/inflearn_bookmark.png --alt 인프런 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/inflearn_bookmark.png --alt 인프런 --link https://www.inflearn.com/ --a class="small-image" --img style="max-width: 420px" %}
 
 > 부담 없는 가격에 유명 강사의 고퀄리티 강의가 많음 / 제가 만든 <a href="https://www.inflearn.com/course/도커-입문?inst=446961aa" target="_blank">도커</a>와 <a href="https://www.inflearn.com/course/쿠버네티스-입문?inst=bc9bb710" target="_blank">쿠버네티스</a> 강의도 들어보세요 ~~중간광고~~
 
@@ -248,9 +228,7 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
 
 주요 컨퍼런스는 다음 링크에서 확인하세요!
 
-<div class="small-image" style="max-width: 420px">
-  <a href="https://www.44bits.io/ko/post/replay-2020-korea-it-conferences" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/44bits_conf_bookmark.png --alt 2020 한국의 주요 IT 컨퍼런스 다시 보기 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/44bits_conf_bookmark.png --alt 2020 한국의 주요 IT 컨퍼런스 다시 보기 --link https://www.44bits.io/ko/post/replay-2020-korea-it-conferences --a class="small-image" --img style="max-width: 420px" %}
 
 ### 책
 
@@ -258,9 +236,7 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
 
 **기본 소양**
 
-<div class="small-image" style="max-width: 420px">
-  <a href="https://www.44bits.io/ko/post/replay-2020-korea-it-conferences" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/44bits_conf_bookmark.png --alt 2020 한국의 주요 IT 컨퍼런스 다시 보기 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/44bits_conf_bookmark.png --alt 2020 한국의 주요 IT 컨퍼런스 다시 보기 --link https://www.44bits.io/ko/post/replay-2020-korea-it-conferences --a class="small-image" --img style="max-width: 420px" %}
 
 
 <div class="small-image" style="max-width: 200px">
@@ -313,82 +289,56 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
 
 > 유닉스가 무엇인지, 어떤 이유로 개발 되었는지, 어떤 과정을 거쳐 발전했는지 정말 생생하게 느낄 수 있는 책
 
-<div class="small-image" style="max-width: 200px">
-    <a href="http://naver.me/FEJTzTMe" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/book_painter.jpg --alt 해커와 화가 (폴 그레이엄/한빛미디어) %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/book_painter.jpg --alt 해커와 화가 (폴 그레이엄/한빛미디어) --link http://naver.me/FEJTzTMe --a class="small-image" --img style="max-width: 200px" %}
 
 > Y Combinator의 폴 그레이엄의 에세이 형식의 프로그래밍 이야기
 
-<div class="small-image" style="max-width: 200px">
-    <a href="http://naver.me/GROTg4au" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/book_founder.jpg --alt 세상을 바꾼 32개의 통찰 (제시카 리빙스턴/크리에디트) %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/book_founder.jpg --alt 세상을 바꾼 32개의 통찰 (제시카 리빙스턴/크리에디트) --link http://naver.me/GROTg4au --a class="small-image" --img style="max-width: 200px" %}
 
 > 지금은 사라진 서비스도 있지만, 21세기를 바꾼 서비스가 어떻게 만들어졌는지 알 수 있는 책
 
-<div class="small-image" style="max-width: 200px">
-    <a href="http://naver.me/GZAryBoT" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/book_http.jpeg --alt HTTP 완벽 가이드 (데이빗 고울리 외/인사이트) %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/book_http.jpeg --alt HTTP 완벽 가이드 (데이빗 고울리 외/인사이트) --link http://naver.me/GZAryBoT --a class="small-image" --img style="max-width: 200px" %}
 
 > HTTP 규약이 어떻게 작동하고 웹 기반 애플리케이션을 개발하는 데 어떻게 사용하는지 소개하는 책
 
-<div class="small-image" style="max-width: 200px">
-    <a href="http://naver.me/5mYNQ5sJ" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/book_test.jpg --alt 테스트 주도 개발 (켄트 벡/인사이트) %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/book_test.jpg --alt 테스트 주도 개발 (켄트 벡/인사이트) --link http://naver.me/5mYNQ5sJ --a class="small-image" --img style="max-width: 200px" %}
 
 > 테스트 주도 개발의 교과서
 
-<div class="small-image" style="max-width: 200px">
-    <a href="http://naver.me/F7C0TKU5" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/book_extreme.jpg --alt 익스트림 프로그래밍 (켄트 벡/인사이트) %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/book_extreme.jpg --alt 익스트림 프로그래밍 (켄트 벡/인사이트) --link http://naver.me/F7C0TKU5 --a class="small-image" --img style="max-width: 200px" %}
 
 > XP의 소개와 철학 안내
 
 이 외에도 좋은 책이 많지만, 너무 길어지는 것 같아 별도 페이지로 공유합니다.
 
 
-<div class="small-image" style="max-width: 420px">
-    <a href="https://mysetting.io/books" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/mysetting_book_bookmark.png --alt mysetting - 책소개 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/mysetting_book_bookmark.png --alt mysetting - 책소개 --link https://mysetting.io/books --a class="small-image" --img style="max-width: 420px" %}
 
 ### 유투브
 
 유투브는 많이 안보지만.. 알고 있는 몇 가지 채널을 추천합니다.
 
-<div class="small-image" style="max-width: 420px">
-    <a href="https://www.youtube.com/channel/UC-TpdzGorF3igglmjCWQhMA" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/youtube_44bits.png --alt 44bits - 인프라 전문 방송 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/youtube_44bits.png --alt 44bits - 인프라 전문 방송 --link https://www.youtube.com/channel/UC-TpdzGorF3igglmjCWQhMA --a class="small-image" --img style="max-width: 420px" %}
 
-<div class="small-image" style="max-width: 420px">
-    <a href="https://www.youtube.com/channel/UCSEOUzkGNCT_29EU_vnBYjg" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/youtube_gae.png --alt 개발바닥 - 본격 개발자 토크쇼 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/youtube_gae.png --alt 개발바닥 - 본격 개발자 토크쇼 --link https://www.youtube.com/channel/UCSEOUzkGNCT_29EU_vnBYjg --a class="small-image" --img style="max-width: 420px" %}
 
-<div class="small-image" style="max-width: 420px">
-    <a href="https://www.youtube.com/channel/UCSqtYUDXgy7RmpMazTMFSHQ" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/youtube_john.png --alt 존잡생각 - 솔직담백 실리콘벨리 이야기 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/youtube_john.png --alt 존잡생각 - 솔직담백 실리콘벨리 이야기 --link https://www.youtube.com/channel/UCSqtYUDXgy7RmpMazTMFSHQ --a class="small-image" --img style="max-width: 420px" %}
 
-<div class="small-image" style="max-width: 420px">
-    <a href="https://www.youtube.com/channel/UCUpJs89fSBXNolQGOYKn0YQ" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/youtube_nomad.png --alt 노마드코더 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/youtube_nomad.png --alt 노마드코더 --link https://www.youtube.com/channel/UCUpJs89fSBXNolQGOYKn0YQ --a class="small-image" --img style="max-width: 420px" %}
 
 ### 팟캐스트
 
 이동 중일 때 편하게 들으세요. 개발 팟캐스트는 44bit를 추천합니다 :)
 
-<div class="small-image" style="max-width: 420px">
-    <a href="http://stdout.fm/" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/podcast_44bits.png --alt 44BITS 팟캐스트 - 클라우드, 개발, 가젯 %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/podcast_44bits.png --alt 44BITS 팟캐스트 - 클라우드, 개발, 가젯 --link http://stdout.fm/ --a class="small-image" --img style="max-width: 420px" %}
 
 ### 트위터
 
 가장 핫한 트랜드 소식을 빠르게 접할 수 있는 트위터입니다. 막상 팔로우하면 개발 이야기 말고 잡담을 많이 들을 수도 있습니다만...
 
-<div class="small-image" style="max-width: 420px">
-    <a href="https://twitter.com/subicura" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/twitter_subicura.png --alt @subicura - 저에요 🙋‍♂️ 팔로우~ %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/twitter_subicura.png --alt @subicura - 저에요 🙋‍♂️ 팔로우~ --link https://twitter.com/subicura --a class="small-image" --img style="max-width: 420px" %}
 
-<div class="small-image" style="max-width: 420px">
-    <a href="https://twitter.com/i/lists/1391902781192110080" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/twitter_korean_developer.png --alt Korean Developers List %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/twitter_korean_developer.png --alt Korean Developers List --link https://twitter.com/i/lists/1391902781192110080 --a class="small-image" --img style="max-width: 420px" %}
 
 ## 디테일을 높이자
 
@@ -497,14 +447,11 @@ WEB 2.0 시대가 지나고 웹 기술이 폭발적으로 성장하면서 예전
 
 마지막으로 한번더, 퍼플아이오에서 적극적으로 채용을 하고 있습니다. 열정 있는 신입/경력 개발자를 찾습니다. 구경 오세요~!
 
-<div class="small-image" style="max-width: 420px">
-    <a href="https://purple.io" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/purpleio_bookmark.png %}</a>
-</div>
+{% picture /assets/article_images/2021-06-27-study-guide/purpleio_bookmark.png --link https://purple.io --a class="small-image" --img style="max-width: 420px" %}
 
 ---
 
 `AD` 기술, 개발 환경, 이력을 모아 나만의 프로필을 만들고 개발 관련 팁을 쉽게 공유하고 널리 알릴 수 있는 개발자들을 위한 서비스는 없을까?
 
-<div class="small-image" style="max-width: 420px">
-    <a href="https://mysetting.io" target="_blank">{% picture /assets/article_images/2021-06-27-study-guide/mysetting.png %}</a>
+{% picture /assets/article_images/2021-06-27-study-guide/mysetting.png --link https://mysetting.io --a class="small-image" --img style="max-width: 420px" %}
 </div>
