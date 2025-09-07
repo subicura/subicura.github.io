@@ -2,3 +2,16 @@
   font-family: "D2Coding", "NerdFontsSymbols Nerd Font", Menlo, Consolas,
     "Bitstream Vera Sans Mono", monospace;
 }
+
+
+.message {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  background-color: #fefefe;
+  line-height: 160%;
+  margin: 0 0 20px;
+}

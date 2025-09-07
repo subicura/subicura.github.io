@@ -67,6 +67,7 @@ ruby와 sinatra에 대해 전혀 모르더라도 `Gemfile`은 패키지를 관�
 {% highlight bash linenos %}
 bundle install            # install package
 bundle exec ruby app.rb   # Run sinatra
+{% endhighlight %}
 
 {% asciinema path: 'asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json', title: 'run-sinatra' %}
 

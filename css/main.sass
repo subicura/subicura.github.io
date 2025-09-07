@@ -1,12 +1,14 @@
 ---
 ---
 
-@import 'syntax-highlighting'
-
-@import 'bourbon/bourbon'
-
+// Clearfix implementation
 .cf
-  @include clearfix
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
 
 $rs: 16px
 
@@ -53,8 +55,8 @@ body
   .logo
     display: block
     position: absolute
-    top: $rs/2
-    left: $rs/2
+    top: calc($rs / 2)
+    left: calc($rs / 2)
     width: $rs*2
     height: $rs*2
     background-size: cover
@@ -82,7 +84,7 @@ body
   margin: 0 auto
   position: relative
   padding: 0
-  @include box-sizing(border-box)
+  box-sizing: border-box
   @include respond-to(800)
     padding: 0 $rs
   .blog-logo
@@ -103,7 +105,7 @@ body
     box-shadow: 0 1px 1px rgba(0,0,0,0.3)
   .blog-title
     margin: 0
-    padding: $rs*5.25 $rs $rs/2
+    padding: $rs*5.25 $rs calc($rs / 2)
     font-size: 40px
     text-align: center
     font-weight: 400
@@ -115,7 +117,7 @@ body
   .blog-description
     margin: 0 0 20px
     padding: 0 $rs*2
-    font-size: $rs/8*9
+    font-size: calc($rs / 8 * 9)
     line-height: 1.5
     color: #666
     text-align: center
@@ -147,7 +149,7 @@ body
   margin: 0 auto
   word-wrap: break-word
   word-break: break-all
-  @include box-sizing(border-box)
+  box-sizing: border-box
   @include respond-to(800)
     padding: 0 $rs*1.5
   article
@@ -232,7 +234,7 @@ body
   padding: 16px 0
   span
     color: #b3b3b1
-    font-size: $rs/8*5
+    font-size: calc($rs / 8 * 5)
     text-transform: uppercase
     letter-spacing: 1px
 
@@ -243,7 +245,7 @@ body
 .pagination
   text-align: center
   padding: $rs*3 0 0
-  font-size: $rs/4*3
+  font-size: calc($rs / 4 * 3)
   a
     color: #999
     text-decoration: none
@@ -273,7 +275,7 @@ body
   padding: $rs*3 0
   width: 100%
   max-width: 640px
-  font-size: $rs/4*3
+  font-size: calc($rs / 4 * 3)
   text-align: center
   color: #999
   line-height: $rs*1.1
@@ -343,7 +345,7 @@ body
       right: 30%
       z-index: 9
       font-family: $font-sans
-      @include box-sizing(border-box)
+      box-sizing: border-box
       @include respond-to(800)
         left: $rs
         right: $rs
@@ -602,7 +604,7 @@ body
     .isLeft
       float: left
       width: 47%
-      @include box-sizing(border-box)
+      box-sizing: border-box
       @include respond-to(800)
         width: 100%
         padding-bottom: $rs*2
@@ -641,7 +643,7 @@ body
     .isRight
       float: right
       width: 47%
-      @include box-sizing(border-box)
+      box-sizing: border-box
       @include respond-to(800)
         width: 100%
       .index-headline
@@ -751,7 +753,7 @@ body
     .blog-description
       margin: 0 0 50px
       padding: 0 $rs*2
-      font-size: $rs/8*9
+      font-size: calc($rs / 8 * 9)
       line-height: 1.5
       color: #fff
       text-align: center
