@@ -80,6 +80,6 @@ social:
 #    share_title:
 #    share_link:
 
-top_banner:
-  title: 📔 쿠버네티스 안내서
-  link: https://subicura.com/k8s/?utm_source=subicura.com&utm_medium=banner&utm_campaign=blog
+# top_banner:
+#   title: 📔 쿠버네티스 안내서
+#   link: https://subicura.com/k8s/?utm_source=subicura.com&utm_medium=banner&utm_campaign=blog
