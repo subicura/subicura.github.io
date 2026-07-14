@@ -6,9 +6,339 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 08 Sep 2025 01:27:38 +0900</pubDate>
-    <lastBuildDate>Mon, 08 Sep 2025 01:27:38 +0900</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2026 07:41:59 +0900</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2026 07:41:59 +0900</lastBuildDate>
     <generator>Jekyll v4.3.4</generator>
+    
+      <item>
+        <title>개발 자동화에서 조직 AX까지</title>
+        <description>&lt;p&gt;오랫동안 테스트했던 사내 배포 시스템을 드디어 운영 환경에 배포했습니다.&lt;/p&gt;
+
+&lt;p&gt;이제 누구나 AI로 앱을 만들고 공개 범위만 정한 뒤 “배포해줘~”라고 하면, 자동으로 보안 점검을 거쳐 내부망에 배포하고 사내에 공유할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이 글은 배포 시스템의 완성을 계기로 돌아본, 지난 1년간의 &lt;strong&gt;전사 AX(AI Transformation) 여정&lt;/strong&gt;입니다. 다양한 의견은 언제나 환영합니다 ㅎ&lt;/p&gt;
+
+&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
+                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+            &lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;ai의-등장&quot;&gt;AI의 등장&lt;/h2&gt;
+
+&lt;p&gt;2025년 초까지 개발하면서 GitHub Copilot이나 ChatGPT, Claude의 도움을 조금씩 받고 있었습니다. 그때까지만 해도 개발은 어디까지나 개발자가 하고, AI는 옆에서 약간의 도움을 주는 보조적인 역할이었습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/claude-code.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/claude-code-400-5924eece2.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/claude-code-600-5924eece2.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/claude-code-793-5924eece2.webp 793w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/claude-code-400-9517b62ef.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/claude-code-600-9517b62ef.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/claude-code-793-9517b62ef.png 793w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/claude-code-793-9517b62ef.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;그러다가 2025년 하반기, Claude Opus 4.1이 나오면서 엄청난 충격을 받았습니다. AI가 &lt;strong&gt;보조적인 역할에서 완전히 ‘메인’이 되는 순간&lt;/strong&gt;이었습니다. Sonnet과 Opus의 체급 차이는 엄청났고, 난생처음으로 AI 구독에 월 $200짜리 플랜을 2개씩 구매해서 사용하기 시작했습니다. (구독에 $400이라니 말도 안 되게 비싸 보였지만, 개발자 인건비를 생각하면 한없이 혜자스러운 가격입니다.) Claude Code에 너무 감동받아 무려 4년 만에 블로그 글(&lt;a href=&quot;https://subicura.com/2025/09/08/ai-coding.html&quot;&gt;초보를 위한 Claude Code 안내서&lt;/a&gt;)을 쓰기도 했습니다. 새롭게 쏟아지는 AI 소식들이 재밌어서 계속 밤샜던 기억이 납니다.&lt;/p&gt;
+
+&lt;p&gt;이때부터 AI가 미친 듯이 발전하고 다양한 툴이 쏟아져 나오기 시작했습니다. &lt;a href=&quot;https://blog.google/innovation-and-ai/products/nano-banana-pro/&quot;&gt;Nano Banana Pro&lt;/a&gt; 한글 품질의 충격, &lt;a href=&quot;https://www.typeless.com/&quot;&gt;Typeless&lt;/a&gt; 음성인식의 부드러움, 마치 사람처럼 끝까지 요청한 일을 해내는 &lt;a href=&quot;https://openclaw.ai/&quot;&gt;OpenClaw&lt;/a&gt;, 그리고 Claude에서 플러그인을 하나 만들면 &lt;a href=&quot;https://www.thelec.kr/news/articleView.html?idxno=51898&quot;&gt;SaaS 업체 주가가 폭락&lt;/a&gt;하는 충격까지… 이제 개발을 넘어 모든 업무에 AI를 적용할 수 있게 되었습니다. 그전까지는 메일 초안을 도와주거나 이미지를 생성하는 수준이었다면, 이제는 내가 가진 데이터와 맥락(Context)에 접근하고 실제 액션까지 수행하게 되었습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;세-가지-시도&quot;&gt;세 가지 시도&lt;/h2&gt;
+
+&lt;p&gt;2026년 초, 도대체 어디까지 AI를 적용할 수 있을지 궁금했습니다. 그래서 몇 가지 테스트를 진행했습니다.&lt;/p&gt;
+
+&lt;p&gt;첫 번째, 개발 업무 중 몇 %를 자동화할 수 있을까?&lt;br /&gt;
+두 번째, 기존 시스템을 차세대 버전으로 마이그레이션할 때 얼마나 효율적일까?&lt;br /&gt;
+세 번째, 신규 서비스 개발을 얼마나 안정적으로 빠르게 할 수 있을까?&lt;/p&gt;
+
+&lt;h3 id=&quot;첫-번째-개발-자동화-테스트-결과는-충격적이었습니다&quot;&gt;첫 번째, 개발 자동화 테스트 결과는 충격적이었습니다.&lt;/h3&gt;
+
+&lt;p&gt;제가 일하고 있는 퍼플아이오에서는 Asana를 태스크 관리 시스템으로, GitLab을 소스 저장소로, 배포는 작업별로 Branch를 따는 &lt;a href=&quot;https://docs.github.com/ko/get-started/using-github/github-flow&quot;&gt;GitHub Flow&lt;/a&gt; 개발 방식을 사용하고 있습니다. Asana에 요청 사항이 들어오면 세부적으로 추가 논의를 하고, 태스크 번호로 Branch를 따서 작업 및 테스트를 거쳐 최종 배포하는 방식입니다. Branch = PR(Pull Request)이 곧 하나의 작업 단위입니다.&lt;/p&gt;
+
+&lt;p&gt;자동화 성능 테스트를 위해 최근 완료된 PR 180건을 샘플링해서 Diff 코드를 저장했습니다. 그리고 각 PR의 시작 시점 Git 코드를 가져와서, 오직 Asana 태스크만 보고 사람의 개입 없이 AI에게 PR을 작성하게 했습니다. 그리고 그 결과 Diff를 서로 비교했습니다.&lt;/p&gt;
+
+&lt;p&gt;결과는 사람이 작성한 코드와 AI가 작성한 코드의 평균 구현 일치도가 70%였습니다(태스크 설명이 제대로 작성된 구현 가능 PR 110건 기준). 100% 일치한 게 30개(태스크 설명이 상세한 PR의 23%), 90% 이상 거의 일치한 게 38개였습니다.
+실패의 원인은 대부분 ‘태스크 설명이 부실해서’였고, &lt;strong&gt;문제는 AI가 아니라 요구사항 정의&lt;/strong&gt;였습니다.&lt;/p&gt;
+
+&lt;p&gt;다음은 실제 벤치마크 결과 보고서 일부입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/pr-1.jpg&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-1-400-27fc2559f.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/pr-1-600-27fc2559f.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/pr-1-800-27fc2559f.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/pr-1-1000-27fc2559f.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-1-400-8644ba06a.jpg 400w, /generated/assets/article_images/2026-07-14-ax-journey/pr-1-600-8644ba06a.jpg 600w, /generated/assets/article_images/2026-07-14-ax-journey/pr-1-800-8644ba06a.jpg 800w, /generated/assets/article_images/2026-07-14-ax-journey/pr-1-1000-8644ba06a.jpg 1000w&quot; type=&quot;image/jpeg&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-1-800-8644ba06a.jpg&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/pr-2.jpg&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-2-400-61f925d30.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/pr-2-600-61f925d30.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/pr-2-800-61f925d30.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/pr-2-1000-61f925d30.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-2-400-af8d6bb0b.jpg 400w, /generated/assets/article_images/2026-07-14-ax-journey/pr-2-600-af8d6bb0b.jpg 600w, /generated/assets/article_images/2026-07-14-ax-journey/pr-2-800-af8d6bb0b.jpg 800w, /generated/assets/article_images/2026-07-14-ax-journey/pr-2-1000-af8d6bb0b.jpg 1000w&quot; type=&quot;image/jpeg&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-2-800-af8d6bb0b.jpg&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/pr-3.jpg&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-3-400-a99cdc43b.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/pr-3-600-a99cdc43b.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/pr-3-800-a99cdc43b.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/pr-3-1000-a99cdc43b.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-3-400-80bdefd30.jpg 400w, /generated/assets/article_images/2026-07-14-ax-journey/pr-3-600-80bdefd30.jpg 600w, /generated/assets/article_images/2026-07-14-ax-journey/pr-3-800-80bdefd30.jpg 800w, /generated/assets/article_images/2026-07-14-ax-journey/pr-3-1000-80bdefd30.jpg 1000w&quot; type=&quot;image/jpeg&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-3-800-80bdefd30.jpg&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/pr-4.jpg&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-4-400-daf607c9e.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/pr-4-600-daf607c9e.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/pr-4-800-daf607c9e.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/pr-4-1000-daf607c9e.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-4-400-af9998d60.jpg 400w, /generated/assets/article_images/2026-07-14-ax-journey/pr-4-600-af9998d60.jpg 600w, /generated/assets/article_images/2026-07-14-ax-journey/pr-4-800-af9998d60.jpg 800w, /generated/assets/article_images/2026-07-14-ax-journey/pr-4-1000-af9998d60.jpg 1000w&quot; type=&quot;image/jpeg&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/pr-4-800-af9998d60.jpg&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;두-번째-기존-레거시-시스템을-그대로-옮기는-것도-충격적이었습니다&quot;&gt;두 번째, 기존 레거시 시스템을 그대로 옮기는 것도 충격적이었습니다.&lt;/h3&gt;
+
+&lt;p&gt;우리가 만든 CMS는 오래된 이슈가 있었습니다. 나름 Next.js에 React 구조였기 때문에 당장 큰 불편함은 없었지만, 한 번 크게 개선해야겠다는 생각은 하고 있었습니다. 보통 이런 작업은 우선순위가 낮아 방치되기 마련인데, AI를 활용해 보기로 했습니다.&lt;/p&gt;
+
+&lt;p&gt;AI에게 전체 소스코드 접근 권한을 주고 브라우저로 페이지를 분석하게 했습니다. AI가 브라우저를 띄우고 CMS에 접근한 뒤, 사용자가 로그인할 때까지 기다렸다가 마이그레이션할 페이지들에 접속하여 각 화면과 네트워크 요청을 분석하라고 시켰습니다. 그리고 각 페이지 스크린샷을 찍고 UI 구조, 컴포넌트, 데이터 모델링, API 호출, 상태 관리 등을 정리해 달라고 했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-analyze-content.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-content-400-6a154ca57.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-content-600-6a154ca57.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-content-800-6a154ca57.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-content-1000-6a154ca57.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-content-400-58d8bf040.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-content-600-58d8bf040.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-content-800-58d8bf040.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-content-1000-58d8bf040.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-content-800-58d8bf040.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-analyze-plan.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-plan-400-1753bd27e.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-plan-600-1753bd27e.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-plan-800-1753bd27e.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-plan-1000-1753bd27e.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-plan-400-0e681611d.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-plan-600-0e681611d.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-plan-800-0e681611d.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-plan-1000-0e681611d.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-plan-800-0e681611d.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-analyze-data-model.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-data-model-400-31f9a53b8.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-data-model-600-31f9a53b8.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-data-model-800-31f9a53b8.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-data-model-1000-31f9a53b8.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-data-model-400-9983a6e2b.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-data-model-600-9983a6e2b.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-data-model-800-9983a6e2b.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-data-model-1000-9983a6e2b.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-data-model-800-9983a6e2b.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-analyze-api.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-api-400-989015d50.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-api-600-989015d50.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-api-800-989015d50.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-api-1000-989015d50.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-api-400-bf3188d91.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-api-600-bf3188d91.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-api-800-bf3188d91.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-api-1000-bf3188d91.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-api-800-bf3188d91.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-analyze-component.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-component-400-168175659.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-component-600-168175659.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-component-800-168175659.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-component-1000-168175659.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-component-400-7ba92b579.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-component-600-7ba92b579.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-component-800-7ba92b579.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-component-1000-7ba92b579.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-analyze-component-800-7ba92b579.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;보통 AI가 만든 결과가 이상한 건 “내 맘에 안 들어서”입니다. &lt;strong&gt;내 맘에 안 드는 이유는 요청을 모호하게 했기 때문&lt;/strong&gt;이고(예: “기획전 관리 기능 만들어줘”), 반대로 ‘기존 페이지 소스코드와 화면’ 자체가 완벽한 기획서가 될 수 있다면 결과는 거의 의도한 대로 나옵니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-generate-after-1.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-1-400-6002fd508.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-1-600-6002fd508.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-1-800-6002fd508.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-1-1000-6002fd508.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-1-400-f20300d7e.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-1-600-f20300d7e.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-1-800-f20300d7e.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-1-1000-f20300d7e.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-1-800-f20300d7e.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-generate-after-2.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-2-400-283cfd253.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-2-600-283cfd253.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-2-800-283cfd253.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-2-1000-283cfd253.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-2-400-f75cf1184.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-2-600-f75cf1184.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-2-800-f75cf1184.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-2-1000-f75cf1184.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-generate-after-2-800-f75cf1184.png&quot; alt=&quot;좌=기존, 우=AI&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;내부 데이터가 있어 전부 공개할 순 없지만, 기본 기능은 완벽하게 동작했습니다. &lt;del&gt;지금 봐도 싱기..&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;이제 코드를 잘 타이핑하는 것보다 기능을 어떻게 명확히 정의하느냐가 더 중요해졌습니다. (Spec이 짱이다!)&lt;/p&gt;
+
+&lt;p&gt;이후 내부에서 큰 규모의 차세대 기능 마이그레이션 프로젝트가 있었는데, 기존 계획 대비 절반도 안 되는 리소스로 완료하고 안정적으로 운영 중입니다. 가장 시간이 많이 걸린 건 코딩이 아니라 기존 로직을 .md 파일로 정리하고 테스트 케이스를 빠짐없이 짜는 작업이었습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;세-번째-신규-서비스-개발도-충격적이었습니다&quot;&gt;세 번째, 신규 서비스 개발도 충격적이었습니다.&lt;/h3&gt;
+
+&lt;p&gt;요구사항(Spec)만 잘 정의하면 구현은 원하는 대로 나왔기 때문에, 신규 시스템 구축도 훨씬 효율적으로 할 수 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;기존에 요구사항 분석 -&amp;gt; 기획 -&amp;gt; 설계 -&amp;gt; 구현 -&amp;gt; 데모라는 긴 과정이 있었다면, 이제는 요구사항을 받자마자 그걸 세계 최고 수준의 전문가(넌 글로벌 탑티어 회사의 기획자야!)가 기획하고 개발까지 완료해서 첫 미팅부터 동작하는 데모를 보여주고 피드백을 받는 게 가능해졌습니다.&lt;/p&gt;
+
+&lt;p&gt;요구사항(3-4줄)을 받으면 그걸 바탕으로 PRD(제품 요구사항 정의서)를 만들고, 그 파일을 바탕으로 기능 명세를 정의한 뒤, 기능별 페이지, UI/Component, API/모델 설계, 사용자 Flow를 한 번에 생성하라고 했습니다. 그걸 사용자가 검토하고 승인하면 그대로 Ralph Loop으로 밤새 코드를 짭니다. 명세 보고 구현하고 제대로 짰는지 체크하고 다시 검증하라고 하면 구현만 6시간 정도 걸렸던 것 같습니다. &lt;del&gt;나는 잘 테니 넌 일해라&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-gen-task.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-gen-task-400-6c76fc124.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-gen-task-600-6c76fc124.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-gen-task-800-6c76fc124.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-gen-task-1000-6c76fc124.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-gen-task-400-778f11aa2.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-gen-task-600-778f11aa2.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-gen-task-800-778f11aa2.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-gen-task-1000-778f11aa2.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-gen-task-800-778f11aa2.png&quot; alt=&quot;Ralph Loop 작업의 흔적. build 1회 / 검증 3회를 돌렸다.&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;아래 화면은 그렇게 매장관리 시스템 초안을 잡은 모습입니다. (모두 가상 데이터입니다.)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-plan.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-plan-400-e5accd3b2.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-600-e5accd3b2.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-800-e5accd3b2.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-1000-e5accd3b2.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-plan-400-f4e48dc1e.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-600-f4e48dc1e.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-800-f4e48dc1e.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-1000-f4e48dc1e.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-plan-800-f4e48dc1e.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-plan-after.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-plan-after-400-10191aadd.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-after-600-10191aadd.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-after-800-10191aadd.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-after-1000-10191aadd.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-plan-after-400-ccd96f950.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-after-600-ccd96f950.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-after-800-ccd96f950.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-plan-after-1000-ccd96f950.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-plan-after-800-ccd96f950.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;첫 미팅 때 &lt;strong&gt;이미 동작하는 화면을 보고 이야기하니 개선이나 방향성을 잡기&lt;/strong&gt; 훨씬 쉬웠습니다. 최종 완성 버전은 초기와 달라졌지만, 이 역시 기존 계획 대비 절반의 리소스로 구현했고 AI 분석 기능을 추가하여 더 강력한 기능을 제공하게 되었습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;전사적-선언&quot;&gt;전사적 선언&lt;/h2&gt;
+
+&lt;p&gt;AI 성능에 강한 확신&lt;del&gt;3 충격&lt;/del&gt;을 얻고 2026년 초, 회사의 방향을 AX로 정의했습니다. 밥 먹는 거 빼고 모오오오든 업무를 자동화하고 연말까지 인당 생산성을 200% 올리는 걸 목표로, 개인과 조직이 일하는 방식을 완전히 바꾸기로 했습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;AI가 못하는 일은 거어어어의 없어질 것이다.
+    &lt;ul&gt;
+      &lt;li&gt;코딩을 몰라도 많은 업무를 일정 수준 이상 자동화할 수 있습니다.&lt;/li&gt;
+      &lt;li&gt;개발뿐 아니라 문서 작성, 분석, 운영, 배포, 데이터 처리까지 자동화의 대상이 됩니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;앞으로는 맥락(Context)이 핵심 자산이 될 것이다.
+    &lt;ul&gt;
+      &lt;li&gt;나의 생각과 암묵지를 끊임없이 글로 남겨야 합니다.&lt;/li&gt;
+      &lt;li&gt;내가 본 PPT, 문서, 자료를 markdown으로 저장해야 합니다.&lt;/li&gt;
+      &lt;li&gt;팀과 맥락을 공유하고, 그 맥락 위에서 AI와 함께 일해야 합니다.&lt;/li&gt;
+      &lt;li&gt;AI는 맥락을 쉽고 효과적으로 모을 수 있게 도와줘야 합니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;일단 단기적으로(한 달 내에) 할 수 있는 것부터 해보자고 사내 AI 챌린지(Quick Win)를 열었습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/quickwin-purpleio.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/quickwin-purpleio-400-d9ff94943.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/quickwin-purpleio-600-d9ff94943.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/quickwin-purpleio-800-d9ff94943.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/quickwin-purpleio-1000-d9ff94943.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/quickwin-purpleio-400-b8ec96bb3.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/quickwin-purpleio-600-b8ec96bb3.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/quickwin-purpleio-800-b8ec96bb3.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/quickwin-purpleio-1000-b8ec96bb3.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/quickwin-purpleio-800-b8ec96bb3.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://quickwin.purple.io/&quot;&gt;홈 — Purple IO AI Quick Win&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;총 28개의 프로젝트가 등록됐고, 참가자들은 평균 83%의 업무 시간 절감 효과를 확인했습니다.&lt;/p&gt;
+
+&lt;p&gt;이걸 진행하면서 다시 한번 느낀 건, 정말 &lt;strong&gt;그냥 “해줘”라고 하면 다 해준다&lt;/strong&gt;는 점입니다.&lt;/p&gt;
+
+&lt;p&gt;비개발자는 평소에 사용하던 CRM에서 지원하지 않던 기능(사이트 주소를 입력하면 스크립트를 분석해서 어떤 솔루션을 쓰는지 파악하고, 영업 리드 점수를 계산해 제안 메일 초안까지 써주는 기능)을 직접 만들었습니다.&lt;/p&gt;
+
+&lt;p&gt;개발자는 에러 알람이 오면 상세 로그를 뒤지고 관련 코드를 찾던 귀찮은 삽질을, AI가 1차 원인 분석을 끝낸 걸 확인만 한 뒤 승인하는 환경을 갖추게 되었습니다.&lt;/p&gt;
+
+&lt;p&gt;AI는 평소 하던 작업을 더 빠르게 하는 걸 넘어, 평소엔 생각도 못 했던 작업까지 가능하게 만들었습니다.&lt;/p&gt;
+
+&lt;p&gt;AI가 로컬에 있는 .md 파일을 읽고 해석하는 능력이 컨플루언스보다 낫다고 판단해 사내 정보를 옵시디언(Obsidian)에 모으기로 했습니다. 이때 가장 어려운 점은 비개발자분들에게 Git을 가르치는 일이었습니다. 누구나 문서를 작성하고 공유해야 하는데 Git CLI는 너무 높은 장벽이었습니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 5분에 한 번씩 알아서 pull/push를 하고, 충돌이 나면 별도 파일로 쪼개어 머지 컨플릭트를 방지하는 옵시디언 플러그인을 만들었습니다. 옵시디언 플러그인 개발은 처음이었는데 AI 덕분에 몇 시간 만에 뚝딱 완성했고 문제없이 잘 쓰고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/second-brain-plugin.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/second-brain-plugin-400-6864dd558.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/second-brain-plugin-600-6864dd558.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/second-brain-plugin-800-6864dd558.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/second-brain-plugin-1000-6864dd558.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/second-brain-plugin-400-3f8e9403a.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/second-brain-plugin-600-3f8e9403a.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/second-brain-plugin-800-3f8e9403a.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/second-brain-plugin-1000-3f8e9403a.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/second-brain-plugin-800-3f8e9403a.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/subicura/second-brain-plugin&quot;&gt;https://github.com/subicura/second-brain-plugin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;또한 모바일 환경에서도 끊김 없이 Claude Code 작업을 하고 싶어서 터미널과 AI 코딩 기능이 포함된 Mac 애플리케이션(PurpleMux)도 만들었습니다. 난생처음 만져보는 Electron에 터미널 에뮬레이터, tmux 연동까지 AI가 아니었으면 불가능했을 겁니다. 무려 11가지 언어를 지원하는데, 어느새 중국인 사용자도 생겼습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/purplemux.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purplemux-400-a6881d323.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/purplemux-600-a6881d323.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/purplemux-800-a6881d323.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/purplemux-1000-a6881d323.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purplemux-400-49b334294.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/purplemux-600-49b334294.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/purplemux-800-49b334294.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/purplemux-1000-49b334294.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purplemux-800-49b334294.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://subicura.com/purplemux&quot;&gt;https://subicura.com/purplemux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;지금 개발팀은 상상하던 모든 툴을 붙여 코딩의 완전 자동화를 꿈꾸고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;지금 이 시간에도 새로운 프로젝트가 등록되고 있습니다..&lt;/p&gt;
+
+&lt;details&gt;
+&lt;summary&gt;진행중인 자동화 프로젝트 보기&lt;/summary&gt;
+
+&lt;div style=&quot;padding-top: 10px&quot;&gt;
+
+    &lt;p&gt;&lt;strong&gt;Purple Pipeline&lt;/strong&gt;: Asana로 태스크가 인입되면 파이프라인 큐에 쌓이고, 기획자 -&amp;gt; 아키텍트 -&amp;gt; 디자이너 -&amp;gt; 개발자 -&amp;gt; 리뷰어 -&amp;gt; 배포자 등의 페르소나를 조합하여 업무를 끝까지 처리합니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/purple-pipeline.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-pipeline-400-e372e0091.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/purple-pipeline-600-e372e0091.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/purple-pipeline-800-e372e0091.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/purple-pipeline-1000-e372e0091.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-pipeline-400-750a6623f.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/purple-pipeline-600-750a6623f.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/purple-pipeline-800-750a6623f.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/purple-pipeline-1000-750a6623f.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-pipeline-800-750a6623f.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Purple Test&lt;/strong&gt;: E2E 테스트를 실행하고 과정을 녹화해서 결과를 확인합니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/purple-test.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-test-400-b51e1826f.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/purple-test-600-b51e1826f.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/purple-test-800-b51e1826f.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/purple-test-1000-b51e1826f.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-test-400-381978981.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/purple-test-600-381978981.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/purple-test-800-381978981.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/purple-test-1000-381978981.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-test-800-381978981.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Purple Gauge&lt;/strong&gt;: 성능 테스트 자동화 툴입니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/purple-gauge.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-gauge-400-72902048b.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/purple-gauge-600-72902048b.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/purple-gauge-800-72902048b.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/purple-gauge-1000-72902048b.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-gauge-400-e96cc0f04.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/purple-gauge-600-e96cc0f04.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/purple-gauge-800-e96cc0f04.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/purple-gauge-1000-e96cc0f04.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-gauge-800-e96cc0f04.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Purple Auth&lt;/strong&gt;: 사내 SSO 및 중앙 인증/세션 관리를 담당합니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/purple-auth.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-auth-400-b4971faa1.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/purple-auth-600-b4971faa1.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/purple-auth-800-b4971faa1.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/purple-auth-1000-b4971faa1.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-auth-400-d2048fae9.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/purple-auth-600-d2048fae9.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/purple-auth-800-d2048fae9.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/purple-auth-1000-d2048fae9.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-auth-800-d2048fae9.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;MeetNote&lt;/strong&gt;: 화자 구분이 가능한 로컬 회의록 녹음 및 옵시디언 플러그인입니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/meetnote.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/meetnote-400-03bf87694.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/meetnote-453-03bf87694.webp 453w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/meetnote-400-3dcb080c2.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/meetnote-453-3dcb080c2.png 453w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/meetnote-453-3dcb080c2.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&quot;확산과-허들&quot;&gt;확산과 허들&lt;/h2&gt;
+
+&lt;p&gt;개발팀 특성상 AI를 빨리 접했기 때문에, 자연스럽게 함께 일하는 현업 부서의 업무를 AI로 도와주기 시작했습니다. 반복 업무는 자동화 프로그램을 만들었고, 우리가 일하는 방식(Claude Code)도 그대로 전파했습니다.&lt;/p&gt;
+
+&lt;p&gt;그런데 문제는 시작부터 터졌습니다. Windows 환경에서 cmd를 난생처음 보는 분에게 Claude Code를 가르치는 건 생각보다 훨씬 어려웠습니다. 설치하고, cmd가 뭔지 설명하고, cd로 디렉토리를 이동하는 법을 알려주는 데 교육 시간의 대부분이 날아갔습니다. 이렇게 좋은 툴이 있는데 시작조차 못 하는 상황, 상상도 못한 허들이었습니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 툴을 바꿨습니다. 구글이 만든 IDE인 &lt;a href=&quot;https://antigravity.google/&quot;&gt;Antigravity&lt;/a&gt;였습니다. 에디터 형식이라 GUI 기반이고 AI Assistant를 지원하기 때문에 초보자도 바로 활용할 수 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/antigravity.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/antigravity-400-8ef60b5b3.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/antigravity-600-8ef60b5b3.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/antigravity-800-8ef60b5b3.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/antigravity-1000-8ef60b5b3.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/antigravity-400-d7781af49.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/antigravity-600-d7781af49.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/antigravity-800-d7781af49.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/antigravity-1000-d7781af49.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/antigravity-800-d7781af49.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;이 방법은 대성공이었고 초기 허들을 크게 낮출 수 있었습니다. 여기서 자연스럽게 Claude Code와 cmd 환경으로 넘어오고, 내부 데이터에 접근할 수 있는 커스텀 스킬을 배포하자 사내 자동화 앱과 대시보드가 폭발적으로 늘기 시작했습니다.&lt;/p&gt;
+
+&lt;p&gt;기존에는 단순 매출 흐름만 보여줬던 대시보드에서, 특정 쇼핑몰에서의 순위와 최근 리뷰도 모아서 보여주고, 경쟁사 인기상품도 보여주고 별도로 찾고 수작업했던 작업을 하나의 화면에 모아서 보여줍니다. 현업이 직접 만들기 때문에 뭐가 필요한지 더 잘 알고 더 유용하게 쓸 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;엑셀을 눈으로 비교하던 단순 작업이나, 매일 사람이 확인하고 지시했던 업무들이 자동화되기 시작했습니다. 가장 기분 좋은 피드백은 “4~5시간 걸리던 수작업인데, 아침에 출근하면 이미 완료되어 있어요”입니다.&lt;/p&gt;
+
+&lt;p&gt;개발자 수준의 ‘AI 챔피언’들이 탄생하고 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;진짜-문제는-따로-있었다&quot;&gt;진짜 문제는 따로 있었다&lt;/h2&gt;
+
+&lt;p&gt;하지만 판이 커지다 보니 공통적인 문제가 보였습니다. 잘 쓰는 사람은 어느새 알아서 잘하고 있지만, 그렇지 못한 많은 분들에게 여전히 허들이 남아있었습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Windows 중심의 업무 환경&lt;/li&gt;
+  &lt;li&gt;M365 / OneDrive 기반의 분산된 업무 방식&lt;/li&gt;
+  &lt;li&gt;내부 시스템 연동을 위한 까다로운 인증/기본 설정&lt;/li&gt;
+  &lt;li&gt;그리고 &lt;strong&gt;배포&lt;/strong&gt;의 어려움&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;한 땀 한 땀 개발자가 도와주면 되지만 거기엔 한계가 있습니다. 결국 스스로 자생할 수 있어야 합니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 QuickWin 때 만들었던 &lt;a href=&quot;https://quickwin.purple.io/cases/14-docsync/&quot;&gt;DocSync&lt;/a&gt;를 전면 개조하기 시작했습니다. 기본 AI Assistant 기능 위에 사내 환경에서 쓰기 좋은 것들을 하나씩 붙여 &lt;strong&gt;사내 AI 플랫폼 ‘코코(KOCO)’&lt;/strong&gt;를 만들었습니다. Claude /Claude Cowork와 거의 유사하며 최대한 사용자들이 쉽게 사용할 수 있게 설계하고 개발도 최소화했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/koco-main.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-main-400-361574778.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-main-600-361574778.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-main-800-361574778.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-main-1000-361574778.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-main-400-ddfa632ae.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-main-600-ddfa632ae.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-main-800-ddfa632ae.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-main-1000-ddfa632ae.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-main-800-ddfa632ae.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;사내 업무에 최적화되어 있고&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/koco-weather.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-weather-400-28636e905.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-weather-600-28636e905.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-weather-800-28636e905.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-weather-1000-28636e905.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-weather-400-8770565b4.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-weather-600-8770565b4.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-weather-800-8770565b4.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-weather-1000-8770565b4.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-weather-800-8770565b4.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;시각화도 이쁩니다.&lt;/p&gt;
+
+&lt;p&gt;주요 특징은 다음과 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개발 도구(nodejs) 내장, 별도 설치 필요 없음&lt;/li&gt;
+  &lt;li&gt;OneDrive / 메일 / 캘린더 연동 (묻고 답하고 생성까지)&lt;/li&gt;
+  &lt;li&gt;SAP 등 내부 데이터베이스 연계, 그룹웨어(전자결재, 지원관리 등) 연계&lt;/li&gt;
+  &lt;li&gt;스킬 및 워크플로우 공유&lt;/li&gt;
+  &lt;li&gt;바이브 코딩부터 사내망 배포까지 한 번에&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;메일, 공유 드라이브의 파일을 싱크하고 SQLite에 색인하고 암호화해서 보관합니다. 일반 사용자가 보안 걱정 없이, 복잡한 설정 없이 업무를 자동화하고 바이브 코딩까지 할 수 있게 되었습니다. 약 80명을 대상으로 3개월간 테스트하며 뜨거운 피드백을 받았고, 계속해서 업데이트 중입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/koco-guide.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-guide-400-6b6aef3d4.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-guide-600-6b6aef3d4.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-guide-800-6b6aef3d4.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-guide-1000-6b6aef3d4.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-guide-400-22fe69889.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-guide-600-22fe69889.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-guide-800-22fe69889.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-guide-1000-22fe69889.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-guide-800-22fe69889.png&quot; alt=&quot;KOCO 교육자료&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;다양한 방식으로 쓰고 있지만 최근 좋은 사례 하나만 꼽자면 ‘경영 정보 Agent’입니다.&lt;/p&gt;
+
+&lt;p&gt;재무 관련 데이터를 xlsx로 받고 월간 보고서를 한 디렉토리에 모읍니다. 그러면 커스텀 llm-wiki가 대용량의 xlsx를 &lt;a href=&quot;https://duckdb.org/&quot;&gt;DuckDB&lt;/a&gt;에 밀어 넣고 컬럼 메타데이터를 설정한 뒤, 월간 보고서는 .md로 변환해서 인덱싱합니다. 이 디렉토리를 OneDrive 공유 폴더로 만들고 담당자들이 공유받습니다. 그다음 KOCO에서 프로젝트를 만들고 “이 디렉토리를 보고 경영 정보를 알려줘”라고 지침을 넣으면 끝입니다. 최근 지표나 이슈를 물어보면 아주 정확하게 뽑아냅니다. 원래 내가 가지고 있는 파일을 기반으로 조회하는 거라 권한 이슈도 없습니다. &lt;del&gt;개이득&lt;/del&gt;.&lt;/p&gt;
+
+&lt;p&gt;그리고 여기서 가장 신경 쓴 기능 중 하나가 ‘배포’입니다. 바이브 코딩이 늘어날수록 “이거 팀에 공유하고 싶은데요”라는 요청이 점점 커져갔기 때문입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;배포&quot;&gt;배포&lt;/h2&gt;
+
+&lt;p&gt;드디어 이번 글의 메인 주제입니다.&lt;/p&gt;
+
+&lt;p&gt;요구사항은 간단했습니다. &lt;del&gt;하지만 설정은 귀츈..&lt;/del&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;내부망에 배포할 것&lt;/li&gt;
+  &lt;li&gt;배포 전에 보안 검토(Security Review)를 받을 것&lt;/li&gt;
+  &lt;li&gt;사용자별로 인증하고, 공유 범위(전체 / 일부 사용자 / 비공개)를 설정할 수 있을 것&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;최종 아키텍처는 다음과 같습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/purple-access.jpg&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-access-400-ab81470fd.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/purple-access-600-ab81470fd.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/purple-access-800-ab81470fd.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/purple-access-1000-ab81470fd.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-access-400-eb66d8195.jpg 400w, /generated/assets/article_images/2026-07-14-ax-journey/purple-access-600-eb66d8195.jpg 600w, /generated/assets/article_images/2026-07-14-ax-journey/purple-access-800-eb66d8195.jpg 800w, /generated/assets/article_images/2026-07-14-ax-journey/purple-access-1000-eb66d8195.jpg 1000w&quot; type=&quot;image/jpeg&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/purple-access-800-eb66d8195.jpg&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;먼저 배포 대상이 될 사내 EKS(Kubernetes) 환경을 구축했습니다. 배포 파이프라인은 별도 솔루션을 도입하지 않고 GitLab CI/CD를 그대로 썼습니다.&lt;/p&gt;
+
+&lt;p&gt;사용자가 “배포해줘~”라고 하면, 현재 로그인한 사용자 아이디로 GitLab에 연동 로그인하고 랜덤한 이름의 프로젝트를 생성한 뒤 파일을 전부 올립니다. 그러면 자동으로 빌드되고 배포까지 이어집니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/koco-vibe.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-vibe-400-c208f19a4.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-vibe-600-c208f19a4.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-vibe-800-c208f19a4.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-vibe-1000-c208f19a4.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-vibe-400-0b237e1fd.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-vibe-600-0b237e1fd.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-vibe-800-0b237e1fd.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-vibe-1000-0b237e1fd.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-vibe-800-0b237e1fd.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;앱을 만들고 배포 요청을 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/koco-database-1.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-database-1-400-1f9a74474.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-1-600-1f9a74474.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-1-800-1f9a74474.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-1-1000-1f9a74474.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-database-1-400-d23b4528b.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-1-600-d23b4528b.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-1-800-d23b4528b.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-1-1000-d23b4528b.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-database-1-800-d23b4528b.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/koco-database-2.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-database-2-400-42eeee78b.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-2-600-42eeee78b.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-2-800-42eeee78b.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-2-1000-42eeee78b.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-database-2-400-3b6605662.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-2-600-3b6605662.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-2-800-3b6605662.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-database-2-1000-3b6605662.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-database-2-800-3b6605662.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;데이터베이스는 기본 SQLite이고 /data 폴더를 persistence volume으로 설정했습니다.&lt;/p&gt;
+
+&lt;p&gt;보안 검토도 여기에 얹었습니다. CI/CD 파이프라인 중간에 보안 스캔 단계를 넣었고, 검토가 완료되면 Slack으로 알람이 옵니다. 실제 배포는 담당자가 한 번 더 확인하고 승인합니다. &lt;del&gt;완전 자동은 아직 좀 불안; ㅎ&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/koco-deploy.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-deploy-400-dac885787.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-deploy-600-dac885787.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-deploy-800-dac885787.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-deploy-1000-dac885787.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-deploy-400-db2d7377f.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-deploy-600-db2d7377f.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-deploy-800-db2d7377f.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-deploy-1000-db2d7377f.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-deploy-800-db2d7377f.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/koco-gitlab.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-gitlab-400-ccfc2e9c4.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-gitlab-600-ccfc2e9c4.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-gitlab-800-ccfc2e9c4.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-gitlab-1000-ccfc2e9c4.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-gitlab-400-3dc8fccbf.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-gitlab-600-3dc8fccbf.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-gitlab-800-3dc8fccbf.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/koco-gitlab-1000-3dc8fccbf.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-gitlab-800-3dc8fccbf.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;내부망 배포까지는 잘 됐는데, 마지막 퍼즐은 인증이었습니다. 전체 공개가 아니라 비공개로, 혹은 특정 사람에게만 공유하는 권한 제어 기능이 필요했습니다.&lt;/p&gt;
+
+&lt;p&gt;수많은 앱들마다 일일이 인증 코드를 넣으라고 가이드를 만들까 하다가 &lt;a href=&quot;https://www.cloudflare.com/ko-kr/sase/products/access/&quot;&gt;Cloudflare Access&lt;/a&gt;를 소개받았습니다. “오! 프록시처럼 동작하니까 모든 트래픽이 무조건 저길 거치게 하면 되는구나.”&lt;/p&gt;
+
+&lt;p&gt;그래서 ‘Purple Access’라는 자체 프록시 레이어를 만들었습니다. 이제 EKS의 Ingress ALB는 Pod을 직접 바라보지 않고 Purple Access를 바라봅니다. 인증이 안 되어 있으면 로그인 창을 띄우고, 로그인하면 접근하려는 앱에 대한 권한이 있는지 체크합니다. 있으면 통과, 없으면 block. 모든 접근은 감사 로그로 남습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/koco-public.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-public-400-885740701.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-public-600-885740701.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-public-676-885740701.webp 676w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-public-400-41376ec15.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/koco-public-600-41376ec15.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/koco-public-676-41376ec15.png 676w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/koco-public-676-41376ec15.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;예전 같으면 이런 리버스 프록시 엔진을 직접 만든다는 건 꽤 골치 아픈 일이었겠지만, 이 또한 AI의 도움으로 며칠 만에 간단히 해결했습니다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 배포 기능이 완성되었습니다. 바이브 코딩을 하고, 공개 범위를 정하고, “배포해줘~”라고 하면 보안 점검 후 내부망에 배포되고 사내에 공유됩니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;앞으로&quot;&gt;&lt;strong&gt;앞으로&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;처음에는 AI가 개발을 더 빠르게 해주는 도구라고 생각했습니다. 하지만 지난 1년 동안 가장 크게 바뀐 것은 개발 속도가 아니었습니다.&lt;/p&gt;
+
+&lt;p&gt;문제를 정의하는 방식이 바뀌었고, 지식을 남기는 방식이 바뀌었으며, 함께 일하는 방식이 바뀌었습니다.&lt;/p&gt;
+
+&lt;p&gt;특히 가장 크게 느낀 것은 &lt;strong&gt;맥락(Context)&lt;/strong&gt; 의 중요성입니다. AI는 생각보다 코드를 잘 작성하고 문서를 잘 정리합니다. 하지만 왜 이런 기능이 만들어졌는지, 어떤 배경에서 의사결정을 했는지, 앞으로 어떤 방향으로 발전해야 하는지는 결국 조직이 남긴 맥락에서만 찾을 수 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 우리는 다음 단계들을 준비 중입니다. &lt;strong&gt;없는 데이터는 모으고, 모으는 맥락은 더 정확하게 만들고, 서로 연결하는 것.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;데이터 맵을 만들어 가시성을 높인다. 연계는 데이터가 중요한 것부터 우선순위대로.&lt;/li&gt;
+  &lt;li&gt;비정형 데이터가 이메일과 로컬 PC에서 죽지 않도록, 업무의 input/output이 자연스럽게 마크다운 형태로 쌓이도록 프로세스를 리팩토링한다.&lt;/li&gt;
+  &lt;li&gt;부족한 맥락은 업무 흐름을 개선하거나 신규 시스템을 구축한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;기존 시스템을 살짝 개선 = 전자결재 AI 스크리닝 및 검수/제안 단계만 보완해도 의미있는 맥락을 데이터로 모을 수 있다고 생각합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/ai-doc.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-doc-400-f29c01c78.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-doc-600-f29c01c78.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-doc-800-f29c01c78.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-doc-1000-f29c01c78.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-doc-400-a55d67b27.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/ai-doc-600-a55d67b27.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/ai-doc-800-a55d67b27.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/ai-doc-1000-a55d67b27.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/ai-doc-800-a55d67b27.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;AI는 앞으로도 계속 발전할 것입니다. 하지만 그 AI를 얼마나 잘 활용할 수 있는지는 결국 조직이 얼마나 자신의 지식과 맥락을 축적하고 연결할 수 있는지에 달려 있다고 생각합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/article_images/2026-07-14-ax-journey/obsidian-graph.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/obsidian-graph-400-807afcc12.webp 400w, /generated/assets/article_images/2026-07-14-ax-journey/obsidian-graph-600-807afcc12.webp 600w, /generated/assets/article_images/2026-07-14-ax-journey/obsidian-graph-800-807afcc12.webp 800w, /generated/assets/article_images/2026-07-14-ax-journey/obsidian-graph-1000-807afcc12.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2026-07-14-ax-journey/obsidian-graph-400-15a82c83b.png 400w, /generated/assets/article_images/2026-07-14-ax-journey/obsidian-graph-600-15a82c83b.png 600w, /generated/assets/article_images/2026-07-14-ax-journey/obsidian-graph-800-15a82c83b.png 800w, /generated/assets/article_images/2026-07-14-ax-journey/obsidian-graph-1000-15a82c83b.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2026-07-14-ax-journey/obsidian-graph-800-15a82c83b.png&quot; alt=&quot;내 옵시디언 그래프. 그냥 이뻐서 넣어봄&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;지난 1년 동안 우리가 만든 것은 여러 개의 AI 도구와 하나의 배포 시스템이었습니다. 하지만 그 과정에서 정말 바뀐 것은 도구가 아니라 일하는 방식이었습니다.&lt;/p&gt;
+
+&lt;p&gt;이제 우리는 사람이 모든 일을 직접 처리하는 조직이 아니라, &lt;strong&gt;사람이 남긴 맥락 위에서 AI가 함께 일하는 조직&lt;/strong&gt;을 만들고 있습니다. 아직 완성된 답은 없지만, 방향은 분명합니다.&lt;/p&gt;
+
+&lt;p&gt;다음 글에서는 이 여정이 다양한 산업군에서 어떤 모습으로 이어지고 있는지 이야기해 보겠습니다.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2026/07/14/ax-journey.html</link>
+        <guid isPermaLink="true">https://subicura.com/2026/07/14/ax-journey.html</guid>
+        
+        <category>AI</category>
+        
+        <category>AX</category>
+        
+        <category>Developer</category>
+        
+        <category>Context</category>
+        
+        <category>Claude</category>
+        
+        <category>Data</category>
+        
+        
+        <category>Development</category>
+        
+      </item>
     
       <item>
         <title>초보를 위한 Claude Code 안내서</title>
@@ -5851,1046 +6181,6 @@ docker service create &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; count
         <category>Container</category>
         
         <category>Cluster</category>
-        
-        
-        <category>Docker</category>
-        
-      </item>
-    
-      <item>
-        <title>초보를 위한 도커 안내서 - 이미지 만들고 배포하기</title>
-        <description>&lt;p&gt;&lt;a class=&quot;small-image&quot; href=&quot;/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-a9ab7503a.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-a9ab7503a.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-a9ab7503a.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-a9ab7503a.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-400-b3c79c1cb.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-600-b3c79c1cb.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-1000-b3c79c1cb.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img style=&quot;max-width: 450px&quot; src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/docker-logo-800-b3c79c1cb.png&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;이 글은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;초보를 위한 도커 안내서 - 설치부터 배포까지&lt;/code&gt; 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/2017/01/19/docker-guide-for-beginners-1.html&quot;&gt;초보를 위한 도커 안내서 - 도커란 무엇인가?&lt;/a&gt; &lt;span class=&quot;series&quot;&gt;SERIES 1/3&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/2017/01/19/docker-guide-for-beginners-2.html&quot;&gt;초보를 위한 도커 안내서 - 설치하고 컨테이너 실행하기&lt;/a&gt; &lt;span class=&quot;series&quot;&gt;SERIES 2/3&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;초보를 위한 도커 안내서 - 이미지 만들고 배포하기 ✓&lt;/strong&gt; &lt;span class=&quot;series&quot;&gt;SERIES 3/3&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div align=&quot;center&quot; class=&quot;googleads googleads-content&quot;&gt;
-                &lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-2468713653725581&quot; data-ad-slot=&quot;8649023787&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
-                &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
-            &lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;도커-이미지-만들기&quot;&gt;도커 이미지 만들기&lt;/h2&gt;
-
-&lt;p&gt;도커는 이미지를 만들기 위해 &lt;strong&gt;컨테이너의 상태를 그대로 이미지로 저장&lt;/strong&gt;하는 단순하고 무식(?)한 방법을 사용합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-400-93eeb6052.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-600-93eeb6052.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-93eeb6052.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-1000-93eeb6052.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-400-eb276ad60.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-600-eb276ad60.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-eb276ad60.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-1000-eb276ad60.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/create-image-800-eb276ad60.png&quot; alt=&quot;create docker image&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;예를 들어, 어떤 애플리케이션을 이미지로 만든다면 리눅스만 설치된 컨테이너에 애플리케이션을 설치하고 그 상태를 그대로 이미지로 저장합니다. 가상머신의 스냅샷과 비스므리한 방식입니다.&lt;/p&gt;
-
-&lt;p&gt;이런 과정은 콘솔에서 명령어를 직접 입력하는 것과 별 차이가 없으므로 쉘 스크립트를 잘 알아야 하지만 좋은 샘플이 많이 &lt;a href=&quot;https://github.com/search?utf8=%E2%9C%93&amp;amp;q=dockerfile￼&quot;&gt;공개&lt;/a&gt;되어 있어 잘 몰라도 크게 걱정하지 않아도 됩니다. &lt;del&gt;복붙만세!&lt;/del&gt; 또한 컨테이너의 가벼운 특성과 레이어 개념을 이용하여 생성과 테스트를 빠르게 수행할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;이제 &lt;a href=&quot;https://www.ruby-lang.org/ko&quot;&gt;Ruby&lt;/a&gt;로 만들어진 간단한 웹 애플리케이션을 도커라이징&lt;sub&gt;Dockerizing&lt;/sub&gt;(=도커 이미지를 만듦)해보겠습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;sinatra-웹-애플리케이션-샘플&quot;&gt;Sinatra 웹 애플리케이션 샘플&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-ef6a106ba.webp 400w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-72fa34ec1.png 400w&quot; type=&quot;image/png&quot;&gt;&lt;img style=&quot;max-width: 250px&quot; class=&quot;small-image&quot; src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/sinatra-400-72fa34ec1.png&quot; alt=&quot;Sinatra&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;일단 웹 애플리케이션 소스코드를 작성해야겠죠. &lt;a href=&quot;http://www.sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;라는 가벼운 웹 프레임워크를 사용하기 위해 새로운 폴더를 만들고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.rb&lt;/code&gt;를 만듭니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Gemfile&lt;/strong&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;https://rubygems.org&apos;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;sinatra&apos;&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;app.rb&lt;/strong&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;sinatra&apos;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;socket&apos;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;/&apos;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;no&quot;&gt;Socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;gethostname&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;ruby와 sinatra에 대해 전혀 모르더라도 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;은 패키지를 관리하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.rb&lt;/code&gt;는 호스트명을 출력하는 웹 서버를 만들었다는 걸 예상할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;이제 패키지를 설치하고 서버를 실행해보겠습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;            &lt;span class=&quot;c&quot;&gt;# install package&lt;/span&gt;
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;ruby app.rb   &lt;span class=&quot;c&quot;&gt;# Run sinatra&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-sinatra.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run-sinatra&lt;/figcaption&gt;&lt;/div&gt;
-
-&lt;p&gt;ruby가 설치되어 있지 않다고요? 도커만 있으면 문제없습니다. 다음 명령어를 실행합니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker run &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 4567:4567 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;:/usr/src/app &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; /usr/src/app &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-ruby &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;bundle install &amp;amp;&amp;amp; bundle exec ruby app.rb -o 0.0.0.0&quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/run-docker-sinatra.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;run-docker-sinatra&lt;/figcaption&gt;&lt;/div&gt;
-
-&lt;p&gt;호스트의 디렉토리를 루비가 설치된 컨테이너의 디렉토리에 마운트한다음 그대로 명령어를 실행하면 로컬에 개발 환경을 구축하지 않고 도커 컨테이너를 개발환경으로 사용할 수 있습니다. &lt;del&gt;어으썸!&lt;/del&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;도커를 개발환경으로 사용하면 개발=테스트=운영이 동일한 환경에서 실행되는 놀라운 상황이 펼쳐집니다. 이 부분은 재미있는 내용이 많지만, 주제에서 벗어나므로 이 정도만 언급하고 다음 기회에 더 자세히 알아봅니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;서버가 정상적으로 실행됐으면 웹 브라우저에서 테스트해봅니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:4567&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-400-8975438a5.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-600-8975438a5.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-8975438a5.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-1000-8975438a5.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-400-c34e4f9ee.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-600-c34e4f9ee.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-c34e4f9ee.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-1000-c34e4f9ee.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img style=&quot;max-width: 500px&quot; class=&quot;small-image&quot; src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/first-test-800-c34e4f9ee.png&quot; alt=&quot;Browser test&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;도커 컨테이너의 호스트명이 보입니다. 소스는 잘 작성한 것 같네요! 이제 도커 이미지를 만들 준비가 완료됐습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;ruby-application-dockerfile&quot;&gt;Ruby Application Dockerfile&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-400-f96b022fb.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-600-f96b022fb.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-f96b022fb.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-1000-f96b022fb.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-400-fc4d28615.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-600-fc4d28615.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-fc4d28615.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-1000-fc4d28615.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/dockerfile-800-fc4d28615.png&quot; alt=&quot;Dockerfile&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;도커는 이미지를 만들기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;이라는 이미지 빌드용 DSL&lt;sub&gt;Domain Specific Language&lt;/sub&gt; 파일을 사용합니다. 단순 텍스트 파일로 일반적으로 소스와 함께 관리합니다.&lt;/p&gt;
-
-&lt;p&gt;고오급 개발자는 바로 Dockerfile을 만들 수도 있겠지만, 일반 개발자들은 일단 리눅스 서버에서 테스트로 설치해보고 안 되면 될 때까지 삽질하면서 최적의 과정을 Dockerfile로 작성해야 합니다. 우리는 초보니까 Ruby 웹 애플리케이션을 ubuntu에 배포하는 과정을 먼저 살펴보겠습니다.&lt;/p&gt;
-
-&lt;table class=&quot;table table-key-value-60&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;순서&lt;/th&gt;
-      &lt;th&gt;작업&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;ubuntu 설치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;ruby  설치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;소스 복사&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;Gem 패키지 설치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;Sinatra 서버 실행&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;이 과정을 그대로 쉘 스크립트로 옮겨봅니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# 1. ubuntu 설치 (패키지 업데이트)&lt;/span&gt;
-
-apt-get update
-
-&lt;span class=&quot;c&quot;&gt;# 2. ruby 설치&lt;/span&gt;
-
-apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby
-gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler
-
-&lt;span class=&quot;c&quot;&gt;# 3. 소스 복사&lt;/span&gt;
-
-&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; /usr/src/app
-scp Gemfile app.rb root@ubuntu:/usr/src/app &lt;span class=&quot;c&quot;&gt;# From host&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# 4. Gem 패키지 설치&lt;/span&gt;
-
-bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# 5. Sinatra 서버 실행&lt;/span&gt;
-
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;ruby app.rb
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;ubuntu 컨테이너를 실행하고 위 명령어를 그대로 실행하면 웹 서버를 실행할 수 있습니다. 리눅스에서 테스트가 끝났으니 이 과정을 Dockerfile로 만들면 됩니다. 아직 자세한 명령어를 배우진 않았지만 일단 만들어 봅니다. 핵심 명령어는 파일을 복사하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;COPY&lt;/code&gt;와 명령어를 실행하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RUN&lt;/code&gt;입니다.&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;# 1. ubuntu 설치 (패키지 업데이트 + 만든사람 표시)
-FROM       ubuntu:16.04
-MAINTAINER subicura@subicura.com
-RUN        apt-get -y update
-
-# 2. ruby 설치
-RUN apt-get -y install ruby
-RUN gem install bundler
-
-# 3. 소스 복사
-COPY . /usr/src/app
-
-# 4. Gem 패키지 설치 (실행 디렉토리 설정)
-WORKDIR /usr/src/app
-RUN     bundle install
-
-# 5. Sinatra 서버 실행 (Listen 포트 정의)
-EXPOSE 4567
-CMD    bundle exec ruby app.rb -o 0.0.0.0&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/subicura/f3f9d9b67dc59da9bad9afe76caba824.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;쉘 스크립트의 내용을 거어어어어의 그대로 Dockerfile로 옮겼습니다. 차이점은 도커 빌드 중엔 키보드를 입력할 수 없기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(y/n)&lt;/code&gt;을 물어보는 걸 방지하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-y&lt;/code&gt; 옵션을 추가한 것 정도입니다.&lt;/p&gt;
-
-&lt;p&gt;빌드 파일을 작성했으니 이제 이미지를 만들어 봅니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;docker-build&quot;&gt;Docker build&lt;/h3&gt;
-
-&lt;p&gt;이미지를 빌드하는 명령어는 다음과 같습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight usage&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;docker build [OPTIONS] PATH | URL | -&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;생성할 이미지 이름을 지정하기 위한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-t(--tag)&lt;/code&gt; 옵션만 알면 빌드가 가능합니다.&lt;/p&gt;
-
-&lt;p&gt;Dockerfile을 만든 디렉토리로 이동하여 다음 명령어를 입력합니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker build &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; app .
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;output:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;Sending build context to Docker daemon 22.02 kB
-Step 1/10 : FROM ubuntu:16.04
- ---&amp;gt; f49eec89601e
-Step 2/10 : MAINTAINER subicura@subicura.com
- ---&amp;gt; Running in 06f20ac1017d
- ---&amp;gt; fc41cd8ac52d
-Removing intermediate container 06f20ac1017d
-Step 3/10 : RUN apt-get -y update
- ---&amp;gt; Running in c35738e75a51
-Get:1 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
-Get:2 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
-Get:3 http://archive.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
-Get:4 http://archive.ubuntu.com/ubuntu xenial/main Sources [1103 kB]
-Get:5 http://archive.ubuntu.com/ubuntu xenial/restricted Sources [5179 B]
-
-... 생략 ...
-
-Step 9/10 : EXPOSE 4567
- ---&amp;gt; Running in 9c514a1f0c8e
- ---&amp;gt; c5ce4376282e
-Removing intermediate container 9c514a1f0c8e
-Step 10/10 : CMD bundle exec ruby app.rb -o 0.0.0.0
- ---&amp;gt; Running in 1f7a9ba8d63c
- ---&amp;gt; 54d239c00f11
-Removing intermediate container 1f7a9ba8d63c
-Successfully built 54d239c00f11
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;div class=&quot;asciinema-player-section&quot;&gt;&lt;asciinema-player src=&quot;https://subicura.com/assets/asciinema/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-build.json&quot; poster=&quot;npt:0:15&quot; speed=&quot;2&quot; theme=&quot;snazzy&quot;&gt;&lt;/asciinema-player&gt;&lt;figcaption&gt;docker-build&lt;/figcaption&gt;&lt;/div&gt;
-
-&lt;p&gt;빌드 명령어를 실행하면 Dockerfile에 정의한 내용이 한 줄 한 줄 실행되는 걸 볼 수 있습니다. 실제로 명령어를 실행하기 때문에 빌드 시간이 꽤 걸리는 걸 알 수 있습니다. 최종적으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Successfully built xxxxxxxx&lt;/code&gt; 메시지가 보이면 정상적으로 이미지를 생성한 것입니다.&lt;/p&gt;
-
-&lt;p&gt;그럼 이미지가 잘 생성되었는지 확인해보겠습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker images
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;output:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-app                 latest              54d239c00f11        4 minutes ago       209 MB
-ubuntu              16.04               f49eec89601e        2 weeks ago         129 MB
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;와..와우! 드디어 첫 번째 도커 이미지를 생성했습니다! 이미지를 생성했으니 잘 동작하는지 컨테이너를 실행해보겠습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker run -d -p 8080:4567 app
-docker run -d -p 8081:4567 app
-docker run -d -p 8082:4567 app
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-400-fda860cea.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-600-fda860cea.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-fda860cea.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-1000-fda860cea.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-400-96f499f99.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-600-96f499f99.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-96f499f99.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-1000-96f499f99.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/container-test-800-96f499f99.png&quot; alt=&quot;Container test result&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;접속 성공입니다. 기분이 좋아서 호스트 네임을 출력하는 &lt;del&gt;무쓸모&lt;/del&gt; 웹서버를 3개나 만들었습니다. 이미지가 잘 만들어졌네요.&lt;/p&gt;
-
-&lt;h3 id=&quot;dockerfile-기본-명령어&quot;&gt;Dockerfile 기본 명령어&lt;/h3&gt;
-
-&lt;p&gt;이미지를 만드는 데 사용한 Dockerfile의 기본적인 명령어를 살펴보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;FROM&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM &amp;lt;image&amp;gt;:&amp;lt;tag&amp;gt;
-FROM ubuntu:16.04
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;베이스 이미지를 지정합니다. 반드시 지정해야 하며 어떤 이미지도 베이스 이미지가 될 수 있습니다. tag는 될 수 있으면 latest(기본값)보다 구체적인 버전(16.04등)을 지정하는 것이 좋습니다.
-이미 만들어진 다양한 베이스 이미지는 &lt;a href=&quot;https://hub.docker.com/explore/&quot;&gt;Docker hub&lt;/a&gt;에서 확인할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;MAINTAINER&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MAINTAINER &amp;lt;name&amp;gt;
-MAINTAINER subicura@subicura.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Dockerfile을 관리하는 사람의 이름 또는 이메일 정보를 적습니다. 빌드에 딱히 영향을 주지는 않습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;COPY&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;COPY &amp;lt;src&amp;gt;... &amp;lt;dest&amp;gt;
-COPY . /usr/src/app
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;파일이나 디렉토리를 이미지로 복사합니다. 일반적으로 소스를 복사하는 데 사용합니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;target&lt;/code&gt;디렉토리가 없다면 자동으로 생성합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ADD&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ADD &amp;lt;src&amp;gt;... &amp;lt;dest&amp;gt;
-ADD . /usr/src/app
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;COPY&lt;/code&gt;명령어와 매우 유사하나 몇가지 추가 기능이 있습니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src&lt;/code&gt;에 파일 대신 URL을 입력할 수 있고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src&lt;/code&gt;에 압축 파일을 입력하는 경우 자동으로 압축을 해제하면서 복사됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;RUN&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUN &amp;lt;command&amp;gt;
-RUN [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]
-RUN bundle install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;가장 많이 사용하는 구문입니다. 명령어를 그대로 실행합니다. 내부적으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/bin/sh -c&lt;/code&gt; 뒤에 명령어를 실행하는 방식입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;CMD&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]
-CMD command param1 param2
-CMD bundle exec ruby app.rb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;도커 컨테이너가 실행되었을 때 실행되는 명령어를 정의합니다. 빌드할 때는 실행되지 않으며 여러 개의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD&lt;/code&gt;가 존재할 경우 가장 마지막 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD&lt;/code&gt;만 실행됩니다. 한꺼번에 여러 개의 프로그램을 실행하고 싶은 경우에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run.sh&lt;/code&gt;파일을 작성하여 데몬으로 실행하거나 &lt;a href=&quot;http://supervisord.org/&quot;&gt;supervisord&lt;/a&gt;나 &lt;a href=&quot;https://github.com/ddollar/forego&quot;&gt;forego&lt;/a&gt;와 같은 여러 개의 프로그램을 실행하는 프로그램을 사용합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;WORKDIR&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;WORKDIR /path/to/workdir
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;RUN, CMD, ADD, COPY등이 이루어질 기본 디렉토리를 설정합니다. 각 명령어의 현재 디렉토리는 한 줄 한 줄마다 초기화되기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RUN cd /path&lt;/code&gt;를 하더라도 다음 명령어에선 다시 위치가 초기화 됩니다. 같은 디렉토리에서 계속 작업하기 위해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WORKDIR&lt;/code&gt;을 사용합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;EXPOSE&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;EXPOSE &amp;lt;port&amp;gt; [&amp;lt;port&amp;gt;...]
-EXPOSE 4567
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;도커 컨테이너가 실행되었을 때 요청을 기다리고 있는(Listen) 포트를 지정합니다. 여러개의 포트를 지정할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;VOLUME&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;VOLUME [&quot;/data&quot;]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;컨테이너 외부에 파일시스템을 마운트 할 때 사용합니다. 반드시 지정하지 않아도 마운트 할 수 있지만, 기본적으로 지정하는 것이 좋습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ENV&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ENV &amp;lt;key&amp;gt; &amp;lt;value&amp;gt;
-ENV &amp;lt;key&amp;gt;=&amp;lt;value&amp;gt; ...
-ENV DB_URL mysql
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;컨테이너에서 사용할 환경변수를 지정합니다. 컨테이너를 실행할 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-e&lt;/code&gt;옵션을 사용하면 기존 값을 오버라이딩 하게 됩니다.&lt;/p&gt;
-
-&lt;p&gt;여기까지 Dockerfile에서 가장 많이 사용하는 명령어에 대해 알아보았습니다. 모든 명령어가 궁금하신 분은 &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/&quot;&gt;공식문서&lt;/a&gt;를 참고하세요.&lt;/p&gt;
-
-&lt;h3 id=&quot;build-분석&quot;&gt;Build 분석&lt;/h3&gt;
-
-&lt;p&gt;도커는 Dockerfile을 가지고 무슨 일을 하는 걸까요? 빌드를 하면서 궁금하지 않으셨나요? 궁금하지 않으셨더라도 build로그를 보면서 하나하나 살펴봅니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;Sending build context to Docker daemon  5.12 kB   &amp;lt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-Step 1/10 : FROM ubuntu:16.04                     &amp;lt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; f49eec89601e                                &amp;lt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-Step 2/10 : MAINTAINER subicura@subicura.com      &amp;lt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; Running &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;f4de0c750abb                     &amp;lt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;5&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 4a400609ff73                                &amp;lt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;6&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-Removing intermediate container f4de0c750abb      &amp;lt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-Step 3/10 : RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; update                 &amp;lt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;8&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-...
-...
-Successfully built 20369cef9829                   &amp;lt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;9&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(1) Sending build context to Docker daemon  5.12 kB
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;빌드 명령어를 실행한 디렉토리의 파일들을 빌드컨텍스트&lt;sub&gt;build context&lt;/sub&gt;라고 하고 이 파일들을 도커 서버(daemon)로 전송합니다. 도커는 서버-클라이언트 구조이므로 도커 서버가 작업하려면 미리 파일을 전송해야 합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(2) Step 1/10 : FROM ubuntu:16.04
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Dockerfile을 한 줄 한 줄 수행합니다. 첫 번째로 FROM 명령어를 수행합니다. ubuntu:16.04 이미지를 다운받는 작업입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(3) ---&amp;gt; f49eec89601e
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;명령어 수행 결과를 이미지로 저장합니다. 여기서는 ubuntu:16.04를 사용하기로 했기 때문에 ubuntu 이미지의 ID가 표시됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(4) Step 2/10 : MAINTAINER subicura@subicura.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Dockerfile의 두 번째 명령어인 MAINTAINER 명령어를 수행합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(5) ---&amp;gt; Running in f4de0c750abb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;명령어를 수행하기 위해 바로 이전에 생성된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f49eec89601e&lt;/code&gt; 이미지를 기반으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f4de0c750abb&lt;/code&gt;컨테이너를 임시로 생성하여 실행합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(6) ---&amp;gt; 4a400609ff73
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;명령어 수행 결과를 이미지로 저장합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(7) Removing intermediate container f4de0c750abb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;명령어를 수행하기 위해 임시로 만들었던 컨테이너를 제거합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(8) Step 3/10 : RUN apt-get -y update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Dockerfile의 세 번째 명령어를 수행합니다. 이전 단계와 마찬가지로 바로 전에 만들어진 이미지를 기반으로 임시 컨테이너를 만들어 명령어를 실행하고 그 결과 상태를 이미지로 만듭니다. 이 과정을 마지막 줄까지 무한 반복합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(9) Successfully built 20369cef9829
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;최종 성공한 이미지 ID를 출력합니다.&lt;/p&gt;
-
-&lt;p&gt;결론적으로 도커 빌드는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;임시 컨테이너 생성&lt;/code&gt; &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;명령어 수행&lt;/code&gt; &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이미지로 저장&lt;/code&gt; &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;임시 컨테이너 삭제&lt;/code&gt; &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;새로 만든 이미지 기반 임시 컨테이너 생성&lt;/code&gt; &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;명령어 수행&lt;/code&gt; &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이미지로 저장&lt;/code&gt; &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;임시 컨테이너 삭제&lt;/code&gt; &amp;gt; … 의 과정을 계속해서 반복한다고 볼 수 있습니다. 명령어를 실행할 때마다 이미지 레이어를 저장하고 다시 빌드할 때 Dockerfile이 변경되지 않았다면 기존에 저장된 이미지를 그대로 캐시처럼 사용합니다.&lt;/p&gt;
-
-&lt;p&gt;이러한 레이어 개념을 잘 이해하고 있어야 최적화된 이미지를 생성할 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;도커-이미지-리팩토링&quot;&gt;도커 이미지 리팩토링&lt;/h3&gt;
-
-&lt;p&gt;사실 앞에서 만든 이미지는 몇 가지 최적화 문제가 있습니다. 다시 한땀 한땀 살펴보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Base Image&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;위에서 만든 Ruby 애플리케이션 이미지는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ubuntu&lt;/code&gt;를 베이스로 만들었지만 사실 훠어어얼씬 간단한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ruby&lt;/code&gt; 베이스 이미지가 존재합니다. &lt;del&gt;미리 이야기하지 않아 죄송..&lt;/del&gt; 기존에 ruby를 설치했던 명령어는 ruby 이미지를 사용하는 것으로 간단하게 생략할 수 있습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# before&lt;/span&gt;
-FROM ubuntu:16.04
-MAINTAINER subicura@subicura.com
-RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; update
-RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby
-RUN gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler
-
-&lt;span class=&quot;c&quot;&gt;# after&lt;/span&gt;
-FROM ruby:2.3
-MAINTAINER subicura@subicura.com
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;ruby외에도 nodejs, python, java, go등 다양한 베이스 이미지가 이미 존재합니다. 세부적인 설정이 필요하지 않다면 그대로 사용하는게 간편합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Build Cache&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;조금전에 빌드한 이미지를 다시 빌드해볼까요?&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;Sending build context to Docker daemon 13.31 kB
-Step 1/10 : FROM ubuntu:16.04
- &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; f49eec89601e
-Step 2/10 : MAINTAINER subicura@subicura.com
- &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; Using cache
- &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; fc41cd8ac52d
-Step 3/10 : RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; update
- &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; Using cache
- &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 61d45ce11dc6
- ....
- 
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;한번 빌드한 이미지를 다시 빌드하면 굉장히 빠르게 완료되는 걸 알 수 있습니다. 이미지를 빌드하는 과정에서 각 단계를 이미지 레이어로 저장하고 다음 빌드에서 캐시로 사용합니다.&lt;/p&gt;
-
-&lt;p&gt;도커는 빌드할 때 Dockerfile의 명령어가 수정되었거나 추가하는 파일이 변경 되었을 때 캐시가 깨지고 그 이후 작업은 새로 이미지를 만들게 됩니다. ruby gem 패키지를 설치하는 과정은 꽤 많은 시간이 소요되는데 최대한 캐시를 이용하여 빌드 시간을 줄여야 합니다.&lt;/p&gt;
-
-&lt;p&gt;기존 소스에서 소스파일이 수정되면 캐시가 깨지는 부분은 다음과 같습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;COPY &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; /usr/src/app    &lt;span class=&quot;c&quot;&gt;# &amp;lt;- 소스파일이 변경되면 캐시가 깨짐&lt;/span&gt;
-WORKDIR /usr/src/app
-RUN bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;# 패키지를 추가하지 않았는데 또 인스톨하게 됨 ㅠㅠ&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;복사하는 파일이 이전과 다르면 캐시를 사용하지 않고 그 이후 명령어는 다시 실행됩니다. ruby gem 패키지를 관리하는 파일은 Gemfile이고 Gemfile은 잘 수정되지 않으므로 다음과 같이 순서를 바꿀 수 있습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;COPY Gemfile&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; /usr/src/app/ &lt;span class=&quot;c&quot;&gt;# Gemfile을 먼저 복사함&lt;/span&gt;
-WORKDIR /usr/src/app
-RUN bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;          &lt;span class=&quot;c&quot;&gt;# 패키지 인스톨&lt;/span&gt;
-COPY &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; /usr/src/app         &lt;span class=&quot;c&quot;&gt;# &amp;lt;- 소스가 바꼈을 때 캐시가 깨지는 시점 ^0^&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;gem 설치 하는 부분을 소스 복사 이전으로 옮겼습니다. 이제 소스가 수정되더라도 매번 gem을 설치하지 않아 더욱 빠르게 빌드할 수 있습니다. 요즘 언어들은 대부분 패키지 매니저를 사용하므로 비슷한 전략으로 작성하면 됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;명령어 최적화&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;이미지를 빌드할 때 불필요한 로그는 무시하는게 좋고 패키지 설치시 문서 파일도 생성할 필요가 없습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# before&lt;/span&gt;
-RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; update
-
-&lt;span class=&quot;c&quot;&gt;# after&lt;/span&gt;
-RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-qq&lt;/span&gt; update
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-qq&lt;/code&gt; 옵션으로 로그를 출력하지 않게 했습니다. 각종 리눅스 명령어는 보통 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;quite&lt;/code&gt; 옵션이 있으니 적절하게 적용하면 됩니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# before&lt;/span&gt;
-RUN bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# after&lt;/span&gt;
-RUN bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-rdoc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-ri&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--no-doc&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--no-ri&lt;/code&gt; 옵션으로 필요 없는 문서를 생성하지 않아 이미지 용량도 줄이고 빌드 속도도 더 빠르게 했습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;이쁘게&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;명령어는 비슷한 것끼리 묶어 주는 게 보기도 좋고 레이어 수를 줄이는데 도움이 됩니다. 도커 이미지는 스토리지 엔진에 따라 레이어의 개수가 127개로 제한되어 있는 경우도 있어 너무 많은 명령어는 좋지 않습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# before&lt;/span&gt;
-RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-qq&lt;/span&gt; update
-RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-qq&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby
-
-&lt;span class=&quot;c&quot;&gt;# after&lt;/span&gt;
-RUN apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-qq&lt;/span&gt; update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-    apt-get &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-qq&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;최종&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;최종 결과는 다음과 같습니다.&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;FROM ruby:2.3
-MAINTAINER subicura@subicura.com
-COPY Gemfile* /usr/src/app/
-WORKDIR /usr/src/app
-RUN bundle install --no-rdoc --no-ri
-COPY . /usr/src/app
-EXPOSE 4567
-CMD bundle exec ruby app.rb -o 0.0.0.0&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/subicura/877bced4293c68769302141f51e4b766.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;드디어 아까보다 훨씬 나은 이미지가 완성됐습니다. &lt;del&gt;만세&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;이 외에도 다양한 이미지 생성팁이 있지만 일단 이 정도면 꽤 이쁘게 만들어진 것 같습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;이미지-저장소&quot;&gt;이미지 저장소&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-400-983cd6f84.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-600-983cd6f84.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-983cd6f84.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-1000-983cd6f84.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-400-4ac5ce74c.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-600-4ac5ce74c.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-4ac5ce74c.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-1000-4ac5ce74c.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-registry-800-4ac5ce74c.png&quot; alt=&quot;Docker Registry&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;도커는 빌드한 이미지를 서버에 배포하기 위해 직접 파일을 복사하는 방법 대신 &lt;a href=&quot;https://docs.docker.com/registry/&quot;&gt;도커 레지스트리&lt;/a&gt;&lt;sub&gt;Docker Registry&lt;/sub&gt;라는 이미지 저장소를 사용합니다. 도커 명령어를 이용하여 이미지를 레지스트리에 푸시&lt;sub&gt;push&lt;/sub&gt;하고 다른 서버에서 풀&lt;sub&gt;pull&lt;/sub&gt;받아 사용하는 구조입니다. &lt;del&gt;git을 사용하는 느낌?&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;도커 레지스트리는 &lt;a href=&quot;https://github.com/docker/distribution&quot;&gt;오픈소스&lt;/a&gt;로 무료로 설치할 수 있고 설치형이 싫다면 도커(Docker Inc.)에서 서비스 중인 &lt;a href=&quot;https://hub.docker.com/&quot;&gt;도커 허브&lt;/a&gt;&lt;sub&gt;Docker Hub&lt;/sub&gt;를 사용할 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;docker-hub&quot;&gt;Docker Hub&lt;/h3&gt;
-
-&lt;p&gt;도커 허브는 도커에서 제공하는 기본 이미지 저장소로 ubuntu, centos, debian등의 베이스 이미지와 ruby, golang, java, python 등의 공식 이미지가 저장되어 있습니다. 일반 사용자들이 만든 이미지도 50만 개가 넘게 저장되어 있고 다운로드 횟수는 80억 회를 넘습니다.&lt;/p&gt;
-
-&lt;p&gt;회원가입만 하면 대용량의 이미지를 무료로 저장할 수 있고 다운로드 트래픽 또한 무료입니다. 단, 기본적으로 모든 이미지는 공개되어 누구나 접근 가능하므로 비공개로 사용하려면 유료 서비스를 이용해야 합니다. (한 개는 무료)&lt;/p&gt;
-
-&lt;p&gt;회원가입을 하고 앞에서 만든 Ruby 웹 애플리케이션 이미지를 저장해보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;회원가입&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-400-571560ae2.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-600-571560ae2.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-571560ae2.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-1000-571560ae2.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-400-e7543e83c.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-600-e7543e83c.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-e7543e83c.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-1000-e7543e83c.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-hub-800-e7543e83c.png&quot; alt=&quot;Docker Hub&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hub.docker.com/&quot;&gt;도커 허브&lt;/a&gt;사이트에 접속하면 쉽게 회원가입을 할 수 있습니다. 디자인이 참 마음에 들지 않는데… 처음부터 지금까지 업데이트한 모습이 이 모양이라 앞으로도 크게 기대되지 않습니다. &lt;del&gt;다른 페이지는 다 이쁜데 ㅠㅠ&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;로그인&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;도커에서 도커 허브 계정을 사용하려면 로그인을 해야합니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker login
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;output:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;Login with your Docker ID to push and pull images from Docker Hub. If you don&lt;span class=&quot;s1&quot;&gt;&apos;t have a Docker ID, head over to https://hub.docker.com to create one.
-Username: subicura
-Password:
-Login Succeeded&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;ID와 패스워드를 입력하면 로그인이 되고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.docker/config.json&lt;/code&gt;에 인증정보가 저장되어 로그아웃하기 전까지 로그인 정보가 유지됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;이미지 태그&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;도커 이미지 이름은 다음과 같은 형태로 구성됩니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight usage&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;[Registry URL]/[사용자 ID]/[이미지명]:[tag]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Registry URL은 기본적으로 도커 허브를 바라보고 있고 사용자 ID를 지정하지 않으면 기본값(library)을 사용합니다. 따라서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ubuntu&lt;/code&gt; = &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;library/ubuntu&lt;/code&gt; = &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker.io/library/ubuntu&lt;/code&gt; 는 모두 동일한 표현입니다.&lt;/p&gt;
-
-&lt;p&gt;도커의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tag&lt;/code&gt;명령어를 이용하여 기존에 만든 이미지에 추가로 이름을 지어줄 수 있습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight usage&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;앞에서 만든 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app&lt;/code&gt;이미지에 계정정보와 버전 정보를 추가해보겠습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker tag app subicura/sinatra-app:1
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;subicura&lt;/code&gt;라는 ID를 사용하고 이미지 이름을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sinatra-app&lt;/code&gt;으로 변경했습니다. 첫 번째 버전이므로 태그는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;을 사용합니다. 이제 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt;명령을 이용해 도커 허브에 이미지를 전송해 봅니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker push subicura/sinatra-app:1
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;output:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;The push refers to a repository &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;docker.io/subicura/sinatra-app]
-2adeabae7edc: Pushed
-8343e5bcf528: Pushed
-af3b68c8b565: Pushed
-40dd6783317f: Pushed
-c6ae77e29c22: Pushed
-5eb5bd4c5014: Mounted from library/ubuntu
-d195a7a18c70: Mounted from library/ubuntu
-af605e724c5a: Mounted from library/ubuntu
-59f161c3069d: Mounted from library/ubuntu
-4f03495a4d7d: Mounted from library/ubuntu
-1: digest: sha256:af83aca920982c1fb17f08b4aa300439470349d58d63c921f67261054a0c9467 size: 2409
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;성공적으로 이미지를 도커 허브에 푸시하였습니다. 도커 허브에 저장된 50만 개의 이미지에 새로운 이미지가 하나 추가되었습니다!&lt;/p&gt;
-
-&lt;p&gt;이제 어디서든 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;subicura/sinatra-app:1&lt;/code&gt;이미지를 사용할 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;private-docker-registry&quot;&gt;Private Docker Registry&lt;/h3&gt;
-
-&lt;p&gt;도커 이미지를 비공개로 저장하려면 &lt;a href=&quot;https://www.docker.com/products/docker-cloud&quot;&gt;Docker Cloud&lt;/a&gt;를 유료($7 for 5 repos/month)로 사용하거나 레지스트리 서버를 자체적으로 구축해야합니다.&lt;/p&gt;
-
-&lt;p&gt;도커 레지스트리는 도커를 이용하여 쉽게 만들 수 있습니다. 도커 이미지를 저장할 서버를 도커 스스로 만들어서 도커 이미지를 관리하다니 뭔가 므-_-흣합니다. &lt;del&gt;도커로 다하는 느낌&lt;/del&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker run &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;/registry:/var/lib/registry &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 5000:5000 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-distribution/registry:2.6.0
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;저장된 이미지는 파일로 관리되기 때문에 호스트의 디렉토리를 마운트하였습니다. (S3 저장소를 사용할 수도 있습니다) 이제 레지스트리 서버의 아이피와 포트정보를 이미지명에 추가하면 바로 사용할 수 있습니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;docker tag app localhost:5000/subicura/sinatra-app:1
-docker push localhost:5000/subicura/sinatra-app:1
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;앞에서 만든 이름에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost:5000/&lt;/code&gt;를 추가했습니다. 레지스트리 서버에 파일이 잘 저장되었나 마운트한 디렉토리를 한번 살펴봅니다.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;tree registry
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;output:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;registry
-└── docker
-    └── registry
-        └── v2
-            ├── blobs
-            │   └── sha256
-            │       ├── 05
-            │       │   └── 05e91de6d378244d3b4dcfbb978548e47b2c22d9918638444c0f9e640d2bf819
-            │       │       └── data
-            │       ├── 1b
-            │       │   └── 1bacd3c8ccb1f15609a10bd4a403831d0ec0b354438ddbf644c95c5d54f8eb13
-            │       │       └── data
-            │       ├── 3e
-            │       │   └── 3e309f550af7bb4e3177e94e498938a24c20cf7404d90da4b24bd586d6376ab2
-            │       │       └── data
-            │       ├── 5b
-            │       │   └── 5b8ee2811f46dea888057c8a2eb1fcd43838bb2545588f7e108d462d0836e217
-            │       │       └── data
-            │       ├── 76
-            │       │   └── 761e0e61cc35ced6b08ce33b1db84a3e92a4843f908476d4cfc52f99b2b7e78a
-            │       │       └── data
-            │       ├── 86
-            │       │   └── 869d5d3f92f8bbdcaa1023ce719df7e337d34b2a13954cde7954c6b1327297e9
-            │       │       └── data
-            │       ├── 97
-            │       │   └── 976dd3af6adc358c852b97651cef1ceaade821a25f3bf566de3a8ea8b7d6bc6a
-            │       │       └── data
-            │       ├── a2
-            │       │   └── a2037218c9af7a6913308a60127a320272fd6d58405692a5be48ce976ace6c6d
-            │       │       └── data
-            │       ├── e2
-            │       │   └── e2d7e96004fdd10e671372a8b5e861bae78bcf878e062d13f6c470311936d500
-            │       │       └── data
-            │       ├── f4
-            │       │   └── f40e1388890a7ca2b5180e2fae69aa982926307cdfa98c8c6a2dde01c0464587
-            │       │       └── data
-            │       ├── f8
-            │       │   └── f8a4e25b40ce0ecc925cfb0b2ec7eec0a06948eda173e943c228cd51f78b40c5
-            │       │       └── data
-            │       └── fd
-            │           └── fdeb3bd5d1b49c094875dcacccb743b0bc913c7de80ba783f2f1bbda6b1a3b55
-            │               └── data
-            └── repositories
-                └── subicura
-                    └── app
-                        ├── _layers
-                        │   └── sha256
-                        │       ├── 1bacd3c8ccb1f15609a10bd4a403831d0ec0b354438ddbf644c95c5d54f8eb13
-                        │       │   └── link
-                        │       ├── 3e309f550af7bb4e3177e94e498938a24c20cf7404d90da4b24bd586d6376ab2
-                        │       │   └── link
-                        │       ├── 5b8ee2811f46dea888057c8a2eb1fcd43838bb2545588f7e108d462d0836e217
-                        │       │   └── link
-                        │       ├── 761e0e61cc35ced6b08ce33b1db84a3e92a4843f908476d4cfc52f99b2b7e78a
-                        │       │   └── link
-                        │       ├── 869d5d3f92f8bbdcaa1023ce719df7e337d34b2a13954cde7954c6b1327297e9
-                        │       │   └── link
-                        │       ├── 976dd3af6adc358c852b97651cef1ceaade821a25f3bf566de3a8ea8b7d6bc6a
-                        │       │   └── link
-                        │       ├── a2037218c9af7a6913308a60127a320272fd6d58405692a5be48ce976ace6c6d
-                        │       │   └── link
-                        │       ├── e2d7e96004fdd10e671372a8b5e861bae78bcf878e062d13f6c470311936d500
-                        │       │   └── link
-                        │       ├── f40e1388890a7ca2b5180e2fae69aa982926307cdfa98c8c6a2dde01c0464587
-                        │       │   └── link
-                        │       ├── f8a4e25b40ce0ecc925cfb0b2ec7eec0a06948eda173e943c228cd51f78b40c5
-                        │       │   └── link
-                        │       └── fdeb3bd5d1b49c094875dcacccb743b0bc913c7de80ba783f2f1bbda6b1a3b55
-                        │           └── link
-                        ├── _manifests
-                        │   ├── revisions
-                        │   │   └── sha256
-                        │   │       └── 05e91de6d378244d3b4dcfbb978548e47b2c22d9918638444c0f9e640d2bf819
-                        │   │           └── link
-                        │   └── tags
-                        │       └── latest
-                        │           ├── current
-                        │           │   └── link
-                        │           └── index
-                        │               └── sha256
-                        │                   └── 05e91de6d378244d3b4dcfbb978548e47b2c22d9918638444c0f9e640d2bf819
-                        │                       └── link
-                        └── _uploads
-
-56 directories, 26 files
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;이미지가 레이어별로 이쁘게 저장된 걸 확인할 수 있습니다. 이렇게 개인 저장소를 만드는 법은 매우 간단합니다. 이제 내부적으로 이미지를 관리하고 여러 서버에 배포할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;보안&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;도커 레지스트리는 일반적인 HTTP 프로토콜을 사용하여 이미지를 전송합니다. 따라서 SSL(HTTPS)을 사용하지 않으면 이미지 내용이 유출될 수 있습니다. 이런 보안 이슈 때문에 도커는 기본적으로 로컬(localhost) 서버를 제외하곤 HTTP 사용을 금지하고 있으며 이런 보안위험을 무시하려면 도커 엔진을 실행할 때 허용 옵션을 넣어야 합니다.&lt;/p&gt;
-
-&lt;p&gt;관련 설정은 &lt;a href=&quot;https://docs.docker.com/registry/insecure/&quot;&gt;문서&lt;/a&gt;를 참고하시기 바랍니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;배포하기&quot;&gt;배포하기&lt;/h2&gt;
-
-&lt;p&gt;드디어 도커 안내서의 마지막 주제, 서버관리의 꽃! 배포&lt;sub&gt;deploy&lt;/sub&gt;에 대해 알아보겠습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;컨테이너-배포-방식으로&quot;&gt;컨테이너 배포 방식으로&lt;/h3&gt;
-
-&lt;p&gt;컨테이너를 배포하는 방식은 기존에 애플리케이션을 배포하는 방식과 큰 차이가 있습니다.&lt;/p&gt;
-
-&lt;p&gt;기존에 애플리케이션을 배포하는 방식은 사용하는 언어, 프레임워크, 웹(or WAS)서버, 리눅스 배포판, 개발자의 취향에 따라 각각 다른 방식을 사용했습니다.&lt;/p&gt;
-
-&lt;p&gt;새로운 서버를 셋팅하고 한 번에 배포를 성공한다는 건 굉장히 힘든 일이었고 의존성 라이브러리가 제대로 설치되었는지 검증하기도 매우 어려웠습니다.&lt;/p&gt;
-
-&lt;p&gt;ftp, rsync, ant, gradle, capistrano, fabric, chef, puppet, ansible등 다양한 배포툴이 저마다의 장점을 가지고 등장하였고 배포하는 방식을 하나로 정의한다는 건 거의 불가능했습니다.&lt;/p&gt;
-
-&lt;p&gt;하지만, 컨테이너를 사용하면 어떤 언어, 어떤 프레임워크를 쓰든 상관없이 배포 방식이 동일해지고 과정 또한 굉장히 단순해집니다. 그냥 이미지를 다운받고 컨테이너를 실행하면 끝입니다.&lt;/p&gt;
-
-&lt;p&gt;음…&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;네, 그게 답니다.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;서버에 접속해서 컨테이너를 실행할 줄 안다면 이미 배포하는 법을 알고 있는 겁니다. 참 쉽죠?&lt;/p&gt;
-
-&lt;h3 id=&quot;컨테이너-업데이트&quot;&gt;컨테이너 업데이트&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update.png&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-400-9d4cedfd6.webp 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-600-9d4cedfd6.webp 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-9d4cedfd6.webp 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-1000-9d4cedfd6.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-400-bcd3f08c3.png 400w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-600-bcd3f08c3.png 600w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-bcd3f08c3.png 800w, /generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-1000-bcd3f08c3.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2017-02-10-docker-guide-for-beginners-create-image-and-deploy/docker-update-800-bcd3f08c3.png&quot; alt=&quot;Update&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;도커를 사용하면 업데이트하는 방식도 배포와 큰 차이가 없습니다.&lt;/p&gt;
-
-&lt;p&gt;최신 이미지를 기반으로 새 컨테이너를 만들고 이전 컨테이너를 중지(삭제)하면 됩니다. 최신 소스를 어떻게 복사할지 서버 프로세스는 어떻게 재시작할지 고민할 필요가 없습니다. 그냥 통째로 바꿔버리는 겁니다.&lt;/p&gt;
-
-&lt;p&gt;단, 컨테이너를 중지하지 않고 graceful&lt;del&gt;스무스&lt;/del&gt;하게 샤샤샥 교체하는 방법은 아쉽지만 존재하지 않습니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;컨테이너를 중지하지 않고 컨테이너 내부에 접속하여 소스를 업데이트하는 방법도 “가능”은 하지만 컨테이너의 장점을 살릴 수 없는 “잘못된 패턴”입니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;이런 방식은 매우 단순하지만, 컨테이너가 멈추는 순간 실행 중인 프로세스가 &lt;strong&gt;종료&lt;/strong&gt;되고 프로세스가 종료되면 고객들은 접속이 안 되고 접속이 안 되면 매출이 떨어지고 매출이 떨어지면 월급이 안나오기 때문에 무중단을 고려한 &lt;a href=&quot;http://nginx.org/&quot;&gt;nginx&lt;/a&gt;나 &lt;a href=&quot;http://www.haproxy.org/&quot;&gt;HAProxy&lt;/a&gt;같은 로드 발란서&lt;sub&gt;Load Balancer&lt;/sub&gt;와 2대 이상의 컨테이너를 사용해야 합니다.&lt;/p&gt;
-
-&lt;p&gt;여기서는 개념만 소개하고 실제로 컨테이너를 업데이트하는 구체적인 방법은 &lt;a href=&quot;/2016/06/07/zero-downtime-docker-deployment.html&quot;&gt;도커를 이용한 웹서비스 무중단 배포하기&lt;/a&gt;&lt;del&gt;막간 홍보&lt;/del&gt;글로 대신합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;배포에-대해-더-알아보기&quot;&gt;배포에 대해 더 알아보기&lt;/h3&gt;
-
-&lt;p&gt;도커를 이용한 배포, 그 자체는 매우 단순하지만 여러 대의 서버를 관리하고 문제없이 업데이트 하는 건 완전히 새로운 이야기입니다.&lt;/p&gt;
-
-&lt;p&gt;여러 대의 서버를 관리하려면 가상네트워크, 공유 파일, 로그관리, CPU나 메모리 같은 자원분배에 대해 고민해야 하고 Service Discovery에 대한 개념과 Orchestration이라는 주제에 관해 공부해야 합니다. 딱 정해진 답은 없고 현재 운영 중인 환경에 적합한 방법을 찾아야 하며 지금도 계속해서 발전하고 여러 컨퍼런스에서 활발하게 논의되는 주제입니다.&lt;/p&gt;
-
-&lt;p&gt;자세한 내용은 초보를 위한 안내서의 범위를 벗어나므로 더 많은 내용이 궁금하신 분은 각자 공부하는 것으로… &lt;del&gt;화이팅!!&lt;/del&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;마무으리&quot;&gt;마무으리&lt;/h2&gt;
-
-&lt;p&gt;클라우드가 발전하면서 언제든 원하는 장소에 수십 대의 서버를 클릭 한 번으로 생성하는 시대가 되었습니다. 서버는 구입하는것이 아니라 필요한 만큼 잠시 &lt;strong&gt;대여&lt;/strong&gt;하는 개념이 되었고 오토 스케일링이라는 환상적인 기능은 부하에 따라 자동으로 서버 개수를 늘리고 줄여줍니다.&lt;/p&gt;
-
-&lt;p&gt;이러한 흐름 속에서 아무 문제 없이 서비스를 배포하고 운영하는 것은 사실 기적이라고 할 수 있습니다. 도커가 등장하여 복잡한 부분을 단순하게 하고 많은 문제를 해결해 주고 있지만 도커도 모든 문제를 해결해 주지는 않습니다. (대표적으로 데이터베이스처럼 stateful한 애플리케이션은 관리가 어렵습니다) 다만, 현재 시점에서 그 어떤 방법보다도 &lt;strong&gt;좀 더 나은 방법&lt;/strong&gt;인 건 확실합니다.&lt;/p&gt;
-
-&lt;p&gt;초보를 위한 도커 안내서는 오늘도 서버운영으로 고통받고 있는 개발자분께 도커를 소개하고 전반적인 내용을 전달하기 위해 작성하였습니다. 길다면 길고 짧다면 짧은 글을 통해 아무쪼록 초보분들에게 많은 도움이 되었으면 좋겠습니다.&lt;/p&gt;
-
-&lt;p&gt;도커에 대해 궁금한 점은 &lt;a href=&quot;http://slack.opencontainer.co.kr&quot;&gt;오픈컨테이너 슬랙&lt;/a&gt;으로 오시면 많은 도움을 받을 수 있습니다. 내용에 대한 다양한 피드백도 환영합니다. 읽어주셔서 감사합니다~&lt;/p&gt;
-
-&lt;p&gt;마지막으로 “Future of Everything(모든것의 미래)”라는 슬라이드를 소개하며 글을 마칩니다.&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center; margin-bottom: 20px&quot;&gt;
-  &lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/IylipWTfVGtdaY&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt; 
-  &lt;div style=&quot;margin-bottom:5px; font-size: 14px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/MichaelDucy/the-future-of-everything-37344357&quot; title=&quot;The Future of Everything&quot; target=&quot;_blank&quot;&gt;The Future of Everything&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a target=&quot;_blank&quot; href=&quot;//www.slideshare.net/MichaelDucy&quot;&gt;Michael Ducy&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://bit.ly/inflearn-docker&quot;&gt;&lt;picture&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-400-089167e74.webp 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-600-089167e74.webp 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-089167e74.webp 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-1000-089167e74.webp 1000w&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-400-2e52e8f51.png 400w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-600-2e52e8f51.png 600w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-2e52e8f51.png 800w, /generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-1000-2e52e8f51.png 1000w&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/generated/assets/article_images/2017-01-19-docker-guide-for-beginners-1/inflearn-800-2e52e8f51.png&quot; alt=&quot;이제 도커안내서를 영상으로 만나보세요!&quot;&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 10 Feb 2017 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</link>
-        <guid isPermaLink="true">https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</guid>
-        
-        <category>Docker</category>
-        
-        <category>DevOps</category>
-        
-        <category>Server</category>
-        
-        <category>Container</category>
         
         
         <category>Docker</category>

@@ -6,9 +6,33 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 08 Sep 2025 01:27:38 +0900</pubDate>
-    <lastBuildDate>Mon, 08 Sep 2025 01:27:38 +0900</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2026 07:41:59 +0900</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2026 07:41:59 +0900</lastBuildDate>
     <generator>Jekyll v4.3.4</generator>
+    
+      <item>
+        <title>개발 자동화에서 조직 AX까지</title>
+        <description>배포 시스템 개발기를 가장한 &apos;완료 기념&apos; 전사 AX(AI Transformation)에 대한 생각을 정리해 봤습니다.</description>
+        <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+        <link>https://subicura.com/2026/07/14/ax-journey.html</link>
+        <guid isPermaLink="true">https://subicura.com/2026/07/14/ax-journey.html</guid>
+        
+        <category>AI</category>
+        
+        <category>AX</category>
+        
+        <category>Developer</category>
+        
+        <category>Context</category>
+        
+        <category>Claude</category>
+        
+        <category>Data</category>
+        
+        
+        <category>Development</category>
+        
+      </item>
     
       <item>
         <title>초보를 위한 Claude Code 안내서</title>
@@ -222,26 +246,6 @@
         <category>Container</category>
         
         <category>Cluster</category>
-        
-        
-        <category>Docker</category>
-        
-      </item>
-    
-      <item>
-        <title>초보를 위한 도커 안내서 - 이미지 만들고 배포하기</title>
-        <description>이 글은 초보를 위한 도커 안내서 - 설치부터 배포까지 시리즈의 마지막 글입니다. 지난 글에서 도커를 설치하고 컨테이너를 실행해 보았으니 이번엔 이미지를 만들고 서버에 배포해보도록 하겠습니다.</description>
-        <pubDate>Fri, 10 Feb 2017 00:00:00 +0900</pubDate>
-        <link>https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</link>
-        <guid isPermaLink="true">https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html</guid>
-        
-        <category>Docker</category>
-        
-        <category>DevOps</category>
-        
-        <category>Server</category>
-        
-        <category>Container</category>
         
         
         <category>Docker</category>
