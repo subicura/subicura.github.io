@@ -6,13 +6,13 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 15 Jul 2026 07:41:59 +0900</pubDate>
-    <lastBuildDate>Wed, 15 Jul 2026 07:41:59 +0900</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2026 10:26:50 +0900</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2026 10:26:50 +0900</lastBuildDate>
     <generator>Jekyll v4.3.4</generator>
     
       <item>
         <title>개발 자동화에서 조직 AX까지</title>
-        <description>배포 시스템 개발기를 가장한 &apos;완료 기념&apos; 전사 AX(AI Transformation)에 대한 생각을 정리해 봤습니다.</description>
+        <description>&quot;배포해줘~&quot; 한마디면 보안 점검 후 내부망에 배포되는 사내 시스템을 완성했습니다. 이를 계기로 돌아본 지난 1년간의 전사 AX(AI Transformation) 여정입니다.</description>
         <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
         <link>https://subicura.com/2026/07/14/ax-journey.html</link>
         <guid isPermaLink="true">https://subicura.com/2026/07/14/ax-journey.html</guid>

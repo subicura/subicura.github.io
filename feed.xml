@@ -6,8 +6,8 @@
 </description>
     <link>https://subicura.com/</link>
     <atom:link href="https://subicura.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 15 Jul 2026 07:41:59 +0900</pubDate>
-    <lastBuildDate>Wed, 15 Jul 2026 07:41:59 +0900</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2026 10:26:50 +0900</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2026 10:26:50 +0900</lastBuildDate>
     <generator>Jekyll v4.3.4</generator>
     
       <item>
@@ -49,7 +49,7 @@
 
 &lt;p&gt;자동화 성능 테스트를 위해 최근 완료된 PR 180건을 샘플링해서 Diff 코드를 저장했습니다. 그리고 각 PR의 시작 시점 Git 코드를 가져와서, 오직 Asana 태스크만 보고 사람의 개입 없이 AI에게 PR을 작성하게 했습니다. 그리고 그 결과 Diff를 서로 비교했습니다.&lt;/p&gt;
 
-&lt;p&gt;결과는 사람이 작성한 코드와 AI가 작성한 코드의 평균 구현 일치도가 70%였습니다(태스크 설명이 제대로 작성된 구현 가능 PR 110건 기준). 100% 일치한 게 30개(태스크 설명이 상세한 PR의 23%), 90% 이상 거의 일치한 게 38개였습니다.
+&lt;p&gt;결과는 사람이 작성한 코드와 AI가 작성한 코드의 평균 구현 일치도가 70%였습니다(태스크 설명이 제대로 작성된 구현 가능 PR 110건 기준). 100% 일치한 게 30개(태스크 설명이 상세한 PR의 27%), 90% 이상 거의 일치한 게 38개였습니다.
 실패의 원인은 대부분 ‘태스크 설명이 부실해서’였고, &lt;strong&gt;문제는 AI가 아니라 요구사항 정의&lt;/strong&gt;였습니다.&lt;/p&gt;
 
 &lt;p&gt;다음은 실제 벤치마크 결과 보고서 일부입니다.&lt;/p&gt;
